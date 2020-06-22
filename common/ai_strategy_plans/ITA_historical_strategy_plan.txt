@@ -1,0 +1,108 @@
+ITA_historical_plan = {
+	name = "Italy historical plan"
+	desc = "Historical behavior for Italy"
+
+	enable = {
+		original_tag = ITA
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = ITA_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = ITA_AI_RANDOM_FASCIST_HISTORICAL
+			has_game_rule = {
+				rule = ITA_ai_behavior
+				option = FASCIST_HISTORICAL
+			}
+		}
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		ITA_ethiopian_war_logistics 
+		ita_regroup_senatus
+		ita_emperor_priviege
+		ita_m_ism
+        ita_the_meeting	
+		ita_befriend_vantican
+		ITA_albania_war_goal		
+		ITA_industrial_effort
+		ita_alps_strategy
+		ITA_army_primacy			
+		ita_secure_alps	
+        ita_darmcia_problem
+		ita_emperor_military_industrial	
+		ita_reform_bureau
+		ita_renaissance		
+        ita_fortify_rhode_island
+		ITA_modernized_artillery
+		ITA_modernized_army
+        ita_infrastruracture_project		
+		ita_protect_archaea	
+		ita_end_monopolization
+		ita_national_bank       
+		ita_recover_eastern_roma	
+        itabalkan_problem
+        ita_only_one_empire
+		ITA_mare_nostrum  	
+		ITA_light_ship_effort
+        ita_st_george
+		ita_research_fund
+		ITA_industrial_effort_2
+		ITA_extra_tech_slot 
+		ira_expand_universities
+		ita_free_hospital
+		ita_north_alps_frontline		
+		ITA_air_innovation 
+		ita_expand_siciri						
+        ita_imeprial_dockyard			
+		ita_engineering_effort
+		ITA_fortification_effort        
+		ITA_special_forces 
+		ITA_capital_ships 
+		ITA_escort_effort 
+        ITA_go_after_france
+		ITA_submarine_effort 
+		ITA_italian_highways 
+		ITA_carrier_effort 
+		ITA_bomber_effort  
+		ITA_naval_air_effort 
+		ITA_atlantic_fleet 
+		ITA_marines_and_landing_craft 
+		ITA_air_innovation_2 
+		ITA_armored_effort  
+		ITA_jet_engine_effort 
+		ITA_prospect_for_oil 
+		ITA_libyan_refineries 
+		ITA_libyan_infrastructure
+        ita_face_orient
+        ita_recover_hispania
+        ita_fortify_gibraltar
+        ita_war_with_britain
+        ita_conquer_britainia
+        ita_crazy_empire
+	}				
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

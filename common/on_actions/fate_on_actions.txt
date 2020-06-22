@@ -1,0 +1,29 @@
+
+on_actions = {
+	on_startup = {
+		effect = {
+		    
+			every_country = {
+				if = {
+					limit = { OR = { original_tag = ENG original_tag = FRA original_tag = ITA original_tag = JAP original_tag = SWE original_tag = BRA original_tag = CHI original_tag = IRA original_tag = PER original_tag = SOV  } }
+					country_event = { id = intro.0 days = 5 random = 1 }
+				}
+			}
+			
+		}
+	}
+	
+	
+}
+
+#    
+#    on_daily = {
+#		effect = { 
+#            if = {
+#			    
+#				else = {}
+#			}
+#			every_country = {}
+#			every_country = {}
+#		}
+#	}

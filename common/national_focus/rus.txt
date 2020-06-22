@@ -1,0 +1,1103 @@
+focus_tree = {
+	id = RUS
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RUS
+			
+			
+		}
+	}
+  continuous_focus_position = { x = 20 y = 1800 }
+	default = no
+	focus = {
+		id = rus_unite_white_movement
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		x = 18
+		y = 0
+
+		completion_reward = {
+
+          add_stability = 0.10
+		  add_war_support = 0.10
+
+		}
+
+	}
+	focus = {
+		id = rus_amnesty_territorist_Brigade
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		x = 25
+		y = 0
+
+
+		completion_reward = {
+
+			add_political_power = 200
+
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+
+		}
+
+	}
+	focus = {
+		id = rus_social_people_party
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = rus_amnesty_territorist_Brigade
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_amnesty_territorist_Brigade
+
+		completion_reward = {
+
+			add_political_power = 100
+
+            add_manpower = 50000 
+
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.10
+		}
+
+		}
+
+	}
+	focus = {
+		id = rus_prepare_for_protraction
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = rus_unite_white_movement
+		}
+		x = 18
+		y = 1
+
+		completion_reward = {
+
+			add_political_power = 100
+
+            add_manpower = 50000 
+
+		}
+
+	}
+	focus = {
+		id = rus_Kadoc_the_vozhd
+		icon = GFX_goal_support_fascism
+		cost = 10.00
+		prerequisite = {
+			focus = rus_social_people_party
+		}
+		prerequisite = {
+			focus = rus_prepare_for_protraction
+		}
+		mutually_exclusive = {
+			focus = rus_all_hail_to_tsar
+		}
+		x = 7
+		y = 1
+		relative_position_id = rus_prepare_for_protraction
+
+		completion_reward = {
+
+          add_stability = -0.10
+		  add_war_support = 0.15
+
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		}
+
+            set_politics = {
+                ruling_party = fascism
+                elections_allowed = no
+            }
+
+		}
+
+	}
+	focus = {
+		id = rus_all_hail_to_tsar
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10.00
+		prerequisite = {
+			focus = rus_prepare_for_protraction
+		}
+		mutually_exclusive = {
+			focus = rus_Kadoc_the_vozhd
+		}
+		x = -7
+		y = 1
+		relative_position_id = rus_prepare_for_protraction
+
+		completion_reward = {
+
+		  add_stability = 0.20
+
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.10
+		}
+
+
+		}
+
+	}
+	focus = {
+		id = rus_organize_Oprichnik
+		icon = GFX_goal_generic_attack_allies
+		cost = 10.00
+		prerequisite = {
+			focus = rus_all_hail_to_tsar
+		}
+		mutually_exclusive = {
+			focus = rus_reorganize_Okhrana
+		}
+		x = 15
+		y = 3
+
+		completion_reward = {
+
+          add_political_power = -50
+
+		  add_stability = -0.05
+
+        add_ideas = RUS_Oprichnik
+
+		}
+
+	}
+	focus = {
+		id = rus_reorganize_Okhrana
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = rus_all_hail_to_tsar
+			focus = rus_Kadoc_the_vozhd
+		}
+		mutually_exclusive = {
+			focus = rus_organize_Oprichnik
+		}
+		x = 18
+		y = 3
+
+		completion_reward = {
+
+        add_ideas = RUS_Okhrana
+
+		}
+
+	}
+	focus = {
+		id = rus_support_from_military
+		icon = GFX_focus_secret_rearmament
+		cost = 10.00
+		prerequisite = {
+			focus = rus_organize_Oprichnik
+			focus = rus_reorganize_Okhrana
+		}
+		mutually_exclusive = {
+			focus = rus_support_from_the_popularity
+			focus = rus_support_from_Gosudarstvennaya_duma
+		}
+		x = 18
+		y = 4
+
+		completion_reward = {
+
+        add_ideas = RUS_militarism
+
+		}
+
+	}
+	focus = {
+		id = rus_the_royal_marriage
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = rus_all_hail_to_tsar
+			focus = rus_Kadoc_the_vozhd
+		}
+		x = 21
+		y = 3
+
+	}
+	focus = {
+		id = rus_reorganize_Octobrist
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = rus_all_hail_to_tsar
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_all_hail_to_tsar
+
+		completion_reward = {
+
+          add_political_power = 50
+
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.20
+		}
+
+
+		}
+
+	}
+	focus = {
+		id = rus_support_from_Gosudarstvennaya_duma
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = rus_reorganize_Octobrist
+		}
+		mutually_exclusive = {
+			focus = rus_support_from_military
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_reorganize_Octobrist
+
+		completion_reward = {
+
+          add_political_power = 50
+
+          add_stability = 0.05
+
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.15
+		}
+
+            set_politics = {
+                ruling_party = democratic
+                elections_allowed = no
+            }
+
+		}
+
+	}
+	focus = {
+		id = rus_build_the_authority
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = rus_Kadoc_the_vozhd
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_Kadoc_the_vozhd
+
+		completion_reward = {
+
+          add_political_power = 200
+
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.25
+		}
+
+		}
+
+	}
+	focus = {
+		id = rus_support_from_the_popularity
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10.00
+		prerequisite = {
+			focus = rus_build_the_authority
+		}
+		mutually_exclusive = {
+			focus = rus_support_from_military
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_build_the_authority
+
+		completion_reward = {
+
+        add_ideas = RUS_populism
+
+		}
+
+	}
+	focus = {
+		id = rus_reconcile_with_kerensky
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = rus_support_from_Gosudarstvennaya_duma
+		}
+		x = -4
+		y = 1
+		relative_position_id = rus_support_from_Gosudarstvennaya_duma
+
+		completion_reward = {
+
+        add_political_power = 50
+
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.15
+		}
+
+		}
+
+	}
+	focus = {
+		id = rus_reinit_Zemstvo
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = rus_support_from_Gosudarstvennaya_duma
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_support_from_Gosudarstvennaya_duma
+
+	}
+	focus = {
+		id = rus_restart_land_reform
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = rus_support_from_Gosudarstvennaya_duma
+			focus = rus_support_from_military
+		}
+		x = 4
+		y = 1
+		relative_position_id = rus_support_from_Gosudarstvennaya_duma
+
+	}
+	focus = {
+		id = rus_agricultural_recover
+		icon = GFX_goal_generic_construction
+		cost = 10.00
+		prerequisite = {
+			focus = rus_restart_land_reform
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_restart_land_reform
+
+	}
+	focus = {
+		id = rus_national_investiment_bank
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 10.00
+		prerequisite = {
+			focus = rus_reinit_Zemstvo
+		}
+		prerequisite = {
+			focus = rus_reconcile_with_kerensky
+		}
+		x = -2
+		y = 1
+		relative_position_id = rus_reinit_Zemstvo
+
+	}
+	focus = {
+		id = rus_attract_russian_in_exile
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = rus_reconcile_with_kerensky
+		}
+		x = -2
+		y = 1
+		relative_position_id = rus_reconcile_with_kerensky
+
+	}
+	focus = {
+		id = rus_expel_racists
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = rus_attract_russian_in_exile
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_attract_russian_in_exile
+
+	}
+	focus = {
+		id = rus_seek_american_support
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 10.00
+		prerequisite = {
+			focus = rus_expel_racists
+		}
+		x = -2
+		y = 1
+		relative_position_id = rus_expel_racists
+
+	}
+	focus = {
+		id = rus_handle_the_amry
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = rus_reconcile_with_kerensky
+		}
+		x = 0
+		y = 2
+		relative_position_id = rus_reconcile_with_kerensky
+
+	}
+	focus = {
+		id = rus_local_militia_training
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = rus_reinit_Zemstvo
+		}
+		prerequisite = {
+			focus = rus_restart_land_reform
+		}
+		x = 2
+		y = 1
+		relative_position_id = rus_reinit_Zemstvo
+
+	}
+	focus = {
+		id = rus_third_element
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = rus_reinit_Zemstvo
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_reinit_Zemstvo
+
+	}
+	focus = {
+		id = rus_orthodox_enthusiastic
+		icon = GFX_focus_mex_restore_the_army_of_christ
+		cost = 10.00
+		prerequisite = {
+			focus = rus_support_from_military
+			focus = rus_support_from_Gosudarstvennaya_duma
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_support_from_military
+
+	}
+	focus = {
+		id = rus_Tsar_Batiushka
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = rus_orthodox_enthusiastic
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_orthodox_enthusiastic
+
+	}
+	focus = {
+		id = rus_Romanov_Tercentenary
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = rus_Tsar_Batiushka
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_Tsar_Batiushka
+
+	}
+	focus = {
+		id = rus_strengthen_tie_with_the_west
+		icon = GFX_goal_support_democracy
+		cost = 10.00
+		prerequisite = {
+			focus = rus_handle_the_amry
+		}
+		prerequisite = {
+			focus = rus_expel_racists
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_handle_the_amry
+
+	}
+	focus = {
+		id = rus_rekindle_old_alliance
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 10.00
+		prerequisite = {
+			focus = rus_strengthen_tie_with_the_west
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_strengthen_tie_with_the_west
+
+	}
+	focus = {
+		id = rus_free_russian_legion
+		icon = GFX_goal_generic_special_forces
+		cost = 10.00
+		prerequisite = {
+			focus = rus_local_militia_training
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_local_militia_training
+
+	}
+	focus = {
+		id = rus_a_tough_industrialization
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = rus_third_element
+		}
+		prerequisite = {
+			focus = rus_national_investiment_bank
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_third_element
+
+	}
+	focus = {
+		id = rus_pray_for_matyrs
+		icon = GFX_goal_continuous_def_against_influence
+		cost = 10.00
+		prerequisite = {
+			focus = rus_orthodox_enthusiastic
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_orthodox_enthusiastic
+
+	}
+	focus = {
+		id = rus_religious_army
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = rus_pray_for_matyrs
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_pray_for_matyrs
+
+	}
+	focus = {
+		id = rus_foreign_volunteers
+		icon = GFX_goal_generic_military_deal
+		cost = 10.00
+		prerequisite = {
+			focus = rus_strengthen_tie_with_the_west
+		}
+		x = 5
+		y = 9
+
+	}
+	focus = {
+		id = rus_seek_lend_lease
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = rus_seek_american_support
+			focus = rus_strengthen_tie_with_the_west
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_seek_american_support
+
+	}
+	focus = {
+		id = rus_tackle_Kadoc
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = rus_handle_the_amry
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_handle_the_amry
+
+	}
+	focus = {
+		id = rus_enrich_russian
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = rus_agricultural_recover
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_agricultural_recover
+
+	}
+	focus = {
+		id = rus_western_pilot_training
+		icon = GFX_focus_usa_escort_fighters
+		cost = 10.00
+		prerequisite = {
+			focus = rus_foreign_volunteers
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_foreign_volunteers
+
+	}
+	focus = {
+		id = rua_modernized_military_school
+		icon = GFX_focus_generic_military_academy
+		cost = 10.00
+		prerequisite = {
+			focus = rus_seek_lend_lease
+			focus = rus_foreign_volunteers
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_seek_lend_lease
+
+	}
+	focus = {
+		id = rus_resurrect_the_entente
+		icon = GFX_focus_chi_british_cooperation
+		cost = 10.00
+		prerequisite = {
+			focus = rus_rekindle_old_alliance
+			focus = rus_foreign_volunteers
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_rekindle_old_alliance
+
+	}
+	focus = {
+		id = rus_prepare_western_front
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = rus_rekindle_old_alliance
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_rekindle_old_alliance
+
+	}
+	focus = {
+		id = rus_lesson_from_the_great_war
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10.00
+		prerequisite = {
+			focus = rus_prepare_western_front
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_prepare_western_front
+
+	}
+	focus = {
+		id = rus_join_the_world_war
+		icon = GFX_focus_attack_germany
+		cost = 10.00
+		prerequisite = {
+			focus = rus_lesson_from_the_great_war
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_lesson_from_the_great_war
+
+	}
+	focus = {
+		id = rus_admit_current_state_in_midasia
+		icon = GFX_focus_generic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = rus_resurrect_the_entente
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_resurrect_the_entente
+
+	}
+	focus = {
+		id = rus_break_tie_with_jap
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10.00
+		prerequisite = {
+			focus = rus_admit_current_state_in_midasia
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_admit_current_state_in_midasia
+
+	}
+	focus = {
+		id = rus_iran_problem
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = rus_resurrect_the_entente
+		}
+		x = -2
+		y = 1
+		relative_position_id = rus_resurrect_the_entente
+
+	}
+	focus = {
+		id = rus_reconcile_with_china
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		cost = 10.00
+		prerequisite = {
+			focus = rus_break_tie_with_jap
+		}
+		x = -2
+		y = 1
+		relative_position_id = rus_break_tie_with_jap
+
+	}
+	focus = {
+		id = rus_prevent_the_eastern_threat
+		icon = GFX_focus_attack_japan
+		cost = 10.00
+		prerequisite = {
+			focus = rus_break_tie_with_jap
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_break_tie_with_jap
+
+	}
+	focus = {
+		id = rus_take_over_dalian
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = rus_prevent_the_eastern_threat
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_prevent_the_eastern_threat
+
+	}
+	focus = {
+		id = rus_re_openup_silk_road
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = rus_reconcile_with_china
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_reconcile_with_china
+
+	}
+	focus = {
+		id = rus_anti_bolshevik_special_comittee
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		cost = 10.00
+		prerequisite = {
+			focus = rus_support_from_military
+			focus = rus_support_from_the_popularity
+		}
+		x = 3
+		y = 1
+		relative_position_id = rus_support_from_military
+
+	}
+	focus = {
+		id = rus_national_white_army
+		icon = GFX_focus_generic_military_mission
+		cost = 10.00
+		prerequisite = {
+			focus = rus_anti_bolshevik_special_comittee
+		}
+		x = 0
+		y = 2
+		relative_position_id = rus_anti_bolshevik_special_comittee
+
+	}
+	focus = {
+		id = rus_promise_autonomy
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10.00
+		prerequisite = {
+			focus = rus_Romanov_Tercentenary
+		}
+		prerequisite = {
+			focus = rus_national_white_army
+			focus = rus_free_russian_legion
+		}
+		mutually_exclusive = {
+			focus = rus_no_compromise_on_united_russia
+		}
+		x = 17
+		y = 8
+
+	}
+	focus = {
+		id = rus_no_compromise_on_united_russia
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = rus_national_white_army
+		}
+		mutually_exclusive = {
+			focus = rus_promise_autonomy
+		}
+		x = 21
+		y = 8
+
+	}
+	focus = {
+		id = rus_federal_russia
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = rus_promise_autonomy
+		}
+		x = 13
+		y = 9
+
+	}
+	focus = {
+		id = run_realistic_foreign_policy
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10.00
+		prerequisite = {
+			focus = rus_promise_autonomy
+			focus = rus_no_compromise_on_united_russia
+		}
+		mutually_exclusive = {
+			focus = rus_redeem_glory_of_past
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_promise_autonomy
+
+	}
+	focus = {
+		id = rus_redeem_glory_of_past
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = rus_no_compromise_on_united_russia
+		}
+		mutually_exclusive = {
+			focus = run_realistic_foreign_policy
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_no_compromise_on_united_russia
+
+	}
+	focus = {
+		id = rus_national_capitalism
+		icon = GFX_focus_mex_privatisation
+		cost = 10.00
+		prerequisite = {
+			focus = rus_a_tough_industrialization
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_a_tough_industrialization
+
+	}
+	focus = {
+		id = rus_western_economy_aid
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10.00
+		prerequisite = {
+			focus = rus_national_capitalism
+			focus = rus_strengthen_tie_with_the_west
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_national_capitalism
+
+	}
+	focus = {
+		id = rus_Warrior_race
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		x = 0
+		y = 1
+		relative_position_id = rus_support_from_the_popularity
+
+		completion_reward = {
+
+			add_political_power = -100
+
+        add_ideas = RUS_Warrior_Racism_is_Crazy
+
+        swap_ideas = { remove_idea = RUS_populism add_idea = RUS_Warrior_Racism }
+
+		}
+
+	}
+	focus = {
+		id = rus_Warrior_race_in_the_military
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		x = 0
+		y = 1
+		relative_position_id = rus_Warrior_race
+
+		completion_reward = {
+
+			add_political_power = -50
+
+        swap_ideas = { remove_idea = RUS_Warrior_Racism_is_Crazy add_idea = RUS_Warrior_Racism_is_Crazy1 }
+
+        swap_ideas = { remove_idea = RUS_Warrior_Racism add_idea = RUS_Warrior_Racism1 }
+
+		}
+
+	}
+	focus = {
+		id = rus_Promise_more_land
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		x = 0
+		y = 1
+		relative_position_id = rus_Warrior_race_in_the_military
+
+		completion_reward = {
+
+			add_political_power = 100
+
+        swap_ideas = { remove_idea = RUS_Warrior_Racism_is_Crazy1 add_idea = RUS_Warrior_Racism_is_Crazy2 }
+
+        swap_ideas = { remove_idea = RUS_Warrior_Racism1 add_idea = RUS_Warrior_Racism2 }
+
+		}
+
+	}
+	focus = {
+		id = rus_no_think_just_act
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		x = 0
+		y = 1
+		relative_position_id = rus_Promise_more_land
+
+		completion_reward = {
+
+			add_political_power = -50
+
+        remove_ideas = RUS_Warrior_Racism_is_Crazy2
+
+        swap_ideas = { remove_idea = RUS_Warrior_Racism2 add_idea = RUS_Warrior_Racism3 }
+
+		}
+
+	}
+
+	focus = {
+		id = rus_Working_for_the_mother
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		x = 3
+		y = 1
+		relative_position_id = rus_support_from_the_popularity
+
+		completion_reward = {
+
+        swap_ideas = { remove_idea = RUS_Land_Reform_fail add_idea = RUS_nine_nine_six }
+
+		}
+
+	}
+
+	focus = {
+		id = rus_Make_friends_with_capitalists
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		x = 0
+		y = 1
+		relative_position_id = rus_Working_for_the_mother
+
+		completion_reward = {
+
+		add_political_power = 100
+
+		}
+
+	}
+
+	focus = {
+		id = rus_agricultural_machinery
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		x = 0
+		y = 1
+		relative_position_id = rus_Make_friends_with_capitalists
+
+		completion_reward = {
+
+        swap_ideas = { remove_idea = RUS_nine_nine_six add_idea = RUS_nine_nine_six1 }
+
+		}
+
+	}
+
+	focus = {
+		id = rus_fighting_for_the_mother
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		x = 5
+		y = 1
+		relative_position_id = rus_support_from_the_popularity
+
+		completion_reward = {
+
+        swap_ideas = { remove_idea = RUS_Land_Reform_fail add_idea = RUS_fighting_spirit }
+
+		}
+
+	}
+
+	focus = {
+		id = rus_anti_capitalists
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		x = 0
+		y = 1
+		relative_position_id = rus_fighting_for_the_mother
+
+		completion_reward = {
+
+        swap_ideas = { remove_idea = RUS_fighting_spirit add_idea = RUS_fighting_spirit1 }
+
+		}
+
+	}
+
+	focus = {
+		id = rus_real_fighting_nation
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		x = 0
+		y = 1
+		relative_position_id = rus_anti_capitalists
+
+		completion_reward = {
+
+        swap_ideas = { remove_idea = RUS_fighting_spirit1 add_idea = RUS_fighting_spirit2 }
+
+		}
+
+	}
+
+}

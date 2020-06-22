@@ -1,0 +1,233 @@
+spriteTypes = {	
+
+  spriteType = {
+		name = "GFX_focus_Kazimierz"
+		texturefile = "gfx/interface/goals/focus_Kazimierz.dds"
+	}
+  
+  spriteType = {
+		name = "GFX_focus_poland_firewatch"
+		texturefile = "gfx/interface/goals/focus_poland_firewatch.dds"
+	}
+
+  spriteType = {
+		name = "GFX_focus_POL_polish_madagascar"
+		texturefile = "gfx/interface/goals/focus_POL_polish_madagascar.dds"
+	}
+  
+  spriteType = {
+		name = "GFX_umc_goal_rommel"
+		texturefile = "gfx/interface/goals/umc_goal_rommel.dds"
+	}
+
+	spriteType = {
+		name = "GFX_umc_goal_flag_italy"
+		texturefile = "gfx/interface/goals/umc_goal_flag_italy.dds"
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_british_armed_convoy"
+	texturefile = "gfx/interface/goals/focus_british_armed_convoy.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_CBI"
+	texturefile = "gfx/interface/goals/focus_CBI.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_Nightingale_act"
+	texturefile = "gfx/interface/goals/focus_Nightingale_act.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_scotland_industry"
+	texturefile = "gfx/interface/goals/focus_scotland_industry.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_scotland_navy"
+	texturefile = "gfx/interface/goals/focus_scotland_navy.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_wales_industry"
+	texturefile = "gfx/interface/goals/focus_wales_industry.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_wales_navy"
+	texturefile = "gfx/interface/goals/focus_wales_navy.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_england_navy"
+	texturefile = "gfx/interface/goals/focus_england_navy.dds"			
+	}
+  
+  #############
+  
+  SpriteType = {
+	name = "GFX_focus_anti_Nero"
+	texturefile = "gfx/interface/goals/focus_anti_Nero.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_celt_bond"
+	texturefile = "gfx/interface/goals/focus_celt_bond.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_faction_fortification"
+	texturefile = "gfx/interface/goals/focus_faction_fortification.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_legend_of_dracula"
+	texturefile = "gfx/interface/goals/focus_legend_of_dracula.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_nero_petals"
+	texturefile = "gfx/interface/goals/focus_nero_petals.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_nordic_kingship"
+	texturefile = "gfx/interface/goals/focus_nordic_kingship.dds"			
+	}
+  
+  
+  SpriteType = {
+	name = "GFX_focus_oil_exploit_center"
+	texturefile = "gfx/interface/goals/focus_oil_exploit_center.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_orthodox_prime"
+	texturefile = "gfx/interface/goals/focus_orthodox_prime.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_pan_nordic_nationalism"
+	texturefile = "gfx/interface/goals/focus_pan_nordic_nationalism.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_scathach"
+	texturefile = "gfx/interface/goals/focus_scathach.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_sweden_fascists"
+	texturefile = "gfx/interface/goals/focus_sweden_fascists.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_swedish_democracy"
+	texturefile = "gfx/interface/goals/focus_swedish_democracy.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_sword_rose_fasces"
+	texturefile = "gfx/interface/goals/focus_sword_rose_fasces.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_threaten_romania"
+	texturefile = "gfx/interface/goals/focus_threaten_romania.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_goal_nested_fortifications"
+	texturefile = "gfx/interface/goals/GFX_goal_nested_fortifications.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_francis_drake"
+	texturefile = "gfx/interface/goals/focus_francis_drake.dds"			
+	}
+  
+  ####################
+  
+  SpriteType = {
+	name = "GFX_focus_altra_hasis"
+	texturefile = "gfx/interface/goals/focus_altra_hasis.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_anzu"
+	texturefile = "gfx/interface/goals/focus_anzu.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_baathism"
+	texturefile = "gfx/interface/goals/focus_baathism.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_enuma_elish"
+	texturefile = "gfx/interface/goals/focus_enuma_elish.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_ereshkigal"
+	texturefile = "gfx/interface/goals/focus_ereshkigal.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_hanged_garden"
+	texturefile = "gfx/interface/goals/focus_hanged_garden.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_ishtar"
+	texturefile = "gfx/interface/goals/focus_ishtar.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_ishtar2"
+	texturefile = "gfx/interface/goals/focus_ishtar2.dds"			
+	}
+    
+  SpriteType = {
+	name = "GFX_focus_kurdistan_ally"
+	texturefile = "gfx/interface/goals/focus_kurdistan_ally.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_kurdistan_appease"
+	texturefile = "gfx/interface/goals/focus_kurdistan_appease.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_melammu_dingir"
+	texturefile = "gfx/interface/goals/focus_melammu_dingir.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_Semiramis"
+	texturefile = "gfx/interface/goals/focus_Semiramis.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_Star_of_ishtar"
+	texturefile = "gfx/interface/goals/focus_Star_of_ishtar.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_Star_of_shamash"
+	texturefile = "gfx/interface/goals/focus_Star_of_shamash.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_tablet_of_destiny"
+	texturefile = "gfx/interface/goals/focus_tablet_of_destiny.dds"			
+	}
+  
+  SpriteType = {
+	name = "GFX_focus_tiamat"
+	texturefile = "gfx/interface/goals/focus_tiamat.dds"			
+	}
+  
+}

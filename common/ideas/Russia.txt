@@ -1,0 +1,606 @@
+ideas = {
+	country = {
+
+		RUS_Land_Reform_fail = {
+			
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+			
+			modifier = {
+                stability_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.20
+                production_factory_max_efficiency_factor = -0.20
+			}
+		}
+
+		RUS_nine_nine_six = {
+			
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+			
+			modifier = {
+				industrial_capacity_factory = 0.20
+				industrial_capacity_dockyard = 0.20
+				production_factory_efficiency_gain_factor = -0.20
+                production_factory_max_efficiency_factor = -0.20
+                conscription = -0.025
+			}
+		}
+
+		RUS_nine_nine_six1 = {
+			
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+			
+			modifier = {
+				industrial_capacity_factory = 0.20
+				industrial_capacity_dockyard = 0.20
+                conscription = -0.025
+			}
+		}
+
+        RUS_money_idea = {
+
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+
+			modifier = {
+                consumer_goods_factor = 0.05
+			}
+                                }
+
+		RUS_fighting_spirit = {
+			
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+			
+			modifier = {
+                mobilization_speed = 0.20
+                training_time_factor = -0.20
+				production_factory_efficiency_gain_factor = -0.20
+                production_factory_max_efficiency_factor = -0.20
+                conscription = 0.025
+			}
+		}
+
+		RUS_fighting_spirit1 = {
+			
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+			
+			modifier = {
+                mobilization_speed = 0.20
+                training_time_factor = -0.20
+				production_factory_efficiency_gain_factor = -0.15
+                production_factory_max_efficiency_factor = -0.15
+                conscription = 0.03
+			}
+		}
+
+		RUS_fighting_spirit2 = {
+			
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+			
+			modifier = {
+                mobilization_speed = 0.20
+                training_time_factor = -0.20
+	            winter_attrition_factor = -0.05
+		        equipment_capture_factor = 0.05
+		        supply_consumption_factor = -0.05
+		        out_of_supply_factor = -0.10
+		        no_supply_grace = 24
+				production_factory_efficiency_gain_factor = -0.15
+                production_factory_max_efficiency_factor = -0.15
+                conscription = 0.03
+			}
+		}
+
+		RUS_sour_loser = {
+			
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.5
+				ai_get_ally_desire_factor = -100
+			}
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+
+			rule = {
+				can_create_factions = yes
+			}
+		}
+
+		RUS_Oprichnik = {
+			
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_secret_police
+			
+			removal_cost = -1
+			
+			modifier = {
+				communism_drift = -0.05
+				enemy_partisan_effect = -0.15
+				foreign_subversive_activites = -0.15
+                consumer_goods_factor = -0.05
+			}
+		}	
+
+		RUS_Okhrana = {
+			
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_secret_police
+			
+			removal_cost = -1
+			
+			modifier = {
+		        political_power_gain = 0.15
+				stability_factor = 0.10
+                communism_drift = -0.05
+				enemy_partisan_effect = -0.25
+				foreign_subversive_activites = -0.25
+			}
+		}
+
+		RUS_militarism = {
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			picture = warrior_traditions_idea
+			
+			modifier = {
+				war_support_factor = 0.1
+				mobilization_laws_cost_factor = -0.25
+				justify_war_goal_time = -0.2
+				army_morale_factor = 0.10
+				production_speed_industrial_complex_factor = -0.10
+				production_speed_arms_factory_factor = 0.10
+			}
+		}
+
+		RUS_populism = {
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			picture = warrior_traditions_idea
+			
+			modifier = {
+				stability_factor = 0.1
+				justify_war_goal_time = -0.1
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+			}
+		}
+
+		RUS_Warrior_Racism = {
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			picture = warrior_traditions_idea
+			
+			modifier = {
+				war_support_factor = 0.2
+				justify_war_goal_time = -0.1
+				army_core_attack_factor = 0.10
+	            army_attack_factor = 0.10	
+                org_loss_when_moving = -0.10
+                land_reinforce_rate = 0.03
+                attrition = 0.03
+		        non_core_manpower = -0.02
+		        enemy_partisan_effect = -0.15
+		        foreign_subversive_activites = -0.20
+			}
+		}
+
+		RUS_Warrior_Racism1 = {
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			picture = warrior_traditions_idea
+			
+			modifier = {
+				war_support_factor = 0.2
+				justify_war_goal_time = -0.1
+				army_core_attack_factor = 0.10
+	            army_attack_factor = 0.10	
+				army_morale_factor = 0.10
+                org_loss_when_moving = -0.10
+                land_reinforce_rate = 0.05
+                attrition = 0.03
+		        non_core_manpower = -0.02
+		        enemy_partisan_effect = -0.15
+		        foreign_subversive_activites = -0.20
+			}
+		}
+
+		RUS_Warrior_Racism2 = {
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			picture = warrior_traditions_idea
+			
+			modifier = {
+				war_support_factor = 0.2
+				justify_war_goal_time = -0.1
+				army_core_attack_factor = 0.15
+	            army_attack_factor = 0.10	
+				army_morale_factor = 0.10
+                org_loss_when_moving = -0.10
+                land_reinforce_rate = 0.05
+                attrition = 0.03
+                conscription = 0.03
+		        non_core_manpower = -0.05
+		        enemy_partisan_effect = -0.05
+		        foreign_subversive_activites = -0.30
+			}
+		}
+
+		RUS_Warrior_Racism3 = {
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			picture = warrior_traditions_idea
+			
+			modifier = {
+				war_support_factor = 0.2
+				justify_war_goal_time = -0.1
+				army_core_attack_factor = 0.15
+	            army_attack_factor = 0.10	
+				army_morale_factor = 0.10
+                org_loss_when_moving = -0.10
+                land_reinforce_rate = 0.07
+                attrition = 0.03
+                conscription = 0.04
+				research_speed_factor = -0.05
+		        non_core_manpower = -0.05
+		        enemy_partisan_effect = -0.05
+		        foreign_subversive_activites = -0.30
+			}
+		}
+
+		RUS_Warrior_Racism_is_Crazy = {
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			picture = warrior_traditions_idea
+			
+			modifier = {
+				stability_factor = -0.30
+                army_attack_factor = -0.10
+				army_defence_factor = -0.10
+				army_morale_factor = -0.10
+                org_loss_when_moving = 0.10
+				industrial_capacity_factory = -0.20
+				industrial_capacity_dockyard = -0.20
+				production_factory_efficiency_gain_factor = -0.20
+                production_factory_max_efficiency_factor = -0.20
+				research_speed_factor = -0.15
+			}
+		}
+
+		RUS_Warrior_Racism_is_Crazy1 = {
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			picture = warrior_traditions_idea
+			
+			modifier = {
+				stability_factor = -0.15
+				industrial_capacity_factory = -0.20
+				industrial_capacity_dockyard = -0.20
+				production_factory_efficiency_gain_factor = -0.20
+                production_factory_max_efficiency_factor = -0.20
+				research_speed_factor = -0.15
+			}
+		}
+
+		RUS_Warrior_Racism_is_Crazy2 = {
+			allowed = {
+				original_tag = RUS
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+	
+			picture = warrior_traditions_idea
+			
+			modifier = {
+				stability_factor = -0.05
+				research_speed_factor = -0.15
+			}
+		}
+
+	}
+	################################## POLITICAL BOIZ
+	political_advisor = {
+		Boris_Savinkov = {
+			allowed = {
+				original_tag = RUS
+			}
+			
+			available = {
+					has_government = fascism
+			}
+			
+			traits = { RUS_Savinkov_T }
+
+			ai_will_do = {
+				factor = 100
+			}
+
+		}
+
+		Felix_Yusupov = {
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { RUS_Yusupov_T }
+
+			ai_will_do = {
+				factor = 3
+			}
+
+		}
+	
+		Vladimir_Smirnov = {
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { RUS_Smirnov_T }
+			
+			ai_will_do = {
+				factor = 50
+			}
+		}
+		
+		Alexander_Solzhenitsyn = {
+			allowed = {
+				original_tag = RUS
+			}
+			
+			
+			traits = { RUS_Solzhenitsyn_T }
+
+			ai_will_do = {
+				factor = 3
+			}
+		}
+		
+	}
+
+	################################## ARMY CHIEF
+	army_chief = {
+		Lavr_Kornilov = {
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { RUS_Kornilov_T }
+			
+			ai_will_do = {
+				factor = 30
+			}
+		}
+
+		Pyotr_Wrangel  = {
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { RUS_Wrangel_T }
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	
+	}
+
+	################################## NAVY CHIEF
+	navy_chief = {
+		Aleksandr_Kolchak = {
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { RUS_Kolchak_T }
+			
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+	}
+	
+	################################## High Command
+	high_command = {
+		Anton_Denikin = {
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { RUS_Denikin_T }
+			
+			ai_will_do = {
+				factor = 25
+			}
+		}
+		
+		Sergey_Markov = {
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { RUS_Markov_T }
+			
+			ai_will_do = {
+				factor = 50
+			}
+		}
+	
+		Pavel_Shatilov = {
+			allowed = {
+				original_tag = RUS
+			}
+			
+			traits = { RUS_Shatilov_T }
+			
+			ai_will_do = {
+				factor = 30
+			}
+		}
+
+	}	
+	
+}	

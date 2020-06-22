@@ -1,0 +1,61 @@
+
+JAP_create_democratic_leaders = {
+	
+create_corps_commander = {
+	name = "Ryougi Shiki"  # 两仪式
+	picture = "Portrait_ryougi_shiki.dds"
+	traits = {  brilliant_strategist  infantry_leader commando skirmisher  eye_of_the_mind  trickster guerilla_fighter  urban_assault_specialist fortress_buster }
+	skill = 6
+	attack_skill = 6
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+	
+create_corps_commander = {
+	name = "Sakamoto Ryoma"  # 坂本龙马
+	picture = "Portrait_sakamoto_ryoma.dds"
+	traits = {  brilliant_strategist  cavalry_officer cavalry_leader combined_arms_expert career_officer politically_connected }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Asagami Fujino"  # 浅上藤乃
+	picture = "Portrait_asagami_fujino.dds"
+	traits = {  trait_cautious  career_officer infantry_leader commando urban_assault_specialist fortress_buster }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Sizuki Sojyuro"  # 静希草十郎
+	picture = "Portrait_sizuki_sojyuro.dds"
+	traits = {  trait_cautious  career_officer urban_assault_specialist  }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_navy_leader = {
+	name = "Aozaki Aoko"  # 苍崎青子
+	picture = "Portrait_aozaki_aoko.dds"
+	traits = { bold superior_tactician spotter naval_lineage fly_swatter search_pattern_expert big_guns_expert ground_pounder arctic_water_expert battleship_adherent cuts_corners }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 2
+	maneuvering_skill = 4
+	coordination_skill = 6
+}
+
+
+}

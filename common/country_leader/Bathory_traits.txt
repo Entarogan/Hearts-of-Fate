@@ -1,0 +1,121 @@
+leader_traits = {
+	
+  sadistic = {
+		conscription_factor = 0.05
+    compliance_gain = 0.20
+    resistance_target = -0.75
+    army_org = -3
+    stability_factor = -0.10
+    air_chief_cost_factor = 0.05
+    army_chief_cost_factor = 0.05
+    navy_chief_cost_factor = 0.05
+    high_command_cost_factor = 0.05
+    
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+  
+  Bathory_Erzsebet = {
+      neutrality_drift = 0.05
+      political_power_factor = 0.05
+      foreign_subversive_activites = -0.50
+      non_core_manpower = 0.10
+      
+      operative_slot = 1
+  }
+    
+  Queen_Bathory = {
+      neutrality_drift = 0.10
+      political_power_factor = 0.15
+      non_core_manpower = 0.20
+      foreign_subversive_activites = -0.50
+      
+      army_core_attack_factor = 0.10
+      army_core_defence_factor = 0.10
+  }
+  
+  Realpolitik = {
+      join_faction_tension = -0.50
+      generate_wargoal_tension = -0.50
+      ai_license_acceptance = 50
+      fascism_acceptance = 50
+      democratic_acceptance = 50
+      communism_acceptance = 50
+      neutrality_acceptance = 50
+      
+      operative_slot = 1
+  }
+  
+  Roosevelt_of_Romania = {
+      
+      democratic_drift = 0.3
+      political_power_factor = 0.10
+      war_support_weekly = 0.001
+      
+      operative_slot = 1
+  }
+  
+  tatari = {
+      sprite = 13
+      war_support_weekly = 0.002
+      research_speed_factor = 0.075
+      fascism_drift = 0.05
+      justify_war_goal_time = -0.80
+      legitimacy_daily = 0.25
+      operative_slot = 1
+  }
+  
+  moderate = {
+      stability_weekly = 0.003
+      democratic_acceptance = 50
+      justify_war_goal_time = 0.30
+      generate_wargoal_tension = 0.25
+      drift_defence_factor = -0.25
+  }
+  
+  Demonic_Defender_of_the_State = {
+      army_core_attack_factor = 0.10
+      army_core_defence_factor = 0.10
+      war_support_factor = 0.05
+      
+      operative_slot = 1
+  }
+  
+  Protection_of_the_Faith = {
+      drift_defence_factor = 0.50
+      defensive_war_stability_factor = 0.15
+  }
+  
+  new_blood = {
+      mobilization_laws_cost_factor = -0.10
+      trade_laws_cost_factor = -0.10
+      political_advisor_cost_factor = -0.10
+      
+      operative_slot = 1
+  }
+
+  army_armored_epic = { # +15 armor efficiency
+		sprite = 8
+		army_armor_attack_factor = 0.20
+	    army_armor_defence_factor = 0.20
+		
+		ai_will_do = {
+			factor = 3
+		}
+	}
+  
+  army_mechinzied_epic = { # +15 /motorized efficiency
+		sprite = 8
+		motorized_attack_factor = 0.20
+		motorized_defence_factor = 0.20
+		mechanized_attack_factor = 0.20
+		mechanized_defence_factor = 0.20
+		
+		ai_will_do = {
+			factor = 3
+		}
+	}
+  
+}

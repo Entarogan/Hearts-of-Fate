@@ -1,0 +1,108 @@
+﻿capital = 743
+
+oob = "NEA_1936"
+
+set_stability = 0.7
+set_war_support = 0.6
+set_research_slots = 1
+
+set_technology = {
+	infantry_weapons = 1
+
+}
+add_opinion_modifier = {
+	target = PRC modifier = tacit_agreement
+}
+add_opinion_modifier = {
+	target = CHI modifier = hostile_status
+}
+set_popularities = {
+	democratic = 0
+	fascism = 0
+	communism = 0
+	neutrality = 100
+
+}
+set_politics = {
+
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+add_ideas = {
+	closed_economy
+	extensive_conscription
+	partial_economic_mobilisation
+}
+
+create_country_leader = {
+	name = "张学良"
+	desc = "POLITICS_ZHANG_XUELIANG_DESC"
+	picture = "Portrait_Zhang_Xueliang.dds"
+	expire = "1938.1.20"
+	ideology = despotism
+}
+create_country_leader = {
+	name = "张学良"
+	desc = "POLITICS_ZHANG_XUELIANG_DESC"
+	picture = "Portrait_Zhang_Xueliang.dds"
+	expire = "1938.1.20"
+	ideology = marxism
+}
+
+create_country_leader = {
+	name = "张学良"
+	desc = "POLITICS_ZHANG_XUELIANG_DESC"
+	picture = "Portrait_Zhang_Xueliang.dds"
+	expire = "1938.1.20"
+	ideology = rexism
+}
+create_country_leader = {
+	name = "张学良"
+	desc = "POLITICS_ZHANG_XUELIANG_DESC"
+	picture = "Portrait_Zhang_Xueliang.dds"
+	expire = "1938.1.20"
+	ideology = conservatism
+}
+create_country_leader = {
+	name = "张学良"
+	desc = "POLITICS_ZHANG_XUELIANG_DESC"
+	picture = "Portrait_Zhang_Xueliang.dds"
+	expire = "1938.1.20"
+	ideology = n_socialism_ideology
+}
+
+
+create_field_marshal = {
+	name = "张学良"
+	portrait_path = "gfx/leaders/NEA/Portrait_Zhang_Xueliang.dds"
+	traits = { logistics_wizard }
+	skill = 3
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_field_marshal = {
+	name = "杨虎城"
+	portrait_path = "gfx/leaders/NEA/Portrait_Yang_Hucheng.dds"
+	id = 3001
+	traits = {  }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+}
+#NOT NOW
+create_corps_commander = {
+	name = "何柱国"
+	portrait_path = "gfx/leaders/NEA/Portrait_He_Zhuguo.dds"
+	traits = {cavalry_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}

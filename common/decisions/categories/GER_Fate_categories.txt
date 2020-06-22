@@ -1,0 +1,11 @@
+
+GER_special_build = {
+
+	icon = generic_political_actions
+
+	priority = 90
+
+	allowed = {
+		always = yes
+	}
+}

@@ -1,0 +1,57 @@
+HUN_paramillitary_activity = {
+
+	icon = border_conflicts
+
+	priority = 95
+
+	allowed = {
+		original_tag = HUN
+	}
+  
+  visible = {
+      has_completed_focus = HUN_Rongyos_Garda
+  }
+}
+
+HUN_buy_land_from_nero = {
+
+	icon = border_conflicts
+
+	priority = 95
+
+	allowed = {
+		original_tag = HUN
+	}
+  
+  visible = {
+      HUN = { has_completed_focus = HUN_microphone_diplomacy }
+      HUN = { has_completed_focus = HUN_reaffirm_territorial_claims }
+  }
+}
+
+HUN_paramillitary_activity_others = {
+
+	icon = border_conflicts
+
+	priority = 95
+
+	allowed = {
+    OR = {
+        original_tag = ROM
+        original_tag = YUG
+        original_tag = CZE
+    }
+		
+	}
+  
+  visible = {
+      OR = {
+          tag = ROM
+          tag = YUG
+          tag = CZE
+      }
+      
+  }
+}
+
+

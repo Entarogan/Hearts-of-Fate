@@ -1,0 +1,173 @@
+﻿capital = 164
+
+#oob = ""
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 5
+
+add_political_power = 200
+
+set_technology = {
+  support_weapons = 1
+  superior_firepower = 1
+	marines = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+  interwar_antitank = 1
+  tech_maintenance_company = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+  tech_field_hospital = 1
+  basic_light_tank = 1
+	CAS1 = 1
+  motorised_infantry = 1
+	early_fighter = 1
+	naval_bomber1 = 1
+	cv_naval_bomber1 = 1
+	early_bomber = 1 
+  rocket_artillery = 1
+  
+  fuel_refining = 1
+	early_bomber = 1
+  tactical_bomber1 = 1
+  improved_light_tank = 1 
+	basic_heavy_tank = 1
+
+  #doctrines
+  force_rotation = 1
+  fighter_baiting = 1
+  low_echelon_support = 1
+  grand_battle_plan = 1
+  trench_warfare = 1
+
+  #electronics
+  electronic_mechanical_engineering = 1
+  radio = 1
+  radio_detection = 1
+  mechanical_computing = 1
+  computing_machine = 1
+
+  #industry
+  basic_machine_tools = 1
+  improved_machine_tools = 1
+  fuel_silos = 1
+  construction1 = 1
+  construction2 = 1
+  dispersed_industry = 1
+  dispersed_industry2 = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 74
+	fascism = 8
+	communism = 1
+	neutrality = 27
+}
+
+add_offsite_building = {
+  type = industrial_complex
+  level = 10
+}
+add_offsite_building = {
+  type = arms_factory
+  level = 10
+}
+
+add_research_slot = 2
+add_manpower = 50000
+
+
+create_country_leader = {
+	name = "Amiya"
+	desc = ""
+	picture = "Portrait_Amia.dds"
+	ideology = liberalism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Amiya"
+	desc = ""
+	picture = "Portrait_Amia.dds"
+	ideology = syndicalist
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Amiya"
+	desc = ""
+	picture = "Portrait_Amia.dds"
+	ideology = valkist
+	traits = {
+	}
+}
+
+
+create_country_leader = {
+	name = "Amiya"
+	desc = ""
+	picture = "Portrait_Amia.dds"
+	ideology = stratocracy
+	traits = {
+	}
+}
+
+create_corps_commander = {
+	name = "Amiya"
+	picture = "Portrait_Amia.dds"
+	traits = { infantry_leader  adaptable organizer  brilliant_strategist combined_arms_expert expert_delegator expert_improviser}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 6
+}
+
+create_corps_commander = {
+	name = "Enrico Mizzi"
+	picture = "Portrait_MLT_Enrico_Mizzi.tga"
+	traits = {  adaptable organizer expert_improviser}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Gerald Strickland"
+	picture = "Portrait_MLT_Gerald_Strickland.tga"
+	traits = {  adaptable organizer expert_improviser}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Paul Boffa"
+	picture = "Portrait_MLT_Paul_Boffa.tga"
+	traits = {  adaptable organizer expert_improviser}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+

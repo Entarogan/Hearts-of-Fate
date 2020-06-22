@@ -1,0 +1,26 @@
+###########################
+# German Events
+###########################
+
+add_namespace = russian
+
+country_event = {
+	id = russian.1
+	title = russian.1.t
+	desc = russian.1.d
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+	
+	option = {	
+		name = russian.1.a
+		ai_chance = { base = 10 }
+
+            set_politics = {
+                ruling_party = fascism
+                elections_allowed = no
+            }
+		
+	}
+	
+}

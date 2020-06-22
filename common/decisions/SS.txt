@@ -1,0 +1,757 @@
+SS_recruitment = {
+	SS_Siegfried = {
+
+		icon = generic_army_support
+
+		available = {
+			has_army_experience > 99
+		NOT = { has_idea = GER_ss_factory_rerouted }
+		has_tech = mechanised_infantry
+		has_tech = basic_medium_tank
+		has_tech = basic_medium_art
+		has_tech = basic_medium_spaa
+			64 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
+		}
+		visible = {
+			64 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+
+			army_experience = -100	
+
+        set_country_flag = SS_Siegfried
+
+			add_timed_idea = { idea = GER_ss_factory_rerouted days = 180 }
+
+			division_template = {
+				name = "Schutzstaffel armor" 
+				priority = 2
+			    is_locked = yes
+			    division_names_group = GER_Arm_01
+				regiments = {
+							medium_armor = { x = 0 y = 0 }
+							medium_armor = { x = 0 y = 1 }
+							medium_armor = { x = 0 y = 2 }
+                            medium_armor = { x = 0 y = 3 }				
+                            medium_armor = { x = 0 y = 4 }
+
+		    	   		 	mechanized = { x = 1 y = 0 }
+							mechanized = { x = 1 y = 1 }
+		    	   		 	mechanized = { x = 1 y = 2 }
+							mechanized = { x = 1 y = 3 }
+		    	   		 	mechanized = { x = 1 y = 4 }
+
+		    	   		 	medium_sp_artillery_brigade = { x = 2 y = 0 }
+		    	   		 	medium_sp_artillery_brigade = { x = 2 y = 1 }
+		    	   		 	medium_sp_anti_air_brigade = { x = 2 y = 2 }
+				}
+	           support = {
+                            recon = { x = 0 y = 0 }
+                            engineer = { x = 0 y = 1 }
+                            artillery = { x = 0 y = 2 }
+                            signal_company = { x = 0 y = 3 }
+                            logistics_company = { x = 0 y = 4 }
+	            }
+			}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"1. TST-Standarte 'Siegfried'\" division_template = \"Schutzstaffel armor\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"2. TST-Standarte 'Kriemhild'\" division_template = \"Schutzstaffel armor\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"3. TST-Standarte 'Nibelungen'\" division_template = \"Schutzstaffel armor\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+				}
+
+		}
+	}
+	SS_Walkure = {
+
+		icon = generic_army_support
+
+		available = {
+			has_army_experience > 99
+		NOT = { has_idea = GER_ss_factory_rerouted }
+		has_tech = mechanised_infantry
+		has_tech = basic_medium_art
+		has_tech = basic_medium_tank
+		has_tech = basic_medium_td
+		has_tech = basic_medium_spaa
+			64 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
+		}
+		visible = {
+        has_country_flag = SS_Siegfried
+			64 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
+		}
+
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+
+			army_experience = -100	
+
+        set_country_flag = SS_Walkure
+
+			add_timed_idea = { idea = GER_ss_factory_rerouted days = 180 }
+
+			division_template = {
+				name = "Schutzstaffel mechanized" 
+				priority = 2
+			    is_locked = yes
+			    division_names_group = GER_MEC_01
+				regiments = {
+		    	   		 	mechanized = { x = 0 y = 0 }
+							mechanized = { x = 0 y = 1 }
+		    	   		 	mechanized = { x = 0 y = 2 }
+							mechanized = { x = 0 y = 3 }
+		    	   		 	mechanized = { x = 0 y = 4 }
+
+		    	   		 	mechanized = { x = 1 y = 0 }
+		    	   		 	mechanized = { x = 1 y = 1 }
+
+		    	   		 	medium_sp_artillery_brigade = { x = 2 y = 0 }
+		    	   		 	medium_sp_artillery_brigade = { x = 2 y = 1 }
+		    	   		 	medium_sp_anti_air_brigade = { x = 2 y = 2 }
+
+		    	   		 	medium_tank_destroyer_brigade = { x = 3 y = 0 }
+		    	   		 	medium_tank_destroyer_brigade = { x = 3 y = 1 }
+		    	   		 	medium_armor = { x = 3 y = 2 }
+				}
+	           support = {
+                            recon = { x = 0 y = 0 }
+                            engineer = { x = 0 y = 1 }
+                            artillery = { x = 0 y = 2 }
+                            signal_company = { x = 0 y = 3 }
+                            logistics_company = { x = 0 y = 4 }
+	            }
+			}
+
+			division_template = {
+				name = "Schutzstaffel mountaineers" 
+				priority = 2
+			    is_locked = yes
+			    division_names_group = GER_Mnt_01
+				regiments = {
+							mountaineers = { x = 0 y = 0 }
+							mountaineers = { x = 0 y = 1 }
+							mountaineers = { x = 0 y = 2 }
+                            mountaineers = { x = 0 y = 3 }				
+
+		    	   		 	mountaineers = { x = 1 y = 0 }
+							mountaineers = { x = 1 y = 1 }
+		    	   		 	mountaineers = { x = 1 y = 2 }
+							mountaineers = { x = 1 y = 3 }
+
+		    	   		 	artillery_brigade = { x = 2 y = 0 }
+		    	   		 	artillery_brigade = { x = 2 y = 1 }
+		    	   		 	artillery_brigade = { x = 2 y = 2 }
+		    	   		 	anti_tank_brigade = { x = 2 y = 3 }
+		    	   		 	anti_air_brigade = { x = 2 y = 4 }
+				}
+	           support = {
+                            recon = { x = 0 y = 0 }
+                            engineer = { x = 0 y = 1 }
+                            artillery = { x = 0 y = 2 }
+                            anti_tank = { x = 0 y = 3 }
+                            anti_air = { x = 0 y = 4 }
+	            }
+			}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"4. TST-Standarte 'Walküre'\" division_template = \"Schutzstaffel armor\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"5. TST-Standarte 'Thule'\" division_template = \"Schutzstaffel mechanized\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"6. TST-Standarte 'Nordland'\" division_template = \"Schutzstaffel mountaineers\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+				}
+
+		}
+	}
+	SS_Prinz_Eugen = {
+
+		icon = generic_army_support
+
+		available = {
+			has_army_experience > 99
+		NOT = { has_idea = GER_ss_factory_rerouted }
+		has_tech = mechanised_infantry
+		has_tech = basic_medium_art
+		has_tech = basic_medium_tank
+		has_tech = basic_medium_spaa
+			64 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
+		}
+		visible = {
+        has_country_flag = SS_Walkure
+			64 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
+		}
+
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+
+			army_experience = -100	
+
+        set_country_flag = SS_Prinz_Eugen
+
+			add_timed_idea = { idea = GER_ss_factory_rerouted days = 180 }
+
+			division_template = {
+				name = "Schutzstaffel cavalry" 
+				priority = 2
+			    is_locked = yes
+			    division_names_group = GER_Cav_01
+				regiments = {
+		    	   		 	cavalry = { x = 0 y = 0 }
+							cavalry = { x = 0 y = 1 }
+		    	   		 	cavalry = { x = 0 y = 2 }
+							cavalry = { x = 0 y = 3 }
+		    	   		 	cavalry = { x = 0 y = 4 }
+
+		    	   		 	cavalry = { x = 1 y = 0 }
+		    	   		 	cavalry = { x = 1 y = 1 }
+		    	   		 	cavalry = { x = 1 y = 2 }
+		    	   		 	cavalry = { x = 1 y = 3 }
+		    	   		 	cavalry = { x = 1 y = 4 }
+
+				}
+	           support = {
+                            recon = { x = 0 y = 0 }
+                            engineer = { x = 0 y = 1 }
+                            artillery = { x = 0 y = 2 }
+                            anti_tank = { x = 0 y = 3 }
+                            anti_air = { x = 0 y = 4 }
+	            }
+			}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"7. TST-Standarte 'Prinz Eugen'\" division_template = \"Schutzstaffel mountaineers\" start_experience_factor = 0.9" 
+						owner = GER
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"8. TST-Standarte 'Florian Geyer'\" division_template = \"Schutzstaffel cavalry\" start_experience_factor = 0.9" 
+						owner = GER
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"9. TST-Standarte 'Das Reich'\" division_template = \"Schutzstaffel armor\" start_experience_factor = 0.9" 
+						owner = GER
+					}
+				}
+		}
+	}
+	SS_Frundsberg = {
+
+		icon = generic_army_support
+
+		available = {
+			has_army_experience > 99
+		NOT = { has_idea = GER_ss_factory_rerouted }
+		has_tech = mechanised_infantry
+		has_tech = basic_medium_art
+		has_tech = basic_medium_tank
+		has_tech = basic_medium_td
+		has_tech = basic_medium_spaa
+			64 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
+		}
+		visible = {
+        has_country_flag = SS_Prinz_Eugen
+			64 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
+		}
+
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+
+			army_experience = -100	
+
+        set_country_flag = SS_Frundsberg
+
+			add_timed_idea = { idea = GER_ss_factory_rerouted days = 180 }
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"10. TST-Standarte 'Frundsberg'\" division_template = \"Schutzstaffel armor\" start_experience_factor = 0.9" 
+						owner = GER
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"11. TST-Standarte 'Freikorps'\" division_template = \"Schutzstaffel mechanized\" start_experience_factor = 0.9" 
+						owner = GER
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"12. TST-Standarte 'Theoderich der Große'\" division_template = \"Schutzstaffel armor\" start_experience_factor = 0.9" 
+						owner = GER
+					}
+				}
+		}
+	}
+	SS_Wiking = {
+
+		icon = generic_army_support
+
+		available = {
+			has_army_experience > 99
+		NOT = { has_idea = GER_ss_factory_rerouted }
+			64 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
+		}
+		visible = {
+        has_country_flag = SS_Frundsberg
+			64 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
+		}
+
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+
+			army_experience = -100	
+
+        set_country_flag = SS_Wiking
+
+			add_timed_idea = { idea = GER_ss_factory_rerouted days = 180 }
+
+			division_template = {
+				name = "Schutzstaffel Grenadier" 
+				priority = 2
+			    is_locked = yes
+			    division_names_group = GER_Inf_01
+				regiments = {
+		    	   		 	infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+		    	   		 	infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+		    	   		 	infantry = { x = 0 y = 4 }
+
+		    	   		 	infantry = { x = 1 y = 0 }
+		    	   		 	infantry = { x = 1 y = 1 }
+
+		    	   		 	artillery_brigade = { x = 2 y = 0 }
+							artillery_brigade = { x = 2 y = 1 }
+				}
+	           support = {
+                            recon = { x = 0 y = 0 }
+                            engineer = { x = 0 y = 1 }
+                            artillery = { x = 0 y = 2 }
+                            anti_tank = { x = 0 y = 3 }
+                            anti_air = { x = 0 y = 4 }
+	            }
+			}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"13. TST-Standarte 'Wiking'\" division_template = \"Schutzstaffel mountaineers\" start_experience_factor = 0.8" 
+						owner = GER
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"14. TST-Standarte 'Nidhogg'\" division_template = \"Schutzstaffel Grenadier\" start_experience_factor = 0.8" 
+						owner = GER
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"15. TST-Standarte 'Garm'\" division_template = \"Schutzstaffel Grenadier\" start_experience_factor = 0.8" 
+						owner = GER
+					}
+				}
+
+		}
+	}
+	SS_Thor = {
+
+		icon = generic_army_support
+
+		available = {
+			has_army_experience > 99
+		NOT = { has_idea = GER_ss_factory_rerouted }
+		has_tech = mechanised_infantry
+		has_tech = basic_medium_art
+		has_tech = basic_medium_tank
+		has_tech = basic_medium_td
+		has_tech = basic_medium_spaa
+			64 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
+		}
+		visible = {
+        has_country_flag = SS_Wiking
+			64 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
+		}
+
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+
+			army_experience = -100	
+
+        set_country_flag = SS_Thor
+
+			add_timed_idea = { idea = GER_ss_factory_rerouted days = 180 }
+
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"16. TST-Standarte 'Thor'\" division_template = \"Schutzstaffel mechanized\" start_experience_factor = 0.8" 
+						owner = GER
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"17. TST-Standarte 'Sudetenland'\" division_template = \"Schutzstaffel Grenadier\" start_experience_factor = 0.8" 
+						owner = GER
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"18. TST-Standarte 'Týr'\" division_template = \"Schutzstaffel mechanized\" start_experience_factor = 0.8" 
+						owner = GER
+					}
+				}
+		}
+	}
+
+	SS_Loki = {
+
+		icon = generic_army_support
+
+		available = {
+			has_army_experience > 99
+		NOT = { has_idea = GER_ss_factory_rerouted }
+			64 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
+		}
+		visible = {
+        has_country_flag = SS_Thor
+			64 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
+		}
+
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+
+			army_experience = -100	
+
+        set_country_flag = SS_Loki
+
+			add_timed_idea = { idea = GER_ss_factory_rerouted days = 180 }
+
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"19. TST-Standarte 'Loki'\" division_template = \"Schutzstaffel Grenadier\" start_experience_factor = 0.7" 
+						owner = GER
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"20. TST-Standarte 'Jormungandr'\" division_template = \"Schutzstaffel Grenadier\" start_experience_factor = 0.7" 
+						owner = GER
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"21. TST-Standarte 'Frigg'\" division_template = \"Schutzstaffel mountaineers\" start_experience_factor = 0.7" 
+						owner = GER
+					}
+				}
+		}
+	}
+
+	SS_Fenrir = {
+
+		icon = generic_army_support
+
+		available = {
+			has_army_experience > 99
+		NOT = { has_idea = GER_ss_factory_rerouted }
+		has_tech = mechanised_infantry
+		has_tech = basic_medium_art
+		has_tech = basic_medium_tank
+		has_tech = basic_medium_td
+		has_tech = basic_medium_spaa
+			64 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
+		}
+		visible = {
+        has_country_flag = SS_Loki
+			64 = {
+				CONTROLLER = {
+					OR = {
+						original_tag = GER
+						is_subject_of = GER
+					}
+				}
+			}
+		}
+
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+
+			army_experience = -100	
+
+        set_country_flag = SS_Fenrir
+
+			add_timed_idea = { idea = GER_ss_factory_rerouted days = 180 }
+
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"22. TST-Standarte 'Fenrir'\" division_template = \"Schutzstaffel cavalry\" start_experience_factor = 0.7" 
+						owner = GER
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"23. TST-Standarte 'Odin'\" division_template = \"Schutzstaffel mechanized\" start_experience_factor = 0.7" 
+						owner = GER
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"24. TST-Standarte 'Heimdall'\" division_template = \"Schutzstaffel mountaineers\" start_experience_factor = 0.7" 
+						owner = GER
+					}
+				}
+
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"25. TST-Standarte 'Hela'\" division_template = \"Schutzstaffel mechanized\" start_experience_factor = 0.7" 
+						owner = GER
+					}
+				}
+
+		}
+	}
+
+}
+
+SS_demands = {
+
+}
+wehrmacht_demands = {
+	
+}

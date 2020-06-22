@@ -1,0 +1,152 @@
+
+
+SOV_agricultural_collectivization = {
+
+	agricultural_collectivization_1 = {
+
+		icon = generic_political_actions
+
+		cost = 25
+
+		fire_only_once = yes
+
+		days_remove = 180
+
+		visible = {
+			has_completed_focus = SOV_socialist_realism
+
+		}
+		available = {
+			has_completed_focus = SOV_socialist_realism
+		}		
+		remove_effect = {
+
+        add_ideas = SOV_agricultural_collectivization_1
+
+		}
+		ai_will_do = {
+			factor = 100
+		}		
+	}
+
+	agricultural_collectivization_2 = {
+
+		icon = generic_political_actions
+
+		cost = 25
+
+		fire_only_once = yes
+
+		days_remove = 180
+
+		visible = {
+			has_completed_focus = SOV_socialist_realism
+			has_idea = SOV_agricultural_collectivization_1
+		}
+		available = {
+			has_completed_focus = SOV_socialist_realism
+		}		
+		remove_effect = {
+
+					swap_ideas = { 
+						remove_idea = SOV_agricultural_collectivization_1
+						add_idea = SOV_agricultural_collectivization_2
+					}
+
+		}
+		ai_will_do = {
+			factor = 100
+		}		
+	}
+
+	agricultural_collectivization_3 = {
+
+		icon = generic_political_actions
+
+		cost = 25
+
+		fire_only_once = yes
+
+		days_remove = 180
+
+		visible = {
+			has_completed_focus = SOV_socialist_realism
+			has_idea = SOV_agricultural_collectivization_2
+		}
+		available = {
+			has_completed_focus = SOV_socialist_realism
+		}		
+		remove_effect = {
+
+					swap_ideas = { 
+						remove_idea = SOV_agricultural_collectivization_2
+						add_idea = SOV_agricultural_collectivization_3
+					}
+
+		}
+		ai_will_do = {
+			factor = 100
+		}		
+	}
+
+	agricultural_collectivization_4 = {
+
+		icon = generic_political_actions
+
+		cost = 25
+
+		fire_only_once = yes
+
+		days_remove = 180
+
+		visible = {
+			has_completed_focus = SOV_socialist_realism
+			has_idea = SOV_agricultural_collectivization_3
+		}
+		available = {
+			has_completed_focus = SOV_socialist_realism
+		}		
+		remove_effect = {
+
+					swap_ideas = { 
+						remove_idea = SOV_agricultural_collectivization_3
+						add_idea = SOV_agricultural_collectivization_4
+					}
+
+		}
+		ai_will_do = {
+			factor = 100
+		}		
+	}
+
+	agricultural_collectivization_5 = {
+
+		icon = generic_political_actions
+
+		cost = 25
+
+		fire_only_once = yes
+
+		days_remove = 180
+
+		visible = {
+			has_completed_focus = SOV_socialist_realism
+			has_idea = SOV_agricultural_collectivization_4
+		}
+		available = {
+			has_completed_focus = SOV_socialist_realism
+		}		
+		remove_effect = {
+
+					swap_ideas = { 
+						remove_idea = SOV_agricultural_collectivization_4
+						add_idea = SOV_agricultural_collectivization_5
+					}
+
+		}
+		ai_will_do = {
+			factor = 100
+		}		
+	}
+
+}

@@ -1,0 +1,333 @@
+GER_historical_plan = {
+	name = "German historical plan"
+	desc = "Historical behavior for German"
+
+	enable = {
+		original_tag = GER
+	}
+	abort = {
+    has_completed_focus = GER_military_maneuvers_in_the_rhineland
+    date > 1938.1.1
+
+	or = {
+
+    GER = { has_war_with = AUS }
+
+    GER = { has_war_with = SWE }
+
+    GER = { has_war_with = ITA }
+
+	AND = {
+		date < 1939.5.1
+        FRA = { has_war_with = ITA }
+	}
+
+	AND = {
+		date < 1939.5.1
+        FRA = { has_war_with = ENG }
+	}
+
+	AND = {
+		NOT = { has_completed_focus = GER_Poznan_or_war }
+        has_war = yes
+	}
+
+	AND = {
+		date < 1939.5.1
+        CZE = { has_war = yes }
+	}
+
+	AND = {
+		date < 1939.2.1
+        POL = { has_war = yes }
+	}
+
+	AND = {
+		date < 1939.5.1
+        has_war = yes
+	}
+
+	}
+	}
+
+	ai_national_focuses = {
+        GER_military_maneuvers_in_the_rhineland
+        GER_four_year_plan
+        GER_autarky
+
+        GER_hermann_goring_werke
+		GER_kdf_wagen
+
+
+		GER_autobahn
+        GER_DeutscheArbeitsfront
+		GER_Antimonopoly_law
+		GER_Valkist
+        GER_Valkist_cultural
+        GER_army_innovation
+		GER_Jugend_soldiers
+
+		GER_Siegfried_spirit
+
+        GER_coal_liquidization
+        GER_synthetic_rubber
+ 
+
+		GER_soviet_treaty
+
+        GER_grosraumwirtschaft
+        GER_Das_Rheingold
+		GER_HAPRO	
+
+        GER_west_wall
+		GER_extra_tech_slot
+        GER_anschluss
+
+        GER_army_innovation_2
+			
+        GER_nibelungen_steyr_werke_tank_plant
+        GER_Generalstab_WaffenSS
+        GER_WaffenSS_General
+		GER_air_innovation
+        GER_focke
+        GER_messerschmitt
+        GER_CHI_continue_military_cooperation_with_china
+        GER_CHI_chinese_three_year_plan
+        GER_CHI_military_cooperation
+        GER_demand_memel
+
+        GER_mol_rib_pact
+
+        GER_demand_sudetenland
+        GER_CZE_sudetenlandische_treibstoffwerke_ag      
+        GER_first_vienna_award
+        GER_end_of_czechoslovakia
+
+        GER_improve_infantry_equipment
+        GER_enigma_improvement
+        GER_air_innovation_2
+        GER_gather_foreign_equipment
+
+        GER_Poznan_or_war
+        GER_geheime_staatspolizei
+		GER_incorporate_gestapo_into_divisions
+
+        GER_HUN_Ultimatum
+        GER_RHI_Anschluss
+        GER_air_ACE
+        GER_war_with_france
+        GER_around_maginot
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+GER_historical_plan_war_fra = {
+	name = "German historical plan"
+	desc = "Historical behavior for German"
+
+	enable = {
+		original_tag = GER
+        has_war = no
+    has_completed_focus = GER_military_maneuvers_in_the_rhineland
+    date > 1938.1.1
+	or = {
+	AND = {
+		date < 1939.1.1
+        FRA = { has_war_with = ITA }
+	}
+
+	AND = {
+		date < 1939.1.1
+        FRA = { has_war_with = ENG }
+	}
+	}
+	}
+	abort = {
+		date > 1940.1.11 
+	}
+
+	ai_national_focuses = {
+        GER_military_maneuvers_in_the_rhineland
+        GER_anschluss
+        GER_RHI_Anschluss
+        GER_war_with_france
+        GER_around_maginot
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+GER_historical_plan_war_cze = {
+	name = "German historical plan"
+	desc = "Historical behavior for German"
+
+	enable = {
+		original_tag = GER
+        has_war = no
+    has_completed_focus = GER_military_maneuvers_in_the_rhineland
+    date > 1938.1.1
+	AND = {
+		date < 1939.1.1
+        CZE = { has_war = yes }
+	}
+	}
+	abort = {
+		date > 1940.1.11 
+	}
+
+	ai_national_focuses = {
+        GER_military_maneuvers_in_the_rhineland
+        GER_anschluss
+        GER_demand_sudetenland
+        GER_CZE_sudetenlandische_treibstoffwerke_ag      
+        GER_first_vienna_award
+        GER_end_of_czechoslovakia
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+GER_historical_plan_war_pol = {
+	name = "German historical plan"
+	desc = "Historical behavior for German"
+
+	enable = {
+		original_tag = GER
+        has_war = no
+    has_completed_focus = GER_military_maneuvers_in_the_rhineland
+    date > 1938.1.1
+	AND = {
+		date < 1939.1.1
+        POL = { has_war = yes }
+	}
+	}
+	abort = {
+		date > 1940.1.11 
+	}
+
+	ai_national_focuses = {
+        GER_military_maneuvers_in_the_rhineland
+        GER_anschluss
+        GER_demand_memel
+        GER_mol_rib_pact
+        GER_Poznan_or_war
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}
+
+GER_minor_allies = { #used to make minor European nations like Axis more
+	name = "Minor German Allies"
+
+	enable = {
+		OR = {
+			has_government = fascism
+			fascism > 0.5
+		}
+		is_in_faction = no
+		GER = {
+			has_government = fascism
+		}
+		OR = {
+			original_tag = ROM
+			original_tag = HUN
+			original_tag = BUL
+			original_tag = YUG
+			original_tag = ITA
+			original_tag = CZE
+			original_tag = DEN
+			original_tag = NOR
+			original_tag = SWE
+			original_tag = FIN
+			original_tag = SPR
+			original_tag = POR
+			original_tag = HOL
+			original_tag = BEL
+			original_tag = LUX
+			original_tag = POL
+			original_tag = LAT
+			original_tag = LIT
+			original_tag = EST
+			original_tag = CRO
+			original_tag = SLO
+		}
+	}
+	abort = {
+		GER = {
+			NOT = {
+				has_government = fascism
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "JAP"
+		value = -500
+	}
+}

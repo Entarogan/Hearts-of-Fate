@@ -1,0 +1,59 @@
+﻿###########################
+# More Japan Events
+###########################
+add_namespace = more_japan
+
+country_event = {     # Japan: Aozaki Conflicts
+	id = more_japan.1
+	title = more_japan.1.t
+	desc = more_japan.1.d
+	picture = GFX_report_event_aozaki
+
+	trigger = {
+		tag = JAP
+		OR = { 
+			has_completed_focus = JAP_balance_of_power 
+			has_completed_focus = JAP_seize_the_power 
+			has_completed_focus = JAP_the_unthinkable_option 
+		}
+		date > 1936.8.1
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	fire_only_once = yes
+	# Touko has stayed
+	option = {
+		name = more_japan.1.a
+		ai_chance = {
+			factor = 111
+		}
+		add_stability = -0.05
+		set_global_flag = touko_stayed
+    hidden_effect = {
+			news_event = {
+				id = more_news.25
+				hours = 6
+			}
+		}
+	}
+	
+	# Touko has left
+	option = {
+		name = more_japan.1.b
+		ai_chance = {
+			factor = 50
+		}
+		add_stability = 0.05
+		set_global_flag = touko_left
+    hidden_effect = {
+			news_event = {
+				id = more_news.25
+				hours = 6
+			}
+		}
+	}
+}
+

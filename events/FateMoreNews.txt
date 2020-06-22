@@ -1,0 +1,1296 @@
+﻿add_namespace = more_news
+
+news_event = {      # Britain Levy Commodities
+	id = more_news.1
+	title = more_news.1.t
+	desc = more_news.1.d
+	picture = GFX_news_event_arturia_war02
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.1.a
+		trigger = {
+			NOT = {
+				TAG = ENG
+				is_in_faction_with = ENG
+			}
+		}
+	}
+	option = {
+		name = more_news.1.b
+		trigger = { TAG = ENG }
+	}
+	option = {
+		name = more_news.1.e
+		trigger = {
+			NOT = {
+				TAG = ENG
+			}
+			is_in_faction_with = ENG
+		}
+	}
+}
+
+news_event = {        # Britain: King Arthur does not understand man
+	id = more_news.2
+	title = more_news.2.t
+	desc = more_news.2.d
+	picture = GFX_news_event_arturia_war01
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.2.a
+		trigger = {
+			NOT = {
+				TAG = ENG
+				is_in_faction_with = ENG
+			}
+		}
+	}
+	option = {
+		name = more_news.2.b
+		trigger = { TAG = ENG }
+	}
+	option = {
+		name = more_news.2.c
+		trigger = {
+			NOT = {
+				TAG = ENG
+			}
+			is_in_faction_with = ENG
+		}
+	}
+}
+
+
+news_event = {       # Britain: London-Camelot System
+	id = more_news.3
+	title = more_news.3.t
+	desc = more_news.3.d
+	picture = GFX_news_event_generic_el_melloi
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.3.a
+		trigger = {
+			NOT = {
+				TAG = ENG
+				is_in_faction_with = ENG
+			}
+		}
+	}
+	option = {
+		name = more_news.3.b
+		trigger = { TAG = ENG }
+	}
+	option = {
+		name = more_news.3.c
+		trigger = {
+			NOT = {
+				TAG = ENG
+			}
+			is_in_faction_with = ENG
+		}
+	}
+}
+
+
+news_event = {       # Britain: King's Resposibility
+	id = more_news.4
+	title = more_news.4.t
+	desc = more_news.4.d
+	picture = GFX_news_event_arturia_peace
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.4.a
+		trigger = {
+			NOT = {
+				TAG = ENG
+				is_in_faction_with = ENG
+			}
+		}
+	}
+	option = {
+		name = more_news.4.b
+		trigger = { TAG = ENG }
+	}
+	option = {
+		name = more_news.4.c
+		trigger = {
+			NOT = {
+				TAG = ENG
+			}
+			is_in_faction_with = ENG
+		}
+	}
+}
+
+
+news_event = {       # Japan: Greater Sphere
+	id = more_news.5
+	title = more_news.5.t
+	desc = more_news.5.d
+	picture = GFX_news_event_generic_coshpere
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.5.a
+		trigger = {
+			NOT = {
+				TAG = JAP
+				TAG = ENG
+				TAG = FRA
+				TAG = POR
+				TAG = HOL
+				TAG = USA
+				TAG = CHI
+				is_in_faction_with = JAP
+			}
+		}
+	}
+	option = {
+		name = more_news.5.b
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = more_news.5.c
+		trigger = {
+			NOT = {
+				TAG = JAP
+				TAG = ENG
+				TAG = FRA
+				TAG = POR
+				TAG = HOL
+				TAG = USA
+			}
+			is_in_faction_with = JAP
+		}
+	}
+	option = {
+		name = more_news.5.e
+		trigger = { 
+			OR = {
+				TAG = ENG
+				TAG = FRA
+				TAG = POR
+				TAG = HOL
+				TAG = USA
+				AND = {
+					TAG = CHI
+					NOT  = { is_in_faction_with = JAP }
+				}
+				
+			}
+		}
+	}
+}
+
+
+
+
+
+news_event = {       # Japan: Anglo-Japanese Allies
+	id = more_news.6
+	title = more_news.6.t
+	desc = more_news.6.d
+	picture = GFX_news_event_generic_anglo_japanese_alliance
+	
+	major = yes
+	
+	trigger = {
+		JAP = { is_in_faction_with = ENG }
+		OR = {
+			JAP = { has_government = democratic }
+			JAP = { has_government = neutrality }
+		}
+		OR = {
+			ENG = { has_government = democratic }
+			ENG = { has_government = neutrality }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = more_news.6.a
+		trigger = {
+			NOT = {
+				TAG = JAP
+				TAG = ENG
+				is_in_faction_with = JAP
+			}
+		}
+	}
+	option = {
+		name = more_news.6.b
+		trigger = { 
+			TAG = JAP 
+			TAG = ENG
+		}
+	}
+	option = {
+		name = more_news.6.c
+		trigger = {
+			NOT = {
+				TAG = JAP
+				TAG = ENG
+			}
+			is_in_faction_with = JAP
+		}
+	}
+}
+
+
+
+
+
+news_event = {       # Japan: Unite Sinosphere: Tomamo
+	id = more_news.7
+	title = more_news.7.t
+	desc = more_news.7.d
+	picture = GFX_news_event_tomamo
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.7.a
+		trigger = {
+			NOT = {
+				TAG = JAP
+				TAG = ENG
+				TAG = FRA
+				TAG = POR
+				TAG = HOL
+				TAG = USA
+				is_in_faction_with = JAP
+			}
+		}
+	}
+	option = {
+		name = more_news.7.b
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = more_news.7.c
+		trigger = {
+			NOT = {
+				TAG = JAP
+				TAG = ENG
+				TAG = FRA
+				TAG = POR
+				TAG = HOL
+				TAG = USA
+			}
+			is_in_faction_with = JAP
+		}
+	}
+	option = {
+		name = more_news.7.e
+		trigger = { 
+			OR = {
+				TAG = ENG
+				TAG = FRA
+				TAG = POR
+				TAG = HOL
+				TAG = USA
+			}
+		}
+	}
+}
+
+
+
+news_event = {       # Japan: Isolation :Shiki
+	id = more_news.8
+	title = more_news.8.t
+	desc = more_news.8.d
+	picture = GFX_news_event_shiki
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.8.a
+		trigger = {
+			NOT = {
+				TAG = JAP
+				is_in_faction_with = JAP
+			}
+		}
+	}
+	option = {
+		name = more_news.8.b
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = more_news.8.c
+		trigger = {
+			NOT = {
+				TAG = JAP
+			}
+			is_in_faction_with = JAP
+		}
+	}
+}
+
+
+news_event = {       # Japan: World Saver
+	id = more_news.9
+	title = more_news.9.t
+	desc = more_news.9.d
+	picture = GFX_news_event_generic_shirou
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.9.a
+		trigger = {
+			NOT = {
+				TAG = JAP
+				is_in_faction_with = JAP
+			}
+		}
+	}
+	option = {
+		name = more_news.9.b
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = more_news.9.c
+		trigger = {
+			NOT = {
+				TAG = JAP
+			}
+			is_in_faction_with = JAP
+		}
+	}
+}
+
+
+news_event = {       # Italy: Fascists
+	id = more_news.10
+	title = more_news.10.t
+	desc = more_news.10.d
+	picture = GFX_news_event_generic_nero02
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.10.a
+		trigger = {
+			NOT = {
+				TAG = ITA
+				is_in_faction_with = ITA
+			}
+		}
+	}
+	option = {
+		name = more_news.10.b
+		trigger = { TAG = ITA }
+	}
+	option = {
+		name = more_news.10.c
+		trigger = {
+			NOT = {
+				TAG = ITA
+			}
+			is_in_faction_with = ITA
+		}
+	}
+}
+
+
+news_event = {       # Italy: Rebirth of Rome
+	id = more_news.11
+	title = more_news.11.t
+	desc = more_news.11.d
+	picture = GFX_news_event_generic_nero
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.11.a
+		trigger = {
+			NOT = {
+				TAG = ITA
+				is_in_faction_with = ITA
+				has_war_with = ITA
+			}
+		}
+	}
+	option = {
+		name = more_news.11.b
+		trigger = { TAG = ITA }
+	}
+	option = {
+		name = more_news.11.c
+		trigger = {
+			NOT = {
+				TAG = ITA
+			}
+			is_in_faction_with = ITA
+		}
+	}
+	option = {
+		name = more_news.11.e
+		trigger = {
+			has_war_with = ITA
+		}
+	}
+}
+
+
+news_event = {       # Italy: Expand Siciri
+	id = more_news.12
+	title = more_news.12.t
+	desc = more_news.12.d
+	picture = GFX_news_event_roman_expansion02
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.12.a
+		trigger = {
+			NOT = {
+				TAG = ITA
+				is_in_faction_with = ITA
+			}
+		}
+	}
+	option = {
+		name = more_news.12.b
+		trigger = { TAG = ITA }
+	}
+	option = {
+		name = more_news.12.c
+		trigger = {
+			NOT = {
+				TAG = ITA
+			}
+			is_in_faction_with = ITA
+		}
+	}
+}
+
+
+
+
+news_event = {       # Italy: Anglo-Roman Allies
+	id = more_news.13
+	title = more_news.13.t
+	desc = more_news.13.d
+	picture = GFX_news_event_red_blue_alliance
+	
+	major = yes
+	
+	
+	trigger = {
+		ITA = { is_in_faction_with = ENG }
+		ITA = { has_government = neutrality }
+		ENG = { has_government = neutrality }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	fire_only_once = yes
+	
+	
+	option = {
+		name = more_news.13.a
+		trigger = {
+			NOT = {
+				TAG = ITA
+				TAG = ENG
+				is_in_faction_with = ITA
+			}
+		}
+	}
+	option = {
+		name = more_news.13.b
+		trigger = { 
+			TAG = ITA 
+			TAG = ENG
+		}
+	}
+	option = {
+		name = more_news.13.c
+		trigger = {
+			NOT = {
+				TAG = ITA
+				TAG = ENG
+			}
+			is_in_faction_with = ITA
+		}
+	}
+}
+
+news_event = {       # Italy: Conquer France
+	id = more_news.14
+	title = more_news.14.t
+	desc = more_news.14.d
+	picture = GFX_news_event_roman_expansion01
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.14.a
+		trigger = {
+			NOT = {
+				TAG = ITA
+				TAG = FRA
+				is_in_faction_with = ITA
+				is_in_faction_with = FRA
+			}
+		}
+	}
+	option = {
+		name = more_news.14.b
+		trigger = { TAG = ITA }
+	}
+	option = {
+		name = more_news.14.c
+		trigger = {
+			NOT = {
+				TAG = ITA
+			}
+			is_in_faction_with = ITA
+		}
+	}
+	option = {
+		name = more_news.14.e
+		trigger = { TAG = FRA }
+	}
+	option = {
+		name = more_news.14.f
+		trigger = {
+			NOT = {
+				TAG = FRA
+			}
+			is_in_faction_with = FRA
+		}
+	}
+}
+
+
+
+news_event = {       # Italy: Conquer Britain
+	id = more_news.15
+	title = more_news.15.t
+	desc = more_news.15.d
+	picture = GFX_news_event_roman_expansion02
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.15.a
+		trigger = {
+			NOT = {
+				TAG = ITA
+				TAG = ENG
+				is_in_faction_with = ITA
+				is_in_faction_with = ENG
+			}
+		}
+	}
+	option = {
+		name = more_news.15.b
+		trigger = { TAG = ITA }
+	}
+	option = {
+		name = more_news.15.c
+		trigger = {
+			NOT = {
+				TAG = ITA
+			}
+			is_in_faction_with = ITA
+		}
+	}
+	option = {
+		name = more_news.15.e
+		trigger = { TAG = ENG }
+	}
+	option = {
+		name = more_news.15.f
+		trigger = {
+			NOT = {
+				TAG = ENG
+			}
+			is_in_faction_with = ENG
+		}
+	}
+}
+
+
+news_event = {       # Italy: Protect Archaea
+	id = more_news.16
+	title = more_news.16.t
+	desc = more_news.16.d
+	picture = GFX_news_event_generic_atlanta
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.16.a
+		trigger = {
+			NOT = {
+				TAG = ITA
+				is_in_faction_with = ITA
+			}
+		}
+	}
+	option = {
+		name = more_news.16.b
+		trigger = { TAG = ITA }
+	}
+	option = {
+		name = more_news.16.c
+		trigger = {
+			NOT = {
+				TAG = ITA
+			}
+			is_in_faction_with = ITA
+		}
+	}
+}
+
+
+
+
+news_event = {       # Italy: Protect Archaea B
+	id = more_news.17
+	title = more_news.17.t
+	desc = more_news.17.d
+	picture = GFX_news_event_generic_atlanta
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.17.a
+		trigger = {
+			NOT = {
+				TAG = ITA
+				is_in_faction_with = ITA
+			}
+		}
+	}
+	option = {
+		name = more_news.17.b
+		trigger = { TAG = ITA }
+	}
+	option = {
+		name = more_news.17.c
+		trigger = {
+			NOT = {
+				TAG = ITA
+			}
+			is_in_faction_with = ITA
+		}
+	}
+}
+
+
+
+news_event = {       # France: Overseas Conscription
+	id = more_news.18
+	title = more_news.18.t
+	desc = more_news.18.d
+	picture = GFX_news_event_generic_jeanne
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.18.a
+		trigger = {
+			NOT = {
+				TAG = FRA
+				is_in_faction_with = FRA
+				has_war_with = FRA
+			}
+		}
+	}
+	option = {
+		name = more_news.18.b
+		trigger = { TAG = FRA }
+	}
+	option = {
+		name = more_news.18.c
+		trigger = {
+			NOT = {
+				TAG = FRA
+			}
+			is_in_faction_with = FRA
+		}
+	}
+	option = {
+		name = more_news.18.e
+		trigger = {
+			has_war_with = FRA
+		}
+	}
+}
+
+
+
+news_event = {       # France: Speech at London
+	id = more_news.19
+	title = more_news.19.t
+	desc = more_news.19.d
+	picture = GFX_news_event_generic_jeanne
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.19.a
+		trigger = {
+			NOT = {
+				TAG = FRA
+				TAG = ENG
+				is_in_faction_with = FRA
+			}
+		}
+	}
+	option = {
+		name = more_news.19.b
+		trigger = { 
+			TAG = FRA 
+			TAG = ENG
+		}
+	}
+	option = {
+		name = more_news.19.c
+		trigger = {
+			NOT = {
+				TAG = FRA
+				TAG = ENG
+			}
+			is_in_faction_with = FRA
+		}
+	}
+}
+
+
+news_event = {       # Britain: Once and Future King
+	id = more_news.20
+	title = more_news.20.t
+	desc = more_news.20.d
+	picture = GFX_news_event_arturia_peace
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.20.a
+		trigger = {
+			NOT = {
+				TAG = ENG
+				is_in_faction_with = ENG
+				has_government = fascism
+			}
+		}
+	}
+	option = {
+		name = more_news.20.b
+		trigger = { TAG = ENG }
+	}
+	option = {
+		name = more_news.20.c
+		trigger = {
+			NOT = {
+				TAG = ENG
+			}
+			is_in_faction_with = ENG
+		}
+	}
+	option = {
+		name = more_news.20.e
+		trigger = {
+			NOT = {
+				TAG = ENG
+				is_in_faction_with = ENG
+			}
+			has_government = fascism
+		}
+	}
+}
+
+
+
+news_event = {       # Japan: Tenka Fubu
+	id = more_news.21
+	title = more_news.21.t
+	desc = more_news.21.d
+	picture = GFX_news_event_generic_nobu
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.21.a
+		trigger = {
+			NOT = {
+				TAG = JAP
+				is_in_faction_with = JAP
+			}
+		}
+	}
+	option = {
+		name = more_news.21.b
+		trigger = { TAG = JAP }
+	}
+	option = {
+		name = more_news.21.c
+		trigger = {
+			NOT = {
+				TAG = JAP
+			}
+			is_in_faction_with = JAP
+		}
+	}
+}
+
+
+
+news_event = {       # Italy: March Oriental
+	id = more_news.22
+	title = more_news.22.t
+	desc = more_news.22.d
+	picture = GFX_news_event_roman_expansion02
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.22.a
+		trigger = {
+			NOT = {
+				TAG = ITA
+				TAG = ENG
+				is_in_faction_with = ITA
+				is_in_faction_with = ENG
+			}
+		}
+	}
+	option = {
+		name = more_news.22.b
+		trigger = { TAG = ITA }
+	}
+	option = {
+		name = more_news.22.c
+		trigger = {
+			NOT = {
+				TAG = ITA
+			}
+			is_in_faction_with = ITA
+		}
+	}
+	option = {
+		name = more_news.22.e
+		trigger = { TAG = ENG }
+	}
+	option = {
+		name = more_news.22.f
+		trigger = {
+			NOT = {
+				TAG = ENG
+			}
+			is_in_faction_with = ENG
+		}
+	}
+}
+
+
+
+news_event = {       # Britain: Atlas away form Clock Tower
+	id = more_news.23
+	title = more_news.23.t
+	desc = more_news.23.d
+	picture = GFX_news_event_generic_atlas
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.23.a
+		trigger = {
+			NOT = {
+				TAG = ENG
+				is_in_faction_with = ENG
+			}
+		}
+	}
+	option = {
+		name = more_news.23.b
+		trigger = { TAG = ENG }
+	}
+	option = {
+		name = more_news.23.c
+		trigger = {
+			NOT = {
+				TAG = ENG
+			}
+			is_in_faction_with = ENG
+		}
+	}
+}
+
+
+news_event = {       # Britain: Lev Suicide
+	id = more_news.24
+	title = more_news.24.t
+	desc = more_news.24.d
+	picture = GFX_news_event_generic_lev_mash
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.24.a
+		trigger = {
+			NOT = {
+				TAG = ENG
+				is_in_faction_with = ENG
+			}
+		}
+	}
+	option = {
+		name = more_news.24.b
+		trigger = { TAG = ENG }
+	}
+	option = {
+		name = more_news.24.c
+		trigger = {
+			NOT = {
+				TAG = ENG
+			}
+			is_in_faction_with = ENG
+		}
+	}
+}
+
+
+news_event = {       # Japan: Aozaki Conflicts
+	id = more_news.25
+	title = more_news.25.t
+	desc = {
+		text = more_news.25.desc_stay
+		trigger = {
+			has_global_flag = touko_stayed
+		}
+	}
+	desc = {
+		text = more_news.25.desc_left
+		trigger = {
+			has_global_flag = touko_left
+		}
+	}
+	picture = GFX_news_event_generic_aozaki
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.25.a
+		trigger = {
+			NOT = {
+				TAG = JAP
+			}
+		}
+	}
+	option = {
+		name = more_news.25.b
+		trigger = { TAG = JAP }
+	}
+}
+
+
+
+news_event = {       # Italy: Roman Expansion in Balkan
+	id = more_news.26
+	title = more_news.26.t
+	desc = more_news.26.d
+	picture = GFX_news_event_roman_expansion01
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.26.a
+		trigger = {
+			NOT = {
+				TAG = ITA
+				is_in_faction_with = ITA
+			}
+		}
+	}
+	option = {
+		name = more_news.26.b
+		trigger = { TAG = ITA }
+	}
+	option = {
+		name = more_news.26.c
+		trigger = {
+			NOT = {
+				TAG = ITA
+			}
+			is_in_faction_with = ITA
+		}
+	}
+}
+
+
+news_event = {       # Greece: The Second Trojan War
+	id = more_news.27
+	title = more_news.27.t
+	desc = more_news.27.d
+	picture = GFX_news_event_generic_paris_ervant
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.27.a
+		trigger = {
+			NOT = {
+				TAG = GRE
+				is_in_faction_with = GRE
+			}
+		}
+	}
+	option = {
+		name = more_news.27.b
+		trigger = { TAG = GRE }
+	}
+	option = {
+		name = more_news.27.c
+		trigger = {
+			NOT = {
+				TAG = GRE
+			}
+			is_in_faction_with = GRE
+		}
+	}
+}
+
+
+news_event = {       # France: Exiled Government
+	id = more_news.28
+	title = more_news.28.t
+	desc = more_news.28.d
+	picture = GFX_news_event_generic_leo_b_harvey
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.28.a
+		trigger = {
+			NOT = {
+				TAG = FRA
+				is_in_faction_with = FRA
+			}
+		}
+	}
+	option = {
+		name = more_news.28.b
+		trigger = { 
+			OR = {
+				TAG = FRA 
+				is_in_faction_with = FRA
+			}
+		}
+	}
+}
+
+
+
+news_event = {       # Greece: Death of Achilles
+	id = more_news.29
+	title = more_news.29.t
+	desc = more_news.29.d
+	picture = GFX_news_event_generic_paris_ervant
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.29.a
+		trigger = {
+			NOT = {
+				TAG = GRE
+				is_in_faction_with = GRE
+			}
+		}
+	}
+	option = {
+		name = more_news.29.b
+		trigger = { TAG = GRE }
+	}
+	option = {
+		name = more_news.29.c
+		trigger = {
+			NOT = {
+				TAG = GRE
+			}
+			is_in_faction_with = GRE
+		}
+	}
+}
+
+
+
+
+news_event = {       # Ireland: Ireland Appeased: Constitutional Monarchy
+	id = more_news.30
+	title = more_news.30.t
+	desc = more_news.30.d
+	picture = GFX_news_event_generic_bazett
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.30.a
+		trigger = {
+			NOT = {
+				TAG = IRE
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = more_news.30.b
+		trigger = { TAG = IRE }
+	}
+	option = {
+		name = more_news.30.c
+		trigger = { TAG = ENG }
+	}
+}
+
+
+
+news_event = {       # Ireland: Ireland: A Republic
+	id = more_news.31
+	title = more_news.31.t
+	desc = more_news.31.d
+	picture = GFX_news_event_generic_bazett2
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.31.a
+		trigger = {
+			NOT = {
+				TAG = IRE
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = more_news.31.b
+		trigger = { TAG = IRE }
+	}
+	option = {
+		name = more_news.31.c
+		trigger = { TAG = ENG }
+	}
+}
+
+
+
+
+news_event = {       # Avalon!
+	id = more_news.32
+	title = more_news.32.t
+	desc = more_news.32.d
+	picture = GFX_news_event_generic_avalon
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = more_news.32.a
+		trigger = {
+			NOT = {
+				is_in_faction_with = ENG
+                has_war_with = ENG
+				TAG = ENG
+			}
+		}
+	}
+	option = {
+		name = more_news.32.b
+		trigger = { TAG = ENG }
+	}
+	option = {
+		name = more_news.32.c
+		trigger = { 
+            NOT = { TAG = ENG }
+            is_in_faction_with = ENG 
+        }
+	}
+    
+    option = {
+		name = more_news.32.e
+		trigger = { has_war_with = ENG }
+	}
+}

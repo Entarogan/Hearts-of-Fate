@@ -1,0 +1,105 @@
+GER_increase_propaganda = {
+
+	custom_effect_tooltip = GER_increase_propaganda_EXPL
+
+	hidden_effect = {
+		if = {
+			limit = {
+				has_idea = GER_propaganda_I10
+			}
+			
+			add_political_power = 50
+			add_stability = 0.025
+		}
+	
+		if = {
+			limit = {
+				has_idea = GER_propaganda_I9
+			}
+			swap_ideas = {
+				remove_idea = GER_propaganda_I9
+				add_idea = GER_propaganda_I10
+			}
+		}
+		
+		if = {
+			limit = {
+				has_idea = GER_propaganda_I8
+			}
+			swap_ideas = {
+				remove_idea = GER_propaganda_I8
+				add_idea = GER_propaganda_I9
+			}
+		}
+		
+		if = {
+			limit = {
+				has_idea = GER_propaganda_I7
+			}
+			swap_ideas = {
+				remove_idea = GER_propaganda_I7
+				add_idea = GER_propaganda_I8
+			}
+		}
+		
+		if = {
+			limit = {
+				has_idea = GER_propaganda_I6
+			}
+			swap_ideas = {
+				remove_idea = GER_propaganda_I6
+				add_idea = GER_propaganda_I7
+			}
+		}
+		
+		if = {
+			limit = {
+				has_idea = GER_propaganda_I5
+			}
+			swap_ideas = {
+				remove_idea = GER_propaganda_I5
+				add_idea = GER_propaganda_I6
+			}
+		}
+		
+		if = {
+			limit = {
+				has_idea = GER_propaganda_I4
+			}
+			swap_ideas = {
+				remove_idea = GER_propaganda_I4
+				add_idea = GER_propaganda_I5
+			}
+		}
+		
+		if = {
+			limit = {
+				has_idea = GER_propaganda_I3
+			}
+			swap_ideas = {
+				remove_idea = GER_propaganda_I3
+				add_idea = GER_propaganda_I4
+			}
+		}
+		
+		if = {
+			limit = {
+				has_idea = GER_propaganda_I2
+			}
+			swap_ideas = {
+				remove_idea = GER_propaganda_I2
+				add_idea = GER_propaganda_I3
+			}
+		}
+		
+		if = {
+			limit = {
+				has_idea = GER_propaganda_I1
+			}
+			swap_ideas = {
+				remove_idea = GER_propaganda_I1
+				add_idea = GER_propaganda_I2
+			}
+		}
+	}
+}

@@ -1,0 +1,379 @@
+
+ITA_balkan_problem = {
+
+	ITA_decision_invite_tag_to_faction = {
+	
+		icon = generic_political_discourse
+		
+		fire_only_once = yes
+		
+		days_remove = 60
+		
+		visible = {
+			original_tag = ITA
+            has_capitulated = no
+            is_subject = no
+			is_faction_leader = yes
+			has_completed_focus = itabalkan_problem
+			FROM = {
+				is_in_faction = no
+			}
+			FROM = {
+				is_subject = no
+			}
+			FROM = { exists = yes }
+		}
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = ROM
+					original_tag = BUL
+					original_tag = HUN
+					original_tag = YUG
+					original_tag = MNT
+					original_tag = SLV
+					original_tag = SVN
+					original_tag = SLO
+					original_tag = SER
+					original_tag = MAC
+					original_tag = CRO
+					original_tag = MOL
+				}
+			}
+        }
+
+		available = {
+			FROM = { NOT ={ has_government = communism } }
+			FROM = {
+				is_in_faction = no
+			}
+			FROM = {
+				is_subject = no
+			}
+      if = {
+          limit = { FROM = { tag = ROM } }
+          NOT = { has_idea = GER_rom_non_aggression_idea }
+      }
+			FROM = { NOT = { has_war_with = ITA } }
+			threat > 0.50
+		}
+
+		cost = 25
+		
+		remove_effect = {
+			FROM = {
+				country_event = {
+					id = generic.5
+				}				
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	
+
+	ITA_decision_attack = {
+		war_with_on_remove = ROM	
+		war_with_on_remove = HUN
+		war_with_on_remove = BUL
+		icon = generic_political_discourse
+		
+		fire_only_once = no
+		
+		days_remove = 60
+		
+		visible = {
+			original_tag = ITA
+            has_capitulated = no
+            is_subject = no
+			has_completed_focus = itabalkan_problem
+			FROM = {
+				is_subject = no
+			}
+			FROM = { exists = yes }
+		}
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = ROM
+					original_tag = BUL
+					original_tag = HUN
+					original_tag = YUG
+					original_tag = MNT
+					original_tag = SLV
+					original_tag = SVN
+					original_tag = SLO
+					original_tag = SER
+					original_tag = MAC
+					original_tag = CRO
+					original_tag = MOL
+				}
+			}
+        }
+
+		available = {
+			FROM = {
+				NOT = { is_in_faction_with = ITA }
+			}
+			FROM = { NOT = { has_war_with = ITA } }
+      if = {
+          limit = { FROM = { tag = HUN } }
+          NOT = { has_global_flag = HUN_ITA_PACT }
+      }
+      if = {
+          limit = { FROM = { tag = ROM } }
+          NOT = { has_idea = GER_rom_non_aggression_idea }
+      }
+			threat > 0.25
+            NOT = { has_idea = ita_warwarwar }
+		}
+
+		cost = 25
+
+		complete_effect = {
+		  	add_timed_idea = { idea = ita_warwarwar days = 60 }
+		}
+		
+		remove_effect = {
+			FROM = {
+				ITA = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+						expire = 0
+					}
+				}				
+			}
+		}
+		
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 0
+			    date < 1938.9.1
+			}
+			modifier = {
+				factor = 0
+				date < 1940.1.1
+				is_historical_focus_on = yes
+			}
+      modifier = {
+          NOT = { is_owner_neighbor_of = FROM }
+          factor = 0.1
+      }
+      modifier = {
+          ITA = { has_war = yes }
+          factor = 0.3
+      }
+			modifier = {
+				factor = 0
+					any_neighbor_country = {
+						has_war_with = ITA
+						NOT = { has_capitulated = yes }
+						strength_ratio = {
+							tag = ITA
+							ratio > 0.8
+						}
+					}
+			}
+		}
+	}
+	
+	ITA_decision_ask_puppet = {
+		war_with_on_remove = ROM	
+		war_with_on_remove = HUN
+		war_with_on_remove = BUL	
+		icon = generic_political_discourse
+		
+		fire_only_once = yes
+		
+		days_remove = 60
+		
+		visible = {
+			original_tag = ITA
+            has_capitulated = no
+            is_subject = no
+			has_completed_focus = itabalkan_problem
+			FROM = {
+				is_subject = no
+			}
+			FROM = { exists = yes }
+		}
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = ROM
+					original_tag = BUL
+					original_tag = HUN
+					original_tag = YUG
+					original_tag = MNT
+					original_tag = SLV
+					original_tag = SVN
+					original_tag = SLO
+					original_tag = SER
+					original_tag = MAC
+					original_tag = CRO
+					original_tag = MOL
+				}
+			}
+        }
+
+		available = {
+			FROM = {
+				NOT = { is_in_faction_with = ITA }
+			}
+			FROM = { NOT = { has_war_with = ITA } }
+      if = {
+          limit = { FROM = { tag = HUN } }
+          NOT = { has_global_flag = HUN_ITA_PACT }
+      }
+      if = {
+          limit = { FROM = { tag = ROM } }
+          NOT = { has_idea = GER_rom_non_aggression_idea }
+      }
+			threat > 0.25
+            NOT = { has_idea = ita_warwarwar }
+		}
+
+		cost = 25
+
+		complete_effect = {
+		  	add_timed_idea = { idea = ita_warwarwar days = 60 }
+		}
+		
+		remove_effect = {
+			FROM = {
+				country_event = { id = ror.10 }		
+			}
+		}
+		
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 0
+			    date < 1938.9.1
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+      modifier = {
+          NOT = { is_owner_neighbor_of = FROM }
+          factor = 0.1
+      }
+      modifier = {
+          ITA = { has_war = yes }
+          factor = 0.3
+      }
+			modifier = {
+				factor = 0
+					any_neighbor_country = {
+						has_war_with = ITA
+						NOT = { has_capitulated = yes }
+						strength_ratio = {
+							tag = ITA
+							ratio > 0.8
+						}
+					}
+			}
+		}
+	}
+		
+}
+
+
+ITA_integrate_countries = { 
+	ITA_decision_integrate = {
+	
+		icon = generic_political_discourse
+		
+		fire_only_once = yes
+		
+		days_remove = 120
+		
+		visible = {
+			original_tag = ITA
+			has_completed_focus = ita_crazy_empire
+		}
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = ROM
+					original_tag = BUL
+					original_tag = HUN
+					original_tag = YUG
+					original_tag = SPR
+					original_tag = EGY
+					original_tag = TUR
+					original_tag = GRE
+				}
+			}
+        }
+
+		available = {
+			all_state = {
+				OR = {
+					NOT = {  is_core_of = FROM }
+					is_controlled_by = ITA
+				}
+			}
+			if = {
+				limit = { FROM = { tag = SPR } }
+				has_completed_focus = ita_recover_hispania
+			}
+			if = {
+				limit = { FROM = { tag = TUR } }
+				has_completed_focus = ita_recover_eastern_roma
+			}
+      if = {
+				limit = { FROM = { tag = FRA } }
+				has_completed_focus = ita_conquer_gaul
+			}
+			if = {
+				limit = { FROM = { tag = YUG} }
+				has_completed_focus = ita_darmcia_problem
+			}
+			if = {
+				limit = { FROM = { tag = GRE} }
+				has_completed_focus = ita_protect_archaea
+			}
+			if = {
+				limit = { FROM = { tag = ROM} }
+				has_completed_focus = itabalkan_problem
+			}
+			if = {
+				limit = { FROM = { tag = BUL} }
+				has_completed_focus = itabalkan_problem
+			}
+			if = {
+				limit = { FROM = { tag = HUN} }
+				has_completed_focus = itabalkan_problem
+			}
+		}
+
+		cost = 150
+		
+		remove_effect = {
+			every_state = {
+				limit = { is_core_of = FROM }
+				add_core_of = ITA
+			}
+			
+		}
+		
+		ai_will_do = {
+			factor = 150
+		}
+	}
+}

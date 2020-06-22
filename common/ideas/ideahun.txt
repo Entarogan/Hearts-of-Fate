@@ -1,0 +1,350 @@
+ideas = {
+
+    country = {
+        HUN_1936_Army_reform_idea = {
+            picture = generic_neutrality_drift_bonus
+            allowed = {
+              always = no # Added via focus
+            }
+
+            allowed_civil_war = {
+              has_government = neutrality
+            }
+
+            modifier = {
+              army_org_factor = 0.05					
+            }
+        }
+        
+        HUN_Guerrila_idea = {
+            picture = generic_army_problems
+            allowed = {
+              always = no # Added via focus
+            }
+
+            targeted_modifier = {
+              tag = HUN
+              attack_bonus_against = -0.15
+            }
+            targeted_modifier = {
+              tag = HUN
+              defense_bonus_against = -0.15
+            }
+        }
+        
+        HUN_1936_economy_decline_idea = {
+
+            picture = great_depression
+            allowed = {
+              always = no # Added via focus
+            }
+
+            allowed_civil_war = {
+              has_government = neutrality
+            }
+
+            modifier = {
+              industrial_capacity_factory = -0.15
+              production_factory_max_efficiency_factor = -0.05
+              consumer_goods_factor = 0.10
+            }
+        }
+        
+        HUN_1936_economy_balanced_idea = {
+            picture = generic_neutrality_drift_bonus
+            allowed = {
+              always = no # Added via focus
+            }
+
+            allowed_civil_war = {
+              has_government = neutrality
+            }
+
+            modifier = {
+              industrial_capacity_factory = -0.05
+              consumer_goods_factor = 0.02
+            }
+        }
+        
+        HUN_Old_glories = {
+            picture = HUN_hungarian_monarchy
+            allowed = {
+              always = no # Added via focus
+            }
+
+            allowed_civil_war = {
+              has_government = neutrality
+            }
+
+            modifier = {
+              neutrality_drift = 0.05
+              stability_weekly = 0.05
+            }
+        }
+        
+        HUN_revanchism = {
+            picture = FRA_army_of_aggression_focus
+            allowed = {
+              always = no # Added via focus
+            }
+            
+            modifier = {
+              fascism_acceptance = 50
+              justify_war_goal_time = -0.50
+              generate_wargoal_tension = -0.50
+              send_volunteer_size = 15
+              
+            }
+        }
+        
+        HUN_rome_budapest_trade = {
+            picture = can_wartime_prices_and_trade_board
+            allowed = {
+              always = no # Added via focus
+            }
+            available = {
+                HUN = { NOT = { has_war_with = ITA } }
+            }
+            
+            modifier = {
+                local_resources_factor = 0.20
+                min_export = 0.15
+                industrial_capacity_dockyard = 0.05
+                industrial_capacity_factory = 0.05
+            }
+        }
+        
+        HUN_otto_von_harbsburg = {
+            picture = generic_king_handled
+            allowed = {
+              always = no # Added via focus
+            }
+
+            allowed_civil_war = {
+              has_government = neutrality
+            }
+            traits = {
+                popular_figurehead
+            }
+            modifier = {
+              neutrality_drift = 0.02
+            }
+        }
+        
+        HUN_interventionism_communism_bathory = {
+            picture = FRA_scw_intervention_nationalists_focus
+
+            modifier = {
+              consumer_goods_factor = -0.05
+              conscription = 0.02
+            }
+        }
+        
+        HUN_fix_Orszaghaz = {
+            picture = generic_political_support
+            available = {
+                NOT = { has_government = fascism }
+                NOT = { has_government = communism }
+            }
+            modifier = {
+              trade_laws_cost_factor = -0.25
+              mobilization_laws_cost_factor = -0.25
+              political_advisor_cost_factor = -0.25
+              economy_cost_factor = -0.25
+            }
+        }
+        
+        HUN_develop_spa = {
+            picture = ast_all_in
+            available = {
+                NOT = { has_government = fascism }
+                NOT = { has_government = communism }
+            }
+            modifier = {
+              stability_weekly = 0.002
+            }
+        }
+        
+        HUN_improve_danube = {
+            picture = generic_degauss_ship_hulls
+            modifier = {
+              industrial_capacity_factory = -0.08
+              political_power_gain = -0.10
+            }
+        }
+        
+        HUN_cafe_culture = {
+            picture = can_wartime_prices_and_trade_board
+            modifier = {
+              consumer_goods_factor = 0.05
+              production_speed_dockyard_factor = 0.10
+              production_speed_infrastructure_factor = 0.10
+              production_speed_industrial_complex_factor = 0.10
+            }
+        }
+        
+        HUN_Jewish_patriotic_regiment = {
+            picture = generic_manpower_bonus
+            modifier = {
+              conscription = 0.01
+            }
+        }
+        
+        HUN_Jewish_Neolog = {
+            picture = generic_morale_bonus
+            modifier = {
+              research_speed_factor = 0.10
+              stability_factor = -0.10
+              consumer_goods_factor = -0.05
+              political_power_gain = 0.10
+            }
+        }
+        
+        HUN_magyarok_nationalism = {
+            picture = triumphant_will
+            modifier = {
+              conscription_factor = 0.10
+              drift_defence_factor = 0.35
+              democratic_acceptance = -50
+              ai_focus_aggressive_factor = 0.50             
+            }
+        }
+        
+        HUN_Historical_revisionism = {
+            picture = generic_disjointed_gov
+            modifier = { war_support_weekly = 0.003 }
+            
+        }
+        
+        HUN_rearmnament = {
+            picture = ast_volunteer_defence_corps
+            modifier = { production_speed_arms_factory_factor = 0.15 }
+        }
+        
+        HUN_Rongyos_Garda = {
+            picture = can_send_in_the_zombies
+            modifier = { 
+                conscription = 0.02
+                resistance_tick_auto = -2               
+            }           
+        }
+        
+        HUN_Rongyos_Garda_strengthened = {
+            picture = can_send_in_the_zombies
+            modifier = { 
+                conscription = 0.04
+                resistance_tick_auto = -2 
+                training_time_army_factor = -0.15
+                stability_factor = -0.05
+            }           
+        }
+        
+        HUN_military_government = {
+            picture = ast_abandon_the_westminster_system
+            modifier = { 
+                mobilization_laws_cost_factor = -0.40
+                economy_cost_factor = -0.40
+            }  
+        }
+        
+        HUN_state_socialism = {
+            picture = trotskyite_plot_purged
+            modifier = { 
+                production_speed_arms_factory_factor = 0.10
+                production_speed_industrial_complex_factor = 0.10
+                consumer_goods_factor = -0.05
+                communism_drift = 0.05
+            } 
+        }
+        
+        HUN_national_eco_plan_committee = {
+            picture = generic_production_bonus
+            modifier = {
+                economy_cost_factor = -0.35
+                production_factory_max_efficiency_factor = 0.10
+            }
+        }
+        
+        HUN_forced_labor = {
+            picture = generic_production_bonus
+            modifier = {
+                stability_factor = 0.05
+                industrial_capacity_factory = 0.10
+                industrial_capacity_dockyard = 0.10
+                drift_defence_factor = 0.30
+            }
+        }
+        
+        HUN_interventionism_bathory = {
+
+          picture = FRA_scw_intervention_nationalists_focus
+
+          modifier = {
+            consumer_goods_factor = -0.10
+            political_power_gain = -0.2
+          }
+        }
+        
+        HUN_hungary_war_machine = {
+            picture = man_five_year_plan_industry
+            modifier = {
+                economy_cost_factor = -0.35
+                production_factory_max_efficiency_factor = 0.15
+                production_factory_efficiency_gain_factor	 = 0.15
+                line_change_production_efficiency_factor = 0.15
+                production_speed_buildings_factor = 0.10
+                conscription = 0.05
+                war_support_factor = -0.20
+            }
+        }
+        
+        HUN_forced_collectivization = {
+            picture = generic_communism_drift_bonus
+            modifier = {
+                production_speed_industrial_complex_factor = 0.15
+                conversion_cost_civ_to_mil_factor = -0.50
+                communism_drift = 0.05
+            }
+        }
+        
+        HUN_personality_cult = {
+            picture = FRA_scw_intervention_republicans_focus
+            modifier = {
+                stability_weekly = 0.002
+                war_support_weekly = 0.001
+                justify_war_goal_time = -0.20
+                neutrality_drift = 0.05
+            }
+        }
+        
+        HUN_fist_guard = {
+            picture = generic_fascism_drift_bonus
+            modifier = {
+                conscription = 0.05
+            }
+        }
+        
+        HUN_national_supreme = {
+            picture = generic_constitutional_guarantee
+            modifier = {
+              conscription_factor = 0.10
+              drift_defence_factor = 0.35
+              democratic_acceptance = -0.50
+              ai_focus_aggressive_factor = 0.50            
+              army_attack_factor = 0.10
+              army_defence_factor = 0.10
+              training_time_factor = -0.10
+            }
+        }
+        
+        HUN_interventionism_3 = {
+            picture = generic_local_self_management
+
+            modifier = {
+              consumer_goods_factor = -0.05
+              production_speed_arms_factory_factor = 0.05
+              fascism_drift = 0.05
+            }
+        }
+	}
+}

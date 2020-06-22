@@ -1,0 +1,213 @@
+﻿l_english:
+ ENG_GATHERING_STORM_DESC:0 "British politics lies in a careful balance between the king-centric Knights of the Round Table and the parliamentary clock tower. Although the prestige of King Arthur I cannot be underestimated, the clock tower still has a strong political and economic influence in Britain. A Welsh-born king restricted England's dominance over the country and thus eased domestic separatist tendencies. The powerful HMS defended the British Isles and overseas colonies. \nHowever, this smooth climate of governance meets the challenge of extremism in continental Europe. And British colonies overseas are also facing nationalism challenges worldwide. The King's character is known for his rectitude. How long can the stability of British politics remain in this situation?"
+ 
+ FRA_GATHERING_STORM_DESC:0 "The French Royal Family, which regained power, was in a state of flux. The suspension of the throne led to the absence of a head of state, the fragmentation of domestic political forces and the disorder of the people. The Dragon Witch is engaged in destructive activities in Orleans; Germany and Italy are in irritablity. France, in the midst of internal and external troubles, urgently needs a leader to lead them to the future of the French people and to face their own destiny."
+ 
+ ITA_GATHERING_STORM_DESC:0 "The effort of Roman revivalists had paid off: the ancient empire has now risen again. But the reform on the politics could not solve the problem of weakness of the previous Italy in economy and military. The Emperor Nero was regarded as a tyrant and the enemy of Christians. On the other time, the tension between the Empeeror and Senatus is constantly increasing, which make the country even more unstable. \n\n However the Emperor has met her new friends: Fascists. The chance of a thorough renewal is quite appealling. How will this ancient and new empire choice her path?"
+ 
+ JAP_GATHERING_STORM_DESC:0 "As the first Asian country that make its modernization, Japan stands at the crossroad of Asia and Europe. The wheel of expansion and invasion has begun to roll, but the domestic situation is not so promising: extremists are always planning to make a coup to topple the shogunate, while the liberalists who have connetion to the west have established a new party to confront with the government. \n\n Japanese diplomacy is swinging between imperialism, which requires Japan to expand its territory and realm, and pan-asianism, which imagines Japan as the liberator of the Asia from western colonists. The choice of Japanese is related to the fate of the whole Asia."
+ 
+ GER_GATHERING_STORM_DESC:0 "As the biggest victim of the Treaty of Versailles, the German state has not set off the retro movement of royal politics in other European powers. It has always adhered to the restrictions and peace imposed by the Treaty of Versailles ... before everything can be used. \n\n The Hohenzollern family, a symbol of the old order, has long been firmly controlled by the radical Dutch nationalists. The Valkist Germany can no longer be shaken. "Germany will prevail!". And the hero just looked at them and said nothing. Maybe he also had his own plans?"
+ 
+ ENG_fascism:0 "The British Empire"
+ ENG_fascism_DEF:0 "The British Empire"
+ ENG_neutrality:0 "Kingdom of Britain"
+ ENG_neutrality_DEF:0 "Kingdom of Britain"
+ ENG_fascism_ADJ:0 "British"
+ ENG_democratic_ADJ:0 "British"
+ ENG_neutrality_ADJ:0 "British"
+ ENG_communism_ADJ:0 "British"
+
+ FRA_fascism_ADJ:0 "French"
+ FRA_democratic_ADJ:0 "French"
+ FRA_neutrality_ADJ:0 "French"
+ FRA_communism_ADJ:0 "French"
+ 
+ SOV_neutrality:0 "Russian Empire"
+ 
+ VICTORY_POINTS_1086:0 "Jerusalem-Camelot"
+ VICTORY_POINTS_377:0 "Camelot"
+ 
+ ENG_communism_party:0 "CPGB"
+ ENG_democratic_party:0 "Clock Tower"
+ ENG_fascism_party:0 "British Dark Grail Union"
+
+ FRA_fascism:0 "Dragon France"
+ FRA_fascism_DEF:0 "Dragon France"
+  
+ FRA_neutrality:0 "Kingdom of France"
+ FRA_neutrality_DEF:0 "Kingdom of France"
+ 
+ HUN_neutrality:0 "Hungary"
+ HUN_neutrality_DEF:0 "Hungary"
+ 
+ HUN_fascism:0 "Vas-ököl Hungary"
+ HUN_fascism_DEF:0 "Vas-ököl Hungary"
+ 
+ HUN_communism:0 "Munkáspárt Hungary"
+ HUN_communism_DEF:0 "Munkáspárt Hungary"
+ 
+ EGY_democratic:0 "Atlas"
+ EGY_democratic_DEF:0 "Atlas"
+ 
+ EGY_democratic_party_long:0 "Atlas Institute"
+ EGY_democratic_party:0 "Atlas Institute"
+ 
+ FIN_democratic_party_long:0 "Finnish Democratic Alliance"
+ FIN_democratic_party:0 "Finnish Democratic Alliance"
+ 
+ TUR_neutrality:0 "Anatoria Independent State"
+ TUR_neutrality_DEF:0 "Anatoria Independent State"
+ 
+ TUR_neutrality_party:0 "King's Parliment"
+ TUR_neutrality_party_long:0 "King's Parliment"
+ 
+ GRE_neutrality_party:0 "Greek Military Government"
+ GRE_neutrality_party_long:0 "Greek Military Government"
+ 
+ JAP_democratic_party_long:0 "Liberal Party"
+ JAP_democratic_party:0 "Liberal Party"
+ 
+ FRA_fascism_party_long:0 "Parti de Fáfnir"
+ FRA_fascism_party:0 "Parti de Fáfnir"
+ 
+ ITA_fascism:0 "Nova Imperium Romanum"
+ ITA_fascism_DEF:0 "Nova Imperium Romanum"
+  
+ ITA_neutrality:0 "SPQR"
+ ITA_neutrality_DEF:0 "SPQR"
+ 
+ ITA_democratic:0 "Rēs pūblica Rōmāna"
+ ITA_democratic_DEF:0 "Rēs pūblica Rōmāna"
+ 
+ ITA_communism:0 "Communitas Proletaritasque Romana"
+ ITA_communism_DEF:0 "Communitas Proletaritasque Romana"
+ 
+ ITA_communism_party_long:0 "Spartacus Foedus"
+ ITA_communism_party:0 "Spartacus Foedus"
+ 
+ ITA_neutrality_party_long:0 "Senātus Rōmānus"
+ ITA_neutrality_party:0 "Senātus Rōmānus"
+ 
+ ITA_democratic_party_long:0 "Concilium Plebis"
+ ITA_democratic_party:0 "Concilium Plebis"
+  
+ BRA_fascism:0 "Empire of Amazon"
+ BRA_fascism_DEF:0 "Empire of Amazon"
+ SWE_fascism:0 "Sweden Autarchic Government"
+ SWE_fascism_DEF:0 "Sweden Autarchic Government"
+ SWE_fascism_party:0 "Orphelia's Government"
+ SWE_fascism_party_long:0 "Orphelia's Government"
+ 
+ IRQ_neutrality:0 "Sumer and Akkad"
+ IRQ_neutrality_DEF:0 "Sumer and Akkad"
+ 
+ IRQ_democratic:0 "Chaldean Union"
+ IRQ_democratic_DEF:0 "Chaldean Union"
+ 
+ IRQ_fascism_party:0 "Kutha Valkist Movement"
+ IRQ_fascism_party_DEF:0 "Kutha Valkist Movement"
+ 
+ IRQ_fascism:0 "Social Republic of Irkalla"
+ IRQ_fascism_DEF:0 "Social Republic of Irkalla"
+ 
+ BRA_fascism_party_long:0 "Amazon Warriors"
+ BRA_fascism_party:0 "Amazon Warriors"
+ 
+ IRQ_neutrality_party_long:0 "SRP"
+ IRQ_neutrality_party:0 "Sumer Renaissance Party"
+ 
+ MEX_neutrality_new_party_long:0 "Great Temple of the Feathered Serpent"
+ MEX_neutrality_new_party:0 "GTFS"
+ 
+ GER_fascism_party_long:0 "Valkistsche Volkspartei Deutschlands"
+ GER_fascism_party:0 "VVD"
+  
+ britain.13.t:0 "France wants to join Allies"
+ britain.13.d:0 "The world is becoming more and more insecure. [FRA.GetNameDefCap] wants to join allies to safeguard world peace and our values. \n How do we respond?"
+ britain.13.a:0 "Agree"
+ britain.13.b:0 "Refuse"
+ 
+ maintheme:0 ""Dies Irae" from Verdi"
+ 
+ JAP_join_comintern:0 "Unholy Alliance"
+ JAP_intervene_in_china_desc:0 "Our resources are extremely scarce, and our neighbors are famous for their great land. What we have to do is to go to them and take them. All we need now is an excuse."
+
+ SWE_neutrality_party:0 "KPIS"
+ SWE_neutrality_party_long:0 "Kungens parti i Sverige"
+ 
+ SWE_democratic_party:0 "KSP"
+ SWE_democratic_party_long:0 "Kristna socialdemokratiska partiet"
+
+ ROM_democratic_party:0 "PYU"
+ ROM_democratic_party_long:0 "Partidul Yggdmillennia Unificat"
+ 
+ HUN_communsim_party:0 "MMP"
+ HUN_communsim_party_long:0 "Magyar Munkáspárt"
+ 
+ HUN_fascism_party:0 "MVP"
+ HUN_fascism_party_long:0 "Magyar Vas-ökölpárt"
+ 
+ HUN_neutrality_party:0 "MNP"
+ HUN_neutrality_party_long:0 "Magyar Nemzetipárt"
+ 
+ STATE_676:0 "Assyria"
+ VICTORY_POINTS_10106:0 "Neo-Nineveh"
+ STATE_291:0 "Babylonia"
+ VICTORY_POINTS_2097:0 "Neo-Babylon"
+ STATE_675:0 "Chaldea"
+ 
+ FRA_national_grid: "National Grid"
+ FRA_army_command: "Army High Command"
+ 
+ ROM_iron_guard:0 "Ally Garda de fier"
+ ROM_force_abdication_desc:0 "King Vlad III is no longer useful. He is more a trouble than a figurehead. It is time to get rid of this pyscho and let Darnic lead a government."
+ 
+ news.114.d:0 "Today the last resistance movement in Paris has been extinguished and the city is now firmly controlled by the Italian army. \n\n [ITA.GetLeader] hurriedly flew to the victory parade on the Champs-Elysées. He rode a white horse to the front of the parade. At the celebration, [ITA.GetLeader] compared the current victory with Caesar's conquest of Gaul, and promised that this was only the beginning of the great rise of Rome. \n\n Time will tell if what he said is correct."
+ news.22.d:0 "Italian diplomats submitted an ultimatum to the Albanian government asking them to accept Italy's complete military occupation. \n\n King Zorg announced his abdication after realizing that resistance was useless, and Albania became the first part of the Confederacy led by the Roman ruler [ITA.GetLeader]. \n\n [ITA.GetNameDef] eyes on the Balkans ..."
+ news.22.a:0 "Another victim of [ITA.GetLeader]'s ambition."
+ news.203.t:0 "Poland cedes Poznan"
+ news.203.d:0 "With the ultimatum of [GER.GetAdjective] submitted to [From.GetNameDef], [From.GetLeader] and [From.GetAdjective] the government decided to meet all requirements to avoid war. \n\n They hope that the loss of Poznan will save [From.GetNameDef] from Germany's larger territorial ambitions. However, the situation remains tense, and it is said that Polish border guards were not given an order for contact alert."
+ news.204.d:0 "Considering this requirement, everything seems inevitable. \n\n [From.GetNameDef] will have to cede Poznan to Germany and send a plenipotentiary to Germany to discuss other matters. [From.GetLeader], in a statement on [GER.GetNameDef]'s recent move, stated that it was clear that Germany would not be satisfied with the small Poznan. \n\n The German and Polish armies are preparing for war, and reports of border conflicts are coming in large numbers. The war in Europe is reignited."
+ 
+ MLT_democracy:0 "Ordre des Hospitaliers"
+ MLT_democracy_DEF:0 "Ordre des Hospitaliers"
+  
+ MLT_neutrality:0 "Ordre des Hospitaliers"
+ MLT_neutrality_DEF:0 "Ordre des Hospitaliers"
+ 
+ MLT_fascism:0 "Imperium Rodhos"
+ MLT_fascism_DEF:0 "Imperium Rodhos"
+ 
+ MLT_communism:0 "Communitate Rodhos"
+ MLT_communism_DEF:0 "Communitate Rodhos"
+ 
+ MLT_democracy_party:0 "Rhodes Island"
+ MLT_democracy_party_long:0 "Rhodes Island"
+  
+ MLT_neutrality_party:0 "Ordre des Hospitaliers"
+ MLT_neutrality_party_long:0 "Ordre des Hospitaliers"
+ 
+ MLT_fascism_party:0 "The Tenth Crusaders"
+ MLT_fascism_party_long:0 "The Tenth Crusaders"
+ 
+ MLT_communism_party:0 "Rodhos Labour Union"
+ MLT_communism_party_long:0 "Rodhos Labour Union"
+ 
+ CAN_UK_autonomy_dominion:0 "Kingdom of Canada"
+ CAN_UK_autonomy_colony:0 "Kingdom of Canada"
+ CAN_UK_autonomy_puppet:0 "Kingdom of Canada"
+ CAN_UK_autonomy_integrated_puppet:0 "Kingdom of Canada"
+ CAN_UK_autonomy_dominion_DEF:0 "Kingdom of Canada"
+ CAN_UK_autonomy_colony_DEF:0 "Kingdom of Canada"
+ CAN_UK_autonomy_puppet_DEF:0 "Kingdom of Canada"
+ CAN_UK_autonomy_integrated_puppet_DEF:0 "Kingdom of Canada"
+ 
+ CAN_UK_democratic:0 "Kingdom of Canada"
+ CAN_UK_democratic_DEF:0 "Kingdom of Canada"
+ 
+ CAN_UK_neutrality:0 "Kingdom of Canada"
+ CAN_UK_neutrality_DEF:0 "Kingdom of Canada"
+ 
+ CAN_UK_fascism:0 "State of Canada"
+ CAN_UK_fascism_DEF:0 "State of Canada"

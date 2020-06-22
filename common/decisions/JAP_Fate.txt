@@ -1,0 +1,381 @@
+foreign_politics = {
+	JAP_join_jap_faction = {
+
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		visible = {
+			has_country_flag = JAP_pan_asianism_influence
+
+		}
+		available = {
+			NOT = {
+				has_war_with = MEX
+			}
+			is_in_faction = no
+			AND = {
+				has_government = fascism
+				JAP = {
+					is_in_faction = yes
+					has_government = fascism
+				}
+			}
+		}		
+		complete_effect = {
+			JAP = {
+				country_event = {
+					id = generic.2
+				}				
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}		
+	}
+}
+
+JAP_category_invite_alter = {
+	JAP_decision_invite_tag_to_the_shinjuku = {
+	
+		icon = generic_political_discourse
+		
+		fire_only_once = no
+		
+		days_remove = 30
+		
+		visible = {
+			original_tag = JAP
+			is_faction_leader = yes
+			has_completed_focus = JAP_shinjuku_treaty_organization
+		}
+		
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = ENG
+					original_tag = FRA
+				}
+				NOT = { is_in_faction_with = JAP }
+			}
+        }
+
+		available = {
+			JAP = { is_faction_leader = yes }
+			FROM = { has_government = fascism }
+			FROM = { is_subject = no }
+			FROM = { NOT = { has_war_with = JAP } }
+            FROM = { NOT = { is_in_faction = yes } }
+		}
+
+		cost = 50
+		
+		complete_effect = {
+			FROM = {
+				country_event = {
+					id = generic.5
+				}				
+			}
+		}
+		
+		ai_will_do = {
+			factor = 150
+		}
+	}
+}
+
+JAP_category_asia_for_asians = {
+
+	JAP_decision_invite_tag_to_the_greater_sphere = {
+	
+		icon = generic_political_discourse
+		
+		fire_only_once = no
+		
+		days_remove = 60
+		
+		visible = {
+			original_tag = JAP
+			is_faction_leader = yes
+			has_completed_focus = JAP_an_asia_for_asians
+			FROM = { has_government = fascism }
+			FROM = {
+				is_in_faction = no
+			}
+			FROM = {
+				is_subject = no
+			}
+			FROM = { NOT = { has_war_with = JAP } }
+			FROM = { exists = yes }
+		}
+		
+		target_trigger = {
+			FROM = {
+				AND = {
+					capital_scope = {
+						is_on_continent = asia
+					}
+					has_country_flag = JAP_pan_asianism_influence
+				}
+			}
+        }
+
+		available = {
+			FROM = { has_government = fascism }
+			FROM = {
+				is_in_faction = no
+			}
+			FROM = {
+				is_subject = no
+			}
+			FROM = { NOT = { has_war_with = JAP } }
+		}
+
+		cost = 25
+		
+		complete_effect = {
+			FROM = {
+				country_event = {
+					id = generic.5
+				}				
+			}
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	
+	JAP_decision_nationalism_propaganda_tag_to_the_greater_sphere = {
+	
+		icon = eng_propaganda_campaigns
+		
+		fire_only_once = no
+		
+		days_remove = 120
+		
+		visible = {
+			original_tag = JAP
+			is_faction_leader = yes
+			has_completed_focus = JAP_an_asia_for_asians
+			FROM = {
+				fascism < 0.9
+			}
+			FROM = { NOT = { has_war_with = JAP } }
+			OR = {
+				political_power_daily > 0.5
+				has_political_power > 60
+			}
+			FROM = { exists = yes }
+		}
+		
+		target_trigger = {
+			FROM = {
+				AND = {
+					capital_scope = {
+						is_on_continent = asia
+					}
+					# has_country_flag = JAP_pan_asianism_influence
+				}
+			}
+        }
+
+		available = {
+			FROM = {
+				fascism < 0.9
+			}
+			FROM = { NOT = { has_war_with = JAP } }
+			OR = {
+				political_power_daily > 0.5
+				has_political_power > 60
+			}
+		}
+    
+    complete_effect = {
+      FROM = { add_ideas = { fascist_influence } }
+    }
+    
+    remove_effect = {
+      FROM = { remove_ideas = { fascist_influence  } }
+    }
+
+		cost = 50
+		
+		modifier = {
+			political_power_cost = 0.25
+		}
+		
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 100
+				FROM = { is_subject = yes }
+			}
+			modifier = {
+				factor = 75
+				FROM = { original_tag = RAJ }
+			}
+			modifier = {
+				factor = 50
+				FROM = { has_government = communism }
+			}
+		}
+		
+		
+	}
+	
+	JAP_decision_nationalism_coup_tag_to_the_greater_sphere = {
+	
+		icon = generic_prepare_civil_war
+		
+		fire_only_once = yes
+		
+		days_remove = 30
+		
+		visible = {
+			original_tag = JAP
+			is_faction_leader = yes
+			has_completed_focus = JAP_an_asia_for_asians
+			FROM = { NOT = { has_government = fascism } }
+			FROM = { NOT = { has_war_with = JAP } }
+			FROM = { is_subject = no }
+			FROM = { fascism > 0.50 }
+			FROM = { has_civil_war = no }
+			FROM = { exists = yes }
+		}
+		
+		target_trigger = {
+			FROM = {
+				AND = {
+					capital_scope = {
+						is_on_continent = asia
+					}
+					# has_country_flag = JAP_pan_asianism_influence
+					NOT = { original_tag = RAJ }
+					NOT = { original_tag = CHI }
+					NOT = { original_tag = PRC }
+				}
+			}
+        }
+
+		available = {
+			FROM = { NOT = { has_government = fascism } }
+			FROM = { NOT = { has_war_with = JAP } }
+			FROM = { is_subject = no }
+			FROM = { fascism > 0.50 }
+			FROM = { has_civil_war = no }
+		}
+
+		cost = 100
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 50
+				FROM = { has_government = communism }
+			}
+		}
+		
+		remove_effect = {
+			FROM = {
+				country_event = {
+					id = trs_japan.1
+				}				
+			}
+		}
+	}
+	
+	JAP_decision_nationalism_uprising_tag_to_the_greater_sphere = {
+	
+		icon = generic_prepare_civil_war
+		
+		fire_only_once = yes
+		
+		days_remove = 120
+		
+		visible = {
+			original_tag = JAP
+			is_faction_leader = yes
+			has_completed_focus = JAP_an_asia_for_asians
+			FROM = { NOT = { has_government = fascism } }
+			FROM = { fascism > 0.29 }
+			FROM = { exists = yes }
+			FROM = { has_civil_war = no }
+			NOT = { FROM = { is_in_faction_with = JAP  }  }
+		}
+		
+		target_trigger = {
+			FROM = {
+				AND = {
+					capital_scope = {
+						is_on_continent = asia
+					}
+					# has_country_flag = JAP_pan_asianism_influence
+					NOT = { original_tag = RAJ }
+					NOT = { original_tag = CHI }
+					NOT = { original_tag = PRC }
+					
+				}
+			}
+        }
+
+		available = {
+			FROM = { NOT = { has_government = fascism } }
+			FROM = { fascism > 0.29}
+		}
+
+		cost = 75
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 50
+				FROM = { is_subject = yes }
+			}
+		}
+		
+		remove_effect = {
+			FROM = {
+				if = {
+					limit = { has_government = communism }
+					start_civil_war = {
+						ruling_party = communism
+						ideology = fascism
+						size = 0.45
+					}
+				}
+				if = {
+					limit = { has_government = democratic }
+					start_civil_war = {
+						ruling_party = democratic
+						ideology = fascism
+						size = 0.45
+					}
+				}
+				if = {
+					limit = { has_government = neutrality }
+					start_civil_war = {
+						ruling_party = neutrality
+						ideology = fascism
+						size = 0.45
+					}
+				}
+				remove_ideas = { JAP_pan_asianism_idea }
+			}
+			JAP = {
+				declare_war_on = {
+					target = FROM
+					type = puppet_wargoal_focus
+				}
+			}
+			
+			random_other_country = {
+				limit = { 
+					original_tag = FROM
+					has_government = fascism
+				}
+				JAP = { puppet = PREV }
+			}
+		}
+	}
+}

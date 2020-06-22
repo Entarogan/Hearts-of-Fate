@@ -1,0 +1,107 @@
+﻿capital = 671
+
+oob = "FIC_1936"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "FIC_1936_naval_mtg"
+	else = {
+		set_naval_oob = "FIC_1936_naval_legacy"
+	}
+}
+
+FRA = {
+	set_autonomy = {
+		target = FIC
+		autonomous_state = autonomy_colony
+		freedom_level = 0.35
+	}
+}
+
+set_research_slots = 2
+set_convoys = 10
+
+set_technology = {
+	infantry_weapons = 1
+	gwtank = 1
+	early_fighter = 1
+	early_bomber = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_submarine = 1
+	gw_artillery = 1
+}
+add_stability = -0.2
+add_war_support = -0.1
+
+add_ideas = {
+
+}
+
+
+set_popularities = {
+	fascism = 5
+	democratic = 18
+	n_socialism = 7
+	communism = 3
+	neutrality = 67
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Duc de Richelieu"
+	desc = ""
+	picture = "Portrait_Duc_de_Richelieu.dds"
+	expire = "1936.9.15"
+	ideology = stratocracy
+}
+
+create_country_leader = {
+	name = "Duc de Richelieu"
+	desc = ""
+	picture = "Portrait_Duc_de_Richelieu.dds"
+	expire = "1953.3.1"
+	ideology = conservatism
+}
+
+create_country_leader = {
+	name = "Duc de Richelieu"
+	desc = ""
+	picture = "Portrait_Duc_de_Richelieu.dds"
+	expire = "1953.3.1"
+	ideology = fascism_ideology #collabrationism ?
+}
+
+create_country_leader = {
+	name = "St. Martha"
+	desc = ""
+	picture = "Portrait_St_Martha_admiral.dds"
+	expire = "1953.3.1"
+	ideology = syndicalist
+}
+
+create_country_leader = {
+	name = "St. Martha"
+	desc = ""
+	picture = "Portrait_St_Martha_admiral.dds"
+	expire = "1936.9.15"
+	ideology = authoritarian_democracy
+}
+create_navy_leader = {
+	name = "Duc de Richelieu"
+	picture = "Portrait_Duc_de_Richelieu.dds"
+	traits = { fleet_protector spotter  superior_tactician }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	maneuvering_skill = 4
+	coordination_skill = 4
+}

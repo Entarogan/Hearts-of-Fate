@@ -1,0 +1,159 @@
+################
+##### FRA ######
+################
+
+FRA_vichy_france = {
+	
+	allowed = {
+		original_tag = FRA
+	}
+}
+
+FRA_Royal_Guards_categorie = {
+	
+	allowed = {
+		original_tag = FRA
+	}
+	
+	visible = {
+		FRA = {
+			has_completed_focus = FRA_Royal_Guards
+		}
+	}
+}
+
+FRA_Invite_Western_world_Investment_categorie = {
+	
+	allowed = {
+		original_tag = FRA
+	}
+	
+	visible = {
+		FRA = {
+			has_completed_focus = FRA_Invite_Western_world_Investment
+		}
+		has_global_flag = FRA_Economic_crisis_flag
+	}
+}
+
+FRA_Shield_of_France_categorie = {
+	
+	allowed = {
+		original_tag = FRA
+	}
+	
+	visible = {
+		FRA = {
+			has_completed_focus = FRA_Shield_of_France
+		}
+	}
+}
+
+FRA_BSEB_categorie = {
+	
+	allowed = {
+		original_tag = FRA
+	}
+	
+	visible = {
+		FRA = {
+			has_completed_focus = FRA_BSEB
+		}
+	}
+}
+
+FRA_Aurore_programme_categorie = {
+	
+	allowed = {
+		original_tag = FRA
+	}
+	
+	visible = {
+		FRA = {
+			has_completed_focus = FRA_Aurore_programme
+			has_country_flag = FRA_Aurore_programme_Enable
+		}
+	}
+}
+
+FRA_Fantasme_programme_categorie = {
+	
+	allowed = {
+		original_tag = FRA
+	}
+	
+	visible = {
+		FRA = {
+			has_completed_focus = FRA_Fantasme_programme
+			has_country_flag = FRA_Fantasme_programme_Enable
+		}
+	}
+}
+
+FRA_PN-196_programme_categorie = {
+	
+	allowed = {
+		original_tag = FRA
+	}
+	
+	visible = {
+		FRA = {
+			has_completed_focus = FRA_PN-196_programme
+			has_country_flag = FRA_PN-196_Enable
+		}
+	}
+}
+
+FRA_Joffre_programme_categorie = {
+	
+	allowed = {
+		original_tag = FRA
+	}
+	
+	visible = {
+		FRA = {
+			has_completed_focus = FRA_Joffre_programme
+			has_country_flag = FRA_Joffre_Enable
+		}
+	}
+}
+
+FRA_C5A3_programme_categorie = {
+	
+	allowed = {
+		original_tag = FRA
+	}
+	
+	visible = {
+		FRA = {
+			has_completed_focus = FRA_C5A3_programme
+			has_country_flag = FRA_C5A3_programme_Enable
+		}
+	}
+}
+
+FRA_Glory_of_French_categorie = {
+	
+	allowed = {
+		original_tag = FRA
+	}
+	
+	visible = {
+		FRA = {
+			has_completed_focus = FRA_Glory_of_French
+		}
+	}
+}
+
+FRA_Final_war_plan = {
+	
+	allowed = {
+		original_tag = FRA
+	}
+	
+	visible = {
+		FRA = {
+			has_completed_focus = FRA_Let_this_world_burn
+		}
+	}
+}

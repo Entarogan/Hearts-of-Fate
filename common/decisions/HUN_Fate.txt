@@ -1,0 +1,939 @@
+
+HUN_paramillitary_activity = {
+
+	HUN_infiltrate_slovakia = {
+	
+		icon = infiltrate_state
+		
+		fire_only_once = no
+		
+		days_remove = 35
+		
+		visible = {
+			original_tag = HUN
+			has_completed_focus = HUN_Rongyos_Garda
+			
+		}
+    
+    available = {
+        AND = {
+          664 = {
+              CONTROLLER = {
+                  OR = {
+                      AND = {
+                          owns_state = 664
+                          NOT = { is_in_faction_with = ROOT }
+                          NOT = { has_war_with = ROOT }
+                      }
+                      tag = ROOT
+                  }
+              }
+              }
+          70 = {
+              CONTROLLER = {
+                  OR = {
+                      AND = {
+                          owns_state = 70
+                          NOT = { is_in_faction_with = ROOT }
+                          NOT = { has_war_with = ROOT }
+                      }
+                      tag = ROOT
+                  }
+              }
+          }
+          71 = {
+              CONTROLLER = {
+                  OR = {
+                      AND = {
+                          owns_state = 71
+                          NOT = { is_in_faction_with = ROOT }
+                          NOT = { has_war_with = ROOT }
+                      }
+                      tag = ROOT
+                  }
+              }
+          }
+          73 = {
+              CONTROLLER = {
+                  OR = {
+                      AND = {
+                          owns_state = 73
+                          NOT = { is_in_faction_with = ROOT }
+                          NOT = { has_war_with = ROOT }
+                      }
+                      tag = ROOT
+                  }
+              }
+          }
+          custom_trigger_tooltip = {
+            check_variable = { ROOT.Infiltrate_Slovakia < 120 }
+            tooltip =  Slovakia_120 
+          }
+      }
+    }
+
+		cost = 50
+		
+		remove_effect = {
+      add_to_variable = {
+          var = ROOT.Infiltrate_Slovakia
+          value = 20
+      }
+      custom_effect_tooltip = Infiltrate_up       
+		}
+		
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	
+	
+
+	HUN_infiltrate_Transylvania = {
+	
+		icon = infiltrate_state
+		
+		fire_only_once = no
+		
+		days_remove = 35
+		
+		visible = {
+			original_tag = HUN
+			has_completed_focus = HUN_Rongyos_Garda
+			
+		}
+    
+    available = {
+        ROM = { has_idea = rom_magyor_problem  }
+        NOT = { has_global_flag = HUN_ROM_RAPPROCHEMENT_flag  }
+        AND = {
+          76 = {
+              CONTROLLER = {
+                  OR = {
+                      AND = {
+                          owns_state = 76
+                          NOT = { is_in_faction_with = ROOT }
+                          NOT = { has_war_with = ROOT }
+                      }
+                      tag = ROOT
+                  }
+                  
+              }
+          }
+          84 = {
+              CONTROLLER = {
+                  OR = {
+                      AND = {
+                          owns_state = 84
+                          NOT = { is_in_faction_with = ROOT }
+                          NOT = { has_war_with = ROOT }
+                      }
+                      tag = ROOT
+                  }
+              }
+          }
+          83 = {
+              CONTROLLER = {
+                 OR = {
+                      AND = {
+                          owns_state = 83
+                          NOT = { is_in_faction_with = ROOT }
+                          NOT = { has_war_with = ROOT }
+                      }
+                      tag = ROOT
+                  }
+              }
+          }
+          custom_trigger_tooltip = {
+            check_variable = { ROOT.Infiltrate_Transylvania < 120 }
+            tooltip =  Transylvania_120 
+          }
+      }
+    }
+
+		cost = 75
+		
+		remove_effect = {
+      add_to_variable = {
+          var = ROOT.Infiltrate_Transylvania
+          value = 20
+      }
+      custom_effect_tooltip = Infiltrate_up       
+		}
+		
+		ai_will_do = {
+			factor = 25
+		}
+	}
+  
+  HUN_infiltrate_Vojvodina = {
+	
+		icon = infiltrate_state
+		
+		fire_only_once = no
+		
+		days_remove = 35
+		
+		visible = {
+			original_tag = HUN
+			has_completed_focus = HUN_Rongyos_Garda
+			
+		}
+    
+    available = {
+        AND = {
+          45 = {
+              CONTROLLER = {
+                  OR = {
+                      AND = {
+                          owns_state = 45
+                          NOT = { is_in_faction_with = ROOT }
+                          NOT = { has_war_with = ROOT }
+                      }
+                      tag = ROOT
+                  }
+              }
+          }
+          764 = {
+              CONTROLLER = {
+                  OR = {
+                      AND = {
+                          owns_state = 764
+                          NOT = { is_in_faction_with = ROOT }
+                          NOT = { has_war_with = ROOT }
+                      }
+                      tag = ROOT
+                  }
+              }
+          }
+          custom_trigger_tooltip = {
+            check_variable = { ROOT.Infiltrate_Vojvodina < 120 }
+            tooltip =  Vojvodina_120 
+          }
+      }
+    }
+
+		cost = 25
+		
+		remove_effect = {
+      add_to_variable = {
+          var = ROOT.Infiltrate_Vojvodina
+          value = 20
+      }
+      custom_effect_tooltip = Infiltrate_up   
+		}
+		
+		ai_will_do = {
+			factor = 25
+		}
+	}
+  
+  HUN_infiltrate_Crotia = {
+	
+		icon = infiltrate_state
+		
+		fire_only_once = no
+		
+		days_remove = 35
+		
+		visible = {
+			original_tag = HUN
+			has_completed_focus = HUN_Rongyos_Garda
+			
+		}
+    
+    available = {
+        AND = {
+          109 = {
+              CONTROLLER = {
+                  OR = {
+                      AND = {
+                          owns_state = 109
+                          NOT = { is_in_faction_with = ROOT }
+                          NOT = { has_war_with = ROOT }
+                      }
+                      tag = ROOT
+                  }
+              }
+          }
+
+          custom_trigger_tooltip = {
+            check_variable = { ROOT.Infiltrate_Crotia < 120 }
+            tooltip =  Crotia_120 
+          }
+      }
+    }
+
+		cost = 100
+		
+		remove_effect = {
+      add_to_variable = {
+          var = ROOT.Infiltrate_Crotia
+          value = 20
+      }	 
+      custom_effect_tooltip = Infiltrate_up       
+		}
+		
+		ai_will_do = {
+			factor = 25
+		}
+	}
+  
+  HUN_local_coup_slovakia = {
+      available = {
+          custom_trigger_tooltip = {
+            check_variable = { ROOT.Infiltrate_Slovakia >75 }
+            tooltip =  Slovakia_75_up
+          }
+          CZE = { 
+              owns_state = 70
+              owns_state = 71
+              owns_state = 73
+              NOT = { has_war_with = ROOT }
+              NOT = { is_in_faction_with = ROOT }
+              has_idea = CZE_divided_nation
+          }
+      }
+      
+      icon = generic_prepare_civil_war
+		
+      fire_only_once = yes
+      
+      days_remove = 60
+      
+      cost = 150
+      
+      remove_effect = {
+        HUN = { 
+          transfer_state = 70 
+          transfer_state = 71 
+          transfer_state = 73 
+        }
+        if = {
+            limit = { 664 = { CONTROLLER = { tag = CZE } }  }
+            HUN = { transfer_state = 664 }
+        }
+        
+        CZE = { country_event = { id = bd_hun.18 } }
+        subtract_from_variable = {
+            var = ROOT.Infiltrate_Slovakia
+            value = 50
+        }	   
+      }
+      
+      ai_will_do = {
+        factor = 150
+      }
+  }
+  
+  HUN_local_coup_transylvania = {
+      available = {
+          custom_trigger_tooltip = {
+            check_variable = { ROOT.Infiltrate_Transylvania >75 }
+            tooltip =  Transylvania_75_up
+          }
+          ROM = { 
+              owns_state = 76
+              owns_state = 84
+              owns_state = 83
+              owns_state = 82
+              NOT = { has_war_with = ROOT }
+              NOT = { is_in_faction_with = ROOT }
+              NOT = { has_global_flag = HUN_ROM_RAPPROCHEMENT_flag }
+              # has_idea = rom_magyor_problem
+          }
+      }
+      
+      icon = generic_prepare_civil_war
+		
+      fire_only_once = yes
+      
+      days_remove = 60
+      
+      cost = 250
+      
+      remove_effect = {
+        HUN = { 
+          transfer_state = 76 
+          transfer_state = 84 
+          transfer_state = 83 
+          transfer_state = 82
+        }
+        
+        ROM = { country_event = { id = bd_hun.18 } }
+        subtract_from_variable = {
+            var = ROOT.Infiltrate_Transylvania
+            value = 50
+        }	
+      }
+      
+      ai_will_do = {
+        factor = 150
+      }
+  }
+  
+  HUN_local_coup_vojvodina = {
+      available = {
+          custom_trigger_tooltip = {
+            check_variable = { ROOT.Infiltrate_Vojvodina >75 }
+            tooltip =  Vojvodina_75_up
+          }
+          YUG = { 
+              owns_state = 45
+              owns_state = 764
+              NOT = { has_war_with = ROOT }
+              NOT = { is_in_faction_with = ROOT }
+          }
+      }
+      
+      icon = generic_prepare_civil_war
+		
+      fire_only_once = yes
+      
+      days_remove = 60
+      
+      cost = 150
+      
+      remove_effect = {
+        HUN = { 
+          transfer_state = 45 
+          transfer_state = 764 
+        }
+
+        YUG = { country_event = { id = bd_hun.18 } }
+        
+        subtract_from_variable = {
+            var = ROOT.Infiltrate_Vojvodina
+            value = 50
+        }	
+      }
+      
+      ai_will_do = {
+        factor = 150
+      }
+  }
+  
+  HUN_local_coup_Crotia = {
+      available = {
+          custom_trigger_tooltip = {
+            check_variable = { ROOT.Infiltrate_Crotia >75 }
+            tooltip =  Crotia_75_up
+          }
+          YUG = { 
+              owns_state = 109
+              NOT = { has_war_with = ROOT }
+              NOT = { is_in_faction_with = ROOT }
+              has_idea = YUG_idea_croatian_opposition
+          }
+      }
+      
+      icon = generic_prepare_civil_war
+		
+      fire_only_once = yes
+      
+      days_remove = 60
+      
+      cost = 250
+      
+      remove_effect = {
+        HUN = { 
+          transfer_state = 109 
+        }
+        
+        YUG = { country_event = { id = bd_hun.18 } }
+        
+        subtract_from_variable = {
+            var = ROOT.Infiltrate_Crotia
+            value = 50
+        }	
+      }
+      
+      ai_will_do = {
+        factor = 150
+      }
+  }
+  
+  HUN_guerrila_CZE = {
+      available = {
+          has_war_with = CZE
+          custom_trigger_tooltip = {
+            check_variable = { ROOT.Infiltrate_Slovakia >50 }
+            tooltip =  Slovakia_50_up
+          }
+          OR = {
+              70 = { CONTROLLER = { tag = CZE } }
+              71 = { CONTROLLER = { tag = CZE } }
+              73 = { CONTROLLER = { tag = CZE } }
+              664 = { CONTROLLER = { tag = CZE } }
+          }
+      }
+      
+      icon = generic_prepare_civil_war
+		
+      fire_only_once = no
+      
+      days_remove = 180
+      
+      complete_effect = {
+          CZE = {
+              add_timed_idea = { 
+                  days = 120
+                  idea = HUN_Guerrila_idea
+              }         
+          }
+          subtract_from_variable = {
+              var = ROOT.Infiltrate_Slovakia
+              value = 45
+          }	
+      }
+      
+      cost = 50
+      
+      ai_will_do = {
+        factor = 150
+      }
+  }
+  
+  HUN_guerrila_ROM = {
+      available = {
+          has_war_with = CZE
+          custom_trigger_tooltip = {
+            check_variable = { ROOT.Infiltrate_Transylvania >50 }
+            tooltip =  Transylvania_50_up
+          }
+          OR = {
+              76 = { CONTROLLER = { tag = CZE } }
+              84 = { CONTROLLER = { tag = CZE } }
+              83 = { CONTROLLER = { tag = CZE } }
+          }
+      }
+      
+      icon = generic_prepare_civil_war
+		
+      fire_only_once = no
+      
+      days_remove = 180
+      
+      complete_effect = {
+          ROM = {
+              add_timed_idea = { 
+                  days = 120
+                  idea = HUN_Guerrila_idea
+              }         
+          }
+          subtract_from_variable = {
+              var = ROOT.Infiltrate_Transylvania
+              value = 45
+          }	
+      }
+      
+      cost = 50
+      
+      ai_will_do = {
+        factor = 150
+      }
+  }
+  
+  HUN_guerrila_YUG = {
+      available = {
+          has_war_with = YUG
+          custom_trigger_tooltip = {
+            set_temp_variable = { temp1 = ROOT.Infiltrate_Vojvodina }
+            add_to_temp_variable = { temp1 = ROOT.Infiltrate_Crotia }
+            check_variable = { temp1 >50 }
+            check_variable = { ROOT.Infiltrate_Vojvodina >20 }
+            check_variable = { ROOT.Infiltrate_Crotia >20 }
+            tooltip =  YUG_50_up
+          }
+          OR = {
+              109 = { CONTROLLER = { tag = YUG } }
+              45 = { CONTROLLER = { tag = YUG } }
+              764 = { CONTROLLER = { tag = YUG } }
+          }
+      }
+      
+      icon = generic_prepare_civil_war
+		
+      fire_only_once = no
+      
+      days_remove = 180
+      
+      complete_effect = {
+          YUG = {
+              add_timed_idea = { 
+                  days = 120
+                  idea = HUN_Guerrila_idea
+              }         
+          }
+          subtract_from_variable = {
+              var = ROOT.Infiltrate_Vojvodina
+              value = 20
+          }	
+          subtract_from_variable = {
+              var = ROOT.Infiltrate_Crotia
+              value = 20
+          }	
+      }
+      
+      cost = 50
+      
+      ai_will_do = {
+        factor = 150
+      }
+  }
+		
+}
+
+HUN_paramillitary_activity_others = {
+    CZE_anti_infiltrate_slovakia = {
+	
+		icon = infiltrate_state
+		
+		fire_only_once = no
+		
+		days_remove = 35
+		
+		visible = {
+			original_tag = CZE
+			HUN = { has_completed_focus = HUN_Rongyos_Garda }
+			
+		}
+    
+    available = {
+        custom_trigger_tooltip = {
+          check_variable = { HUN.Infiltrate_Slovakia >15 }
+          tooltip =  Slovakia_15_up
+        }
+        OR = {
+          664 = {
+              CONTROLLER = {
+                  tag = ROOT
+                  }
+          }
+          70 = {
+              CONTROLLER = {
+                  tag = ROOT
+              }
+          }
+          71 = {
+              CONTROLLER = {
+                  tag = ROOT
+              }
+          }
+          73 = {
+              CONTROLLER = {
+                  tag = ROOT
+              }
+          }
+      }
+    }
+
+		cost = 35
+		
+		remove_effect = {
+      subtract_from_variable = {
+          var = HUN.Infiltrate_Slovakia
+          value = 15
+      }
+      custom_effect_tooltip = Infiltrate_down    
+      
+      
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+  ROM_anti_infiltrate_transylvania = {
+	
+		icon = infiltrate_state
+		
+		fire_only_once = no
+		
+		days_remove = 35
+		
+		visible = {
+			original_tag = ROM
+			HUN = { has_completed_focus = HUN_Rongyos_Garda }
+			
+		}
+    
+    available = {
+        custom_trigger_tooltip = {
+          check_variable = { HUN.Infiltrate_Transylvania >15 }
+          tooltip =  Transylvania_15_up
+        }
+        OR = {
+          76 = {
+              CONTROLLER = {
+                  tag = ROOT
+                  }
+          }
+          84 = {
+              CONTROLLER = {
+                  tag = ROOT
+              }
+          }
+          83 = {
+              CONTROLLER = {
+                  tag = ROOT
+              }
+          }
+          has_idea = { rom_magyor_problem }
+          NOT = { has_global_flag = HUN_ROM_RAPPROCHEMENT_flag }
+      }
+    }
+
+		cost = 50
+		
+		remove_effect = {
+      subtract_from_variable = {
+          var = HUN.Infiltrate_Transylvania
+          value = 15
+      }
+      custom_effect_tooltip = Infiltrate_down      
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+  
+  YUG_anti_infiltrate_vojvodina = {
+	
+		icon = infiltrate_state
+		
+		fire_only_once = no
+		
+		days_remove = 35
+		
+		visible = {
+			original_tag = YUG
+			HUN = { has_completed_focus = HUN_Rongyos_Garda }
+			
+		}
+    
+    available = {
+        custom_trigger_tooltip = {
+          check_variable = { HUN.Infiltrate_Vojvodina >15 }
+          tooltip =  Vojvodina_15_up
+        }
+        OR = {
+          45 = {
+              CONTROLLER = {
+                  tag = ROOT
+                  }
+          }
+          764 = {
+              CONTROLLER = {
+                  tag = ROOT
+              }
+          }
+      }
+    }
+
+		cost = 70
+		
+		remove_effect = {
+      subtract_from_variable = {
+          var = HUN.Infiltrate_Vojvodina
+          value = 15
+      }
+      custom_effect_tooltip = Infiltrate_down      
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+  
+  YUG_anti_infiltrate_crotia = {
+	
+		icon = infiltrate_state
+		
+		fire_only_once = yes
+		
+		days_remove = 35
+		
+		visible = {
+			original_tag = YUG
+			HUN = { has_completed_focus = HUN_Rongyos_Garda }
+			
+		}
+    
+    available = {
+        custom_trigger_tooltip = {
+          check_variable = { HUN.Infiltrate_crotia >15 }
+          tooltip =  Crotia_15_up
+        }
+        OR = {
+
+          109 = {
+              CONTROLLER = {
+                  tag = ROOT
+              }
+          }
+      }
+    }
+
+		cost = 35
+		
+		remove_effect = {
+      subtract_from_variable = {
+          var = HUN.Infiltrate_Crotia
+          value = 15
+      }
+      custom_effect_tooltip = Infiltrate_down      
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+
+
+
+
+HUN_buy_land_from_nero = {
+    
+
+  buy_transylvania = {
+	
+		icon = infiltrate_state
+		
+		fire_only_once = yes
+		
+		days_remove = 60
+		
+		visible = {
+			original_tag = HUN
+			
+		}
+    
+    available = {
+        OR = {
+            ITA = {
+                owns_state = 76
+                owns_state = 84
+                owns_state = 83
+            }
+            ROM = {
+                owns_state = 76
+                owns_state = 84
+                owns_state = 83
+                is_subject_of  = ITA
+            }
+        }
+        
+        OR = {
+            ITA = { is_in_faction_with = ROOT }
+            ITA = { has_opinion = { target = ROOT value > 69 } } 
+        }
+    }
+
+		cost = 25
+		
+		remove_effect = {
+      ITA = { country_event = { id = bd_hun.22 hours = 4 } }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+	}
+  
+  buy_vojvodina = {
+	
+		icon = GFX_decision_generic_political_discourse
+		
+		fire_only_once = yes
+		
+		days_remove = 35
+		
+		visible = {
+			original_tag = HUN
+			
+		}
+    
+    available = {
+        OR = {
+            ITA = {
+                owns_state = 45
+                owns_state = 764
+            }
+            YUG = {
+                owns_state = 45
+                owns_state = 764
+                is_subject_of = ITA
+            }
+        }
+        
+        OR = {
+            ITA = { is_in_faction_with = ROOT }
+            ITA = { has_opinion = { target = ROOT value > 69 } } 
+        }
+      
+    }
+
+		cost = 25
+		
+		remove_effect = {
+      ITA = { country_event = { id = bd_hun.25 hours = 4 } }
+		}
+		
+		ai_will_do = {
+			factor = 50
+		}
+	}
+  
+  buy_crotia = {
+	
+		icon = GFX_decision_generic_political_discourse
+		
+		fire_only_once = no
+		
+		days_remove = 35
+		
+		visible = {
+			original_tag = HUN
+			HUN = { has_completed_focus = HUN_Rongyos_Garda }
+			
+		}
+    
+    available = {
+        
+        OR = {
+            ITA = {
+                owns_state = 103
+                owns_state = 109
+            }
+            CRO = {
+                owns_state = 103
+                owns_state = 109
+                is_subject_of = ITA
+            }
+            YUG = {
+                owns_state = 103
+                owns_state = 109
+                is_subject_of = ITA
+            }
+        }
+        OR = {
+            ITA = { is_in_faction_with = ROOT }
+            ITA = { has_opinion = { target = ROOT value > 69 } } 
+        }
+    }
+
+		cost = 25
+		
+		remove_effect = {
+        ITA = { country_event = { id = bd_hun.27 hours = 4 } }
+		}
+		
+		ai_will_do = {
+			factor = 25
+		}
+	}
+}

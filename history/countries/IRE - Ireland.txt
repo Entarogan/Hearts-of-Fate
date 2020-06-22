@@ -1,0 +1,180 @@
+﻿capital = 113
+
+oob = "IRE_1936"
+
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	fuel_silos = 1
+}
+
+set_convoys = 10
+
+1939.1.1 = {
+
+	add_political_power = 1198
+	
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = large_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	oob = "IRE_1939"
+	set_technology = {
+		gw_artillery = 1
+		interwar_antiair = 1
+		infantry_weapons2 = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		fuel_refining = 1
+	}
+}
+set_popularities = {
+	neutrality = 1
+	fascism = 0
+	communism = 1
+	democratic = 98
+}
+set_politics = {
+
+	ruling_party = democratic
+	last_election = "1933.1.24"
+	election_frequency = 48
+	elections_allowed = yes
+}
+add_opinion_modifier = {
+    target = ENG
+    modifier = embargo
+}
+add_ideas = {
+    IRE_britain_ireland_trade_war
+}
+1939.1.1 = {
+	set_politics = {
+
+		parties = {
+			democratic = { 
+				popularity = 98
+			}
+
+			fascism = {
+				popularity = 1
+			}
+			
+			communism = {
+				popularity = 1
+			}
+		}
+		
+		ruling_party = democratic
+		last_election = "1938.6.17"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+}
+create_country_leader = {
+	name = "Bazett Fraga McRemitzpsd"
+	desc = "POLITICS_BAZETT_DESC"
+	picture = "Portrait_Bazett_Fraga_McRemitzpsd.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		Fragarach
+	}
+}
+add_research_slot = 2
+create_country_leader = {
+	name = "Eoin O'Duffy"
+	desc = "POLITICS_EOIN_ODUFFY_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "James Larkin"
+	desc = "POLITICS_JAMES_LARKIN_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Fionn mac Cumhaill"
+	desc = "POLITICS_FIONN_DESC"
+	picture = "Portrait_Finn.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_democracy
+	traits = {
+		High_King
+	}
+}
+
+create_corps_commander = {
+	name = "Cú Chulainn"
+	picture = "Portrait_Cuchulainn.dds"
+	traits = { adaptable ranger  jungle_rat commando skirmisher paratrooper infantry_officer}
+	skill = 5
+	attack_skill = 5
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Diarmuid Ua Duihne"
+	picture = "Portrait_Diarmuid_Ua_Duibhne.dds"
+	traits = { adaptable ranger  jungle_rat commando skirmisher brilliant_strategist politically_connected}
+	skill = 5
+	attack_skill = 5
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_field_marshal = {
+	name = "Fionn mac Cumhaill"
+	picture = "Portrait_Finn.dds"
+	traits = { organisational_leader ranger  adaptable infantry_leader inspirational_leader }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+}

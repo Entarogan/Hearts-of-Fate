@@ -1,0 +1,75 @@
+
+ROM_create_yugg_leaders = {
+create_corps_commander = {
+	name = "Fiore Forvedge Yggdmillennia"
+	picture = "Portrait_Fiore_Forvedge_Yggdmillennia.dds"
+	traits = { organizer  adaptable trait_engineer thorough_planner politically_connected war_hero career_officer trait_cautious infantry_leader }
+	skill = 6
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 6
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "Celenike Icecolle Yggdmillennia"
+	picture = "Portrait_Celenike_Icecolle_Yggdmillennia.dds"
+	traits = { organizer   politically_connected career_officer infantry_officer harsh_leader  cavalry_leader skirmisher panzer_leader }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Gordes Musik Yggdmillennia"
+	picture = "Portrait_Gordes_Musik_Yggdmillennia.dds"
+	traits = { organizer   politically_connected war_hero career_officer infantry_officer  }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 6
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Caules Forvedge Yggdmillennia"
+	picture = "Portrait_Caules_Forvedge_Yggdmillennia.dds"
+	traits = { organizer  adaptable trait_engineer commando career_officer infantry_leader skirmisher }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Roche Frain Yggdmillennia"
+	picture = "Portrait_Roche_Frain_Yggdmillennia.dds"
+	traits = { organizer  adaptable trait_engineer commando guerilla_fighter skirmisher }
+	skill = 5
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+		if = {
+			limit = {
+				NOT = { has_global_flag = Darnic_run }
+			}
+create_field_marshal = {
+	name = "Darnic Prestone Yggdmillennia"
+	picture = "Portrait_Darnic_Prestone_Yggdmillennia.dds"
+	traits = { logistics_wizard politically_connected career_officer trait_cautious thorough_planner organisational_leader  trickster expert_delegator }
+	skill = 6
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 6
+	logistics_skill = 4
+  id = 881
+}
+		}
+
+}

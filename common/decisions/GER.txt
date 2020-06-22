@@ -1,0 +1,3928 @@
+#Category only allowed for GER
+
+
+operations = {
+
+	GER_barbarossa_mission = {
+
+		icon = generic_operation
+
+		allowed = {
+			always = no
+			#added through on_action
+		}
+
+		available = {
+			219 = { is_controlled_by_ROOT_or_ally = yes }
+			195 = { is_controlled_by_ROOT_or_ally = yes }
+			202 = { is_controlled_by_ROOT_or_ally = yes }
+			217 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		days_mission_timeout = 180
+		fire_only_once = yes
+
+		activation = {
+
+		}
+
+		is_good = no
+
+		complete_effect = {
+			add_war_support = 0.1
+			custom_effect_tooltip = barbarossa_mission_tt
+		}
+
+		timeout_effect = {
+			
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+GER_case_anton_category = {
+
+	GER_case_anton = {
+
+		icon = generic_operation
+
+		available = {
+			original_tag = GER
+			has_war = yes
+			has_government = fascism
+			any_allied_country = {
+				original_tag = FRA
+				has_government = fascism
+				is_subject_of = GER
+				NOT = { has_country_flag = case_anton }
+				custom_trigger_tooltip = {
+					tooltip = GER_case_anton_tt2
+					NOT = { controls_state = 462 }
+					NOT = { controls_state = 461 }
+					NOT = { controls_state = 513 }
+					NOT = { controls_state = 462 }
+					NOT = { controls_state = 459 }
+					NOT = { controls_state = 460 }
+					NOT = { controls_state = 458 }
+					NOT = { controls_state = 665 }
+				}
+			}
+			divisions_in_state = { state = 31 size < 1 }
+			divisions_in_state = { state = 25 size < 1 }
+			divisions_in_state = { state = 22 size < 1 }
+			divisions_in_state = { state = 21 size < 1 }
+			divisions_in_state = { state = 32 size < 1 }
+			divisions_in_state = { state = 22 size < 1 }
+			divisions_in_state = { state = 26 size < 1 }
+			divisions_in_state = { state = 33 size < 1 }
+			divisions_in_state = { state = 20 size < 1 }
+			OR = {
+				ITA = { owns_state = 735 }
+				divisions_in_state = { state = 735 size < 1 }
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		visible = {
+			original_tag = GER
+			has_government = fascism
+			any_allied_country = {
+				original_tag = FRA
+				has_government = fascism
+				is_subject_of = GER
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ITA = { has_capitulated = no }
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = GER_case_anton_tt
+			hidden_effect = {
+				random_other_country = {
+					limit = {
+						original_tag = FRA
+						has_government = fascism
+						is_subject_of = GER
+					}
+					set_country_flag = case_anton
+					activate_mission = FRA_case_anton_mission
+				}
+			}
+		}
+	}
+}
+
+#Category only allowed for GER
+GER_reichskommissariats = {
+	GER_great_HOL = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			has_government = fascism
+	        is_in_faction_with = HOL
+				OR = {
+					GER = { owns_state = 6 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 6
+					}
+				}
+				OR = {
+					GER = { owns_state = 34 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 34
+					}
+				}
+				OR = {
+					GER = { owns_state = 8 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 8
+					}
+				}
+				OR = {
+					GER = { owns_state = 29 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 29
+					}
+				}
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_government = fascism
+            is_subject = no
+		}
+
+		complete_effect = {
+			HOL = {
+				transfer_state = 6
+				transfer_state = 34
+				transfer_state = 8
+				transfer_state = 29
+                add_state_core = 6
+                add_state_core = 34
+                add_state_core = 8
+                add_state_core = 29
+			}
+		}
+	}
+
+	GER_great_SWE = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			has_government = fascism
+	        is_in_faction_with = SWE
+            has_country_flag = ostland
+				OR = {
+					GER = { owns_state = 11 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 11
+					}
+				}
+				OR = {
+					GER = { owns_state = 189 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 189
+					}
+				}
+				OR = {
+					GER = { owns_state = 190 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 190
+					}
+				}
+				OR = {
+					GER = { owns_state = 12 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 12
+					}
+				}
+				OR = {
+					GER = { owns_state = 191 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 191
+					}
+				}
+				OR = {
+					GER = { owns_state = 13 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 13
+					}
+				}
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_government = fascism
+            is_subject = no
+		}
+
+		complete_effect = {
+			SWE = {
+				transfer_state = 11
+				transfer_state = 189
+				transfer_state = 190
+				transfer_state = 12
+				transfer_state = 191
+				transfer_state = 13
+			}
+		}
+	}
+
+	GER_great_SWE_north = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			has_government = fascism
+	        is_in_faction_with = SWE
+				OR = {
+					GER = { owns_state = 148 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 148
+					}
+				}
+				OR = {
+					GER = { owns_state = 722 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 722
+					}
+				}
+				OR = {
+					GER = { owns_state = 147 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 147
+					}
+				}
+				OR = {
+					GER = { owns_state = 149 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 149
+					}
+				}
+				OR = {
+					GER = { owns_state = 111 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 111
+					}
+				}
+				OR = {
+					GER = { owns_state = 150 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 150
+					}
+				}
+				OR = {
+					GER = { owns_state = 146 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 146
+					}
+				}
+				OR = {
+					GER = { owns_state = 213 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 213
+					}
+				}
+				OR = {
+					GER = { owns_state = 215 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 215
+					}
+				}
+				OR = {
+					GER = { owns_state = 195 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 195
+					}
+				}
+				OR = {
+					GER = { owns_state = 208 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 208
+					}
+				}
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_government = fascism
+            is_subject = no
+		}
+
+		complete_effect = {
+			SWE = {
+				transfer_state = 148
+				transfer_state = 722
+				transfer_state = 147
+				transfer_state = 149
+				transfer_state = 111
+				transfer_state = 150
+				transfer_state = 146
+				transfer_state = 213
+				transfer_state = 215
+				transfer_state = 195
+				transfer_state = 208
+			}
+		}
+	}
+
+	GER_reichskommissariat_poland = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			has_government = fascism
+				OR = {
+					GER = { owns_state = 98 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 98
+					}
+				}
+				OR = {
+					GER = { owns_state = 87 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 87
+					}
+				}
+				OR = {
+					GER = { owns_state = 90 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 90
+					}
+				}
+				OR = {
+					GER = { owns_state = 88 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 88
+					}
+				}
+				OR = {
+					GER = { owns_state = 10 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 10
+					}
+				}
+				OR = {
+					GER = { owns_state = 92 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 92
+					}
+				}
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_government = fascism
+            is_subject = no
+		}
+
+		complete_effect = {
+			RKP = {
+				transfer_state = 98
+				transfer_state = 87
+				transfer_state = 90
+				transfer_state = 88
+				transfer_state = 10
+				transfer_state = 92
+                add_state_core = 98
+                add_state_core = 87
+                add_state_core = 90
+                add_state_core = 88
+                add_state_core = 10
+                add_state_core = 92
+				GER = {
+					puppet = RKP
+					if = {
+						limit = {
+							NOT = { has_dlc = "Death or Dishonor" }
+						}
+						set_autonomy = { target = RKP autonomy_state = autonomy_integrated_puppet }
+					}
+					else = {
+						set_autonomy = { target = RKP autonomy_state = autonomy_reichskommissariat }
+					}
+				}
+				
+			if = {
+				limit = {
+					GER = {	has_completed_focus = GER_Valkist_race }
+				}
+
+create_country_leader = {
+	name = "Hans Frank"
+	desc = "POLITICS_HANS_FRANK_DESC"
+	picture = "Portrait_General_Gouvernment_Hans_Frank.dds"
+	expire = "1974.4.4"
+	ideology = valkist
+	traits = {
+
+	}
+}
+			}
+
+			}
+		}
+	}
+
+	GER_reichskommissariat_ostland = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			RKP = { is_subject_of = GER }
+			has_government = fascism
+				OR = {
+					GER = { owns_state = 189 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 189
+					}
+				}
+				OR = {
+					GER = { owns_state = 11 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 11
+					}
+				}
+				OR = {
+					GER = { owns_state = 784 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 784
+					}
+				}
+				OR = {
+					GER = { owns_state = 98 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 98
+					}
+				}
+				OR = {
+					GER = { owns_state = 190 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 190
+					}
+				}
+				OR = {
+					GER = { owns_state = 12 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 12
+					}
+				}
+				OR = {
+					GER = { owns_state = 13 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 13
+					}
+				}
+				OR = {
+					GER = { owns_state = 191 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 191
+					}
+				}
+				OR = {
+					GER = { owns_state = 97 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 97
+					}
+				}
+				OR = {
+					GER = { owns_state = 95 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 95
+					}
+				}
+				OR = {
+					GER = { owns_state = 206 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 206
+					}
+				}
+				OR = {
+					GER = { owns_state = 207 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 207
+					}
+				}
+				OR = {
+					GER = { owns_state = 241 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 241
+					}
+				}
+				OR = {
+					GER = { owns_state = 204 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 204
+					}
+				}
+				OR = {
+					GER = { owns_state = 194 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 194
+					}
+				}
+				OR = {
+					GER = { owns_state = 94 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 94
+					}
+				}
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+
+		}
+
+		visible = {
+			RKP = { is_subject_of = GER }
+			has_government = fascism
+            is_subject = no
+		}
+
+		complete_effect = {
+        set_country_flag = ostland
+			RKP = {
+				transfer_state = 11
+				transfer_state = 784
+				transfer_state = 189
+				transfer_state = 12
+				transfer_state = 190
+				transfer_state = 13
+				transfer_state = 191
+				transfer_state = 97
+				transfer_state = 94
+				transfer_state = 95
+				transfer_state = 96
+				transfer_state = 194
+				transfer_state = 204
+				transfer_state = 206
+				transfer_state = 207
+				transfer_state = 241
+                add_state_core = 11
+                add_state_core = 97
+                add_state_core = 189
+                add_state_core = 12
+                add_state_core = 190
+                add_state_core = 13
+                add_state_core = 191
+                add_state_core = 784
+                add_state_core = 94
+                add_state_core = 95
+                add_state_core = 96
+                add_state_core = 194
+                add_state_core = 204
+                add_state_core = 206
+                add_state_core = 207
+                add_state_core = 241
+			}
+		}
+	}
+
+	GER_reichskommissariat_ukraine = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			has_government = fascism
+
+				OR = {
+					GER = { owns_state = 93 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 93
+					}
+				}
+				OR = {
+					GER = { owns_state = 91 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 91
+					}
+				}
+				OR = {
+					GER = { owns_state = 89 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 89
+					}
+				}
+				OR = {
+					GER = { owns_state = 199 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 199
+					}
+				}
+				OR = {
+					GER = { owns_state = 201 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 201
+					}
+				}
+				OR = {
+					GER = { owns_state = 198 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 198
+					}
+				}
+				OR = {
+					GER = { owns_state = 202 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 202
+					}
+				}
+				OR = {
+					GER = { owns_state = 193 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 193
+					}
+				}
+				OR = {
+					GER = { owns_state = 192 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 192
+					}
+				}
+				OR = {
+					GER = { owns_state = 203 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 203
+					}
+				}
+				OR = {
+					GER = { owns_state = 197 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 197
+					}
+				}
+				OR = {
+					GER = { owns_state = 225 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 225
+					}
+				}
+				OR = {
+					GER = { owns_state = 259 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 259
+					}
+				}
+				OR = {
+					GER = { owns_state = 226 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 226
+					}
+				}
+				OR = {
+					GER = { owns_state = 196 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 196
+					}
+				}
+				OR = {
+					GER = { owns_state = 200 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 200
+					}
+				}
+				OR = {
+					GER = { owns_state = 221 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 221
+					}
+				}
+				OR = {
+					GER = { owns_state = 228 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 228
+					}
+				}
+				OR = {
+					GER = { owns_state = 227 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 227
+					}
+				}
+
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_government = fascism
+            is_subject = no
+		}
+
+		complete_effect = {
+			RKU = {
+				transfer_state = 93
+				transfer_state = 91
+				transfer_state = 89
+				transfer_state = 199
+				transfer_state = 201
+				transfer_state = 198
+				transfer_state = 202
+				transfer_state = 193
+				transfer_state = 192
+				transfer_state = 203
+				transfer_state = 197
+				transfer_state = 225
+				transfer_state = 259
+				transfer_state = 226
+				transfer_state = 196
+				transfer_state = 200
+				transfer_state = 221
+				transfer_state = 228
+				transfer_state = 227
+                add_state_core = 93
+                add_state_core = 91
+                add_state_core = 89
+                add_state_core = 199
+                add_state_core = 201
+                add_state_core = 198
+                add_state_core = 202
+                add_state_core = 193
+                add_state_core = 192
+                add_state_core = 203
+                add_state_core = 197
+                add_state_core = 225
+                add_state_core = 259
+                add_state_core = 226
+                add_state_core = 196
+                add_state_core = 200
+                add_state_core = 221
+                add_state_core = 228
+                add_state_core = 227
+				GER = {
+					puppet = RKU
+					if = {
+						limit = {
+							NOT = { has_dlc = "Death or Dishonor" }
+						}
+						set_autonomy = { target = RKU autonomy_state = autonomy_integrated_puppet }
+					}
+					else = {
+						set_autonomy = { target = RKU autonomy_state = autonomy_reichskommissariat }
+					}
+				}
+
+			if = {
+				limit = {
+					GER = {	has_completed_focus = GER_Valkist_race }
+				}
+
+				create_country_leader = {
+					name = "Erich Koch"
+					desc = "POLITICS_HINRICH_LOHSE_DESC"
+					picture = "gfx/leaders/Europe/portrait_europe_generic_6.dds"
+					expire = "1965.1.1"
+					ideology = valkist
+					traits = {
+					}
+				}
+			}
+
+			}
+		}
+	}
+
+	GER_reichskommissariat_Russia = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			has_government = fascism
+			NOT = { is_in_faction_with = SOV }
+				OR = {
+					GER = { owns_state = 219 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 219
+					}
+				}
+				OR = {
+			SOV = { has_capitulated = yes }
+            NOT = { country_exists = SOV }
+            SOV = { is_subject_of = GER }
+				AND = {
+                country_exists = SOV 
+                SOV = { has_war = no }
+		        NOT = { SOV = { owns_state = 219 } }
+				}
+				}
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_government = fascism
+            is_subject = no
+		}
+
+		complete_effect = {
+			RKR = {
+				transfer_state = 219
+				GER = {
+					puppet = RKR
+					if = {
+						limit = {
+							NOT = { has_dlc = "Death or Dishonor" }
+						}
+						set_autonomy = { target = RKR autonomy_state = autonomy_integrated_puppet }
+					}
+					else = {
+						set_autonomy = { target = RKR autonomy_state = autonomy_reichskommissariat }
+					}
+				}
+
+			if = {
+				limit = {
+					GER = {	has_completed_focus = GER_Valkist_race }
+				}
+
+create_country_leader = {
+	name = "Siegfried Kasche"
+	desc = "POLITICS_SIEGFRIED_KASCHE_DESC"
+	picture = "Portrait_Moskowien_Siegfried_Kasche.dds"
+	expire = "1983.4.24"
+	ideology = valkist
+	traits = {
+		
+	}
+}
+			}
+
+			}
+
+    every_state = {
+      limit = {
+        is_core_of = SOV
+        is_fully_controlled_by = GER
+        NOT = {
+          is_core_of = GER
+        }
+        NOT = {
+          is_core_of = SWE
+        }
+      }
+      RKR = {
+        transfer_state = PREV
+      }
+    }
+
+		if = {
+			limit = {
+    is_in_faction_with = SWE
+			}
+    every_state = {
+      limit = {
+        is_core_of = SOV
+        is_fully_controlled_by = SWE
+        NOT = {
+          is_core_of = GER
+        }
+        NOT = {
+          is_core_of = SWE
+        }
+      }
+      RKR = {
+        transfer_state = PREV
+      }
+    }
+		}
+
+    every_state = {
+      limit = {
+        NOT = {
+        is_core_of = SOV
+        }
+        is_fully_controlled_by = SOV
+        NOT = {
+          is_core_of = GER
+        }
+        NOT = {
+          is_core_of = SWE
+        }
+      }
+      RKR = {
+        transfer_state = PREV
+      }
+    }
+
+				every_state = {
+					limit = {
+						is_core_of = SOV
+					}
+					add_core_of = RKR
+				}
+
+
+		}
+	}
+
+	GER_reichskommissariat_Czech  = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			has_government = fascism
+
+				OR = {
+					GER = { owns_state = 9 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 9
+					}
+				}
+				OR = {
+					GER = { owns_state = 75 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 75
+					}
+				}
+
+				OR = {
+					GER = { owns_state = 72 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 72
+					}
+				}
+
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_government = fascism
+            is_subject = no
+		}
+
+		complete_effect = {
+			RKC = {
+				transfer_state = 9
+				transfer_state = 75
+				transfer_state = 72
+                add_state_core = 9
+                add_state_core = 75
+                add_state_core = 72
+				GER = {
+					puppet = RKC
+					if = {
+						limit = {
+							NOT = { has_dlc = "Death or Dishonor" }
+						}
+						set_autonomy = { target = RKC autonomy_state = autonomy_integrated_puppet }
+					}
+					else = {
+						set_autonomy = { target = RKC autonomy_state = autonomy_reichskommissariat }
+					}
+				}
+
+			}
+		}
+	}
+
+	GER_reichskommissariat_Slovak  = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			has_government = fascism
+
+				OR = {
+					GER = { owns_state = 70 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 70
+					}
+				}
+				OR = {
+					GER = { owns_state = 71 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 71
+					}
+				}
+
+				OR = {
+					GER = { owns_state = 73 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 73
+					}
+				}
+				OR = {
+					GER = { owns_state = 664 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 664
+					}
+				}
+
+		    SLO = { exists = no }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_government = fascism
+            is_subject = no
+		}
+
+		complete_effect = {
+			SLO = {
+				transfer_state = 70
+				transfer_state = 71
+				transfer_state = 73
+				transfer_state = 664
+                add_state_core = 70
+                add_state_core = 71
+                add_state_core = 73
+                add_state_core = 664
+				GER = {
+					puppet = SLO
+					if = {
+						limit = {
+							NOT = { has_dlc = "Death or Dishonor" }
+						}
+						set_autonomy = { target = SLO autonomy_state = autonomy_integrated_puppet }
+					}
+					else = {
+						set_autonomy = { target = SLO autonomy_state = autonomy_reichskommissariat }
+					}
+				}
+
+			}
+		}
+	}
+
+	GER_reichskommissariat_Hungary  = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			has_government = fascism
+			NOT = { is_in_faction_with = HUN }
+				OR = {
+					GER = { owns_state = 43 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 43
+					}
+				}
+				OR = {
+			HUN = { has_capitulated = yes }
+            NOT = { country_exists = HUN }
+            HUN = { is_subject_of = GER }
+				}
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_government = fascism
+            is_subject = no
+		}
+
+		complete_effect = {
+			RKH = {
+				transfer_state = 43
+				GER = {
+					puppet = RKH
+					if = {
+						limit = {
+							NOT = { has_dlc = "Death or Dishonor" }
+						}
+						set_autonomy = { target = RKH autonomy_state = autonomy_integrated_puppet }
+					}
+					else = {
+						set_autonomy = { target = RKH autonomy_state = autonomy_reichskommissariat }
+					}
+				}
+
+			}
+
+    every_state = {
+      limit = {
+        is_core_of = HUN
+        is_fully_controlled_by = GER
+        NOT = {
+          is_core_of = GER
+        }
+      }
+      RKH = {
+        transfer_state = PREV
+      }
+    }
+
+				every_state = {
+					limit = {
+						is_core_of = HUN
+					}
+					add_core_of = RKH
+				}
+
+		}
+	}
+
+	GER_reichskommissariat_France = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			has_government = fascism
+			NOT = { is_in_faction_with = FRA }
+				OR = {
+					GER = { owns_state = 16 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 16
+					}
+				}
+				OR = {
+			FRA = { has_capitulated = yes }
+            NOT = { country_exists = FRA }
+            FRA = { is_subject_of = GER }
+				}
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_government = fascism
+            is_subject = no
+		}
+
+		complete_effect = {
+			RKF = {
+				transfer_state = 16
+				GER = {
+					puppet = RKF
+					if = {
+						limit = {
+							NOT = { has_dlc = "Death or Dishonor" }
+						}
+						set_autonomy = { target = RKF autonomy_state = autonomy_integrated_puppet }
+					}
+					else = {
+						set_autonomy = { target = RKF autonomy_state = autonomy_reichskommissariat }
+					}
+				}
+
+			}
+
+    every_state = {
+      limit = {
+        is_core_of = FRA
+        is_fully_controlled_by = GER
+        NOT = {
+          is_core_of = GER
+        }
+        NOT = {
+          is_core_of = HOL
+        }
+      }
+      RKF = {
+        transfer_state = PREV
+      }
+    }
+
+    every_state = {
+      limit = {
+        is_core_of = FRA
+        is_fully_controlled_by = HOL
+        NOT = {
+          is_core_of = GER
+        }
+        NOT = {
+          is_core_of = HOL
+        }
+      }
+      RKF = {
+        transfer_state = PREV
+      }
+    }
+
+		if = {
+			limit = {
+    is_in_faction_with = SWE
+			}
+    every_state = {
+      limit = {
+        is_core_of = FRA
+        is_fully_controlled_by = SWE
+        NOT = {
+          is_core_of = GER
+        }
+        NOT = {
+          is_core_of = SWE
+        }
+      }
+      RKF = {
+        transfer_state = PREV
+      }
+    }
+		}
+
+		if = {
+			limit = {
+    is_in_faction_with = D01
+			}
+    every_state = {
+      limit = {
+        is_core_of = FRA
+        is_fully_controlled_by = D01
+        NOT = {
+          is_core_of = GER
+        }
+        NOT = {
+          is_core_of = D01
+        }
+      }
+      RKF = {
+        transfer_state = PREV
+      }
+    }
+		}
+
+		if = {
+			limit = {
+    is_in_faction_with = D02
+			}
+    every_state = {
+      limit = {
+        is_core_of = FRA
+        is_fully_controlled_by = D02
+        NOT = {
+          is_core_of = GER
+        }
+        NOT = {
+          is_core_of = D02
+        }
+      }
+      RKF = {
+        transfer_state = PREV
+      }
+    }
+		}
+
+		if = {
+			limit = {
+    is_in_faction_with = D03
+			}
+    every_state = {
+      limit = {
+        is_core_of = FRA
+        is_fully_controlled_by = D03
+        NOT = {
+          is_core_of = GER
+        }
+        NOT = {
+          is_core_of = D03
+        }
+      }
+      RKF = {
+        transfer_state = PREV
+      }
+    }
+		}
+
+				every_state = {
+					limit = {
+						is_core_of = FRA
+					}
+					add_core_of = RKF
+				}
+
+		transfer_state = 28
+
+		}
+	}
+
+	GER_reichskommissariat_Italy = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			has_government = fascism
+			NOT = { is_in_faction_with = ITA }
+				OR = {
+					GER = { owns_state = 2 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 2
+					}
+				}
+				OR = {
+			ITA = { has_capitulated = yes }
+            NOT = { country_exists = ITA }
+            ITA = { is_subject_of = GER }
+				}
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_government = fascism
+            is_subject = no
+		}
+
+		complete_effect = {
+			RKI = {
+				transfer_state = 2
+				GER = {
+					puppet = RKI
+					if = {
+						limit = {
+							NOT = { has_dlc = "Death or Dishonor" }
+						}
+						set_autonomy = { target = RKI autonomy_state = autonomy_integrated_puppet }
+					}
+					else = {
+						set_autonomy = { target = RKI autonomy_state = autonomy_reichskommissariat }
+					}
+				}
+
+			}
+
+    every_state = {
+      limit = {
+        is_core_of = ITA
+        is_fully_controlled_by = GER
+        NOT = {
+          is_core_of = GER
+        }
+      }
+      RKI = {
+        transfer_state = PREV
+      }
+    }
+
+				every_state = {
+					limit = {
+						is_core_of = ITA
+					}
+					add_core_of = RKI
+				}
+
+		}
+	}
+
+	GER_reichskommissariat_England = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			has_government = fascism
+			NOT = { is_in_faction_with = ENG }
+				OR = {
+					GER = { owns_state = 126 }
+					any_other_country = {
+						is_in_faction_with = GER
+						owns_state = 126
+					}
+				}
+				OR = {
+			ENG = { has_capitulated = yes }
+            NOT = { country_exists = ENG }
+            ENG = { is_subject_of = GER }
+				}
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_government = fascism
+            is_subject = no
+		}
+
+		complete_effect = {
+			RKE = {
+				transfer_state = 126
+				GER = {
+					puppet = RKE
+					if = {
+						limit = {
+							NOT = { has_dlc = "Death or Dishonor" }
+						}
+						set_autonomy = { target = RKE autonomy_state = autonomy_integrated_puppet }
+					}
+					else = {
+						set_autonomy = { target = RKE autonomy_state = autonomy_reichskommissariat }
+					}
+				}
+
+			}
+
+    every_state = {
+      limit = {
+        is_core_of = ENG
+        is_fully_controlled_by = GER
+        NOT = {
+          is_core_of = GER
+        }
+      }
+      RKE = {
+        transfer_state = PREV
+      }
+    }
+
+				every_state = {
+					limit = {
+						is_core_of = ENG
+					}
+					add_core_of = RKE
+				}
+
+		}
+	}
+
+}
+
+political_actions = {
+
+	# Reinstate Wilhelm IV into the line of succession
+	reinstate_wilhelm_iv_succession_rights = {
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			has_war = no
+			has_government = neutrality
+			has_country_flag = backed_down_netherlands_kaiser
+		}
+
+		complete_effect = {
+			add_stability = -0.10
+			add_popularity = { ideology = neutrality popularity = -0.05 }
+			custom_effect_tooltip = reinstate_wilhelm_iv_succession_rights_tt
+			hidden_effect = {
+				set_country_flag = reinstated_wilhelm_iv_succession_rights
+			}
+		}
+	}
+	
+	# Agnatic-Cognatic Primogeniture
+	modernize_the_succession_laws = {
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			
+		}
+
+		cost = 150
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			has_war = no
+			has_government = neutrality
+			has_country_flag = reinstated_wilhelm_iv_succession_rights
+		}
+
+		complete_effect = {
+			add_stability = 0.05
+			custom_effect_tooltip = modernize_the_succession_laws_tt
+			hidden_effect = {
+				set_country_flag = modernized_succession_laws
+			}
+		}
+	}
+
+	recall_von_lettow_vorbeck = {
+
+		allowed = {
+			original_tag = GER
+		}
+		available = {
+			has_civil_war = no
+		}
+		visible = {
+			OR = {
+				has_country_leader = { ruling_only = yes name = "Wilhelm II" }
+				has_country_leader = { ruling_only = yes name = "Wilhelm III" }
+				has_country_leader = { ruling_only = yes name = "Victoria" }
+			}
+		}
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			create_corps_commander = {
+				name = "Paul von Lettow-Vorbeck"
+				gfx = GFX_portrait_ger_von_lettow_vorbeck
+				traits = { trickster war_hero media_personality jungle_rat}
+				skill = 4
+				id = 4
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 5
+			}
+		}
+	}
+
+	# Safety regulations
+	GER_sharpen_air_safety_regulations = {
+
+		allowed = {
+			original_tag = GER
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			has_government = neutrality
+		}
+
+		complete_effect = {
+			add_timed_idea = { idea = GER_air_safety_regulations days = 1095 }
+			set_global_flag = GER_air_safety_regulations_flag
+		}
+	}
+}
+
+foreign_politics = {
+	
+	# Titles Deprivation Act 1917
+	request_restoration_of_british_titles = {
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			ENG = { has_opinion = { target = GER value > 99 } }
+			custom_trigger_tooltip = {
+				tooltip = hindenburg_destroyed_tt
+				NOT = { has_global_flag = hindenburg_destroyed }
+			}
+		}
+
+		cost = 150
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			has_war = no
+			has_government = neutrality
+			has_completed_focus = GER_ally_the_shade
+			has_country_flag = modernized_succession_laws
+		}
+
+		complete_effect = {
+			ENG = { country_event = { id = wtt_germany.999 days = 1 } }
+			custom_effect_tooltip = request_restoration_of_british_titles_tt
+			hidden_effect = { set_global_flag = hindenburg_event_in_progress }
+		}
+	}
+
+	GER_request_polish_war_participation = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = GER
+		}
+
+		available = {
+			has_war_with = SOV
+			NOT = { is_in_faction_with = POL }
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			has_country_flag = poland_traded_danzig
+			has_completed_focus = GER_tackle_the_communist_threat
+		}
+
+		complete_effect = {
+			POL = { country_event = { id = wtt_germany.65 hours = 6 } }
+		}
+
+	}
+}
+
+#Category only allowed for GER
+GER_military_buildup = {
+
+	GER_plan_z = {
+
+		icon = generic_naval
+
+		available = {
+			has_navy_size = {
+				unit = battleship
+				size > 9
+			}
+			has_navy_size = {
+				unit = battle_cruiser
+				size > 2
+			}
+			has_navy_size = {
+				unit = carrier
+				size > 3
+			}
+			has_navy_size = {
+				unit = heavy_cruiser
+				size > 19
+			}
+			has_navy_size = {
+				unit = light_cruiser
+				size > 19
+			}
+			has_navy_size = {
+				unit = destroyer
+				size > 99
+			}
+		}
+
+		fire_only_once = yes
+		days_mission_timeout = 1800
+		is_good = no
+		activation = {
+			has_completed_focus = GER_plan_z
+		}
+
+		
+		visible = {
+			has_completed_focus = GER_plan_z
+		}
+
+		complete_effect = {
+			add_war_support = 0.05
+			navy_experience = 150
+		}
+
+		
+	}
+
+	GER_jaegernotprogramm = {
+
+		icon = generic_air
+
+		available = {
+			has_war = yes
+			AND = {
+				has_deployed_air_force_size = {
+					type = fighter
+					size < 750
+				}
+				has_equipment = {
+					fighter_equipment < 250
+				}
+			}
+			NOT = {
+				has_idea = GER_jaegernotprogramm
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+
+		visible = {
+			has_war = yes
+			AND = {
+				has_deployed_air_force_size = {
+					type = fighter
+					size < 750
+				}
+				has_equipment = {
+					fighter_equipment < 250
+				}
+			}
+			NOT = {
+				has_idea = GER_jaegernotprogramm
+			}
+		}
+
+		complete_effect = {
+			add_stability = -0.05
+			add_war_support = -0.05
+			add_timed_idea = { idea = GER_jaegernotprogramm days = 90 }
+		}
+	}
+}
+
+special_projects = {
+		GER_form_volkss = {
+
+			icon = generic_civil_support
+
+			allowed = {
+				original_tag = GER
+			}
+			
+			available = {
+				tag = GER
+				surrender_progress > 0.10
+			}
+			
+			visible = {
+				tag = GER
+			    has_government = fascism
+			    has_war = yes
+			    has_civil_war = no
+
+			}
+
+			cost = 25
+
+			days_remove = 360
+			
+			fire_only_once = yes
+
+			modifier = {
+			army_core_defence_factor = 0.10
+			mobilization_speed = 0.10
+            training_time_factor = -0.10
+			}
+			
+			complete_effect = {
+				add_war_support = -0.05
+                set_country_flag = GER_form_volkss
+			hidden_effect = {
+				division_template = {
+					name = "Volkss"				
+					division_names_group = GER_ALTINF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+                        anti_tank = { x = 0 y = 3 }
+					}	
+					priority = 1
+				}
+
+			}
+				
+			}
+			
+			ai_will_do = {
+				factor = 500
+			}
+		}
+
+		GER_volkss_berlin = {
+
+			icon = generic_civil_support
+
+			allowed = {
+				original_tag = GER
+			}
+			
+			available = {
+				tag = GER
+				surrender_progress > 0.10
+                has_manpower > 128000
+			    64 = { is_fully_controlled_by = GER }
+			}
+			
+			visible = {
+				tag = GER
+	            has_country_flag = GER_form_volkss		
+			has_war = yes
+			has_civil_war = no
+			64 = {
+				is_controlled_by = GER
+					any_neighbor_state = {
+						CONTROLLER = {
+							has_war_with = GER
+						}
+						OWNER = { tag = GER }
+					}
+			}
+			}
+
+			cost = 25
+
+			days_remove = 60
+			
+			fire_only_once = yes
+
+			modifier = {
+			    army_core_defence_factor = 0.10
+				industrial_capacity_factory = 0.10
+			}
+			
+			complete_effect = {
+				army_experience = 10
+                add_manpower = -128000
+			    load_oob = "GER_BERLIN_ss"
+			}
+			
+			remove_effect = {
+				add_political_power = 30
+				add_war_support = 0.01
+
+			}
+			
+			ai_will_do = {
+				factor = 500
+			}
+		}
+
+		GER_volkss_Sachsen = {
+
+			icon = generic_civil_support
+
+			allowed = {
+				original_tag = GER
+			}
+			
+			available = {
+				tag = GER
+				surrender_progress > 0.10
+                has_manpower > 89600
+			    65 = { is_fully_controlled_by = GER }
+			}
+			
+			visible = {
+				tag = GER
+	            has_country_flag = GER_form_volkss		
+			has_war = yes
+			has_civil_war = no
+			65 = {
+				is_controlled_by = GER
+					any_neighbor_state = {
+						CONTROLLER = {
+							has_war_with = GER
+						}
+						OWNER = { tag = GER }
+					}
+			}
+			}
+
+			cost = 25
+
+			days_remove = 60
+			
+			fire_only_once = yes
+
+			modifier = {
+			    army_core_defence_factor = 0.07
+				industrial_capacity_factory = 0.07
+			}
+			
+			complete_effect = {
+				army_experience = 10
+                add_manpower = -89600
+			    load_oob = "GER_Sachsen_ss"
+			}
+			
+			remove_effect = {
+				add_political_power = 30
+				add_war_support = 0.01
+
+			}
+			
+			ai_will_do = {
+				factor = 500
+			}
+		}
+
+		GER_volkss_Thuringen = {
+
+			icon = generic_civil_support
+
+			allowed = {
+				original_tag = GER
+			}
+			
+			available = {
+				tag = GER
+				surrender_progress > 0.10
+                has_manpower > 64000 
+			    60 = { is_fully_controlled_by = GER }
+			}
+			
+			visible = {
+				tag = GER
+	            has_country_flag = GER_form_volkss		
+			has_war = yes
+			has_civil_war = no
+			60 = {
+				is_controlled_by = GER
+					any_neighbor_state = {
+						CONTROLLER = {
+							has_war_with = GER
+						}
+						OWNER = { tag = GER }
+					}
+			}
+			}
+
+			cost = 25
+
+			days_remove = 60
+			
+			fire_only_once = yes
+
+			modifier = {
+			    army_core_defence_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+			
+			complete_effect = {
+				army_experience = 10
+                add_manpower = -64000
+			    load_oob = "GER_Thuringen_ss"
+			}
+			
+			remove_effect = {
+				add_political_power = 30
+				add_war_support = 0.01
+
+			}
+			
+			ai_will_do = {
+				factor = 500
+			}
+		}
+
+		GER_volkss_Hannover = {
+
+			icon = generic_civil_support
+
+			allowed = {
+				original_tag = GER
+			}
+			
+			available = {
+				tag = GER
+				surrender_progress > 0.10
+                has_manpower > 51200
+			    59 = { is_fully_controlled_by = GER }
+			}
+			
+			visible = {
+				tag = GER
+	            has_country_flag = GER_form_volkss		
+			has_war = yes
+			has_civil_war = no
+			59 = {
+				is_controlled_by = GER
+					any_neighbor_state = {
+						CONTROLLER = {
+							has_war_with = GER
+						}
+						OWNER = { tag = GER }
+					}
+			}
+			}
+
+			cost = 25
+
+			days_remove = 60
+			
+			fire_only_once = yes
+
+			modifier = {
+			    army_core_defence_factor = 0.04
+				industrial_capacity_factory = 0.04
+			}
+			
+			complete_effect = {
+				army_experience = 10
+                add_manpower = -51200
+			    load_oob = "GER_Hannover_ss"
+			}
+			
+			remove_effect = {
+				add_political_power = 30
+				add_war_support = 0.01
+
+			}
+			
+			ai_will_do = {
+				factor = 500
+			}
+		}
+
+		GER_volkss_Wurttemberg = {
+
+			icon = generic_civil_support
+
+			allowed = {
+				original_tag = GER
+			}
+			
+			available = {
+				tag = GER
+				surrender_progress > 0.10
+                has_manpower > 89600
+			    50 = { is_fully_controlled_by = GER }
+			}
+			
+			visible = {
+				tag = GER
+	            has_country_flag = GER_form_volkss		
+			has_war = yes
+			has_civil_war = no
+			50 = {
+				is_controlled_by = GER
+					any_neighbor_state = {
+						CONTROLLER = {
+							has_war_with = GER
+						}
+						OWNER = { tag = GER }
+					}
+			}
+			}
+
+			cost = 25
+
+			days_remove = 60
+			
+			fire_only_once = yes
+
+			modifier = {
+			    army_core_defence_factor = 0.07
+				industrial_capacity_factory = 0.07
+			}
+			
+			complete_effect = {
+				army_experience = 10
+                add_manpower = -89600
+			    load_oob = "GER_Wurttemberg_ss"
+			}
+			
+			remove_effect = {
+				add_political_power = 30
+				add_war_support = 0.01
+
+			}
+			
+			ai_will_do = {
+				factor = 500
+			}
+		}
+
+		GER_volkss_Westfalen = {
+
+			icon = generic_civil_support
+
+			allowed = {
+				original_tag = GER
+			}
+			
+			available = {
+				tag = GER
+				surrender_progress > 0.10
+                has_manpower > 89600
+			    57 = { is_fully_controlled_by = GER }
+			}
+			
+			visible = {
+				tag = GER
+	            has_country_flag = GER_form_volkss		
+			has_war = yes
+			has_civil_war = no
+			57 = {
+				is_controlled_by = GER
+					any_neighbor_state = {
+						CONTROLLER = {
+							has_war_with = GER
+						}
+						OWNER = { tag = GER }
+					}
+			}
+			}
+
+			cost = 25
+
+			days_remove = 60
+			
+			fire_only_once = yes
+
+			modifier = {
+			    army_core_defence_factor = 0.07
+				industrial_capacity_factory = 0.07
+			}
+			
+			complete_effect = {
+				army_experience = 10
+                add_manpower = -89600
+			    load_oob = "GER_Westfalen_ss"
+			}
+			
+			remove_effect = {
+				add_political_power = 30
+				add_war_support = 0.01
+
+			}
+			
+			ai_will_do = {
+				factor = 500
+			}
+		}
+
+		GER_volkss_Weser = {
+
+			icon = generic_civil_support
+
+			allowed = {
+				original_tag = GER
+			}
+			
+			available = {
+				tag = GER
+				surrender_progress > 0.10
+                has_manpower > 38400 
+			    56 = { is_fully_controlled_by = GER }
+			}
+			
+			visible = {
+				tag = GER
+	            has_country_flag = GER_form_volkss		
+			has_war = yes
+			has_civil_war = no
+			56 = {
+				is_controlled_by = GER
+					any_neighbor_state = {
+						CONTROLLER = {
+							has_war_with = GER
+						}
+						OWNER = { tag = GER }
+					}
+			}
+			}
+
+			cost = 25
+
+			days_remove = 60
+			
+			fire_only_once = yes
+
+			modifier = {
+			    army_core_defence_factor = 0.03
+				industrial_capacity_factory = 0.03
+			}
+			
+			complete_effect = {
+				army_experience = 10
+                add_manpower = -38400
+			    load_oob = "GER_Weser_ss"
+			}
+			
+			remove_effect = {
+				add_political_power = 30
+				add_war_support = 0.01
+
+			}
+			
+			ai_will_do = {
+				factor = 500
+			}
+		}
+
+		GER_volkss_Hesse = {
+
+			icon = generic_civil_support
+
+			allowed = {
+				original_tag = GER
+			}
+			
+			available = {
+				tag = GER
+				surrender_progress > 0.10
+                has_manpower > 76800 
+			    55 = { is_fully_controlled_by = GER }
+			}
+			
+			visible = {
+				tag = GER
+	            has_country_flag = GER_form_volkss		
+			has_war = yes
+			has_civil_war = no
+			55 = {
+				is_controlled_by = GER
+					any_neighbor_state = {
+						CONTROLLER = {
+							has_war_with = GER
+						}
+						OWNER = { tag = GER }
+					}
+			}
+			}
+
+			cost = 25
+
+			days_remove = 60
+			
+			fire_only_once = yes
+
+			modifier = {
+			    army_core_defence_factor = 0.06
+				industrial_capacity_factory = 0.06
+			}
+			
+			complete_effect = {
+				army_experience = 10
+                add_manpower = -76800
+			    load_oob = "GER_Hesse_ss"
+			}
+			
+			remove_effect = {
+				add_political_power = 30
+				add_war_support = 0.01
+
+			}
+			
+			ai_will_do = {
+				factor = 500
+			}
+		}
+
+		GER_volkss_Holstein = {
+
+			icon = generic_civil_support
+
+			allowed = {
+				original_tag = GER
+			}
+			
+			available = {
+				tag = GER
+				surrender_progress > 0.10
+                has_manpower > 76800 
+			    58 = { is_fully_controlled_by = GER }
+			}
+			
+			visible = {
+				tag = GER
+	            has_country_flag = GER_form_volkss		
+			has_war = yes
+			has_civil_war = no
+			58 = {
+				is_controlled_by = GER
+					any_neighbor_state = {
+						CONTROLLER = {
+							has_war_with = GER
+						}
+						OWNER = { tag = GER }
+					}
+			}
+			}
+
+			cost = 25
+
+			days_remove = 60
+			
+			fire_only_once = yes
+
+			modifier = {
+			    army_core_defence_factor = 0.06
+				industrial_capacity_factory = 0.06
+			}
+			
+			complete_effect = {
+				army_experience = 10
+                add_manpower = -76800 
+			    load_oob = "GER_Holstein_ss"
+			}
+			
+			remove_effect = {
+				add_political_power = 30
+				add_war_support = 0.01
+
+			}
+			
+			ai_will_do = {
+				factor = 500
+			}
+		}
+
+		GER_volkss_Bavaria = {
+
+			icon = generic_civil_support
+
+			allowed = {
+				original_tag = GER
+			}
+			
+			available = {
+				tag = GER
+				surrender_progress > 0.10
+                has_manpower > 51200 
+			    52 = { is_fully_controlled_by = GER }
+			}
+			
+			visible = {
+				tag = GER
+	            has_country_flag = GER_form_volkss		
+			has_war = yes
+			has_civil_war = no
+			52 = {
+				is_controlled_by = GER
+					any_neighbor_state = {
+						CONTROLLER = {
+							has_war_with = GER
+						}
+						OWNER = { tag = GER }
+					}
+			}
+			}
+
+			cost = 25
+
+			days_remove = 60
+			
+			fire_only_once = yes
+
+			modifier = {
+			    army_core_defence_factor = 0.04
+				industrial_capacity_factory = 0.04
+			}
+			
+			complete_effect = {
+				army_experience = 10
+                add_manpower = -51200
+			    load_oob = "GER_Bavaria_ss"
+			}
+			
+			remove_effect = {
+				add_political_power = 30
+				add_war_support = 0.01
+
+			}
+			
+			ai_will_do = {
+				factor = 500
+			}
+		}
+
+		GER_volkss_Konigsberg = {
+
+			icon = generic_civil_support
+
+			allowed = {
+				original_tag = GER
+			}
+			
+			available = {
+				tag = GER
+				surrender_progress > 0.10
+                has_manpower > 51200 
+			    763 = { is_fully_controlled_by = GER }
+			}
+			
+			visible = {
+				tag = GER
+	            has_country_flag = GER_form_volkss		
+			has_war = yes
+			has_civil_war = no
+			763 = {
+				is_controlled_by = GER
+					any_neighbor_state = {
+						CONTROLLER = {
+							has_war_with = GER
+						}
+						OWNER = { tag = GER }
+					}
+			}
+			}
+
+			cost = 25
+
+			days_remove = 60
+			
+			fire_only_once = yes
+
+			modifier = {
+			    army_core_defence_factor = 0.04
+				industrial_capacity_factory = 0.04
+			}
+			
+			complete_effect = {
+				army_experience = 10
+                add_manpower = -51200
+			    load_oob = "GER_Konigsberg_ss"
+			}
+			
+			remove_effect = {
+				add_political_power = 30
+				add_war_support = 0.01
+
+			}
+			
+			ai_will_do = {
+				factor = 500
+			}
+		}
+
+		GER_volkss_Franken = {
+
+			icon = generic_civil_support
+
+			allowed = {
+				original_tag = GER
+			}
+			
+			available = {
+				tag = GER
+				surrender_progress > 0.10
+                has_manpower > 51200 
+			    54 = { is_fully_controlled_by = GER }
+			}
+			
+			visible = {
+				tag = GER
+	            has_country_flag = GER_form_volkss		
+			has_war = yes
+			has_civil_war = no
+			54 = {
+				is_controlled_by = GER
+					any_neighbor_state = {
+						CONTROLLER = {
+							has_war_with = GER
+						}
+						OWNER = { tag = GER }
+					}
+			}
+			}
+
+			cost = 25
+
+			days_remove = 60
+			
+			fire_only_once = yes
+
+			modifier = {
+			    army_core_defence_factor = 0.04
+				industrial_capacity_factory = 0.04
+			}
+			
+			complete_effect = {
+				army_experience = 10
+                add_manpower = -51200
+			    load_oob = "GER_Franken_ss"
+			}
+			
+			remove_effect = {
+				add_political_power = 30
+				add_war_support = 0.01
+
+			}
+			
+			ai_will_do = {
+				factor = 500
+			}
+		}
+
+		COM_sfc_GER_to_SPR_dec = {
+
+			icon = generic_prepare_civil_war
+
+			allowed = {
+				original_tag = GER
+			}
+			
+			available = {
+				tag = GER
+				
+			}
+			
+			visible = {
+				tag = GER
+		        NOT = { has_dlc = "La Resistance" }
+			    has_government = fascism
+				SPR = {
+					exists = yes
+					
+					has_civil_war = yes
+				}
+			}
+
+			cost = 50
+
+			days_remove = 120
+			
+			fire_only_once = yes
+
+			modifier = {
+				industrial_capacity_factory = -0.15
+			}
+			
+			complete_effect = {
+				army_experience = 10
+
+				every_country = {
+					limit = {
+						original_tag = SPR
+						has_government = fascism
+					}
+
+		  	        add_timed_idea = { idea = GER_SPR_civil_war days = 365 }
+					
+					add_war_support = 0.1
+					
+					army_experience = 25
+				
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 7500
+						producer = GER
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 150
+						producer = GER
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 300
+						producer = GER
+					}
+					
+					add_equipment_to_stockpile = {
+						type = fighter_equipment
+						amount = 50
+						producer = GER
+					}
+					add_equipment_to_stockpile = {
+						type = CAS_equipment
+						amount = 25
+						producer = GER
+					}
+					add_equipment_to_stockpile = {
+						type = tac_bomber_equipment
+						amount = 15
+						producer = GER
+					}				
+
+				}
+				
+			}
+			
+			remove_effect = {
+				add_political_power = 50
+				add_war_support = 0.03
+				
+				army_experience = 20
+
+				every_country = {
+					limit = {
+						original_tag = SPR
+						has_government = fascism
+					}
+
+        random_list = {
+
+          50 = {
+		    add_stability = 0.5
+		    add_war_support = 0.15
+		    add_political_power = 150
+            retire_country_leader = yes
+
+create_country_leader = {
+	name = "José Antonio Primo de Rivera"
+	desc = "POLITICS_JOSE_ANTONIO_DESC"
+	picture = "Portrait_SPF_Jose_Antonie.tga"
+	expire = "1965.1.1"
+	ideology = falangism
+	traits = {
+		#
+	}
+}
+
+        set_cosmetic_tag = SPF
+
+				set_global_flag = GER_Primo_de_Rivera
+
+			GER = {
+				country_event = { id = germany.611 days = 2}
+			}
+
+          }
+
+          50 = {
+
+          }
+
+				}
+
+        }
+
+			}
+			
+			ai_will_do = {
+				factor = 500
+			}
+		}
+
+	GER_northern_germany_air_defense = {
+
+		icon = generic_construction
+
+		available = {
+			controls_state = 58
+			has_completed_focus = GER_flak_towers
+		}
+
+		fire_only_once = yes
+
+		cost = 15
+
+		visible = {
+			has_completed_focus = GER_flak_towers
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 5
+		}
+		
+		remove_effect = {
+			if = {
+				limit = {
+					58 = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 4
+						}
+					}
+				}
+				58 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					58 = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 2
+						}
+					}
+				}
+				58 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	GER_western_germany_air_defense = {
+
+		icon = generic_construction
+
+		available = {
+			controls_state = 55
+			has_completed_focus = GER_flak_towers
+		}
+
+		fire_only_once = yes
+
+		cost = 15
+
+		visible = {
+			has_completed_focus = GER_flak_towers
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					55 = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 4
+						}
+					}
+				}
+				55 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					55 = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 2
+						}
+					}
+				}
+				55 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	GER_eastern_germany_air_defense = {
+
+		icon = generic_construction
+
+		available = {
+			controls_state = 64
+			has_completed_focus = GER_flak_towers
+		}
+
+		fire_only_once = yes
+
+		cost = 15
+
+		visible = {
+			has_completed_focus = GER_flak_towers
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					64 = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 5
+						}
+					}
+				}
+				64 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					64 = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 4
+						}
+					}
+				}
+				64 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					64 = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 3
+						}
+					}
+				}
+				64 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					64 = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 2
+						}
+					}
+				}
+				64 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	GER_austrian_air_defense = {
+
+		icon = generic_construction
+
+		available = {
+			controls_state = 4
+			has_completed_focus = GER_flak_towers
+		}
+
+		fire_only_once = yes
+
+		cost = 15
+
+		visible = {
+			has_completed_focus = GER_flak_towers
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 5
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					4 = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 4
+						}
+					}
+				}
+				4 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					4 = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 2
+						}
+					}
+				}
+				4 = {
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	GER_Form_Legions = {
+
+		icon = generic_oppression
+
+		available = {
+			has_completed_focus = GER_deploy_the_osttruppen
+			has_government = fascism
+		}
+		
+		fire_only_once = yes
+
+		cost = 25
+		
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_completed_focus = GER_deploy_the_osttruppen
+			has_government = fascism
+		}
+
+		complete_effect = {
+			set_country_flag = GER_Form_Legions
+		
+			division_template = {
+				name = "Ostlegionen"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 0 y = 4 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+				}
+				priority = 0
+				is_locked = yes
+			}
+		}
+	}
+	
+	GER_Ukraine_Legion_1 = {
+
+		icon = generic_oppression
+
+		fire_only_once = yes
+		
+		available = {
+			has_government = fascism
+			
+				OR = {
+					GER = { controls_state = 199 }
+					GER = { controls_state = 198 }
+					GER = { controls_state = 201 }
+					GER = { controls_state = 202 }
+					GER = { controls_state = 203 }
+					GER = { controls_state = 192 }
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 199
+					}
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 198
+					}
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 201
+					}
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 202
+					}
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 203
+					}
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 192
+					}
+				}
+		}
+
+		cost = 25
+		
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_country_flag = GER_Form_Legions
+			has_government = fascism
+		}
+
+		complete_effect = {
+		
+			custom_effect_tooltip = GER_Ukraine_Legion_1_EXPL
+				
+				hidden_effect = {
+					load_oob = "UMC_GER_Ost_Ukraine_1"
+				}
+		}
+	}
+	
+	GER_Ukraine_Legion_2 = {
+
+		icon = generic_oppression
+
+		fire_only_once = yes
+		
+		available = {
+			has_government = fascism
+				OR = {
+					GER = { controls_state = 221 }
+					GER = { controls_state = 226 }
+					GER = { controls_state = 200 }
+					GER = { controls_state = 227 }
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 221
+					}
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 226
+					}
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 200
+					}
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 227
+					}
+				}
+		}
+
+		cost = 25
+		
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_country_flag = GER_Form_Legions
+			has_government = fascism
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = GER_Ukraine_Legion_2_EXPL
+				
+				hidden_effect = {
+					load_oob = "UMC_GER_Ost_Ukraine_2"
+				}
+		}
+	}
+	
+	GER_Russian_Legion_1 = {
+
+		icon = generic_oppression
+
+		fire_only_once = yes
+		
+		available = {
+			has_government = fascism
+			
+			OR = {
+					GER = { controls_state = 97 }
+					GER = { controls_state = 94 }
+					GER = { controls_state = 95 }
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 97
+					}
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 94
+					}
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 95
+					}
+				}
+		}
+
+		cost = 25
+		
+		ai_will_do = {
+			factor = 150
+		}
+
+		visible = {
+			has_country_flag = GER_Form_Legions
+			has_government = fascism
+		}
+
+		complete_effect = {
+		
+			hidden_effect = {
+					load_oob = "UMC_GER_Ost_Russian_1"
+				}
+			
+			global_every_army_leader = { limit = { has_id = 412 } set_nationality = GER }
+		
+			custom_effect_tooltip = GER_Russian_Legion_1_EXPL
+			
+			custom_effect_tooltip = GER_Russian_Legion_Vlasov_EXPL
+
+		}
+	}
+	
+	GER_Russian_Legion_2 = {
+
+		icon = generic_oppression
+
+		fire_only_once = yes
+		
+		available = {
+			has_government = fascism
+			
+			OR = {
+					GER = { controls_state = 206 }
+					GER = { controls_state = 204 }
+					GER = { controls_state = 194 }
+					GER = { controls_state = 241 }
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 206
+					}
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 204
+					}
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 194
+					}
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 241
+					}
+				}
+		}
+
+		cost = 25
+		
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_country_flag = GER_Form_Legions
+			has_government = fascism
+		}
+
+		complete_effect = {
+		
+			hidden_effect = {
+					load_oob = "UMC_GER_Ost_Russian_2"
+				}
+			
+		
+			custom_effect_tooltip = GER_Russian_Legion_2_EXPL
+
+
+		}
+	}
+	
+	GER_Armenian_Legion = {
+
+		icon = generic_oppression
+
+		fire_only_once = yes
+		
+		available = {
+			has_government = fascism
+		
+			OR = {
+				GER = { controls_state = 234 }
+				any_other_country = {
+					is_in_faction_with = GER
+					controls_state = 234
+				}
+			}
+		}
+
+		cost = 25
+		
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_country_flag = GER_Form_Legions
+			has_government = fascism
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = GER_Armenian_Legion_EXPL
+				
+				hidden_effect = {
+					load_oob = "UMC_GER_Ost_Armenia"
+				}
+		}
+	}
+	
+	GER_Georgian_Legion = {
+
+		icon = generic_oppression
+
+		fire_only_once = yes
+		
+		available = {
+			has_government = fascism
+			
+			OR = {
+					GER = { controls_state = 231 }
+					any_other_country = {
+						is_in_faction_with = GER
+						controls_state = 231
+					}
+				}
+		}
+
+		cost = 25
+		
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_country_flag = GER_Form_Legions
+			has_government = fascism
+		}
+
+		complete_effect = {
+		
+			hidden_effect = {
+					load_oob = "UMC_GER_Ost_Georgia"
+				}
+			
+		
+			custom_effect_tooltip = GER_Georgian_Legion_EXPL
+		}
+	}
+
+	GER_dismantle_maginot = {
+
+		icon = generic_construction
+
+		available = {
+			#has_war = yes
+			controls_state = 28
+			if = {
+				limit = {
+					FRA = { has_completed_focus = FRA_extend_the_maginot_line }
+				}
+				controls_state = 18
+				controls_state = 29
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			#has_war = yes
+			controls_state = 28
+			if = {
+				limit = {
+					FRA = { has_completed_focus = FRA_extend_the_maginot_line }
+				}
+				controls_state = 18
+				controls_state = 29
+			}
+		}
+		days_remove = 180
+		modifier = {
+			civilian_factory_use = 5
+		}
+		remove_effect = {
+			28 = {
+				set_building_level = {
+					type = bunker
+					level = 2
+					province = {
+						all_provinces = yes
+						limit_to_border = no
+						level > 2
+					}
+				}
+			}
+			if = {
+				limit = {
+					FRA = { has_completed_focus = FRA_extend_the_maginot_line }
+				}
+				18 = {
+					set_building_level = {
+						type = bunker
+						level = 2
+						province = {
+							all_provinces = yes
+							limit_to_border = no
+							level > 2
+						}
+					}
+				}
+				29 = {
+					set_building_level = {
+						type = bunker
+						level = 2
+						province = {
+							all_provinces = yes
+							limit_to_border = no
+							level > 2
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = { FRA = { has_completed_focus = FRA_extend_the_maginot_line } }
+				add_timed_idea = { idea = GER_dismantle_maginot days = 270 }
+				else = {
+					add_timed_idea = { idea = GER_dismantle_maginot days = 180 }
+				}
+			}
+		}
+	}	
+	GER_dismantle_czechoslovakian_forts = {
+
+		icon = generic_construction
+
+		available = {
+			#has_war = yes
+			controls_state = 69 # Sudetenland
+			controls_state = 74 # Eastern Sudetenland
+			controls_state = 9 # Bohemia
+			controls_state = 75 # Moravia
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+		visible = {
+			#has_war = yes
+			controls_state = 69 # Sudetenland
+			controls_state = 74 # Eastern Sudetenland
+			controls_state = 9 # Bohemia
+			controls_state = 75 # Moravia
+		}
+		days_remove = 180
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			69 = {
+				set_building_level = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = no
+						level > 1
+					}
+				}
+			}
+			74 = {
+				set_building_level = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = no
+						level > 1
+					}
+				}
+			}
+			9 = {
+				set_building_level = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = no
+						level > 1
+					}
+				}
+			}
+			75 = {
+				set_building_level = {
+					type = bunker
+					level = 1
+					province = {
+						all_provinces = yes
+						limit_to_border = no
+						level > 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					72 = {
+						controller = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+					71 = {
+						controller = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				72 = {
+					set_building_level = {
+						type = bunker
+						level = 1
+						province = {
+							all_provinces = yes
+							limit_to_border = no
+							level > 1
+						}
+					}
+				}
+				71 = {
+					set_building_level = {
+						type = bunker
+						level = 1
+						province = {
+							all_provinces = yes
+							limit_to_border = no
+							level > 1
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					70 = {
+						controller = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				70 = {
+					set_building_level = {
+						type = bunker
+						level = 1
+						province = {
+							all_provinces = yes
+							limit_to_border = no
+							level > 1
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					73 = {
+						controller = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+					664 = {
+						controller = {
+							OR = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				73 = {
+					set_building_level = {
+						type = bunker
+						level = 1
+						province = {
+							all_provinces = yes
+							limit_to_border = no
+							level > 1
+						}
+					}
+				}
+				664 = {
+					set_building_level = {
+						type = bunker
+						level = 1
+						province = {
+							all_provinces = yes
+							limit_to_border = no
+							level > 1
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			add_timed_idea = { idea = GER_dismantle_czechoslovakian_forts days = 180 }
+		}
+	}	
+}
+
+GER_aid_hun_rom_democratic_civil_war = {
+
+	GER_aid_hun_democratic_civil_war = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			HUN = {
+				NOT = { has_government = democratic }
+				NOT = { has_war_with = GER }
+				has_civil_war = yes
+				exists = yes
+				any_enemy_country = {
+					original_tag = HUN
+					has_government = democratic
+				}
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		#Available if democratic civil war
+		visible = {
+			has_completed_focus = GER_align_hungary
+			GER = { has_government = democratic }
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					HUN = { is_in_faction_with = GER }
+				}
+				remove_from_faction = HUN
+				random_country = {
+					limit = {
+						original_tag = HUN
+						has_government = democratic
+						has_war_with = HUN
+					}
+					GER = { add_to_faction = PREV }
+				}
+			}
+			random_country = {
+				limit = {
+					original_tag = HUN
+					has_government = democratic
+					has_war_with = HUN
+				}
+				GER = { add_to_war = { targeted_alliance = PREV enemy = HUN hostility_reason = asked_to_join } }
+			}
+		}
+	}
+
+	GER_aid_rom_democratic_civil_war = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			ROM = {
+				NOT = { has_government = democratic }
+				NOT = { has_war_with = GER }
+				has_civil_war = yes
+				exists = yes
+				any_enemy_country = {
+					original_tag = ROM
+					has_government = democratic
+				}
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		#Available if democratic civil war
+		visible = {
+			has_completed_focus = GER_align_romania
+			GER = { has_government = democratic }
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					ROM = { is_in_faction_with = GER }
+				}
+				remove_from_faction = ROM
+				random_country = {
+					limit = {
+						original_tag = ROM
+						has_government = democratic
+						has_war_with = ROM
+					}
+					GER = { add_to_faction = PREV }
+				}
+			}
+			random_country = {
+				limit = {
+					original_tag = ROM
+					has_government = democratic
+					has_war_with = ROM
+				}
+				GER = { add_to_war = { targeted_alliance = PREV enemy = ROM hostility_reason = asked_to_join } }
+			}
+		}
+	}
+
+}
+
+GER_austro_hungarian_empire = {
+
+	GER_reform_austro_hungarian_empire = {
+
+		allowed = {
+			OR = {
+				original_tag = AUS
+				original_tag = HUN
+				original_tag = CZE
+			}
+		}
+
+		available = {
+			AUS = {
+				OR = {
+					has_government = neutrality
+					neutrality > 0.4
+				}
+			}
+			HUN = {
+				OR = {
+					has_government = neutrality
+					neutrality > 0.4
+				}
+			}
+			CZE = {
+				OR = {
+					has_government = neutrality
+					neutrality > 0.4
+				}
+			}
+		}
+
+		visible = {
+			GER = { 
+				has_completed_focus = GER_rekindle_imperial_sentiment 
+				has_government = neutrality
+			}
+			AUS = {
+				exists = yes
+			}
+			HUN = {
+				exists = yes
+			}
+			CZE = {
+				exists = yes
+			}
+			NOT = { has_global_flag = GER_reformed_austro_hungarian_empire }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				tag = HUN
+			}
+			modifier = {
+				factor = 0
+				tag = CZE
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = GER_reform_austro_hungarian_empire_tt
+			hidden_effect = { set_global_flag = GER_reformed_austro_hungarian_empire }
+			if = {
+				limit = {
+					tag = AUS
+				}
+				HUN = { country_event = { id = wtt_germany.68 hours = 1 } }
+				CZE = { country_event = { id = wtt_germany.68 hours = 3 } }
+			}
+			if = {
+				limit = {
+					tag = HUN
+				}
+				AUS = { country_event = { id = wtt_germany.68 hours = 1 } }
+				CZE = { country_event = { id = wtt_germany.68 hours = 3 } }
+			}
+			if = {
+				limit = {
+					tag = CZE
+				}
+				HUN = { country_event = { id = wtt_germany.68 hours = 1 } }
+				AUS = { country_event = { id = wtt_germany.68 hours = 3 } }
+			}
+		}
+	}
+}
