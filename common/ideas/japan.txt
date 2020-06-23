@@ -1265,11 +1265,7 @@ ideas = {
 			}
 			
 			available = {
-				NOT = { has_completed_focus = JAP_Honno_ji_incident }
-				NOT = { has_completed_focus = JAP_the_unthinkable_option }
-				NOT = { has_completed_focus = JAP_pre_emptive_coup }
-				NOT = { has_government = fascism }
-				NOT = { has_government = communism }
+				NOT = { has_country_flag = jap_okita_souji_disabled }
 			}
 			
 			traits = { army_chief_maneuver_okita }
@@ -1287,10 +1283,7 @@ ideas = {
 				original_tag = JAP
 			}
 			available = {
-				NOT = { has_completed_focus = JAP_Honno_ji_incident }
-				NOT = { has_completed_focus = JAP_the_unthinkable_option }
-				NOT = { has_government = fascism }
-				NOT = { has_government = communism }
+				NOT = { has_country_flag = jap_miyamoto_musashi_disabled }
 			}
 
 			

@@ -1,0 +1,478 @@
+ideas = {
+  
+  kizoku_in = {
+    JAP_yakumo_yukari = {
+      picture = yakumo_yukari
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { the_hand_behind_the_scenes veteran }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    JAP_matara_okina = {
+      picture = matara_okina
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { low_profile_schemer veteran }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    JAP_ibaraki_kasen = {
+      picture = ibaraki_kasen
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { reform_supporter veteran }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    Non = {
+      picture = non
+      allowed_to_remove = {
+				always = no
+			}
+      removal_cost = -1
+      
+			traits = {  }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+
+  }
+  
+  
+  sumitsu_in = {
+    JAP_yasaka_kanako = {
+      picture = yasaka_kanako
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { theo_technocrat veteran }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    JAP_hinanawi_tenshi = {
+      picture = hinanawi_tenshi
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { ambitious_reformer }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    JAP_hijiri_byakuren = {
+      picture = hijiri_byakure
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { religious_pacifist }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    JAP_osakabehime = {
+      picture = osakabehime
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { coward_intriguer }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }    
+  }
+  
+  gaimu_daijin = {
+    JAP_kirisame_marisa = {
+      picture = kirisame_marisa
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { kirisame_diplomacy  robber }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    JAP_komeiji_satori = {
+      picture = komeiji_satori
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { mind_reader }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    JAP_kotomine_kirei = {
+
+
+			allowed = {
+				original_tag = JAP
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			picture = kotomine_kirei
+			
+			removal_cost = -1
+			
+			traits = { back_stacker }
+
+			ai_will_do = {
+				factor = 3
+			}
+		}
+  
+  }
+  
+  
+  rikugun_daijin = {
+    JAP_oda_nobunaga = {
+      picture = oda_nobunaga
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { ambitious_warlord }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    JAP_tomoe_gozen = {
+      picture = tomoe_gozen
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { morderate_rikugun }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    JAP_yogyu_munenori = {
+      picture = yogyu_munenori
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { rational_rikugun }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+  
+    JAP_fujiwara_no_mokou = {
+      picture = fujiwara_no_mokou
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { neutral_warlord }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+  
+    JAP_nagao_kagetora = {
+      picture = nagao_kagetora
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { gunshin }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    JAP_yasaka_kanako = {
+      picture = yasaka_kanako
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { gunshin veteran }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    JAP_hijikato_toshizo = {
+      picture = hijikato_toshizo
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { berserker_rikugun }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+
+  
+  }
+  
+  kaigun_daijin = {
+    JAP_mikasa = {
+      picture = mikasa
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { morderate_kaigun veteran }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    JAP_nagato = {
+      picture = nagato
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { neutral_kaigun  }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    JAP_shoukaku = {
+      picture = shoukaku
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { pacifist_kaigun  }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    JAP_kaga = {
+      picture = kaga
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { radicalist_kaigun  }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+  }
+  
+  jinja_kyoku = {
+    JAP_hakurei_reimu = {
+      picture = hakurei_reimu
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { popular_figurehead2  }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    JAP_kochiya_sanae = {
+      picture = kochiya_sanae
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = { popular_figurehead2  }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    JAP_hakurei_reimu2 = {
+      picture = hakurei_reimu
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = JAP
+			}
+      
+      removal_cost = -1
+      
+			traits = {  popular_figurehead2 prince_of_terror }
+			
+			ai_will_do = {
+				factor = 5
+			}
+    }
+    
+    
+    
+  }
+  
+	
+}
+
+
+
+
+

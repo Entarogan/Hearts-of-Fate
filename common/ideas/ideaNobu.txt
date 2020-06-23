@@ -1,7 +1,102 @@
 ideas = {
 
     country = {
+    ############### New ideas start here
+    
+    JAP_Chi_Ha_Tan = {
+      allowed = {
+				original_tag = JAP
+				always = no
+			}
 
+			allowed_civil_war = {
+				NOT = { has_government = democratic }
+        NOT = { has_government = communism }
+			}
+			
+			removal_cost = -1
+
+			picture = generic_air_research
+			
+			equipment_bonus = {
+        light_tank_equipment = {
+          breakthrough = 0.15
+          defense = -0.15
+          maximum_speed = 0.15
+        }
+        medium_tank_equipment = {
+          breakthrough = 0.15
+          defense = -0.15
+          maximum_speed = 0.15
+        }
+      }
+    }
+    
+    JAP_japanese_youth = {
+      allowed = {
+				original_tag = JAP
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = { has_government = democratic }
+        NOT = { has_government = communism }
+			}
+			
+			removal_cost = -1
+
+			picture = generic_air_research
+			
+			modifier = {
+				conscription = 0.025
+        war_support_factor = 0.05
+			}
+    }
+    
+    JAP_transitional_cabinet = {
+
+			allowed = {
+				original_tag = JAP
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_air_research
+			
+			modifier = {
+				fascism_drift = 0.10
+        stability_weekly = 0.05
+			}
+		}
+    
+    JAP_active_finance = {
+
+			allowed = {
+				original_tag = JAP
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_air_research
+			
+			modifier = {
+				political_power_gain = -0.15
+        consumer_goods_factor = -0.05
+			}
+		}
+    
+    
+    ############### New ideas end here
 		JAP_indigenous_designs = {
 
 			allowed = {
