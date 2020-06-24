@@ -309,8 +309,8 @@ CRO = {
 }
 
 PRC = {
-	color = rgb { 245 12 55 }
-	color_ui = rgb { 178 34 60 }
+	color = rgb { 0 105 247 }
+	color_ui = rgb { 0 74 174 }
 }
 
 GXC = {
@@ -777,4 +777,14 @@ FIC = {
 BUR = {
   color = rgb { 95 53 21 }
 	color_ui = rgb { 95 53 21 }
+}
+
+INA = {
+  color = rgb { 153 217 234 }
+	color_ui = rgb { 43 175 208 }
+}
+
+GDC = {
+  color = rgb { 0 140 18 }
+	color_ui = rgb { 0 130 10 }
 }

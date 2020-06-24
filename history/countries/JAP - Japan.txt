@@ -242,74 +242,25 @@ create_import = {
 
 set_convoys = 400
 
-if = {
-	limit = {
-		has_dlc = "Together for Victory"
-	}
-	set_autonomy = {
-		target = MEN
-		autonomous_state = autonomy_integrated_puppet
-	}
-	set_autonomy = {
-		target = MAN
-		autonomous_state = autonomy_integrated_puppet
-	}
-	else = {
-		set_autonomy = {
-			target = MEN
-			autonomous_state = autonomy_puppet
-		}
-		set_autonomy = {
-			target = MAN
-			autonomous_state = autonomy_puppet
-		}
-	}
-}
 set_popularities = {
-	neutrality = 50
-	fascism = 45
+	neutrality = 35
+	fascism = 25
 	communism = 0
-	democratic = 5
+	democratic = 40
 }
 
 set_politics = {
 
 	
-	ruling_party = neutrality
+	ruling_party = democratic
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 
-
-1939.1.1 = {
-	set_politics = {
-
-		parties = {
-			democratic = { 
-				popularity = 0
-			}
-
-			fascism = {
-				popularity = 40
-			}
-			
-			neutrality = {
-				popularity = 60
-			}
-			
-			communism = {
-				popularity = 0
-				#banned = no #default is no
-			}
-		}
-		
-		ruling_party = neutrality
-		last_election = "1936.1.1"
-		election_frequency = 48
-		elections_allowed = no
-	}
-}
+give_guarantee = FTC
+give_military_access = FTC
+give_guarantee = RUS
 
 create_country_leader = {
 	name = "Akechi Mitsuhide"

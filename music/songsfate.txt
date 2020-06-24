@@ -1,0 +1,1989 @@
+music_station = "hof"
+
+music = {
+	song = "general_war_arturia_1"
+	
+	chance = {
+		modifier = {
+			factor = 6
+			has_war = yes
+		}		
+	}	
+}
+
+music = {
+	song = "general_war_arturia_2"
+	
+	chance = {
+		modifier = {
+			factor = 6
+
+			has_war = yes
+		}		
+	}	
+}
+
+
+music = {
+	song = "king_war_arturia_1"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			has_war = yes
+			has_government = neutrality
+		}		
+	}	
+}
+
+music = {
+	song = "king_war_arturia_2"
+	
+	chance = {
+		modifier = {
+			factor = 3
+			has_war = yes
+			has_government = neutrality
+		}		
+	}	
+}
+
+
+music = {
+	song = "eng_peace_1"
+	chance = {
+		factor = 1
+		modifier = {
+		    OR = {
+			    not = { original_tag = ENG }
+				not = { has_government = neutrality }
+				has_war = yes
+			}
+			
+			factor = 0.05
+		}
+		modifier = {
+			factor = 5
+            TAG = FRA
+			has_war = no
+			has_government = neutrality
+			has_country_leader = { id = 915 ruling_only = yes }
+		}		
+		modifier = {
+		    factor = 6
+			TAG = ENG
+			has_war = no
+			has_government = neutrality
+		}
+	}
+}
+
+
+music = {
+	song = "eng_peace_2"
+	
+	chance = {
+		factor = 1
+		modifier = {
+		    OR = {
+			    not = { original_tag = ENG }
+				not = { has_government = neutrality }
+				has_war = yes
+			}
+			
+			factor = 0.05
+		}
+		modifier = {
+			factor = 5
+            TAG = FRA
+			has_war = no
+			has_government = neutrality
+			has_country_leader = { id = 915 ruling_only = yes }
+		}		
+		modifier = {
+			factor = 6
+            TAG = ENG
+			has_war = no
+			has_government = neutrality
+		}		
+	}	
+}
+
+music = {
+	song = "eng_peace_3"
+	
+	chance = {
+		factor = 1
+		modifier = {
+		    OR = {
+			    not = { original_tag = ENG }
+				not = { has_government = neutrality }
+				has_war = yes
+			}
+			
+			factor = 0.05
+		}
+		modifier = {
+			factor = 6
+            TAG = ENG
+			has_war = no
+			has_government = neutrality
+		}		
+	}	
+}
+
+music = {
+	song = "eng_war_1"
+	
+	chance = {
+		factor = 1
+		modifier = {
+		    OR = {
+			    not = { original_tag = ENG }
+				not = { has_government = neutrality }
+				has_war = no
+			}
+			
+			factor = 0.10
+		}
+		modifier = {
+			factor = 5
+            TAG = ENG
+			has_war = yes
+			has_government = neutrality
+		}
+        modifier = {
+			factor = 5
+            TAG = FRA
+			has_war = yes
+			has_government = neutrality
+			has_country_leader = { id = 915 ruling_only = yes }
+		}			
+		modifier = {
+			factor = 2
+            TAG = ENG
+			has_war_with = ENG
+			ENG = { has_government = neutrality }
+		}		
+	}	
+}
+music = {
+	song = "eng_war_2"
+	
+	chance = {
+		factor = 1
+		modifier = {
+		    OR = {
+			    not = { original_tag = ENG }
+				not = { has_government = neutrality }
+				has_war = no
+			}
+			
+			factor = 0.10
+		}
+		modifier = {
+			factor = 5
+            TAG = ENG
+			has_war = yes
+			has_government = neutrality
+		}
+        modifier = {
+			factor = 5
+            TAG = FRA
+			has_war = yes
+			has_government = neutrality
+			has_country_leader = { id = 915 ruling_only = yes }
+		}				
+		modifier = {
+			factor = 2
+            TAG = ENG
+			has_war_with = ENG
+			ENG = { has_government = neutrality }
+		}		
+	}	
+}
+
+music = {
+	song = "eng_war_3"
+	
+	chance = {
+		factor = 1
+		modifier = {
+		    OR = {
+			    not = { original_tag = ENG }
+				not = { has_government = neutrality }
+				has_war = no
+			}
+			
+			factor = 0.10
+		}
+		modifier = {
+			factor = 4
+            TAG = ENG
+			has_war = yes
+			has_government = neutrality
+		}
+        modifier = {
+			factor = 5
+            TAG = FRA
+			has_war = yes
+			has_government = neutrality
+			has_country_leader = { id = 915 ruling_only = yes }
+		}				
+		modifier = {
+			factor = 2
+            TAG = ENG
+			has_war_with = ENG
+			ENG = { has_government = neutrality }
+		}		
+	}	
+}
+
+music = {
+	song = "eng_war_4"
+	
+	chance = {
+		factor = 1
+		modifier = {
+		    OR = {
+			    not = { original_tag = ENG }
+				not = { has_government = neutrality }
+				has_war = no
+			}
+			
+			factor = 0.10
+		}
+		modifier = {
+			factor = 4
+            TAG = ENG
+			has_war = yes
+			has_government = neutrality
+		}	
+		modifier = {
+			factor = 2
+            TAG = ENG
+			has_war_with = ENG
+			ENG = { has_government = neutrality }
+		}		
+	}	
+}
+
+music = {
+	song = "eng_war_5"
+	
+	chance = {
+		factor = 1
+		modifier = {
+		    OR = {
+			    not = { original_tag = ENG }
+				not = { has_government = neutrality }
+				has_war = no
+			}
+			
+			factor = 0.10
+		}
+		modifier = {
+			factor = 5
+            TAG = ENG
+			has_war = yes
+			has_government = neutrality
+		}	
+		modifier = {
+			factor = 2
+            TAG = ENG
+			has_war_with = ENG
+			ENG = { has_government = neutrality }
+		}		
+	}	
+}
+
+
+music = {
+	song = "BlackSaber"
+	chance = {
+		
+		modifier = {
+		    factor = 4
+			TAG = ENG
+			has_government = fascism
+		}
+	}
+}
+
+
+music = {
+	song = "BlackSaber2012"
+	
+	chance = {
+		modifier = {
+			factor = 4
+            TAG = ENG
+			has_government = fascism
+		}		
+	}	
+}
+
+
+music = {
+	song = "ExcaliburRemix"
+	
+	chance = {
+		modifier = {
+			factor = 6
+            TAG = ENG
+			has_government = fascism
+		}		
+	}	
+}
+
+
+music = {
+	song = "DayofCamlann"
+	
+	chance = {
+		modifier = {
+			factor = 6
+            TAG = ENG
+			has_government = neutrality
+		}		
+	}	
+}
+
+music = {
+	song = "fra_jd_1"
+	
+	chance = {
+		modifier = {
+			factor = 5
+            TAG = FRA
+			has_country_leader = { id = 912 ruling_only = yes }
+		}		
+	}	
+}
+music = {
+	song = "fra_jd_2"
+	
+	chance = {
+		modifier = {
+			factor = 5
+            TAG = FRA
+			has_country_leader = { id = 912 ruling_only = yes }
+		}		
+	}	
+}
+
+music = {
+	song = "fra_jd_3"
+	
+	chance = {
+		modifier = {
+			factor = 5
+            TAG = FRA
+			has_country_leader = { id = 912 ruling_only = yes }
+		}		
+	}	
+}
+
+music = {
+	song = "french_not_fascism_1"
+	
+	chance = {
+		modifier = {
+			factor = 6
+            TAG = FRA
+			OR = {
+			    has_government = neutrality
+				has_government = democratic
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "french_not_fascism_2"
+	
+	chance = {
+		modifier = {
+			factor = 3
+            TAG = FRA
+			OR = {
+			    has_government = neutrality
+				has_government = democratic
+			}
+		}		
+	}	
+}
+
+music = {
+	song = "france_war_1"
+	
+	chance = {
+		modifier = {
+			factor = 4
+            TAG = FRA
+			has_war = yes
+		}		
+	}	
+}
+
+music = {
+	song = "france_war_2"
+	
+	chance = {
+		modifier = {
+			factor = 4
+			has_war = yes
+		}		
+	}	
+}
+
+music = {
+	song = "france_peace_1"
+	
+	chance = {
+		modifier = {
+			factor = 3
+            TAG = FRA
+			has_war = no
+		}		
+	}	
+}
+
+
+music = {
+	song = "Requiem_Lacrimosa"
+	
+	chance = {
+		modifier = {
+			factor = 3
+      or = {
+        TAG = FRA
+        TAG = ENG
+        TAG = ITA
+        TAG = ROM
+        TAG = RUS
+      }
+            
+			has_war = no
+		}		
+	}	
+}
+
+
+
+music = {
+	song = "france_peace_2"
+	
+	chance = {
+		modifier = {
+			factor = 3
+            TAG = FRA
+			has_war = no
+		}		
+	}	
+}
+
+
+music = {
+	song = "france_peace_3"
+	
+	chance = {
+		modifier = {
+			factor = 3
+            TAG = FRA
+			has_war = no
+		}		
+	}	
+}
+
+
+music = {
+	song = "france_generic_1"
+	
+	chance = {
+		modifier = {
+			factor = 3
+            TAG = FRA
+		}		
+	}	
+}
+
+music = {
+	song = "france_generic_2"
+	
+	chance = {
+		modifier = {
+			factor = 3
+            TAG = FRA
+		}		
+	}	
+}
+
+music = {
+	song = "france_generic_3"
+	
+	chance = {
+		modifier = {
+			factor = 3
+            TAG = FRA
+		}		
+	}	
+}
+
+
+music = {
+	song = "france_generic_4"
+	
+	chance = {
+		modifier = {
+			factor = 3
+            TAG = FRA
+		}		
+	}	
+}
+
+
+music = {
+	song = "france_karl"
+	
+	chance = {
+		modifier = {
+			factor = 8
+            TAG = FRA
+			has_country_leader = { id = 914 ruling_only = yes }
+		}		
+	}	
+}
+
+music = {
+	song = "Shinjuku"
+	
+	chance = {
+		modifier = {
+			factor = 7
+			OR = {
+			    TAG = FRA
+				TAG = ENG
+			}
+            has_government = fascism
+		}		
+	}	
+}
+
+
+music = {
+	song = "call_for_fear"
+	
+	chance = {
+		modifier = {
+			factor = 4
+            has_government = fascism
+			has_war = yes
+		}		
+	}	
+}
+
+
+music = {
+	song = "CosmosintheLostbelt"
+	
+	chance = {
+		modifier = {
+			factor = 4
+			has_war = no
+		}		
+	}	
+}
+
+music = {
+	song = "DiesiraeFGO"
+	
+	chance = {
+		modifier = {
+			factor = 4
+			has_war = no
+			threat > 0.4
+		}		
+	}	
+}
+
+
+
+music = {
+	song = "TheProposition"
+	
+	chance = {
+		modifier = {
+			factor = 4
+			has_war = yes
+			has_government = democratic
+		}		
+	}	
+}
+
+music = {
+	song = "CombatSituation"
+	
+	chance = {
+		modifier = {
+			factor = 3
+			has_war = no
+			threat > 0.5
+		}		
+	}	
+}
+
+music = {
+	song = "Question"
+	
+	chance = {
+		modifier = {
+			factor = 4
+			has_war = no
+			threat > 0.2
+		}		
+	}	
+}
+
+music = {
+	song = "counterattack"
+	
+	chance = {
+		modifier = {
+			factor = 3
+			has_war = yes
+		}		
+	}	
+}
+
+music = {
+	song = "GuardiansofLostbelt"
+	
+	chance = {
+		modifier = {
+			factor = 4
+			has_war = yes
+			FRA = { has_completed_focus = FRA_return_of_tsar }
+		}			
+	}	
+}
+
+music = {
+	song = "TheConference"
+	
+	chance = {
+		modifier = {
+			factor = 3
+			has_war = no
+		}			
+	}	
+}
+
+
+music = {
+	song = "Samba_Shop"
+	
+	chance = {
+		modifier = {
+			factor = 4
+			TAG = MEX
+			has_completed_focus = MEX_focus_religious_reconciliation
+		}			
+	}	
+}
+
+
+music = {
+	song = "JingleBell"
+	
+	chance = {
+		modifier = {
+			factor = 4
+			TAG = MEX
+			has_completed_focus = MEX_focus_religious_reconciliation
+			has_war = no
+		}			
+	}	
+}
+
+
+music = {
+	song = "AztecAtomicEra"
+	
+	chance = {
+		modifier = {
+			factor = 7
+			TAG = MEX
+			has_completed_focus = MEX_focus_proclaim_aztec
+		}			
+	}	
+}
+
+music = {
+	song = "OutBorder"
+	
+	chance = {
+		modifier = {
+			factor = 7
+			has_government = democratic
+			has_war = yes
+		}			
+	}	
+}
+
+
+music = {
+	song = "Finality"
+	
+	chance = {
+		modifier = {
+			factor = 7
+			has_government = democratic
+			has_war = yes
+			tag = JAP
+		}			
+	}	
+}
+
+
+music = {
+	song = "OdaNobunaga"
+	
+	chance = {
+		modifier = {
+			factor = 7
+			has_government = neutrality
+			tag = JAP
+		}			
+	}	
+}
+
+music = {
+	song = "AmakusaShirou"
+	
+	chance = {
+		modifier = {
+			factor = 7
+			has_government = communism
+			tag = JAP
+		}			
+	}	
+}
+
+
+
+music = {
+	song = "UnlimitedBladeWorks"
+	
+	chance = {
+		modifier = {
+			factor = 7
+			has_war = yes
+			tag = JAP
+		}			
+	}	
+}
+
+
+
+
+
+music = {
+	song = "confrontation_general"
+	
+	chance = {
+		modifier = {
+			factor = 4
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+			has_war = yes
+		}			
+	}	
+}
+
+
+music = {
+	song = "Far_East_War"
+	
+	chance = {
+		modifier = {
+			factor = 6
+			has_government = democratic
+			has_war = yes
+			tag = JAP
+		}			
+	}	
+}
+
+
+music = {
+	song = "Japan_Theme_Atomic"
+	
+	chance = {
+		modifier = {
+			factor = 4
+			tag = JAP
+		}			
+	}	
+}
+
+music = {
+	song = "Japan_Theme_Peace"
+	
+	chance = {
+		modifier = {
+			factor = 6
+			has_war = no
+			tag = JAP
+		}	
+	}	
+}
+
+music = {
+	song = "Mecha_storm"
+	
+	chance = {
+		modifier = {
+			factor = 7
+			has_war = yes
+			has_government = fascism
+			tag = JAP
+		}			
+	}	
+}
+
+
+music = {
+	song = "Mystic_land"
+	
+	chance = {
+		modifier = {
+			factor = 8
+			has_war = no
+			tag = JAP
+			threat < 0.30
+		}			
+	}	
+}
+
+
+music = {
+	song = "New_year"
+	
+	chance = {
+		modifier = {
+			factor = 6
+			has_war = no
+			tag = JAP
+		}
+		modifier = {
+			factor = 10
+			has_war = no
+			date < 1936.3.1
+			tag = JAP
+		}					
+	}	
+}
+
+
+music = {
+	song = "Seven_win"
+	
+	chance = {
+		modifier = {
+			factor = 4
+			tag = JAP
+			has_war = yes
+		}			
+	}	
+}
+
+music = {
+	song = "Shimosanokuni"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			has_war = yes
+			tag = JAP
+		}	
+	}	
+}
+
+music = {
+	song = "Tenkafubu"
+	
+	chance = {
+		modifier = {
+			factor = 6
+			has_completed_focus = JAP_tenka_fubu_focus
+			tag = JAP
+		}			
+	}	
+}
+
+
+music = {
+	song = "Everlasting_Empire"
+	
+	chance = {
+		modifier = {
+			factor = 7
+			OR = {	
+				has_government = fascism
+				has_government = neutrality
+			}
+			tag = ITA
+		}			
+	}	
+}
+
+music = {
+	song = "solemn_of_birth_place"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			OR = {	
+				has_government = fascism
+				has_government = neutrality
+			}
+			tag = ITA
+		}			
+	}	
+}
+
+music = {
+	song = "The_highest_emperor"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			OR = {	
+				has_government = fascism
+				has_government = neutrality
+				has_government = democratic
+			}
+			tag = ITA
+		}			
+	}	
+}
+
+
+music = {
+	song = "funiculi_funicula"
+	
+	chance = {
+		modifier = {
+			factor = 4
+			has_war = no
+			tag = ITA
+		}			
+	}	
+}
+
+music = {
+	song = "spartacus"
+	
+	chance = {
+		modifier = {
+			factor = 5
+			has_government = communism
+			tag = ITA
+		}			
+	}	
+}
+
+
+music = {
+	song = "internationalis_latin"
+	
+	chance = {
+		modifier = {
+			factor = 8
+			has_government = communism
+			tag = ITA
+		}			
+	}	
+}
+
+music = {
+	song = "Nero_festival"
+	
+	chance = {
+		modifier = {
+			factor = 4
+			OR = {	
+				has_government = fascism
+				has_government = neutrality
+				has_government = democratic
+			}
+			has_war = no
+			tag = ITA
+		}			
+	}	
+}
+
+music = {
+	song = "Rome_is_the_light"
+	
+	chance = {
+		modifier = {
+			factor = 4
+			tag = ITA
+		}			
+	}	
+}
+
+music = {
+	song = "Rome_Theme_Civ6"
+	
+	chance = {
+		modifier = {
+			factor = 4
+			tag = ITA
+		}			
+	}	
+}
+
+music = {
+	song = "rose_garden_near_the_hell"
+	
+	chance = {
+		modifier = {
+			has_war = no
+			factor = 5
+			tag = ITA
+		}			
+	}	
+}
+
+music = {
+	song = "sen_desu_medley"
+	
+	chance = {
+		modifier = {
+			has_war = no
+			factor = 4
+			tag = ITA
+		}			
+	}	
+}
+
+
+music = {
+	song = "The_Forum"
+	
+	chance = {
+		modifier = {
+			has_war = no
+			factor = 4
+			tag = ITA
+		}			
+	}	
+}
+
+music = {
+	song = "setting_sun"
+	
+	chance = {
+		modifier = {
+			OR = {	
+				has_government = neutrality
+				has_government = democratic
+			}
+			has_war = no
+			factor = 3
+			tag = ITA
+		}			
+	}	
+}
+
+
+music = {
+	song = "rule_britannia_with_lyric_annotations"
+	
+	chance = {
+		modifier = {
+			has_government = democratic
+			original_tag = ENG
+			# has_war = no
+			factor = 5
+			tag = ITA
+		}			
+	}	
+}
+
+music = {
+	song = "where_is_winston"
+	
+	chance = {
+		modifier = {
+			has_government = democratic
+			original_tag = ENG
+			has_war = yes
+			factor = 6
+			tag = ITA
+		}			
+	}	
+}
+
+
+music = {
+	song = "The_British_Grenadiers_fife"
+	
+	chance = {
+		modifier = {
+			has_government = democratic
+			original_tag = ENG
+			has_war = no
+			factor = 6
+			tag = ITA
+		}			
+	}	
+}
+
+######################
+
+
+
+music = {
+	song = "Die_Walkure"
+	
+	chance = {
+		modifier = {
+			factor = 4
+			tag = SWE
+		}			
+	}	
+}
+
+music = {
+	song = "Einzug_Der_Goetter_In_Walhall"
+	
+	chance = {
+		modifier = {
+			OR = {	
+				has_government = neutrality
+				has_government = fascism
+			}
+			has_war = no
+			factor = 4
+			tag = SWE
+		}			
+	}	
+}
+
+
+music = {
+	song = "Maid_of_snowland"
+	
+	chance = {
+		modifier = {
+			has_government = democratic
+			original_tag = SWE
+			has_war = no
+			factor = 5
+		}			
+	}	
+}
+
+music = {
+	song = "Gotterdammerung_fgo_1"
+	
+	chance = {
+		modifier = {
+			original_tag = SWE
+			has_war = no
+			factor = 7
+		}			
+	}	
+}
+
+
+music = {
+	song = "Gotterdammerung_fgo_2"
+	
+	chance = {
+		modifier = {
+            OR = {	
+				has_government = neutrality
+				has_government = fascism
+			}
+			original_tag = SWE
+			factor = 6
+		}			
+	}	
+}
+
+music = {
+	song = "Ragnarok_Suite"
+	
+	chance = {
+		modifier = {
+            OR = {	
+				has_government = neutrality
+				has_government = fascism
+			}
+			original_tag = SWE
+			factor = 6
+		}			
+	}	
+}
+
+
+music = {
+	song = "residual_ice"
+	
+	chance = {
+		modifier = {
+            has_war = no
+			original_tag = SWE
+			factor = 5
+		}			
+	}	
+}
+
+
+music = {
+	song = "Once_There_Were_Dragons"
+	
+	chance = {
+		modifier = {
+            # has_war = no
+			original_tag = SWE
+			factor = 4
+		}			
+	}	
+}
+
+music = {
+	song = "Test_Drive"
+	
+	chance = {
+		modifier = {
+            has_war = yes
+			original_tag = SWE
+			factor = 6
+		}			
+	}	
+}
+
+
+music = {
+	song = "This_Is_Berk"
+	
+	chance = {
+		modifier = {
+            # has_war = yes
+			original_tag = SWE
+			factor = 4
+		}			
+	}	
+}
+
+
+music = {
+	song = "Flat_snark"
+	
+	chance = {
+		modifier = {
+      has_war = yes
+			threat > 0.60
+			factor = 4
+		}			
+	}	
+}
+
+music = {
+	song = "appearance_greet_three"
+	
+	chance = {
+		modifier = {
+      has_war = yes
+			threat > 0.60
+			factor = 4
+		}			
+	}	
+}
+
+music = {
+	song = "Bathory_Erzsebet"
+	
+	chance = {
+		modifier = {
+			original_tag = HUN
+      has_government = neutrality
+			factor = 6
+		}			
+	}	
+}
+
+music = {
+	song = "iron_maiden_princess"
+	
+	chance = {
+		modifier = {
+			original_tag = HUN
+      has_government = neutrality
+			factor = 4
+		}			
+	}	
+}
+music = {
+	song = "shalala_la"
+	
+	chance = {
+		modifier = {
+			original_tag = HUN
+      has_government = neutrality
+			factor = 4
+		}			
+	}	
+}
+
+music = {
+	song = "Mystic_city"
+	
+	chance = {
+		modifier = {
+			original_tag = HUN
+      OR = {
+          has_government = fascism
+          has_government = communism
+      }
+      
+			factor = 4
+		}			
+	}	
+}
+
+
+music = {
+	song = "CountessDracula"
+	
+	chance = {
+		modifier = {
+      has_war = no
+      OR = {
+          original_tag = HUN
+          original_tag = ROM
+      }
+			factor = 4
+		}			
+	}	
+}
+
+music = {
+	song = "Evergreen"
+	
+	chance = {
+		modifier = {
+      OR = {
+          original_tag = SWE
+          original_tag = NOR
+          original_tag = DEN
+          original_tag = FIN
+      }
+			factor = 4
+		}			
+	}	
+}
+music = {
+	song = "Winterspell"
+	
+	chance = {
+		modifier = {
+      OR = {
+          original_tag = SWE
+          original_tag = NOR
+          original_tag = DEN
+          original_tag = FIN
+      }
+			factor = 4
+		}			
+	}	
+}
+
+
+music = {
+	song = "Grand_war"
+	
+	chance = {
+		modifier = {
+      has_war = yes
+      OR = {
+          original_tag = ROM
+          original_tag = FRA
+      }
+			factor = 4
+		}			
+	}	
+}
+
+music = {
+	song = "Great_Village"
+	
+	chance = {
+		modifier = {
+      original_tag = HUN
+			factor = 4
+		}			
+	}	
+}
+
+music = {
+	song = "Holy_grail_war"
+	
+	chance = {
+		modifier = {
+      has_war = yes
+      OR = {
+          original_tag = ROM
+          original_tag = FRA
+      }
+			factor = 4
+		}			
+	}	
+}
+
+music = {
+	song = "Mystic_meeting"
+	
+	chance = {
+		modifier = {
+      OR = {
+          original_tag = ROM
+      }
+			factor = 6
+		}			
+	}	
+}
+
+
+
+
+
+
+music = {
+	song = "Before_war"
+	
+	chance = {
+    modifier = {
+      threat > 0.74
+      has_war = no
+      factor = 4
+    }
+		modifier = {
+      OR = {
+         is_justifying_wargoal_against = GER
+         is_justifying_wargoal_against = ENG
+         is_justifying_wargoal_against = FRA
+         is_justifying_wargoal_against = ITA       
+         is_justifying_wargoal_against = SOV
+         is_justifying_wargoal_against = JAP
+         is_justifying_wargoal_against = USA
+         is_justifying_wargoal_against = SWE        
+         is_justifying_wargoal_against = CHI
+         is_justifying_wargoal_against = RUS
+         
+      }
+      OR = {
+         has_wargoal_against = GER
+         has_wargoal_against = ENG
+         has_wargoal_against = FRA
+         has_wargoal_against = ITA       
+         has_wargoal_against = SOV
+         has_wargoal_against = JAP
+         has_wargoal_against = USA
+         has_wargoal_against = SWE        
+         has_wargoal_against = CHI
+         has_wargoal_against = RUS   
+      }
+			factor = 10
+		}			
+	}	
+}
+
+music = {
+	song = "Mars_The_Bringer_Of_War"
+	
+	chance = {
+    modifier = {
+      threat > 0.74
+      has_war = no
+      factor = 5
+    }
+    modifier = {
+      has_war = yes
+      factor = 2
+    }
+		modifier = {
+      OR = {
+         is_justifying_wargoal_against = GER
+         is_justifying_wargoal_against = ENG
+         is_justifying_wargoal_against = FRA
+         is_justifying_wargoal_against = ITA       
+         is_justifying_wargoal_against = SOV
+         is_justifying_wargoal_against = JAP
+         is_justifying_wargoal_against = USA
+         is_justifying_wargoal_against = SWE        
+         is_justifying_wargoal_against = CHI
+         is_justifying_wargoal_against = RUS
+         
+      }
+      OR = {
+         has_wargoal_against = GER
+         has_wargoal_against = ENG
+         has_wargoal_against = FRA
+         has_wargoal_against = ITA       
+         has_wargoal_against = SOV
+         has_wargoal_against = JAP
+         has_wargoal_against = USA
+         has_wargoal_against = SWE        
+         has_wargoal_against = CHI
+         has_wargoal_against = RUS   
+      }
+			factor = 10
+		}			
+	}	
+}
+
+music = {
+	song = "Crossandra"
+	
+	chance = {
+		modifier = {
+      OR = {
+          original_tag = ENG
+          original_tag = FRA
+          original_tag = ROM
+      }
+      has_government = neutrality
+      has_war = no
+      threat < 0.40
+			factor = 8
+		}			
+	}	
+}
+
+music = {
+	song = "dis_communication"
+	
+	chance = {
+		modifier = {
+      OR = {
+          original_tag = IRQ
+          original_tag = PER
+          original_tag = GRE
+          original_tag = TUR
+      }
+      has_war = yes
+			factor = 4
+		}
+    modifier = {
+      OR = {
+          original_tag = IRQ
+          original_tag = PER
+          original_tag = GRE
+          original_tag = TUR
+      }
+      OR = {
+        has_war_with = SOV
+        has_war_with = FRA
+        has_war_with = ENG
+        has_war_with = RUS
+        has_war_with = GER
+      }
+			factor = 3
+		}    
+	}	
+}
+
+music = {
+	song = "Golden_king"
+	
+	chance = {
+		modifier = {
+      has_country_leader = { name = "Gilgamesh"  ruling_only = yes }
+			factor = 8
+		}
+	}	
+}
+
+music = {
+	song = "Gorgon"
+	
+	chance = {
+		modifier = {
+      OR = {
+          original_tag = IRQ
+          original_tag = PER
+          original_tag = GRE
+          original_tag = TUR
+      }
+      has_war = yes
+			factor = 4
+		}
+    modifier = {
+      OR = {
+          original_tag = IRQ
+          original_tag = PER
+          original_tag = GRE
+          original_tag = TUR
+      }
+      OR = {
+        has_war_with = SOV
+        has_war_with = FRA
+        has_war_with = ENG
+        has_war_with = RUS
+        has_war_with = GER
+      }
+			factor = 3
+		}
+	}	
+}
+
+music = {
+	song = "Killers"
+	
+	chance = {
+		modifier = {
+      any_other_country = {
+        is_major = yes
+        has_war_with = ROOT
+      }
+			factor = 6
+		}			
+	}	
+}
+
+music = {
+	song = "O_Fortuna"
+	
+	chance = {
+		modifier = {
+      original_tag = GER
+      has_government = fascism
+			factor = 6
+		}			
+	}	
+}
+
+music = {
+	song = "Quest_Babylonia"
+	
+	chance = {
+		modifier = {
+      OR = {
+        original_tag = IRQ
+        original_tag = PER
+        original_tag = SAU
+      }
+      threat < 0.50
+			factor = 7
+		}			
+	}	
+}
+
+music = {
+	song = "Sacred_Round_Table"
+	
+	chance = {
+		modifier = {
+      OR = {
+        original_tag = IRQ
+        original_tag = PER
+        original_tag = SAU
+        original_tag = ENG
+      }
+      threat < 0.50
+			factor = 7
+		}			
+	}	
+}
+
+music = {
+	song = "Quest_Babylonia_2"
+	
+	chance = {
+		modifier = {
+      OR = {
+        original_tag = IRQ
+        original_tag = PER
+        original_tag = SAU
+      }
+      threat > 0.50
+			factor = 7
+		}			
+	}	
+}
+
+music = {
+	song = "Sumeria_The_Atomic_Era"
+	
+	chance = {
+		modifier = {
+      OR = {
+        original_tag = IRQ
+      }
+      has_war = no
+			factor = 8
+		}			
+	}	
+}
+
+music = {
+	song = "The_ancient_capital"
+	
+	chance = {
+		modifier = {
+      OR = {
+        original_tag = IRQ
+      }
+      has_war = no
+			factor = 8
+		}			
+	}	
+}
+
+music = {
+	song = "Romanian_National_Anthem"
+	
+	chance = {
+		modifier = {
+      OR = {
+        original_tag = ROM
+      }
+      OR = {
+        has_government = neutrality
+        has_government = democratic
+      }
+      has_war = no
+			factor = 8
+		}			
+	}	
+}
+
+music = {
+	song = "Rynos_Theme"
+	
+	chance = {
+		modifier = {
+      
+      AND = {
+        ENG = { has_government = neutrality }
+        is_in_faction_with = ENG
+      }
+      has_war = no
+			factor = 4
+		}			
+	}	
+}
+
+
+
+
+
+
+
+
+music = {
+	song = "BWV582Fugue"
+	
+	chance = {
+		modifier = {
+      threat < 0.50
+      date < 1940.12.31
+			factor = 4
+		}			
+	}	
+}
+
+music = {
+	song = "choir_I_vow_to_thee_my_country"
+	
+	chance = {
+		modifier = {
+      OR = {
+        original_tag = ENG
+      }
+      has_government = neutrality
+      has_war = no
+			factor = 6
+		}			
+	}	
+}
+
+music = {
+	song = "Franz_Liszt_La_Marseillaise_S237"
+	
+	chance = {
+		modifier = {
+      OR = {
+        original_tag = FRA
+      }
+      OR = {
+        has_country_flag = Autocracy_Settled
+        has_country_flag = Republic_Settled
+      }
+      has_war = no
+			factor = 5
+		}			
+	}	
+}
+
+music = {
+	song = "HarpsichordSarabande"
+	
+	chance = {
+		modifier = {
+      OR = {
+        date < 1938.6.1
+        date > 1944.3.1
+      }
+      has_war = no
+			factor = 5
+		}			
+	}	
+}
+
+music = {
+	song = "hundred_years_war_orch"
+	
+	chance = {
+		modifier = {
+      original_tag = FRA
+      NOT = { has_government = fascism }
+      has_war = no
+      date < 1940.6.1
+			factor = 5
+		}			
+	}	
+}
+
+music = {
+	song = "La_Chanson_De_L_Oignon"
+	
+	chance = {
+		modifier = {
+      OR = {
+        original_tag = FRA
+      }
+      OR = {
+        has_country_flag = Autocracy_Settled
+        has_country_flag = Republic_Settled
+      }
+      NOT = { has_government = communism }
+      has_war = yes
+			factor = 5
+		}				
+	}	
+}
+
+music = {
+	song = "national_anthem_of_the_first_french_empire"
+	
+	chance = {
+		modifier = {
+      OR = {
+        original_tag = FRA
+      }
+      OR = {
+        has_country_flag = Autocracy_Settled
+        has_country_flag = Republic_Settled
+      }
+      NOT = { has_government = communism }
+      has_war = yes
+			factor = 5
+		}				
+	}	
+}
+
+music = {
+	song = "La_Marseillaise"
+	
+	chance = {
+		modifier = {
+      OR = {
+        original_tag = FRA
+      }
+      OR = {
+        has_country_flag = Autocracy_Settled
+        has_country_flag = Republic_Settled
+      }
+			factor = 5
+		}				
+	}	
+}
+
+music = {
+	song = "musique_de_la_court"
+	
+	chance = {
+		modifier = {
+      OR = {
+        original_tag = FRA
+      }
+      OR = {
+        has_country_flag = Monarchy_Settled
+      }
+      has_war = no
+			factor = 4
+		}				
+	}	
+}
+
+music = {
+	song = "royal_anthem_of_france"
+	
+	chance = {
+		modifier = {
+      OR = {
+        original_tag = FRA
+      }
+      OR = {
+        has_country_flag = Monarchy_Settled
+      }
+			factor = 7
+		}				
+	}	
+}
+
+music = {
+	song = "The_Internationale"
+	
+	chance = {
+		modifier = {
+      OR = {
+        original_tag = FRA
+      }
+      has_government = communism
+			factor = 6
+		}				
+	}	
+}
+
+music = {
+	song = "The_Queens_High_Seas"
+	
+	chance = {
+		modifier = {
+      OR = {
+        original_tag = FRA
+        original_tag = ITA
+        original_tag = ENG
+        original_tag = SWE
+        original_tag = SPR
+      }
+      OR = {
+        has_war = yes
+        threat > 0.50
+      }
+      date < 1939.6.1
+			factor = 6
+		}				
+	}	
+}

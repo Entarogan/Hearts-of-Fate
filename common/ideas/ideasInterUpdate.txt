@@ -295,15 +295,6 @@ ideas = {
           JAP = { 
             NOT = { has_completed_focus = JAP_strike_south_doctrine }
             NOT = { has_completed_focus = JAP_pan_asianism }        
-            NOT = { has_completed_focus = JAP_the_unthinkable_option }        
-            NOT = { has_completed_focus = JAP_unite_the_sinoshpere }
-          }
-          OR = {
-            NOT = { 
-              ENG = { has_completed_focus = uk_reines_china }
-              ENG = { has_completed_focus = uk_china_focus }               
-            }
-            NOT = { JAP = { has_war_with = CHI } }
           }
         }
 

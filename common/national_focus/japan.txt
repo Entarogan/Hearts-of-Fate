@@ -30,10 +30,8 @@ focus_tree = {
 					add_political_power = 120
 					add_timed_idea = {
 							idea = JAP_strengthen_civilian_government
-							days = 1095
+							days = 50
 						}
-					custom_effect_tooltip = available_political_advisor
-					show_ideas_tooltip = aozaki_aoko
 				}
 
 	}
@@ -996,7 +994,7 @@ focus_tree = {
     }
     completion_reward = {
       add_ideas = { JAP_Chi_Ha_Tan }
-      set_technology = { Jap_Chi_Ha_Tan_tech }
+      set_technology = { Jap_Chi_Ha_Tan_tech = 1 }
     }
 
 	}
@@ -1014,6 +1012,10 @@ focus_tree = {
 		x = 48
 		y = 12
     available = {
+      OR = {
+        has_government = neutrality
+        has_government = fascism
+      }
       date > 1941.6.1
       threat > 0.79
       OR = {
@@ -1047,11 +1049,23 @@ focus_tree = {
           is_core_of = ROOT
           CONTROLLER = { has_war_with = ROOT }
         }
+        all_state	 = {
+          OR = { 
+            is_core_of = JAP
+            CONTROLLER = {
+              NOT = { tag = ROOT }
+              NOT = { is_subject_of = ROOT }
+            }
+          }
+        }
       }
       
     }
-
+    completion_reward = {
+      add_ideas = { JAP_Operation_Ketsugou }
+    }
 	}
+  
 	focus = {
 		id = JAP_tm_industrial
 		icon = GFX_goal_generic_production2
@@ -1131,13 +1145,12 @@ focus_tree = {
 					factor = 1
 					modifier = {
 							OR = {
-									has_completed_focus = JAP_cast_the_die
-									has_completed_focus = JAP_release_the_dagger
-									has_completed_focus = JAP_pre_emptive_coup
-									has_completed_focus = JAP_bafuku_authority
-									has_completed_focus = JAP_religious_authority
-									has_completed_focus = JAP_sakurakai
-									has_completed_focus = JAP_party_of_alaya
+									has_completed_focus = JAP_smaller_japan
+									has_completed_focus = JAP_nobody_suffers_damage
+									has_completed_focus = JAP_kokutai_toseiha
+									has_completed_focus = JAP_three_thousand_worlds_focus
+									has_completed_focus = JAP_japanese_national_socialism
+									has_completed_focus = JAP_expand_departments
 								}
 							factor = 4
 						}
@@ -1310,7 +1323,7 @@ focus_tree = {
 	focus = {
 		id = JAP_research_spending
 		icon = GFX_focus_research
-		cost = 5.00
+		cost = 10.00
 		prerequisite = {
 			focus = JAP_Electricity_Nationalization
 		}
@@ -1381,50 +1394,7 @@ focus_tree = {
 			continue_if_invalid = no
 			available_if_capitulated = no
 			completion_reward = {
-					add_ai_strategy = {
-							type = alliance
-							id = "ENG"
-							value = 200
-						}
-					add_ai_strategy = {
-							type = befriend
-							id = "ENG"
-							value = 200
-						}
-					if = {
-							limit = {
-									ENG = {
-											is_faction_leader = yes
-										}
-								}
-							ENG = {
-									country_event = trs_japan.14
-								}
-						}
-					else_if = {
-							limit = {
-									ENG = {
-											is_in_faction = yes
-											is_faction_leader = no
-										}
-								}
-							random_country = {
-									limit = {
-											is_in_faction_with = ENG
-											is_faction_leader = yes
-										}
-									country_event = trs_japan.14
-								}
-						}
-					else = {
-							set_rule = {
-									can_create_factions = yes
-								}
-							create_faction = JAP_the_old_alliance
-							ENG = {
-									country_event = generic.5
-								}
-						}
+            ### Anglo-Japanese alliance events
 				}
 
 	}
@@ -1453,7 +1423,7 @@ focus_tree = {
 						}
 				}
 			available = {
-
+          has_idea = idea_jap_liberals
 }
 			bypass = {
 					"PHI" = {
@@ -1586,12 +1556,13 @@ focus_tree = {
 			continue_if_invalid = no
 			available_if_capitulated = no
 			completion_reward = {
-					every_army_leader = {
-							add_planning = 1
-						}
 					add_ideas = { JAP_fuyuki_special_service_idea }
-					custom_effect_tooltip = available_theorist
-					show_ideas_tooltip = tohsaka_rin
+          if = {
+            limit = { has_idea = idea_jap_liberals }
+            custom_effect_tooltip = available_theorist
+            show_ideas_tooltip = tohsaka_rin
+          }
+					
 				}
 
 	}
@@ -1650,8 +1621,12 @@ focus_tree = {
 			available_if_capitulated = no
 			completion_reward = {
         add_ideas = { JAP_mifune_special_service_idea }
-        custom_effect_tooltip = available_theorist
-        show_ideas_tooltip = aozaki_touko
+        if = {
+          limit = { NOT = { has_government = fascism } }
+          custom_effect_tooltip = available_theorist
+          show_ideas_tooltip = aozaki_touko
+        }
+        
       }
 
 	}
@@ -1692,18 +1667,8 @@ focus_tree = {
 									modifier = JAP_anti_communist_bulwark
 								}
 						}
-					PRC = {
-							add_opinion_modifier = {
-									target = ROOT
-									modifier = JAP_anti_communist_bulwark
-								}
-						}
 					add_opinion_modifier = {
 							target = SOV
-							modifier = JAP_anti_communist_bulwark
-						}
-					add_opinion_modifier = {
-							target = PRC
 							modifier = JAP_anti_communist_bulwark
 						}
 				}
@@ -1798,7 +1763,7 @@ focus_tree = {
 					factor = 2
 				}
 			available = {
-					is_in_faction_with = ENG
+					has_idea = uk_cooperate_with_japan
 				}
 			bypass = {
 
@@ -1833,14 +1798,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_naval_joint_exercise
 			ai_will_do = {
-					factor = 2
-				}
+        factor = 2
+      }
 			available = {
-					OR = {
-							is_in_faction_with = ENG
-							is_in_faction_with = FRA
-						}
-				}
+        has_idea = uk_cooperate_with_japan
+      }
 			bypass = {
 
 }
@@ -1876,7 +1838,11 @@ focus_tree = {
 					factor = 2
 				}
 			available = {
-					is_in_faction_with = ENG
+					has_idea = uk_cooperate_with_japan
+          ENG = { 
+            NOT = { has_government = fascism } 
+            is_subject = no
+          }
 				}
 			bypass = {
 
@@ -1993,75 +1959,28 @@ focus_tree = {
 					factor = 4
 				}
 			available = {
-					fascism < 0.45
-					NOT = {
-							has_war_with = CHI
-						}
-					NOT = {
-							has_war_with = SOV
-						}
-					NOT = {
-							has_government = fascism
-						}
+					has_idea = JAP_kirisame_marisa
 				}
 			bypass = {
-					NOT = {
-							MAN = {
-									is_subject_of = JAP
-								}
-						}
-					NOT = {
-							MEN = {
-									is_subject_of = JAP
-								}
-						}
+        
 				}
 			cancel_if_invalid = yes
 			continue_if_invalid = no
 			available_if_capitulated = no
 			completion_reward = {
-					if = {
-							limit = {
-									MAN = {
-											is_subject_of = ROOT
-										}
-								}
-							set_autonomy = {
-									target = MAN
-									autonomy_state = autonomy_free
-								}
-						}
-					if = {
-							limit = {
-									MAN = {
-											has_idea = MAN_kwantung_veto
-										}
-								}
-							MAN = {
-									remove_ideas = MAN_kwantung_veto
-								}
-						}
-					if = {
-							limit = {
-									MEN = {
-											is_subject_of = ROOT
-										}
-								}
-							MAN = {
-									puppet = MEN
-								}
-						}
-					if = {
-							limit = {
-									609 = {
-											is_owned_by = ROOT
-										}
-								}
-							CHI = {
-									transfer_state = 609
-								}
-						}
-				}
+          CHI = { 
+            add_opinion_modifier = {
+                target = ROOT
+                modifier = CHI_kirisame_opinion
+            }
+          }
+          PRC = { 
+            add_opinion_modifier = {
+                target = ROOT
+                modifier = CHI_kirisame_opinion
+            }
+          }
+			}
 
 	}
 	focus = {
@@ -2081,52 +2000,41 @@ focus_tree = {
 					NOT = {
 							has_war_with = event_target:WTT_current_china_leader
 						}
-					NOT = {
-							MAN = {
-									is_subject_of = JAP
-								}
-						}
-					NOT = {
-							MEN = {
-									is_subject_of = JAP
-								}
-						}
+					OR = {
+            has_country_flag = jap_reconcilation_with_beiyang
+            has_country_flag = jap_reconcilation_with_kmt
+          }
+          
 				}
 			bypass = {
-					has_non_aggression_pact_with = CHI
+          OR = {
+            AND = {
+              has_country_flag = jap_reconcilation_with_beiyang
+              has_non_aggression_pact_with = PRC
+            }
+            AND = {
+              has_country_flag = jap_reconcilation_with_kmt
+              has_non_aggression_pact_with = CHI
+            }
+          }
 				}
 			cancel_if_invalid = yes
 			continue_if_invalid = no
 			available_if_capitulated = no
 			completion_reward = {
-					CHI = {
+          if = {
+            limit = { has_country_flag = jap_reconcilation_with_beiyang }
+            PRC = {
 							country_event = wtt_japan.11
 						}
-					609 = {
-							if = {
-									limit = {
-											is_controlled_by = ROOT
-										}
-									add_building_construction = {
-											type = bunker
-											level = 3
-											province = 6969
-											instant_build = yes
-										}
-									add_building_construction = {
-											type = bunker
-											level = 3
-											province = 11822
-											instant_build = yes
-										}
-									add_building_construction = {
-											type = bunker
-											level = 3
-											province = 12043
-											instant_build = yes
-										}
-								}
+          }
+          if = {
+            limit = { has_country_flag = jap_reconcilation_with_kmt }
+            CHI = {
+							country_event = wtt_japan.11
 						}
+          }
+					
 				}
 
 	}
@@ -2163,24 +2071,26 @@ focus_tree = {
 						}
 				}
 			available = {
-					is_faction_leader = yes
-					NOT = {
-							has_war_with = CHI
-						}
-					CHI = {
-							is_in_faction = no
-						}
-					NOT = {
-							has_government = fascism
-						}
+					OR = {
+            PRC = { exists = no }
+            PRC = { is_subject_of = CHI }
+          }
+          OR = {
+            CHI = { exists = no }
+            CHI = { is_subject_of = PRC }
+          }
 				}
 			bypass = {
-					is_in_faction_with = CHI
+          OR = {
+            is_in_faction_with = CHI
+            is_in_faction_with = PRC
+          }					
 				}
 			cancel_if_invalid = yes
 			continue_if_invalid = no
 			available_if_capitulated = no
 			completion_reward = {
+          ### China Alliance
 					CHI = {
 							country_event = {
 									id = trs_japan.9
@@ -2193,7 +2103,7 @@ focus_tree = {
 	focus = {
 		id = JAP_expand_textile_industrial_routine
 		icon = GFX_goal_generic_positive_trade_relations
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = JAP_taiwan_for_alliance
 		}
@@ -2204,7 +2114,11 @@ focus_tree = {
 					factor = 2
 				}
 			available = {
-					is_in_faction_with = CHI
+          OR = {
+            is_in_faction_with = CHI
+            is_in_faction_with = PRC
+          }
+					
 				}
 			bypass = {
 
@@ -2217,12 +2131,25 @@ focus_tree = {
 							type = industrial_complex
 							level = 8
 						}
-					CHI = {
+          if = {
+            limit = { is_in_faction_with = CHI }
+            CHI = {
 							add_offsite_building = {
 									type = industrial_complex
 									level = 6
 								}
 						}
+          }
+          if = {
+            limit = { is_in_faction_with = PRC }
+            PRC = {
+							add_offsite_building = {
+									type = industrial_complex
+									level = 6
+								}
+						}
+          }
+					
 				}
 
 	}
@@ -2243,7 +2170,10 @@ focus_tree = {
 					factor = 2
 				}
 			available = {
-					is_in_faction_with = CHI
+					OR = {
+            is_in_faction_with = CHI
+            is_in_faction_with = PRC
+          }
 				}
 			bypass = {
 
@@ -2258,7 +2188,9 @@ focus_tree = {
 							uses = 2
 							category = industry
 						}
-					CHI = {
+          if = {
+            limit = { is_in_faction_with = CHI }
+            CHI = {
 							add_tech_bonus = {
 									name = JAP_industrial
 									bonus = 1
@@ -2266,13 +2198,26 @@ focus_tree = {
 									category = industry
 								}
 						}
+          }
+          if = {
+            limit = { is_in_faction_with = PRC }
+            PRC = {
+							add_tech_bonus = {
+									name = JAP_industrial
+									bonus = 1
+									uses = 2
+									category = industry
+								}
+						}
+          }
+					
 				}
 
 	}
 	focus = {
 		id = JAP_ADB_focus
 		icon = GFX_focus_adb
-		cost = 10.00
+		cost = 7.00
 		prerequisite = {
 			focus = JAP_full_sovereignty_for_the_philippines
 		}
@@ -2370,9 +2315,7 @@ focus_tree = {
 					is_in_faction = yes
 				}
 			bypass = {
-					MAN = {
-							exists = no
-						}
+
 				}
 			cancel_if_invalid = yes
 			continue_if_invalid = no
@@ -2381,9 +2324,9 @@ focus_tree = {
 					add_stability = 0.10
 					add_tech_bonus = {
 							name = JAP_red_swastika
-							bonus = 1.0
-							ahead_reduction = 3
-							uses = 4
+							bonus = 1.5
+							ahead_reduction = 2.0
+							uses = 2
 							category = hospital_tech
 						}
 					every_other_country = {
@@ -2393,9 +2336,9 @@ focus_tree = {
 							add_stability = 0.10
 							add_tech_bonus = {
 									name = JAP_red_swastika
-									bonus = 1.0
-									ahead_reduction = 3
-									uses = 4
+									bonus = 1.5
+									ahead_reduction = 2.0
+									uses = 2
 									category = hospital_tech
 								}
 						}
@@ -2416,6 +2359,7 @@ focus_tree = {
 					factor = 8
 				}
 			available = {
+          ### Manchuria States reassign
 					MAN = {
 							is_subject_of = ROOT
 						}
@@ -2525,12 +2469,13 @@ focus_tree = {
 											is_on_continent = asia
 										}
 									NOT = {
-											has_war_with = JAP
-										}
+                    has_war_with = JAP
+                    tag = RUS
+                  }
 								}
 							add_timed_idea = {
 									idea = JAP_pan_asianism_idea
-									days = 800
+									days = 200
 								}
 							set_country_flag = JAP_pan_asianism_influence
 						}
@@ -2711,6 +2656,7 @@ focus_tree = {
 			continue_if_invalid = no
 			available_if_capitulated = no
 			completion_reward = {
+          ## Indian National Army
 					RAJ = {
 							country_event = {
 									id = trs_japan.2
@@ -2723,7 +2669,7 @@ focus_tree = {
 	focus = {
 		id = JAP_unite_the_sinoshpere
 		icon = GFX_goal_generic_major_war
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = JAP_unbroken_imperial_line
 		}
@@ -2734,7 +2680,11 @@ focus_tree = {
 					factor = 3
 				}
 			available = {
-					is_in_faction_with = CHI
+        OR = {
+          is_in_faction_with = CHI
+          is_in_faction_with = PRC
+        }
+					
 				}
 			bypass = {
 
@@ -2797,7 +2747,7 @@ focus_tree = {
 	focus = {
 		id = JAP_far_east_nuclear_project
 		icon = GFX_focus_wonderweapons
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = JAP_joint_industrial_tech_company
 			focus = JAP_rebuild_asian_myth_system
@@ -2820,9 +2770,9 @@ focus_tree = {
 			completion_reward = {
 					add_tech_bonus = {
 							name = JAP_far_east_project
-							bonus = 0.75
-							ahead_reduction = 2
-							uses = 2
+							bonus = 0.5
+							ahead_reduction = 1
+							uses = 1
 							category = nuclear
 						}
 					every_other_country = {
@@ -2831,9 +2781,9 @@ focus_tree = {
 								}
 							add_tech_bonus = {
 									name = JAP_far_east_project
-									bonus = 0.75
-									ahead_reduction = 2
-									uses = 2
+									bonus = 0.5
+									ahead_reduction = 1
+									uses = 1
 									category = nuclear
 								}
 						}
@@ -2843,7 +2793,7 @@ focus_tree = {
 	focus = {
 		id = JAP_rebuild_asian_myth_system
 		icon = GFX_focus_myth_of_aisa
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = JAP_an_asia_for_asians
 		}
@@ -2872,6 +2822,7 @@ focus_tree = {
 											is_on_continent = asia
 										}
 									is_in_faction_with = JAP
+                  NOT = { tag = RUS }
 								}
 							add_ideas = { asian_myth_system }
 						}
@@ -2967,7 +2918,6 @@ focus_tree = {
 									hours = 6
 								}
 						}
-					remove_ideas = { state_shintoism }
 					swap_ideas = {
 							add_idea = JAP_militarism_nobu
 							remove_idea = JAP_militarism
@@ -3008,7 +2958,7 @@ focus_tree = {
 	focus = {
 		id = JAP_three_thousand_worlds_focus
 		icon = GFX_goal_generic_army_doctrines
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = JAP_disband_national_diet
 		}

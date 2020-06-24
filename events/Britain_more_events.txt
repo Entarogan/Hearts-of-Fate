@@ -743,7 +743,6 @@ country_event = {     # British Blocked the North Sea
           has_government = democratic
       }        
 		}
-		add_ideas = { uk_blockade }
     ENG = { country_event = { id = more_britain.16 hours = 3 } }
 	}
 }
@@ -803,7 +802,6 @@ country_event = {     # Sweden shows Loyalty
 			factor = 85
 		}
 		add_to_faction = SWE
-    SWE = { remove_ideas = { uk_blockade  } }
     SWE = { country_event = { id = more_britain.17 hours = 2 } }
 	}
   
@@ -858,6 +856,7 @@ country_event = {     # Britain refuses us to join the faction
 	# We have no choice
 	option = {
 		name = more_britain.18.a
+    add_ideas = { uk_blockade }
 		ai_chance = {
 			factor = 85
 		}

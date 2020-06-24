@@ -4490,28 +4490,28 @@ focus_tree = {
             popularity = 0.20
         }
         if = {
-            limit = { has_government = HUN_interventionism_3 }
+            limit = { has_idea = HUN_interventionism_3 }
             swap_ideas = {
               add_idea = HUN_interventionism_bathory
               remove_idea = HUN_interventionism_3
             }
         }
         if = {
-            limit = { has_government = HUN_interventionism_2 }
+            limit = { has_idea = HUN_interventionism_2 }
             swap_ideas = {
               add_idea = HUN_interventionism_bathory
               remove_idea = HUN_interventionism_2
             }
         }
         if = {
-            limit = { has_government = HUN_interventionism }
+            limit = { has_idea = HUN_interventionism }
             swap_ideas = {
               add_idea = HUN_interventionism_bathory
               remove_idea = HUN_interventionism
             }
         }
         if = {
-            limit = { has_government = HUN_interventionism_communism_bathory }
+            limit = { has_idea = HUN_interventionism_communism_bathory }
             swap_ideas = {
               add_idea = HUN_interventionism_bathory
               remove_idea = HUN_interventionism_communism_bathory

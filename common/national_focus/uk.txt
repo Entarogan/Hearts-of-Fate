@@ -12522,9 +12522,9 @@ focus_tree = {
       NOT = { has_war_with = JAP }
       JAP = { 
         NOT = { has_completed_focus = JAP_strike_south_doctrine }
-        NOT = { has_completed_focus = JAP_pan_asianism }        
-        NOT = { has_completed_focus = JAP_the_unthinkable_option }        
+        NOT = { has_completed_focus = JAP_pan_asianism }            
         NOT = { has_completed_focus = JAP_unite_the_sinoshpere }
+        NOT = { has_country_flag = jap_western_condemned }
       }
       OR = {
         NOT = { 
@@ -12532,6 +12532,9 @@ focus_tree = {
         }
         NOT = { JAP = { has_war_with = CHI } }
       }
+    }
+    bypass = {
+      has_idea = uk_cooperate_with_japan
     }
 		x = -4
 		y = 1
