@@ -346,8 +346,8 @@ ideas = {
 			picture = generic_pp_unity_bonus
 
 			modifier = {
-				political_power_gain = 0.35
-				stability_factor = 0.10
+				political_power_gain = 0.10
+				stability_factor = 0.05
 			}
 		}
 		
@@ -432,6 +432,37 @@ ideas = {
 				trade_laws_cost_factor = 0.05
 			}
 		}
+    
+    JAP_tokiwadai_special_service = {
+      allowed = {
+				original_tag = JAP
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = SOV_scientist_defect
+
+			modifier = {
+				special_forces_cap = 0.05
+				special_forces_attack_factor = 0.15
+        special_forces_min = 60     
+			}
+      
+      equipment_bonus = {
+        artillery = {
+          soft_attack = 0.10
+        }
+        anti_tank = {
+          ap_attack = 0.15
+          hard_attack = 0.10
+        }
+      }
+    }
 		
 		JAP_fuyuki_special_service_idea = {
 
@@ -449,11 +480,12 @@ ideas = {
 			picture = SOV_scientist_defect
 
 			modifier = {
-				max_planning = 0.15
+        max_planning = 0.15
 				invasion_preparation = -0.60
 				land_reinforce_rate = 0.10
 				special_forces_cap = 0.05
 				special_forces_attack_factor = 0.15
+        special_forces_min = 40
 				max_command_power = 50
 			}
 		}
@@ -864,10 +896,9 @@ ideas = {
 			}
 			
 			modifier = {
-				fuel_gain_factor = 0.30
-				fuel_gain_factor_from_states = 0.50
-				production_oil_factor = 0.25
-				production_speed_synthetic_refinery_factor = 0.20
+        fuel_gain_factor = 0.30
+        fuel_gain_factor_from_states = 0.50
+				
 			}
 		}
 		
@@ -929,10 +960,8 @@ ideas = {
 			picture = generic_secret_police
 			
 			modifier = {
-				resistance_tick_auto = -1
-				resistance_damage_to_garrison = -0.25
-				communism_drift = -0.10
-				democratic_drift = -0.10
+				resistance_damage_to_garrison = -0.20
+        intelligence_agency_defense = 0.20
 			}
 		}
 		

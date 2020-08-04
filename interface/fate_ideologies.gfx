@@ -11,7 +11,7 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_ideology_classical_liberlism"
+		name = "GFX_ideology_classical_liberalism"
 		texturefile = "gfx/interface/ideologies/market_liberal_group.dds"
 	}
 

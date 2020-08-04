@@ -47,9 +47,6 @@ ideas = {
     
     FRA_war_with_Germany_Karl = {
       picture = generic_morale_bonus
-      available = {
-        has_civil_war = yes
-      }
       targeted_modifier = {
 				tag = GER
 				attack_bonus_against = 0.15

@@ -1,15 +1,87 @@
 leader_traits = {
-    Dairokutenmaohajun = {
+
+  miss_blue = {
+    army_core_attack_factor = 0.15
+    army_core_defence_factor = 0.10
+    equipment_bonus = {
+      artillery = {
+        soft_attack = 0.15
+        hard_attack = 0.15
+        breakthrough = 0.20
+      }
+    }
+  }
+
+  yukari_master = {
+    max_planning = 0.20
+    planning_speed = 0.20
+    command_power_gain_mult = 0.20
+    max_command_power = 50
+  }
+  
+  yukari_puppet = {
+    political_power_factor = -0.10
+    stability_factor = 0.05
+  }
+
+  fantasy_nature = {
+    army_attack_factor = 0.15
+    army_defence_factor = 0.15
+    army_speed_factor = 0.15
+    political_power_factor = 0.15
+    attrition = -0.25
+  }
+
+  local_clergy = {
+      army_core_attack_factor = 0.15
+      army_core_defence_factor = 0.15
+   }
+
+  hardworking = {
+      industrial_capacity_dockyard = 0.05
+      industrial_capacity_factory = 0.05
+      research_speed_factor = 0.05
+      political_power_factor = 0.15
+   }
+
+  clique_leader = {
+      random = no
+      political_power_gain = -0.10
+      military_leader_cost_factor = -0.50
+      army_leader_start_level = 1
+      high_command_cost_factor = -0.25
+      political_advisor_cost_factor = -0.25
+   }
+
+  naval_cabinet = {
+      random = no
+      industrial_capacity_dockyard = 0.10
+      experience_gain_navy_factor = 0.15
+      experience_gain_navy = 0.05
+   }
+
+  Dairokutenmaohajun = {
 		random = no
 		political_power_factor = 0.10
 		stability_factor = -0.10
 		war_support_factor = 0.20
-		offensive_war_stability_factor = 0.25
-		generate_wargoal_tension = -0.50
-	    join_faction_tension = -0.50
-		mobilization_laws_cost_factor = -0.50
-		economy_cost_factor = -0.50
+		offensive_war_stability_factor = 0.20
+		generate_wargoal_tension = -0.20
+
 	     		
+		ai_will_do = {
+			factor = 1
+		}		
+	}
+  
+  
+	jushichijou_kenpou = {
+		random = no
+		political_power_factor = 0.10
+    industrial_capacity_factory = 0.10
+    industrial_capacity_dockyard = 0.10
+    
+    
 		ai_will_do = {
 			factor = 1
 		}		
@@ -46,7 +118,7 @@ leader_traits = {
 		justify_war_goal_time = 2
 		stability_factor = -0.05
 		political_power_factor = -0.05
-		army_attack_factor = 0.15
+		army_attack_factor = 0.10
 		special_forces_attack_factor = 0.15
 	     		
 		ai_will_do = {
@@ -69,7 +141,7 @@ leader_traits = {
 	
 	Boundlessness = {
 		random = no
-		political_power_gain = 0.85
+		political_power_gain = 0.10
 		army_speed_factor = 0.15
 	     		
 		ai_will_do = {
@@ -78,21 +150,19 @@ leader_traits = {
 	}
 	
 	
-	Suiten_Nikkou_Amaterasu_Yano_Shizu_Ishi = {
+	
+  Suiten_Nikkou_Amaterasu_Yano_Shizu_Ishi = {
 		random = no
 		army_org = 8
-		army_core_attack_factor = 0.15
-		army_core_defence_factor = 0.15
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
 		army_morale_factor = 0.10
-		experience_loss_factor = -0.15
-		production_speed_buildings_factor = 0.20
-		nuclear_production_factor = 0.30
-	     		
+		experience_loss_factor = -0.10
+    
 		ai_will_do = {
 			factor = 1
 		}		
 	}
-	
 	
 	asian_conspirator = {
 		random = no
@@ -120,12 +190,11 @@ leader_traits = {
 	company_of_justice = {
 		sprite = 13
 		random = no
-		communism_drift = 0.20
-		special_forces_cap = 0.05
-		war_support_weekly = 0.003
-		special_forces_attack_factor = 0.15
-		special_forces_defence_factor = 0.15
-		ai_focus_aggressive_factor = 0.35
+		stability_factor = 0.10
+    war_support_factor = 0.10
+    defensive_war_stability_factor = 0.25
+    
+    
 		ai_will_do = {
 			factor = 100
 		}		
@@ -149,13 +218,9 @@ leader_traits = {
 	unscrupulous_genius = {
 		sprite = 13
 		random = no
-		fascism_drift = 0.20
-		research_speed_factor = 0.10
-		justify_war_goal_time = -0.25
-		max_command_power = 50
-		subjects_autonomy_gain = -0.30
-		resistance_tick_auto = -1
-		nuclear_production_factor = 0.30
+		fascism_drift = 0.02
+		research_speed_factor = 0.05
+		justify_war_goal_time = -0.10
     
     operative_slot = 1
 		
@@ -424,15 +489,32 @@ leader_traits = {
 			factor = 500
 		}
 	}
+  
+  reform_pioneer_fascism = {
+		random = no
+    name = reform_pioneer
+		
+		fascism_drift = 0.05
+		
+		political_advisor_cost_factor = -0.20
+		trade_laws_cost_factor = -0.20
+		mobilization_laws_cost_factor = -0.20
+		economy_cost_factor = -0.20
+		
+		
+		ai_will_do = {
+			factor = 500
+		}
+	}
 	
 	red_shirt_demon = {
 		random = no
 		
-		army_attack_factor = 0.10
-		political_power_factor = 0.15
-		war_support_factor = 0.15
-		industrial_capacity_factory = 0.10
-		industrial_capacity_dockyard = 0.10
+		army_attack_factor = 0.05
+		political_power_factor = 0.10
+		war_support_factor = 0.05
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
 		
 
 		ai_will_do = {

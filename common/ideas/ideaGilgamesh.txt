@@ -1111,10 +1111,10 @@ ideas = {
 
 			picture = death_men
       
-      modifier = {
-        special_forces_min = 80
-        conscription = 0.02
-      }    
+      traits = {
+        ira_legion_of_dead
+      }
+      
     
     }
     

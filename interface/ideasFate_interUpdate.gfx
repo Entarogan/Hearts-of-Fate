@@ -376,4 +376,220 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/Enuma_Elish.dds"
 	}
   
+  spriteType = {
+    name = "GFX_idea_Asagami"
+    texturefile = "gfx/interface/ideas/Asagami.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_Chisso"
+    texturefile = "gfx/interface/ideas/Chisso.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_Eientei"
+    texturefile = "gfx/interface/ideas/Eientei.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_Fujyou"
+    texturefile = "gfx/interface/ideas/Fujyou.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_hinanawi"
+    texturefile = "gfx/interface/ideas/hinanawi.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_kappa"
+    texturefile = "gfx/interface/ideas/kappa.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_Kirisame"
+    texturefile = "gfx/interface/ideas/Kirisame.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_Konoji"
+    texturefile = "gfx/interface/ideas/Konoji.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_Kourindou"
+    texturefile = "gfx/interface/ideas/Kourindou.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_nagae"
+    texturefile = "gfx/interface/ideas/nagae.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_Oarai"
+    texturefile = "gfx/interface/ideas/Oarai.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_riken"
+    texturefile = "gfx/interface/ideas/riken.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_tengu"
+    texturefile = "gfx/interface/ideas/tengu.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_tohsaka"
+    texturefile = "gfx/interface/ideas/tohsaka.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_TypeMoon"
+    texturefile = "gfx/interface/ideas/TypeMoon.dds"
+  }
+  
+  
+  spriteType = {
+    name = "GFX_idea_hakurei_reimu"
+    texturefile = "gfx/interface/ideas/jap_hakurei_reimu.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_haruna"
+    texturefile = "gfx/interface/ideas/jap_haruna.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_hijiri_byakuren"
+    texturefile = "gfx/interface/ideas/jap_hijiri_byakuren.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_hinanawi_tenshi"
+    texturefile = "gfx/interface/ideas/jap_hinanawi_tenshi.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_ibaraki_kasen"
+    texturefile = "gfx/interface/ideas/jap_ibaraki_kasen.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_kaga"
+    texturefile = "gfx/interface/ideas/jap_kaga.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_kirisame_marisa"
+    texturefile = "gfx/interface/ideas/jap_kirisame_marisa.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_kochiya_sanae"
+    texturefile = "gfx/interface/ideas/jap_kochiya_sanae.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_komeiji_satori"
+    texturefile = "gfx/interface/ideas/jap_komeiji_satori.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_matara_okina"
+    texturefile = "gfx/interface/ideas/jap_matara_okina.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_mikasa"
+    texturefile = "gfx/interface/ideas/jap_mikasa.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_nagato"
+    texturefile = "gfx/interface/ideas/jap_nagato.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_shikieiki_yamaxanadu"
+    texturefile = "gfx/interface/ideas/jap_shikieiki_yamaxanadu.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_shoukaku"
+    texturefile = "gfx/interface/ideas/jap_shoukaku.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_yakumo_yukari"
+    texturefile = "gfx/interface/ideas/jap_yakumo_yukari.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_yasaka_kanako"
+    texturefile = "gfx/interface/ideas/jap_yasaka_kanako.dds"
+  }
+  spriteType = {
+    name = "gfx"
+    texturefile = "gfx/interface/ideas/gfx.py"
+  }
+  spriteType = {
+    name = "GFX_idea_Fujiwara_no_Mokou"
+    texturefile = "gfx/interface/ideas/jap_Fujiwara_no_Mokou.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_hakurei_reimu"
+    texturefile = "gfx/interface/ideas/jap_hakurei_reimu.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_haruna"
+    texturefile = "gfx/interface/ideas/jap_haruna.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_hijiri_byakuren"
+    texturefile = "gfx/interface/ideas/jap_hijiri_byakuren.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_hinanawi_tenshi"
+    texturefile = "gfx/interface/ideas/jap_hinanawi_tenshi.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_ibaraki_kasen"
+    texturefile = "gfx/interface/ideas/jap_ibaraki_kasen.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_kaga"
+    texturefile = "gfx/interface/ideas/jap_kaga.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_kirisame_marisa"
+    texturefile = "gfx/interface/ideas/jap_kirisame_marisa.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_kochiya_sanae"
+    texturefile = "gfx/interface/ideas/jap_kochiya_sanae.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_komeiji_satori"
+    texturefile = "gfx/interface/ideas/jap_komeiji_satori.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_matara_okina"
+    texturefile = "gfx/interface/ideas/jap_matara_okina.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_mikasa"
+    texturefile = "gfx/interface/ideas/jap_mikasa.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_nagae_iku"
+    texturefile = "gfx/interface/ideas/jap_nagae_iku.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_nagao_kagetora"
+    texturefile = "gfx/interface/ideas/jap_nagao_kagetora.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_nagato"
+    texturefile = "gfx/interface/ideas/jap_nagato.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_oda_nobunaga"
+    texturefile = "gfx/interface/ideas/jap_oda_nobunaga.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_shikieiki_yamaxanadu"
+    texturefile = "gfx/interface/ideas/jap_shikieiki_yamaxanadu.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_shoukaku"
+    texturefile = "gfx/interface/ideas/jap_shoukaku.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_yakumo_yukari"
+    texturefile = "gfx/interface/ideas/jap_yakumo_yukari.dds"
+  }
+  spriteType = {
+    name = "GFX_idea_yasaka_kanako"
+    texturefile = "gfx/interface/ideas/jap_yasaka_kanako.dds"
+  }
+  spriteType = {
+    name = "non"
+    texturefile = "gfx/interface/ideas/non.dds"
+  }
+
+  
 }

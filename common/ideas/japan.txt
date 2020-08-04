@@ -1,7 +1,878 @@
 ideas = {
 
 	country = {
+    
+    JAP_intelligence_network = {
+    # 日本情报网路（？
+      allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = JAP_intelligence_network
+			
+			modifier = {
+        intel_network_gain_factor = 0.15
+        intel_from_operatives_factor = 0.10
+        own_operative_detection_chance_factor = -0.10
+			}
+    }
+  
+    JAP_Russo_Japanese_co_prosperity = {
+    # 日俄共荣√
+      allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = JAP_Russo_Japanese_co_prosperity
+			
+			modifier = {
+        army_org_factor = 0.10
+        winter_attrition_factor = -0.20
+        supply_consumption_factor = -0.20
+			}
+    }
+  
+    JAP_showdown = {
+    # 向军部摊牌o ？
+      allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_secret_police
+			
+			modifier = {
+				army_core_attack_factor = 0.10
+        army_core_defence_factor = 0.10
+        army_morale_factor = 0.15
+        army_org = 0.15
+			}
+    }
+  
+    JAP_supportive_rural_economics = {
+    # 支持乡村经济o
+      allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_agrarian_reform
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+        production_speed_infrastructure_factor = 0.10
+        stability_factor = 0.05
+			}
+    }
+  
+    JAP_zaibatsus_bureaucrat_2 = {
+    # 官僚控制财阀o
+			allowed = {
+				always = no
+			}
+      
+      name = JAP_zaibatsus_bureaucrat
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_zaibatsu_control
+			
+			modifier = {
+				political_power_cost = 0.5
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				production_speed_dockyard_factor = 0.10
+        production_factory_start_efficiency_factor = 0.15
+        production_factory_efficiency_gain_factor = 0.20
+        line_change_production_efficiency_factor = 0.15
+        consumer_goods_factor = -0.025
+			}
+		}
+  
+    JAP_zaibatsus_bureaucrat_1 = {
+    # 官僚控制财阀o
+			allowed = {
+				always = no
+			}
+      
+      name = JAP_zaibatsus_bureaucrat
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_zaibatsu_control
+			
+			modifier = {
+				political_power_cost = 0.25
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				production_speed_dockyard_factor = 0.10
+        production_factory_start_efficiency_factor = 0.1
+        production_factory_efficiency_gain_factor = 0.1
+        line_change_production_efficiency_factor = 0.1
+			}
+		}
+  
+    JAP_long_term_contract = {
+    # 长期合同√
+      allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+      
+      available = {
+        OR = {
+          has_idea = JAP_zaibatsus
+          has_idea = JAP_zaibatsus_empowered
+          has_idea = JAP_zaibatsus_empowered_2
+        }
+        
+      }
+        
+			removal_cost = -1
+
+			picture = JAP_long_term_contract
+			
+			modifier = {
+        production_factory_max_efficiency_factor = 0.20
+        production_factory_efficiency_gain_factor = 0.05
+        line_change_production_efficiency_factor = -0.10
+			}
+    }
+  
+    JAP_zaibatsus_bureaucrat = {
+    # 官僚控制财阀o
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_zaibatsu_control
+			
+			modifier = {
+				political_power_cost = 0.5
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				production_speed_dockyard_factor = 0.10
+        production_factory_start_efficiency_factor = 0.1
+        production_factory_efficiency_gain_factor = 0.1
+        line_change_production_efficiency_factor = 0.1
+			}
+		}
+
+    
+    JAP_military_bureaucrat = {
+    # 军队官僚化0
+      allowed = {
+				always = no
+			}
+      
+      picture = MEX_callistas
+
+			allowed_civil_war = {
+				
+			}
+      
+      available = {
+
+      }
+      
+			removal_cost = -1
 	
+
+			modifier = {
+				army_org_factor = -0.10
+        experience_gain_army_factor = 0.15
+        land_reinforce_rate = 0.15
+        max_planning = 0.20
+        planning_speed = -0.20
+			}
+    
+    }
+  
+    JAP_expand_departments = {
+    # 扩展政府部门o
+      allowed = {
+				always = no
+			}
+      
+      picture = generic_political_support
+
+			allowed_civil_war = {
+				
+			}
+      
+      available = {
+
+      }
+      
+			removal_cost = -1
+	
+
+			modifier = {
+				political_power_factor = 0.10
+        conscription_factor = 0.20
+			}
+    
+    }
+  
+    JAP_expenditure_increase = {
+    # 开支增加√
+      allowed = {
+				always = no
+			}
+      
+      picture = JAP_expenditure_increase
+
+			allowed_civil_war = {
+				
+			}
+      
+      available = {
+
+      }
+      
+			removal_cost = -1
+	
+
+			modifier = {
+				political_power_gain = -0.25
+			}
+    }
+  
+    JAP_private_advisory_institute = {
+    # 私有顾问机构 o
+      allowed = {
+				always = no
+			}
+      
+      picture = received_attache
+
+			allowed_civil_war = {
+				
+			}
+      
+      available = {
+        has_idea = JAP_zaibatsus_empowered
+      }
+      
+			removal_cost = -1
+	
+
+			modifier = {
+				max_planning = 0.20
+        political_power_factor = 0.10
+        improve_relations_maintain_cost_factor = -0.20
+			}
+    }
+  
+    JAP_colonies_authorization = {
+    # 殖民地特许 o
+      allowed = {
+				always = no
+			}
+      
+      picture = secure_co_prosper
+
+			allowed_civil_war = {
+				
+			}
+      
+      available = {
+        OR = {
+          has_idea = JAP_zaibatsus
+          has_idea = JAP_zaibatsus_empowered
+          has_idea = JAP_zaibatsus_empowered_2
+        }
+      }
+      
+			removal_cost = -1
+	
+
+			modifier = {
+				non_core_manpower = 0.025
+        local_resources_factor = 0.20
+			}
+    
+    }
+  
+    JAP_japanese_air_power_theory = {
+    # 日本空军学 √
+      allowed = {
+				always = no
+			}
+      
+      picture = JAP_japanese_air_power_theory
+
+			allowed_civil_war = {
+				
+			}
+      
+      available = {
+
+      }
+      
+			removal_cost = -1
+	
+
+			modifier = {
+				experience_gain_air_factor = 0.15
+        air_ace_generation_chance_factor = 0.10
+			}
+    }
+  
+    JAP_japanese_economic_reorganization = {
+    # 日本经济重组计划 o
+      allowed = {
+				always = no
+			}
+      
+      picture = state_shintoism
+
+			allowed_civil_war = {
+				
+			}
+      
+      available = {
+
+      }
+      
+			removal_cost = -1
+	
+
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.20
+        equipment_conversion_speed = 0.25
+        production_factory_efficiency_gain_factor = 0.15
+        local_resources_factor = 0.20
+        line_change_production_efficiency_factor = 0.20
+			}
+    }
+  
+    JAP_showa_research = {
+    # 昭和研究会 0
+      allowed = {
+				always = no
+			}
+      
+      picture = generic_army_war_college
+
+			allowed_civil_war = {
+				
+			}
+      
+      available = {
+
+      }
+      
+			removal_cost = -1
+	
+
+			modifier = {
+				economy_cost_factor = -0.50
+        trade_laws_cost_factor = -0.50
+        political_power_factor = 0.10
+			}
+    }
+  
+    JAP_Bank_of_Japan_Act = {
+    # 日本银行法 √
+      allowed = {
+				always = no
+			}
+      
+      picture = JAP_Bank_of_Japan_Act
+
+			allowed_civil_war = {
+				
+			}
+      
+      available = {
+
+      }
+      
+			removal_cost = -1
+	
+
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+      
+    }
+  
+    JAP_japanese_shipbuilding = {
+    # 日本国立重樱造船公司√
+      allowed = {
+				always = no
+			}
+      
+      picture = JAP_japanese_shipbuilding
+
+			allowed_civil_war = {
+				
+			}
+      
+      available = {
+
+      }
+      
+			removal_cost = -1
+	
+
+			modifier = {
+				industrial_capacity_dockyard = 0.10
+			}
+      
+      equipment_bonus = {
+				ship_hull_cruiser = {
+					build_cost_ic = -0.1 instant = yes
+          reliability = 0.10
+          naval_speed = 0.10
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.1 instant = yes
+          reliability = 0.10
+          naval_speed = 0.10
+				}
+        ship_hull_light = {
+          build_cost_ic = -0.1 instant = yes
+          reliability = 0.10
+          naval_speed = 0.10
+        }
+        ship_hull_carrier = {
+          build_cost_ic = -0.1 instant = yes
+          reliability = 0.10
+          naval_speed = 0.10
+        }
+			}
+    
+    }
+  
+    JAP_expand_Chinjufu = {
+    # 扩建海军镇守府 o
+      allowed = {
+				always = no
+			}
+      
+      picture = generic_the_london_naval_treaty
+
+			allowed_civil_war = {
+				
+			}
+      
+      available = {
+
+      }
+      
+			removal_cost = -1
+	
+
+			modifier = {
+				naval_coordination = 0.15
+        sortie_efficiency = 0.10
+        naval_hit_chance = 0.15
+        experience_gain_navy = 0.05
+			}
+    }
+  
+    JAP_industrial_automation = {
+    # 工业自动化 o
+      allowed = {
+				always = no
+			}
+      
+      picture = man_five_year_plan_industry
+
+			allowed_civil_war = {
+				
+			}
+      
+      available = {
+
+      }
+      
+			removal_cost = -1
+	
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.20
+        production_factory_efficiency_gain_factor = 0.20
+        production_factory_start_efficiency_factor = 0.15
+        line_change_production_efficiency_factor= 0.10
+			}
+    }
+  
+    JAp_bulwark_of_the_resolution = {
+    # 日本人民主义革命堡垒 √
+      allowed = {
+				always = no
+			}
+      
+      picture = JAp_bulwark_of_the_resolution
+
+			allowed_civil_war = {
+				
+			}
+      
+      available = {
+       has_government = fascism
+       is_subject = no
+      }
+      
+			removal_cost = -1
+	
+
+			modifier = {
+				army_core_attack_factor = 0.10
+        army_core_defence_factor = 0.10
+        intelligence_agency_defense = 0.20
+        mobilization_speed = 0.10
+			}
+    
+    }
+    
+    JAP_mind_exercise = {
+    # 精神训练√
+      allowed = {
+				always = no
+			}
+      
+      picture = JAP_mind_exercise
+
+			allowed_civil_war = {
+				
+			}
+      
+      available = {
+       has_government = fascism
+       is_subject = no
+      }
+      
+			removal_cost = -1
+	
+
+			modifier = {
+				conscription_factor = 0.20
+        training_time_factor = -0.15
+        resistance_damage_to_garrison = -0.15
+        army_morale_factor = 0.10
+			}
+    }
+  
+    JAP_rebuild_Japan = {
+    # 改造日本 √
+      allowed = {
+				always = no
+			}
+      
+      picture = JAP_rebuild_Japan
+
+			allowed_civil_war = {
+				
+			}
+      
+      available = {
+       has_government = fascism
+       is_subject = no
+      }
+      
+			removal_cost = -1
+	
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+    }
+  
+    JAP_japanese_national_socialism = {
+    # 日本国家社会主义 √
+      allowed = {
+				always = no
+			}
+      
+      picture = JAP_japanese_national_socialism
+
+			allowed_civil_war = {
+				
+			}
+      
+      available = {
+       has_government = fascism
+       is_subject = no
+      }
+      
+			removal_cost = -1
+	
+
+			modifier = {
+				fascism_drift = 0.05
+        industrial_capacity_factory = 0.10
+        global_building_slots_factor = 0.25
+        production_speed_industrial_complex_factor = 0.10
+        production_speed_arms_factory_factor = 0.10
+        production_speed_dockyard_factor = 0.10
+			}
+    }
+  
+    JAP_purge_bureaucrat = {
+    # 清洗官僚 o
+      allowed = {
+				always = no
+			}
+      
+      picture = generic_purge
+
+			allowed_civil_war = {
+				
+			}
+      
+			removal_cost = -1
+	
+
+			modifier = {
+				political_power_gain = 0.30
+			}
+    }
+  
+    JAP_political_instability = {
+    # 政治动荡 0
+      allowed = {
+				always = no
+			}
+      
+      picture = chi_war_of_resistance
+
+			allowed_civil_war = {
+				
+			}
+      
+			removal_cost = -1
+	
+
+			modifier = {
+				stability_factor = -0.15
+        political_power_factor = -0.10
+			}
+    
+    }
+    
+  
+    state_shintoism_kodoha = {
+    # 国立神道（皇道派 o
+			allowed = {
+				always = no
+			}
+      
+      picture = state_shintoism
+
+			allowed_civil_war = {
+				
+			}
+      
+      available = {
+        is_subject = no
+      }
+			
+			removal_cost = -1
+	
+
+			modifier = {
+				industry_air_damage_factor = -0.1
+				army_morale_factor = 0.15
+        offensive_war_stability_factor = 0.20
+        defensive_war_stability_factor = 0.20
+        stability_factor = 0.05
+        compliance_gain = 0.20
+			}
+		}
+  
+    JAP_militarism_shoukutu = {
+    # 军国主义（圣德维新 o
+			name = JAP_militarism
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_militarism_showa
+			
+			modifier = {
+				war_support_factor = 0.15
+				justify_war_goal_time = -0.20
+				production_speed_arms_factory_factor = 0.1
+        ai_focus_aggressive_factor = 0.40
+        army_org = 12
+			}
+      
+      rules = {
+        can_force_government = yes
+        can_puppet = yes
+      }
+		}
+  
+    JAP_kokutai_toseiha = {
+    # 统治之国体 0
+      allowed = {
+				always = no
+			}
+      picture = generic_intel_bonus
+      
+      modifier = {
+        stability_factor = 0.10
+        war_support_factor = 0.10
+        foreign_subversive_activites = -0.80
+        intelligence_agency_defense = 2
+        compliance_gain = 0.30
+        max_planning = 0.30
+        planning_speed = 0.30
+      }
+    }
+  
+    JAP_take_over_the_government = {
+    # 接管政府√
+      allowed = {
+				always = no
+			}
+      picture = JAP_take_over_the_government
+      
+      modifier = {
+        political_power_gain = -0.2
+        political_advisor_cost_factor = -0.25
+        trade_laws_cost_factor = -0.25
+        mobilization_laws_cost_factor = -0.25
+        economy_cost_factor = -0.25
+        high_command_cost_factor = -0.25
+        air_chief_cost_factor = -0.25
+        army_chief_cost_factor = -0.25
+        navy_chief_cost_factor = -0.25
+        neutrality_drift = 0.10
+      }
+    }
+  
+    JAP_total_war = {
+    # 总体战 0
+      allowed = {
+				always = no
+			}
+      picture = CZE_planning_bonus
+      
+      modifier = {
+        conversion_cost_civ_to_mil_factor = -0.40
+        production_speed_arms_factory_factor = 0.15
+        consumer_goods_factor = -0.05
+      }
+    }
+  
+    JAP_Japanese_patriot_industry_association = {
+    # 大日本产业报国会 √
+      allowed = {
+				always = no
+			}
+      picture = JAP_Japanese_patriot_industry_association
+      
+      modifier = {
+        consumer_goods_factor = -0.025
+        stability_factor = 0.05
+        industrial_capacity_factory = 0.10
+        industrial_capacity_dockyard = 0.10
+      }
+    }
+    
+    
+    JAP_Electricity_Nationalization = {
+    # 电力国有化 √
+      allowed = {
+				always = no
+			}
+      picture = JAP_Electricity_Nationalization
+      
+      modifier = {
+        production_speed_infrastructure_factor = 0.10
+      }
+    }
+  
+    JAP_rectify_the_army = {
+    # 整肃军队 √
+      allowed = {
+				always = no
+			}
+      picture = JAP_rectify_the_army
+      modifier = {
+        political_power_gain = -0.1
+        stability_weekly = 0.002
+        army_org_factor = -0.25
+        experience_gain_army = 0.10
+      }
+    }
+	
+    JAP_blackbox_operation = {
+    # 暗箱操作√
+      allowed = {
+				always = no
+			}
+		picture = JAP_blackbox_operation
+			allowed_civil_war = {
+				NOT = {
+					has_government = democratic
+          has_government = communism
+				}
+			}
+      
+      available = {
+        NOT = { has_government = fascism }
+        is_subject = no
+      }
+      
+      modifier = {
+        neutrality_drift = 0.05
+        stability_factor = 0.07
+        political_power_gain = -0.1
+      }
+    
+    }
 	
 		state_shintoism = {
 			allowed = {
@@ -9,9 +880,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				NOT = {
-					has_government = democratic
-				}
+				
 			}
 			
 			removal_cost = -1
@@ -245,6 +1114,33 @@ ideas = {
 				consumer_goods_factor = 0.05
 			}
 		}
+    
+    JAP_zaibatsus_empowered_2 = {
+
+			allowed = {
+				always = no
+			}
+      
+      name = JAP_zaibatsus_empowered
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = jap_zaibatsu_ally
+			
+			modifier = {
+				political_power_cost = 0.5
+				trade_laws_cost_factor = 0.25
+				economy_cost_factor = 0.25
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				production_speed_dockyard_factor = 0.15
+				consumer_goods_factor = 0.05
+			}
+		}
 
 		JAP_zaibatsus_empowered = {
 
@@ -261,7 +1157,7 @@ ideas = {
 			picture = jap_zaibatsu_ally
 			
 			modifier = {
-				political_power_cost = 0.5
+				political_power_cost = 0.35
 				trade_laws_cost_factor = 0.25
 				economy_cost_factor = 0.25
 				production_speed_industrial_complex_factor = 0.10
@@ -329,7 +1225,14 @@ ideas = {
 				justify_war_goal_time = -0.2
 				research_speed_factor = -0.05
 				production_speed_industrial_complex_factor = -0.1
+        ai_focus_aggressive_factor = 0.20
+        
 			}
+      
+      rules = {
+        can_force_government = yes
+        can_puppet = yes
+      }
 		}
 
 		JAP_militarism_shogunate = {
@@ -379,7 +1282,14 @@ ideas = {
 				mobilization_laws_cost_factor = -0.15
 				justify_war_goal_time = -0.1
 				production_speed_industrial_complex_factor = 0.1
+        ai_focus_aggressive_factor = 0.20
+        army_org = 12
 			}
+      
+      rules = {
+        can_force_government = yes
+        can_puppet = yes
+      }
 		}
 
 		MAN_militarism = {
@@ -676,8 +1586,8 @@ ideas = {
 			picture = jap_supremacy_of_technology
 			
 			research_bonus = {
-				infantry_weapons = 0.05
-				armor = 0.05
+				infantry_weapons = 0.10
+				armor = 0.10
 			}
 		}
 
@@ -715,7 +1625,7 @@ ideas = {
 			picture = generic_naval_manufacturer_1
 			
 			modifier = {
-				special_forces_cap = 0.02
+				special_forces_cap = 0.10
 			}
 		}
 
@@ -1002,79 +1912,7 @@ ideas = {
 	
 	
 	political_advisor = {	
-		Emiya_Kiritsugu = {
-			
-			available = {
-				has_completed_focus = JAP_the_unthinkable_option
-				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}
-			}
-			allowed = {
-				original_tag = "JAP"
-			}
-			
-			picture = kiritsugu
-			
-			traits = { company_of_justice }
-			
-			ai_will_do = {
-				factor = 100
-			}
-		}	
-			
-		aozaki_aoko = {
-			
-			available = {
-				has_completed_focus = JAP_the_second_renewal
-				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}
-			}
-			
-			allowed = {
-				original_tag = "JAP"
-			}
-			
-			picture = aozaki_aoko
-			
-			research_bonus = {
-				rocketry = 0.20
-				cat_superior_firepower = 0.20
-			}
-			
-			traits = { fighter_for_freedom }
-			
-			ai_will_do = {
-				factor = 100
-			}
-		}
-		
-		sajyo_manaka = {
-			
-			
-			allowed = {
-				original_tag = "JAP"
-			}
-			
-			picture = sajyo_manaka
-			
-			available = {
-				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}
-				has_completed_focus = JAP_seize_the_power
-			}
-			
-			traits = { unscrupulous_genius }
-			
-			ai_will_do = {
-				factor = 100
-			}
-		}
+  
 
 		kokutou_mikiya = {
 			
@@ -1517,7 +2355,7 @@ ideas = {
 			}
 
 			available = {
-				has_completed_focus = JAP_supremacy_of_the_battlefleet
+        has_completed_focus = JAP_Sasebo_Dockyard
 			}
 
 			cost = 75
@@ -1535,6 +2373,7 @@ ideas = {
 			allowed = {
 				original_tag = JAP
 			}
+     
 			
 			research_bonus = {
 				naval_equipment = 0.10
@@ -1555,7 +2394,7 @@ ideas = {
 				
 			research_bonus = {
 				naval_equipment = 0.10
-			}
+			}      
 			
 			traits = { convoy_escort_naval_manufacturer } #destroyer R&D
 
@@ -1569,6 +2408,10 @@ ideas = {
 			allowed = {
 				original_tag = JAP
 			}
+      
+      available = {
+        has_completed_focus = JAP_Sasebo_Dockyard
+      }
 			
 			research_bonus = {
 				naval_equipment = 0.10
@@ -1580,153 +2423,278 @@ ideas = {
 				
 			}
 		}	
+    
+    kappa_naval_arsenal = {
+      allowed = {
+				original_tag = JAP
+			}
+      
+      available = {
+        has_completed_focus = JAP_Kappa
+        NOT = { has_completed_focus = JAP_challenge_the_zaibatsus }
+        NOT = { has_completed_focus = JAP_dissolute_the_zaibatsus }
+      }
+      
+      picture = kappa
+			
+			research_bonus = {
+        naval_minesweeping = 0.10
+				naval_minesweeping = 0.10
+        tp_tech = 0.20       
+			}
+			
+			traits = { experimental_naval_arsenal  } 
+			
+			equipment_bonus = {
+				
+			}
+    }
 	}
 	
 	aircraft_manufacturer = {
 		
 		designer = yes
 		
-		mitsubishi = {
+		tengu = {
 						
 			allowed = {
 				original_tag = JAP		
 			}
 			
 			available = {
-				has_completed_focus = JAP_agility_focus
+				has_completed_focus = JAP_tengu_focus
 			}
 			
 			research_bonus = {
 				air_equipment = 0.10
 			}
 			
-			traits = { light_aircraft_manufacturer_2 }
+			traits = { advanced_fighter_concern }
 
 			modifier = {
 
 			}
 		}
 
-		aichi = {
+		hinanawi = {
 			
 			allowed = {
 				original_tag = JAP
 			}
-
-			available = {
-				has_completed_focus = JAP_range_focus
+      
+      available = {
+				has_completed_focus = JAP_hinanawi_focus
+        NOT = { has_country_flag = jap_hinanawi_tenshi_disabled }
 			}
 						
 			research_bonus = {
 				air_equipment = 0.10
 			}
 			
-			traits = { fuel_efficient_aircraft_manufacturer }
+			traits = { advanced_bomber_concern }
 		}
 		
-		nakajima = {
-						
-			allowed = {
-				original_tag = JAP
-			}
-			
-			research_bonus = {
-				air_equipment = 0.10
-			}
-			
-			traits = { heavy_aircraft_manufacturer }
-
-		}
-		
-		yokosuka = {
-						
-			allowed = {
-				original_tag = JAP
-			}
-						
-			research_bonus = {
-				air_equipment = 0.10
-			}
-			
-			traits = { naval_aircraft_manufacturer }
-		}
 	}
 	
 	
 	industrial_concern = {
 	
-		kawasaki = {
+		tm_industry = {
 			
 			allowed = {
 				original_tag = JAP
 			}
+      
+      available = { has_completed_focus = JAP_tm_industrial }
+      
+      picture = TypeMoon
 			
 			research_bonus = {
 				industry = 0.10
 			}
 			
-			traits = { industrial_concern }
+			traits = { national_industrial_concern }
 		}
 		
 		
-		sumitomo = {
+		tohsaka_bank = {
 						
 			allowed = {
 				original_tag = JAP
 			}
+      
+      available = { 
+        NOT = { has_completed_focus = JAP_challenge_the_zaibatsus  }
+        NOT = { has_country_flag = jap_tohsaka_bankrupt }
+      }
+      
+      picture = tohsaka
 						
 			research_bonus = {
 				electronics = 0.10
 			}
 			
-			traits = { electronics_concern }
+			traits = { large_scale_bank }
 		}
 
-		JAP_idemitsu_kosan = {
-						
-			picture = generic_industrial_concern_2
+		riken = {
 			
 			allowed = {
 				original_tag = JAP
 			}
+      picture = riken
 						
 			research_bonus = {
-				industry = 0.05
-				synth_resources = 0.1
+				nuclear = 0.15
+			}
+      
+      available = { 
+        NOT = { has_completed_focus = JAP_challenge_the_zaibatsus  }
+        NOT = { has_completed_focus = JAP_dissolute_the_zaibatsus }
+        has_completed_focus = JAP_Riken
+      }
+			
+			traits = { high_energy_research }
+		}
+    
+
+    asagami = {
+			
+			allowed = {
+				original_tag = JAP
+			}
+      picture = Asagami
+						
+			research_bonus = {
+				synth_resources = 0.15
+			}
+      
+      available = { 
+        has_completed_focus = JAP_chemistry_first
+        NOT = { has_completed_focus = JAP_challenge_the_zaibatsus  }
+        NOT = { has_completed_focus = JAP_dissolute_the_zaibatsus }
+      }
+			
+			traits = { advanced_chemical_concern }
+		}
+    
+    chisso = {
+			
+			allowed = {
+				original_tag = JAP
+			}
+      picture = Chisso
+      
+      available = {
+        has_completed_focus = JAP_chemistry_first
+      }
+						
+			research_bonus = {
+				synth_resources = 0.15
 			}
 			
-			traits = { refinery_concern }
+			traits = { commodity_chemical_concern }
 		}
+    
+    fujyou = {
+			
+			allowed = {
+				original_tag = JAP
+			}
+      picture = Fujyou
+						
+			research_bonus = {
+				construction_tech = 0.15
+			}
+      
+      available = { 
+        has_completed_focus = JAP_public_project
+        NOT = { has_completed_focus = JAP_challenge_the_zaibatsus  }
+        NOT = { has_completed_focus = JAP_dissolute_the_zaibatsus }
+      }
+			
+			traits = { advanced_building_concern }
+		}
+    
+    nagae = {
+			
+			allowed = {
+				original_tag = JAP
+			}
+      picture = nagae
+						
+			research_bonus = {
+				electronics = 0.15
+        radar_tech = 0.50
+			}
+      
+      available = { 
+        has_completed_focus = JAP_Nagae_Electronic
+      }
+			
+			traits = { advanced_sensor_production }
+		}
+    
+    
+    
 	}
 	
 	materiel_manufacturer = {
 			
 		designer = yes
 		
-		tokyo_arsenal = {
+		Konoji = {
 			
 			allowed = {
 				original_tag = JAP
 			}
 			
+      available = { has_completed_focus = JAP_supremacy_of_technology }
+      
 			research_bonus = {
 				infantry_weapons = 0.10
 			}
 			
-			traits = { infantry_equipment_manufacturer }
+			traits = { advanced_army_production }
 		}
+    
+    kourindou = {
+			
+			allowed = {
+				original_tag = JAP
+			}
+      picture = Kourindou
+						
+			research_bonus = {
+				support_tech = 0.10
+        electronics = 0.10
+			}
+      
+      available = { 
+        NOT = { has_completed_focus = JAP_challenge_the_zaibatsus  }
+        NOT = { has_completed_focus = JAP_dissolute_the_zaibatsus }
+        has_completed_focus = JAP_supremacy_of_technology
+      }
+			
+			traits = { special_equipment_concern }
+		}
+   
 		
-		nissan = {
+		Kirisame = {
 						
 			allowed = {
 				original_tag = JAP
 			}
+      
+      visible = { has_completed_focus = JAP_dissolute_the_zaibatsus }
+      
+      available = { has_completed_focus = JAP_dissolute_the_zaibatsus }
 						
 			research_bonus = {
-				motorized_equipment = 0.10
+        artillery = 0.15
 			}
 			
-			traits = { motorized_equipment_manufacturer }
+			traits = { mobile_artilary_production }
 		}
 	}
 	
@@ -1735,17 +2703,40 @@ ideas = {
 	
 		designer = yes
 	
-		osaka_army_arsenal = {
+		Eientei = {
 			
 			allowed = {
 				original_tag = JAP
 			}
+      
+      available = { 
+        NOT = { has_completed_focus = JAP_challenge_the_zaibatsus  }
+        NOT = { has_completed_focus = JAP_dissolute_the_zaibatsus }
+        has_completed_focus = JAP_armored_divisions
+      }
 				
 			research_bonus = {
 				armor = 0.10
 			}
 			
-			traits = { tank_manufacturer }
+			traits = { experimental_armor_concern }
+		}	
+    
+    Oarai = {
+			
+			allowed = {
+				original_tag = JAP
+			}
+      
+      available = { 
+        has_completed_focus = JAP_armored_divisions
+      }
+				
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { high_quality_armor_concern }
 		}	
 	}
 	
@@ -1761,6 +2752,7 @@ ideas = {
 			
 			available = {
 				has_completed_focus = JAP_fuyuki_special_service
+        has_idea = idea_jap_liberals
 			}
 			
 			cost = 150
@@ -1780,12 +2772,13 @@ ideas = {
 			}
 			available = {
 				has_completed_focus = JAP_mifune_special_service
+        has_idea = idea_jap_conservatives
 			}
 			
 			picture = aozaki_touko
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.05
 			}
 			
 			traits = { doll_controller }
@@ -1800,7 +2793,7 @@ ideas = {
 				original_tag = JAP
 			}
 			
-			cost = 250
+			cost = 150
 				
 			picture = fujimaru_ritsuka
 				
@@ -1821,7 +2814,7 @@ ideas = {
 			
 			available = {
 				has_completed_focus = JAP_back_alley_alliance
-				is_in_faction_with = ENG
+				has_idea = uk_cooperate_with_japan
 				ENG = { controls_state = 446 }
 			}
 			

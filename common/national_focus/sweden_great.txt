@@ -4121,6 +4121,7 @@ focus_tree = {
 				bonus = 1.0
 				uses = 4
                 category = cat_superior_firepower
+                category = cat_mobile_warfare
 			}
             add_ideas = { swe_no_more_sacrifice }
         }
@@ -4153,6 +4154,7 @@ focus_tree = {
 				bonus = 1.0
 				uses = 4
                 category = cat_grand_battle_plan
+                category = cat_mobile_warfare
 			}
             add_ideas = { swe_general_staff_hq }
         }

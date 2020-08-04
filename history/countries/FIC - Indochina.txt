@@ -95,6 +95,23 @@ create_country_leader = {
 	expire = "1936.9.15"
 	ideology = authoritarian_democracy
 }
+
+create_field_marshal = {
+	name = "Philippe Petain"  # 
+	picture = "Portrait_France_PhilippePetain1.tga"
+	traits = { 
+		old_guard
+		organisational_leader
+		inspirational_leader
+	}
+	skill = 6
+	attack_skill = 4
+	defense_skill = 6
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+
 create_navy_leader = {
 	name = "Duc de Richelieu"
 	picture = "Portrait_Duc_de_Richelieu.dds"

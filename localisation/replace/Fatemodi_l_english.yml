@@ -211,3 +211,62 @@
  
  CAN_UK_fascism:0 "State of Canada"
  CAN_UK_fascism_DEF:0 "State of Canada"
+ 
+ YUN_neutrality:0 "South West China Sector"
+ YUN_neutrality_DEF:0 "South West China Sector"
+ 
+ YUN_democratic:0 "South West China Autonomic Committee"
+ YUN_democratic_DEF:0 "South West China Autonomic Committee"
+ 
+ YUN_communism:0 "South West China Commune"
+ YUN_communism_DEF:0 "South West China Commune"
+ 
+ YUN_fascism:0 "Free State of South West"
+ YUN_fascism_DEF:0 "Free State of South West"
+ 
+ GXC_democratic:0 "New Guangxi Clique"
+ GXC_democratic_DEF:0 "New Guangxi Clique"
+ 
+ GDC_neutrality:0 "Guangdong Clique"
+ GDC_neutrality_DEF:0 "Guangdong Clique"
+ 
+ GDC_democratic:0 "Guangdong Province"
+ GDC_democratic_DEF:0 "Guangdong Province"
+ 
+ GDC_communism:0 "Guangdong Commune"
+ GDC_communism_DEF:0 "Guangdong Commune"
+ 
+ GDC_fascism:0 "Free Empire of Guangdong"
+ GDC_fascism_DEF:0 "Free Empire of Guangdong"
+ 
+ PRC_neutrality:0 "Beiyang China"
+ PRC_neutrality_DEF:0 "Beiyang China"
+ 
+ PRC_democratic:0 "Beiyang China"
+ PRC_democratic_DEF:0 "Beiyang China"
+ 
+ PRC_fascism:0 "Reorganized Beiyang China"
+ PRC_fascism_DEF:0 "Reorganized Beiyang China"
+ 
+ CHI_neutrality:0 "Nationalist China"
+ CHI_neutrality_DEF:0 "Nationalist China"
+ 
+ CHI_democratic:0 "Nationalist China"
+ CHI_democratic_DEF:0 "Nationalist China"
+ 
+ XSM_neutrality:0 "North West United Provinces"
+ XSM_neutrality_DEF:0 "North West United Provinces"
+ 
+ XSM_democratic:0 "North West United Provinces"
+ XSM_democratic_DEF:0 "North West United Provinces"
+ 
+ XSM_communism:0 "North West United Commune"
+ XSM_communism_DEF:0 "North West United Commune"
+ 
+ XSM_fascism:0 "Free State of North West"
+ XSM_fascism_DEF:0 "Free State of North West"
+ 
+ SIK_neutrality:0 "Sinkiang Government"
+ SIK_neutrality_DEF:0 "Sinkiang Government"
+ 
+ 

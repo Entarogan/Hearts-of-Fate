@@ -1039,6 +1039,167 @@ spriteTypes = {
     texturefile = "gfx/interface/goals/umc_goal_strike_south.dds"
   }
   
- 
+  
+  spriteType = {
+    name = "GFX_GFX_CHI_Japanese_Computers"
+    texturefile = "gfx/interface/goals/GFX_CHI_Japanese_Computers.dds"
+  }
+  spriteType = {
+    name = "GFX_GFX_GER_CN_invite_japan"
+    texturefile = "gfx/interface/goals/GFX_GER_CN_invite_japan.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_an_integrated_economy"
+    texturefile = "gfx/interface/goals/JAP_an_integrated_economy.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_An_International_New_Deal"
+    texturefile = "gfx/interface/goals/JAP_An_International_New_Deal.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_A_New_Approach_to_Appeasement"
+    texturefile = "gfx/interface/goals/JAP_A_New_Approach_to_Appeasement.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_a_streamlined_economy"
+    texturefile = "gfx/interface/goals/JAP_a_streamlined_economy.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_A_Voice_in_General_Headquarters"
+    texturefile = "gfx/interface/goals/JAP_A_Voice_in_General_Headquarters.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Baptism_by_Fire"
+    texturefile = "gfx/interface/goals/JAP_Baptism_by_Fire.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Branching_the_Lines"
+    texturefile = "gfx/interface/goals/JAP_Branching_the_Lines.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Consumerize_the_Sphere_economy"
+    texturefile = "gfx/interface/goals/JAP_Consumerize_the_Sphere_economy.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_DaiNihonSeijikai_pinkishred_silver"
+    texturefile = "gfx/interface/goals/JAP_DaiNihonSeijikai_pinkishred_silver.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_DaiNihonSeijikai_red_white_gold"
+    texturefile = "gfx/interface/goals/JAP_DaiNihonSeijikai_red_white_gold.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Dai_Nihon_Keizai_Kenkyukai"
+    texturefile = "gfx/interface/goals/JAP_Dai_Nihon_Keizai_Kenkyukai.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Deciding_Our_Policy"
+    texturefile = "gfx/interface/goals/JAP_Deciding_Our_Policy.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Denounce_the_Reformists"
+    texturefile = "gfx/interface/goals/JAP_Denounce_the_Reformists.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_develop_home_islands"
+    texturefile = "gfx/interface/goals/JAP_develop_home_islands.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Enforcing_the_kokutai"
+    texturefile = "gfx/interface/goals/JAP_Enforcing_the_kokutai.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Holding_the_Diet_Hostage"
+    texturefile = "gfx/interface/goals/JAP_Holding_the_Diet_Hostage.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Independants_kept_in_their_place"
+    texturefile = "gfx/interface/goals/JAP_Independants_kept_in_their_place.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Kokka_Kyocho_Ho"
+    texturefile = "gfx/interface/goals/JAP_Kokka_Kyocho_Ho.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Maintain_our_Kokutai"
+    texturefile = "gfx/interface/goals/JAP_Maintain_our_Kokutai.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Make_the_Most_of_It_2"
+    texturefile = "gfx/interface/goals/JAP_Make_the_Most_of_It_2.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_national_diet"
+    texturefile = "gfx/interface/goals/JAP_national_diet.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Never_Been_Better"
+    texturefile = "gfx/interface/goals/JAP_Never_Been_Better.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_New_Age_Technology"
+    texturefile = "gfx/interface/goals/JAP_New_Age_Technology.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_new_showa_warfare"
+    texturefile = "gfx/interface/goals/JAP_new_showa_warfare.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_old_zaibatsus"
+    texturefile = "gfx/interface/goals/JAP_old_zaibatsus.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_One_Party_Moral_and_Unified"
+    texturefile = "gfx/interface/goals/JAP_One_Party_Moral_and_Unified.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Peace_On_the_Pacific"
+    texturefile = "gfx/interface/goals/JAP_Peace_On_the_Pacific.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Political_Think_Tank_policy_Groups"
+    texturefile = "gfx/interface/goals/JAP_Political_Think_Tank_policy_Groups.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Restore_National_Spirit"
+    texturefile = "gfx/interface/goals/JAP_Restore_National_Spirit.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Reverse_the_Nationalization"
+    texturefile = "gfx/interface/goals/JAP_Reverse_the_Nationalization.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_some_need_aluminium"
+    texturefile = "gfx/interface/goals/JAP_some_need_aluminium.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_sphere_reform_generic"
+    texturefile = "gfx/interface/goals/JAP_sphere_reform_generic.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_Strengthening_the_Civilian_Government"
+    texturefile = "gfx/interface/goals/JAP_Strengthening_the_Civilian_Government.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_tenno"
+    texturefile = "gfx/interface/goals/JAP_tenno.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_the_empire"
+    texturefile = "gfx/interface/goals/JAP_the_empire.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_The_Matsuoka_Plan"
+    texturefile = "gfx/interface/goals/JAP_The_Matsuoka_Plan.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_The_Militaries_Friendly_Rivalry"
+    texturefile = "gfx/interface/goals/JAP_The_Militaries_Friendly_Rivalry.dds"
+  }
+  spriteType = {
+    name = "GFX_JAP_the_new_imperial_mandate"
+    texturefile = "gfx/interface/goals/JAP_the_new_imperial_mandate.dds"
+  }
+
  
 }
