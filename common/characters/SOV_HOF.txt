@@ -48,13 +48,5 @@ characters = {
 			}
 		}
 	}
-	SOV_lev_trotsky={
-		name = SOV_lev_trotsky
-		portraits={
-			civilian = {
-				large = "gfx/leaders/SOV/Portrait_Soviet_Leon_Thotsky_2.dds"
-			}
-		}
-	}
 
 }
