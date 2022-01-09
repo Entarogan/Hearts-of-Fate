@@ -236,9 +236,7 @@ characters={
 			slot = army_chief
 			idea_token = kliment_voroshilov
 			available = {
-				SOV_sonia_zima = {
-					is_country_leader = no
-				}
+
 			}
 			allowed = {
 				original_tag = SOV
@@ -1555,14 +1553,15 @@ characters={
 				original_tag = SOV
 			}
 			traits = { SOV_loyal_ally }
-		}
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 5
-				has_war = no
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					factor = 5
+					has_war = no
+				}
 			}
 		}
+
 	}
 	SOV_alexandra_kollontai={
 		#柯伦泰
@@ -1582,10 +1581,11 @@ characters={
 				original_tag = SOV
 			}
 			traits = { SOV_glass_of_water }
+			ai_will_do = {
+				factor = 2
+			}
 		}
-		ai_will_do = {
-			factor = 2
-		}
+
 	}
 	SOV_yevgeni_preobrazhensky={
 		#普列奥布拉任斯基
@@ -1606,14 +1606,15 @@ characters={
 				original_tag = SOV
 			}
 			traits = { SOV_socialist_primitive_accumulation }
-		}
-		ai_will_do = {
-			factor = 5
-			modifier = {
+			ai_will_do = {
 				factor = 5
-				has_war = no
+				modifier = {
+					factor = 5
+					has_war = no
+				}
 			}
 		}
+
 	}
 	SOV_sanya_litvyak={
 		#桑妮亚·V·利特维亚克
@@ -1630,10 +1631,11 @@ characters={
 				original_tag = SOV
 			}
 			traits = { SOV_sanya_litvyak_T }
+			ai_will_do = {
+				factor = 2
+			}
 		}
-		ai_will_do = {
-			factor = 2
-		}
+
 	}
 
 

@@ -12,7 +12,7 @@ characters = {
 		name = SOV_lev_trotsky
 		portraits={
 			civilian = {
-				large = "gfx/leaders/SOV/Portrait_Soviet_Leon_Thotsky_2.dds"
+				large = "gfx/leaders/SOV/Portrait_Soviet_Leon_Thotsky_2.png"
 			}
 		}
 	}
@@ -28,7 +28,7 @@ characters = {
 		name = "Andrei Zhdanov"
 		portraits={
 			civilian = {
-				large = "gfx/leaders/SOV/Portraits_Soviet_Andrei_Zhdanov.dds"
+				large = "gfx/leaders/SOV/Portraits_Soviet_Andrei_Zhdanov.png"
 			}
 		}
 	}
@@ -36,7 +36,7 @@ characters = {
 		name = "Lazar Kaganovich"
 		portraits={
 			civilian = {
-				large = "gfx/leaders/SOV/Portraits_Soviet_Lazar_Kaganovich.dds"
+				large = "gfx/leaders/SOV/Portraits_Soviet_Lazar_Kaganovich.png"
 			}
 		}
 	}
@@ -44,7 +44,7 @@ characters = {
 		name = "Yakov Dzhugashvili"
 		portraits={
 			civilian = {
-				large = "gfx/leaders/SOV/Portraits_Soviet_yakov_Dzhugashvili.dds"
+				large = "gfx/leaders/SOV/Portraits_Soviet_yakov_Dzhugashvili.png"
 			}
 		}
 	}
