@@ -1916,15 +1916,20 @@ country_event = {     #选举
 		}
 		retire_country_leader = yes
 
-		create_country_leader = {
-			name = "Nikita Khrushchev"
-			desc = ""
-			picture = "Portrait_Nikita_Khrushchev.dds"
-			expire = "1953.3.1"
-			ideology = leninism
-			traits = {
-				Cunning_politician
-        		economic_reformer
+		add_country_leader_role = {
+			character = "UKR_nikita_khrushchev"
+			country_leader = {
+				ideology = leninism
+				traits = { Cunning_politician  economic_reformer }
+				expire = "1965.3.1.1"
+			}
+			promote_leader = yes 
+		}
+		UKR_nikita_khrushchev = {
+			set_portraits = {
+				civilian = {
+					large = "gfx/leaders/SOV/Portrait_Nikita_Khrushchev.dds"
+				}
 			}
 		}
 

@@ -14,6 +14,11 @@ country_event = {
 
     add_political_power = -30
 
+
+    remove_country_leader_role = {
+      character = UKR_nikita_khrushchev
+      ideology = marxism
+    }
     UKR_nikita_khrushchev = { set_nationality = SOV }
     add_country_leader_role = {
 			character = "SOV_leonid_brezhnev"
