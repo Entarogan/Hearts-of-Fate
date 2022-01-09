@@ -1,33 +1,30 @@
-﻿
-
-add_namespace = ukr
+﻿add_namespace = ukr
 
 # Khrushchev_goes_to_Moscow
 country_event = {
-	id = ukr.1
-	title = ukr.1.t
-	desc = ukr.1.d
-	picture = GFX_report_event_soviet_purge_trial
-	
-	is_triggered_only = yes
-	
-	option = {
+  id = ukr.1
+  title = ukr.1.t
+  desc = ukr.1.d
+  picture = GFX_report_event_soviet_purge_trial
+
+  is_triggered_only = yes
+
+  option = {
     name = ukr.1.a
 
-		add_political_power = -30
+    add_political_power = -30
 
-    create_country_leader = {
-      name = "Leonid Brezhnev"
-      desc = ""
-      picture = "Portrait_Leonid_Brezhnev.dds"
-      expire = "1953.3.1"
-      ideology = marxism
-      traits = {
-        
-      }
-    }
-
-	}
+    UKR_nikita_khrushchev = { set_nationality = SOV }
+    add_country_leader_role = {
+			character = "SOV_leonid_brezhnev"
+			country_leader = {
+				ideology = marxism
+				traits = {  }
+				expire = "1965.3.1.1"
+			}
+			promote_leader = yes 
+		}
+  }
 }
 
 country_event = {
@@ -316,7 +313,11 @@ country_event = {
 		trigger = { 
       UKR = { is_subject = no }
       NOT = { UKR = { has_war_with = RUS } }
-      RUS = { has_country_leader = { name = "Anastasia I" ruling_only = yes } }
+      RUS = { 
+        RUS_anastasia_i = {
+          is_country_leader = yes
+        }
+      }
     }
 
 		ai_chance = {
@@ -327,7 +328,11 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-			  NOT = { RUS = { has_country_leader = { name = "Anastasia I" ruling_only = yes } } }
+        RUS = { 
+          RUS_anastasia_i = {
+            is_country_leader = no
+          }
+        }
 			}
 			modifier = {
 				factor = 0
@@ -343,16 +348,17 @@ country_event = {
       name = UKR_neutrality_hetman_party
     }
 
-    create_country_leader = {
-      name = "Pavlo Skoropadskyi"
-      desc = ""
-      picture = "Skoropadsky.png"
-      expire = "1953.3.1"
-      ideology = stratocracy
-      traits = {
 
+    add_country_leader_role = {
+      character = "UKR_pavlo_skoropadskyi"
+      country_leader = {
+        ideology = stratocracy
+        traits = {  }
+        expire = "1965.3.1.1"
       }
+      promote_leader = yes 
     }
+
 
     add_popularity = { 
       ideology = democratic
@@ -431,8 +437,16 @@ country_event = {
 	trigger = {
 		tag = RUS
     UKR = { is_subject_of = RUS }
-    RUS = { has_country_leader = { name = "Anastasia I" ruling_only = yes } }
-    UKR = { has_country_leader = { name = "Pavlo Skoropadskyi" ruling_only = yes } }
+    RUS = { 
+      RUS_anastasia_i = {
+        is_country_leader = yes
+      }
+    }
+    UKR = { 
+      UKR_pavlo_skoropadskyi = {
+        is_country_leader = yes
+      } 
+    }
 		has_war = no
 	}
 	

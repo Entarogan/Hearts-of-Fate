@@ -885,17 +885,6 @@ country_event = {
 
         kill_country_leader = yes
 
-	#	create_country_leader = {
-	#		name = "Nikolai Yezhov"
-	#		desc = "POLITICS_NIKOLAI_YEZHOV_DESC"
-	#		picture = "Portrait_Soviet_Nikolai_Yezhov.TGA"
-	#		expire = "1953.3.1"
-	#		ideology = yezhovism
-	#		traits = {
-	#			Blood_Dwarf
-	#			mysterious
-	#		}
-	#	}
 		add_country_leader_role = {
 			character = "SOV_nikolay_yezhov"
 			country_leader = {

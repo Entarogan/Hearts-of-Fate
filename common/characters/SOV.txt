@@ -1906,7 +1906,10 @@ characters={
 			}
 			available = {
 				NOT = { has_country_flag = arrest_radek }
-				has_country_leader = { name = "Leon Trotsky"  ruling_only = yes }
+				SOV_lev_trotsky = {
+					is_country_leader = yes
+				}
+				#has_country_leader = { name = "Leon Trotsky"  ruling_only = yes }
 				NOT = { has_idea = SOV_nikolai_voznesensky }
 			}
 			traits = {

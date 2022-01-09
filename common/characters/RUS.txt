@@ -6,17 +6,17 @@ characters={
 			idea_token = RUS_sergey_taboritsky
 			allowed  = {
 					original_tag  = RUS
-				}
-				available  = {
-					is_puppet  = no 
-					has_completed_focus  = rus_all_russian_supreme_government 
-				}
-				traits  = {
-					fanatic_monarchist 
-				}
-				ai_will_do  = {
-					factor  = 4.000
-				}
+			}
+			available  = {
+				is_puppet  = no 
+				has_completed_focus  = rus_all_russian_supreme_government 
+			}
+			traits  = {
+				fanatic_monarchist 
+			}
+			ai_will_do  = {
+				factor  = 4.000
+			}
 		}
 		portraits={
 			army={
