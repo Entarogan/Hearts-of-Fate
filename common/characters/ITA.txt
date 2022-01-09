@@ -632,7 +632,7 @@ characters={
 		name="Alberto Pariani"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Alberto_Pariani.png"
@@ -652,7 +652,7 @@ characters={
 		name="Amedeo di Savoia-Aosta"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Amedeo.png"
@@ -672,7 +672,7 @@ characters={
 		name="Annibale Bergonzoli"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Annibale_Bergonzoli.png"
@@ -692,7 +692,7 @@ characters={
 		name="Arnaldo Azzi "
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Arnaldo_Azzi.png"
@@ -712,7 +712,7 @@ characters={
 		name="Filiberto Duca di Pistoia"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Duca_Pistoia.png"
@@ -732,7 +732,7 @@ characters={
 		name="Ettore Bastico"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Ettore_Bastico.png"
@@ -752,7 +752,7 @@ characters={
 		name="Gabriele Nasci"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Gabriele_Nasci.png"
@@ -772,7 +772,7 @@ characters={
 		name="Giuseppe Cordero Lanza di Montezemolo"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Giuseppe_Cordero_Lanza_di_Montezemolo.png"
@@ -792,7 +792,7 @@ characters={
 		name="Giuseppe Izzo"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Giuseppe_Izzo.png"

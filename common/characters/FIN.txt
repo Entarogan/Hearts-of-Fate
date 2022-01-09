@@ -106,7 +106,7 @@ characters={
 		name="Sitonai"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/FIN/Portrait_Sitonai.dds"

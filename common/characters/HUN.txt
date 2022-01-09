@@ -55,7 +55,7 @@ characters={
 		name="Vilmos Nagy"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/HUN/Portrait_HUN_vilmos_nagy.png"
@@ -186,7 +186,7 @@ characters={
 		name="Döme Sztójay"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/HUN/Portrait_Dome_Sztojay.dds"
@@ -206,7 +206,7 @@ characters={
 		name="Jenő Rátz"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/HUN/Portrait_Jeno_Ratz.dds"
@@ -226,7 +226,7 @@ characters={
 		name="Alajos Béldy"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/HUN/Portrait_HUN_alajos_beldy.png"
@@ -246,7 +246,7 @@ characters={
 		name="Béla Miklós"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/HUN/Portrait_HUN_bela_miklos.png"
@@ -266,7 +266,7 @@ characters={
 		name="Dezsö László"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/HUN/Portrait_HUN_Dezso_Laszlo.png"
@@ -286,7 +286,7 @@ characters={
 		name="Ferenc Farkas"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/HUN/Portrait_HUN_Ferenc_Farkas.png"
@@ -306,7 +306,7 @@ characters={
 		name="Gusztáv Jány"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/HUN/Portrait_HUN_gusztav_jany.png"
@@ -326,7 +326,7 @@ characters={
 		name="Zoltán Szügyi"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/HUN/Portrait_HUN_Zoltan_Szugyi.png"

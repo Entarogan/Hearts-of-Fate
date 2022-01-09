@@ -563,7 +563,7 @@ characters={
 		name="Franz Halder"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Franz_Halder.dds"
@@ -623,7 +623,7 @@ characters={
 		name="Herbert Gille"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GER/Portrait_GER_Herbert_Gille_TST.dds"
@@ -643,7 +643,7 @@ characters={
 		name="Franz von Hipper"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GER/Portrait_Franz_von_Hipper.dds"
@@ -663,7 +663,7 @@ characters={
 		name="Fritz Schneewind"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GER/Portrait_Fritz_Schneewind.dds"
@@ -859,7 +859,7 @@ characters={
 		name="Werner von Blomberg"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Werner_Eduard_Fritz_von_Blomberg.dds"
@@ -879,7 +879,7 @@ characters={
 		name="Ferdinand Schörner"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Ferdinand_Scherner.dds"
@@ -899,7 +899,7 @@ characters={
 		name="Walter Wenck"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Walter_Wenck.dds"
@@ -919,7 +919,7 @@ characters={
 		name="Kurt von Schleicher"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GER/Portrait_Kurt_von_Schleicher.dds"
@@ -939,7 +939,7 @@ characters={
 		name="Hans Speidel"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Hans_Speidel.dds"
@@ -959,7 +959,7 @@ characters={
 		name="Erich Von Ludendorff"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Erich_Von_Ludendorff.dds"
@@ -979,7 +979,7 @@ characters={
 		name="Hermann Ehrhardt"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Hermann_Ehrhardt.dds"

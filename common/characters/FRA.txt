@@ -601,7 +601,7 @@ characters={
 		name=FRA_dEon
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/FRA/Portrait_Chevalier.dds"
@@ -717,7 +717,7 @@ characters={
 		name="Charles-Henri Sanson"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/FRA/Portrait_Sanson.dds"
@@ -737,7 +737,7 @@ characters={
 		name="Paul Le Gentilhomme"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/FRA/Portrait_France_Paul_Legentilhomme.tga"
@@ -757,7 +757,7 @@ characters={
 		name="Jean Touzet du Vigier"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/FRA/Portrait_NFA_Jean_Touzet_du_Vigier.tga"
@@ -777,7 +777,7 @@ characters={
 		name="Louis Franchet D'Espèrey"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/FRA/Portrait_NFA_Louis_Franchet_Esperey.tga"
@@ -797,7 +797,7 @@ characters={
 		name="Henri Lebocq"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/FRA/Portrait_NFA_Henri_Lebocq.tga"
@@ -817,7 +817,7 @@ characters={
 		name="Jean Bart"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/FRA/Portrait_Jean_Bart.dds"

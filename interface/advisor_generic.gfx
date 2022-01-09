@@ -1,0 +1,12 @@
+spriteTypes = {
+#SOV
+
+
+
+	SpriteType = {
+		name = "GFX_idea_advisor_unknown"
+		texturefile = "gfx/interface/advisors/advisor_unknown.png"		
+	}	
+
+
+}

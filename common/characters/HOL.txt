@@ -182,7 +182,7 @@ characters={
 		name="Bernhard of the Netherlands"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/HOL/bernhard.tga"

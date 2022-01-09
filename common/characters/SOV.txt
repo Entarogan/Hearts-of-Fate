@@ -394,7 +394,7 @@ characters={
 		name="Kirill Meretskov"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_Soviet_Kirill_Meretskov_1.png"
@@ -898,7 +898,7 @@ characters={
 		name = SOV_inia_sestina
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_Inia_Sestina.dds"
@@ -933,7 +933,7 @@ characters={
 		name = SOV_katyusha
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_katyusha.tga"
@@ -1045,7 +1045,7 @@ characters={
 		name="Skyph Izhevska"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_Skyph_Izhevska.dds"
@@ -1108,7 +1108,7 @@ characters={
 		name="Iona Yakir"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_SOV_Iona_Yakir.dds"
@@ -1128,7 +1128,7 @@ characters={
 		name="Ma ZhongYing"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_SOV_mazhongying.dds"
@@ -1203,7 +1203,7 @@ characters={
 		name="Voyskovoy S. Kompleka"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_Voyskovoy_Snayperskiy_Kompleka.dds"
@@ -1223,7 +1223,7 @@ characters={
 		name="Georgiy Zakharov"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_Soviet_Georgiy_Zakharov_1.png"
@@ -1298,7 +1298,7 @@ characters={
 		name="Nikolai Berzarin"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_Soviet_Nikolai_Berzarin_1.png"
@@ -1436,7 +1436,7 @@ characters={
 		name = SOV_vasily_chapayev
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_Vasily_Chapayeva.dds"

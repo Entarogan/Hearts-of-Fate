@@ -29,7 +29,7 @@ characters={
 		name="Enkidu"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/IRQ/Portrait_Enkidu.dds"
@@ -49,7 +49,7 @@ characters={
 		name="Ishtar"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/IRQ/Portrait_Ishtar.dds"
@@ -93,7 +93,7 @@ characters={
 		name="Semiramis"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/IRQ/Portrait_Semiramis.dds"

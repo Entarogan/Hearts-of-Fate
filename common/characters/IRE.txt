@@ -70,7 +70,7 @@ characters={
 		name="Cú Chulainn"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/IRE/Portrait_Cuchulainn.dds"
@@ -90,7 +90,7 @@ characters={
 		name="Diarmuid Ua Duihne"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/IRE/Portrait_Diarmuid_Ua_Duibhne.dds"

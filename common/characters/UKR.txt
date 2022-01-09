@@ -90,7 +90,7 @@ characters={
 		name="Pavlo Skoropadskyi"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/UKR/Skoropadsky.png"
@@ -110,7 +110,7 @@ characters={
 		name="Konstantin Prisovsky"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_UKR_Konstantin_Prisovsky.tga"
@@ -130,7 +130,7 @@ characters={
 		name="Symon Petliura"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_Symon_Petlura.dds"
@@ -150,7 +150,7 @@ characters={
 		name="Hnat Stefaniv"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_UKR_Hnat_Stefaniv.tga"
@@ -170,7 +170,7 @@ characters={
 		name="Andriy Melnyk"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_UKR_Andriy_Melnyk.tga"
@@ -190,7 +190,7 @@ characters={
 		name="Mykhailo Omelianovych-Pavlenko"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_UKR_Mykhailo_Omelianovych_Pavlenko.tga"
@@ -210,7 +210,7 @@ characters={
 		name="Mykola Kapustyanskyi"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_UKR_Mykola_Kapustyanskyi.tga"
@@ -229,7 +229,7 @@ characters={
 		name="Ivan Poltavets-Ostrianytsia"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_UKR_Ivan_Poltavets_Ostrianytsia.tga"

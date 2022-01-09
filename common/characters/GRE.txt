@@ -128,7 +128,7 @@ characters={
 		name="Leonidas"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GRE/Portrait_Leonidas.dds"
@@ -148,7 +148,7 @@ characters={
 		name="Achilles"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GRE/Portrait_Achilles.dds"
@@ -168,7 +168,7 @@ characters={
 		name="Stheno"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GRE/Portrait_Stheno.dds"
@@ -188,7 +188,7 @@ characters={
 		name="Euryale"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GRE/Portrait_Euryale.dds"
@@ -208,7 +208,7 @@ characters={
 		name="Medusa"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GRE/Portrait_Medusa.dds"
@@ -228,7 +228,7 @@ characters={
 		name="Medea"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GRE/Portrait_Medea.dds"
@@ -248,7 +248,7 @@ characters={
 		name="Atalanta"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/GRE/Portrait_Atalanta.dds"
