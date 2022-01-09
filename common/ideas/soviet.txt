@@ -1316,7 +1316,7 @@ ideas = {
 			}
 
 			available = {
-        has_country_flag = SOV_Enable_Sudoplatov_flag
+        		has_country_flag = SOV_Enable_Sudoplatov_flag
 			}
 			
 			traits = { Ace_Undercover }
@@ -2413,7 +2413,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-			cat_mass_assault = 0.1
+				cat_mass_assault = 0.1
 				armor = 0.1
 			}
 			

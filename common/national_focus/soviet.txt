@@ -713,32 +713,31 @@ focus_tree = {
 			factor = 100
 		}
 
-    available = {
-      has_country_flag = Bukharin_becomes_general_secretary_flag
-    }
-    bypass = {
+		available = {
+		has_country_flag = Bukharin_becomes_general_secretary_flag
+		}
+		bypass = {
 
-    }
+		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_ideas = SOV_Humane_communism_idea_1
 
-      add_ideas = SOV_Humane_communism_idea_1
-
-      create_country_leader = {
-        name = "Nikolay Bukharin"
-        desc = "POLITICS_MIKHAIL_TUKHACHEVSKY_DESC"
-        picture = "Portrait_Soviet_Nikolai_Bukharin_2.dds"
-        expire = "1953.3.1"
-        ideology = leninism
-        traits = {
-          Advocate_of_New_Economic_Policy
-        }
-      }
-		hidden_effect = {
-			news_event = { id = more_News.44  hours = 3 }
-		}
+			create_country_leader = {
+				name = "Nikolay Bukharin"
+				desc = "POLITICS_MIKHAIL_TUKHACHEVSKY_DESC"
+				picture = "Portrait_Soviet_Nikolai_Bukharin_2.dds"
+				expire = "1953.3.1"
+				ideology = leninism
+				traits = {
+					Advocate_of_New_Economic_Policy
+				}
+			}
+			hidden_effect = {
+				news_event = { id = more_News.44  hours = 3 }
+			}
 
 		}
 	}

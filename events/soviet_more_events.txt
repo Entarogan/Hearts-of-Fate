@@ -1921,7 +1921,7 @@ country_event = {     #选举
 			ideology = leninism
 			traits = {
 				Cunning_politician
-        economic_reformer
+        		economic_reformer
 			}
 		}
 
