@@ -1114,4 +1114,26 @@ characters={
 			id=-1
 		}
 	}
+
+
+
+	#####advisor
+	SOV_makiri_zolgen={
+		name= makiri_zolgen
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_6"
+			}
+			army={
+				small = "gfx/leaders/SOV/Portrait_Vasily_Chapayeva.dds"
+			}
+		}
+		country_leader={
+			ideology=centrism
+			traits={ fortification_engineer smooth_talking_charmer }
+			expire="1943.1.1.12"
+			id=-1
+		}
+	}
+
 }
