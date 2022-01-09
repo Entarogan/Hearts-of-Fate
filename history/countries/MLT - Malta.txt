@@ -137,85 +137,25 @@ add_research_slot = 2
 add_manpower = 70000
 give_military_access = ISR
 
-
-create_country_leader = {
-	name = "Amiya"
-	desc = ""
-	picture = "Portrait_Amia.dds"
-	ideology = socialism
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Amiya"
-	desc = ""
-	picture = "Portrait_Amia.dds"
-	ideology = syndicalist
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Amiya"
-	desc = ""
-	picture = "Portrait_Amia.dds"
-	ideology = valkist
-	traits = {
-	}
-}
+recruit_character = MLT_amiya
+recruit_character = MLT_enrico_mizzi
+recruit_character = MLT_gerald_strickland
+recruit_character = MLT_paul_boffa
 
 
-create_country_leader = {
-	name = "Amiya"
-	desc = ""
-	picture = "Portrait_Amia.dds"
-	ideology = stratocracy
-	traits = {
-	}
-}
 
-create_corps_commander = {
-	name = "Amiya"
-	picture = "Portrait_Amia.dds"
-	traits = { infantry_leader  adaptable organizer  brilliant_strategist combined_arms_expert expert_delegator expert_improviser}
-	skill = 3
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 6
-}
 
-create_corps_commander = {
-	name = "Enrico Mizzi"
-	picture = "Portrait_MLT_Enrico_Mizzi.tga"
-	traits = {  adaptable organizer expert_improviser}
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
 
-create_corps_commander = {
-	name = "Gerald Strickland"
-	picture = "Portrait_MLT_Gerald_Strickland.tga"
-	traits = {  adaptable organizer expert_improviser}
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
 
-create_corps_commander = {
-	name = "Paul Boffa"
-	picture = "Portrait_MLT_Paul_Boffa.tga"
-	traits = {  adaptable organizer expert_improviser}
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
+
+
+
+
+
+
+
+
+
+
+
 

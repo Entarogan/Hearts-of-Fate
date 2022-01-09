@@ -3,6 +3,7 @@ state={
 	id=653
 	name="STATE_653" # Sverdlovsk
 	manpower = 2161650
+local_supplies=0.0
 	
 	state_category = city
 
@@ -12,7 +13,7 @@ state={
 			1821 5
 		}
 		buildings = {
-			infrastructure = 4
+			infrastructure = 1
 			air_base = 1
 
 		}

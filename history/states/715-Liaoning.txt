@@ -2,6 +2,7 @@ state={
 	id=715
 	name="STATE_715"
 	manpower = 3643373
+local_supplies=0.0
 	
 	state_category = town
 
@@ -11,7 +12,7 @@ state={
 		add_core_of = MAN
 		add_core_of = BEY
 		buildings = {
-			infrastructure = 3
+			infrastructure = 1
 			arms_factory = 2
 		}
 

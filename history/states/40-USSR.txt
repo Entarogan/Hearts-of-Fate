@@ -3,13 +3,14 @@ state={
 	id=40
 	name="STATE_40" # Barnaul
 	manpower = 2107451
+local_supplies=0.0
 	
 	state_category = large_town
 
 	history={
 		owner = RUS
 		buildings = {
-			infrastructure = 3
+			infrastructure = 1
 		}
 		add_core_of = SOV
 		add_core_of = RUS

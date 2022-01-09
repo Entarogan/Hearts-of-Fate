@@ -3,6 +3,7 @@ state=
 	id=337
 	name="STATE_337"
 	manpower = 25900
+local_supplies=0.0
 	
 	state_category = small_island
 	
@@ -10,7 +11,7 @@ state=
 	{
 		owner = DEN
 		buildings = {
-			infrastructure = 4
+			infrastructure = 1
 			13003 = {
 				naval_base = 1
 			}

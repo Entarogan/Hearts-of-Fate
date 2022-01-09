@@ -2,6 +2,7 @@ state={
 	id=71
 	name="STATE_71"
 	manpower = 1197800
+local_supplies=0.0
 	
 	state_category = rural
 	
@@ -11,7 +12,7 @@ state={
 		}
 		owner = SLO
 		buildings = {
-			infrastructure = 4
+			infrastructure = 1
 			industrial_complex = 2
 		}
 		add_claim_by = CZE

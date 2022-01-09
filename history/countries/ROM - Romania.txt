@@ -113,284 +113,36 @@ set_popularities = {
 
 set_cosmetic_tag = ROM_kingdom
 
-create_country_leader = {
-	name = "Vlad III"
-	desc = "POLITICS_VLAD_DESC"
-	picture = "gfx/leaders/ROM/Portrait_Vlad_III_Neutrality.dds"
-	expire = "1965.1.1"
-	ideology = absolute_monarchy
-	traits = {
-		Demonic_Defender_of_the_State
-	}
-	id = 5660
-}
-
-create_country_leader = {
-	name = "Yuri"
-	desc = "POLITICS_YURI_DESC"
-	picture = "Portrait_Yuri.dds"
-	expire = "1965.1.1"
-	ideology = yezhovism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Darnic Prestone Yggdmillennia"
-	desc = "POLITICS_DARNIC_DESC"
-	picture = "gfx/leaders/ROM/Portrait_Darnic_Prestone_Yggdmillennia.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		Realpolitik
-	}
-}
-
-create_country_leader = {
-	name = "Corneliu Zelea Codreanu"
-	desc = ""
-	picture = "portrait_corneliu_zelea_codreanu.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-  
-	traits = {
-		#
-	}
-}
-
-create_field_marshal = {
-	name = "Vlad III"
-	picture = "Portrait_Vlad_III_Neutrality.dds"
-	traits = { offensive_doctrine aggressive_assaulter offensive_doctrine harsh_leader war_hero infantry_leader inspirational_leader }
-	skill = 5
-	attack_skill = 5
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 3
-	id = 5600
-}
-
-create_corps_commander = {
-	name = "Petre Dumitrescu"
-	gfx = GFX_Portrait_romania_petre_dumitrescu
-	traits = { trickster armor_officer }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 3
-  id = 884
-}
-
-create_corps_commander = {
-	name = "Ion Antonescu"
-	picture = "Portrait_Romania_Ion_Antonescu.dds"
-	traits = { cavalry_officer old_guard harsh_leader }
-	skill = 4
-	attack_skill = 5
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 2
-	id = 5604
-}
-
-create_corps_commander = {
-	name = "Ioan Mihail Racovita"
-	gfx = GFX_Portrait_romania_ioan_mihail_racovita
-	traits = { hill_fighter }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-  id = 885
-}
-
-create_corps_commander = {
-	name = "Constantin Sanatescu"
-	gfx = GFX_Portrait_romania_constantin_sanatescu 
-	traits = { infantry_expert }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-  id = 5607
-}
-
-create_corps_commander = {
-	name = "Ion Mota"
-	picture = "Ion_Mota.png"
-	traits = { politically_connected harsh_leader }
-	skill = 2
-	attack_skill = 5
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-  id = 5605
-}
-
-create_corps_commander = {
-	name = "Vasile Marin"
-	picture = "Portrait_Vasile_Marin.png"
-	traits = { politically_connected harsh_leader }
-	skill = 2
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-  id = 5606
-}
-
-create_corps_commander = {
-	name = "Gheorghe Avramescu"
-	gfx = GFX_Portrait_romania_gheorghe_avramescu
-	traits = { infantry_expert trait_mountaineer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Constantin Constantinescu-Claps"
-	portrait_path = "gfx/leaders/ROM/Portrait_ROM_Constantin_Constantinescu_Claps.png"
-	traits = {
-		brilliant_strategist
-		artillery_specialist
-	}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Nicolae Macici"
-	portrait_path = "gfx/leaders/ROM/Portrait_ROM_Nicolae_Macici.png"
-	traits = {
-		harsh_leader
-	}
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-}
-
-create_corps_commander = { #staff officer, perhaps should be removed?
-	name = "Constantin Pantazi"
-	portrait_path = "gfx/leaders/ROM/Portrait_ROM_Constantin_Pantazi.png"
-	traits = {}
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Nicolae Ciuperca"
-	portrait_path = "gfx/leaders/ROM/Portrait_ROM_Nicolae_Ciuperca.png"
-	traits = {
-		old_guard
-		career_officer
-		infantry_officer
-	}
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Ion Glogojanu"
-	portrait_path = "gfx/leaders/ROM/Portrait_ROM_Ion_Glogojanu.png"
-	traits = {
-		career_officer
-		artillery_officer
-	}
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Leonard Mociulschi"
-	portrait_path = "gfx/leaders/ROM/Portrait_ROM_Leonard_Mociulschi.png"
-	traits = {
-		infantry_officer
-		trait_mountaineer
-	}
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Dumitru Popescu"
-	portrait_path = "gfx/leaders/ROM/Portrait_ROM_Dumitru_Popescu.png"
-	traits = {
-		old_guard
-	}
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Corneliu Dragalina"
-	portrait_path = "gfx/leaders/ROM/Portrait_ROM_Corneliu_Dragalina.png"
-	traits = {
-		artillery_officer
-		trait_reckless
-	}
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Florea Tenescu"
-	portrait_path = "gfx/leaders/ROM/Portrait_ROM_Florea_Tenescu.png"
-	traits = {
-		career_officer
-		inflexible_strategist
-	}
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-
+recruit_character = ROM_petre_dumitrescu
+recruit_character = ROM_ioan_mihail_racovita
+recruit_character = ROM_constantin_sanatescu
+recruit_character = ROM_ion_antonescu
+recruit_character = ROM_horia_macellariu
+recruit_character = ROM_gheorghe_avramescu
+recruit_character = ROM_vlad_iii
+recruit_character = ROM_yuri
+recruit_character = ROM_darnic_prestone_yggdmillennia
+recruit_character = ROM_corneliu_zelea_codreanu
+recruit_character = ROM_ion_mota
+recruit_character = ROM_vasile_marin
+recruit_character = ROM_constantin_constantinescuclaps
+recruit_character = ROM_nicolae_macici
+recruit_character = ROM_constantin_pantazi
+recruit_character = ROM_nicolae_ciuperca
+recruit_character = ROM_ion_glogojanu
+recruit_character = ROM_leonard_mociulschi
+recruit_character = ROM_dumitru_popescu
+recruit_character = ROM_corneliu_dragalina
+recruit_character = ROM_florea_tenescu
+recruit_character = ROM_fiore_forvedge_yggdmillennia
+recruit_character = ROM_celenike_icecolle_yggdmillennia
+recruit_character = ROM_gordes_musik_yggdmillennia
+recruit_character = ROM_caules_forvedge_yggdmillennia
+recruit_character = ROM_roche_frain_yggdmillennia
 
 ROM_create_yugg_leaders = yes
 
-create_navy_leader = {
-	name = "Horia Macellariu"
-	gfx = "GFX_Portrait_romania_horia_macellariu"
-	traits = { gentlemanly spotter }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 1
-  id = 887
-}
+
 ROM_create_yggd_leaders = yes
 
 ### VARIANTS ###

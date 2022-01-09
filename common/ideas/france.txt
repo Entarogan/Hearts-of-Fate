@@ -213,8 +213,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-        stability_weekly = 0.001
-        war_support_weekly = 0.001
+				stability_weekly = 0.001
+				war_support_weekly = 0.001
 				industrial_capacity_dockyard = 0.05
 				industrial_capacity_factory = 0.05
 				army_attack_factor = 0.05
@@ -1647,8 +1647,8 @@ ideas = {
 			available = {
 				has_government = democratic
 				has_completed_focus = FRA_Charottes_misson
-        NOT = { has_government = communism }
-        NOT = { has_government = fascism }
+				NOT = { has_government = communism }
+				NOT = { has_government = fascism }
 			}
 			
 			traits = { assassin_moderate }
@@ -2082,8 +2082,6 @@ ideas = {
 		}	
 		
 		jeanne_ocean = {
-			
-			
 			allowed = {
 				original_tag = FRA
 			}
@@ -2091,7 +2089,7 @@ ideas = {
 			available = { 
 				NOT = { has_government = fascism }
 				NOT = { has_idea = FRA_Jeanne_Darc }
-        NOT = { has_country_flag = jeanne_oppose }
+				NOT = { has_country_flag = jeanne_oppose }
 			}
 			
 			traits = { navy_chief_decisive_battle_3 }

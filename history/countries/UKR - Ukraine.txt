@@ -67,7 +67,10 @@ set_politics = {
 	elections_allowed = no
 }
 
-set_popularities = {	democratic = 20	fascism = 30	communism = 40
+set_popularities = {
+	democratic = 20
+	fascism = 30
+	communism = 40
 	neutrality = 10
 }
 
@@ -78,174 +81,14 @@ add_ideas = {
 	UKR_Developed_agriculture_idea
   UKR_Cossack_tradition_idea
 }
-
-create_country_leader = {
-	name = "Symon Petlura"
-	desc = ""
-	picture = "Portrait_Symon_Petlura.dds"
-	expire = "1953.3.1"
-	ideology = socialism
-	traits = {
-		popular_figurehead
-	}
-}
-
-create_country_leader = {
-	name = "Symon Petlura"
-	desc = ""
-	picture = "Portrait_Symon_Petlura.dds"
-	expire = "1953.3.1"
-	ideology = stratocracy
-	traits = {
-		popular_figurehead
-	}
-}
-
-create_country_leader = {
-	name = "Nikita Khrushchev"
-	desc = ""
-	picture = "Portrait_Nikita_Khrushchev.dds"
-	expire = "1953.3.1"
-	ideology = marxism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Yevhen Konovalets"
-	desc = ""
-	picture = "yevhen_konovalets.png"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-    fascist_militia_leader
-	}
-}
-
-#create_country_leader = {
-#	name = "Elisa S. Ferri"
-#	desc = ""
-#	picture = "Portrait_Elisa_S_Ferri.dds"
-#	expire = "1953.3.1"
-#	ideology = accelerationism
-#	traits = {
-#		
-#	}
-#}
-
-create_field_marshal = {
-	name = "Pavlo Skoropadskyi"
-	picture = "Skoropadsky.png"
-	traits = { organizer thorough_planner old_guard cavalry_officer }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-
-	id = 5004
-
-}
-
-create_field_marshal = {
-	name = "Konstantin Prisovsky"
-	picture = "Portrait_UKR_Konstantin_Prisovsky.tga"
-	traits = {
-		old_guard
-	}
-	skill = 3
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Symon Petliura"
-	picture = "Portrait_Symon_Petlura.dds"
-	traits = { trickster politically_connected }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 4
-
-	id = 5005
-
-}
-
-create_corps_commander = {
-	name = "Yevhen Konovalets"
-	picture = "yevhen_konovalets.png"
-	traits = { winter_specialist hill_fighter politically_connected }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 3
-
-	id = 5006
-
-}
-
-create_corps_commander = {
-	name = "Hnat Stefaniv"
-	picture = "Portrait_UKR_Hnat_Stefaniv.tga"
-	traits = { commando organizer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Andriy Melnyk"
-	picture = "Portrait_UKR_Andriy_Melnyk.tga"
-	traits = { trait_engineer organizer thorough_planner }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-
-	id = 5007
-
-}
-
-create_corps_commander = {
-	name = "Mykhailo Omelianovych-Pavlenko"
-	picture = "Portrait_UKR_Mykhailo_Omelianovych_Pavlenko.tga"
-	traits = { fortress_buster }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 3
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Mykola Kapustyanskyi"
-	picture = "Portrait_UKR_Mykola_Kapustyanskyi.tga"
-	traits = { }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Ivan Poltavets-Ostrianytsia"
-	picture = "Portrait_UKR_Ivan_Poltavets_Ostrianytsia.tga"
-	traits = { }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-
-
+recruit_character = UKR_symon_petlura
+recruit_character = UKR_nikita_khrushchev
+recruit_character = UKR_yevhen_konovalets
+recruit_character = UKR_pavlo_skoropadskyi
+recruit_character = UKR_konstantin_prisovsky
+recruit_character = UKR_symon_petliura
+recruit_character = UKR_hnat_stefaniv
+recruit_character = UKR_andriy_melnyk
+recruit_character = UKR_mykhailo_omelianovychpavlenko
+recruit_character = UKR_mykola_kapustyanskyi
+recruit_character = UKR_ivan_poltavetsostrianytsia

@@ -1503,13 +1503,13 @@ ideas = {
 			
 			available = {
 				has_completed_focus = uk_cooperation_with_atlas
-        or = {
-          ENG = { controls_state = 446 }
-          AND = {
-            EGY = { controls_state = 446 }
-            EGY = { is_subject_of = ENG }
-          }
-        }
+				or = {
+					ENG = { controls_state = 446 }
+					AND = {
+						EGY = { controls_state = 446 }
+						EGY = { is_subject_of = ENG }
+					}
+				}
 			}
 			
 			research_bonus = {

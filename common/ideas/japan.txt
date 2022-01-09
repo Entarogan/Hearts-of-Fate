@@ -25,7 +25,7 @@ ideas = {
   
     JAP_Russo_Japanese_co_prosperity = {
     # 日俄共荣√
-      allowed = {
+    	allowed = {
 				always = no
 			}
 
@@ -2118,7 +2118,6 @@ ideas = {
 			
 			allowed = {
 				original_tag = JAP
-				has_dlc = "La Resistance" 
 			}
 			
 			picture = kokutou_mikiya
@@ -2244,7 +2243,7 @@ ideas = {
 			}
 		}
     
-    JAP_kaenbyou_rin = {##火焰猫燐
+    	JAP_kaenbyou_rin = {##火焰猫燐
 			picture = JAP_kaenbyou_rin
 			allowed = {
 				original_tag = JAP
@@ -2265,15 +2264,15 @@ ideas = {
 			}
 			traits = { farsighted_colonist }
 			available = {
-        NOT = { has_idea = idea_jap_liberals }
+        	NOT = { has_idea = idea_jap_liberals }
 				threat > 0.4	
 			}
 			ai_will_do = {
 				factor = 1
-        modifier = {
-          has_war_with = CHI
-          factor = 10
-        }
+				modifier = {
+					has_war_with = CHI
+					factor = 10
+				}
 			}
 		}		
 		JAP_shiba_miyuki = {##司波深雪
@@ -2289,10 +2288,10 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-        modifier = {
-          has_war_with = SOV
-          factor = 10
-        }
+				modifier = {
+					has_war_with = SOV
+					factor = 10
+				}
 			}
 		}
 		JAP_kongou_mitsuko = {##婚后光子
@@ -2749,9 +2748,9 @@ ideas = {
 				original_tag = JAP
 			}
 			
-      available = {
-        NOT = { has_country_flag = jap_tomoe_gozen_disabled }
-      }
+			available = {
+				NOT = { has_country_flag = jap_tomoe_gozen_disabled }
+			}
       
 			picture = tomoe_gozen
 			
@@ -2824,7 +2823,7 @@ ideas = {
 			}
 			available = {
 				has_government = democratic
-        NOT = { has_country_flag = jap_ryougi_shiki_disabled }
+        		NOT = { has_country_flag = jap_ryougi_shiki_disabled }
 			}
 
 			picture = rgouyi_shiki
@@ -3628,7 +3627,7 @@ ideas = {
 				land_doctrine = 0.1
 				infantry_weapons = 0.1
 			}
-      cost = 150
+			cost = 150
 			traits = { theorist_technolgy_cultist }
 
 			ai_will_do = {
@@ -3648,7 +3647,7 @@ ideas = {
 					has_country_flag = jap_tomoe_gozen_disabled
 				}
 			}
-      cost = 150
+			cost = 150
 			research_bonus = {
 				cat_grand_battle_plan = 0.15
 			}
@@ -3671,7 +3670,7 @@ ideas = {
 					has_country_flag = jap_oda_nobunaga_disabled
 				}
 			}
-      cost = 150
+			cost = 150
 			research_bonus = {
 				cat_superior_firepower = 0.15
 				artillery = 0.1
@@ -3685,7 +3684,7 @@ ideas = {
 			allowed = {
 				tag = JAP
 			}
-      cost = 150
+			cost = 150
 			available = {
 				NOT = {
 					has_country_flag = jap_kirisame_marisa_disabled

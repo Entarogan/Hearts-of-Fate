@@ -102,79 +102,20 @@ add_ideas = {
 		elections_allowed = yes
 	}
 }
-create_country_leader = {
-	name = "Bazett Fraga McRemitzpsd"
-	desc = "POLITICS_BAZETT_DESC"
-	picture = "Portrait_Bazett_Fraga_McRemitzpsd.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		Fragarach
-	}
-}
+
 add_research_slot = 2
-create_country_leader = {
-	name = "Eoin O'Duffy"
-	desc = "POLITICS_EOIN_ODUFFY_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
 
-create_country_leader = {
-	name = "James Larkin"
-	desc = "POLITICS_JAMES_LARKIN_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		#
-	}
-}
+recruit_character = IRE_eoin_oduffy
+recruit_character = IRE_james_larkin
+recruit_character = IRE_bazett_fraga_mcremitzpsd
+recruit_character = IRE_fionn_mac_cumhaill
+recruit_character = IRE_cú_chulainn
+recruit_character = IRE_diarmuid_ua_duihne
 
-create_country_leader = {
-	name = "Fionn mac Cumhaill"
-	desc = "POLITICS_FIONN_DESC"
-	picture = "Portrait_Finn.dds"
-	expire = "1965.1.1"
-	ideology = authoritarian_democracy
-	traits = {
-		High_King
-	}
-}
 
-create_corps_commander = {
-	name = "Cú Chulainn"
-	picture = "Portrait_Cuchulainn.dds"
-	traits = { adaptable ranger  jungle_rat commando skirmisher paratrooper infantry_officer}
-	skill = 5
-	attack_skill = 5
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
 
-create_corps_commander = {
-	name = "Diarmuid Ua Duihne"
-	picture = "Portrait_Diarmuid_Ua_Duibhne.dds"
-	traits = { adaptable ranger  jungle_rat commando skirmisher brilliant_strategist politically_connected}
-	skill = 5
-	attack_skill = 5
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
 
-create_field_marshal = {
-	name = "Fionn mac Cumhaill"
-	picture = "Portrait_Finn.dds"
-	traits = { organisational_leader ranger  adaptable infantry_leader inspirational_leader }
-	skill = 5
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
-}
+
+
+
+

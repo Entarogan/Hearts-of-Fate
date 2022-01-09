@@ -3,6 +3,7 @@ state={
 	id=614
 	name="STATE_614" # Hebei
 	manpower = 18434900
+local_supplies=0.0
 	
 	state_category = town
 
@@ -11,7 +12,7 @@ state={
 		add_core_of = CHI
 		add_core_of = BEY
 		buildings = {
-			infrastructure = 4
+			infrastructure = 1
       industrial_complex = 2
 		}
 

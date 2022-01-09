@@ -2,6 +2,7 @@ state={
 	id=592
 	name="STATE_592"
 	manpower = 17835200
+local_supplies=0.0
 	state_category = city
 	resources={
 		tungsten=8 # was: 10
@@ -16,7 +17,7 @@ state={
 		add_core_of = BEY
 		
 		buildings = {
-			infrastructure = 3
+			infrastructure = 1
 			arms_factory = 2
 			industrial_complex = 2
 			air_base = 3

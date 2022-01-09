@@ -495,7 +495,7 @@ ideas = {
 				original_tag = JAP
 			}
       
-      removal_cost = -1
+			removal_cost = -1
       
 			traits = { the_hand_behind_the_scenes veteran }
 			
@@ -561,16 +561,14 @@ ideas = {
   sumitsu_in = {
 
     JAP_yasaka_kanako = {
-      picture = yasaka_kanako
+			picture = yasaka_kanako
 			allowed_to_remove = {
 				always = no
 			}
 			allowed = {
 				original_tag = JAP
 			}
-      
-      removal_cost = -1
-      
+			removal_cost = -1
 			traits = { theo_technocrat veteran }
 			
 			ai_will_do = {
@@ -579,16 +577,14 @@ ideas = {
     }
     
     JAP_hinanawi_tenshi = {
-      picture = hinanawi_tenshi
+			picture = hinanawi_tenshi
 			allowed_to_remove = {
 				always = no
 			}
 			allowed = {
 				original_tag = JAP
-			}
-      
-      removal_cost = -1
-      
+			}	
+			removal_cost = -1
 			traits = { ambitious_reformer }
 			
 			ai_will_do = {
@@ -597,16 +593,14 @@ ideas = {
     }
     
     JAP_hijiri_byakuren = {
-      picture = hijiri_byakuren
+			picture = hijiri_byakuren
 			allowed_to_remove = {
 				always = no
 			}
 			allowed = {
 				original_tag = JAP
 			}
-      
-      removal_cost = -1
-      
+			removal_cost = -1
 			traits = { religious_pacifist }
 			
 			ai_will_do = {
@@ -622,9 +616,7 @@ ideas = {
 			allowed = {
 				original_tag = JAP
 			}
-      
-      removal_cost = -1
-      
+			removal_cost = -1
 			traits = { coward_intriguer }
 			
 			ai_will_do = {
@@ -792,7 +784,7 @@ ideas = {
 				original_tag = JAP
 			}
       
-      removal_cost = -1
+			removal_cost = -1
       
 			traits = { ambitious_warlord }
 			
@@ -838,7 +830,7 @@ ideas = {
     }
   
     JAP_fujiwara_no_mokou = {
-      picture = Fujiwara_no_Mokou
+			picture = Fujiwara_no_Mokou
 			allowed_to_remove = {
 				always = no
 			}
@@ -846,7 +838,7 @@ ideas = {
 				original_tag = JAP
 			}
       
-      removal_cost = -1
+			removal_cost = -1
       
 			traits = { neutral_warlord }
 			

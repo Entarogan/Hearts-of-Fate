@@ -3,6 +3,7 @@ state={
 	id=202
 	name="STATE_202"
 	manpower = 2495352
+local_supplies=0.0
 	resources={
 		oil=8 # was: 14
 		aluminium=7 # was: 12
@@ -16,7 +17,7 @@ state={
 			525 25
 		}
 		buildings = {
-			infrastructure = 7
+			infrastructure = 1
 			arms_factory = 2
 			industrial_complex = 3
 			fuel_silo = 1

@@ -65,68 +65,17 @@ add_state_core = 708
 add_state_core = 706
 add_state_core = 713
 
-#create_country_leader = {
-#	
-#	name = "Jonas Lote"
-#	picture = "gfx//leaders//Africa//Portrait_Africa_Generic_2.dds"
-#	expire = "1965.1.1"
-#	ideology = centrism
-#	traits = {
-#		#
-#	}
-#}
+#
 
 set_cosmetic_tag = MAD_CMD
 
-create_country_leader = {
-	
-	
-  name = "Rena Andou"
-	picture = "Portrait_Rena_Andou.dds"
-	expire = "1965.1.1"
-	ideology = stratocracy
-	traits = {
-		#
-	}
-
-}
+recruit_character = MAD_rena_andou
 
 
-create_country_leader = {
-	
-	
-  name = "Rena Andou"
-	picture = "Portrait_Rena_Andou.dds"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-		#
-	}
 
-}
 
-create_country_leader = {
-	
-  name = "Rena Andou"
-	picture = "Portrait_Rena_Andou.dds"
-	expire = "1965.1.1"
-	ideology = totalist
-	traits = {
-		#
-	}
 
-}
 
-create_country_leader = {
-	
-  name = "Rena Andou"
-	picture = "Portrait_Rena_Andou.dds"
-	expire = "1965.1.1"
-	ideology = nazism
-	traits = {
-		#
-	}
 
-}
 
 

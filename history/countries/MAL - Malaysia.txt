@@ -78,85 +78,17 @@ if = {
 	add_to_tech_sharing_group = commonwealth_research
 }
 
-set_popularities = {	democratic = 85	communism = 5	neutrality = 10
+set_popularities = {
+	democratic = 85
+	communism = 5
+	neutrality = 10
 }
 
-create_country_leader = {
-	name = "Onn Jaafar"
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_democracy.dds"
-	expire = "1953.3.1"
-	ideology = conservatism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Shenton Thomas"
-	desc = ""
-	picture = "GFX_portrait_malaya_shenton_thomas"
-	expire = "1953.3.1"
-	ideology = conservatism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Samuel Hood"
-	desc = ""
-	picture = "Portrait_Samuel_Hood.dds"
-	expire = "1953.3.1"
-	ideology = conservatism
-	traits = {
-		grand_fleet_proponent  navy_capital_ship_2 popular_figurehead
-	}
-}
-
-create_country_leader = {
-	name = "Samuel Hood"
-	desc = ""
-	picture = "Portrait_Samuel_Hood.dds"
-	expire = "1953.3.1"
-	ideology = rexism
-	traits = {
-		grand_fleet_proponent  navy_capital_ship_2 popular_figurehead
-	}
-}
-
-create_corps_commander = {
-	name = "Samuel Hood"
-	picture = "Portrait_Samuel_Hood.dds"
-	traits = {  adaptable organizer  brilliant_strategist  expert_delegator expert_improviser}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 6
-}
-
-create_country_leader = {
-	name = "Samuel Hood"
-	desc = ""
-	picture = "Portrait_Samuel_Hood.dds"
-	expire = "1953.3.1"
-	ideology = stratocracy
-	traits = {
-		grand_fleet_proponent  navy_capital_ship_2 popular_figurehead
-	}
-}
-
-create_country_leader = {
-	name = "Ibrahim Hj Yaacob" #this guy supported Japanese during the war, and was imprisoned for it, could be made fascist?
-	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_fascism.dds"
-	expire = "1953.3.1"
-	ideology = moderatism
-	traits = {
-		
-	}
-}
+recruit_character = MAL_onn_jaafar
+recruit_character = MAL_shenton_thomas
+recruit_character = MAL_ibrahim_hj_yaacob
+recruit_character = MAL_samuel_hood
+recruit_character = MAL_alexander_ragland
 
 set_cosmetic_tag = MAL_UK # British Malaya
 

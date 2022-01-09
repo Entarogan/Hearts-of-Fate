@@ -626,7 +626,6 @@ ideas = {
 		
 		saint_george = {
 			
-			
 			allowed = {
 				original_tag = ITA
 			}

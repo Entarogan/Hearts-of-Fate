@@ -162,413 +162,57 @@ if = {
 #give_guarantee = CZE
 
 #Order matters here Daladier will start as leaders because added last
-create_country_leader = {
-	name = "Leo B. Harwey"
-	desc = "POLITICS_HARVEY_DESC"
-	picture = "Portrait_Leo_B_Harvey.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		ideal_holy_king
-	}
-}
-
-
-create_country_leader = {
-	name = "Maurice Thorez"
-	desc = "POLITICS_MAURICE_THOREZ_DESC"
-	picture = "GFX_portrait_fra_maurice_thorez"
-	expire = "1965.1.1"
-	ideology = 	stalinism
-	traits = {
-		
-	}
-}
-
-
-create_country_leader = {
-	name = "Jeanne D'Arc (Alter)"
-	desc = ""
-	picture = "gfx//leaders//FRA//Portrait_Jeanne_Darc_Alter.dds"
-	expire = "1965.1.1"
-	ideology = orlean_system
-	traits = {
-		Ephemeral_Dream illiterate
-	}
-}
-
-
-create_country_leader = {
-	name = "Marie Antoinette"
-	id = 911
-	desc = "POLITICS_MARIE_ANTOINETTE_DESC"
-	picture = "gfx//leaders//FRA//Portrait_Marie.dds"
-	expire = "1965.1.1"
-	ideology = authoritarian_democracy
-	traits = {
-		
-	}
-}
-
-
-create_field_marshal = {
-	name = "Marie Antoinette"
-	id = 811
-	picture = "Portrait_Marie.dds"
-	traits = { defensive_doctrine inspirational_leader politically_connected cavalry_officer}
-	skill = 5
-	attack_skill = 3
-	defense_skill = 5
-	planning_skill = 3
-	logistics_skill = 5
-}
-
-create_field_marshal = {
-	name = "Jeanne D'Arc"
-	id = 812
-	picture = "Portrait_Jeanne.dds"
-	traits = { defensive_doctrine war_hero inflexible_strategist organizer fast_planner inspirational_leader unyielding_defender organisational_leader politically_connected }
-	skill = 6
-	attack_skill = 5
-	defense_skill = 6
-	planning_skill = 4
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Charlemagne"
-	id = 813
-	picture = "Portrait_Charlemagne.dds"
-	traits = { career_officer trickster cavalry_officer cavalry_leader combined_arms_expert brilliant_strategist }
-	skill = 5
-	attack_skill = 5
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 4
-}
-
-
-create_corps_commander = {
-	name = "Napoléon Bonaparte"
-	id = 816
-	picture = "Portrait_Napoleon.dds"
-	traits = { career_officer trickster skilled_staffer infantry_officer cavalry_officer brilliant_strategist war_hero bearer_of_artillery } 
-	skill = 5
-	attack_skill = 5
-	defense_skill = 5
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Gilles de Rais"
-	id = 814
-	picture = "Portrait_Giless.dds"
-	traits = { career_officer cavalry_leader combined_arms_expert infantry_leader infantry_expert }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "St. Martha"
-	id = 815
-	picture = "Portrait_Martha.dds"
-	traits = { inspirational_leader naval_invader invader_ii cavalry_leader } 
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Bradamante"
-	id = 817
-	picture = "Portrait_Beadamante.dds"
-	traits = { brilliant_strategist  infantry_leader infantry_expert infantry_officer }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Astolfo"
-  id = 820
-	picture = "Portrait_Astolfo.dds"
-	traits = { media_personality trickster cavalry_officer trait_reckless trait_engineer scavenger commando skirmisher cavalry_leader }
-	skill = 3
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Chevalier d'Eon"
-	id = 819
-	picture = "Portrait_Chevalier.dds"
-	traits = { career_officer infantry_officer commando paratrooper camouflage_expert brilliant_strategist }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Edmond Dantès"
-	id = 818
-	picture = "Portrait_Edmond.dds"
-	traits = { commando camouflage_expert brilliant_strategist harsh_leader skirmisher }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 5
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Jeanne D'Arc (Alter Lily)"
-  id = 821
-	picture = "Portrait_Jeanne_Darc_lily.dds"
-	traits = { politically_connected armor_officer panzer_leader }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Charles-Henri Sanson"
-  id = 822
-	picture = "Portrait_Sanson.dds"
-	traits = { infantry_leader trait_cautious  politically_connected } 
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Maxime Weygand"
-  id = 4004
-	picture = "Portrait_France_Maxime_Weygand.dds"
-	traits = { old_guard }
-	skill = 2
-	attack_skill = 1
-    defense_skill = 2
-    planning_skill = 3
-    logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Philippe Leclerc"
-  id = 4005
-	picture = "Portrait_France_Philippe_Leclerc.dds"
-	traits = {
-		armor_officer
-		desert_fox
-	}
-	skill = 4
-	attack_skill = 4
-    defense_skill = 3
-    planning_skill = 4
-    logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Maurice Gamelin"
-  id = 4006
-	picture = "Portrait_France_Maurice_Gamelin.dds"
-	traits = {
-
-	}
-	skill = 2
-	attack_skill = 2
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Alphonse Georges"
-  id = 4007
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Alphonse_Joseph_Georges.dds"
-	traits = {
-		career_officer
-		old_guard
-		trait_cautious
-		organizer
-	}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 4
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Paul Le Gentilhomme"
-  id = 4008
-	portrait_path = "gfx/leaders/FRA/Portrait_France_Paul_Legentilhomme.tga"
-	traits = {
-		trait_reckless
-		infantry_officer
-		commando
-		skirmisher
-	}
-	skill = 3
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Jean Touzet du Vigier"
-  id = 4009
-	picture = "Portrait_NFA_Jean_Touzet_du_Vigier.tga"
-	traits = {
-		career_officer
-		armor_officer
-	}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Louis Franchet D'Espèrey"
-  id = 4010
-	picture = "Portrait_NFA_Louis_Franchet_Esperey.tga"
-	traits = {
-		old_guard
-		brilliant_strategist
-		infantry_leader
-	}
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Henri Lebocq"
-  id = 4011
-	picture = "Portrait_NFA_Henri_Lebocq.tga"
-	traits = {
-		old_guard
-		career_officer
-		infantry_leader
-	}
-	skill = 2
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_navy_leader = {
-	name = "St. Martha"
-	picture = "Portrait_St_Martha_admiral.dds"
-	id = 290
-	traits = { naval_lineage bold aviation_enthusiast superior_tactician spotter ironside }
-	skill = 5
-	attack_skill = 5
-	defense_skill = 4
-	maneuvering_skill = 4
-	coordination_skill = 4
-}
-
-create_navy_leader = {
-	name = "Marie Antoinette"
-	picture = "Portrait_Marie_admiral.dds"
-	traits = { chief_engineer superior_tactician gentlemanly }
-	id = 291
-	skill = 5
-	attack_skill = 4
-	defense_skill = 5
-	maneuvering_skill = 3
-	coordination_skill = 5
-}
-
-create_navy_leader = {
-	name = "Jeanne d'Arc"
-	picture = "Portrait_Jeanne_Admiral.dds"
-	traits = { ironside battleship_adherent  blockade_runner naval_lineage }
-	id = 292
-	skill = 5
-	attack_skill = 5
-	defense_skill = 6
-	maneuvering_skill = 4
-	coordination_skill = 6
-}
-
-create_navy_leader = {
-	name = "Jean Bart"
-		picture = "Portrait_Jean_Bart.dds"
-	traits = { legend_of_the_sea supreme_honour }
-	skill = 5
-	attack_skill = 6
-	defense_skill = 4
-	maneuvering_skill = 5
-	coordination_skill = 4
-}
-
-create_navy_leader = {
-	name = "François Darlan"
-		picture = "Portrait_France_Francois_Darlan.dds"
-	traits = { superior_tactician }
-	skill = 5
-	attack_skill = 5
-	defense_skill = 4
-	maneuvering_skill = 5
-	coordination_skill = 5
-}
-
-create_navy_leader = {
-	name = "Jean-Marie Charles Abrial"
-		picture = "Portrait_France_Jean-Marie_Charles_Abrial.dds"
-	traits = { superior_tactician }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 4
-	maneuvering_skill = 4
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "Jean-Pierre Esteva"
-		picture = "Portrait_France_Jean-Pierre_Esteva.dds"
-	traits = { seawolf }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	maneuvering_skill = 2
-	coordination_skill = 2
-}
-
-create_navy_leader = {
-	name = "René-Émile Godfroy"
-		picture = "Portrait_France_Rene-Emile_Godfroy.dds"
-	traits = { old_guard_navy spotter }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 2
-}
-
+recruit_character = FRA_maurice_thorez
+recruit_character = FRA_maurice_gamelin
+recruit_character = FRA_maxime_weygand
+recruit_character = FRA_alphonse_georges
+recruit_character = FRA_philippe_leclerc
+recruit_character = FRA_jeanmarie_charles_abrial
+recruit_character = FRA_jeanpierre_esteva
+recruit_character = FRA_gilles_de_rais
+recruit_character = FRA_Marie_Antoinette
+recruit_character = FRA_Jeanne_Darc
+recruit_character = FRA_leo_b._harwey
+recruit_character = FRA_jeanne_darc_alter
+recruit_character = FRA_charlemagne
+recruit_character = FRA_napoléon_bonaparte
+recruit_character = FRA_st._martha
+recruit_character = FRA_bradamante
+recruit_character = FRA_astolfo
+recruit_character = FRA_chevalier_deon
+recruit_character = FRA_edmond_dantès
+recruit_character = FRA_jeanne_darc_alter_lily
+recruit_character = FRA_charleshenri_sanson
+recruit_character = FRA_paul_le_gentilhomme
+recruit_character = FRA_jean_touzet_du_vigier
+recruit_character = FRA_louis_franchet_despèrey
+recruit_character = FRA_henri_lebocq
+recruit_character = FRA_jean_bart
+recruit_character = FRA_françois_darlan
+recruit_character = FRA_renéÉmile_godfroy
+recruit_character = FRA_gilles_de_rais_alter
+recruit_character = FRA_Ciel
+recruit_character = FRA_corday
+recruit_character = FRA_ernst_kaltenbrunner
+recruit_character = FRA_pierre_laval
+recruit_character = FRA_jacques_doriot
+recruit_character = FRA_francesca_prelati
+recruit_character = FRA_nestor_makhno
+recruit_character = FRA_sebastien_faure
+recruit_character = FRA_leon_jouhaux
+recruit_character = FRA_philippe_fequant
+recruit_character = FRA_henri_giraud
+recruit_character = FRA_louis_kahn
+recruit_character = FRA_victor_denain
+recruit_character = FRA_jean_decoux
+recruit_character = FRA_jean_marie_bergeret
+recruit_character = FRA_frederic_irene_joliot_curie
+recruit_character = FRA_Mozart
+recruit_character = FRA_rene_prioux
+recruit_character = FRA_martial_valin
+recruit_character = FRA_jean_francois_jannekeyn
+recruit_character = FRA_emile_muselier
+recruit_character = FRA_alfred_heurtaux
 ### VARIANTS ###
 # 1936 Start #
 if = {

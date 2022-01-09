@@ -2781,10 +2781,10 @@ ideas = {
 			}
 
 			visible = {
-        or = {
-          has_global_flag = FRA_Recruiting_collaborators_flag
-          has_government = communism
-        }
+				or = {
+					has_global_flag = FRA_Recruiting_collaborators_flag
+					has_government = communism
+				}
 			}
 			
 			available = {

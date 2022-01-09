@@ -79,103 +79,27 @@ set_politics = {
 	elections_allowed = no
 }
 
-create_country_leader = {
-	name = "Gilgamesh"
-	desc = "POLITICS_GHAZI_I_DESC"
-	picture = "Portrait_Gilgamesh.dds"
-	expire = "1965.1.1"
-	ideology = absolute_monarchy
-	traits = {
-		Return_of_the_King
-	}
-}
-
-create_country_leader = {
-	name = "Ereshkigal"
-	desc = ""
-	picture = "Portrait_Ereshkigal.dds"
-	expire = "1965.1.1"
-	ideology = valkist
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Siduri"
-	desc = ""
-	picture = "Portrait_Siduri.dds"
-	expire = "1965.1.1"
-	ideology = socialism
-	traits = {
-		#
-	}
-}
-
-create_corps_commander = {
-	name = "Enkidu"
-	picture = "Portrait_Enkidu.dds"
-	traits = { infantry_leader trickster organizer war_hero  brilliant_strategist  }
-	skill = 5
-	attack_skill = 5
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Ishtar"
-	picture = "Portrait_Ishtar.dds"
-	traits = { organizer war_hero  brilliant_strategist politically_connected trait_reckless media_personality trait_mountaineer  hill_fighter }
-	skill = 5
-	attack_skill = 5
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 5
-}
-
-create_corps_commander = {
-	name = "Ereshkigal"
-	picture = "Portrait_Ereshkigal.dds"
-	traits = { infantry_officer trait_engineer organizer inflexible_strategist politically_connected  trait_mountaineer urban_assault_specialist fortress_buster ambusher }
-	skill = 5
-	attack_skill = 2
-	defense_skill = 6
-	planning_skill = 4
-	logistics_skill = 4
-}
+recruit_character = IRQ_yusuf_salman_yusuf
+recruit_character = irq_siduri
+recruit_character = IRQ_Enkidu
+recruit_character = IRQ_Ishtar
+recruit_character = IRQ_Gilgamesh
+recruit_character = IRQ_Semiramis
+recruit_character = IRQ_Ereshkigal
 
 
-create_field_marshal = {
-	name = "Gilgamesh"
-  id = 970
-	picture = "Portrait_Gilgamesh.dds"
-	traits = { politically_connected war_hero skilled_staffer organizer thorough_planner logistics_wizard defensive_doctrine harsh_leader }
-	skill = 6
-	attack_skill = 4
-	defense_skill = 5
-	planning_skill = 5
-	logistics_skill = 5
-}
 
-create_field_marshal = {
-	name = "Semiramis"
-	picture = "Portrait_Semiramis.dds"
-	traits = { politically_connected skilled_staffer organizer thorough_planner offensive_doctrine brilliant_strategist aggressive_assaulter }
-	skill = 6
-	attack_skill = 5
-	defense_skill = 4
-	planning_skill = 6
-	logistics_skill = 4
-}
 
-create_country_leader = {
-	name = "Yusuf Salman Yusuf"
-	desc = ""
-	picture = "gfx/leaders/SAU/Portrait_Arabia_Generic_navy_3.dds"
-	expire = "1965.1.1"
-	ideology = leninism
-	traits = {
-		#
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+

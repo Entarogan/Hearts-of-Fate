@@ -3,6 +3,7 @@ state={
 	id=610
 	name="STATE_610" # Jehol
 	manpower = 1975377
+local_supplies=0.0
 	
 	state_category = pastoral
 
@@ -12,7 +13,7 @@ state={
 		add_core_of = MAN
 		add_core_of = BEY
 		buildings = {
-			infrastructure = 4
+			infrastructure = 1
 		}
 
 	}

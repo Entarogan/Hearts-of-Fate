@@ -1,11 +1,11 @@
 idea_categories = {
 	special_politics = {
-		slot = kizoku_in
-		slot = sumitsu_in
-		slot = gaimu_daijin
-		slot = rikugun_daijin
-		slot = kaigun_daijin
-		slot = jinja_kyoku
+		character_slot  = special_first
+		character_slot  = special_second
+		character_slot  = special_third
+		character_slot  = special_fourth
+		character_slot  = special_fifth
+		character_slot  = special_sixth
 		ledger = all
 		
 		cost = 0
@@ -14,10 +14,10 @@ idea_categories = {
 }
 
 slot_ledgers = {
-	jinja_kyoku = civilian
-	daishin_in = civilian
-	rikugun_daijin = all
-	kaigun_daijin = all
-	kizoku_in = all
-	sumitsu_in = all
+	special_first = civilian
+	special_second = civilian
+	special_third = all
+	special_fourth = all
+	special_fifth = all
+	sumispecial_sixthsu_in = civilian
 }

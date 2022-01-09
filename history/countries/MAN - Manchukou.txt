@@ -176,157 +176,20 @@ set_popularities = {
 
 set_cosmetic_tag = MAN_Mantsu
 
-create_country_leader = {
-	name = "Shuten Doji"
-	
-	picture = "Portrait_shuten_doji.dds"
-	expire = "1960.1.1"
-	ideology = rexism
-	traits = {
-		Ghost_of_Showa
-	}
-}
+recruit_character = MAN_aisin_gioro_xiqia
+recruit_character = MAN_yoshiko_kawashima
+recruit_character = MAN_shuten_doji
+recruit_character = MAN_yamashita_tomoyuki
+recruit_character = MAN_tanaka_shizuichi
+recruit_character = MAN_okamura_yasuji
+recruit_character = MAN_mutaguchi_renya
+recruit_character = MAN_nishio_toshizo
+recruit_character = MAN_akasaka_saburo
+recruit_character = MAN_itagaki_seishiro
+recruit_character = MAN_ishiwara_kanji
+recruit_character = MAN_ma_shangzhi
+recruit_character = MAN_zhao_xiangying
 
-create_country_leader = {
-	name = "Shuten Doji"
-	
-	picture = "Portrait_shuten_doji.dds"
-	expire = "1960.1.1"
-	ideology = despotism
-	traits = {
-		Ghost_of_Showa
-	}
-}
-
-
-
-create_corps_commander = {
-	name = "Shuten Doji"  # 酒吞童子
-	picture = "Portrait_shuten_doji.dds"
-	traits = {infantry_officer infantry_leader trickster organizer }
-	skill = 4
-  id = 8007
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Yamashita Tomoyuki"
-		picture = "Portrait_MAN_Tomoyuki_Yamashita.png"
-	traits = {
-		trickster trait_engineer brilliant_strategist politically_connected
-	}
-	skill = 5
-	attack_skill = 4
-	defense_skill = 5
-	planning_skill = 3
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Tanaka Shizuichi"
-		picture = "Portrait_MAN_Shizuichi_Tanaka.png"
-	traits = { trickster career_officer infantry_officer }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Okamura Yasuji"
-		picture = "Portrait_MAN_Yasuji_Okamura.png"
-	traits = { trait_reckless trickster infantry_officer }
-	skill = 2
-	attack_skill = 4
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Mutaguchi Renya"
-		picture = "Portrait_MAN_Renya_Mutaguchi.png"
-	traits = { trait_reckless trickster armor_officer }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Nishio Toshizo" #Toshizo
-		picture = "Portrait_MAN_Toshizo_Nishio.png"
-	traits = { brilliant_strategist infantry_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Akasaka Saburo"
-	picture = "Portrait_JAP_Akasaka_Saburo.png"
-	traits = { JAP_samurai_lineage politically_connected commando trickster }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 2
-	id = 1505
-}
-
-create_corps_commander = {
-	name = "Itagaki Seishiro"
-	picture = "Portrait_JAP_Seishiro_Itagaki.png"
-	traits = { JAP_samurai_lineage inflexible_strategist trait_reckless }
-	skill = 3
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-	id = 1504
-}
-
-create_corps_commander = {
-	name = "Ishiwara Kanji"
-	picture = "Portrait_JAP_Kanji_Ishiwara.png"
-	traits = { JAP_samurai_lineage brilliant_strategist organizer }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-	id = 1503
-}
-
-create_corps_commander = {
-	name = "Aisin Gioro Xiqia"
-	GFX = "GFX_portrait_man_aisin_gioro_xiqia"
-	traits = { career_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Yoshiko Kawashima"
-	picture = "portrait_man_yoshiko_kawashima_army.dds"
-	traits = { cavalry_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 2
-	female = yes
-}
 
 1939.1.1 = {
 }

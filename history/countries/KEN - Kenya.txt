@@ -74,67 +74,16 @@ add_state_core = 707
 
 set_cosmetic_tag = KEN_EAP
 
-create_country_leader = {
-	
-	
-	name = "Dedan Ngwale"
-	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
-	expire = "1965.1.1"
-	ideology = centrism
-	traits = {
-		#
-	}
-
-}
-
-create_country_leader = {
-	
-	
-  name = "Rukuriri"
-	picture = "Portrait_Rukuriri.dds"
-	expire = "1965.1.1"
-	ideology = authoritarian_democracy
-	traits = {
-		#
-	}
-
-}
+recruit_character = KEN_dedan_ngwale
+recruit_character = KEN_rukuriri
 
 
-create_country_leader = {
-	
-	
-  name = "Rukuriri"
-	picture = "Portrait_Rukuriri.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		#
-	}
 
-}
 
-create_country_leader = {
-	
-  name = "Rukuriri"
-	picture = "Portrait_Rukuriri.dds"
-	expire = "1965.1.1"
-	ideology = totalist
-	traits = {
-		#
-	}
 
-}
 
-create_country_leader = {
-	
-  name = "Rukuriri"
-	picture = "Portrait_Rukuriri.dds"
-	expire = "1965.1.1"
-	ideology = nazism
-	traits = {
-		#
-	}
 
-}
+
+
+
 

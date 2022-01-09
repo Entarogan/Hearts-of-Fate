@@ -71,27 +71,6 @@ set_popularities = {
 }
 
 # Mohammad Hashim Khan (Prime Minister) other potential candidate
-create_country_leader = {
-	name = "Mohammed Zahir Shah"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Cemal Passha"
-	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
-	picture = "Portrait_Cemal_Passha.dds"
-	expire = "1965.1.1"
-	ideology = national_populist
-	traits = {
-		#
-	}
-}
 
 1939.1.1 = {
 	set_politics = {
@@ -107,13 +86,26 @@ create_country_leader = {
 	}
 }
 
-create_corps_commander = {
-	name = "Sardar Shah Wali Khan"
-	portrait_path = "gfx/leaders/SAU/Portrait_Arabia_Generic_land_3.dds"
-	traits = { desert_fox }
-	skill = 4
-	attack_skill = 5
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
+recruit_character = AFG_sardar_shah_wali_khan #将军
+recruit_character = AFG_mohammed_zahir_shah #领导人
+recruit_character = AFG_Cemal_Passha #领导人
+
+#原版内容
+recruit_character = AFG_yaqub_khan
+recruit_character = AFG_mihrdil_shahnawaz
+recruit_character = AFG_hares_muzafar
+recruit_character = AFG_asadullah_seraj_khan
+recruit_character = AFG_gholam_wali
+recruit_character = AFG_nasirullah_husain
+recruit_character = AFG_muhammad_amin_bughra
+recruit_character = AFG_azam_ataullah
+recruit_character = AFG_mohammed_daoud_khan
+recruit_character = AFG_renato_bardolucci
+recruit_character = AFG_ali_muhammed_khan
+recruit_character = AFG_mohammed_etemadi_khan
+recruit_character = AFG_aalem_daana
+recruit_character = AFG_wazir_akbar_khan
+recruit_character = AFG_mahmud_khan
+recruit_character = AFG_haji_faiz_muhammed_zikeria
+recruit_character = AFG_mohammad_hashim_khan
+recruit_character = AFG_muhammed_nowroz

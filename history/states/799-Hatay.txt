@@ -5,6 +5,7 @@ state={
 		12029 
 	}
 	manpower = 234379
+local_supplies=0.0
 	
 	state_category = enclave
 
@@ -16,7 +17,7 @@ state={
 			12029 1
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 		}
 
 		1938.9.30 = {

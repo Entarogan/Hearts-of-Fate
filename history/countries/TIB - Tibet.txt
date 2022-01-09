@@ -28,47 +28,5 @@ set_popularities = {
   communism = 5
 }
 
-create_country_leader = {
-	name = "Enciodes Silverash"
-	desc = "POLITICS_DESC"
-	picture = "Portrait_Enciodes_Silverash.dds"
-	expire = "1965.1.1"
-	ideology = authoritarian_democracy
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Enciodes Silverash"
-	desc = "POLITICS_DESC"
-	picture = "Portrait_Enciodes_Silverash.dds"
-	expire = "1965.1.1"
-	ideology = classical_liberalism
-	traits = {
-		#
-	}
-}
-
-
-create_country_leader = {
-	name = "Anya Silverash"
-	desc = "POLITICS_DESC"
-	picture = "Portrait_Anya_Silverash.dds"
-	expire = "1965.1.1"
-	ideology = totalist
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Anya Silverash"
-	desc = "POLITICS_DESC"
-	picture = "Portrait_Anya_Silverash.dds"
-	expire = "1965.1.1"
-	ideology = valkist
-	traits = {
-		#
-	}
-}
+recruit_character = TIB_enciodes_silverash
+recruit_character = TIB_anya_silverash

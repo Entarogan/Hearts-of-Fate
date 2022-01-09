@@ -2,6 +2,7 @@ state={
 	id=785
 	name="STATE_785"
 	manpower = 1580000
+local_supplies=0.0
 	
 	state_category = town
 	resources={
@@ -16,7 +17,7 @@ state={
 		owner = FRA
 		add_core_of = FRA
 		buildings = {
-			infrastructure = 8
+			infrastructure = 1
 			industrial_complex = 1
 		}
 	}
