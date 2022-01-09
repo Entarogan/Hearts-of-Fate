@@ -1,0 +1,74 @@
+﻿capital = 757
+
+oob = "TIB_1939"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+  electronic_mechanical_engineering = 1
+  radio = 1
+  radio_detection = 1
+
+  #industry
+  basic_machine_tools = 1
+  construction1 = 1
+  dispersed_industry = 1
+}
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 55
+  democratic = 40
+  communism = 5
+}
+
+create_country_leader = {
+	name = "Enciodes Silverash"
+	desc = "POLITICS_DESC"
+	picture = "Portrait_Enciodes_Silverash.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_democracy
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Enciodes Silverash"
+	desc = "POLITICS_DESC"
+	picture = "Portrait_Enciodes_Silverash.dds"
+	expire = "1965.1.1"
+	ideology = classical_liberalism
+	traits = {
+		#
+	}
+}
+
+
+create_country_leader = {
+	name = "Anya Silverash"
+	desc = "POLITICS_DESC"
+	picture = "Portrait_Anya_Silverash.dds"
+	expire = "1965.1.1"
+	ideology = totalist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Anya Silverash"
+	desc = "POLITICS_DESC"
+	picture = "Portrait_Anya_Silverash.dds"
+	expire = "1965.1.1"
+	ideology = valkist
+	traits = {
+		#
+	}
+}

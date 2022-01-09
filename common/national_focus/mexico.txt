@@ -34,8 +34,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -66,8 +66,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -105,8 +105,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -179,8 +179,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -217,8 +217,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -248,8 +248,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -280,8 +280,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -315,8 +315,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -354,8 +354,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -459,8 +459,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -508,8 +508,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -557,8 +557,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -599,8 +599,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -637,8 +637,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -673,8 +673,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -731,8 +731,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -762,8 +762,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -795,8 +795,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -839,8 +839,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -874,8 +874,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -937,8 +937,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1003,8 +1003,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1049,9 +1049,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			every_state = {
@@ -1093,8 +1093,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1146,8 +1146,8 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 		
 		completion_reward = {
@@ -1264,8 +1264,8 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1301,8 +1301,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1365,8 +1365,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1444,8 +1444,8 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1640,8 +1640,8 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1741,8 +1741,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1788,8 +1788,8 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1880,9 +1880,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 		
 		completion_reward = {
 			
@@ -1944,8 +1944,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 		
 		completion_reward = {
@@ -2014,8 +2014,8 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2106,8 +2106,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2159,8 +2159,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2192,8 +2192,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2261,8 +2261,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2339,8 +2339,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2372,8 +2372,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2406,8 +2406,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2438,8 +2438,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2483,8 +2483,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2518,8 +2518,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2581,8 +2581,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2614,8 +2614,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2650,8 +2650,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2694,8 +2694,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2759,8 +2759,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2801,8 +2801,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2850,8 +2850,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2892,8 +2892,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2926,8 +2926,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -2965,8 +2965,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3027,8 +3027,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3063,8 +3063,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3105,8 +3105,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3155,8 +3155,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3189,8 +3189,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3220,9 +3220,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			every_state = {
@@ -3265,8 +3265,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3393,8 +3393,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3425,8 +3425,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3460,8 +3460,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3505,8 +3505,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3543,8 +3543,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3592,8 +3592,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3631,8 +3631,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3674,8 +3674,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3709,8 +3709,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3767,8 +3767,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3848,8 +3848,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3889,8 +3889,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -4037,8 +4037,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -4073,8 +4073,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -4144,8 +4144,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -4231,8 +4231,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -4315,8 +4315,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {			
@@ -4464,9 +4464,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			unlock_decision_category_tooltip = MEX_category_hispanic_solidarity
@@ -4542,8 +4542,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -4587,8 +4587,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -4696,9 +4696,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_ideas = MEX_idea_vanguard_of_the_4th_international
@@ -4753,9 +4753,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_named_threat = {
@@ -4917,9 +4917,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			every_other_country = { #first ask faction leaders to disband communist factions and join Trotsky, then ask the communist minors to join
@@ -4980,9 +4980,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 		
 		completion_reward = {
 		
@@ -5033,8 +5033,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -5135,8 +5135,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -5237,8 +5237,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -5469,8 +5469,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -5502,8 +5502,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -5603,8 +5603,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -5770,8 +5770,8 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -5849,8 +5849,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -5909,8 +5909,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -6104,8 +6104,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -6163,8 +6163,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -6229,8 +6229,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -6295,8 +6295,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -6355,8 +6355,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -6413,8 +6413,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -6465,8 +6465,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -6509,8 +6509,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -6556,8 +6556,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -6599,8 +6599,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -6648,8 +6648,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -6701,8 +6701,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -6766,8 +6766,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -6810,8 +6810,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -6842,8 +6842,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -6882,9 +6882,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_political_power = 50
@@ -6913,9 +6913,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_ideas = {
@@ -6949,9 +6949,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_ideas = {
@@ -6985,9 +6985,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_stability = 0.30
@@ -7017,9 +7017,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			every_country = {
@@ -7065,9 +7065,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_ideas = {
@@ -7102,9 +7102,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_research_slot = 1
@@ -7140,9 +7140,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_ideas = {
@@ -7175,9 +7175,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			set_cosmetic_tag = MEX_Aztec
@@ -7208,9 +7208,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -7244,9 +7244,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 		    add_ideas = {
@@ -7278,9 +7278,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_political_power = 200
@@ -7310,9 +7310,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			army_experience = 150
@@ -7347,9 +7347,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			army_experience = 150
@@ -7387,9 +7387,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_ideas = {
@@ -7420,9 +7420,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_ideas = {
@@ -7454,9 +7454,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			ENG = { country_event = { id = gsk_mexico.6} }
@@ -7486,9 +7486,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			USA = { country_event = { id = gsk_mexico.6} }
@@ -7522,9 +7522,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -7557,9 +7557,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -7592,9 +7592,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_ideas = {
@@ -7623,9 +7623,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -7664,9 +7664,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 		will_lead_to_war_with = ENG
 		will_lead_to_war_with = FRA
 		will_lead_to_war_with = GER
@@ -7787,9 +7787,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			create_wargoal = {
@@ -7849,9 +7849,9 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			BRA = { country_event = { id = gsk_mexico.6 } }
@@ -7912,8 +7912,8 @@ focus_tree = {
 			
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {

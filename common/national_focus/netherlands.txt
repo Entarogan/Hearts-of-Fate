@@ -4714,7 +4714,7 @@ focus_tree = {
 		available = {
 			NOT = { has_war_with = FRA }
 			FRA = {
-				has_completed_focus = FRA_humanite_unie
+				#has_completed_focus = FRA_humanite_unie
 				is_faction_leader = yes
 			}
 		}
@@ -5104,7 +5104,7 @@ focus_tree = {
 			}
 		}
 
-		available_if_capitulated = no
+		
 
 		completion_reward = {
 			if = {
@@ -5436,7 +5436,7 @@ focus_tree = {
 			has_full_control_of_state = 34
 			has_full_control_of_state = 8
 		}
-		cancel_if_invalid = yes
+		
 		prerequisite = { focus = HOL_revive_the_buffer_state_proposal }
 		icon = GFX_goal_generic_construct_civilian
 		x = 0
@@ -5444,7 +5444,7 @@ focus_tree = {
 		relative_position_id = HOL_revive_the_buffer_state_proposal
 		cost = 5
 
-		available_if_capitulated = no
+		
 
 		completion_reward = {
 			6 = {
@@ -5527,7 +5527,7 @@ focus_tree = {
 				}
 				AND = {
 					NOT = { has_war_with = GER }
-					GER = { has_completed_focus = GER_revive_the_kaiserreich }
+					#GER = { has_completed_focus = GER_revive_the_kaiserreich }
 				}
 			}
 		}
@@ -5545,7 +5545,7 @@ focus_tree = {
 				limit = {
 					is_in_faction = yes
 					NOT = { has_war_with = GER }
-					GER = { has_completed_focus = GER_revive_the_kaiserreich }
+					#GER = { has_completed_focus = GER_revive_the_kaiserreich }
 				}
 				leave_faction = yes
 				GER = { country_event = { id = generic.2 } }
@@ -5554,7 +5554,7 @@ focus_tree = {
 				limit = {
 					is_in_faction = no
 					NOT = { has_war_with = GER }
-					GER = { has_completed_focus = GER_revive_the_kaiserreich }
+					#GER = { has_completed_focus = GER_revive_the_kaiserreich }
 				}
 				GER = { country_event = { id = generic.2 } }
 			}
@@ -5627,7 +5627,7 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = { has_war_with = GER }
-					NOT = { GER = { has_completed_focus = GER_revive_the_kaiserreich } }
+					#NOT = { GER = { has_completed_focus = GER_revive_the_kaiserreich } }
 				}
 				effect_tooltip = {
 					every_country = {

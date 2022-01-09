@@ -11,12 +11,12 @@ ira_oil_exploitation = {
 		available = {
 			has_full_control_of_state = 291
 			has_tech = excavation2
-      NOT = { has_global_flag = Baghdad_oil_exploited_1 }
+			NOT = { has_global_flag = Baghdad_oil_exploited_1 }
 		}
     
-    visible = {
-      NOT = { has_global_flag = Baghdad_oil_exploited_1 }
-    }
+		visible = {
+			NOT = { has_global_flag = Baghdad_oil_exploited_1 }
+		}
 
 
 		fire_only_once = yes
@@ -39,7 +39,7 @@ ira_oil_exploitation = {
 					amount = 20
 				}
 			}
-      set_global_flag = Baghdad_oil_exploited_1
+		set_global_flag = Baghdad_oil_exploited_1
 		}
 	}
     

@@ -90,13 +90,13 @@ focus_tree = {
 	focus = {
 		id = ira_ishtar_oil_company
 		icon = GFX_goal_generic_oil_refinery
-		cost = 10.00
+		cost = 8.00
 		x = 34
 		y = 0
     ai_will_do = {
       factor = 6
     }
-    available_if_capitulated = no
+    
     available = {
       676 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
       291 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
@@ -236,6 +236,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = ira_reaffirm_MacMahon
     available = {
+      or = {
+        threat > 0.25
+        date > 1937.6.1      
+      }
       NOT = { is_in_faction_with = SAU }
     }
     completion_reward = {
@@ -327,7 +331,7 @@ focus_tree = {
 	focus = {
 		id = ira_urbanize_the_south
 		icon = GFX_goal_generic_construct_civilian
-		cost = 6.00
+		cost = 7.00
 		prerequisite = {
 			focus = ira_stronghold_metropolis
 		}
@@ -421,7 +425,7 @@ focus_tree = {
 		relative_position_id = ira_aramic_education
     available = {
       fascism > 0.29
-      war_support > 0.40
+      has_war_support > 0.40
     }
     ai_will_do = {
       factor = 6
@@ -447,6 +451,11 @@ focus_tree = {
     ai_will_do = {
       factor = 2
       modifier = {
+        factor = 0
+        FRA = { has_war = no } 
+      }
+      modifier = {
+        factor = 10
         OR = { 
           FRA = { has_war_with = ENG }
           FRA = { has_war_with = GER }
@@ -491,9 +500,9 @@ focus_tree = {
       create_corps_commander = {
         name = "Barzan"
         picture = "Portrait_Barzan.dds"
-        traits = {  organizer  urban_assault_specialist  ambusher career_officer reckless }
+        traits = { organizer urban_assault_specialist career_officer trait_reckless }
         skill = 4
-        attack_skill = 3
+        attack_skill = 4
         defense_skill = 2
         planning_skill = 4
         logistics_skill = 3
@@ -672,6 +681,10 @@ focus_tree = {
       }
     }
     available = {
+      or = {
+        threat > 0.30
+        date > 1938.1.1      
+      }
       is_subject = no
     }
 		x = -1
@@ -725,7 +738,7 @@ focus_tree = {
 	focus = {
 		id = ira_expand_to_black_sea
 		icon = GFX_goal_generic_occupy_states_coastal
-		cost = 7.00
+		cost = 8.00
 		prerequisite = {
 			focus = ira_renounce_Treaty_of_Lausanne
 		}
@@ -841,7 +854,7 @@ focus_tree = {
       add_state_core = 656
       hidden_effect = {
         455 = {
-          CONTROLLER = {
+          controller = {
             if = {
               limit = { NOT = { is_in_faction_with = IRQ } }
               add_ai_strategy = {
@@ -853,7 +866,7 @@ focus_tree = {
           }
         }
         453 = {
-          CONTROLLER = {
+          controller = {
             if = {
               limit = { NOT = { is_in_faction_with = IRQ } }
               add_ai_strategy = {
@@ -872,7 +885,7 @@ focus_tree = {
 	focus = {
 		id = ira_kurdistan_local_arsenal
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 5.00
+		cost = 8.00
 		prerequisite = {
 			focus = ira_ally_kurds
 		}
@@ -993,6 +1006,14 @@ focus_tree = {
         factor = 0
       }
     }
+
+		available = { 
+      or = {
+        threat > 0.35
+        date > 1938.3.1      
+      }
+		}
+
     completion_reward = {
       339 = {
         CONTROLLER = {
@@ -1074,7 +1095,7 @@ focus_tree = {
 	focus = {
 		id = ira_reconstruct_Assyrian_Triangle
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 6.00
+		cost = 10.00
 		prerequisite = {
 			focus = ira_Kha_b_Nisan
 		}
@@ -1140,7 +1161,7 @@ focus_tree = {
 	focus = {
 		id = ira_fortify_Bosporus
 		icon = GFX_goal_generic_defence
-		cost = 5.00
+		cost = 7.00
 		prerequisite = {
 			focus = ira_rule_lydia
 		}
@@ -1187,7 +1208,7 @@ focus_tree = {
 	focus = {
 		id = ira_mediterrean_navy
 		icon = GFX_goal_generic_construct_naval_dockyard
-		cost = 6.00
+		cost = 8.00
 		prerequisite = {
 			focus = ira_demand_syria
 		}
@@ -1338,9 +1359,9 @@ focus_tree = {
     completion_reward = {
       add_tech_bonus = {
         name = ira_hanging_garden_of_babylon
-        bonus = 2.5
-        ahead_reduction = 3
-        uses = 3
+        bonus = 1.0
+        ahead_reduction = 2
+        uses = 2
         category = cat_strategic_bomber
       }
       add_tech_bonus = {
@@ -1365,6 +1386,7 @@ focus_tree = {
 			focus = ira_absorb_a_greater_kurdistan
 		}
     available = {
+      date > 1940.1.1
       has_country_leader = { name = "Semiramis" ruling_only = yes }
     }
     ai_will_do = {
@@ -1641,7 +1663,7 @@ focus_tree = {
 	focus = {
 		id = ira_wall_of_babylon
 		icon = GFX_goal_generic_construct_military
-		cost = 6.00
+		cost = 8.00
 		prerequisite = {
 			focus = ira_stronghold_metropolis
 		}
@@ -1820,7 +1842,7 @@ focus_tree = {
 	focus = {
 		id = ira_Mesopotamia_railway
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 5.00
+		cost = 7.00
 		prerequisite = {
 			focus = ira_stronghold_metropolis
 		}
@@ -2114,7 +2136,7 @@ focus_tree = {
 	focus = {
 		id = ira_star_of_shamash
 		icon = GFX_focus_Star_of_shamash
-		cost = 5.00
+		cost = 8.00
 		prerequisite = {
 			focus = ira_army_training
 		}
@@ -2184,9 +2206,9 @@ focus_tree = {
     completion_reward = {
       add_tech_bonus = {
 				name = ira_national_industrial_stimulus
-				bonus = 1.5
+				bonus = 1.0
 				uses = 2
-        ahead_reduction = 2
+        ahead_reduction = 1.0
 				category = industry
 			}
     }
@@ -2324,7 +2346,7 @@ focus_tree = {
 	focus = {
 		id = ira_his_majestys_arsenal
 		icon = GFX_goal_generic_army_artillery
-		cost = 6.00
+		cost = 10.00
 		prerequisite = {
 			focus = ira_gate_of_babylon
 		}
@@ -2686,7 +2708,9 @@ focus_tree = {
             bonus = 1.0
             uses = 1
             ahead_reduction = 1.0
-            category = ira_aviation_industry_group
+            category = light_fighter
+            category = naval_bomber
+            category = cas_bomber
           }
       }
 			completion_reward = {
@@ -2868,6 +2892,14 @@ focus_tree = {
 		}
     ai_will_do = {
       factor = 4
+			modifier = {
+				factor = 0
+			  ENG = { has_war = no }
+			}
+			modifier = {
+				factor = 0
+			  FRA = { has_war = no }
+			}
     }
     available = {
       is_subject = no
@@ -2950,7 +2982,7 @@ focus_tree = {
 	focus = {
 		id = ira_persian_gulf_fleet
 		icon = GFX_goal_generic_navy_battleship
-		cost = 5.00
+		cost = 6.00
 		prerequisite = {
 			focus = ira_national_industrial_stimulus
 		}
@@ -3039,7 +3071,6 @@ focus_tree = {
         uses = 3
         ahead_reduction = 1.0
         category = support_tech
-        category = hospital_tech
       } 
     }
 
@@ -3064,8 +3095,8 @@ focus_tree = {
       add_tech_bonus = {
         name = ira_eastern_mountainer_training
         bonus = 1.0
-        uses = 2
-        ahead_reduction = 2.5
+        uses = 1
+        ahead_reduction = 2.0
         category = mountaineers_tech
       } 
     }
@@ -3090,9 +3121,9 @@ focus_tree = {
     completion_reward = {
       add_tech_bonus = {
         name = ira_assyrian_siege_tanks
-        bonus = 2.0
+        bonus = 1.0
         uses = 1
-        ahead_reduction = 2.5
+        ahead_reduction = 2.0
         category = armor
       } 
       if = {
@@ -3130,7 +3161,7 @@ focus_tree = {
       add_tech_bonus = {
         name = ira_Boat_of_Heaven_Maanna
         bonus = 1.5
-        ahead_reduction = 2.0
+        ahead_reduction = 1.0
         uses = 3
         category = tactical_bomber
         category = cas_bomber
@@ -3165,11 +3196,11 @@ focus_tree = {
       create_corps_commander = {
         name = "Flueger"
         picture = "Portrait_Flueger.dds"
-        traits = {  adaptable organizer politically_connected  urban_assault_specialist ambusher trickster }
+        traits = { organizer politically_connected  urban_assault_specialist trickster }
         skill = 4
         attack_skill = 4
-        defense_skill = 4
-        planning_skill = 4
+        defense_skill = 3
+        planning_skill = 3
         logistics_skill = 3
       }
     }
@@ -3192,7 +3223,7 @@ focus_tree = {
       add_tech_bonus = {
         name = ira_Boat_of_Heaven_Maanna
         bonus = 1.5
-        ahead_reduction = 2.0
+        ahead_reduction = 1.0
         uses = 2
         category = light_fighter
         category = cat_heavy_fighter

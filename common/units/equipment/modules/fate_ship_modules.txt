@@ -24,4 +24,5 @@ equipment_modules = {
 		}
 		critical_parts = { damaged_heavy_guns }
 	}
+}
 	

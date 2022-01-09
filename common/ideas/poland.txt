@@ -94,7 +94,7 @@ country = {
 			
 			modifier = {
 				operative_slot = 1
-        special_forces_min = 60
+        special_forces_min = 10
         special_forces_attack_factor = 0.10
         special_forces_defence_factor = 0.10
 			}
@@ -267,7 +267,7 @@ country = {
 			modifier = {
                 mobilization_laws_cost_factor = -0.20
                 mobilization_speed = 0.1
-		        conscription = 0.02
+		        conscription_factor = 0.1
 			}
 
 		}
@@ -558,8 +558,8 @@ country = {
 		picture = generic_manpower_bonus
 		
 		modifier = {
-			conscription = 0.05
-			war_support_factor = 0.10
+			conscription = 0.03
+			war_support_factor = 0.15
 			training_time_factor = -0.20
 			resistance_damage_to_garrison = -0.20 
 		}

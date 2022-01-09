@@ -1,21 +1,23 @@
 ﻿capital = 743
 
-oob = "NEA_1936"
+oob = "FTC_1936"
 
 set_stability = 0.7
 set_war_support = 0.6
-set_research_slots = 1
+set_research_slots = 2
 
 set_technology = {
 	infantry_weapons = 1
 
 }
-add_opinion_modifier = {
-	target = PRC modifier = tacit_agreement
-}
+
 add_opinion_modifier = {
 	target = CHI modifier = hostile_status
 }
+
+
+add_ideas = { idea_man_railway }
+
 set_popularities = {
 	democratic = 0
 	fascism = 0
@@ -31,78 +33,48 @@ set_politics = {
 	elections_allowed = no
 }
 add_ideas = {
-	closed_economy
+	export_focus
 	extensive_conscription
 	partial_economic_mobilisation
 }
 
-create_country_leader = {
-	name = "张学良"
-	desc = "POLITICS_ZHANG_XUELIANG_DESC"
-	picture = "Portrait_Zhang_Xueliang.dds"
-	expire = "1938.1.20"
-	ideology = despotism
-}
-create_country_leader = {
-	name = "张学良"
-	desc = "POLITICS_ZHANG_XUELIANG_DESC"
-	picture = "Portrait_Zhang_Xueliang.dds"
-	expire = "1938.1.20"
-	ideology = marxism
+give_military_access = JAP
+give_military_access = RUS
+
+add_ideas = {
+	CHI_warlord_idea
+	CHI_army_corruption_1
+    CHI_incompetent_officers
 }
 
 create_country_leader = {
-	name = "张学良"
-	desc = "POLITICS_ZHANG_XUELIANG_DESC"
-	picture = "Portrait_Zhang_Xueliang.dds"
+	name = "Hong Meiling"
+	desc = "POLITICS_HONG_MEILING_DESC"
+	picture = "Portrait_Hong_Meiling.dds"
 	expire = "1938.1.20"
-	ideology = rexism
+	ideology = authoritarian_democracy
 }
+
 create_country_leader = {
-	name = "张学良"
-	desc = "POLITICS_ZHANG_XUELIANG_DESC"
-	picture = "Portrait_Zhang_Xueliang.dds"
+	name = "Hong Meiling"
+	desc = "POLITICS_HONG_MEILING_DESC"
+	picture = "Portrait_Hong_Meiling.dds"
 	expire = "1938.1.20"
 	ideology = conservatism
 }
+
 create_country_leader = {
-	name = "张学良"
-	desc = "POLITICS_ZHANG_XUELIANG_DESC"
-	picture = "Portrait_Zhang_Xueliang.dds"
+	name = "Hong Meiling"
+	desc = "POLITICS_HONG_MEILING_DESC"
+	picture = "Portrait_Hong_Meiling.dds"
 	expire = "1938.1.20"
-	ideology = n_socialism_ideology
+	ideology = totalist
 }
 
-
-create_field_marshal = {
-	name = "张学良"
-	portrait_path = "gfx/leaders/NEA/Portrait_Zhang_Xueliang.dds"
-	traits = { logistics_wizard }
-	skill = 3
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 3
-}
-create_field_marshal = {
-	name = "杨虎城"
-	portrait_path = "gfx/leaders/NEA/Portrait_Yang_Hucheng.dds"
-	id = 3001
-	traits = {  }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 1
-}
-#NOT NOW
-create_corps_commander = {
-	name = "何柱国"
-	portrait_path = "gfx/leaders/NEA/Portrait_He_Zhuguo.dds"
-	traits = {cavalry_officer }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
+create_country_leader = {
+	name = "Hong Meiling"
+	desc = "POLITICS_HONG_MEILING_DESC"
+	picture = "Portrait_Hong_Meiling.dds"
+	expire = "1938.1.20"
+	ideology = valkist
 }

@@ -50,15 +50,31 @@ CHI_army_reform = {
 		icon = generic_prepare_civil_war
 
 		available = {
-			has_army_experience > 99
-			has_completed_focus = CHI_army_reform
+      or = {
+        has_army_experience > 99
+        AND = {
+          is_ai = yes
+          any_enemy_country = {
+            or = {
+              tag = BEY
+              tag = CHI
+              is_major = yes
+            }
+          }
+          or = {
+            JAP = { is_ai = no }
+            surrender_progress > 0.05
+            casualties > 75000
+          }
+        }
+      }
 		}
 
 		cost = 0
 		ai_will_do = {
-			factor = 500
+			factor = 1500
 		}
-		days_remove = 90
+		days_remove = 30
 
 		visible = {
 			OR = {
@@ -88,14 +104,59 @@ CHI_army_reform = {
 			}
 		}
 		complete_effect = {
-			army_experience = -100						
+
+			add_tech_bonus = {
+				name = CHI_army_reform
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+
+      if = {
+        limit = {
+          is_ai = yes
+          any_enemy_country = {
+            is_ai = no
+            or = {
+              tag = BEY
+              tag = CHI
+              is_major = yes
+            }
+          }
+          or = {
+            JAP = { is_ai = no }
+            surrender_progress > 0.05
+            casualties > 75000
+          }
+        }
+        army_experience = 100
+
+      }
+
+			army_experience = -100	
 		}		
 	}
 
 	CHI_lessons_of_war = {
 		icon = generic_army_support
 		available = {
-			has_army_experience > 199
+      or = {
+        has_army_experience > 199
+        AND = {
+          is_ai = yes
+          any_enemy_country = {
+            or = {
+              tag = JAP
+              is_major = yes
+            }
+          }
+          or = {
+            JAP = { is_ai = no }
+            surrender_progress > 0.3
+            casualties > 450000
+          }
+        }
+      }
 			has_idea = CHI_incompetent_officers
 			if = {
 				limit = { has_idea = CHI_army_corruption_1 }
@@ -130,11 +191,45 @@ CHI_army_reform = {
 
 		visible = {
 			has_idea = CHI_incompetent_officers
-			has_completed_focus = CHI_army_reform
 		}
 
 		complete_effect = {
+
+      if = {
+        limit = {
+          is_ai = yes
+          any_enemy_country = {
+            or = {
+              tag = JAP
+              is_major = yes
+            }
+          }
+          or = {
+            JAP = { is_ai = no }
+            surrender_progress > 0.3
+            casualties > 450000
+          }
+        }
+        army_experience = 200
+
+        add_equipment_to_stockpile = { type = light_tank_equipment amount = 200 }
+        add_equipment_to_stockpile = { type = motorized_equipment amount = 200 }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 1000 }
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 20000 }
+        add_equipment_to_stockpile = { type = support_equipment amount = 1000 }
+        add_equipment_to_stockpile = { type = fighter_equipment amount = 200 }
+
+      }
+
 			army_experience = -200
+
+			add_tech_bonus = {
+				name = CHI_lessons_of_war
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+
 			remove_ideas = CHI_incompetent_officers
 			set_country_flag = CHI_lessons_of_war_completed
 		}		
@@ -177,9 +272,9 @@ CHI_army_reform = {
 			
 		}
 
-		cost = 90
+		cost = 50
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 		fire_only_once = yes
 
@@ -194,6 +289,36 @@ CHI_army_reform = {
 		}
 
 		complete_effect = {
+
+		add_equipment_to_stockpile = { 
+			type = infantry_equipment_1
+			amount = 5000
+			producer = GER
+		}
+		add_equipment_to_stockpile = { 
+			type = support_equipment
+			amount = 250
+			producer = GER 
+		}
+
+		add_equipment_to_stockpile = { 
+			type = artillery_equipment_1
+			amount = 300
+			producer = GER 
+		}
+
+		add_equipment_to_stockpile = { 
+			type = anti_tank_equipment_1
+			amount = 120
+			producer = GER 
+		}
+
+		add_equipment_to_stockpile = { 
+			type = anti_air_equipment_1
+			amount = 100
+			producer = GER 
+		}
+
 			activate_mission = CHI_bolster_our_ranks
 		}		
 	}
@@ -211,7 +336,7 @@ economy_decisions = {
 
 		cost = 100
 		ai_will_do = {
-			factor = 1
+			factor = 100
 			modifier = {
 				OR = {
 					has_idea = CHI_hyper_inflation_none
@@ -262,10 +387,10 @@ war_measures = {
 			}
 		}
 
-		cost = 25
+		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 
 		visible = {			
@@ -320,7 +445,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 283
 		}
 		visible = {
@@ -331,7 +456,7 @@ CHI_industrial_evacuations = {
 		}
 
 		fire_only_once = yes
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -351,10 +476,7 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					set_variable = {
 						var = ic_level
@@ -364,10 +486,7 @@ CHI_industrial_evacuations = {
 						var = ic_to_move
 						value = industrial_complex_level
 					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_IC
@@ -400,10 +519,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 283.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 283.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -442,10 +561,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 283.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 283.af_to_move
 										instant_build = yes
 									}
 								}
@@ -471,10 +590,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 283.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 283.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -513,10 +632,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 283.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 283.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -529,7 +648,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -543,7 +662,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 591
 		}
 		visible = {
@@ -555,7 +674,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -575,10 +694,7 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					set_variable = {
 						var = ic_level
@@ -588,10 +704,7 @@ CHI_industrial_evacuations = {
 						var = ic_to_move
 						value = industrial_complex_level
 					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_IC
@@ -624,10 +737,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 591.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 591.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -666,10 +779,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 591.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 591.af_to_move
 										instant_build = yes
 									}
 								}
@@ -695,10 +808,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 591.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 591.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -737,10 +850,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 591.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 591.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -753,7 +866,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -767,7 +880,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 592
 		}
 
@@ -780,7 +893,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -800,10 +913,7 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					set_variable = {
 						var = ic_level
@@ -813,10 +923,7 @@ CHI_industrial_evacuations = {
 						var = ic_to_move
 						value = industrial_complex_level
 					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_IC
@@ -849,10 +956,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 592.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 592.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -891,10 +998,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 592.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 592.af_to_move
 										instant_build = yes
 									}
 								}
@@ -920,10 +1027,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 592.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 592.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -962,10 +1069,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 592.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 592.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -978,7 +1085,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -992,7 +1099,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 593
 		}
 
@@ -1005,7 +1112,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -1025,10 +1132,7 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					set_variable = {
 						var = ic_level
@@ -1038,10 +1142,7 @@ CHI_industrial_evacuations = {
 						var = ic_to_move
 						value = industrial_complex_level
 					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_IC
@@ -1074,10 +1175,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 593.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 593.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -1116,10 +1217,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 593.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 593.af_to_move
 										instant_build = yes
 									}
 								}
@@ -1145,10 +1246,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 593.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 593.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -1187,10 +1288,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 593.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 593.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -1203,7 +1304,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -1217,7 +1318,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 594
 		}
 
@@ -1230,7 +1331,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -1250,10 +1351,7 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					set_variable = {
 						var = ic_level
@@ -1263,10 +1361,7 @@ CHI_industrial_evacuations = {
 						var = ic_to_move
 						value = industrial_complex_level
 					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_IC
@@ -1299,10 +1394,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 594.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 594.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -1341,10 +1436,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 594.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 594.af_to_move
 										instant_build = yes
 									}
 								}
@@ -1370,10 +1465,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 594.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 594.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -1412,10 +1507,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 594.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 594.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -1428,7 +1523,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -1442,7 +1537,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 595
 		}
 
@@ -1455,7 +1550,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -1475,10 +1570,7 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					set_variable = {
 						var = ic_level
@@ -1488,10 +1580,7 @@ CHI_industrial_evacuations = {
 						var = ic_to_move
 						value = industrial_complex_level
 					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_IC
@@ -1524,10 +1613,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 595.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 595.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -1566,10 +1655,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 595.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 595.af_to_move
 										instant_build = yes
 									}
 								}
@@ -1595,10 +1684,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 595.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 595.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -1637,10 +1726,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 595.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 595.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -1653,7 +1742,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -1667,7 +1756,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 596
 		}
 
@@ -1680,7 +1769,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -1700,10 +1789,7 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					set_variable = {
 						var = ic_level
@@ -1713,10 +1799,7 @@ CHI_industrial_evacuations = {
 						var = ic_to_move
 						value = industrial_complex_level
 					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_IC
@@ -1749,10 +1832,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 596.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 596.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -1791,10 +1874,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 596.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 596.af_to_move
 										instant_build = yes
 									}
 								}
@@ -1820,10 +1903,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 596.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 596.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -1862,10 +1945,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 596.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 596.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -1878,7 +1961,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -1892,7 +1975,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 597
 		}
 
@@ -1905,7 +1988,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -1925,10 +2008,7 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					set_variable = {
 						var = ic_level
@@ -1938,10 +2018,7 @@ CHI_industrial_evacuations = {
 						var = ic_to_move
 						value = industrial_complex_level
 					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_IC
@@ -1974,10 +2051,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 597.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 597.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -2016,10 +2093,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 597.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 597.af_to_move
 										instant_build = yes
 									}
 								}
@@ -2045,10 +2122,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 597.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 597.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -2087,10 +2164,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 597.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 597.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -2103,7 +2180,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -2117,7 +2194,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 598
 		}
 		visible = {
@@ -2129,7 +2206,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -2149,10 +2226,7 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					set_variable = {
 						var = ic_level
@@ -2162,10 +2236,7 @@ CHI_industrial_evacuations = {
 						var = ic_to_move
 						value = industrial_complex_level
 					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
+
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_IC
@@ -2198,10 +2269,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 598.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 598.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -2240,10 +2311,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 598.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 598.af_to_move
 										instant_build = yes
 									}
 								}
@@ -2269,10 +2340,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 598.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 598.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -2311,10 +2382,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 598.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 598.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -2327,7 +2398,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -2341,7 +2412,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 599
 		}
 
@@ -2354,7 +2425,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -2374,10 +2445,6 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
 	
 					set_variable = {
 						var = ic_level
@@ -2386,10 +2453,6 @@ CHI_industrial_evacuations = {
 					set_variable = {
 						var = ic_to_move
 						value = industrial_complex_level
-					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
 					}
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
@@ -2423,10 +2486,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 599.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 599.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -2465,10 +2528,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 599.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 599.af_to_move
 										instant_build = yes
 									}
 								}
@@ -2494,10 +2557,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 599.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 599.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -2536,10 +2599,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 599.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 599.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -2552,7 +2615,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -2566,7 +2629,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 600
 		}
 
@@ -2579,7 +2642,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -2599,10 +2662,6 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
 	
 					set_variable = {
 						var = ic_level
@@ -2611,10 +2670,6 @@ CHI_industrial_evacuations = {
 					set_variable = {
 						var = ic_to_move
 						value = industrial_complex_level
-					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
 					}
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
@@ -2648,10 +2703,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 600.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 600.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -2690,10 +2745,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 600.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 600.af_to_move
 										instant_build = yes
 									}
 								}
@@ -2719,10 +2774,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 600.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 600.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -2761,10 +2816,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 600.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 600.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -2777,7 +2832,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -2791,7 +2846,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}	
-		highlight_states = {
+		highlight_state_targets = {
 			state = 602
 		}
 		visible = {
@@ -2803,7 +2858,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -2823,10 +2878,6 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
 	
 					set_variable = {
 						var = ic_level
@@ -2835,10 +2886,6 @@ CHI_industrial_evacuations = {
 					set_variable = {
 						var = ic_to_move
 						value = industrial_complex_level
-					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
 					}
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
@@ -2872,10 +2919,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 602.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 602.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -2914,10 +2961,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 602.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 602.af_to_move
 										instant_build = yes
 									}
 								}
@@ -2943,10 +2990,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 602.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 602.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -2985,10 +3032,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 602.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 602.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -3001,7 +3048,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -3022,13 +3069,13 @@ CHI_industrial_evacuations = {
 				is_controlled_by = ROOT
 			}			
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 606
 		}
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -3048,10 +3095,6 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
 	
 					set_variable = {
 						var = ic_level
@@ -3060,10 +3103,6 @@ CHI_industrial_evacuations = {
 					set_variable = {
 						var = ic_to_move
 						value = industrial_complex_level
-					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
 					}
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
@@ -3097,10 +3136,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 606.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 606.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -3139,10 +3178,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 606.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 606.af_to_move
 										instant_build = yes
 									}
 								}
@@ -3168,10 +3207,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 606.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 606.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -3210,10 +3249,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 606.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 606.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -3226,7 +3265,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -3240,7 +3279,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 607
 		}
 		visible = {
@@ -3252,7 +3291,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -3272,10 +3311,6 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
 	
 					set_variable = {
 						var = ic_level
@@ -3284,10 +3319,6 @@ CHI_industrial_evacuations = {
 					set_variable = {
 						var = ic_to_move
 						value = industrial_complex_level
-					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
 					}
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
@@ -3321,10 +3352,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 607.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 607.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -3363,10 +3394,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 607.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 607.af_to_move
 										instant_build = yes
 									}
 								}
@@ -3392,10 +3423,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 607.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 607.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -3434,10 +3465,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 607.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 607.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -3450,7 +3481,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -3464,7 +3495,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 608
 		}
 
@@ -3477,7 +3508,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -3497,10 +3528,6 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
 	
 					set_variable = {
 						var = ic_level
@@ -3509,10 +3536,6 @@ CHI_industrial_evacuations = {
 					set_variable = {
 						var = ic_to_move
 						value = industrial_complex_level
-					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
 					}
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
@@ -3546,10 +3569,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 608.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 608.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -3588,10 +3611,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 608.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 608.af_to_move
 										instant_build = yes
 									}
 								}
@@ -3617,10 +3640,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 608.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 608.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -3659,10 +3682,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 608.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 608.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -3675,7 +3698,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -3689,7 +3712,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 613
 		}
 		visible = {
@@ -3701,7 +3724,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -3721,10 +3744,6 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
 	
 					set_variable = {
 						var = ic_level
@@ -3733,10 +3752,6 @@ CHI_industrial_evacuations = {
 					set_variable = {
 						var = ic_to_move
 						value = industrial_complex_level
-					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
 					}
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
@@ -3770,10 +3785,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 613.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 613.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -3812,10 +3827,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 613.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 613.af_to_move
 										instant_build = yes
 									}
 								}
@@ -3841,10 +3856,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 613.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 613.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -3883,10 +3898,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 613.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 613.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -3899,7 +3914,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -3913,7 +3928,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 614
 		}
 		visible = {
@@ -3925,7 +3940,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -3945,10 +3960,6 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
 	
 					set_variable = {
 						var = ic_level
@@ -3957,10 +3968,6 @@ CHI_industrial_evacuations = {
 					set_variable = {
 						var = ic_to_move
 						value = industrial_complex_level
-					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
 					}
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
@@ -3994,10 +4001,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 614.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 614.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -4036,10 +4043,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 614.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 614.af_to_move
 										instant_build = yes
 									}
 								}
@@ -4065,10 +4072,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 614.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 614.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -4107,10 +4114,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 614.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 614.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -4123,7 +4130,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -4137,7 +4144,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 616
 		}
 		visible = {
@@ -4149,7 +4156,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -4169,10 +4176,6 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
 	
 					set_variable = {
 						var = ic_level
@@ -4181,10 +4184,6 @@ CHI_industrial_evacuations = {
 					set_variable = {
 						var = ic_to_move
 						value = industrial_complex_level
-					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
 					}
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
@@ -4218,10 +4217,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 616.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 616.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -4260,10 +4259,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 616.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 616.af_to_move
 										instant_build = yes
 									}
 								}
@@ -4289,10 +4288,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 616.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 616.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -4331,10 +4330,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 616.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 616.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -4347,7 +4346,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -4361,7 +4360,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 620
 		}
 		visible = {
@@ -4373,7 +4372,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -4393,10 +4392,6 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
 	
 					set_variable = {
 						var = ic_level
@@ -4405,10 +4400,6 @@ CHI_industrial_evacuations = {
 					set_variable = {
 						var = ic_to_move
 						value = industrial_complex_level
-					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
 					}
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
@@ -4442,10 +4433,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 620.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 620.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -4484,10 +4475,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 620.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 620.af_to_move
 										instant_build = yes
 									}
 								}
@@ -4513,10 +4504,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 620.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 620.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -4555,10 +4546,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 620.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 620.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -4571,7 +4562,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 
@@ -4585,7 +4576,7 @@ CHI_industrial_evacuations = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 743
 		}
 		visible = {
@@ -4597,7 +4588,7 @@ CHI_industrial_evacuations = {
 
 		fire_only_once = yes
 
-		cost = 25
+		cost = 10
 
 		days_remove = 15
 
@@ -4617,10 +4608,6 @@ CHI_industrial_evacuations = {
 						var = af_to_move
 						value = arms_factory_level
 					}
-					multiply_variable = {
-						var = af_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
-					}
 	
 					set_variable = {
 						var = ic_level
@@ -4629,10 +4616,6 @@ CHI_industrial_evacuations = {
 					set_variable = {
 						var = ic_to_move
 						value = industrial_complex_level
-					}
-					multiply_variable = {
-						var = ic_to_move
-						value = global.CHI_industrial_evacuations_amount_factor
 					}
 	
 					custom_effect_tooltip = CHI_industrial_evacuations_remove_AF
@@ -4666,10 +4649,10 @@ CHI_industrial_evacuations = {
 	
 							custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 							hidden_effect = {
-								add_extra_state_shared_building_slots = af_to_move
+								add_extra_state_shared_building_slots = 743.af_to_move
 								add_building_construction = {
 									type = arms_factory
-									level = af_to_move
+									level = 743.af_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
@@ -4708,10 +4691,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_AF						
 								hidden_effect = {
-									add_extra_state_shared_building_slots = af_to_move
+									add_extra_state_shared_building_slots = 743.af_to_move
 									add_building_construction = {
 										type = arms_factory
-										level = af_to_move
+										level = 743.af_to_move
 										instant_build = yes
 									}
 								}
@@ -4737,10 +4720,10 @@ CHI_industrial_evacuations = {
 							
 							custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 							hidden_effect = {
-								add_extra_state_shared_building_slots = ic_to_move
+								add_extra_state_shared_building_slots = 743.ic_to_move
 								add_building_construction = {
 									type = industrial_complex
-									level = ic_to_move
+									level = 743.ic_to_move
 									instant_build = yes
 								}
 								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
@@ -4779,10 +4762,10 @@ CHI_industrial_evacuations = {
 	
 								custom_effect_tooltip = CHI_industrial_evacuations_add_IC
 								hidden_effect = {
-									add_extra_state_shared_building_slots = ic_to_move
+									add_extra_state_shared_building_slots = 743.ic_to_move
 									add_building_construction = {
 										type = industrial_complex
-										level = ic_to_move
+										level = 743.ic_to_move
 										instant_build = yes
 									}
 								}
@@ -4795,7 +4778,7 @@ CHI_industrial_evacuations = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1000
 		}
 	}
 }
@@ -4842,7 +4825,7 @@ CHI_integrate_the_warlords = {
 			}
 		}
 
-		days_remove = 90
+		days_remove = 30
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 100
@@ -5024,7 +5007,7 @@ CHI_integrate_the_warlords = {
 			factor = 100
 		}
 
-		days_remove = 90
+		days_remove = 30
 		remove_effect = {
 			FROM = {
 				set_country_flag = CHI_integrate_the_administration
@@ -5069,7 +5052,7 @@ CHI_integrate_the_warlords = {
 				}
 			}
 		}
-		days_remove = 90
+		days_remove = 30
 
 		remove_effect = {
 			CHI_warlord_integration_down = yes
@@ -5184,7 +5167,7 @@ CHI_communist_infiltration = {
 			has_equipment = { infantry_equipment > 999 }
 		}
 
-		highlight_states = {
+		highlight_state_targets = {
 			state = 283
 		}
 		
@@ -5246,7 +5229,7 @@ CHI_communist_infiltration = {
 		available = {
 			has_equipment = { infantry_equipment > 999 }
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 597
 		}
 		
@@ -5308,7 +5291,7 @@ CHI_communist_infiltration = {
 			has_equipment = { infantry_equipment > 999 }
 		}
 
-		highlight_states = {
+		highlight_state_targets = {
 			state = 598
 		}
 		
@@ -5379,7 +5362,7 @@ CHI_communist_infiltration = {
 				}
 			}
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 607
 		}
 
@@ -5430,7 +5413,7 @@ CHI_communist_infiltration = {
 		available = {
 			has_equipment = { infantry_equipment > 999 }
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 608
 		}
 		
@@ -5491,7 +5474,7 @@ CHI_communist_infiltration = {
 		available = {
 			has_equipment = { infantry_equipment > 999 }
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 614
 		}
 		
@@ -5552,7 +5535,7 @@ CHI_communist_infiltration = {
 		available = {
 			has_equipment = { infantry_equipment > 999 }
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 615
 		}
 		
@@ -5613,7 +5596,7 @@ CHI_communist_infiltration = {
 		available = {
 			has_equipment = { infantry_equipment > 999 }
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 621
 		}
 		
@@ -5674,7 +5657,7 @@ CHI_communist_infiltration = {
 		available = {
 			has_equipment = { infantry_equipment > 999 }
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 744
 		}
 		
@@ -5735,7 +5718,7 @@ CHI_communist_infiltration = {
 		available = {
 			has_equipment = { infantry_equipment > 999 }
 		}
-		highlight_states = {
+		highlight_state_targets = {
 			state = 746
 		}
 		
@@ -6293,10 +6276,13 @@ political_actions = {
 		available = {
 			is_literally_china = yes
 			CHI = {
-				is_in_faction_with = PRC
+        or = {
+          is_in_faction_with = BEY
+          has_country_flag = CHI_annexed_BEY
+        }
 			}
 			OR = {
-				PRC = {
+				BEY = {
 					is_faction_leader = yes
 				}
 				CHI = {
@@ -6306,7 +6292,7 @@ political_actions = {
 			NOT = {
 				OR = {
 					has_war_with = CHI
-					has_war_with = PRC
+					has_war_with = BEY
 				}
 			}
 			is_in_faction = no
@@ -6323,7 +6309,10 @@ political_actions = {
 		visible = {
 			is_literally_china = yes
 			CHI = {
-				is_in_faction_with = PRC
+        or = {
+          is_in_faction_with = BEY
+          has_country_flag = CHI_annexed_BEY
+        }
 			}
 			is_in_faction = no
 		}
@@ -6334,7 +6323,7 @@ political_actions = {
 				JAP = {
 					OR = {
 						has_war_with = CHI
-						has_war_with = PRC
+						has_war_with = BEY
 					}
 				}
 				factor = 10
@@ -6362,16 +6351,16 @@ political_actions = {
 			}
 			else_if = {
 				limit = {
-					PRC = {
+					BEY = {
 						is_faction_leader = yes
 					}
 				}
-				PRC = {
+				BEY = {
 					country_event = generic.2
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "PRC"
+					id = "BEY"
 					value = 200
 				}
 			}
@@ -6418,99 +6407,6 @@ political_actions = {
 		}
 		complete_effect = {
 			country_event = wtt_china.204
-		}
-	}
-}
-
-CHI_xian_incident = {
-	CHI_instigate_xian_incident = {
-		icon = generic_political_discourse
-		available = {			
-			NOT = {
-				has_global_flag = CHI_xian_fired
-			}
-			CHI = {
-				NOT = {
-					is_in_faction_with = PRC
-				}
-				NOT = {
-					has_war_with = PRC
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = CHI_foreign_threats
-						has_completed_focus = CHI_prioritize_the_interior
-					}
-				}
-			}
-			PRC = {
-				NOT = {
-					has_war_with = CHI
-				}
-				is_in_faction = no
-			}
-			NOT = {
-				has_war_with = CHI
-			}
-			NOT = {
-				has_war_with = PRC
-			}
-		}
-
-		visible = {
-			NOT = {
-				has_global_flag = CHI_xian_fired
-			}
-			CHI = {
-				NOT = {
-					is_in_faction_with = PRC
-				}
-			}
-			PRC = {
-				NOT = {
-					has_war_with = PRC
-				}
-			}
-			is_literally_china = yes
-			NOT = {
-				OR = {
-					original_tag = CHI
-					original_tag = PRC
-				}
-			}
-			event_target:WTT_current_china_leader = { tag = CHI }
-		}
-		cost = 25
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				threat > 0.1
-				factor = 2
-			}
-			modifier = {
-				NOT = { 	
-					JAP = {
-						has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere
-					}
-				}
-				factor = 0
-			}
-			modifier = {
-				JAP = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-				factor = 0
-			}
-		}
-		complete_effect = {
-			set_country_flag = CHI_xian_instigator_flag
-			set_global_flag = CHI_xian_fired
-			CHI = {
-				country_event = wtt_xian_incident.1
-			}
 		}
 	}
 }

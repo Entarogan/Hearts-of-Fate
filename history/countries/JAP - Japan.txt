@@ -2,20 +2,38 @@
 
 oob = "JAP_1936"
 
-set_stability = 0.5 #baseline, THE EMPEROR PROTECTS
-set_war_support = 0.8
+set_stability = 0.4 #baseline, THE EMPEROR PROTECTS
+set_war_support = 0.5
 
 set_research_slots = 4
 set_fuel_ratio = 1.0
 add_ideas = {
+  imperial_glory_idea
 	state_shintoism
-	limited_exports
 	limited_conscription
-	partial_economic_mobilisation
+	low_economic_mobilisation
 
 	JAP_zaibatsus
 	JAP_militarism
+  idea_jap_liberals
+  idea_jap_army_goverment_conflict
+  idea_jap_corrupt_democracy
+  idea_man_railway_benefit
+  jap_tamamo_empress
+  Powerful_influence_idea 
+  
+  #### Cabinet
+  
+  JAP_oda_nobunaga
+  JAP_yakumo_yukari
+  JAP_kirisame_marisa
+  JAP_yasaka_kanako
+  JAP_hakurei_reimu
+  JAP_shoukaku
+
 }
+
+
 
 if = {
 	limit = { has_dlc = "Waking the Tiger" }
@@ -49,11 +67,13 @@ set_technology = {
 	early_bomber = 1
 	CAS1 = 1
 	
-	superior_firepower = 1
+	trench_warfare = 1
 	base_strike = 1
+  force_rotation = 1
 	fuel_silos = 1
 	synth_oil_experiments = 1
 	fuel_refining = 1
+    armored_car1 = 1
 }
 if = {
 	limit = {
@@ -105,216 +125,74 @@ if = {
 	set_naval_oob = "JAP_1936_naval_legacy"
 }
 
-create_import = {
-		resource = oil
-		factories = 2
-		exporter = USA
-}
-
-1939.1.1 = {
-
-	add_political_power = 1198
-	
-
-	#adding ministers
-	add_ideas = {
-
-		#laws
-		tot_economic_mobilisation
-		service_by_requirement
-		closed_economy
-	}
-	if = {
-		limit = {
-			has_dlc = "Man the Guns"
-		}
-		remove_ideas = MTG_naval_treaty_adherent
-	}
-	complete_national_focus = JAP_purge_the_kodoha_faction
-	complete_national_focus = JAP_army_expansion_law
-	complete_national_focus = JAP_guide_the_zaibatsus
-	complete_national_focus = JAP_new_naval_estimates
-	complete_national_focus = JAP_army_expansion
-	complete_national_focus = JAP_liaison_conference
-	complete_national_focus = JAP_greater_east_asian_co_prosperity_sphere
-	unlock_national_focus = JAP_intervene_in_china
-	complete_national_focus = JAP_fighter_modernization
-	complete_national_focus = JAP_carrier_warfare_experiments
-	complete_national_focus = JAP_supremacy_of_technology
-	complete_national_focus = JAP_national_mobilization_law
-	complete_national_focus = JAP_national_research_policy
-	complete_national_focus = JAP_nationalize_war_industry
-	complete_national_focus = JAP_cruiser_modernization
-	complete_national_focus = JAP_long_lance_torpedoes
-	complete_national_focus = JAP_bicycle_battalions
-	complete_national_focus = JAP_small_arms_modernization
-
-	declare_war_on = {
-		target = CHI
-		type = puppet_wargoal_focus
-	}
-	#declare_war_on = {
-	#	target = GXC
-	#	type = puppet_focus
-	#}
-	#declare_war_on = {
-	#	target = YUN
-	#	type = puppet_focus
-	#}
-	#declare_war_on = {
-	#	target = PRC
-	#	type = annex_everything
-	#}
-	oob = "JAP_1939"
-	set_technology = {
-
-		#PLACEHOLDERS for vehicles
-		
-		cv_fighter1 = 1
-		fighter1 = 1
-		tactical_bomber1 = 1
-	
-		#doctrines
-		#air
-		force_rotation = 1
-		fighter_baiting = 1
-		low_echelon_support = 1
-		dispersed_fighting = 1
-
-		grand_battle_plan = 1
-		prepared_defense = 1
-		grand_assault = 1
-		carrier_primacy = 1
-		carrier_task_forces = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-		computing_machine = 1
-		basic_encryption = 1
-		basic_decryption = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		oil_processing = 1
-		fuel_refining2 = 1
-		construction1 = 1
-		construction2 = 1
-		construction3 = 1
-		concentrated_industry = 1
-		concentrated_industry2 = 1
-		concentrated_industry3 = 1
-	}
-	if = {
-		limit = {
-			has_dlc = "Man the Guns"
-		}
-		set_technology = {
-			improved_ship_hull_submarine = 1
-			basic_ship_hull_light = 1
-			improved_ship_hull_light = 1
-			improved_ship_hull_cruiser = 1
-			improved_ship_hull_carrier = 1
-			ship_hull_super_heavy = 1
-			cruiser_submarines = 1
-		}
-		set_naval_oob = "JAP_1939_naval"
-	}
-	if = {
-		limit = {
-			not = { has_dlc = "Man the Guns" }
-		}
-		set_technology = {
-			improved_submarine = 1
-			basic_destroyer = 1
-			improved_destroyer = 1
-			improved_heavy_cruiser = 1
-			improved_carrier = 1
-			heavy_battleship = 1
-		}
-		set_naval_oob = "JAP_1939_naval_legacy"
-	}
-}
-
 set_convoys = 400
 
-if = {
-	limit = {
-		has_dlc = "Together for Victory"
-	}
-	set_autonomy = {
-		target = MEN
-		autonomous_state = autonomy_integrated_puppet
-	}
-	set_autonomy = {
-		target = MAN
-		autonomous_state = autonomy_integrated_puppet
-	}
-	else = {
-		set_autonomy = {
-			target = MEN
-			autonomous_state = autonomy_puppet
-		}
-		set_autonomy = {
-			target = MAN
-			autonomous_state = autonomy_puppet
-		}
-	}
-}
 set_popularities = {
-	neutrality = 50
-	fascism = 45
-	communism = 0
-	democratic = 5
+	neutrality = 35
+	fascism = 15
+	communism = 1
+	democratic = 49
 }
 
 set_politics = {
 
 	
-	ruling_party = neutrality
-	last_election = "1936.1.1"
-	election_frequency = 48
-	elections_allowed = no
+	ruling_party = democratic
+	last_election = "1933.3.1"
+	election_frequency = 36
+	elections_allowed = yes
+}
+
+give_guarantee = RUS
+
+set_variable = {
+    var = ROOT.IJA_influence
+    value = 6
+}
+
+set_variable = {
+    var = ROOT.IJN_influence
+    value = 6
+}
+
+set_variable = {
+    var = ROOT.InterDiff  
+    value = 0
+}
+### InterDiff = IJA_influence - IJN_influence, could be negative...
+
+set_variable = {
+    var = ROOT.Kizuko_attitude
+    value = 5
+}
+
+set_variable = {
+    var = ROOT.liberals_army_influence
+    value = 30
 }
 
 
-1939.1.1 = {
-	set_politics = {
+set_party_name = {
+  ideology = democratic
+  long_name = JAP_democratic_party_Rikken_Minseitou
+  name = JAP_democratic_party_Rikken_Minseitou
+}
 
-		parties = {
-			democratic = { 
-				popularity = 0
-			}
-
-			fascism = {
-				popularity = 40
-			}
-			
-			neutrality = {
-				popularity = 60
-			}
-			
-			communism = {
-				popularity = 0
-				#banned = no #default is no
-			}
-		}
-		
-		ruling_party = neutrality
-		last_election = "1936.1.1"
-		election_frequency = 48
-		elections_allowed = no
-	}
+set_party_name = {
+  ideology = fascism
+  long_name = JAP_fascism_party_seisantou
+  name = JAP_fascism_party_seisantou
+}
+set_party_name = {
+  ideology = neutrality
+  long_name = JAP_neutrality_party_showakai
+  name = JAP_neutrality_party_showakai
 }
 
 create_country_leader = {
-	name = "Akechi Mitsuhide"
-	desc = "POLITICS_akechi_DESC"
-	picture = "Portrait_Akechi_Mitsuhide.dds"
+	name = "Hinanawi Tenshi"
+	desc = "POLITICS_TENSHI_DESC"
+	picture = "Portrait_Hinanawi_Tenshi.dds"
 	expire = "1989.1.1"
 	ideology = fascism_ideology
 	traits = {  }
@@ -332,21 +210,21 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Sakamoto Ryoma"
-	desc = "POLITICS_RYOMA_DESC"
+	desc = "POLITICS_RYOMA_NEW_DESC"
 	picture = "Portrait_sakamoto_ryoma.dds"
 	expire = "1989.1.1"
 	ideology = liberalism
 	traits = {
-    great_war_hero
+    reform_pioneer
 	}
   id = 920
 }
 
 
 create_country_leader = {
-	name = "Oda Nobunaga"
-	desc = "POLITICS_NOBUNAGA_DESC"
-	picture = "Portrait_oda_nobunaga.dds"
+	name = "Yakumo Yukari"
+	desc = ""
+	picture = "Portrait_Yakumo_Yukari.dds"
 	expire = "1989.1.1"
 	ideology = stratocracy
 	traits = {
@@ -357,28 +235,27 @@ create_field_marshal = {
 	name = "Oda Nobunaga"  # 织田信长
 	picture = "Portrait_oda_nobunaga.dds"
 	traits = {
-		politically_connected trickster trait_engineer brilliant_strategist  hill_fighter inspirational_leader organisational_leader aggressive_assaulter expert_delegator
+		politically_connected trickster trait_engineer brilliant_strategist hill_fighter skilled_staffer
 	}
-	id = 850
+	id = 8000
 	skill = 6
 	attack_skill = 5
-	defense_skill = 3
+	defense_skill = 5
 	planning_skill = 5
 	logistics_skill = 4
 }
 
-create_field_marshal = {
+create_corps_commander = {
 	name = "Tomoe Gozen"  # 巴御前
 	picture = "Portrait_tomoe_gozen.dds"
 	traits = { 
-		offensive_doctrine   # hakushaku
-		 organisational_leader  expert_delegator cavalry_officer cavalry_leader 
+		skilled_staffer cavalry_officer cavalry_leader 
 	}
-  id = 860
-	skill = 6
+  id = 8001
+	skill = 5
 	attack_skill = 4
 	defense_skill = 4
-	planning_skill = 3
+	planning_skill = 4
 	logistics_skill = 4
 }
 
@@ -386,60 +263,47 @@ create_field_marshal = {
 	name = "Nagao Kagetora"  # 长尾景虎
 	picture = "Portrait_Nagao_Kagetora.dds"
 	traits = { 
-		defensive_doctrine   # hakushaku
-		 organisational_leader   cavalry_officer infantry_leader hill_fighter
+		cavalry_officer infantry_officer infantry_leader hill_fighter
 	}
-  id = 864
+  id = 8002
 	skill = 6
 	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 3
+	defense_skill = 7
+	planning_skill = 4
 	logistics_skill = 4
 }
 
 create_field_marshal = {
 	name = "Minamoto no Raiko"  # 源赖光
 	picture = "Portrait_minamoto_no_raiko.dds"
-	traits = { offensive_doctrine inspirational_leader infantry_officer  infantry_leader infantry_expert  aggressive_assaulter }
-	skill = 6
-  id = 861
-	attack_skill = 5
+	traits = { career_officer trait_reckless trickster infantry_officer cavalry_officer infantry_leader infantry_expert brilliant_strategist }
+	skill = 5
+  id = 8003
+	attack_skill = 6
 	defense_skill = 2
-	planning_skill = 2
+	planning_skill = 4
 	logistics_skill = 4
 }
 
 create_field_marshal = {
 	name = "Hijikato Toshizo"  # 土方岁三
 	picture = "Portrait_hijikato_toshizo.dds"
-	traits = { offensive_doctrine inspirational_leader infantry_officer  infantry_leader commando harsh_leader aggressive_assaulter }
-	id = 851
-	skill = 6
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 4
-}
-
-create_field_marshal = {
-	name = "Shuten Doji"  # 酒吞童子
-	picture = "Portrait_shuten_doji.dds"
-	traits = {infantry_officer  infantry_leader  trickster  thorough_planner }
+	traits = { politically_connected organizer harsh_leader infantry_officer infantry_leader commando naval_invader }
+	id = 8004
 	skill = 4
-  id = 862
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 5
+	attack_skill = 6
+	defense_skill = 1
+	planning_skill = 3
 	logistics_skill = 3
 }
 
 create_corps_commander = {
 	name = "Miyamoto Musashi"   # 宫本武藏
 	picture = "Portrait_miyamoto_musashi.dds"
-	traits = { infantry_officer  infantry_leader organizer  trickster guerilla_fighter power_up }
-	id = 852
-	skill = 6
-	attack_skill = 6
+	traits = { infantry_officer infantry_leader trickster guerilla_fighter }
+	id = 8008
+	skill = 4
+	attack_skill = 4
 	defense_skill = 4
 	planning_skill = 3
 	logistics_skill = 3
@@ -448,32 +312,21 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Okita Souji"   # 冲田总司
 	picture = "Portrait_okita_souji.dds"
-	traits = { infantry_officer  reduced_land infantry_leader commando skirmisher  eye_of_the_mind infantry_expert }
-	id = 853
-	skill = 6 
+	traits = { politically_connected trait_reckless infantry_officer infantry_leader commando skirmisher infantry_expert }
+	id = 8009
+	skill = 4 
 	attack_skill = 5
-	defense_skill = 4
+	defense_skill = 2
 	planning_skill = 3
 	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Tamamo no Mae"  # 玉藻前
-	picture = "Portrait_tamamo_no_mae.dds"
-	traits = { trickster career_officer infantry_officer formation_shapeshift brilliant_strategist }
-	id = 854
-	skill = 6
-	attack_skill = 3
-	defense_skill = 5
-	planning_skill = 5
-	logistics_skill = 6
 }
 
 create_corps_commander = {
 	name = "Sakata Kintoki"  #坂田金时
 	picture = "Portrait_sakata_kintoki.dds" 
 	traits = { trait_reckless cavalry_leader  armor_officer combined_arms_expert panzer_leader panzer_expert }
-	skill = 5
+  id = 8011
+	skill = 4
 	attack_skill = 4
 	defense_skill = 4
 	planning_skill = 3
@@ -483,21 +336,21 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Osakabehime" # 刑部姬
 	picture = "Portrait_osakabehime.dds"
-	traits = { trickster infantry_officer formation_shapeshift scavenger organizer panzer_leader power_up }
-	id = 855
+	traits = { trickster infantry_officer trait_engineer scavenger organizer panzer_leader }
+	id = 8012
 	skill = 4
 	attack_skill = 3
 	defense_skill = 2
 	planning_skill = 5
-	logistics_skill = 4
+	logistics_skill = 3
 }
 
 create_corps_commander = {
 	name = "Minamoto no Yoshitsune" # 牛若丸
 		picture = "Portrait_ushiwakamaru.dds"
-	traits = { brilliant_strategist  career_officer  combined_arms_expert  expert_improviser  cavalry_leader naval_invader invader_ii }
-	skill = 3
-  id = 863
+	traits = { trickster brilliant_strategist  career_officer  combined_arms_expert  expert_improviser  cavalry_leader naval_invader invader_ii }
+	skill = 4
+  id = 8013
 	attack_skill = 4
 	defense_skill = 3
 	planning_skill = 4
@@ -507,7 +360,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Sasaki Kojiro" # 佐佐木小次郎
 		picture = "Portrait_sasaki_kojiro.dds"
-	traits = {  career_officer inflexible_strategist expert_improviser  eye_of_the_mind infantry_leader }
+	traits = { trickster career_officer inflexible_strategist expert_improviser infantry_leader }
 	skill = 3
 	attack_skill = 4
 	defense_skill = 2
@@ -519,7 +372,8 @@ create_corps_commander = {
 	name = "Yogyu Munenori"  # 柳生宗矩
 		picture = "Portrait_yogyu_munenori.dds"
 	traits = { old_guard infantry_officer infantry_expert infantry_leader inflexible_strategist politically_connected }
-	skill = 3
+  id = 8005
+	skill = 4
 	attack_skill = 3
 	defense_skill = 3
 	planning_skill = 5
@@ -529,9 +383,10 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Suzuka Gozen" # 铃鹿御前
 	picture = "Portrait_suzuka_gozen.dds"
-	traits = { brilliant_strategist career_officer infantry_leader  infantry_officer power_up  }
-	skill = 1 
-	attack_skill = 4
+	traits = { brilliant_strategist career_officer infantry_leader infantry_officer }
+  id = 8006
+	skill = 3 
+	attack_skill = 5
 	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 2
@@ -540,11 +395,11 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Fuma Kotaro"  # 風魔小太郎
 		picture = "Portrait_fuma_kotaro.dds"
-	traits = { commando trickster ambusher paratrooper camouflage_expert guerilla_fighter }
-	skill = 4
+	traits = { commando trickster infantry_leader ambusher paratrooper camouflage_expert guerilla_fighter }
+	skill = 3
 	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 4
+	defense_skill = 1
+	planning_skill = 3
 	logistics_skill = 4
 }
 
@@ -552,10 +407,10 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Kiyohime"  # 清姬
 	picture = "Portrait_kiyohime.dds"
-	traits = { trait_reckless politically_connected harsh_leader formation_shapeshift trickster  power_up }
-	id = 856
+	traits = { trait_reckless politically_connected harsh_leader trickster }
+	id = 8014
 	skill = 3
-	attack_skill = 4
+	attack_skill = 5
 	defense_skill = 1
 	planning_skill = 1
 	logistics_skill = 3
@@ -564,42 +419,32 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Tawara Tota" # 表藤太
 	picture = "Portrait_tawara_tota.dds"
-	traits = { old_guard war_hero  power_up  unlimited_rice }
+	traits = { old_guard war_hero unlimited_rice }
+  
 	skill = 1
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 5
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
 }
 
 
 create_corps_commander = {
 	name = "Kato Danzo"  # 加藤段藏
 	picture = "Portrait_kato_danzo.dds"
-	traits = { commando urban_assault_specialist ambusher paratrooper career_officer trickster eye_of_the_mind }
+	traits = { commando urban_assault_specialist infantry_leader ambusher paratrooper career_officer trickster eye_of_the_mind }
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3
 	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Ibaraki Doji"  # 茨木童子
-	picture = "Portrait_ibaraki_doji.dds"
-	traits = { trickster  trait_reckless infantry_officer power_up ambusher }
-	skill = 2
-	attack_skill = 4
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
+	logistics_skill = 2
 }
 
 create_corps_commander = {
 	name = "Mochizuki Chiyome"  # 望月千代女
 	picture = "Portrait_mochizuki_chiyome.dds"
-	traits = { trait_cautious inflexible_strategist  ambusher  trickster commando skirmisher }
-	skill = 1
+	traits = { trait_cautious inflexible_strategist infantry_leader ambusher trickster commando skirmisher }
+	skill = 3
 	attack_skill = 3
 	defense_skill = 2
 	planning_skill = 3
@@ -611,37 +456,37 @@ create_corps_commander = {
 	traits = { trickster infantry_leader infantry_officer career_officer }
 	skill = 2
 	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
 }
 
 create_corps_commander = {
-	name = "Masashibo Benkei"  # 武藏坊牟庆
+	name = "Masashibo Benkei"  # 武藏坊弁庆
 		picture = "Portrait_masahibo_benkei.dds"
 	traits = { infantry_leader career_officer  inflexible_strategist } 
-	skill = 3
-	attack_skill = 2
+	skill = 2
+	attack_skill = 1
 	defense_skill = 4
 	planning_skill = 1
-	logistics_skill = 4
+	logistics_skill = 2
 }
 create_corps_commander = {
 	name = "Hozoin Inshun"  # 宝藏院胤舜
 		picture = "Portrait_Hozoin_inshun.dds"
 	traits = { career_officer trait_cautious infantry_leader inflexible_strategist }
 	skill = 2
-	attack_skill = 2
+	attack_skill = 1
 	defense_skill = 3
 	planning_skill = 2
-	logistics_skill = 2
+	logistics_skill = 1
 }
 
 create_corps_commander = {
 	name = "Cha Cha"  # 茶茶
 	picture = "Portrait_chacha.dds"
-	traits = { media_personality trait_reckless power_up brilliant_strategist  fortress_buster }
-	id = 857
+	traits = { media_personality trait_reckless brilliant_strategist trait_engineer }
+	id = 8015
 	skill = 2
 	attack_skill = 4
 	defense_skill = 1
@@ -652,30 +497,19 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Sei Shonagon"  # 清少纳言
 	picture = "Portrait_Seishonagon.dds"
-	traits = { career_officer organizer  infantry_officer thorough_planner ambusher media_personality brilliant_strategist }
-	skill = 5
-	attack_skill = 5
+	traits = { career_officer organizer infantry_officer infantry_leader thorough_planner ambusher media_personality brilliant_strategist }
+	skill = 3
+	attack_skill = 1
 	defense_skill = 3
 	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Murasaki Shikibu"  # 紫式部
-	picture = "Portrait_murasaki_shikibu.dds"
-	traits = { career_officer organizer  infantry_officer thorough_planner ambusher trait_cautious }
-	skill = 3 
-	attack_skill = 2
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 3
+	logistics_skill = 2
 }
 
 create_corps_commander = {
 	name = "Beni-enma"  # 红阎魔
 		picture = "Portrait_beni_enma.dds"
-	traits = { media_personality brilliant_strategist commando eye_of_the_mind }
-	skill = 2
+	traits = { media_personality brilliant_strategist commando }
+	skill = 3
 	attack_skill = 3
 	defense_skill = 2
 	planning_skill = 2
@@ -683,124 +517,422 @@ create_corps_commander = {
 }
 
 
-create_navy_leader = {
-	name = "Katsushika Hokusai"  # 葛饰北斋
-	picture = "Portrait_Katsushika_Hokusai.dds"
-	traits = { aviation_enthusiast bold seawolf flight_deck_manager superior_tactician spotter loading_drill_master }
+create_corps_commander = {
+	name = "Fujiwara no Mokou"  # 藤原妹红
+		picture = "Portrait_Fujiwara_no_Mokou.dds"
+	traits = { brilliant_strategist commando career_officer }
+  id = 8017
+	skill = 5
+	attack_skill = 3
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 3
+}
+
+
+create_corps_commander = {
+	name = "Hijiri Byakuren"  # 圣白莲
+		picture = "Portrait_Hijiri_Byakuren.dds"
+	traits = { combined_arms_expert brilliant_strategist commando panzer_leader trait_engineer }
+  id = 8019
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+
+create_corps_commander = {
+	name = "Hinanawi Tenshi"  # 比那名居天子
+  picture = "Portrait_Hinanawi_Tenshi.dds"
+	traits = { harsh_leader brilliant_strategist commando trait_engineer paratrooper camouflage_expert politically_connected }
+  id = 8020
+	skill = 4
+	attack_skill = 5
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "Ibaraki Kasen"  # 茨木华扇
+		picture = "Portrait_Ibaraki_Kasen.dds"
+	traits = { inflexible_strategist commando organizer career_officer politically_connected }
+  id = 8021
+	skill = 5
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "Konpaku Youmu"  # 魂魄妖梦
+  picture = "Portrait_Konpaku_Youmu.dds"
+	traits = { infantry_officer trait_cautious commando guerilla_fighter trickster camouflage_expert }
+  id = 8024
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Saigyouji Yuyuko"  # 西行寺幽幽子
+  picture = "Portrait_Saigyouji_Yuyuko.dds"
+	traits = { commando trait_engineer scavenger trickster camouflage_expert politically_connected }
+  id = 8027
+	skill = 4
+	attack_skill = 4
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "Ibaraki Kasen"  # 摩多罗隐岐奈
+  picture = "Portrait_Matara_Okina.dds"
+	traits = { politically_connected organizer trait_cautious brilliant_strategist }
+  id = 8025
 	skill = 5
 	attack_skill = 5
 	defense_skill = 4
-	maneuvering_skill = 3
-	coordination_skill = 6
+	planning_skill = 4
+	logistics_skill = 4
 }
 
-create_navy_leader = {
-	name = "Miyamoto Musashi"  # 宫本武藏
-	picture = "Portrait_Musashi_summer.dds"
-	traits = { bold marksman superior_tactician spotter naval_lineage navy_career_officer crisis_magician ironside search_pattern_expert ground_pounder}
-	skill = 4
-  id = 583
-	attack_skill = 6
-	defense_skill = 2
-	maneuvering_skill = 4
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "Oda Nobunaga"  # 织田信长
-	picture = "Portrait_Oda_Nobunaga_summer.dds"
-	traits = { bold  superior_tactician spotter cuts_corners navy_media_personality crisis_magician battleship_adherent big_guns_expert  ground_pounder}
-  id = 580
-	skill = 4
-	attack_skill = 6
-	defense_skill = 2
-	maneuvering_skill = 4
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "Okita Souji"  # 冲田总司
-	picture = "Portrait_Okita_Souji_summer.dds"
-	traits = { bold  marksman superior_tactician spotter   smoke_screen_expert cruiser_captain dive_bomber torpedo_bomber flight_deck_manager fighter_director }
-  id = 581
-	skill = 4
+create_field_marshal = {
+	name = "Yakumo Yukari"  # 八云紫
+  picture = "Portrait_Yakumo_Yukari.dds"
+	traits = { politically_connected organizer trait_cautious brilliant_strategist }
+  id = 8030
+	skill = 5
 	attack_skill = 4
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 6
+	defense_skill = 4
+	planning_skill = 5
+	logistics_skill = 4
 }
 
-# Keen on planes
+create_field_marshal = {
+	name = "Yasaka Kanako"  # 八坂神奈子
+  picture = "Portrait_Yasaka_Kanako.dds"
+	traits = { politically_connected career_officer harsh_leader brilliant_strategist trait_mountaineer }
+  id = 8031
+	skill = 6
+	attack_skill = 6
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 5
+}
+
+create_field_marshal = {
+	name = "Yagokoro Eirin"  # 八意永琳
+  picture = "Portrait_Yagokoro_Eirin.dds"
+	traits = { inflexible_strategist organizer }
+  id = 8032
+	skill = 6
+	attack_skill = 3
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 7
+}
+
+create_corps_commander = {
+	name = "Moriya Suwako"  # 泄矢诹访子
+  picture = "Portrait_Moriya_Suwako.dds"
+	traits = { commando scavenger trickster swamp_fox trait_mountaineer hill_fighter }
+
+	skill = 5
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 5
+	logistics_skill = 5
+}
+
 create_navy_leader = {
-	name = "Minamoto no Yoshitsune"  # 牛若丸
-	picture = "Portrait_Ushi_summer.dds"
-	traits = { bold torpedo_expert ground_pounder navy_career_officer chief_engineer cuts_corners naval_lineage crisis_magician hunter_killer }
+	name = "Katsushika Hokusai"  # 葛饰北斋
+	picture = "Portrait_Katsushika_Hokusai.dds"
+	traits = { bold aviation_enthusiast seawolf air_controller superior_tactician spotter }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "Nagae Iku"  # 永江衣玖
+	picture = "Portrait_Nagae_Iku.dds"
+	traits = { gentlemanly aviation_enthusiast caustic_personality fly_swatter superior_tactician air_controller blue_water_expert }
+  id = 8026
+	skill = 4
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 4
+	coordination_skill = 5
+}
+
+
+create_navy_leader = {
+	name = "Akagi"  # 赤城
+	picture = "Portrait_Akagi.png"
+	traits = { bold cuts_corners aviation_enthusiast superior_tactician air_controller blue_water_expert }
+  id = 8100
+	skill = 5
+	attack_skill = 5
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 5
+}
+
+create_navy_leader = {
+	name = "Kirishima"  # 雾岛
+	picture = "Portrait_Kirishima.png"
+	traits = { bold cuts_corners gunnery_expert battleship_adherent ironside }
+  id = 8103
 	skill = 4
 	attack_skill = 5
 	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "Haruna"  # 榛名
+	picture = "Portrait_Haruna.png"
+	traits = { Chief_engineer navy_career_officer spotter superior_tactician ironside }
+  id = 8101
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
 	maneuvering_skill = 4
 	coordination_skill = 4
 }
 
 create_navy_leader = {
-	name = "Osakabehime"  # 刑部姬
-    picture = "Portrait_Osakabehime_summer.dds"
-	traits = { safety_first  naval_lineage fly_swatter craven   marksman  gentlemanly mine_layer  }
-	id = 582
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 3
+	name = "Nagato"  # 长门
+	picture = "Portrait_Nagato.dds"
+	traits = { old_guard_navy gentlemanly naval_lineage battleship_adherent superior_tactician ironside }
+	skill = 5
+  id = 8107
+	attack_skill = 5
+	defense_skill = 4
+	maneuvering_skill = 4
 	coordination_skill = 3
 }
 
 create_navy_leader = {
-	name = "Tamamo no Mae"  # 玉藻前
-    picture = "Portrait_Tamamo_summer.dds"
-	traits = { safety_first  superior_tactician naval_lineage ironside fly_swatter chief_engineer   gentlemanly mine_layer lancer torpedo_expert crisis_magician }
-	id = 584
-	skill = 3
+	name = "Mutsu"  # 陆奥
+	picture = "Portrait_Mutsu.dds"
+	traits = { old_guard_navy gentlemanly naval_lineage battleship_adherent superior_tactician ironside }
+  id = 8106
+	skill = 5
+	attack_skill = 4
+	defense_skill = 5
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "Mikasa"  # 三笠
+	picture = "Portrait_Mikasa.dds"
+	traits = { old_guard_navy bold cuts_corners naval_lineage superior_tactician spotter inshore_fighter green_water_expert }
+  id = 8105
+	skill = 4
 	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "Kongo"  # 金刚
+	picture = "Portrait_Kongou.png"
+	traits = { bold cuts_corners naval_lineage navy_media_personality superior_tactician spotter ironside blue_water_expert }
+  id = 8104
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 4
+	coordination_skill = 3
+}
+
+
+create_navy_leader = {
+	name = "Kaga"  # 加贺
+	picture = "Portrait_Kaga.png"
+	traits = { bold cuts_corners caustic_personality aviation_enthusiast air_controller blue_water_expert }
+  id = 8102
+	skill = 5
+	attack_skill = 6
 	defense_skill = 2
 	maneuvering_skill = 3
+	coordination_skill = 5
+}
+
+
+create_navy_leader = {
+	name = "Shoukaku"  # 翔鹤
+	picture = "Portrait_Shoukaku.dds"
+	traits = { bold Chief_engineer navy_career_officer aviation_enthusiast superior_tactician blockade_runner air_controller  }
+  id = 8108
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+
+
+create_navy_leader = {
+	name = "Zuikaku"  # 瑞鹤
+	picture = "Portrait_Zuikaku.dds"
+	traits = { bold cuts_corners navy_career_officer navy_media_personality aviation_enthusiast superior_tactician spotter air_controller  }
+  id = 8110
+	skill = 4
+	attack_skill = 6
+	defense_skill = 2
+	maneuvering_skill = 4
+	coordination_skill = 3
+}
+
+# Keen on planes
+
+create_navy_leader = {
+	name = "Abukuma"  # AWWBWG
+	picture = "Portrait_Abukuma.png"
+	traits = { cuts_corners craven navy_career_officer blockade_runner fleet_protector }
+  id = 8111
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "Choukai"  # 鸟海
+	picture = "Portrait_Choukai.png"
+	traits = { bold cuts_corners gunnery_expert superior_tactician blockade_runner spotter }
+  id = 8112
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "Jintsuu"  # 神通
+	picture = "Portrait_Jintsuu.png"
+	traits = { bold cuts_corners naval_lineage superior_tactician spotter }
+  id = 8113
+	skill = 3
+	attack_skill = 5
+	defense_skill = 1
+	maneuvering_skill = 3
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "Kawakaze"  # 江风
+	picture = "Portrait_Kawakaze.png"
+	traits = { bold cuts_corners navy_career_officer blockade_runner spotter fleet_protector }
+  id = 8114
+	skill = 2
+	attack_skill = 4
+	defense_skill = 1
+	maneuvering_skill = 3
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Kawashiro Nitori"  # 河城荷取
+	picture = "Portrait_Kawashiro_Nitori.png"
+	traits = { Chief_engineer seawolf ironside spotter blockade_runner inshore_fighter }
+  id = 8115
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "Maya"  # 摩耶
+	picture = "Portrait_Maya.png"
+	traits = { bold blockade_runner fly_swatter }
+  id = 8116
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	maneuvering_skill = 2
 	coordination_skill = 3
 }
 
 create_navy_leader = {
-	name = "Kiyohime"  # 清姬
-    picture = "Portrait_Kiyohime_summer.dds"
-	traits = {   naval_lineage fly_swatter  bold  marksman cuts_corners mine_layer lancer torpedo_expert ground_pounder big_guns_expert}
-	id = 585
+	name = "Murasa Minamitsu"  # 船长
+	picture = "Portrait_Murasa_Minamitsu.png"
+	traits = { bold cuts_corners seawolf spotter }
+  id = 8117
 	skill = 3
-	attack_skill = 3
+	attack_skill = 4
 	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 3
-}
-
-
-create_navy_leader = {
-	name = "Minamoto no Raiko"  # 源赖光
-    picture = "Portrait_Raikou_summer.dds"
-	traits = {   naval_lineage fly_swatter  superior_tactician ironside marksman hunter_killer smoke_screen_expert cruiser_captain naval_lineage  }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 2
 }
 
 create_navy_leader = {
-	name = "Ibaraki Doji"  # 茨木童子
-    picture = "Portrait_BananaOni_summer.dds"
-	traits = {   naval_lineage fly_swatter bold  ironside marksman hunter_killer destroyer_leader silent_hunter big_guns_expert }
-	id = 586
-	skill = 3
-	attack_skill = 3
+	name = "Shigure"  # 时雨
+	picture = "Portrait_Shigure.png"
+	traits = { craven Chief_engineer navy_career_officer blockade_runner spotter fleet_protector }
+  id = 8118
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	maneuvering_skill = 4
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Yukikaze"  # 雪风
+	picture = "Portrait_Yukikaze.png"
+	traits = { bold Chief_engineer navy_career_officer blockade_runner spotter fleet_protector }
+  id = 8120
+	skill = 2
+	attack_skill = 2
 	defense_skill = 2
+	maneuvering_skill = 4
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Yuudachi"  # POI
+	picture = "Portrait_Yuudachi.png"
+	traits = { bold cuts_corners navy_career_officer naval_lineage superior_tactician spotter fleet_protector }
+  id = 8121
+	skill = 2
+	attack_skill = 5
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Hiei"  # 比睿
+	picture = "Portrait_Hiei.png"
+	traits = { Chief_engineer naval_lineage superior_tactician spotter ironside blue_water_expert }
+  id = 8122
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
 	maneuvering_skill = 3
 	coordination_skill = 3
 }
+
+
 
 if = {
 	limit = {

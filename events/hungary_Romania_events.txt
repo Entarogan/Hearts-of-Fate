@@ -770,6 +770,7 @@ country_event = {     # Romania： Faith
 		date < 1936.3.1
 		has_civil_war = no
 		has_government = neutrality
+		always = no
 	}
 	
 	mean_time_to_happen = {
@@ -863,7 +864,7 @@ create_country_leader = {
 			 		size = 0.2
 			 		only_own_territory = no
 				keep_unit_leaders = {
-					882 883 884 885 886 887
+					882 883 884 885 886 887 888
 				}
 			 	}
 
@@ -902,6 +903,7 @@ country_event = {     # Romania： Fiore Resigns
 
 	trigger = {
 		original_tag = ROM
+		always = no    ### Banned because of new version
 		date > 1942.5.1
 		has_civil_war = no
 		has_government = democratic
@@ -1026,7 +1028,7 @@ country_event = {     # France: Little Entite
     set_rule = {
           can_create_factions = yes
         }
-    create_faction = little_entente
+    create_faction = Orlean_Allies
     add_to_faction = FROM
     FROM = { country_event = { id = bd_hun.36  hours = 4 } }
     ai_chance = {

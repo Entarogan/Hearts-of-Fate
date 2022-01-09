@@ -1402,13 +1402,13 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
+				factor = 50
 				OR = {
 					tag = GER
 					tag = ITA
 					tag = USA
 				}
 				has_war = yes
-				factor = 15
 			}
 			modifier = {
 				factor = 0.5
@@ -1462,13 +1462,13 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
+				factor = 50
 				OR = {
 					tag = GER
 					tag = ITA
 					tag = USA
 				}
 				has_war = yes
-				factor = 15
 			}
 			modifier = {
 				factor = 0.5
@@ -1522,13 +1522,13 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
+				factor = 50
 				OR = {
 					tag = GER
 					tag = ITA
 					tag = USA
 				}
 				has_war = yes
-				factor = 15
 			}
 			modifier = {
 				factor = 0.5
@@ -1576,6 +1576,15 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 0.5
+			modifier = {
+				factor = 50
+				OR = {
+					tag = GER
+					tag = ITA
+					tag = USA
+				}
+				has_war = yes
+			}
 			modifier = {
 				factor = 0.5
 				rubber > 10

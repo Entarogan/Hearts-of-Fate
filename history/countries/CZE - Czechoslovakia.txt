@@ -8,37 +8,51 @@ set_technology = {
 	tech_support = 1
 	tech_recon = 1
 	tech_mountaineers = 1
+	motorised_infantry = 1
 	gw_artillery = 1
 	gwtank = 1
 	basic_light_tank = 1
 	improved_light_tank = 1
 	interwar_antiair = 1
+    interwar_antitank = 1
 	early_fighter = 1
 	early_bomber = 1
 	CAS1 = 1
+	naval_bomber1 = 1
 	fuel_silos = 1
+    armored_car1 = 1
+
+	trench_warfare = 1
+
 }
 
 set_research_slots = 3
 
+set_cosmetic_tag = CZE_State
+
 set_politics = {
-	ruling_party = democratic
+	ruling_party = neutrality
 	last_election = "1935.5.19"
 	election_frequency = 60
 	elections_allowed = yes
 }
 
 set_popularities = {
-	democratic = 65
-	neutrality = 20
+	democratic = 10
+	neutrality = 80
 	fascism = 5
-	communism = 10
+	communism = 5
+}
+
+add_ideas = {
+	limited_conscription
+	war_economy
 }
 
 create_country_leader = {
-	name = "Edvard Beneš"
+	name = "Západoslovanská Brno"
 	desc = "POLITICS_EDVARD_BENES_DESC"
-	picture = "Portrait_Czech_Edvard_Benes.dds"
+	picture = "Portrait_Zapadoslavia_Brno.png"
 	expire = "1965.1.1"
 	ideology = conservatism
 	traits = {
@@ -58,9 +72,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Samopal Škorpion"
+	name = "Západoslovanská Brno"
 	desc = "POLITICS_JAROSLAV_KREJCI_DESC"
-	picture = "Portrait_Samopal_Skorpion.dds"
+	picture = "Portrait_Zapadoslavia_Brno.png"
 	expire = "1965.1.1"
 	ideology = stratocracy
 	traits = {
@@ -130,7 +144,7 @@ if = {
 	}
 	add_ideas = {
 		CZE_skoda_works
-		CZE_divided_nation
+		# CZE_divided_nation
 }
 
 }

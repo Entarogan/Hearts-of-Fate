@@ -989,7 +989,7 @@ country_event = {    # UFO Table Evasion
 	
 	option = {
 		name = trs_japan.21.c    
-		add_ideas = { JAP_ufo_table_idea }
+		add_timed_idea = { idea = JAP_ufo_table_idea days = 100 }
 		ai_chance = {
 			base = 40
 		}
@@ -1085,5 +1085,4 @@ country_event = {    # Tohsaka - El Melloi Alliance - Refused
 			base = 50
 		}
 	}
-	
 }

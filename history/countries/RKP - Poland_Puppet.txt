@@ -26,8 +26,13 @@ set_stability = 0.50
 set_war_support = 0.50
 
 add_ideas = {
-
+GER_military_occupation_idea
+GER_resistance_idea_1
+GER_resistance_idea_POL
+GER_Industrial_plunder_idea
 }
+
+add_timed_idea = { idea = GER_War_reparations_idea days = 365 }
 
 set_politics = {	
 	ruling_party = fascism
@@ -51,7 +56,7 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/RKP/Portrait_Poland_Waclaw_Krzeptowski.tga"
 	expire = "1965.1.1"
-	ideology = 	valkist
+	ideology = valkist
 	traits = {
 
 	}

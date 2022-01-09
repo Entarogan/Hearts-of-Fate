@@ -578,3 +578,70 @@
  spy_master:0 "Super Agent"
  HOL_Valkist_idea:0 "Dutch Valkist"
  HOL_Valkist_idea_desc:0 "Even in Germany, Dutch-style Valkism is still criticized by theorists, for example Strasser commented "this is more like a woman's revenge"." 
+ 
+ lr_france.101.t:0 "Invitation from [ENG.GetName]"
+ lr_france.101.d:0 "In view of the fact that we are about to be defeated, [ENG.GetName] invites us to fight against the emerging hegemony of Europe. Maybe we originally planned to lead the camp alone, but maybe now we have to rely on the British. "
+ lr_france.101.a:0 "It can only be this way "
+ lr_france.101.b:0 "Never serve as deputy to the British "  
+ 
+ lr_france.102.t:0 "They agreed "
+ lr_france.102.d:0 "The French have disbanded their camp and are preparing to merge the command with us. "
+ lr_france.102.a:0 "Recognize the situation"
+ 
+ lr_france.103.t:0 "They refused "
+ lr_france.103.d:0 "Why are they so stupid... "
+ lr_france.103.a:0 "Forget it"
+ 
+ lr_france.70.t:0 "Invite [ITA.GetName]"
+ lr_france.70.d:0 "The [ITA.GetName] with similar views to ours seems ready to take the world stage, perhaps the [FRA.GetName] and [ITA.GetName] should stand together against the oppressors of the world!"
+ lr_france.70.a:0 "Their will should be asked." 
+ lr_france.70.b:0 "We are not interested in taking them with us." 
+
+ lr_france.71.t:0 "[FRA.GetName] - [ITA.GetName] alliance"
+ lr_france.71.d:0 "The post-revolutionary [FRA.GetName] invites us to join them in the fight against the oppressors! We have no reason to refuse!"
+ lr_france.71.a:0 "Let's crush the oppressors together!" 
+ lr_france.71.b:0 "But they used to be the oppressors."  
+
+ lr_france.72.t:0 "[ITA.GetName] rejected"
+ lr_france.72.d:0 "[ITA.GetName] declined the invitation and seems to be planning to go it alone."
+ lr_france.72.a:0 "Are they serious?" 
+ 
+ FRA_GER_economic_control_idea:0 "German Economic Control"
+ 
+ FRA_The_lion_awakens_2:0 "The Lion Awaken"
+ 
+ FRA_Eugene_Deloncle:0 "Eugene Deloncle"
+ La_Cagoule:0 "La Cagoule"
+ 
+ FRA_Jacques_Correze:0 "Jacques Correze"
+ fascist_entrepreneur:0 "Fascist Entrepreneur"
+ 
+ FRA_Jacques_Barnaud:0 "Jacques Barnaud"
+ supplier:0 "Supplier"
+ 
+ FRA_Robert_Brasillach:0 "Robert Brasillach"
+ press_agitator:0 "Press Agitator"
+ 
+ FRA_Francois_Lehideux:0 "Francois Lehideux"
+ technocrats_fra:0 "Technocrats"
+ 
+ FRA_Andre_Marty:0 "André Marty"
+ 
+ FRA_Arthur_Dallidet:0 "Arthur Dallidet"
+ union_combat_leader:0 "Union Combat Leader"
+ 
+ FRA_Jean_Pierre_Timbaud:0 "Jean-Pierre Timbaud"
+ fra_cgt:0 "CGT Steelworker Leader"
+ 
+ FRA_Danielle_Casanova:0 "Danielle Casanova"
+ female_labour_activist:0 "Feminist Labour Activist"
+ 
+ FRA_Tristan_Tzara:0 "Tristan Tzara"
+ avant_garde:0 "Avant-Garde"
+ 
+ FRA_Albert_Camus:0 "Albert Camus"
+ reconcile_advocator:0 "Reconcile Advocator"
+ 
+ FRA_Jean_Paul_Sartre:0 "Jean-Paul Sartre"
+ socialist_intellectuals:0 "Socialist Intellectuals"
+ 

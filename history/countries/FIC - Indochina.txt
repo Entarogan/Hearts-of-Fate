@@ -1,6 +1,7 @@
 ﻿capital = 671
 
 oob = "FIC_1936"
+
 if = {
 	limit = { has_dlc = "Man the Guns" }
 		set_naval_oob = "FIC_1936_naval_mtg"
@@ -17,36 +18,75 @@ FRA = {
 	}
 }
 
-set_research_slots = 2
-set_convoys = 10
+set_research_slots = 3
+set_convoys = 150
 
 set_technology = {
 	infantry_weapons = 1
-	gwtank = 1
+	tech_support = 1
+	tech_recon = 1
+    tech_engineers = 1
+	gw_artillery = 1
 	early_fighter = 1
+	naval_bomber1 = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
 	early_bomber = 1
+	tactical_bomber1 = 1
+	CAS1 = 1
 	trench_warfare = 1
 	fleet_in_being = 1
-	early_destroyer = 1
-	early_light_cruiser = 1
-	early_heavy_cruiser = 1
-	early_submarine = 1
-	gw_artillery = 1
-}
-add_stability = -0.2
-add_war_support = -0.1
-
-add_ideas = {
-
+  
+	marines = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	synth_oil_experiments = 1
 }
 
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+		set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		basic_battlecruiser = 1
+		early_carrier = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		sonar = 1
+		smoke_generator = 1
+	}
 
-set_popularities = {
-	fascism = 5
-	democratic = 18
-	n_socialism = 7
-	communism = 3
-	neutrality = 67
 }
 
 set_politics = {
@@ -56,19 +96,34 @@ set_politics = {
 	elections_allowed = no
 }
 
-create_country_leader = {
-	name = "Duc de Richelieu"
-	desc = ""
-	picture = "Portrait_Duc_de_Richelieu.dds"
-	expire = "1936.9.15"
-	ideology = stratocracy
+set_popularities = {
+	fascism = 5
+	democratic = 25
+	communism = 3
+	neutrality = 67
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "FIC_1936_naval_mtg"
+	else = {
+		set_naval_oob = "FIC_1936_naval_legacy"
+	}
+}
+
+add_ideas = {
+FIC_turbulent_situation_idea
+FIC_Difficulty_in_conscription
+FIC_undisciplined_Army
+FIC_salt_opium_alcohol_idea
+FIC_Agricultural_colonies_idea
 }
 
 create_country_leader = {
-	name = "Duc de Richelieu"
-	desc = ""
-	picture = "Portrait_Duc_de_Richelieu.dds"
-	expire = "1953.3.1"
+	name = "François de La Rocque"
+	desc = "POLITICS_FRANCOIS_ROCQUE_DESC"
+	picture = "Portrait_France_Francois_de_la_Rocque.dds"
+	expire = "1965.1.1"
 	ideology = conservatism
 }
 
@@ -81,20 +136,103 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "St. Martha"
-	desc = ""
-	picture = "Portrait_St_Martha_admiral.dds"
-	expire = "1953.3.1"
+	name = "Marcel Déat"
+	desc = "POLITICS_MARCEL_DEAT_DESC"
+	picture = "Portrait_France_Marcel_Deat.dds"
+	expire = "1965.1.1"
 	ideology = syndicalist
 }
 
 create_country_leader = {
-	name = "St. Martha"
-	desc = ""
-	picture = "Portrait_St_Martha_admiral.dds"
-	expire = "1936.9.15"
+	name = "Philippe Pétain"
+	desc = "POLITICS_PHILIPPE_PETAIN_DESC"
+	picture = "Portrait_France_Philippe_Petain.dds"
+	expire = "1965.1.1"
 	ideology = authoritarian_democracy
 }
+
+create_field_marshal = {
+	name = "Philippe Pétain"
+	picture = "Portrait_France_Philippe_Petain.dds"
+	traits = {
+		old_guard
+		organisational_leader
+		inspirational_leader
+	}
+	skill = 3
+	attack_skill = 4
+    defense_skill = 3
+    planning_skill = 3
+    logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Alphonse Juin"
+	picture = "Portrait_France_Alphonse_Juin.png"
+	traits = {  }
+	skill = 3
+	attack_skill = 3
+    defense_skill = 3
+    planning_skill = 4
+    logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Maurice Janin"
+	picture = "Portrait_France_Maurice_Janin.dds"
+	traits = {
+		politically_connected
+		harsh_leader
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Charles de Gaulle"
+	picture = "Portrait_France_Charles_De_Gaulle.dds"
+	traits = {
+		panzer_leader
+		urban_assault_specialist
+	}
+	skill = 3
+	attack_skill = 4
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 3
+}
+
+create_field_marshal = {
+	name = "Jean de Lattre de Tassigny"
+	picture = "Portrait_France_Jean_de_Lattre_de_Tassigny.png"
+	traits = {
+		trickster
+		naval_invader
+		jungle_rat
+		organisational_leader
+	}
+	skill = 4
+	attack_skill = 5
+    defense_skill = 4
+    planning_skill = 3
+    logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "François de la Rocque"
+	picture = "Portrait_France_Francois_de_la_Rocque.dds"
+	traits = { politically_connected }
+	skill = 2
+	attack_skill = 2
+    defense_skill = 1
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+
 create_navy_leader = {
 	name = "Duc de Richelieu"
 	picture = "Portrait_Duc_de_Richelieu.dds"
@@ -104,4 +242,173 @@ create_navy_leader = {
 	defense_skill = 3
 	maneuvering_skill = 4
 	coordination_skill = 4
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "600 Series"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Minerve Class"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 2
+			sub_engine_upgrade = 2
+			sub_stealth_upgrade = 2
+			sub_torpedo_upgrade = 2
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Chacal Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 1
+			destroyer_engine_upgrade = 1
+			ship_ASW_upgrade = 1
+			ship_anti_air_upgrade = 1
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Courbet Class"
+		type = battleship_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			ship_armor_upgrade = 1
+			ship_gun_upgrade = 1
+		}
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {				# represents Requin and all 600 series classes
+		name = "600 Series"
+		type = ship_hull_submarine_1
+		name_group = FRA_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {			
+		name = "630 Series"
+		type = ship_hull_submarine_1
+		name_group = FRA_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Bourrasque Class"				# represents Bourrasque and L'Adroit classes
+		type = ship_hull_light_1
+		name_group = FRA_DE_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Chacal Class"				# represents Chacal, Guépard, Agile, and Vauquelin classes
+		type = ship_hull_light_1
+		name_group = FRA_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+		obsolete = yes
+	}
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "Duguay-Trouin Class"			# represents Duguay-Trouin, Pluton, Jeanne d'Arc classes
+		type = ship_hull_cruiser_1
+		name_group = FRA_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_light_medium_battery_1
+			rear_1_custom_slot = ship_airplane_launcher_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Émile Bertin Class"					# minelaying cruiser
+		type = ship_hull_cruiser_1
+		name_group = FRA_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = empty
+			mid_1_custom_slot = ship_anti_air_1
+			mid_2_custom_slot = ship_light_medium_battery_2
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+	# Battleships #
+	create_equipment_variant = {
+		name = "Courbet Class"		
+		type = ship_hull_heavy_1
+		name_group = FRA_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = ship_heavy_battery_1
+			mid_1_custom_slot = ship_secondaries_1
+			mid_2_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
 }

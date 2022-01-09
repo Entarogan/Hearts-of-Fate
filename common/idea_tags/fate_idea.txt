@@ -1,0 +1,23 @@
+idea_categories = {
+	special_politics = {
+		slot = kizoku_in
+		slot = sumitsu_in
+		slot = gaimu_daijin
+		slot = rikugun_daijin
+		slot = kaigun_daijin
+		slot = jinja_kyoku
+		ledger = all
+		
+		cost = 0
+		removal_cost = -1
+	}
+}
+
+slot_ledgers = {
+	jinja_kyoku = civilian
+	daishin_in = civilian
+	rikugun_daijin = all
+	kaigun_daijin = all
+	kizoku_in = all
+	sumitsu_in = all
+}

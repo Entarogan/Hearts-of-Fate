@@ -32,7 +32,7 @@ leader_traits = {
     }
     
     Nordic_Bloodline = {
-        fascism_acceptance = 50
+        equipment_capture_factor = 0.25
     }
     
     Repair_dockyard = {

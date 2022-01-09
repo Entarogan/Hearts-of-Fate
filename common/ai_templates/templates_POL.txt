@@ -95,7 +95,7 @@ armored_POL = {
 			
 			support = {
 				engineer = 1
-				recon = 1
+				mot_recon = 1
 				artillery = 1
 				anti_air = 1
 				logistics_company = 1
@@ -115,7 +115,7 @@ armored_POL = {
 			medium_sp_artillery_brigade
 			medium_sp_anti_air_brigade
 			engineer
-			recon
+			mot_recon
 			anti_air
 			logistics_company
 			artillery
@@ -185,7 +185,7 @@ armored_POL = {
 			
 			support = {
 				engineer = 1
-				recon = 1
+				mot_recon = 1
 				anti_air = 1
 				logistics_company = 1
 				artillery = 1
@@ -206,7 +206,7 @@ armored_POL = {
 			modern_sp_artillery_brigade
             modern_sp_anti_air_brigade
 			engineer
-			recon
+			mot_recon
 			anti_air
 			logistics_company
 

@@ -2,6 +2,69 @@ ideas = {
 
     country = {
 
+      ENG_Empire_Mobilization_idea = {
+
+        allowed = {
+          always = no
+        }
+
+        allowed_civil_war = {
+
+        }
+
+        available = {
+          has_war = yes
+        }
+        
+        removal_cost = -1
+
+        picture = FRA_army_of_aggression_focus
+
+        modifier = {
+          political_power_gain = -0.30
+				  production_speed_arms_factory_factor = 0.1
+          production_factory_efficiency_gain_factor = 0.10
+          production_factory_start_efficiency_factor = 0.10
+          production_factory_max_efficiency_factor = 0.15
+          consumer_goods_factor = -0.05
+          conscription_factor = 0.15
+				  conscription = 0.025
+        }
+
+      }
+
+      ENG_Empire_Mobilization_Dominion_idea = {
+
+        allowed = {
+          always = no
+        }
+
+        allowed_civil_war = {
+
+        }
+
+        available = {
+          has_war = yes
+        }
+        
+        removal_cost = -1
+
+        picture = SPR_seize_the_gold_reserves
+
+        modifier = {
+          stability_factor = -0.10
+          autonomy_gain = 0.5
+          consumer_goods_factor = 0.05
+          conscription_factor = -0.10
+        }
+
+        targeted_modifier = { 
+          tag = ENG
+          cic_to_target_factor = 0.25
+        }
+
+      }
+
 	    El_Dorado_idea = {
 
 			allowed = {
@@ -64,6 +127,9 @@ ideas = {
 			picture = generic_goods_red_bonus
 
 			modifier = {
+		    stability_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+        production_factory_start_efficiency_factor = 0.10
 				consumer_goods_factor = 0.05
 			}
 		}
@@ -84,8 +150,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 
 			modifier = {
-				consumer_goods_factor = -0.10
-				industrial_capacity_factory = 0.10
+				consumer_goods_factor = -0.07
 			}
 		}
 		
@@ -106,7 +171,6 @@ ideas = {
 
 			modifier = {
 				production_speed_industrial_complex_factor = 0.10
-				production_factory_max_efficiency_factor = 0.10
 				communism_drift = -0.01
 			}
 		}
@@ -147,8 +211,8 @@ ideas = {
 			picture = generic_democratic_drift_bonus
 
 			modifier = {
-				conscription = 0.08
-				production_speed_arms_factory_factor = 0.05
+				conscription = 0.03
+				mobilization_speed = 0.2
 			}
 		}
 		
@@ -240,7 +304,7 @@ ideas = {
 
 			modifier = {
 			    war_support_factor = 0.15
-			    stability_weekly = 0.002
+			    stability_weekly = 0.001
 				fascism_drift = -0.02
 				communism_drift = -0.02
 				democratic_drift = -0.02
@@ -352,7 +416,6 @@ ideas = {
 			picture = new_camelot
 
 			modifier = {
-				army_attack_factor = 0.10
 				drift_defence_factor = 0.30
 				war_support_factor = 0.25
 				conscription_factor = 0.15
@@ -401,8 +464,8 @@ ideas = {
 			picture = round_table
 
 			modifier = {
-			    stability_factor = -0.10
 				political_power_gain = 0.20
+				research_speed_factor = 0.05
 			    conscription_factor = 0.05	
 				democratic_drift = 0.02
 				democratic_acceptance = 50
@@ -535,8 +598,8 @@ ideas = {
 			modifier = {
 			    stability_weekly = 0.005
 				neutrality_drift = 0.10
-				send_volunteer_divisions_required = -0.90
-				send_volunteer_size = 20
+				send_volunteer_divisions_required = -0.50
+				send_volunteer_size = 5
 				mobilization_laws_cost_factor = -0.75
 				economy_cost_factor = -0.75
 			}
@@ -581,15 +644,17 @@ ideas = {
 			    
 			}
 			equipment_bonus = {
-					motorized_equipment = {
-						build_cost_ic = -0.15 instant = yes
-					}
-				}
-				equipment_bonus = {
-					mechanized_equipment = {
-						build_cost_ic = -0.10 instant = yes
-					}
-				}
+
+        motorized_equipment = {
+          build_cost_ic = 0.05 
+          hardness = 0.4
+          maximum_speed = 0.1
+          reliability = 0.15
+
+          instant = yes
+        }
+
+      }
 		}
 		
 		ARTURIA_royal_naval_idea = {
@@ -628,8 +693,8 @@ ideas = {
 			picture = generic_navy_bonus
 
 			modifier = {
-				industrial_capacity_dockyard = 0.15
-				production_speed_dockyard_factor = 0.15
+				industrial_capacity_dockyard = 0.12
+				production_speed_dockyard_factor = 0.12
 			}
 		}
 		
@@ -649,7 +714,8 @@ ideas = {
 			picture = chi_hyper_inflation
 
 			modifier = {
-				industrial_capacity_factory = 0.15
+				local_resources_factor = 0.10
+				fuel_gain_factor = 0.3
 			}
 		}
 		
@@ -676,7 +742,7 @@ ideas = {
 				high_command_cost_factor = -0.10
 				air_chief_cost_factor = -0.10
 				army_chief_cost_factor = -0.10
-				navy_chief_cost_factor -0.10
+				navy_chief_cost_factor = -0.10
 				army_leader_start_planning_level = 1
 			}
 		}
@@ -697,7 +763,7 @@ ideas = {
 			picture = jap_supremacy_of_technology
 
 			modifier = {
-				research_speed_factor = 0.05
+				research_speed_factor = 0.03
 			}
 			
 			research_bonus = {
@@ -724,9 +790,7 @@ ideas = {
 			picture = jap_supremacy_of_technology
 
 			modifier = {
-				nuclear_production_factor = 0.40
-				industrial_capacity_factory = 0.15
-				industrial_capacity_dockyard = 0.15
+				nuclear_production_factor = 0.20
 			}
 			
 		}
@@ -772,7 +836,7 @@ ideas = {
 
 			modifier = {
 				experience_gain_air_factor = 0.25
-				air_ace_generation_chance_factor = 0.50
+				air_ace_generation_chance_factor = 0.25
 			}
 			
 		}
@@ -793,13 +857,13 @@ ideas = {
 			picture = generic_air_research
 
 			modifier = {
-				air_accidents_factor = -0.25
-				air_cas_present_factor = 0.15
-				air_close_air_support_agility_factor = 0.15
-				air_strategic_bomber_agility_factor = 0.15
-				air_air_superiority_agility_factor = 0.15
-				air_interception_agility_factor = 0.15
-				naval_strike_agility_factor = 0.15
+				air_accidents_factor = -0.15
+				air_cas_present_factor = 0.10
+				air_close_air_support_agility_factor = 0.10
+				air_strategic_bomber_agility_factor = 0.10
+				air_air_superiority_agility_factor = 0.10
+				air_interception_agility_factor = 0.10
+				naval_strike_agility_factor = 0.10
 			}
 			
 		}
@@ -845,12 +909,12 @@ ideas = {
 			picture = generic_research_bonus
 
 			modifier = {
-				research_speed_factor = 0.07
+				research_speed_factor = 0.03
 			}
 			
 			research_bonus = {
-				nuclear = 0.15
-				rocketry = 0.10
+				nuclear = 0.20
+				rocketry = 0.20
 			}
 		}
 		
@@ -897,8 +961,8 @@ ideas = {
 			picture = ast_volunteer_defence_corps
 
 			modifier = {
-				special_forces_min = 75
-				send_volunteer_size = 15
+				special_forces_min = 25
+				send_volunteer_size = 5
 				send_volunteers_tension = -0.50
 			}
 		}
@@ -936,25 +1000,40 @@ ideas = {
 			equipment_bonus = {
 
 				ship_hull_heavy = {
-					build_cost_ic = 0.20 instant = yes
+					build_cost_ic = 0.20 
                     reliability = 0.20
+
+          instant = yes
+
 				}
 				ship_hull_carrier = {
-					build_cost_ic = 0.20 instant = yes
+					build_cost_ic = 0.20 
                     reliability = 0.20
+
+          instant = yes
+
 				}
 				ship_hull_cruiser = {
-					build_cost_ic = 0.20 instant = yes
+					build_cost_ic = 0.20 
                     reliability = 0.20
+
+          instant = yes
+
 				}
 				ship_hull_light = {
-					build_cost_ic = 0.20 instant = yes
+					build_cost_ic = 0.20 
                     reliability = 0.20
+
+          instant = yes
+
 				}
 				
 				ship_hull_submarine = {
-					build_cost_ic = 0.20 instant = yes
+					build_cost_ic = 0.20 
                     reliability = 0.20
+
+          instant = yes
+
 				}
 			}
 			
@@ -980,22 +1059,34 @@ ideas = {
             
 			equipment_bonus = {
 				screen_ship = {
-					armor_value = 0.15 naval_range = 0.20
+					armor_value = 0.1 naval_range = 0.2
+
+          instant = yes
+
 				}
 				carrier = {
-					armor_value = 0.15 naval_range = 0.20
+					armor_value = 0.1 naval_range = 0.2
+
+          instant = yes
+
 				}
 				capital_ship = {
-					armor_value = 0.15 naval_range = 0.20
+					armor_value = 0.1 naval_range = 0.2
+
+          instant = yes
+
 				}
 				submarine = {
-					armor_value = 0.15 naval_range = 0.20
+					armor_value = 0.1 naval_range = 0.2
+
+          instant = yes
+
 				}
 			}
 			
 			modifier = {
-			    navy_capital_ship_attack_factor = 0.15
-				navy_carrier_air_attack_factor = 0.15
+			    navy_capital_ship_attack_factor = 0.1
+				navy_carrier_air_attack_factor = 0.1
 				
 			}
 		}
@@ -1088,7 +1179,6 @@ ideas = {
             modifier = {
 			    invasion_preparation = -0.40
                 amphibious_invasion = 0.25
-                special_forces_min = 80
 			}
         }
         
@@ -1165,6 +1255,15 @@ ideas = {
 			}
 			
 			traits = { kings_advisor }
+
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 2
+					has_war = no
+				}
+			}
+
 		}
 		
 	ENG_elmelloi = {
@@ -1176,6 +1275,12 @@ ideas = {
 			}
 			
 			available = {
+				NOT = {
+					has_country_leader = {
+						name = "Lord El Melloi II"
+						ruling_only = yes
+					}
+				}
 				NOT = { has_completed_focus = uk_london_incident_focus }
 			}
 			
@@ -1186,6 +1291,15 @@ ideas = {
 				air_doctrine = 0.08
 				naval_doctrine = 0.08
 			}
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 2
+					has_war = no
+				}
+			}
+
 		}
 		
 	ENG_charles_babbage = {
@@ -1199,7 +1313,7 @@ ideas = {
 			traits = { machinery_expert }
 			
 			research_bonus = {
-				electronics = 0.15
+				electronics = 0.20
 				armor = 0.15
 			}
 		}
@@ -1210,9 +1324,24 @@ ideas = {
 			
 			allowed = {
 				original_tag = ENG
+				has_dlc = "La Resistance" 
+			}
+
+			available = {
+				has_intelligence_agency = yes
+				NOT = { has_idea = reines_political }
 			}
 			
 			traits = { super_detective }
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 10
+					has_war = yes
+				}
+			}
+
 		}
 		
 	ENG_moriarty = {
@@ -1222,8 +1351,23 @@ ideas = {
 			allowed = {
 				original_tag = ENG
 			}
+
+			available = {
+				NOT = { has_idea = ENG_lev }
+				NOT = { has_completed_focus = uk_london_incident_focus }
+				NOT = { has_country_flag = lev_suicided }
+			}
 			
 			traits = { crime_head }
+
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					factor = 3
+					has_war = yes
+				}
+			}
+
 		}
     }
 
@@ -1237,7 +1381,7 @@ ideas = {
 			
             picture = chief_mash
 			
-			traits = { army_chief_defensive_mash }
+			traits = { lord_camelot }
 			
 			available = {
 				NOT = { has_government = fascism }
@@ -1260,7 +1404,7 @@ ideas = {
 			
             picture = chief_mordred
 			
-			traits = { army_armored_3 }
+			traits = { charge_1 }
 			
 			ai_will_do = {
 				factor = 3
@@ -1275,10 +1419,10 @@ ideas = {
 			
             picture = chief_tristan
 			
-			traits = { army_artillery_3 }
+			traits = { Joint_operations }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 3
 			}
 		}
     }
@@ -1293,7 +1437,7 @@ ideas = {
 			
             picture = command_gawain
 			
-			traits = { army_regrouping_3 }
+			traits = { Boost_morale }
 			
 			ai_will_do = {
 				factor = 3
@@ -1308,10 +1452,10 @@ ideas = {
 			
             picture = command_lancelot
 			
-			traits = { army_infantry_3 }
+			traits = { Fierce_general }
 			
 			ai_will_do = {
-				factor = 3
+				factor = 5
 			}
 		}
 		
@@ -1323,10 +1467,10 @@ ideas = {
 			
             picture = command_agravain
 			
-			traits = { army_commando_3 }
+			traits = { Butcher_1 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 3
 			}
 		}
 		
@@ -1338,10 +1482,10 @@ ideas = {
 			
             picture = command_kay
 			
-			traits = { army_logistics_3 }
+			traits = { Logistics_support }
 			
 			ai_will_do = {
-				factor = 3
+				factor = 1
 			}
 		}
 	
@@ -1359,7 +1503,13 @@ ideas = {
 			
 			available = {
 				has_completed_focus = uk_cooperation_with_atlas
-				ENG = { controls_state = 446 }
+        or = {
+          ENG = { controls_state = 446 }
+          AND = {
+            EGY = { controls_state = 446 }
+            EGY = { is_subject_of = ENG }
+          }
+        }
 			}
 			
 			research_bonus = {

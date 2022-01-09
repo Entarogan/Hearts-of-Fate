@@ -57,6 +57,8 @@ set_technology = {
 	radio_detection = 1
 	fuel_silos = 1
 	fuel_refining = 1
+
+    armored_car1 = 1
 }
 if = {
 	limit = {
@@ -114,9 +116,10 @@ add_ideas = {
     ENG_britain_ireland_trade_war
     FRA_Versailles_Young_idea
     uk_separatism
+    Powerful_influence_idea 
 }
 
-set_convoys = 1000
+set_convoys = 1500
 
 # DIPLOMACY
 if = {
@@ -162,6 +165,11 @@ if = {
 		autonomous_state = autonomy_dominion
 		freedom_level = 0.2
 	}
+	set_autonomy = {
+		target = MLT
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.5
+	}
 	else = {
 		puppet = MAL
     puppet = KEN
@@ -185,8 +193,6 @@ set_popularities = {
 	democratic = 40
 }
 set_politics = {
-
-	
 	ruling_party = neutrality
 	last_election = "1935.11.14"
 	election_frequency = 120
@@ -199,11 +205,15 @@ add_to_faction = ENG
 #add_to_faction = FRA
 add_to_faction = CAN
 add_to_faction = AST
+### Rhodes
+add_to_faction = MLT
+###
 add_to_faction = SAF
 add_to_faction = KEN
 add_to_faction = BUR
 
 give_military_access = RAJ
+give_guarantee = ISR
 add_to_faction = RAJ		# Must be after puppet
 add_to_faction = MAL
 
@@ -307,7 +317,7 @@ create_field_marshal = {
 	name = "Arturia Pendragon"
     id = 801
 	picture = "Portrait_Arturia_Pendragon.dds"
-	traits = { inspirational_leader organisational_leader politically_connected war_hero adaptable infantry_expert combined_arms_expert fortress_buster  expert_delegator expert_improviser }
+	traits = { politically_connected war_hero trickster skilled_staffer infantry_officer cavalry_officer cavalry_leader combined_arms_expert trait_engineer }
 	skill = 6
 	attack_skill = 6
 	defense_skill = 5
@@ -315,23 +325,23 @@ create_field_marshal = {
 	logistics_skill = 3
 }
 
-create_field_marshal = {
+create_corps_commander = {
 	name = "Gawain"
 	id = 803
 	picture = "Portrait_gawain.dds"
-	traits = { organisational_leader defensive_doctrine adaptable infantry_leader fortress_buster }
+	traits = { inflexible_strategist infantry_leader trait_engineer }
 	skill = 5
-	attack_skill = 5
+	attack_skill = 4
 	defense_skill = 5
 	planning_skill = 4
 	logistics_skill = 3
 }
 
-create_field_marshal = {
+create_corps_commander = {
 	name = "Lancelot"
 	id = 809
 	picture = "Portrait_lancelot.dds"
-	traits = { organisational_leader offensive_doctrine adaptable infantry_expert scavenger }
+	traits = { trickster brilliant_strategist infantry_officer infantry_leader infantry_expert trait_engineer scavenger }
 	skill = 5
 	attack_skill = 5
 	defense_skill = 5
@@ -343,20 +353,20 @@ create_field_marshal = {
 	name = "Agravain"
 	id = 806
 	picture = "Portrait_agravain.dds"
-	traits = { organisational_leader trait_cautious harsh_leader thorough_planner expert_delegator trickster ambusher brilliant_strategist}
-	skill = 5
+	traits = { organizer trait_cautious harsh_leader thorough_planner skilled_staffer expert_delegator trickster infantry_officer }
+	skill = 4
 	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 7
+	defense_skill = 3
+	planning_skill = 5
 	logistics_skill = 3
 }
 
 
 create_corps_commander = {
 	name = "Tristan"
-	id = 809
+
 	picture = "Portrait_tristan.dds"
-	traits = { inflexible_strategist bearer_of_artillery trait_cautious  }
+	traits = { trickster commando naval_invader inflexible_strategist bearer_of_artillery trait_cautious  }
 	skill = 5
 	attack_skill = 4
 	defense_skill = 4
@@ -371,19 +381,19 @@ create_corps_commander = {
 	traits = { inflexible_strategist infantry_officer trait_cautious organizer }
 	skill = 4
 	attack_skill = 2
-	defense_skill = 7
+	defense_skill = 6
 	planning_skill = 2
-	logistics_skill = 4
+	logistics_skill = 3
 }
 
 create_corps_commander = {
 	name = "Mordred" 
 	id = 804
 	picture = "Portrait_mordred.dds"
-	traits = { armor_officer trait_reckless politically_connected panzer_leader urban_assault_specialist panzer_expert}
+	traits = { trickster armor_officer trait_reckless politically_connected panzer_leader urban_assault_specialist panzer_expert}
 	skill = 4
-	attack_skill = 5
-	defense_skill = 2
+	attack_skill = 6
+	defense_skill = 3
 	planning_skill = 2
 	logistics_skill = 2
 }
@@ -403,11 +413,11 @@ create_corps_commander = {
 	name = "Reines El Melloi Archisorte"
 	id = 805
 	picture = "Portrait_Reines_El_Melloi_Archisorte.dds"
-	traits = { organizer urban_assault_specialist aggressive_assaulter politically_connected}
-	skill = 5
+	traits = { organizer urban_assault_specialist brilliant_strategist politically_connected }
+	skill = 4
 	attack_skill = 3
 	defense_skill = 3
-	planning_skill = 3
+	planning_skill = 4
 	logistics_skill = 3
 }
 
@@ -415,7 +425,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Florence Nightingale"
 	picture = "Portrait_Nightingale.dds"
-	traits = { infantry_officer trait_reckless  harsh_leader aggressive_assaulter}
+	traits = { infantry_officer trait_reckless harsh_leader }
 	skill = 4
 	attack_skill = 4
 	defense_skill = 2
@@ -426,9 +436,9 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Boudica"
 	picture = "Portrait_Boudica.dds"
-	traits = { inspirational_leader war_hero ranger  camouflage_expert infantry_leader}
+	traits = { war_hero ranger infantry_leader }
 	skill = 4
-	attack_skill = 3
+	attack_skill = 4
 	defense_skill = 3
 	planning_skill = 4
 	logistics_skill = 2
@@ -437,22 +447,22 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Robin Hood"
 	picture = "Portrait_robin_hood.dds"
-	traits = { trickster jungle_rat ranger swamp_fox  commando camouflage_expert ambusher}
+	traits = { trickster jungle_rat ranger swamp_fox  commando camouflage_expert infantry_officer infantry_leader ambusher }
 	skill = 4
 	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 2
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
 }
 
 create_corps_commander = {
 	name = "Henry Jekyll"
 	picture = "Portrait_Jekyll.dds"
-	traits = {  trait_cautious  organizer }
-	skill = 4
+	traits = { trait_cautious organizer }
+	skill = 3
 	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 4
+	defense_skill = 2
+	planning_skill = 3
 	logistics_skill = 3
 }
 
@@ -460,8 +470,8 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Jack the Ripper"
 	picture = "Portrait_jack.dds"
-	traits = { trickster urban_assault_specialist commando camouflage_expert ambusher}
-	skill = 4
+	traits = { trickster urban_assault_specialist commando camouflage_expert infantry_officer infantry_leader ambusher }
+	skill = 3
 	attack_skill = 4
 	defense_skill = 1
 	planning_skill = 4
@@ -471,11 +481,11 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Gareth"
 	picture = "Portrait_Gareth.dds"
-	traits = { infantry_leader  adaptable organizer war_hero  inflexible_strategist }
+	traits = { infantry_leader organizer war_hero inflexible_strategist }
 	skill = 3
-	attack_skill = 3
+	attack_skill = 2
 	defense_skill = 4
-	planning_skill = 3
+	planning_skill = 2
 	logistics_skill = 3
 }
 
@@ -483,10 +493,10 @@ create_corps_commander = {
 	name = "Gray"
 	id = 807
 	picture = "Portrait_Gray.dds"
-	traits = { politically_connected adaptable commando organizer}
+	traits = { politically_connected commando organizer }
 	skill = 3
 	attack_skill = 4
-	defense_skill = 2
+	defense_skill = 1
 	planning_skill = 3
 	logistics_skill = 2
 }
@@ -494,7 +504,7 @@ create_corps_commander = {
 create_navy_leader = {
 	name = "Francis Drake"
 	picture = "Portrait_drake.dds"
-	traits = { superior_tactician ironside blockade_runner bold spotter naval_lineage blue_water_expert }
+	traits = { bold naval_lineage navy_career_officer gunnery_expert superior_tactician blockade_runner ironside spotter blue_water_expert }
 	skill = 6
 	attack_skill = 6
 	defense_skill = 4
@@ -505,10 +515,10 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Edward Teach"
 	picture = "Portrait_edward.dds"
-	traits = { superior_tactician old_guard_navy spotter  blue_water_expert}
+	traits = { bold caustic_personality gunnery_expert blockade_runner superior_tactician spotter inshore_fighter }
 	skill = 5
-	attack_skill = 4
-	defense_skill = 3
+	attack_skill = 5
+	defense_skill = 1
 	maneuvering_skill = 5
 	coordination_skill = 5
 }
@@ -516,12 +526,12 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Anne Bonny & Mary Read"
 	picture = "Portrait_twin.dds"
-	traits = { superior_tactician spotter}
+	traits = { bold blockade_runner superior_tactician spotter}
 	skill = 4
 	attack_skill = 4
 	defense_skill = 3
-	maneuvering_skill = 4
-	coordination_skill = 6
+	maneuvering_skill = 3
+	coordination_skill = 3
 }
 
 create_navy_leader = {
@@ -529,7 +539,7 @@ create_navy_leader = {
 	picture = "Portrait_Frankenstein.dds"
 	traits = { ironside blockade_runner  bold green_water_expert }
 	skill = 4
-	attack_skill = 4
+	attack_skill = 6
 	defense_skill = 2
 	maneuvering_skill = 3
 	coordination_skill = 2
@@ -538,11 +548,11 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Bartholomew Roberts"
 		picture = "Portrait_Bartholomew_Roberts.dds"
-	traits = { blockade_runner superior_tactician navy_career_officer bold gunnery_expert  gentlemanly}
+	traits = { navy_career_officer bold cuts_corners gentlemanly blockade_runner superior_tactician spotter blue_water_expert inshore_fighter }
 	skill = 5
 	attack_skill = 5
-	defense_skill = 4
-	maneuvering_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 4
 	coordination_skill = 4
 }
 

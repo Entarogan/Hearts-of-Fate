@@ -26,10 +26,10 @@ country_event = {
           tag = BUR
           tag = BAH
         }
-        # add_timed_idea = { idea = ARTURIA_common_wealth_ensure_idea days = 800 }
-        add_stability = 0.15
-        ENG = { country_event = { id = gsk_britain.5 hours = 6 } }
       }
+	  # add_timed_idea = { idea = ARTURIA_common_wealth_ensure_idea days = 800 }
+	  add_stability = 0.15
+	  ENG = { country_event = { id = gsk_britain.5 hours = 6 } }
     }
 		
 	}
@@ -198,6 +198,33 @@ country_event = {
 	
 	option = {
 		name = gsk_britain.6.a
+		ai_chance = { 
+		  base = 50 
+			modifier = {
+				factor = 0
+				focus_progress = {
+					focus = ITA_albania_war_goal
+					progress > 0
+				}
+			}
+			modifier = {
+				factor = 0
+				has_completed_focus = ITA_albania_war_goal
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = ita_political_turmoil_flag
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = ita_regoup_fascist_flag
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = ita_towards_republic_flag
+			}
+		}
+
         effect_tooltip = {
 			if = {
 				limit = {
@@ -240,7 +267,8 @@ country_event = {
 	
 	option = {
 		name = gsk_britain.6.b
-		ai_chance = { factor = 0 }
+		ai_chance = { base = 50 }
+
 		FROM = { 
 			add_opinion_modifier = {
 				target = ROOT
@@ -308,6 +336,15 @@ country_event = {
 
 	option = {
 		name = gsk_britain.9.a
+
+					add_ai_strategy = {
+							type = antagonize
+							id = "IRE"
+							value = 4000
+						}
+
+		set_country_flag = london_incident
+
 		start_civil_war = {
 				ruling_party = fascism
 				ideology = democratic
@@ -432,7 +469,7 @@ country_event = {
 		add_tech_bonus = {
 			name = gsk_britain.11
 			bonus = 1.0
-			ahead_reduction = 2
+			ahead_reduction = 1.0
 			uses = 3
 			category = dd_tech
 			category = cl_tech
@@ -462,11 +499,21 @@ country_event = {
 		original_tag = ENG
 		has_completed_focus = ENG_steady_as_she_goes
 		date > 1937.1.1
-		date < 1937.2.1
 	}
 	fire_only_once = yes
 	option = {
 		name = gsk_britain.12.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+        has_game_rule = {
+          rule = ENG_ai_behavior
+          option = DEMOCRATIC_ANIMUSPHERE
+        }
+			}
+		}
+
 		retire_country_leader = yes
 		create_country_leader = {
 			name = "Lord El Melloi II"
@@ -475,13 +522,25 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = liberalism
 			traits = {
-				
+        strategy_educator				
 			}
 		}
 	}
 	
 	option = {
 		name = gsk_britain.12.b
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+        has_game_rule = {
+          rule = ENG_ai_behavior
+          option = DEMOCRATIC_EL_MELLOI
+        }
+			}
+		}
+
+
 		retire_country_leader = yes
 		create_country_leader = {
 			name = "Olga Marie Animusphere"
@@ -490,7 +549,7 @@ country_event = {
 			expire = "1940.1.1"
 			ideology = conservatism
 			traits = {
-				
+				elite_action
 			}
 		}
 		

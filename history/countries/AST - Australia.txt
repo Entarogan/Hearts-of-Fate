@@ -35,22 +35,7 @@ set_technology = {
 
 set_research_slots = 4
 
-add_offsite_building = {
-  type = industrial_complex
-  level = 12
-}
-add_offsite_building = {
-  type = arms_factory
-  level = 6
-}
-add_offsite_building = {
-  type = dockyard
-  level = 8
-}
-add_offsite_building = {
-  type = synthetic_refinery
-  level = 5
-}
+
 puppet = INS
 
 set_cosmetic_tag = AST_UNION
@@ -107,7 +92,8 @@ if = {
 		has_dlc = "Together for Victory"
 	}
 	add_ideas = AST_great_depression_1
-
+	add_ideas = Ast_Migrate_country
+	add_ideas = AST_White_Australia_Policy
 	add_to_tech_sharing_group = commonwealth_research
 }
 
@@ -254,7 +240,7 @@ create_country_leader = {
 	desc = "POLITICS_GEORGE_V_DESC"
 	picture = "Portrait_George_V.dds"
 	expire = "1965.1.1"
-	ideology = conservatism
+	ideology = socialism
 	traits = {
 		grand_fleet_proponent  navy_capital_ship_3  navy_chief_reform_3  popular_figurehead
 	}

@@ -10,6 +10,11 @@ armor_generic = {
 		USA
 		ITA
 		SOV
+		RUS
+		HUN
+		CZE
+		ROM
+		YUG
 	}
 
 	roles = {
@@ -502,6 +507,12 @@ garrison_generic = {
 		USA
 		ITA
 		SOV
+		RUS
+		POL
+		HUN
+		CZE
+		ROM
+		YUG
 	}
 	
 	roles = {
@@ -720,6 +731,12 @@ infantry_generic = {
 		SIK
 		MEN
 		MAN
+		RUS
+		POL
+		HUN
+		CZE
+		ROM
+		YUG
 	}
 
 	roles = {
@@ -840,6 +857,12 @@ infantry_big_generic = {
 		SIK
 		MEN
 		MAN
+		RUS
+		POL
+		HUN
+		CZE
+		ROM
+		YUG
 	}
 
 	roles = {
@@ -967,6 +990,12 @@ mountaineers_generic = {
 		USA
 		ITA
 		SOV
+		RUS
+		POL
+		HUN
+		CZE
+		ROM
+		YUG
 	}
 
 	roles = {
@@ -1077,6 +1106,12 @@ marines_generic = {
 		USA
 		ITA
 		SOV
+		RUS
+		POL
+		HUN
+		CZE
+		ROM
+		YUG
 	}
 
 	roles = {
@@ -1269,6 +1304,12 @@ paratrooper_generic = {
 		USA
 		ITA
 		SOV
+		RUS
+		POL
+		HUN
+		CZE
+		ROM
+		YUG
 	}
 
 	roles = {

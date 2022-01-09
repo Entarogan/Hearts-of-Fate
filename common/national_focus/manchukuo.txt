@@ -24,7 +24,7 @@ focus_tree = {
 #		y = 0
 #		relative_position_id = 
 #
-#		cost = 10
+#		cost = 5
 #
 #		ai_will_do = {
 #			factor = 1
@@ -38,9 +38,9 @@ focus_tree = {
 #
 #		}
 #
-#		cancel_if_invalid = yes
-#		continue_if_invalid = no
-#		available_if_capitulated = no
+#		
+#		
+#		
 #
 #		complete_tooltip = {
 #
@@ -57,10 +57,10 @@ focus_tree = {
 		x = 6
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 
 		available = {
@@ -71,9 +71,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -94,10 +94,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_pacify_the_countryside
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
@@ -108,8 +108,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -129,7 +129,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_army_modernization
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -143,8 +143,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -164,14 +164,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_pacify_the_countryside
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 
 		available = {
-			NOT = { has_idea = MAN_banditry }
 			NOT = { has_war_with = JAP }
 		}
 
@@ -179,9 +178,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 			every_state = {
@@ -229,7 +228,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_invite_japanese_settlers
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -243,9 +242,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -270,7 +269,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_collective_farms
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -284,8 +283,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -305,7 +304,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_law_university
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -332,8 +331,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -353,7 +352,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_pacify_the_countryside
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -367,8 +366,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -393,7 +392,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_trade_delegation
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -407,9 +406,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 			random_state = {
@@ -455,7 +454,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = MAN_army_modernization
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 6
@@ -469,8 +468,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -490,7 +489,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_obedience
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -504,8 +503,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -525,7 +524,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_obedience
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -539,9 +538,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -560,7 +559,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_first_five_year_plan
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -574,9 +573,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 			custom_effect_tooltip = available_political_advisor
@@ -626,7 +625,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_invite_japanese_investors
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -653,9 +652,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -713,7 +712,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_invite_japanese_investors
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 2
@@ -727,9 +726,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -760,7 +759,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_develop_aluminum_sources
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -774,9 +773,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -803,7 +802,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = MAN_invite_japanese_investors
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 8
@@ -817,8 +816,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -840,7 +839,7 @@ focus_tree = {
 		y = 4
 		relative_position_id = MAN_first_five_year_plan
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -873,9 +872,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -894,7 +893,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_second_five_year_plan
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -908,8 +907,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -929,7 +928,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_first_five_year_plan
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -943,9 +942,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -971,7 +970,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_mukden_arsenal
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -985,8 +984,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -1009,7 +1008,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_first_five_year_plan
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1023,8 +1022,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -1050,7 +1049,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_alliance_with_the_kwantung_army
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1064,8 +1063,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -1085,7 +1084,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_chinese_leadership
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1106,9 +1105,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1127,7 +1126,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_chinese_leadership
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1141,9 +1140,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1166,7 +1165,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = MAN_chinese_leadership
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1191,9 +1190,9 @@ focus_tree = {
 			is_subject = no
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1216,22 +1215,22 @@ focus_tree = {
 		y = 4
 		relative_position_id = MAN_trade_delegation
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
 		}
 
 		available = {
-
+		  always = no
 		}
 
 		bypass = {
 			is_subject = no
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1254,7 +1253,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_assertiveness
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1275,9 +1274,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 
 		completion_reward = {
@@ -1338,7 +1337,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_request_control_of_the_railways
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1352,8 +1351,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 
@@ -1370,7 +1369,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_staff_the_court_with_manchus
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -1384,9 +1383,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 
 		completion_reward = {
@@ -1442,7 +1441,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_expand_the_imperial_guards
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 6
@@ -1456,9 +1455,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 			unlock_decision_tooltip = MAN_fund_underground_gun_shops
@@ -1524,7 +1523,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_staff_the_court_with_manchus
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1538,8 +1537,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 
@@ -1559,7 +1558,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_request_control_of_the_railways
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1573,9 +1572,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1594,7 +1593,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_five_equal_peoples
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -1608,8 +1607,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -1629,7 +1628,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_five_equal_peoples
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1643,8 +1642,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1661,7 +1660,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_white_russian_advisers
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1675,8 +1674,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -1738,7 +1737,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_bolster_nationalism 
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1752,9 +1751,9 @@ focus_tree = {
 			is_subject = no
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_stability = 0.1
@@ -1776,7 +1775,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_purge_the_general_affairs_council
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -1790,9 +1789,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1811,7 +1810,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_purge_the_general_affairs_council
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 100
@@ -1832,7 +1831,7 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
+		
 
 		will_lead_to_war_with = JAP
 
@@ -1864,7 +1863,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_independence_war
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1878,8 +1877,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -1899,7 +1898,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_imperial_divinity
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 5
@@ -1913,8 +1912,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -1935,7 +1934,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_imperial_divinity
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 10
@@ -1949,9 +1948,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1971,7 +1970,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_move_capitals
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 20
@@ -1995,9 +1994,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -2047,7 +2046,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_independence_war
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2061,9 +2060,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -2088,7 +2087,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_reclaim_the_empire
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2102,9 +2101,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -2134,7 +2133,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = MAN_reclaim_the_empire
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2148,9 +2147,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 

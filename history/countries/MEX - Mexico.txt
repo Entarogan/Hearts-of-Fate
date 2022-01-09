@@ -53,6 +53,7 @@ if = {
 		has_dlc = "Man the Guns"
 	}
 	add_ideas = {
+    Powerful_influence_idea 
 		MEX_callistas
 		MEX_church_power_2
 		MEX_oil_concessions

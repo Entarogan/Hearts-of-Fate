@@ -1,0 +1,99 @@
+﻿capital = 617
+
+oob = "SIK_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	
+}
+if = {
+	limit = {
+		has_dlc = "Waking the Tiger"
+	}
+	add_ideas = {
+
+	}
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	communism = 60
+  neutrality = 40
+}
+
+add_ideas = {
+	CHI_warlord_idea
+	CHI_army_corruption_1
+    CHI_incompetent_officers
+}
+
+create_country_leader = {
+	name = "Xuanzang Sanzang"
+	desc = "POLITICS_SAN_ZANG_DESC"
+	picture = "gfx/leaders/SIK/Portrait_Xuanzang_Sanzang.dds"
+	expire = "1965.1.1"
+	ideology = syndicalist
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Xuanzang Sanzang"
+	desc = "POLITICS_SAN_ZANG_DESC"
+	picture = "gfx/leaders/SIK/Portrait_Xuanzang_Sanzang.dds"
+	expire = "1965.1.1"
+	ideology = stratocracy
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Xuanzang Sanzang"
+	desc = "POLITICS_SAN_ZANG_DESC"
+	picture = "gfx/leaders/SIK/Portrait_Xuanzang_Sanzang.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Xuanzang Sanzang"
+	desc = "POLITICS_SAN_ZANG_DESC"
+	picture = "gfx/leaders/SIK/Portrait_Xuanzang_Sanzang.dds"
+	expire = "1965.1.1"
+	ideology = religious_fascism
+	traits = {
+		#
+	}
+}
+
+create_corps_commander = {
+	name = "Chiang Yu-fen"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_3.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Sheng Shicai"
+	picture = "gfx/leaders/SIK/Portrait_Sinkiang_Sheng_Shicai.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}

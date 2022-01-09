@@ -1,17 +1,17 @@
 ﻿l_english:
  intro.0.t:0 "Introduction and Disclaimer"
- intro.0.desc:0 "Credit: Part of Germany design, setting, flags, and some of icons are from famous Fuhrerreich Mod. Please check it on the steam workshop if you like it. \n This mod is a TypeMoon-themed and Anime-themed mod, try to blend the WWII world, or the historical world, with characters from TypeMoon ACG series, especially Fate Series, made by a small group lead by Entarogan. This mod does not adopt the original type-moon universe and keep the realistic WWII universe instead. Concepts like servant, Grail War and Root, do not make sense here. Grail, Alaya, Magic, etc. should be interpreted as religious and political symbols. \n All ideologies, religious,racial,national ideas are simulations of those real exsits in history or TM original works and are not any real ideas held by any one of authors. The authors are opposite to all kinds of racism,fascism,nazism,terrorism and respect every nation and religion beliefs.\n Forgive me for my Chinglish please."
+ intro.0.desc:0 "Credit: Part of Germany design, setting, flags, and some of icons are from famous Fuhrerreich Mod and TNO(the new order) Mod. Please check it on the steam workshop if you like it. \n This mod is a TypeMoon-themed and Anime-themed mod, try to blend the WWII world, or the historical world, with characters from TypeMoon ACG series, especially Fate Series, made by a small group lead by Entarogan. This mod does not adopt the original type-moon universe and keep the realistic WWII universe instead. Concepts like servant, Grail War and Root, do not make sense here. Grail, Alaya, Magic, etc. should be interpreted as religious and political symbols. \n All ideologies, religious,racial,national ideas are simulations of those real exsits in history or TM original works and are not any real ideas held by any one of authors. The authors are opposite to all kinds of racism,fascism,nazism,terrorism and respect every nation and religion beliefs.\n Forgive me for my Chinglish please."
  intro.0.a:0 "Check recent update"
  intro.0.b:0 "FAQ and Contact"
  intro.0.c:0 "Let's begin"
  
- intro.1.t:0 "The last update"
- intro.1.desc:0 "--German National Focus Tree, Events \n--British Focus Tree extension for industry \n --Large modifications for AI behaviors.\n --Some bugs fixed \n -- Next major work will lay on Iraq and Soviet Union."
- intro.1.a:0 "Let's begin"
+ intro.1.t:0 "Recent updates"
+ intro.1.desc:0 "-Hungarian, Romanian state policy tree, event \n-daily modifications for AI behavior. \n-Daily bug fixes \n-The next update will probably focus on the Northern government."
+ intro.1.a:0 "Let's get started."
  
- intro.2.t:0 "Frequently Asked Questions"
- intro.2.desc:0 "--Q: Which countries have been largely modified? \n --A: Britain, France, Italy, Japan, Sweden, Germany, Romania, Hungary and Mexico. \n\n--Q: Which countries are in the waiting list? --A: Iraq, USSR, Russia(White), China, India, Iran and perhaps some South American countries (depends on future FGO plots). \n\n--Q: Why almost all modified leaders are girls? --A: The correct question is, why almost all leaders in history are male? \n\n Contact: Discord server: https://discord.gg/ZxAtBkp(English) , QQ Group: 873355249"
- intro.2.a:0 "Let's begin"
+ intro.2.t:0 "Frequently Asked Questions and Contact Information"
+ intro.2.desc:0 "-Q: Which countries/regions have made significant changes? \n - A: UK, France, Italy, Japan, Sweden, Germany, Romania, Hungary, Iraq and Mexico. \n\n -Q: Which countries are on the waiting list? -A: China, India, Iran, and maybe some South American countries (depending on future FGO developments and the integration of other works). \n\n Contact: Discord server: https://discord.gg/ZxAtBkp(English) , QQ group(Chinese): 873355249"
+ intro.2.a:0 "Let's get started."
  
  LOADING_TIP_87:0 "Strive to consistently maintain the proper flow.  \n- Tohsaka Tokiomi"
  LOADING_TIP_88:0 "If you act only on what you should do without head for what you want to do, you’re nothing more than a machine, a phenomenon.  \n- Kaminski Natalia"

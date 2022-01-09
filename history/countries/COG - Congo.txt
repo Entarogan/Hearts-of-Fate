@@ -31,6 +31,10 @@ set_convoys = 80
 
 set_research_slots = 4
 
+add_ideas = {
+
+}
+
 set_politics = {
 	ruling_party = democratic
 	last_election = "1935.5.19"

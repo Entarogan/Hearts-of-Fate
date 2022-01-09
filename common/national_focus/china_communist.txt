@@ -3,11 +3,6 @@ focus_tree = {
 	
 	country = {
 		factor = 0
-		modifier = {
-			add = 10
-			tag = PRC
-			has_dlc = "Waking the Tiger"
-		}
 	}
 	
 
@@ -38,9 +33,9 @@ focus_tree = {
 #
 #		}
 #
-#		cancel_if_invalid = yes
-#		continue_if_invalid = no
-#		available_if_capitulated = no
+#		
+#		
+#		
 #
 #		complete_tooltip = {
 #
@@ -72,9 +67,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_political_power = 120
@@ -112,9 +107,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			create_country_leader = {
@@ -158,9 +153,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			remove_ideas = PRC_power_struggles
@@ -194,9 +189,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			if = {
@@ -239,9 +234,9 @@ focus_tree = {
 			is_in_faction_with = SOV
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			SOV = { country_event = generic.2 }
@@ -271,9 +266,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			swap_ideas = {
@@ -305,9 +300,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			remove_ideas = PRC_power_struggles
@@ -336,9 +331,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_stability = 0.1
@@ -372,9 +367,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
@@ -414,9 +409,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -455,9 +450,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -508,9 +503,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -563,9 +558,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -605,9 +600,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -640,9 +635,9 @@ focus_tree = {
 			WTT_CHI_is_not_leader = yes
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -682,7 +677,7 @@ focus_tree = {
 
 		cancel_if_invalid = no
 		continue_if_invalid = yes
-		available_if_capitulated = no
+		
 
 		complete_tooltip = {
 
@@ -719,9 +714,9 @@ focus_tree = {
 			NOT = { PRC_has_low_popular_support = yes }
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -754,9 +749,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 			622 = {
@@ -811,9 +806,9 @@ focus_tree = {
 			has_war_with = JAP
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -849,9 +844,9 @@ focus_tree = {
 			is_in_faction = yes
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -921,9 +916,9 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1014,9 +1009,9 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1054,9 +1049,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1111,9 +1106,9 @@ focus_tree = {
 			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1147,9 +1142,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1183,9 +1178,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1218,9 +1213,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_ideas = PRC_peoples_war
@@ -1249,9 +1244,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1284,9 +1279,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1322,9 +1317,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1357,9 +1352,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1392,8 +1387,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -1428,9 +1423,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1465,9 +1460,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1504,9 +1499,9 @@ focus_tree = {
 			has_war_with = XSM
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1559,9 +1554,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1599,9 +1594,9 @@ focus_tree = {
 			NOT = { PRC_has_low_popular_support = yes }
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1635,9 +1630,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1672,9 +1667,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1736,9 +1731,9 @@ focus_tree = {
 			NOT = { PRC_has_low_popular_support = yes }
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1775,8 +1770,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -1811,8 +1806,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {
@@ -1847,8 +1842,8 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		
+		
 		available_if_capitulated = yes
 
 		complete_tooltip = {

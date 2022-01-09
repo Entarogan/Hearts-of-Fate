@@ -34,7 +34,10 @@ set_stability = 0.50
 set_war_support = 0.50
 
 add_ideas = {
-
+GER_military_occupation_idea_1
+GER_resistance_idea_4
+GER_Industrial_Development_Plan_idea
+GER_UKR_Developed_agriculture_idea
 }
 
 set_politics = {	
@@ -57,7 +60,7 @@ set_popularities = {
 create_country_leader = {
 	name = "Stepan Bandera"
 	desc = ""
-	picture = "gfx/leaders/RKU/leader_UKR_Stepan_Bandera.tga"
+	picture = "gfx/leaders/RKU/leader_UKR_Stepan_Bandera.dds"
 	expire = "1965.1.1"
 	ideology = 	valkist
 	traits = {

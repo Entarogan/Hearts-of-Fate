@@ -1,4 +1,4 @@
-﻿capital = 107
+﻿capital = 104
 
 oob = "YUG_1936"
 if = {
@@ -183,32 +183,25 @@ if = {
 
 set_convoys = 10
 set_politics = {
-	ruling_party = neutrality
-	last_election = "1935.5.3"
+	ruling_party = communism
+	last_election = "1938.12.1"
 	election_frequency = 36
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 15
+	democratic = 10
 	fascism = 10
-	communism = 15
-	neutrality = 60
+	communism = 70
+	neutrality = 10
 }
 
-1939.1.1 = {
-	set_politics = {
-		ruling_party = neutrality
-		last_election = "1938.12.1"
-		election_frequency = 36
-		elections_allowed = yes
-	}
-	set_popularities = {
-		democratic = 10
-		fascism = 20
-		communism = 10
-		neutrality = 60
-	}
+
+
+declare_war_on = {
+	target = SER
+	type = annex_everything
 }
+
 set_stability = 0.6
 
 create_country_leader = {
@@ -247,7 +240,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Josip Broz Tito"
 	desc = "POLITICS_JOSIP_BROZ_TITO_DESC"
-	picture = "Portrait_Yugoslavia_Josip_Broz_Tito.dds"
+	picture = "Portrait_Josip_Broz_Tito.png"
 	expire = "1965.1.1"
 	ideology = leninism
 	traits = {
@@ -255,21 +248,20 @@ create_country_leader = {
 	}
 }
 
-create_corps_commander = {
-	name = "Vladimir Čukavac"
-	gfx = GFX_Portrait_yugoslavia_vladimir_cukavac
-	traits = { trickster  }
-	skill = 3
-
-	attack_skill = 2
+create_field_marshal = {
+	name = "Josip Broz Tito"
+	picture = "Portrait_Josip_Broz_Tito.png"
+	traits = { brilliant_strategist thorough_planner }
+	skill = 4	
+	attack_skill = 3
 	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
+	planning_skill = 4
+	logistics_skill = 3
 }
 
 create_corps_commander = {
 	name = "Ivan Gošnjak"
-	gfx = GFX_Portrait_yugoslavia_ivan_gosnjak
+	picture = "Portrait_ivan_gosnjak.dds"
 	traits = { urban_assault_specialist }
 	skill = 3
 	
@@ -279,49 +271,30 @@ create_corps_commander = {
 	logistics_skill = 3
 }
 
-create_field_marshal = {
-	name = "Danilo Kalafatović"
-	gfx = GFX_Portrait_yugoslavia_danilo_kalafatovic
+create_corps_commander = {
+	name = "Milovan Đilas"
+	picture = "Portrait_Milovan_dilas.png"
 	traits = {  }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_field_marshal = {
-	name = "Milutin Nedić"
-	gfx = GFX_Portrait_yugoslavia_milutin_nedic
-	traits = { thorough_planner }
-	skill = 3	
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
+	skill = 3
+	
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 3
 	logistics_skill = 3
 }
 
 create_corps_commander = {
-	name = "Petar Kosić"
-	gfx = GFX_Portrait_yugoslavia_petar_kosic
+	name = "Aleksander Rankovic"
+	picture = "Portrait_Aleksander_Rankovic.png"
 	traits = {  }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
+	skill = 3
+	
+	attack_skill = 5
+	defense_skill = 1
 	planning_skill = 2
 	logistics_skill = 2
 }
 
-create_navy_leader = {
-	name = "Marijan Polić"
-	gfx = GFX_Portrait_yugoslavia_marijan_polic
-	traits = { old_guard_navy navy_career_officer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 1
-	coordination_skill = 2
-}
 
 ### VARIANTS ###
 # 1936 Start #

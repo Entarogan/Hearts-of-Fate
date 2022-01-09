@@ -151,7 +151,14 @@ technologies = {
 		enable_equipments = {
 			infantry_equipment_2
 		}
-		
+
+		on_research_complete = {
+			limit = {
+				original_tag = HUN
+			}
+			add_ideas = HUN_Danuvia_39_idea
+		}
+	
 		path = {
 			leads_to_tech = improved_infantry_weapons_2
 			research_cost_coeff = 1
@@ -328,6 +335,14 @@ technologies = {
 		enable_equipments = {
 			infantry_equipment_3
 		}	
+
+		on_research_complete = {
+			limit = {
+				original_tag = HUN
+			}
+			remove_ideas = HUN_Danuvia_39_idea
+			add_ideas = HUN_Danuvia_43_idea
+		}
 		
 		path = {
 			leads_to_tech = advanced_infantry_weapons2

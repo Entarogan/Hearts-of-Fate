@@ -309,8 +309,8 @@ CRO = {
 }
 
 PRC = {
-	color = rgb { 245 12 55 }
-	color_ui = rgb { 178 34 60 }
+	color = rgb { 0 105 247 }
+	color_ui = rgb { 0 74 174 }
 }
 
 GXC = {
@@ -764,11 +764,6 @@ HES = {
 	color_ui = rgb { 120 124 145 }
 }
 
-FTC = {
-	color = rgb { 22 122 204 } #155 101 107 
-	color_ui = rgb { 22 122 204 } #202 131 139 
-}
-
 FIC = {	
 	color = rgb { 225 225 225 }
 	color_ui = rgb { 230 230 230 }
@@ -777,4 +772,63 @@ FIC = {
 BUR = {
   color = rgb { 95 53 21 }
 	color_ui = rgb { 95 53 21 }
+}
+
+INA = {
+  color = rgb { 153 217 234 }
+	color_ui = rgb { 43 175 208 }
+}
+
+GDC = {
+  color = rgb { 0 140 18 }
+	color_ui = rgb { 0 130 10 }
+}
+
+SRP = {
+	color = rgb { 0 128 132 }
+	color_ui = rgb { 0 128 132 }
+}
+INI = {
+	color = rgb { 16 103 252 }
+	color_ui = rgb { 16 103 252 }
+}
+BAD = {
+	color = rgb { 233 200 14 }
+	color_ui = rgb { 233 200 14 }
+}
+SDC = {
+	color = rgb { 204 81 40 }
+	color_ui = rgb { 204 81 40 }
+}
+RKO = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 115 115 115 }
+}
+RKM = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 115 115 115 }
+}
+RKA = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 115 115 115 }
+}
+RUL = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 115 115 115 }
+}
+RTK = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 115 115 115 }
+}
+RKN = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 115 115 115 }
+}
+RIB = {
+	color = rgb { 115 115 115 }
+	color_ui = rgb { 115 115 115 }
+}
+BEY = {
+	color = rgb { 22 122 204 } #155 101 107 
+	color_ui = rgb { 22 122 204 } #202 131 139 
 }

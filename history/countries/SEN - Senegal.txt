@@ -54,6 +54,10 @@ set_convoys = 20
 	}
 }
 
+add_ideas = {
+MAL_Colonization
+}
+
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1936.1.1"

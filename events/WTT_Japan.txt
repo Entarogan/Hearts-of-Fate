@@ -25,54 +25,39 @@ country_event = {
 		name = wtt_japan.1.a
 		ai_chance = {
 			base = 10
+      modifier = {
+        factor = 0
+        tag = FRA
+      }
 		}
 		if = {
-			limit = { ROOT = { tag = HOL }
+			limit = { ROOT = { tag = AST }
 			}
 			FROM = { puppet = INS }
+      INS = {
+        add_ideas = { jap_mandate }
+      }
 		}
 
 		if = {
 			limit = { ROOT = { tag = ENG }
 			}
 			FROM = { puppet = MAL }
+      MAL = {
+        add_ideas = { jap_mandate }
+      }
+		}
+    
+    if = {
+			limit = { ROOT = { tag = FRA }
+			}
+			FROM = { puppet = FIC }
+      FIC = {
+        add_ideas = { jap_mandate }
+      }
 		}
 
-		if = {
-			limit = { ROOT = { tag = FRA } }
-			if = {
-				limit = {
-					670 = {
-						is_fully_controlled_by = FRA
-					}
-				}
-				FROM = { transfer_state = 670 }
-			}
-			if = {
-				limit = {
-					671 = {
-						is_fully_controlled_by = FRA
-					}
-				}
-				FROM = { transfer_state = 671 }
-			}
-			if = {
-				limit = {
-					286 = {
-						is_fully_controlled_by = FRA
-					}
-				}
-				FROM = { transfer_state = 286 }
-			}
-			if = {
-				limit = {
-					741 = {
-						is_fully_controlled_by = FRA
-					}
-				}
-				FROM = { transfer_state = 741 }
-			}
-		}
+		
 		FROM = { country_event = { id = wtt_japan.2 days = 1 } }
 	}
 
@@ -81,6 +66,10 @@ country_event = {
 		name = wtt_japan.1.b
 		ai_chance = {
 			base = 0
+      modifier = {
+        add = 15
+        tag = FRA
+      }
 		}
 		FROM = { country_event = { id = wtt_japan.3 days = 1 } }
 	}
@@ -187,6 +176,21 @@ country_event = {
 			relation = non_aggression_pact
 			active = yes
 		}
+    hidden_effect = {
+      if = {
+        limit = {
+          tag = BEY
+        }
+        set_global_flag = jap_reconcilation_with_beiyang
+      }
+      
+      if = {
+        limit = {
+          tag = CHI
+        }
+        set_global_flag = jap_reconcilation_with_kmt
+      }
+    }
 		FROM = { country_event = { id = wtt_japan.12 days = 1 } }
 	}
 

@@ -55,7 +55,7 @@ division_template = {
 		motorized = { x = 2 y = 2 }
 	}
 	support = {
-		recon = { x = 0 y = 0 }      # Recon Group consisted of 26 ACs + motorcycles
+		mot_recon = { x = 0 y = 0 }      # Recon Group consisted of 26 ACs + motorcycles
 		artillery = { x = 0 y = 1 }  # Heavy Arty Regiment had 1x 155mm, 1x 105mm battalions
 	}
 }
@@ -90,7 +90,7 @@ division_template = {
 		cavalry = { x = 1 y = 1 }
 	}
 	support = {
-		recon = { x = 0 y = 0 }      # Recon Group consisted of 64 ACs/scout cars
+		armored_car_recon = { x = 0 y = 0 }      # Recon Group consisted of 64 ACs/scout cars
 	}
 }
 division_template = {
@@ -106,7 +106,7 @@ division_template = {
 		motorized = { x = 1 y = 3 }
 	}
 	support = {
-		recon = { x = 0 y = 0 }      # Recon Group consisted of 42 ACs + motorcycles
+		mot_recon = { x = 0 y = 0 }      # Recon Group consisted of 42 ACs + motorcycles
 	}
 }
 division_template = {
@@ -897,41 +897,6 @@ units = {
 	}
 
 
-	##### Indochina Theatre #####
-	### Army Group: Troupes d'Indochine ### -- Saigon
-	division= {	# "Division de Tonkin"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 91
-		}
-		location = 4401
-		division_template = "Division Coloniale"	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}
-	division= {	# "Division de Cochinchine-Cambodge"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 92
-		}
-		location = 4075
-		division_template = "Division Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}
-	division= {	
-		name = "Brigade d'Annam-Laos"	
-		location = 7376
-		division_template = "Brigade Coloniale" 	# Colonial unit, reserve equipment
-		force_equipment_variants = { infantry_equipment_0 = { owner = "FRA" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}
 }
 
 ### Air Wings
@@ -1060,5 +1025,5 @@ instant_effect = {
 		progress = 0.4
 		efficiency = 50
 	}
-
+}
 ###################

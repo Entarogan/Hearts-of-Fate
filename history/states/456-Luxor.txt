@@ -12,7 +12,14 @@ state=
 		}
 		owner = EGY
 		buildings = {
-			infrastructure = 6
+			infrastructure = 4
+		}
+
+		victory_points = {
+			12071 3
+		}
+		victory_points = {
+			11974 1
 		}
 
 		add_core_of = EGY

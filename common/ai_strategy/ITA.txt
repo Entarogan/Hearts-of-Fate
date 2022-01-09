@@ -11,6 +11,11 @@
 # influence
 
 ITA_unit_production = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		original_tag = ITA
 	}
@@ -60,9 +65,38 @@ ITA_unit_production = {
 		value = 65 
 	}
 
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 0
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 30
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = anti_tank
+		value = 10
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = anti_air
+		value = 10
+	}
+
 }	
 
 albania_war_goal = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		has_completed_focus = ITA_albania_war_goal
@@ -82,6 +116,11 @@ albania_war_goal = {
 }
 
 greece_war_goal = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		has_completed_focus = ITA_greece_war_goal
@@ -101,6 +140,11 @@ greece_war_goal = {
 }
 
 anti_uk_war_goals = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		has_completed_focus = ITA_anti_uk_war_goals
@@ -120,6 +164,11 @@ anti_uk_war_goals = {
 }
 
 yugoslavia_war_goal = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		has_completed_focus = ITA_slovenia_dalmatia_claims
@@ -139,6 +188,11 @@ yugoslavia_war_goal = {
 }
 
 germany_ally = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		has_completed_focus = ITA_pact_of_steel
@@ -161,6 +215,11 @@ germany_ally = {
 }
 
 romania_ally = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		has_completed_focus = ITA_romania_friend
@@ -183,6 +242,11 @@ romania_ally = {
 }
 
 bulgaria_ally = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		has_completed_focus = ITA_bulgaria_friend
@@ -205,6 +269,11 @@ bulgaria_ally = {
 }
 
 yugoslavia_ally = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		has_completed_focus = ITA_yugoslavia_friend
@@ -227,6 +296,11 @@ yugoslavia_ally = {
 }
 
 greece_ally = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		has_completed_focus = ITA_greece_friend
@@ -249,6 +323,11 @@ greece_ally = {
 }
 
 turkey_ally = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		has_completed_focus = ITA_turkey_friend
@@ -271,6 +350,11 @@ turkey_ally = {
 }
 
 portugal_ally = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		has_completed_focus = ITA_portugal_friend
@@ -293,6 +377,11 @@ portugal_ally = {
 }
 
 crush_ethiopia = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		country_exists = ETH
@@ -316,6 +405,11 @@ crush_ethiopia = {
 }
 
 ITA_hold_africa = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		OR = {
@@ -359,6 +453,11 @@ ITA_hold_africa = {
 }
 
 ITA_template_design_1 = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		original_tag = ITA			
 	}
@@ -417,6 +516,11 @@ ITA_template_design_1 = {
 
 # extra scaryness around italy, this together with sufficient enemy superiority will make ai avoid transports around its coast
 italy_be_careful_transporting_through_the_med = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		date < 1942.1.1
@@ -463,6 +567,11 @@ italy_be_careful_transporting_through_the_med = {
 }
 
 dont_take_claims_on_yug = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		country_exists = YUG
@@ -487,6 +596,11 @@ dont_take_claims_on_yug = {
 }
 
 ITA_naval_role_ratios_historical = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		has_dlc = "Man the Guns"
 		original_tag = ITA
@@ -513,19 +627,19 @@ ITA_naval_role_ratios_historical = {
 	ai_strategy = {
 		type = role_ratio
 		id = naval_screen
-		value = 150
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = naval_cruiser_light
 		value = 50
 	}
 
 	ai_strategy = {
 		type = role_ratio
+		id = naval_cruiser_light
+		value = 20
+	}
+
+	ai_strategy = {
+		type = role_ratio
 		id = naval_cruiser_heavy
-		value = -5
+		value = 25
 	}
 
 	ai_strategy = {
@@ -542,6 +656,11 @@ ITA_naval_role_ratios_historical = {
 }
 
 ITA_share_borders_with_GER_against_SOV = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		is_in_faction_with = GER
@@ -589,6 +708,11 @@ ITA_share_borders_with_GER_against_SOV = {
 }
 
 ITA_prepare_for_war_allies = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		or = { 
@@ -628,6 +752,11 @@ ITA_prepare_for_war_allies = {
 }
 
 spain_scw_support_ITA_resistance = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		has_government = fascism
@@ -654,47 +783,80 @@ spain_scw_support_ITA_resistance = {
 }
 
 ENG_antagonize_ITA_war_with_ETH = {
+
 	enable = {
 		is_in_faction_with = ENG
 		OR = {
-        ITA = { has_completed_focus = ita_regoup_fascist }
-        ITA = { has_completed_focus = ita_regroup_senatus }
+			ITA = { has_completed_focus = ita_regoup_fascist }
+			ITA = { has_completed_focus = ita_regroup_senatus }
 		}
 	}
 	abort = {
 		or = { 
-        ITA = { is_in_faction_with = ENG }
-        ITA = { has_completed_focus = ita_red_blue_alliance }
-        }
-	}
-	
-		ai_strategy = {
-			type = antagonize
-			id = "ITA"
-			value = 50
+			ITA = { is_in_faction_with = ENG }
+			ITA = { has_completed_focus = ita_red_blue_alliance }
 		}
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "ITA"			
+		value = -100
+	}		
+	ai_strategy = {
+		type = protect
+		id = "ITA"
+		value = -100
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "ITA"
+		value = 15
+	}
 }
 
 FRA_antagonize_ITA_war_with_ETH = {
+
+	allowed = {
+		original_tag = FRA
+	}
+
 	enable = {
 		tag = FRA
 		OR = {
-        ITA = { has_completed_focus = ita_regoup_fascist }
-        ITA = { has_completed_focus = ita_regroup_senatus }
+			ITA = { has_completed_focus = ita_regoup_fascist }
+			ITA = { has_completed_focus = ita_regroup_senatus }
 		}
 	}
 	abort = {
-        ITA = { is_in_faction_with = FRA }
+    ITA = { is_in_faction_with = FRA }
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "ITA"			
+		value = -100
+	}		
+	ai_strategy = {
+		type = protect
+		id = "ITA"
+		value = -100
 	}
 	
-		ai_strategy = {
-			type = antagonize
-			id = "ITA"
-			value = 50
-		}
+	ai_strategy = {
+		type = antagonize
+		id = "ITA"
+		value = 15
+	}
 }
 
 ITA_antagonize_ENG_FRA_because_ETH = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
 	enable = {
 		tag = ITA
 		OR = {
@@ -732,4 +894,303 @@ ITA_antagonize_ENG_FRA_because_ETH = {
 		id = "FRA"			
         value = -1000
 	}
+}
+
+ita_building_boats_is_great = {
+
+	allowed = {
+		original_tag = ITA
+	}
+	
+	enable = {
+		tag = ITA
+		has_idea = ITA_Navy_Plan_idea
+	}
+
+	abort = {
+		NOT = { has_idea = ITA_Navy_Plan_idea }
+	}
+
+	ai_strategy = {
+		type = dockyard_to_military_factory_ratio
+		value = 40  #aim for a 2-1 ratio on naval factories
+	}
+}
+
+roma_dont_mess_with_volunteers = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
+	enable = {
+		date < 1941.6.1
+			tag = ITA
+	}
+	abort = {
+		date > 1941.6.1
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "JAP"
+		value = -500
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "MAN"
+		value = -500
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "MEN"
+		value = -500
+	}
+}
+
+ita_ger_non_aggression_rom_op = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
+	enable = {
+		tag = ITA
+        has_idea = GER_rom_non_aggression_idea		
+	}
+	abort = {
+		OR ={
+            NOT = { has_idea = GER_rom_non_aggression_idea }
+			ITA = { has_war_with = GER }
+			ROM = { is_in_faction = yes }
+            ITA = { is_justifying_wargoal_against = ROM }
+			ITA = { has_war_with = ROM }
+		}
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "ROM"			
+		value = -200
+	}		
+	ai_strategy = {
+		type = protect
+		id = "ROM"
+		value = -200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "ROM"
+		value = -200
+	}
+	ai_strategy = {
+		type = support
+		id = "ROM"
+		value = -200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "ROM"
+		value = -1000
+	}
+}
+
+ita_ger_non_aggression_hun_op = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
+	enable = {
+		tag = ITA
+        has_idea = GER_rom_non_aggression_idea		
+	}
+	abort = {
+		OR ={
+            NOT = { has_idea = GER_rom_non_aggression_idea }
+			ITA = { has_war_with = GER }
+			HUN = { is_in_faction = yes }
+            ITA = { is_justifying_wargoal_against = HUN }
+			ITA = { has_war_with = HUN }
+		}
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = "HUN"			
+		value = -200
+	}		
+	ai_strategy = {
+		type = protect
+		id = "HUN"
+		value = -200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "HUN"
+		value = -200
+	}
+	ai_strategy = {
+		type = support
+		id = "HUN"
+		value = -200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "HUN"
+		value = -1000
+	}
+}
+
+ita_ger_non_aggression_bul_op = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
+	enable = {
+		tag = ITA
+        has_idea = GER_rom_non_aggression_idea		
+	}
+	abort = {
+		OR ={
+            NOT = { has_idea = GER_rom_non_aggression_idea }
+			ITA = { has_war_with = GER }
+			BUL = { is_in_faction = yes }
+            ITA = { is_justifying_wargoal_against = BUL }
+			ITA = { has_war_with = BUL }
+		}
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "BUL"
+		value = -200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "BUL"
+		value = -200
+	}
+	ai_strategy = {
+		type = support
+		id = "BUL"
+		value = -200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "BUL"
+		value = -200
+	}
+}
+
+ita_ger_non_aggression_pol_op = {
+
+	allowed = {
+		original_tag = ITA
+	}
+
+	enable = {
+		tag = ITA
+        has_idea = GER_rom_non_aggression_idea		
+	}
+	abort = {
+		OR ={
+            NOT = { has_idea = GER_rom_non_aggression_idea }
+			ITA = { has_war_with = GER }
+			POL = { is_in_faction = yes }
+            ITA = { is_justifying_wargoal_against = POL }
+			ITA = { has_war_with = POL }
+		}
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "POL"
+		value = -200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "POL"
+		value = -200
+	}
+	ai_strategy = {
+		type = support
+		id = "POL"
+		value = -200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "POL"
+		value = -1000
+	}
+}
+
+ITA_dont_like_ger = { # :O
+
+	allowed = {
+		original_tag = ITA
+	}
+
+	enable = {
+		tag = ITA
+		GER = {
+			has_government = fascism
+		}
+	}
+	abort = {
+		ITA = {
+			has_government = fascism 
+            has_country_flag = ita_Repubblica_Sociale_flag
+		}
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "GER"
+		value = -500
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "GER"
+		value = -200
+	}
+
+}
+
+ITA_like_GER = { # :O
+
+	allowed = {
+		original_tag = ITA
+	}
+
+	enable = {
+		tag = ITA
+		date > 1939.6.1
+		ITA = {
+			has_government = fascism
+		}
+		GER = {
+			has_government = fascism
+		}
+	}
+	abort = {
+		GER = {
+			NOT = { has_government = fascism }
+		}
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "GER"
+		value = 500
+	}
+
+	ai_strategy = {
+		type = support
+		id = "GER"
+		value = 200
+	}
+
 }

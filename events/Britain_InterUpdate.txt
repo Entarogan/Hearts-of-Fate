@@ -475,6 +475,9 @@ country_event = {
 	trigger = {
 		tag = CAN
 		has_country_leader = { name = "Rimea II"  ruling_only = yes }
+		NOT = {
+			is_in_faction_with = USA
+		}
     date > 1937.10.31
 	}
   
@@ -504,6 +507,7 @@ country_event = {
           original_tag = CAN
           has_government = fascism
         }
+        add_ideas = { Powerful_influence_idea }
         load_focus_tree = { tree = canadian_focus keep_completed = no }
         complete_national_focus = CAN_patriation
         complete_national_focus = CAN_swastika_clubs
@@ -537,7 +541,7 @@ country_event = {
 	option = {
 		name = inter_britain.13.a
     ai_chance = {
-      factor = 0
+      base = 0
     }
     add_stability = -0.05
 	}
@@ -545,9 +549,27 @@ country_event = {
   option = {
 		name = inter_britain.13.b
     ai_chance = {
-      factor = 65
+      base = 100
     }
-    declare_war_on = {  target = FROM  type = puppet_wargoal_focus }  
+
+    random_country = {
+      limit = {
+        is_subject_of = ENG
+      }
+      random_enemy_country = {
+        limit = {
+          NOT = { has_war_with = ENG }
+        }
+        ENG = {
+          add_to_war = {
+            targeted_alliance = PREV.PREV
+            enemy = PREV
+            hostility_reason = asked_to_join
+          }
+        }
+      }
+    }
+
 	}
 }
 

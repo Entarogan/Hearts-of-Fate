@@ -527,7 +527,10 @@ country_event = {
 		ai_chance = {
 			factor = 10
 		}
-    add_ideas = { ira_oil_embargo }
+    add_timed_idea = {
+      idea = ira_oil_embargo
+      days = 365
+    }
     add_opinion_modifier = {
       target = FROM
       modifier = sanctions_relations

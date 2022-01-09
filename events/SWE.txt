@@ -77,7 +77,7 @@ country_event = {
 		name = swe_mot.2.a
 		create_wargoal = {
 			type = take_state_focus
-			target = annex_everything
+			target = FROM
 			expire = 0
 		}
 	}
@@ -155,7 +155,7 @@ country_event = {
         add_opinion_modifier = { target = FROM modifier = swe_non_agression_pact }# pact
         if = { 
             limit = { ROOT = { tag = SOV } }
-            FIN = { add_opinion_modifier = { target = ROOT modifier = fin_non_agression_pact }# pact }
+            FIN = { add_opinion_modifier = { target = ROOT modifier = fin_non_agression_pact } }
         }       
         FROM = { country_event = { id = swe_mot.8 }} 
 	}
@@ -168,3 +168,6 @@ country_event = {
         FROM = { country_event = { id = swe_mot.9 } }
 	}
 }
+
+
+

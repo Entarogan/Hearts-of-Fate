@@ -21,9 +21,9 @@
 #
 #		}
 #
-#		cancel_if_invalid = yes
-#		continue_if_invalid = no
-#		available_if_capitulated = no
+#		
+#		
+#		
 #
 #		complete_tooltip = {
 #
@@ -73,9 +73,9 @@ shared_focus = {
 		
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		add_offsite_building = { type = industrial_complex level = 2 }
@@ -118,9 +118,9 @@ shared_focus = {
 		is_in_faction_with = GER
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		GER = {
@@ -172,19 +172,21 @@ shared_focus = {
 	}
 
 	bypass = {
-		custom_trigger_tooltip = { 
-			tooltip = falkenhausen_tt
-			any_other_country = {
-				any_army_leader = {
-					has_id = 603
-				}
-			}	
+		or = {
+			tag = MAN
+			custom_trigger_tooltip = { 
+				tooltip = falkenhausen_tt
+				any_other_country = {
+					any_army_leader = {
+						has_id = 603
+					}
+				}	
+			}
 		}
 	}
-
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		custom_effect_tooltip = available_chief_of_army
@@ -240,9 +242,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		every_army_leader = {
@@ -275,9 +277,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		add_ideas = CHI_wargaming_division
@@ -323,9 +325,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		add_offsite_building = { type = industrial_complex level = 1 }
@@ -365,9 +367,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		custom_effect_tooltip = CHI_purchase_tanks_tt
@@ -419,9 +421,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		add_tech_bonus = {
@@ -457,9 +459,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	complete_tooltip = {
 		random_state = {
@@ -531,9 +533,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		custom_effect_tooltip = CHI_experimental_mechanised_unit_effect
@@ -753,8 +755,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -794,9 +796,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		add_tech_bonus = {
@@ -836,9 +838,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		SOV = { add_to_tech_sharing_group = CHI_joint_tank_development }
@@ -883,9 +885,9 @@ shared_focus = {
 		is_in_faction_with = SOV
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		SOV = {
@@ -943,8 +945,8 @@ shared_focus = {
 		}
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -993,9 +995,9 @@ shared_focus = {
 		}
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		create_corps_commander = {
@@ -1043,9 +1045,9 @@ shared_focus = {
 		}
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		SOV = { country_event = wtt_china_shared.11 }
@@ -1082,9 +1084,9 @@ shared_focus = {
 		
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		FRA = {
@@ -1138,8 +1140,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -1187,8 +1189,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {		
@@ -1257,8 +1259,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -1319,9 +1321,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		671 = { #Tonkin
@@ -1360,8 +1362,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -1397,9 +1399,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		air_experience = 25
@@ -1492,9 +1494,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		every_army_leader = {
@@ -1533,9 +1535,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		every_army_leader = {
@@ -1584,8 +1586,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -1695,9 +1697,9 @@ shared_focus = {
 		}
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		if = {
@@ -1754,9 +1756,9 @@ shared_focus = {
 		TIB = { is_subject_of = ROOT }
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		TIB = { country_event = wtt_china.10 }
@@ -1796,9 +1798,9 @@ shared_focus = {
 		}
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		if = {
@@ -1845,9 +1847,9 @@ shared_focus = {
 		owns_state = 434
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		add_state_claim = 434
@@ -1889,9 +1891,9 @@ shared_focus = {
 		}
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		if = {
@@ -1939,9 +1941,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		add_war_support = 0.1
@@ -1980,9 +1982,9 @@ shared_focus = {
 		country_exists = LAO
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		release_autonomy = {
@@ -2039,9 +2041,9 @@ shared_focus = {
 		}
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		if = {
@@ -2113,9 +2115,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		if = {
@@ -2157,9 +2159,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		if = {
@@ -2198,9 +2200,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		add_stability = 0.1
@@ -2232,9 +2234,9 @@ shared_focus = {
 		controls_state = 741
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		every_other_country = {
@@ -2280,6 +2282,7 @@ shared_focus = {
 	}
 
 	available = {
+      always = no
 		NOT = { has_war_with = JAP }
 		NOT = { is_subject_of = JAP }
 	}
@@ -2288,9 +2291,9 @@ shared_focus = {
 		JAP = { is_subject_of = ROOT }
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		JAP = { country_event = { id = wtt_china.10 } }
@@ -2332,9 +2335,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		527 = {
@@ -2415,9 +2418,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		ENG = {
@@ -2516,9 +2519,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		288 = { #Burma
@@ -2603,9 +2606,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		432 = { #Assam
@@ -2657,9 +2660,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		custom_effect_tooltip = CHI_purchase_fighters_tt
@@ -2726,8 +2729,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -2759,8 +2762,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -2791,8 +2794,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -2869,9 +2872,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {		
 		434 = { #Arunachal Pradesh
@@ -2915,9 +2918,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		USA = {
@@ -2952,9 +2955,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		add_tech_bonus = {
@@ -2996,9 +2999,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		USA = {
@@ -3059,9 +3062,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		custom_effect_tooltip = available_theorist
@@ -3100,9 +3103,9 @@ shared_focus = {
 		}
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		USA = {
@@ -3137,8 +3140,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -3175,8 +3178,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -3211,8 +3214,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -3250,8 +3253,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -3290,8 +3293,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -3391,8 +3394,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -3430,8 +3433,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -3473,9 +3476,9 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
+	
+	
+	
 
 	completion_reward = {
 		JAP = {
@@ -3530,8 +3533,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {
@@ -3566,8 +3569,8 @@ shared_focus = {
 
 	}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
+	
+	
 	available_if_capitulated = yes
 
 	completion_reward = {

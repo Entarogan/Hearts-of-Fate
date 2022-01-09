@@ -18,8 +18,12 @@ ITA_will_support = {
 ITA_possibly_alliance = {
 	ITA = {
 		exists = yes
+		is_subject = no
 		NOT = {
 			has_war_with = ROOT
+      has_idea = GER_rom_non_aggression_idea
+			has_offensive_war = yes
+			has_added_tension_amount > 5
 		}		
 	}
 	OR = {
@@ -238,4 +242,17 @@ is_owned_and_subject_root = {
       is_subject_of = ROOT
     }
   }
+}
+
+USA_can_sell_weapons_trigger_general = {
+	NOT = { 
+		USA = {
+			AND = {
+				has_completed_focus = USA_neutrality_act 
+				NOT = { has_completed_focus = USA_lend_lease_act } #Can't sell weapons if US has declared neutrality without passing Lend-Lease Act
+			}
+			has_war_with = ROOT
+		}
+	}
+	USA = { has_civil_war = no }
 }

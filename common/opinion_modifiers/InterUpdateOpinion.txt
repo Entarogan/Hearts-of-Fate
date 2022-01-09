@@ -80,5 +80,9 @@ opinion_modifiers = {
   fra_ita_pact_refused = {
     value = -30
   }
+
+  Proclaim_world_revolution = {
+    value = -100
+  }
   
 }

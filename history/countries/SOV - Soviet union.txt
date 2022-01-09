@@ -41,6 +41,7 @@ set_technology = {
 	fleet_in_being = 1
 	fuel_silos = 1
 	fuel_refining = 1
+  armored_car1 = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -75,190 +76,6 @@ if = {
 	}
 }
 
-1939.1.1 = {
-
-	add_political_power = 1198
-	
-	#adding ministers, already have 2 set
-	add_ideas = {
-		SOV_vyacheslav_molotov
-		stalingrad_tractor_factory
-		tula_arms_plant
-		vladimir_kasatonov
-
-		#laws
-		war_economy
-		extensive_conscription
-	}
-
-	#purge stuff
-	unlock_national_focus = SOV_great_purge
-	remove_ideas = trotskyite_plot
-	add_ideas = trotskyite_plot_purged
-	set_stability = 0.75
-	add_timed_idea = {
-		idea = officers_purged_6
-		days = 730
-	}
-	country_event = { id = soviet.42 days = 146 }
-	set_country_flag = purged_party_members
-	set_country_flag = purge_1_group_a
-	remove_ideas = mikhail_tukhachevsky
-	remove_unit_leader = 401
-	remove_ideas = alexander_yegorov
-	remove_ideas = vasily_blucher
-	remove_ideas = pyotr_smirnov
-	remove_ideas = mikhail_frinovsky
-	set_country_flag = purge_2_group_a
-	remove_ideas = SOV_nikolai_yezhov
-	remove_ideas = yakov_smushkevich
-	remove_ideas = pavel_rychagov
-	remove_ideas = gordey_levchenko
-	remove_unit_leader = 406
-	remove_ideas = alexander_novikov
-	set_global_flag = SOV_fourth_international_fired #news happened 1938
-	#purge stuff end
-
-	#MR pact stuff
-	add_opinion_modifier = { target = GER modifier = MR_pact }# pact 
-	set_global_flag = sov_yes_pact
-	add_state_claim = 96
-	add_state_claim = 11
-	add_state_claim = 12
-	add_state_claim = 13
-	add_state_claim = 190
-	add_state_claim = 191
-	add_state_claim = 146
-	add_state_claim = 147
-	add_state_claim = 722
-	add_state_claim = 189
-	add_state_claim = 78
-	add_state_claim = 89
-	add_state_claim = 91
-	add_state_claim = 93
-	add_state_claim = 94
-	add_state_claim = 95
-	add_state_claim = 96
-	add_state_claim = 97
-	#MR pact stuff end
-
-	#Germany soviet treaty
-	GER = {
-		add_opinion_modifier = {
-			target = SOV
-			modifier = sov_ger_treaty
-		}
-		add_opinion_modifier = {
-			target = SOV
-			modifier = sov_ger_treaty_trade
-		}
-	}
-	add_tech_bonus = {
-		name = med_armor_bonus
-		ahead_reduction = 2
-		technology = basic_medium_tank
-	}
-	add_tech_bonus = {
-		name = armor_bonus
-		bonus = 1.0
-		uses = 2
-		category = armor
-	}
-	#Germany soviet treaty end
-
-	complete_national_focus = SOV_finish_five_year_plan
-	complete_national_focus = SOV_move_industry_to_urals
-	complete_national_focus = SOV_defense_of_moscow
-	complete_national_focus = SOV_production_effort
-	unlock_national_focus = SOV_stalin_constitution
-	unlock_national_focus = SOV_socialist_realism
-	complete_national_focus = SOV_nkvd_primacy
-	complete_national_focus = SOV_nkvd_divisions
-	complete_national_focus = SOV_improve_railway
-	complete_national_focus = SOV_transpolar_flights
-	complete_national_focus = SOV_ocean_going_navy
-	complete_national_focus = SOV_peoples_commissariat
-	complete_national_focus = SOV_anti_fascist_diplomacy
-	complete_national_focus = SOV_improve_stalin_line
-	complete_national_focus = SOV_claims_on_baltic
-	
-	#Soviet starts with 1 less focus, too many branches
-	
-	oob = "SOV_1939"
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "SOV_1939_naval_mtg"
-		else = {
-			set_naval_oob = "SOV_1939_naval_legacy"
-		}
-	}
-
-	set_technology = {
-		CAS1 = 1
-		improved_light_tank = 1 
-		basic_heavy_tank = 1    # Should be available in 1936 (T-35)
-		basic_medium_tank = 1 # Should be available in 1936 (T-28)
-		tactical_bomber1 = 1
-		interwar_artillery = 1
-		interwar_antitank = 1
-		infantry_weapons2 = 1
-		support_weapons = 1
-		support_weapons2 = 1
-		paratroopers = 1
-
-		#doctrines
-		pocket_defence = 1
-		defence_in_depth = 1
-		battlefleet_concentration = 1
-		submarine_operations = 1
-
-		#Air
-		formation_flying = 1		
-		dive_bombing = 1
-		direct_ground_support = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-		computing_machine = 1
-		basic_encryption = 1
-		basic_decryption = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		oil_processing = 1
-		fuel_refining2 = 1
-		construction1 = 1
-		construction2 = 1
-		construction3 = 1
-		concentrated_industry = 1
-		concentrated_industry2 = 1
-		concentrated_industry3 = 1
-	}
-	if = {
-		limit = { not = { has_dlc = "Man the Guns" } }
-		set_technology = {
-			basic_submarine = 1
-			basic_destroyer = 1
-			basic_heavy_cruiser = 1
-		}
-	}
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-		set_technology = {
-			improved_ship_hull_light = 1
-			improved_ship_hull_submarine = 1
-			basic_ship_hull_cruiser = 1
-		}
-	}
-}
-
-
 set_convoys = 50
 
 set_politics = {
@@ -275,23 +92,29 @@ set_popularities = {
 
 create_faction = Comintern
 add_to_faction = SOV
-add_to_faction = MON
-add_to_faction = TAN
-
+puppet = UKR
 
 add_ideas = {
+	SOV_Focus_on_the_inside_idea
+	partial_economic_mobilisation
 	trotskyite_plot
 	home_of_revolution
+    RUS_Death_of_white_bandits
+    Powerful_influence_idea 
+    SOV_lacking_industrialization_1
+    SOV_Legacy_of_the_Great_Famine
+    SOV_red_army_idea
+    nkvd
 }
 
 create_country_leader = {
-	name = "Joseph Stalin"
+	name = "Joseph Dzhugashvili"
 	desc = "POLITICS_JOSEPH_STALIN_DESC"
-	picture = "Portrait_Soviet_Joseph_Stalin.dds"
+	picture = "Portrait_Soviet_Joseph_Dzhugashvili.dds"
 	expire = "1953.3.1"
 	ideology = stalinism
 	traits = {
-		
+    father_of_nation	  
 	}
 }
 
@@ -334,6 +157,30 @@ create_corps_commander = {
 	defense_skill = 2
 	planning_skill = 4
 	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "Iona Yakir"
+	picture = "Portrait_SOV_Iona_Yakir.dds"
+	traits = { brilliant_strategist combined_arms_expert armor_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+	id = 3390
+}
+
+create_corps_commander = {
+	name = "Ma ZhongYing"
+	picture = "Portrait_SOV_mazhongying.dds"
+	traits = { brilliant_strategist cavalry_officer }
+	skill = 2
+	attack_skill = 4
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 3391
 }
 
 create_corps_commander = {
@@ -418,6 +265,19 @@ create_corps_commander = {
 }
 
 create_field_marshal = {
+	name = "Nonna"
+		picture = "Portrait_Nonna.dds"
+	traits = { war_hero panzer_leader cavalry_leader politically_connected }
+	skill = 3
+
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+
+create_field_marshal = {
 	name = "Kliment Voroshilov"
 	id = 405
 		picture = "Portrait_Soviet_Kliment_Voroshilov.dds"
@@ -450,13 +310,26 @@ create_field_marshal = {
 	name = "Semyon Budyonny"
 		picture = "Portrait_Soviet_Semyon_Budyonny.dds"
 	traits = { old_guard politically_connected inflexible_strategist }
+	skill = 3
+
+	
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "Anna Morozova"
+		picture = "Portrait_Anna_Morozova.dds"
+	traits = {  politically_connected }
 	skill = 1
 
 	
 	attack_skill = 1
 	defense_skill = 1
 	planning_skill = 1
-	logistics_skill = 1
+	logistics_skill = 2
 }
 
 create_corps_commander = {
@@ -473,6 +346,23 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
+	name = "Katyusha"
+	picture = "Portrait_katyusha.tga"
+	traits = {
+		career_officer
+		panzer_leader
+		bearer_of_artillery
+		war_hero
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+
+}
+
+create_corps_commander = {
 	name = "Issa Pliyev"
 		picture = "Portrait_Soviet_Issa_Pliyev.dds"
 	traits = { cavalry_officer }
@@ -483,6 +373,45 @@ create_corps_commander = {
 	defense_skill = 1
 	planning_skill = 1
 	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Cryska Barchenowa"
+		picture = "Portrait_Cryska_Barchenowa.dds"
+	traits = { armor_officer organizer }
+	skill = 3
+
+	
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Alina"
+		picture = "Portrait_Alina.dds"
+	traits = { armor_officer trait_reckless harsh_leader }
+	skill = 3
+
+	
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Voyskovoy S. Kompleka"
+		picture = "Portrait_Voyskovoy_Snayperskiy_Kompleka.dds"
+	traits = { infantry_officer inflexible_strategist }
+	skill = 3
+
+	
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
 }
 
 create_corps_commander = {
@@ -510,7 +439,7 @@ create_field_marshal = {
 
 create_corps_commander = {
 	name = "Kirill Meretskov"
-		picture = "Portrait_Soviet_Kirill_Meretskov.dds"
+		picture = "Portrait_Soviet_Kirill_Meretskov_1.png"
 	traits = { trait_reckless infantry_officer }
 	skill = 3
 	
@@ -549,7 +478,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Georgiy Zakharov"
-		picture = "Portrait_Soviet_Georgiy_Zakharov.dds"
+		picture = "Portrait_Soviet_Georgiy_Zakharov_1.png"
 	traits = { career_officer }
 	skill = 1 
 
@@ -585,16 +514,40 @@ create_corps_commander = {
 	logistics_skill = 1
 }
 create_corps_commander = {
-	name = "Nikandr Chibisov"
-		picture = "Portrait_Soviet_Nikandr_Yevlampyevich_Chibisov.dds"
-	traits = { trickster }
+	name = "Skyph Izhevska"
+		picture = "Portrait_Skyph_Izhevska.dds"
+	traits = { commando infantry_officer politically_connected }
 	skill = 3
 
 	
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Klara"
+		picture = "Portrait_Klara.dds"
+	traits = { adaptable armor_officer inflexible_strategist }
+	skill = 3
+
+	
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
 	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Sonia Zima"
+		picture = "Portrait_Sonia.dds"
+	traits = { winter_specialist career_officer trait_reckless  politically_connected }
+	skill = 3
+
+	
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
 }
 create_corps_commander = {
 	name = "Vasily Kuznetsov"
@@ -606,6 +559,32 @@ create_corps_commander = {
 	defense_skill = 3
 	planning_skill = 2
 	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Inia Sestina"
+		picture = "Portrait_Inia_Sestina.dds"
+	traits = { armor_officer career_officer  trait_cautious }
+	skill = 3
+
+	
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Trista Sestina"
+		picture = "Portrait_Trista_Sestina.dds"
+	traits = { armor_officer career_officer  trait_cautious }
+	skill = 3
+
+	
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
 }
 
 create_corps_commander = {
@@ -672,7 +651,7 @@ create_corps_commander = {
 
 create_corps_commander = {
 	name = "Nikolai Berzarin"
-		picture = "Portrait_Soviet_Nikolai_Berzarin.dds"
+		picture = "Portrait_Soviet_Nikolai_Berzarin_1.png"
 	traits = { infantry_officer }
 	skill = 3
 	
@@ -816,6 +795,28 @@ create_navy_leader = {
 	defense_skill = 2
 	maneuvering_skill = 2
 	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "Sovetskaya Rossiya"
+		picture = "Portrait_Sovetskaya_Rossiya.dds"
+	traits = { naval_lineage bold  battleship_adherent  }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "Vasily Chapayeva"
+		picture = "Portrait_Vasily_Chapayeva.dds"
+	traits = { naval_lineage bold blockade_runner }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 3
 }
 
 

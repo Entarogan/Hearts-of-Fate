@@ -30,6 +30,10 @@ set_popularities = {
 
 set_stability = 0.50
 
+add_ideas = {
+  Powerful_influence_idea 
+}
+
 create_country_leader = {
 	name = "Steyr Mannlicher"
 	desc = "POLITICS_STEYR_DESC"
@@ -37,7 +41,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = authoritarian_democracy
 	traits = {
-		#
+		Wachter_des_Vaterlandes
 	}
 }
 
@@ -48,7 +52,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = socialism
 	traits = {
-		#
+		Wachter_des_Vaterlandes
 	}
 }
 
@@ -59,7 +63,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = nazism
 	traits = {
-		#
+    Eugen_of_Savoy
 	}
 }
 
@@ -70,7 +74,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = totalist
 	traits = {
-		#
+    Eugen_of_Savoy
 	}
 }
 
@@ -80,67 +84,97 @@ create_corps_commander = {
 	traits = {
 		trait_mountaineer
 		trickster
-    infantry_expert
+    infantry_officer
 	}
-	skill = 3
-	attack_skill = 5
+	skill = 4
+	attack_skill = 3
 	defense_skill = 4
 	planning_skill = 3
-	logistics_skill = 5
+	logistics_skill = 4
+	id = 1940
 }
 
 create_corps_commander = {
 	name = "Karl Eglseer"
-	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Karl_Eglseer.tga"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Karl_Eglseer.dds"
 	traits = {
 		trait_mountaineer
 		trickster
+		commando
 	}
 	skill = 3
-	attack_skill = 2
+	attack_skill = 3
 	defense_skill = 3
-	planning_skill = 3
+	planning_skill = 2
 	logistics_skill = 2
 	id = 1936
 }
 
 create_corps_commander = {
 	name = "Erhard Raus"
-	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Erhard_Raus.tga"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Erhard_Raus.dds"
 	traits = {
 		armor_officer
 		trickster
 	}
-	skill = 4
+	skill = 3
 	attack_skill = 3
-	defense_skill = 4
+	defense_skill = 2
 	planning_skill = 3
-	logistics_skill = 3
+	logistics_skill = 2
 	id = 1937
 }
 
 create_corps_commander = {
 	name = "Lothar Rendulic"
-	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Lothar_Rendulic.tga"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Lothar_Rendulic.dds"
 	traits = {
 		trait_mountaineer
-		commando
+    infantry_officer
 	}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 4
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 1
+	logistics_skill = 3
 	id = 1938
 }
 
-create_navy_leader = {
+create_corps_commander = {
+	name = "Adolf Hitler"
+	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Adolf_Hitler.dds"
+	traits = {
+    politically_connected
+    old_guard
+    trait_reckless
+    harsh_leader
+		trickster
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+	id = 2051
+}
+
+create_field_marshal = {
 	name = "Prince Eugen"
 	picture = "Portrait_Prince_Eugen.dds"
-	traits = { superior_tactician ironside blockade_runner bold spotter naval_lineage blue_water_expert }
-	skill = 6
-	attack_skill = 5
+	traits = { 
+    war_hero
+    trickster
+    organizer
+    infantry_officer
+    career_officer
+    trait_mountaineer
+    brilliant_strategist
+    naval_invader
+  }
+	skill = 5
+	attack_skill = 4
 	defense_skill = 4
-	maneuvering_skill = 5
-	coordination_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+	id = 1939
 }

@@ -702,6 +702,19 @@ technologies = {
 		enable_subunits = {
 			medium_armor
 		}
+
+		on_research_complete = {
+			limit = {
+				original_tag = GER
+			}
+			hidden_effect = {
+				set_technology = { basic_medium_art = 1 }
+				set_technology = { basic_medium_td = 1 }
+				set_technology = { basic_medium_spaa = 1 }
+			}
+
+			custom_effect_tooltip = GER_Author_Tips_tt
+		}
 		
 		path = {
 			leads_to_tech = improved_medium_tank 

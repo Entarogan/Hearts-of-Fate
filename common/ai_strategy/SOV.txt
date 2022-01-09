@@ -63,13 +63,7 @@ SOV_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor
-		value = 45
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = leichte
-		value = 5
+		value = 50
 	}
 
 	ai_strategy = {
@@ -193,7 +187,7 @@ SOV_halt_light_armor_production_in_transitioning = {
 southern_thrust = {
 	enable = {
 		tag = SOV
-		has_completed_focus = SOV_southern_thrust
+		has_country_flag = SOV_prepare_for_war_middle_east_flag
 		OR = {
 			country_exists = IRQ
 			country_exists = PER
@@ -230,6 +224,9 @@ ENG_southern_thrust = {
 		OR = {
 		tag = ENG
 		tag = ITA
+		tag = GER
+		tag = JAP
+		tag = USA
 		}
        has_war = yes
 	   NOT = { has_war_with = SOV }
@@ -268,7 +265,7 @@ ENG_southern_thrust = {
 claims_on_poland = {
 	enable = {
 		tag = SOV
-		has_completed_focus = SOV_claims_on_poland
+		has_country_flag = SOV_claim_poland_flag
 		country_exists = POL
 	}
 	abort = {
@@ -287,7 +284,7 @@ claims_on_poland = {
 claims_on_baltic = {
 	enable = {
 		tag = SOV
-		has_completed_focus = SOV_claims_on_baltic
+		has_country_flag = SOV_claim_baltic_flag
 		OR = {
 			country_exists = LAT
 			country_exists = LIT
@@ -315,7 +312,7 @@ claims_on_baltic = {
 claims_on_finland = {
 	enable = {
 		tag = SOV
-		has_completed_focus = SOV_baltic_security
+		has_country_flag = SOV_claim_finland_flag
 		country_exists = FIN
 	}
 	abort = {
@@ -340,7 +337,7 @@ claims_on_finland = {
 claims_on_turkey = {
 	enable = {
 		tag = SOV
-		has_completed_focus = SOV_claim_on_the_straits
+		has_country_flag = SOV_claim_straits_flag
 		country_exists = TUR
 	}
 	abort = {
@@ -359,7 +356,7 @@ claims_on_turkey = {
 claims_on_romania = {
 	enable = {
 		tag = SOV
-		has_completed_focus = SOV_claim_bessarabia
+		has_country_flag = SOV_claim_romannia_flag
 		country_exists = ROM
 	}
 	abort = {
@@ -566,7 +563,10 @@ SOV_pp_spending = {
 SOV_play_nice_with_ribbentrop_pact = {
 	enable = {
 		tag = SOV
-		has_global_flag = sov_yes_pact		
+    or = {
+      has_global_flag = sov_yes_pact		
+      has_idea = SOV_Focus_on_the_inside_idea
+    }
 		date < 1941.1.1
 	}
 	abort = {
@@ -589,7 +589,27 @@ SOV_play_nice_with_ribbentrop_pact = {
 	}	
 	ai_strategy = {
 		type = send_volunteers_desire
+		id = "CAN"
+		value = -300
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "AST"
+		value = -300
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "RAJ"
+		value = -300
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
 		id = "FRA"
+		value = -300
+	}	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "FIC"
 		value = -300
 	}	
 	ai_strategy = {
@@ -901,4 +921,683 @@ dont_take_claims_on_FIN_we_got_focus = {
 		id = "FIN"			
 		value = 1
 	}		
+}
+
+SOV_prepare_for_war_RUS = {
+	enable = {
+		tag = SOV
+		country_exists = RUS
+	}
+	
+	abort = {
+		has_war = yes
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "RUS"
+		value = 1000
+	}
+
+}
+
+RUS_prepare_for_war_SOV = {
+	enable = {
+		tag = RUS
+		country_exists = SOV
+	}
+	
+	abort = {
+		has_war = yes
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "SOV"
+		value = 1000
+	}
+
+}
+
+anycountry_prepare_for_war_SOV = {
+	enable = {
+    has_country_flag = anycountry_prepare_for_war_SOV_flag
+		country_exists = SOV
+	}
+	
+	abort = {
+		has_war_with = SOV
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "SOV"
+		value = 1000
+	}
+
+}
+
+anycountry_prepare_for_war_RUS = {
+	enable = {
+    has_country_flag = anycountry_prepare_for_war_SOV_flag
+		country_exists = RUS
+	}
+	
+	abort = {
+		has_war_with = RUS
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "RUS"
+		value = 1000
+	}
+
+}
+
+SOV_prepare_for_Liberate_Scandinavia = {
+	enable = {
+		tag = SOV
+    has_country_flag = SOV_prepare_for_Liberate_Scandinavia_flag
+	}
+	
+	abort = {
+	  or = {
+		has_war_with = SWE
+		has_war_with = FIN
+		has_war_with = NOR
+		has_war_with = DEN
+	  }
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "SWE"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "FIN"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "NOR"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "DEN"
+		value = 1000
+	}
+
+}
+
+SOV_prepare_for_Liberate_baltic = {
+	enable = {
+		tag = SOV
+    has_country_flag = SOV_prepare_for_Liberate_baltic_flag
+	}
+	
+	abort = {
+	  or = {
+		has_war_with = POL
+		has_war_with = LIT
+		has_war_with = LAT
+		has_war_with = EST
+	  }
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "POL"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "LIT"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "LAT"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "EST"
+		value = 1000
+	}
+
+}
+
+SOV_prepare_for_Liberate_West_Bank_of_the_Black_Sea = {
+	enable = {
+		tag = SOV
+    has_country_flag = SOV_prepare_for_Liberate_West_Bank_of_the_Black_Sea_flag
+	}
+	
+	abort = {
+	  or = {
+		has_war_with = ROM
+		has_war_with = BUL
+		has_war_with = GRE
+	  }
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "ROM"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "BUL"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "GRE"
+		value = 1000
+	}
+
+}
+
+SOV_prepare_for_Liberate_Leitha = {
+	enable = {
+		tag = SOV
+    has_country_flag = SOV_prepare_for_Liberate_Leitha_flag
+	}
+	
+	abort = {
+	  or = {
+		has_war_with = HUN
+		has_war_with = YUG
+	  }
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "HUN"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "YUG"
+		value = 1000
+	}
+
+}
+
+SOV_prepare_for_war_ger = {
+	enable = {
+		tag = SOV
+    has_country_flag = SOV_prepare_for_war_ger_flag
+	}
+	
+	abort = {
+		has_war_with = GER
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "GER"
+		value = 1000
+	}
+
+}
+
+SOV_prepare_for_war_fra = {
+	enable = {
+		tag = SOV
+    has_country_flag = SOV_prepare_for_war_fra_flag
+	}
+	
+	abort = {
+		has_war_with = FRA
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "FRA"
+		value = 1000
+	}
+
+}
+
+SOV_prepare_for_war_ita = {
+	enable = {
+		tag = SOV
+    has_country_flag = SOV_prepare_for_war_ita_flag
+	}
+	
+	abort = {
+		has_war_with = ITA
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "ITA"
+		value = 1000
+	}
+
+}
+
+SOV_prepare_for_war_eng = {
+	enable = {
+		tag = SOV
+    has_country_flag = SOV_prepare_for_war_eng_flag
+	}
+	
+	abort = {
+		has_war_with = ENG
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "ENG"
+		value = 1000
+	}
+
+}
+
+SOV_prepare_for_war_middle_east = {
+	enable = {
+		tag = SOV
+    has_country_flag = SOV_prepare_for_war_middle_east_flag
+	}
+	
+	abort = {
+	  or = {
+		has_war_with = IRQ
+		has_war_with = PER
+		has_war_with = AFG
+	  }
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "IRQ"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "PER"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "AFG"
+		value = 1000
+	}
+
+}
+
+SOV_prepare_for_Liberate_China = {
+	enable = {
+		tag = SOV
+    has_country_flag =SOV_prepare_for_Liberate_China_flag
+	}
+	
+	abort = {
+	  or = {
+		has_war_with = CHI
+		has_war_with = PER
+		has_war_with = AFG
+	  }
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "IRQ"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "PER"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "AFG"
+		value = 1000
+	}
+
+}
+
+SOV_prepare_for_war_jap = {
+	enable = {
+		tag = SOV
+    has_country_flag = SOV_prepare_for_war_jap_flag
+	}
+	
+	abort = {
+		has_war_with = JAP
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "JAP"
+		value = 1000
+	}
+
+}
+
+SOV_prepare_for_Liberate_Anatolia = {
+	enable = {
+		tag = SOV
+    has_country_flag = SOV_prepare_for_Liberate_Anatolia_flag
+	}
+	
+	abort = {
+		has_war_with = TUR
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "TUR"
+		value = 1000
+	}
+
+}
+
+SOV_wants_arms = {
+	enable = {
+		tag = SOV
+		date < 1937.6.1
+		has_war = no
+	}
+
+	abort = { 
+    OR = {
+      date > 1937.6.1 
+      has_war = yes
+    }
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 59
+	}
+}
+
+SOV_prepare_for_UKR = {
+	enable = {
+		tag = SOV
+    country_exists = UKR
+	}
+	
+	abort = {
+    or = {
+      NOT = { country_exists = UKR }
+      has_war_with = UKR
+    }	
+  }
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "UKR"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "UKR"			
+		value = 200
+	}
+
+}
+
+UKR_prepare_for_SOV = {
+	enable = {
+		tag = UKR
+    country_exists = SOV
+	}
+	
+	abort = {
+    or = {
+      NOT = { country_exists = SOV }
+      has_war_with = SOV
+    }	
+  }
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "SOV"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "SOV"			
+		value = 200
+	}
+
+}
+
+SOV_prepare_for_TMS = {
+	enable = {
+		tag = SOV
+    country_exists = TMS
+	}
+	
+	abort = {
+    or = {
+      NOT = { country_exists = TMS }
+      has_war_with = TMS
+    }	
+  }
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "TMS"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "TMS"			
+		value = 200
+	}
+
+}
+
+TMS_prepare_for_SOV = {
+	enable = {
+		tag = TMS
+    country_exists = SOV
+	}
+	
+	abort = {
+    or = {
+      NOT = { country_exists = SOV }
+      has_war_with = SOV
+    }	
+  }
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "SOV"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "SOV"			
+		value = 200
+	}
+
+}
+
+SOV_prepare_for_KAZ = {
+	enable = {
+		tag = SOV
+    country_exists = KAZ
+	}
+	
+	abort = {
+    or = {
+      NOT = { country_exists = KAZ }
+      has_war_with = KAZ
+    }	
+  }
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "KAZ"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "KAZ"			
+		value = 200
+	}
+
+}
+
+KAZ_prepare_for_SOV = {
+	enable = {
+		tag = KAZ
+    country_exists = SOV
+	}
+	
+	abort = {
+    or = {
+      NOT = { country_exists = SOV }
+      has_war_with = SOV
+    }	
+  }
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "SOV"
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "SOV"			
+		value = 200
+	}
+
+}
+
+SOV_dont_mess_with_volunteers_for_european_democratic_nations = { # Reverse strategy
+	reversed = yes
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		has_government = democratic
+		SOV = {
+			has_government = communism
+		}
+		NOT = {
+			original_tag = SPR
+		}
+		
+		capital_scope = {
+			is_on_continent = europe # lets not mess with europe
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SOV"
+		value = -500
+	}
+}
+
+SOV_wants_civ = {
+	enable = {
+		tag = SOV
+		date > 1938.8.1
+		date < 1939.11.1
+		has_war = no
+	}
+
+	abort = {
+    OR = {
+      date > 1939.11.1
+      has_war = yes
+    }
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 89
+	}
+}
+
+wants_moremoremoremoremoremore_arms = {
+	enable = {
+    or = {
+      has_idea = SOV_great_patriotic_war_4
+      has_idea = SOV_great_patriotic_war_5
+    }
+	}
+
+	abort = { 
+		has_war = no
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = -89
+	}
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 89
+	}
+}
+
+SOV_Kaiserreich_Trench_warfare = {
+	allowed = {
+		original_tag = SOV
+	}
+
+  enable = {
+		date > 1939.1.1
+		surrender_progress > 0.1
+    has_army_manpower = { size < 2499999 }
+		original_tag = SOV
+    has_war = yes
+		any_enemy_country = {
+			is_major = yes
+		}
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		area = europe
+		ratio = 0
+		ordertype = front
+		priority = 999
+		execution_type = careful
+		execute_order = no
+		manual_attack = yes
+	}
+
 }

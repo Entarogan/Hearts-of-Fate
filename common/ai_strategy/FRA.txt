@@ -51,12 +51,6 @@ FRA_unit_production = {
 
 	ai_strategy = {
 		type = role_ratio
-		id = leichte
-		value = 5
-	}
-
-	ai_strategy = {
-		type = role_ratio
 		id = armor
 		value = 20
 	}
@@ -70,7 +64,7 @@ FRA_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = artillery
-		value = 15 
+		value = 20 
 	}  
 
 	
@@ -158,7 +152,40 @@ FRA_unit_production = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = armor
-		value = 25
+		value = 20
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 3
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 4
+	}
+
+}
+
+FRA_halt_light_armor_production_in_transitioning = {
+	enable = {
+		original_tag = FRA
+		has_template_majority_unit = medium_armor
+		OR = {
+			has_equipment = { light_tank_equipment > 600 }
+			date > 1938.1.1
+		}		
+	}
+	abort = {
+		# once we start we never go back to light armor
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_tank_equipment
+		value = -75
 	}
 }
 
@@ -446,26 +473,19 @@ FRA_prepare_for_war_stah = {
 	enable = {
 		tag = FRA
 		or = { 
-
-		GER = { 
+      GER = { 
         has_idea = GER_rom_non_aggression_idea
-        }
-
-		ITA = { 
+      }
+      ITA = { 
         has_idea = GER_rom_non_aggression_idea
-        }
-
-        }
+      }
+    }
 	}
 	
 	abort = {
-		or = { 
-		AND = { 
-		has_war_with = GER	
+		has_war_with = GER
 		has_war_with = ITA
-        }
-		has_war_with = ENG
-        }
+		has_war_with = IRQ
 	}
 
 	ai_strategy = {
@@ -762,6 +782,14 @@ FRA_share_borders_with_GER = {
 		is_in_faction_with = ROM
 		is_in_faction_with = YUG
 		is_in_faction_with = POL
+		is_in_faction_with = SWI
+		is_in_faction_with = AUS
+		is_in_faction_with = MAL
+		is_in_faction_with = INS
+		is_in_faction_with = AST
+		is_in_faction_with = BUR
+		is_in_faction_with = RAJ
+		is_in_faction_with = FIC
 		}
 
 	}
@@ -794,6 +822,46 @@ FRA_share_borders_with_GER = {
 		id = "POL"
 		value = 100
 	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "SWI"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "AUS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "MAL"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "INS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "AST"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "BUR"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "RAJ"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "FIC"
+		value = 100
+	}
 }
 
 FRA_prepare_for_war_ENG = {
@@ -814,7 +882,7 @@ FRA_prepare_for_war_ENG = {
 
 	ai_strategy = {
 		type = prepare_for_war
-		id = "EGY
+		id = "EGY"
 		value = 100
 	}
 
@@ -838,7 +906,7 @@ FRA_prepare_for_war_GER = {
 
 	ai_strategy = {
 		type = prepare_for_war
-		id = "HOL
+		id = "HOL"
 		value = 100
 	}
 
@@ -944,12 +1012,6 @@ FRA_FAST_world = {
 	ai_strategy = {
 		type = antagonize
 		id = "SLV"			
-        value = 5000
-	}
-
-	ai_strategy = {
-		type = antagonize
-		id = "SVN"			
         value = 5000
 	}
 
@@ -1156,6 +1218,78 @@ FRA_invasion_is_death_trap = {
 		type = invade
 		id = "D04"			
 		value = -2000
+	}
+
+}
+
+FRA_notice_ribbentrop_pact = {
+
+	allowed = {
+		original_tag = FRA
+	}
+
+	enable = {
+		tag = FRA
+		has_global_flag = sov_yes_pact		
+	}
+	abort = {
+		OR ={
+			FRA = { has_war_with = SOV }
+			FRA = { is_in_faction_with = POL }
+		}
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "POL"
+		value = -200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "POL"
+		value = -200
+	}
+	ai_strategy = {
+		type = support
+		id = "POL"
+		value = -200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "POL"
+		value = -200
+	}
+}
+
+FRA_Dying_german = {
+	allowed = {
+		original_tag = FRA
+	}
+
+  enable = {
+		date < 1940.1.1
+		original_tag = FRA
+		has_war_with = GER
+    NOT = { GER = { casualties > 999999 } }
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		area = europe
+		ratio = 0
+		ordertype = front
+		priority = 999
+		execution_type = careful
+		execute_order = no
+		manual_attack = no
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = "GER"
+		value = -999
 	}
 
 }

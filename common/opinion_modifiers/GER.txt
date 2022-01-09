@@ -11,11 +11,11 @@
 opinion_modifiers = {
 
 	GER_CHI_sino_german_cooperation_op = {
-		value = 50
+		value = 25
 	}
 	
 	GER_JAP_the_common_goal_unites_us_op = {
-		value = 50
+		value = 25
 	}
 	
 	GER_Versailles_died_op = {
@@ -26,29 +26,50 @@ opinion_modifiers = {
 		value = 20
 	}
 
-    GER_SWE_deal_reject_op = {
+  GER_SWE_deal_reject_op = {
 		value = -20
 	}
 
-    GER_CHI_HAPRO_op = {
-		value = 30
+  GER_CHI_HAPRO_op = {
+		value = 25
 	}
 
-    GER_SWI_general_op = {
+  GER_SWI_general_op = {
 		value = 20
 	}
 
-    GER_SWI_reject_op = {
+  GER_SWI_reject_op = {
 		value = -50
 	}
 
-    GER_ROM_run_op = {
+  GER_ROM_run_op = {
 		value = -50
+		months = 24
 	}
 
-    USA_JAP_ban_op = {
+  USA_JAP_ban_op = {
 		trade = yes
 		value = -100
+	}
+
+  GER_CHI_union_op = {
+		value = 75
+	}
+
+  GER_Abandon_the_Kuomintang_op = {
+		value = -100
+	}
+
+  GER_Clear_the_church_op = {
+		value = -10
+	}
+
+  GER_Clear_the_church_is_good_op = {
+		value = 5
+	}
+
+  GER_fake_science_op = {
+		value = -10
 	}
 
 }

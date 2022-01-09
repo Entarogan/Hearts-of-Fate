@@ -102,7 +102,7 @@ ideas = {
 					limit = {
 						original_tag = ENG
 						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
+						#has_completed_focus = ENG_concessions_to_the_trade_unions
 					}
 					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 				}
@@ -184,7 +184,7 @@ ideas = {
 					limit = {
 						original_tag = ENG
 						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
+						#has_completed_focus = ENG_concessions_to_the_trade_unions
 					}
 					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 				}
@@ -283,7 +283,7 @@ ideas = {
 					limit = {
 						original_tag = ENG
 						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
+						#has_completed_focus = ENG_concessions_to_the_trade_unions
 					}
 					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 				}
@@ -304,8 +304,6 @@ ideas = {
 				modifier = {
 					#Block has plenty manpower
 					factor = 0
-					NOT = { tag = CHI }
-					NOT = { tag = SOV }
 					manpower_per_military_factory >  3000
 				}
 
@@ -321,11 +319,6 @@ ideas = {
 
 					original_tag = GER
 					has_manpower < 2000000
-				}
-				modifier = {
-					factor = 1000
-					original_tag = SOV
-					check_variable = { manpower_k < 3000 }
 				}
 
 			}
@@ -401,7 +394,7 @@ ideas = {
 					limit = {
 						original_tag = ENG
 						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
+						#has_completed_focus = ENG_concessions_to_the_trade_unions
 					}
 					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 				}
@@ -511,7 +504,7 @@ ideas = {
 					limit = {
 						original_tag = ENG
 						has_dlc = "Man the Guns"
-						has_completed_focus = ENG_concessions_to_the_trade_unions
+						#has_completed_focus = ENG_concessions_to_the_trade_unions
 					}
 					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 				}

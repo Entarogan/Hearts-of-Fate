@@ -620,3 +620,155 @@ news_event = {       # Germany: New Fuhrer Darnic
 	}
 
 }
+
+news_event = {       # 
+	id = ger_news.17
+	title = ger_news.17.t
+	desc = ger_news.17.desc
+	picture = GFX_news_event_hitler_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ger_news.17.a
+		trigger = {
+			TAG = AUS
+    }
+	}
+	option = {
+		name = ger_news.17.b
+		trigger = { 
+			or = {
+        TAG = GER
+        is_in_faction_with = GER 
+			}
+    }
+	}
+  option = {
+		name = ger_news.17.c
+		trigger = {
+			NOT = {
+				TAG = AUS
+				TAG = GER
+        is_in_faction_with = GER
+			}
+		}
+	}
+
+}
+
+news_event = {       # 
+	id = ger_news.18
+	title = ger_news.18.t
+	desc = ger_news.18.desc
+	picture = GFX_news_event_hitler_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ger_news.18.a
+		trigger = {
+			or = {
+        TAG = GER
+        is_in_faction_with = GER 
+			}
+    }
+	}
+	option = {
+		name = ger_news.18.b
+		trigger = { 
+      has_war_with = GER 
+    }
+	}
+  option = {
+		name = ger_news.18.c
+		trigger = {
+			NOT = {
+        TAG = GER
+        is_in_faction_with = GER 
+        has_war_with = GER 
+			}
+		}
+	}
+
+}
+
+news_event = {       # 
+	id = ger_news.19
+	title = ger_news.19.t
+	desc = ger_news.19.desc
+	picture = GFX_news_event_hitler_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ger_news.19.a
+		trigger = {
+			or = {
+        TAG = GER
+        is_in_faction_with = GER 
+			}
+    }
+	}
+	option = {
+		name = ger_news.19.b
+		trigger = { 
+      has_war_with = GER 
+    }
+	}
+  option = {
+		name = ger_news.19.c
+		trigger = {
+			NOT = {
+        TAG = GER
+        is_in_faction_with = GER 
+        has_war_with = GER 
+			}
+		}
+	}
+
+}
+
+news_event = {       # 
+	id = ger_news.20
+	title = ger_news.20.t
+	desc = ger_news.20.desc
+	picture = GFX_news_event_hitler_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ger_news.20.a
+		trigger = {
+			or = {
+        TAG = GER
+        is_in_faction_with = GER 
+			}
+    }
+	}
+	option = {
+		name = ger_news.20.b
+		trigger = { 
+      has_war_with = GER 
+    }
+	}
+  option = {
+		name = ger_news.20.c
+		trigger = {
+			NOT = {
+        TAG = GER
+        is_in_faction_with = GER 
+        has_war_with = GER 
+			}
+		}
+	}
+
+}

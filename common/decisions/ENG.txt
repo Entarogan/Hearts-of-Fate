@@ -1200,7 +1200,7 @@ ENG_organize_the_blackshirts = {
 		targets = { GER D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_organize_the_blackshirts
+			has_completed_focus = uk_darkened_focus
 		}
 
 		target_trigger = {
@@ -3319,7 +3319,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { CAN D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -3339,7 +3339,7 @@ ENG_move_to_secure_the_dominions = {
 				has_government = communism
 				has_government = fascism
 			}
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			if = {
 				limit = {
 					has_government = communism
@@ -3404,7 +3404,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { CAN D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -3424,7 +3424,7 @@ ENG_move_to_secure_the_dominions = {
 				has_government = communism
 				has_government = fascism
 			}
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			NOT = { has_country_flag = ENG_secure_the_dominions_backed_down_against_USA }
 			FROM = {
 				is_subject_of = ROOT
@@ -3485,7 +3485,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { CAN D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -3500,7 +3500,7 @@ ENG_move_to_secure_the_dominions = {
 
 		visible = {
 			has_government = fascism
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			FROM = {
 				is_subject_of = ROOT
 				NOT = { has_country_flag = ENG_imperialist_civil_war }
@@ -3549,7 +3549,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { CAN D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -3564,7 +3564,7 @@ ENG_move_to_secure_the_dominions = {
 
 		visible = {
 			has_government = communism
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			NOT = { has_country_flag = ENG_secure_the_dominions_backed_down_against_USA }
 			FROM = {
 				is_subject_of = ROOT
@@ -3607,7 +3607,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { SAF D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -3627,7 +3627,7 @@ ENG_move_to_secure_the_dominions = {
 				has_government = communism
 				has_government = fascism
 			}
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			if = {
 				limit = {
 					has_government = communism
@@ -3687,7 +3687,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { SAF D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -3707,7 +3707,7 @@ ENG_move_to_secure_the_dominions = {
 				has_government = communism
 				has_government = fascism
 			}
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			FROM = {
 				is_subject_of = ROOT
 				NOT = { has_country_flag = ENG_imperialist_civil_war }
@@ -3760,7 +3760,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { SAF D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -3775,7 +3775,7 @@ ENG_move_to_secure_the_dominions = {
 
 		visible = {
 			has_government = fascism
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			FROM = {
 				is_subject_of = ROOT
 				NOT = { has_country_flag = ENG_imperialist_civil_war }
@@ -3819,7 +3819,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { SAF D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -3834,7 +3834,7 @@ ENG_move_to_secure_the_dominions = {
 
 		visible = {
 			has_government = communism
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			FROM = {
 				is_subject_of = ROOT
 				NOT = { has_country_flag = ENG_imperialist_civil_war }
@@ -3911,7 +3911,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { RAJ D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -3931,7 +3931,7 @@ ENG_move_to_secure_the_dominions = {
 				has_government = communism
 				has_government = fascism
 			}
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			if = {
 				limit = {
 					has_government = communism
@@ -4026,7 +4026,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { RAJ D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -4046,7 +4046,7 @@ ENG_move_to_secure_the_dominions = {
 				has_government = communism
 				has_government = fascism
 			}
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			FROM = {
 				is_subject_of = ROOT
 				NOT = { has_country_flag = ENG_imperialist_civil_war }
@@ -4134,7 +4134,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { RAJ D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -4149,7 +4149,7 @@ ENG_move_to_secure_the_dominions = {
 
 		visible = {
 			has_government = fascism
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			FROM = {
 				is_subject_of = ROOT
 				NOT = { has_country_flag = ENG_imperialist_civil_war }
@@ -4228,7 +4228,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { RAJ D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -4243,7 +4243,7 @@ ENG_move_to_secure_the_dominions = {
 
 		visible = {
 			has_government = communism
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			FROM = {
 				is_subject_of = ROOT
 				NOT = { has_country_flag = ENG_imperialist_civil_war }
@@ -4286,7 +4286,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { AST D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -4306,7 +4306,7 @@ ENG_move_to_secure_the_dominions = {
 				has_government = communism
 				has_government = fascism
 			}
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			if = {
 				limit = {
 					has_government = communism
@@ -4367,7 +4367,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { AST D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -4387,7 +4387,7 @@ ENG_move_to_secure_the_dominions = {
 				has_government = communism
 				has_government = fascism
 			}
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			FROM = {
 				is_subject_of = ROOT
 				NOT = { has_country_flag = ENG_imperialist_civil_war }
@@ -4441,7 +4441,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { AST D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -4456,7 +4456,7 @@ ENG_move_to_secure_the_dominions = {
 
 		visible = {
 			has_government = fascism
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			FROM = {
 				is_subject_of = ROOT
 				NOT = { has_country_flag = ENG_imperialist_civil_war }
@@ -4501,7 +4501,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { AST D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -4516,7 +4516,7 @@ ENG_move_to_secure_the_dominions = {
 
 		visible = {
 			has_government = communism
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			FROM = {
 				is_subject_of = ROOT
 				NOT = { has_country_flag = ENG_imperialist_civil_war }
@@ -4557,7 +4557,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { NZL D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -4577,7 +4577,7 @@ ENG_move_to_secure_the_dominions = {
 				has_government = communism
 				has_government = fascism
 			}
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			if = {
 				limit = {
 					has_government = communism
@@ -4636,7 +4636,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { NZL D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -4656,7 +4656,7 @@ ENG_move_to_secure_the_dominions = {
 				has_government = communism
 				has_government = fascism
 			}
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			FROM = {
 				is_subject_of = ROOT
 				NOT = { has_country_flag = ENG_imperialist_civil_war }
@@ -4708,7 +4708,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { NZL D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -4723,7 +4723,7 @@ ENG_move_to_secure_the_dominions = {
 
 		visible = {
 			has_government = fascism
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			FROM = {
 				is_subject_of = ROOT
 				NOT = { has_country_flag = ENG_imperialist_civil_war }
@@ -4766,7 +4766,7 @@ ENG_move_to_secure_the_dominions = {
 		targets = { NZL D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
 
 		target_root_trigger = {
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
 
 		target_trigger = {
@@ -4781,7 +4781,7 @@ ENG_move_to_secure_the_dominions = {
 
 		visible = {
 			has_government = communism
-			has_completed_focus = ENG_move_to_secure_the_dominions
+			has_completed_focus = ENG_appeal_to_imperial_loyalists
 			FROM = {
 				is_subject_of = ROOT
 				NOT = { has_country_flag = ENG_imperialist_civil_war }

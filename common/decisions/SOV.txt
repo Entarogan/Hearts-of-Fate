@@ -7,22 +7,5991 @@
 #Category only allowed for SOV
 SOV_industry_relocation = {
 
+	SOV_industrial_evacuations_from_209 = { #209 
+		icon = generic_scorched_earth
+		available = {
+			209 = { #209 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 209
+		}
+		visible = {		
+      209 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_209
+
+      209 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 209
+          has_country_flag = SOV_industrial_evacuations_moved_209
+				}
+				209 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 209.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 209.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 209.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 209.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 209.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 209.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 209.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 209.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_208 = { #208 
+		icon = generic_scorched_earth
+		available = {
+			208 = { #208 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 208
+		}
+		visible = {		
+      208 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_208
+
+      208 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 208
+          has_country_flag = SOV_industrial_evacuations_moved_208
+				}
+				208 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 208.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 208.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 208.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 208.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 208.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 208.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 208.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 208.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_244 = { #244 
+		icon = generic_scorched_earth
+		available = {
+			244 = { #244 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 244
+		}
+		visible = {		
+      244 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_244
+
+      244 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 244
+          has_country_flag = SOV_industrial_evacuations_moved_244
+				}
+				244 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 244.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 244.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 244.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 244.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 244.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 244.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 244.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 244.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_263 = { #263 
+		icon = generic_scorched_earth
+		available = {
+			263 = { #263 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 263
+		}
+		visible = {		
+      263 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_263
+
+      263 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 263
+          has_country_flag = SOV_industrial_evacuations_moved_263
+				}
+				263 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 263.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 263.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 263.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 263.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 263.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 263.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 263.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 263.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_246 = { #246 
+		icon = generic_scorched_earth
+		available = {
+			246 = { #246 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 246
+		}
+		visible = {		
+      246 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_246
+
+      246 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 246
+          has_country_flag = SOV_industrial_evacuations_moved_246
+				}
+				246 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 246.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 246.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 246.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 246.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 246.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 246.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 246.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 246.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_247 = { #247 
+		icon = generic_scorched_earth
+		available = {
+			247 = { #247 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 247
+		}
+		visible = {		
+      247 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_247
+
+      247 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 247
+          has_country_flag = SOV_industrial_evacuations_moved_247
+				}
+				247 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 247.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 247.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 247.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 247.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 247.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 247.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 247.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 247.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_248 = { #248 
+		icon = generic_scorched_earth
+		available = {
+			248 = { #248 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 248
+		}
+		visible = {		
+      248 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_248
+
+      248 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 248
+          has_country_flag = SOV_industrial_evacuations_moved_248
+				}
+				248 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 248.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 248.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 248.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 248.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 248.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 248.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 248.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 248.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_253 = { #253 
+		icon = generic_scorched_earth
+		available = {
+			253 = { #253 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 253
+		}
+		visible = {		
+      253 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_253
+
+      253 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 253
+          has_country_flag = SOV_industrial_evacuations_moved_253
+				}
+				253 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 253.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 253.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 253.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 253.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 253.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 253.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 253.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 253.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_252 = { #252 
+		icon = generic_scorched_earth
+		available = {
+			252 = { #252 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 252
+		}
+		visible = {		
+      252 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_252
+
+      252 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 252
+          has_country_flag = SOV_industrial_evacuations_moved_252
+				}
+				252 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 252.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 252.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 252.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 252.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 252.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 252.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 252.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 252.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_254 = { #254 
+		icon = generic_scorched_earth
+		available = {
+			254 = { #254 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 254
+		}
+		visible = {		
+      254 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_254
+
+      254 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 254
+          has_country_flag = SOV_industrial_evacuations_moved_254
+				}
+				254 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 254.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 254.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 254.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 254.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 254.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 254.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 254.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 254.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_223 = { #223 
+		icon = generic_scorched_earth
+		available = {
+			223 = { #223 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 223
+		}
+		visible = {		
+      223 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_223
+
+      223 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 223
+          has_country_flag = SOV_industrial_evacuations_moved_223
+				}
+				223 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 223.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 223.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 223.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 223.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 223.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 223.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 223.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 223.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_222 = { #222 
+		icon = generic_scorched_earth
+		available = {
+			222 = { #222 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 222
+		}
+		visible = {		
+      222 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_222
+
+      222 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 222
+          has_country_flag = SOV_industrial_evacuations_moved_222
+				}
+				222 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 222.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 222.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 222.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 222.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 222.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 222.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 222.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 222.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_220 = { #220 
+		icon = generic_scorched_earth
+		available = {
+			220 = { #220 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 220
+		}
+		visible = {		
+      220 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_220
+
+      220 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 220
+          has_country_flag = SOV_industrial_evacuations_moved_220
+				}
+				220 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 220.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 220.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 220.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 220.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 220.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 220.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 220.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 220.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_205 = { #205 
+		icon = generic_scorched_earth
+		available = {
+			205 = { #205 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 205
+		}
+		visible = {		
+      205 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_205
+
+      205 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 205
+          has_country_flag = SOV_industrial_evacuations_moved_205
+				}
+				205 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 205.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 205.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 205.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 205.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 205.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 205.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 205.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 205.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_224 = { #224 
+		icon = generic_scorched_earth
+		available = {
+			224 = { #224 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 224
+		}
+		visible = {		
+      224 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_224
+
+      224 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 224
+          has_country_flag = SOV_industrial_evacuations_moved_224
+				}
+				224 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 224.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 224.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 224.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 224.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 224.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 224.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 224.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 224.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_206 = { #206 
+		icon = generic_scorched_earth
+		available = {
+			206 = { #206 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 206
+		}
+		visible = {		
+      206 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_206
+
+      206 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 206
+          has_country_flag = SOV_industrial_evacuations_moved_206
+				}
+				206 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 206.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 206.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 206.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 206.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 206.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 206.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 206.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 206.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_202 = { #202 
+		icon = generic_scorched_earth
+		available = {
+			202 = { #202 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 202
+		}
+		visible = {		
+      202 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_202
+
+      202 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 202
+          has_country_flag = SOV_industrial_evacuations_moved_202
+				}
+				202 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 202.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 202.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 202.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 202.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 202.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 202.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 202.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 202.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_203 = { #203 
+		icon = generic_scorched_earth
+		available = {
+			203 = { #203 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 203
+		}
+		visible = {		
+      203 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_203
+
+      203 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 203
+          has_country_flag = SOV_industrial_evacuations_moved_203
+				}
+				203 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 203.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 203.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 203.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 203.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 203.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 203.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 203.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 203.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_197 = { #197 
+		icon = generic_scorched_earth
+		available = {
+			197 = { #197 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 197
+		}
+		visible = {		
+      197 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_197
+
+      197 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 197
+          has_country_flag = SOV_industrial_evacuations_moved_197
+				}
+				197 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 197.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 197.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 197.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 197.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 197.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 197.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 197.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 197.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_192 = { #192 
+		icon = generic_scorched_earth
+		available = {
+			192 = { #192 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 192
+		}
+		visible = {		
+      192 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_192
+
+      192 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 192
+          has_country_flag = SOV_industrial_evacuations_moved_192
+				}
+				192 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 192.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 192.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 192.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 192.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 192.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 192.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 192.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 192.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_226 = { #226 
+		icon = generic_scorched_earth
+		available = {
+			226 = { #226 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 226
+		}
+		visible = {		
+      226 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_226
+
+      226 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 226
+          has_country_flag = SOV_industrial_evacuations_moved_226
+				}
+				226 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 226.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 226.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 226.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 226.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 226.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 226.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 226.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 226.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+
+
+	SOV_industrial_evacuations_from_221 = { #221 
+		icon = generic_scorched_earth
+		available = {
+			221 = { #221 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 221
+		}
+		visible = {		
+      221 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_221
+
+      221 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 221
+          has_country_flag = SOV_industrial_evacuations_moved_221
+				}
+				221 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 221.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 221.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 221.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 221.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 221.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 221.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 221.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 221.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_218 = { #218 
+		icon = generic_scorched_earth
+		available = {
+			218 = { #218 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 218
+		}
+		visible = {		
+      218 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_218
+
+      218 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 218
+          has_country_flag = SOV_industrial_evacuations_moved_218
+				}
+				218 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 218.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 218.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 218.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 218.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 218.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 218.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 218.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 218.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_245 = { #245 
+		icon = generic_scorched_earth
+		available = {
+			245 = { #245 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 245
+		}
+		visible = {		
+      245 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_245
+
+      245 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 245
+          has_country_flag = SOV_industrial_evacuations_moved_245
+				}
+				245 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 245.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 245.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 245.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 245.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 245.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 245.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 245.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 245.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_260 = { #260 
+		icon = generic_scorched_earth
+		available = {
+			260 = { #260 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 260
+		}
+		visible = {		
+      260 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_260
+
+      260 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 260
+          has_country_flag = SOV_industrial_evacuations_moved_260
+				}
+				260 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 260.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 260.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 260.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 260.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 260.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 260.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 260.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 260.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_265 = { #265 
+		icon = generic_scorched_earth
+		available = {
+			265 = { #265 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 265
+		}
+		visible = {		
+      265 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_265
+
+      265 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 265
+          has_country_flag = SOV_industrial_evacuations_moved_265
+				}
+				265 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 265.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 265.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 265.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 265.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 265.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 265.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 265.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 265.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_industrial_evacuations_from_217 = { #217 Volga
+		icon = generic_scorched_earth
+		available = {
+			217 = { #217 
+				OR = {
+					arms_factory > 0
+					industrial_complex > 0
+				}
+			}
+		}
+		highlight_state_targets = {
+			state = 217
+		}
+		visible = {		
+      217 = {
+        is_controlled_by = ROOT
+        any_neighbor_state = {
+          any_neighbor_state = {
+            CONTROLLER = {
+              has_war_with = ROOT
+            }
+            OWNER = { tag = ROOT }
+          }
+        }
+      }
+		}
+
+		fire_only_once = yes
+		cost = 50
+
+		days_remove = 7
+
+		modifier = {
+  
+    }
+
+		complete_effect = {
+
+      set_country_flag = SOV_industrial_evacuations_moved_217
+
+      217 = { 
+        set_variable = {
+          var = af_level
+          value = arms_factory_level
+        }
+
+
+        set_variable = {
+          var = ic_level
+          value = industrial_complex_level
+        }
+      }
+		}
+
+		remove_effect = {
+
+      custom_effect_tooltip = SOV_industrial_evacuations_moved_tt
+
+			if = {
+				limit = {
+					controls_state = 217
+          has_country_flag = SOV_industrial_evacuations_moved_217
+				}
+				217 = { 
+			
+						remove_building = {
+							type = arms_factory
+							level = af_level
+						}
+						remove_building = {
+							type = industrial_complex
+							level = ic_level
+						}
+
+					#Move AF
+					CONTROLLER = {
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = arms_factory
+									size > 2
+									include_locked = yes
+								}
+							}
+	
+
+								add_extra_state_shared_building_slots = 217.af_level
+								add_building_construction = {
+									type = arms_factory
+									level = 217.af_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_AF }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_AF }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 217.af_level
+									add_building_construction = {
+										type = arms_factory
+										level = 217.af_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_AF
+	
+	
+						#Move IC
+						random_owned_controlled_state = {
+							prioritize = { 573 653 572 582 }
+							limit = {
+								is_fully_controlled_by = ROOT
+								any_neighbor_state = {
+									is_controlled_by = ROOT
+								}
+								free_building_slots = {
+									building = industrial_complex
+									size > 2
+									include_locked = yes
+								}
+							}
+							
+
+								add_extra_state_shared_building_slots = 217.ic_level
+								add_building_construction = {
+									type = industrial_complex
+									level = 217.ic_level
+									instant_build = yes
+								}
+								CONTROLLER = { set_country_flag = CHI_industrial_evacuations_moved_IC }
+
+						}
+	
+						#If no states are really safe or all safe are filled
+						#Move to random controlled state
+						if = {
+							limit = {
+								NOT = { has_country_flag = CHI_industrial_evacuations_moved_IC }
+								NOT = {
+									any_state = {
+										is_fully_controlled_by = ROOT
+										any_neighbor_state = {
+											is_controlled_by = ROOT
+										}
+										free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+									}
+								}
+							}
+							random_owned_controlled_state = {
+								prioritize = { 573 653 572 582 }
+								limit = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+								}
+	
+
+									add_extra_state_shared_building_slots = 217.ic_level
+									add_building_construction = {
+										type = industrial_complex
+										level = 217.ic_level
+										instant_build = yes
+									}
+
+							}
+						}
+						clr_country_flag = CHI_industrial_evacuations_moved_IC
+					}			
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
 	SOV_relocate_industry_from_moscow = {
 
 		icon = generic_construction
 
-		highlight_states = {
+		highlight_state_targets = {
 			state = 219
 		}	
 
 		available = {
 			219 = { #Moscow
-				is_owned_and_controlled_by = SOV
+				is_owned_and_controlled_by = ROOT
 				arms_factory > 5
 				industrial_complex > 1
 			} 
-			573 = { is_owned_and_controlled_by = SOV } #Zlatoust
-			582 = { is_owned_and_controlled_by = SOV } #Magnitogorsk
+			573 = { is_owned_and_controlled_by = ROOT } #Zlatoust
+			582 = { is_owned_and_controlled_by = ROOT } #Magnitogorsk
 		}
 
 		fire_only_once = yes
@@ -35,7 +6004,7 @@ SOV_industry_relocation = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			modifier = {
 				factor = 200 # oh shit they are getting close!
 				OR = {
@@ -70,10 +6039,6 @@ SOV_industry_relocation = {
 				}
 			}
 
-			modifier = {
-				factor = 0
-				SOV_save_pp_for_manpower_trouble = yes
-			}
 		}
 
 		visible = {
@@ -141,18 +6106,18 @@ SOV_industry_relocation = {
 
 		icon = generic_construction
 
-		highlight_states = {
+		highlight_state_targets = {
 			state = 195
 		}
 
 		available = {
 			195 = { #Leningrad
-				is_owned_and_controlled_by = SOV
+				is_owned_and_controlled_by = ROOT
 				arms_factory > 4
 				industrial_complex > 0
 			}
-			573 = { is_owned_and_controlled_by = SOV } #Zlatoust
-			582 = { is_owned_and_controlled_by = SOV } #Magnitogorsk
+			573 = { is_owned_and_controlled_by = ROOT } #Zlatoust
+			582 = { is_owned_and_controlled_by = ROOT } #Magnitogorsk
 		}
 
 		fire_only_once = yes
@@ -165,7 +6130,7 @@ SOV_industry_relocation = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			modifier = {
 				factor = 200 # oh shit they are getting close!
 				OR = {
@@ -195,10 +6160,7 @@ SOV_industry_relocation = {
 					}
 				}
 			}
-			modifier = {
-				factor = 0
-				SOV_save_pp_for_manpower_trouble = yes
-			}
+
 		}
 
 		visible = {
@@ -261,17 +6223,17 @@ SOV_industry_relocation = {
 
 		icon = generic_construction
 
-		highlight_states = {
+		highlight_state_targets = {
 			state = 242
 		}
 
 		available = {
 			242 = { #Smolensk
-				is_owned_and_controlled_by = SOV
+				is_owned_and_controlled_by = ROOT
 				industrial_complex > 1
 			}
-			573 = { is_owned_and_controlled_by = SOV } #Zlatoust
-			582 = { is_owned_and_controlled_by = SOV } #Magnitogorsk
+			573 = { is_owned_and_controlled_by = ROOT } #Zlatoust
+			582 = { is_owned_and_controlled_by = ROOT } #Magnitogorsk
 		}
 
 		fire_only_once = yes
@@ -284,7 +6246,7 @@ SOV_industry_relocation = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			modifier = {
 				factor = 200 # oh shit they are getting close!
 				OR = {
@@ -318,10 +6280,7 @@ SOV_industry_relocation = {
 					}
 				}
 			}
-			modifier = {
-				factor = 0
-				SOV_save_pp_for_manpower_trouble = yes
-			}
+
 		}
 
 		visible = {
@@ -372,7 +6331,7 @@ SOV_industry_relocation = {
 
 		icon = aluminium
 		
-		highlight_states = {
+		highlight_state_targets = {
 			state = 195
 		}
 
@@ -403,7 +6362,7 @@ SOV_industry_relocation = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
+			factor = 10
 			modifier = {
 				factor = 200 # oh shit they are getting close!
 				OR = {
@@ -433,10 +6392,7 @@ SOV_industry_relocation = {
 					}
 				}
 			}
-			modifier = {
-				factor = 0
-				SOV_save_pp_for_manpower_trouble = yes
-			}
+
 		}
 
 		remove_effect = {
@@ -475,37 +6431,296 @@ SOV_great_patriotic_war = {
 				is_major = yes
 			}
 			has_civil_war = no
-			surrender_progress > 0.15
+			or = {
+        surrender_progress > 0.40
+        OR = {
+          219 = {
+            is_controlled_by = ROOT
+            any_neighbor_state = {
+              CONTROLLER = {
+                has_war_with = ROOT
+              }
+              OWNER = { tag = ROOT }
+            }
+          }
+          217 = {
+            is_controlled_by = ROOT
+            any_neighbor_state = {
+              CONTROLLER = {
+                has_war_with = ROOT
+              }
+              OWNER = { tag = ROOT }
+            }
+          }
+        }
+        casualties > 1500000
+			}
 		}
 
-		cost = 25
+		cost = 0
 		fire_only_once = yes
 		visible = {
+      is_subject = no
 			has_war = yes
 			any_enemy_country = {
 				is_major = yes
 			}
-			#surrender_progress > 0
+			surrender_progress > 0
 		}
 
 		days_remove = 720
 
+		complete_effect = {
+
+			if = {
+				limit = {
+					is_ai = yes
+				}
+        add_political_power = 350
+			}
+
+			if = {
+				limit = {
+		      always = no
+          tag = SOV
+					is_ai = yes
+          any_enemy_country = {
+            is_ai = no
+            is_major = yes
+          }
+				}
+
+        add_equipment_to_stockpile = {
+          type = infantry_equipment
+          amount = 10000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = support_equipment
+          amount = 1000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = artillery_equipment
+          amount = 1000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_air_equipment
+          amount = 500
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_tank_equipment
+          amount = 500
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = motorized_equipment
+          amount = 750
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = armored_car_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = light_tank_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_equipment
+          amount = 750
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_destroyer_equipment
+          amount = 200
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_artillery_equipment
+          amount = 300
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_aa_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = heavy_tank_equipment
+          amount = 250
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = fighter_equipment
+          amount = 300
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = CAS_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = tac_bomber_equipment
+          amount = 100
+          producer = SOV
+        }
+
+			}
+
+			if = {
+				limit = {
+		      always = no
+          tag = RUS
+					is_ai = yes
+          any_enemy_country = {
+            is_ai = no
+            is_major = yes
+          }
+				}
+
+        add_equipment_to_stockpile = {
+          type = infantry_equipment
+          amount = 10000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = support_equipment
+          amount = 1000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = artillery_equipment
+          amount = 1000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_air_equipment
+          amount = 500
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_tank_equipment
+          amount = 500
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = motorized_equipment
+          amount = 750
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = armored_car_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = light_tank_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_equipment
+          amount = 750
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_destroyer_equipment
+          amount = 200
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_artillery_equipment
+          amount = 300
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_aa_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = heavy_tank_equipment
+          amount = 250
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = fighter_equipment
+          amount = 300
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = CAS_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = tac_bomber_equipment
+          amount = 100
+          producer = RUS
+        }
+
+			}
+
+		}
+
 		modifier = {
-			army_core_defence_factor = 0.25
-			mobilization_speed = 0.15
-            training_time_factor = -0.15
+		  political_power_cost = 0.2
+          dig_in_speed_factor = 0.20
+          recon_factor_while_entrenched = 0.20
+          army_core_defence_factor = 0.20
+		  army_morale_Factor = 0.10
+		  land_reinforce_rate = 0.05
+          mobilization_speed = 0.20
+          training_time_factor = -0.20
+		  experience_loss_factor = 0.20
 		}
 
 		ai_will_do = {
 			factor = 100
 			modifier = {
 				surrender_progress > 0.25
-				factor = 10
+				factor = 25
 			}
 		}
 	}
 
-	SOV_Simplify_production = {
+	SOV_For_the_motherland_dec = {
 
 		icon = generic_army_support
 
@@ -515,31 +6730,1406 @@ SOV_great_patriotic_war = {
 				is_major = yes
 			}
 			has_civil_war = no
-			surrender_progress > 0.10
+      or = {
+        AND = {
+          is_ai = yes
+          surrender_progress > 0.01
+        }
+        AND = {
+          has_defensive_war = yes
+          surrender_progress > 0.10
+        }
+        surrender_progress > 0.20
+        casualties > 1000000
+      }
 		}
 
-		cost = 25
+		cost = 0
 		fire_only_once = yes
+
+		visible = {
+			is_subject = no
+			has_war = yes
+			any_enemy_country = {
+				is_major = yes
+			}
+			surrender_progress > 0
+		}
+
+		days_remove = 7
+
+		modifier = {
+		  political_power_cost = 0.5
+		}
+
+		remove_effect = {
+
+			if = {
+				limit = {
+					has_idea = limited_conscription
+				}
+        swap_ideas = {
+          remove_idea = limited_conscription
+          add_idea = service_by_requirement
+        }
+			}
+
+			if = {
+				limit = {
+					has_idea = extensive_conscription
+				}
+        swap_ideas = {
+          remove_idea = extensive_conscription
+          add_idea = service_by_requirement
+        }
+			}
+
+		  add_ideas = SOV_great_patriotic_war
+
+			if = {
+				limit = {
+					is_ai = yes
+				}
+        add_political_power = 500
+			}
+
+			if = {
+				limit = {
+		      always = no
+          tag = SOV
+					is_ai = yes
+          any_enemy_country = {
+            is_ai = no
+            is_major = yes
+          }
+				}
+
+        add_equipment_to_stockpile = {
+          type = infantry_equipment
+          amount = 10000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = support_equipment
+          amount = 1000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = artillery_equipment
+          amount = 1000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_air_equipment
+          amount = 500
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_tank_equipment
+          amount = 500
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = motorized_equipment
+          amount = 750
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = armored_car_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = light_tank_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_equipment
+          amount = 750
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_destroyer_equipment
+          amount = 200
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_artillery_equipment
+          amount = 300
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_aa_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = heavy_tank_equipment
+          amount = 250
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = fighter_equipment
+          amount = 300
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = CAS_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = tac_bomber_equipment
+          amount = 100
+          producer = SOV
+        }
+
+			}
+
+			if = {
+				limit = {
+		      always = no
+          tag = RUS
+					is_ai = yes
+          any_enemy_country = {
+            is_ai = no
+            is_major = yes
+          }
+				}
+
+        add_equipment_to_stockpile = {
+          type = infantry_equipment
+          amount = 10000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = support_equipment
+          amount = 1000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = artillery_equipment
+          amount = 1000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_air_equipment
+          amount = 500
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_tank_equipment
+          amount = 500
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = motorized_equipment
+          amount = 750
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = armored_car_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = light_tank_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_equipment
+          amount = 750
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_destroyer_equipment
+          amount = 200
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_artillery_equipment
+          amount = 300
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_aa_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = heavy_tank_equipment
+          amount = 250
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = fighter_equipment
+          amount = 300
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = CAS_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = tac_bomber_equipment
+          amount = 100
+          producer = RUS
+        }
+
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_People_War_dec = {
+
+		icon = generic_army_support
+
+		available = {
+			has_war = yes
+			any_enemy_country = {
+				is_major = yes
+			}
+			has_civil_war = no
+      or = {
+        AND = {
+          is_ai = yes
+          surrender_progress > 0.10
+        }
+        AND = {
+          has_defensive_war = yes
+          surrender_progress > 0.20
+        }
+        surrender_progress > 0.30
+        casualties > 1000000
+      }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
 		visible = {
 			has_war = yes
 			any_enemy_country = {
 				is_major = yes
 			}
-			#surrender_progress > 0
+			surrender_progress > 0
+		  has_idea = SOV_great_patriotic_war
 		}
 
-		days_remove = 60
+		days_remove = 15
+
+		modifier = {
+		  political_power_cost = 0.5
+		}
 
 		remove_effect = {
-		add_timed_idea = { idea = SOV_Simplify_production_idea days = 730 } 
+			swap_ideas = {
+        remove_idea = SOV_great_patriotic_war
+        add_idea = SOV_great_patriotic_war_2
+      }
+
+			if = {
+				limit = {
+					is_ai = yes
+				}
+        add_political_power = 350
+			}
+
+			if = {
+				limit = {
+		      always = no
+          tag = SOV
+					is_ai = yes
+          any_enemy_country = {
+            is_ai = no
+            is_major = yes
+          }
+				}
+
+        add_equipment_to_stockpile = {
+          type = infantry_equipment
+          amount = 10000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = support_equipment
+          amount = 1000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = artillery_equipment
+          amount = 1000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_air_equipment
+          amount = 500
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_tank_equipment
+          amount = 500
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = motorized_equipment
+          amount = 750
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = armored_car_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = light_tank_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_equipment
+          amount = 750
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_destroyer_equipment
+          amount = 200
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_artillery_equipment
+          amount = 300
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_aa_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = heavy_tank_equipment
+          amount = 250
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = fighter_equipment
+          amount = 300
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = CAS_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = tac_bomber_equipment
+          amount = 100
+          producer = SOV
+        }
+
+			}
+
+			if = {
+				limit = {
+		      always = no
+          tag = RUS
+					is_ai = yes
+          any_enemy_country = {
+            is_ai = no
+            is_major = yes
+          }
+				}
+
+        add_equipment_to_stockpile = {
+          type = infantry_equipment
+          amount = 10000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = support_equipment
+          amount = 1000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = artillery_equipment
+          amount = 1000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_air_equipment
+          amount = 500
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_tank_equipment
+          amount = 500
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = motorized_equipment
+          amount = 750
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = armored_car_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = light_tank_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_equipment
+          amount = 750
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_destroyer_equipment
+          amount = 200
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_artillery_equipment
+          amount = 300
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_aa_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = heavy_tank_equipment
+          amount = 250
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = fighter_equipment
+          amount = 300
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = CAS_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = tac_bomber_equipment
+          amount = 100
+          producer = RUS
+        }
+
+			}
+
 		}
 
 		ai_will_do = {
-			factor = 100
-			modifier = {
-				surrender_progress > 0.25
-				factor = 10
+			factor = 1000
+		}
+	}
+
+	SOV_War_Work_Act_dec = {
+
+		icon = generic_army_support
+
+		available = {
+			has_war = yes
+			any_enemy_country = {
+				is_major = yes
 			}
+			has_civil_war = no
+      or = {
+        AND = {
+          is_ai = yes
+          surrender_progress > 0.10
+        }
+        AND = {
+          has_defensive_war = yes
+          surrender_progress > 0.20
+        }
+        surrender_progress > 0.30
+        casualties > 1000000
+      }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		visible = {
+			has_war = yes
+			any_enemy_country = {
+				is_major = yes
+			}
+			surrender_progress > 0
+		  has_idea = SOV_great_patriotic_war_2
+		}
+
+		days_remove = 15
+
+		modifier = {
+		  political_power_cost = 0.5
+		}
+
+		remove_effect = {
+			swap_ideas = {
+        remove_idea = SOV_great_patriotic_war_2
+        add_idea = SOV_great_patriotic_war_3
+      }
+
+			if = {
+				limit = {
+					is_ai = yes
+				}
+        add_political_power = 350
+			}
+
+			if = {
+				limit = {
+		      always = no
+          tag = SOV
+					is_ai = yes
+          any_enemy_country = {
+            is_ai = no
+            is_major = yes
+          }
+				}
+
+        add_equipment_to_stockpile = {
+          type = infantry_equipment
+          amount = 10000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = support_equipment
+          amount = 1000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = artillery_equipment
+          amount = 1000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_air_equipment
+          amount = 500
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_tank_equipment
+          amount = 500
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = motorized_equipment
+          amount = 750
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = armored_car_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = light_tank_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_equipment
+          amount = 750
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_destroyer_equipment
+          amount = 200
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_artillery_equipment
+          amount = 300
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_aa_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = heavy_tank_equipment
+          amount = 250
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = fighter_equipment
+          amount = 300
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = CAS_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = tac_bomber_equipment
+          amount = 100
+          producer = SOV
+        }
+
+			}
+
+			if = {
+				limit = {
+		      always = no
+          tag = RUS
+					is_ai = yes
+          any_enemy_country = {
+            is_ai = no
+            is_major = yes
+          }
+				}
+
+        add_equipment_to_stockpile = {
+          type = infantry_equipment
+          amount = 10000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = support_equipment
+          amount = 1000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = artillery_equipment
+          amount = 1000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_air_equipment
+          amount = 500
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_tank_equipment
+          amount = 500
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = motorized_equipment
+          amount = 750
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = armored_car_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = light_tank_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_equipment
+          amount = 750
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_destroyer_equipment
+          amount = 200
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_artillery_equipment
+          amount = 300
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_aa_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = heavy_tank_equipment
+          amount = 250
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = fighter_equipment
+          amount = 300
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = CAS_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = tac_bomber_equipment
+          amount = 100
+          producer = RUS
+        }
+
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_Simplification_of_technical_weapons_dec = {
+
+		icon = generic_army_support
+
+		available = {
+			has_war = yes
+			any_enemy_country = {
+				is_major = yes
+			}
+			has_civil_war = no
+      or = {
+        has_army_experience > 199
+        is_ai = yes
+      }
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		visible = {
+			has_war = yes
+			any_enemy_country = {
+				is_major = yes
+			}
+			surrender_progress > 0
+		  has_idea = SOV_great_patriotic_war_3
+		}
+
+		days_remove = 15
+
+		modifier = {
+
+		}
+
+		complete_effect = {
+      if = {
+        limit = { is_ai = no }
+        army_experience = -200
+      }
+		}	
+
+		remove_effect = {
+			swap_ideas = {
+        remove_idea = SOV_great_patriotic_war_3
+        add_idea = SOV_great_patriotic_war_4
+      }
+
+			if = {
+				limit = {
+					is_ai = yes
+				}
+        add_political_power = 150
+			}
+
+			if = {
+				limit = {
+          tag = SOV
+					is_ai = yes
+				}
+
+        add_equipment_to_stockpile = {
+          type = infantry_equipment
+          amount = 10000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = support_equipment
+          amount = 1000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = artillery_equipment
+          amount = 1000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_air_equipment
+          amount = 500
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_tank_equipment
+          amount = 500
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = motorized_equipment
+          amount = 750
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = armored_car_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = light_tank_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_equipment
+          amount = 750
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_destroyer_equipment
+          amount = 200
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_artillery_equipment
+          amount = 300
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_aa_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = heavy_tank_equipment
+          amount = 250
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = fighter_equipment
+          amount = 300
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = CAS_equipment
+          amount = 150
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = tac_bomber_equipment
+          amount = 100
+          producer = SOV
+        }
+
+			}
+
+			if = {
+				limit = {
+          tag = RUS
+					is_ai = yes
+				}
+
+        add_equipment_to_stockpile = {
+          type = infantry_equipment
+          amount = 10000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = support_equipment
+          amount = 1000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = artillery_equipment
+          amount = 1000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_air_equipment
+          amount = 500
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_tank_equipment
+          amount = 500
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = motorized_equipment
+          amount = 750
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = armored_car_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = light_tank_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_equipment
+          amount = 750
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_destroyer_equipment
+          amount = 200
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_artillery_equipment
+          amount = 300
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_aa_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = heavy_tank_equipment
+          amount = 250
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = fighter_equipment
+          amount = 300
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = CAS_equipment
+          amount = 150
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = tac_bomber_equipment
+          amount = 100
+          producer = RUS
+        }
+
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	SOV_Victory_or_death_dec = {
+
+		icon = generic_army_support
+
+		available = {
+			has_war = yes
+			any_enemy_country = {
+				is_major = yes
+			}
+      has_civil_war = no
+			or = {
+        AND = {
+          is_ai = yes
+          surrender_progress > 0.50
+        }
+        surrender_progress > 0.60
+        OR = {
+          219 = {
+            is_controlled_by = ROOT
+            any_neighbor_state = {
+              CONTROLLER = {
+                has_war_with = ROOT
+              }
+              OWNER = { tag = ROOT }
+            }
+          }
+          217 = {
+            is_controlled_by = ROOT
+            any_neighbor_state = {
+              CONTROLLER = {
+                has_war_with = ROOT
+              }
+              OWNER = { tag = ROOT }
+            }
+          }
+        }
+        casualties > 2000000
+			}
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		visible = {
+			has_war = yes
+			any_enemy_country = {
+				is_major = yes
+			}
+			surrender_progress > 0
+		  has_idea = SOV_great_patriotic_war_4
+		}
+
+		days_remove = 7
+
+		modifier = {
+		  political_power_cost = 0.5
+		}
+
+		remove_effect = {
+			swap_ideas = {
+        remove_idea = SOV_great_patriotic_war_4
+        add_idea = SOV_great_patriotic_war_5
+      }
+
+			if = {
+				limit = {
+					is_ai = yes
+				}
+        add_political_power = 300
+			}
+
+			if = {
+				limit = {
+          tag = SOV
+					is_ai = yes
+				}
+
+        add_equipment_to_stockpile = {
+          type = infantry_equipment
+          amount = 20000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = support_equipment
+          amount = 2000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = artillery_equipment
+          amount = 2000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_air_equipment
+          amount = 1000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_tank_equipment
+          amount = 1000
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = motorized_equipment
+          amount = 1500
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = armored_car_equipment
+          amount = 300
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = light_tank_equipment
+          amount = 300
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_equipment
+          amount = 1500
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_destroyer_equipment
+          amount = 400
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_artillery_equipment
+          amount = 600
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_aa_equipment
+          amount = 300
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = heavy_tank_equipment
+          amount = 500
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = fighter_equipment
+          amount = 600
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = CAS_equipment
+          amount = 300
+          producer = SOV
+        }
+
+        add_equipment_to_stockpile = {
+          type = tac_bomber_equipment
+          amount = 200
+          producer = SOV
+        }
+
+			}
+
+			if = {
+				limit = {
+          tag = RUS
+					is_ai = yes
+				}
+
+        add_equipment_to_stockpile = {
+          type = infantry_equipment
+          amount = 20000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = support_equipment
+          amount = 2000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = artillery_equipment
+          amount = 2000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_air_equipment
+          amount = 1000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = anti_tank_equipment
+          amount = 1000
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = motorized_equipment
+          amount = 1500
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = armored_car_equipment
+          amount = 300
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = light_tank_equipment
+          amount = 300
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_equipment
+          amount = 1500
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_destroyer_equipment
+          amount = 400
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_artillery_equipment
+          amount = 600
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = medium_tank_aa_equipment
+          amount = 300
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = heavy_tank_equipment
+          amount = 500
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = fighter_equipment
+          amount = 600
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = CAS_equipment
+          amount = 300
+          producer = RUS
+        }
+
+        add_equipment_to_stockpile = {
+          type = tac_bomber_equipment
+          amount = 200
+          producer = RUS
+        }
+
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 1000
 		}
 	}
 
@@ -576,12 +8166,7 @@ SOV_great_patriotic_war = {
 		}
 
 		ai_will_do = {
-			factor = 30
-
-			modifier = {
-				factor = 0
-				SOV_save_pp_for_manpower_trouble = yes
-			}
+			factor = 1000
 		}
 	}
 	SOV_scorched_earth_baltics = {
@@ -591,9 +8176,12 @@ SOV_great_patriotic_war = {
 		available = {
 			has_war = yes
 			has_country_flag = SOV_scorched_earth
-			has_equipment = {
-				support_equipment > 24
-			}
+      or = {
+        has_equipment = {
+          support_equipment > 24
+        }
+        is_ai = yes
+      }
 		}
 
 		cost = 25
@@ -685,7 +8273,7 @@ SOV_great_patriotic_war = {
 		}
 
 		ai_will_do = {
-			factor = 30
+			factor = 1000
 		}
 	}
 	SOV_scorched_earth_byelorussia = {
@@ -695,9 +8283,12 @@ SOV_great_patriotic_war = {
 		available = {
 			has_war = yes
 			has_country_flag = SOV_scorched_earth
-			has_equipment = {
-				support_equipment > 49
-			}
+      or = {
+        has_equipment = {
+          support_equipment > 49
+        }
+        is_ai = yes
+      }
 		}
 
 		cost = 25
@@ -729,7 +8320,7 @@ SOV_great_patriotic_war = {
 		}
 
 		ai_will_do = {
-			factor = 30
+			factor = 1000
 		}
 	}
 	SOV_scorched_earth_ukraine = {
@@ -739,9 +8330,12 @@ SOV_great_patriotic_war = {
 		available = {
 			has_war = yes
 			has_country_flag = SOV_scorched_earth
-			has_equipment = {
-				support_equipment > 74
-			}
+      or = {
+        has_equipment = {
+          support_equipment > 74
+        }
+        is_ai = yes
+      }
 		}
 
 		cost = 25
@@ -773,7 +8367,7 @@ SOV_great_patriotic_war = {
 		}
 
 		ai_will_do = {
-			factor = 30
+			factor = 1000
 		}
 	}
 	SOV_scorched_earth_caucasus = {
@@ -783,9 +8377,12 @@ SOV_great_patriotic_war = {
 		available = {
 			has_war = yes
 			has_country_flag = SOV_scorched_earth
-			has_equipment = {
-				support_equipment > 49
-			}
+      or = {
+        has_equipment = {
+          support_equipment > 49
+        }
+        is_ai = yes
+      }
 		}
 
 		cost = 25
@@ -894,7 +8491,7 @@ SOV_great_patriotic_war = {
 		}
 
 		ai_will_do = {
-			factor = 30
+			factor = 1000
 		}
 	}
 	SOV_scorched_earth_stalingrad = {
@@ -904,9 +8501,12 @@ SOV_great_patriotic_war = {
 		available = {
 			has_war = yes
 			has_country_flag = SOV_scorched_earth
-			has_equipment = {
-				support_equipment > 49
-			}
+      or = {
+        has_equipment = {
+          support_equipment > 49
+        }
+        is_ai = yes
+      }
 		}
 
 		cost = 25
@@ -1013,7 +8613,7 @@ SOV_great_patriotic_war = {
 		}
 
 		ai_will_do = {
-			factor = 30
+			factor = 1000
 		}
 	}
 	SOV_scorched_earth_moscow = {
@@ -1023,9 +8623,12 @@ SOV_great_patriotic_war = {
 		available = {
 			has_war = yes
 			has_country_flag = SOV_scorched_earth
-			has_equipment = {
-				support_equipment > 49
-			}
+      or = {
+        has_equipment = {
+          support_equipment > 49
+        }
+        is_ai = yes
+      }
 		}
 
 		cost = 25
@@ -1071,7 +8674,7 @@ SOV_great_patriotic_war = {
 		}
 
 		ai_will_do = {
-			factor = 30
+			factor = 1000
 		}
 	}
 
@@ -1246,7 +8849,7 @@ operations = {
 		}
 
 		available = {
-			JAP = { has_completed_focus = JAP_pre_emptive_coup }
+			#JAP = { has_completed_focus = JAP_pre_emptive_coup }
 			MAN = { is_puppet = no }
 			NOT = {
 				has_war_with = MAN
@@ -1256,7 +8859,8 @@ operations = {
 		cost = 25
 		fire_only_once = yes
 		visible = {
-			JAP = { has_completed_focus = JAP_strengthen_civilian_government }
+			always = no
+			#JAP = { has_completed_focus = JAP_strengthen_civilian_government }
 			MAN = { exists = yes }
 		}
 
@@ -1315,7 +8919,8 @@ political_actions = {
 		cost = 0
 		fire_only_once = yes
 		visible = {
-			JAP = { has_completed_focus = JAP_strengthen_civilian_government }
+			always = no
+			#JAP = { has_completed_focus = JAP_strengthen_civilian_government }
 			PRC = { exists = yes }
 		}
 
@@ -1341,8 +8946,6 @@ political_actions = {
 political_actions = {
 
 	demand_tribute_from_new_communist_china = {
-
-		icon = generic_civil_support
 
 		allowed = {
 			tag = SOV
@@ -1418,8 +9021,6 @@ political_actions = {
 	}
 
 	demand_full_integration = {
-
-		icon = generic_civil_support
 
 		allowed = {
 			tag = SOV			

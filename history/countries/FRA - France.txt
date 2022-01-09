@@ -43,11 +43,17 @@ set_technology = {
 	fleet_in_being = 1
 	fuel_silos = 1
 	fuel_refining = 1
+	37_semi_battery = 1
+	Jean_light_secondary_battery = 1
+	basic_cruiser_armor_scheme = 1
+	basic_ship_hull_cruiser = 1
   
   electronic_mechanical_engineering = 1
   mechanical_computing = 1
 	radio = 1
   construction1 = 1
+
+    armored_car1 = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -77,20 +83,28 @@ if = {
 		early_ship_hull_submarine = 1
 		basic_ship_hull_submarine = 1
 		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
 		early_ship_hull_heavy = 1
 		basic_ship_hull_heavy = 1
 		early_ship_hull_carrier = 1
 		basic_battery = 1
 		basic_light_battery = 1
 		basic_medium_battery = 1
+		basic_heavy_battery = 1
 		basic_torpedo = 1
 		basic_depth_charges = 1
 		basic_secondary_battery = 1
+		improved_secondary_battery = 1
+		Jean_light_secondary_battery = 1
+		Dunkerque_class_battery = 1
+		37_semi_battery = 1
 		basic_cruiser_armor_scheme = 1
 		basic_heavy_armor_scheme = 1
 		mtg_transport = 1
 		sonar = 1
 		smoke_generator = 1
+		Dunkerque_secondary_battery = 1
+		Strasbourg_armor = 1
 	}
 
 }
@@ -123,12 +137,10 @@ add_ideas = {
 	FRA_protected_by_the_maginot_line
   FRA_shadow_of_World_War_I_idea_I
   FRA_Versailles_Young_idea
+  Powerful_influence_idea
+  FIC_Colonial_gains
 }
 
-add_offsite_building = {
-  type = arms_factory
-  level = 6
-}
 
 if = {
 	limit = {
@@ -176,7 +188,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Jeanne D'Arc (Alter)"
-	desc = "POLITICS_JEANNE_DARC_DESC"
+	desc = ""
 	picture = "gfx//leaders//FRA//Portrait_Jeanne_Darc_Alter.dds"
 	expire = "1965.1.1"
 	ideology = orlean_system
@@ -203,32 +215,32 @@ create_field_marshal = {
 	name = "Marie Antoinette"
 	id = 811
 	picture = "Portrait_Marie.dds"
-	traits = { defensive_doctrine inflexible_strategist inspirational_leader politically_connected cavalry_officer}
+	traits = { defensive_doctrine inspirational_leader politically_connected cavalry_officer}
 	skill = 5
-	attack_skill = 4
+	attack_skill = 3
 	defense_skill = 5
 	planning_skill = 3
-	logistics_skill = 4
+	logistics_skill = 5
 }
 
 create_field_marshal = {
 	name = "Jeanne D'Arc"
 	id = 812
 	picture = "Portrait_Jeanne.dds"
-	traits = { defensive_doctrine war_hero inflexible_strategist career_officer fast_planner inspirational_leader unyielding_defender organisational_leader politically_connected}
+	traits = { defensive_doctrine war_hero inflexible_strategist organizer fast_planner inspirational_leader unyielding_defender organisational_leader politically_connected }
 	skill = 6
-	attack_skill = 4
+	attack_skill = 5
 	defense_skill = 6
 	planning_skill = 4
 	logistics_skill = 4
 }
 
-create_field_marshal = {
+create_corps_commander = {
 	name = "Charlemagne"
 	id = 813
 	picture = "Portrait_Charlemagne.dds"
-	traits = { aggressive_assaulter offensive_doctrine logistics_wizard inspirational_leader organisational_leader combined_arms_expert brilliant_strategist politically_connected}
-	skill = 6
+	traits = { career_officer trickster cavalry_officer cavalry_leader combined_arms_expert brilliant_strategist }
+	skill = 5
 	attack_skill = 5
 	defense_skill = 3
 	planning_skill = 4
@@ -236,27 +248,27 @@ create_field_marshal = {
 }
 
 
-create_field_marshal = {
+create_corps_commander = {
 	name = "Napoléon Bonaparte"
 	id = 816
 	picture = "Portrait_Napoleon.dds"
-	traits = { inspirational_leader  cavalry_leader cavalry_officer  brilliant_strategist aggressive_assaulter war_hero bearer_of_artillery} 
+	traits = { career_officer trickster skilled_staffer infantry_officer cavalry_officer brilliant_strategist war_hero bearer_of_artillery } 
 	skill = 5
 	attack_skill = 5
-	defense_skill = 3
-	planning_skill = 5
-	logistics_skill = 4
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 3
 }
 
 create_corps_commander = {
 	name = "Gilles de Rais"
-	id= 814
+	id = 814
 	picture = "Portrait_Giless.dds"
-	traits = { offensive_doctrine inspirational_leader combined_arms_expert infantry_expert expert_improviser}
+	traits = { career_officer cavalry_leader combined_arms_expert infantry_leader infantry_expert }
 	skill = 4
 	attack_skill = 4
 	defense_skill = 3
-	planning_skill = 5
+	planning_skill = 4
 	logistics_skill = 3
 }
 
@@ -264,11 +276,11 @@ create_corps_commander = {
 	name = "St. Martha"
 	id = 815
 	picture = "Portrait_Martha.dds"
-	traits = { inspirational_leader skilled_staffer naval_invader invader_ii cavalry_leader} 
+	traits = { inspirational_leader naval_invader invader_ii cavalry_leader } 
 	skill = 4
-	attack_skill = 4
+	attack_skill = 3
 	defense_skill = 3
-	planning_skill = 5
+	planning_skill = 3
 	logistics_skill = 4
 }
 
@@ -276,7 +288,7 @@ create_corps_commander = {
 	name = "Bradamante"
 	id = 817
 	picture = "Portrait_Beadamante.dds"
-	traits = {  brilliant_strategist  infantry_leader infantry_expert infantry_officer }
+	traits = { brilliant_strategist  infantry_leader infantry_expert infantry_officer }
 	skill = 4
 	attack_skill = 4
 	defense_skill = 3
@@ -288,8 +300,8 @@ create_corps_commander = {
 	name = "Astolfo"
   id = 820
 	picture = "Portrait_Astolfo.dds"
-	traits = {  cavalry_officer trait_reckless scavenger skirmisher cavalry_leader}
-	skill = 4
+	traits = { media_personality trickster cavalry_officer trait_reckless trait_engineer scavenger commando skirmisher cavalry_leader }
+	skill = 3
 	attack_skill = 4
 	defense_skill = 2
 	planning_skill = 2
@@ -300,19 +312,19 @@ create_corps_commander = {
 	name = "Chevalier d'Eon"
 	id = 819
 	picture = "Portrait_Chevalier.dds"
-	traits = {infantry_expert infantry_officer commando paratrooper camouflage_expert brilliant_strategist }
+	traits = { career_officer infantry_officer commando paratrooper camouflage_expert brilliant_strategist }
 	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 3
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
 }
 
 create_corps_commander = {
 	name = "Edmond Dantès"
 	id = 818
 	picture = "Portrait_Edmond.dds"
-	traits = {commando camouflage_expert brilliant_strategist harsh_leader adaptable  skirmisher}
+	traits = { commando camouflage_expert brilliant_strategist harsh_leader skirmisher }
 	skill = 4
 	attack_skill = 4
 	defense_skill = 2
@@ -324,11 +336,11 @@ create_corps_commander = {
 	name = "Jeanne D'Arc (Alter Lily)"
   id = 821
 	picture = "Portrait_Jeanne_Darc_lily.dds"
-	traits = {cavalry_leader  adaptable politically_connected}
-	skill = 4
+	traits = { politically_connected armor_officer panzer_leader }
+	skill = 3
 	attack_skill = 3
 	defense_skill = 2
-	planning_skill = 2
+	planning_skill = 3
 	logistics_skill = 2
 }
 
@@ -336,12 +348,134 @@ create_corps_commander = {
 	name = "Charles-Henri Sanson"
   id = 822
 	picture = "Portrait_Sanson.dds"
-	traits = {infantry_leader trait_cautious  politically_connected}
-	skill = 4
-	attack_skill = 2
+	traits = { infantry_leader trait_cautious  politically_connected } 
+	skill = 3
+	attack_skill = 3
 	defense_skill = 2
 	planning_skill = 3
 	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Maxime Weygand"
+  id = 4004
+	picture = "Portrait_France_Maxime_Weygand.dds"
+	traits = { old_guard }
+	skill = 2
+	attack_skill = 1
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Philippe Leclerc"
+  id = 4005
+	picture = "Portrait_France_Philippe_Leclerc.dds"
+	traits = {
+		armor_officer
+		desert_fox
+	}
+	skill = 4
+	attack_skill = 4
+    defense_skill = 3
+    planning_skill = 4
+    logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Maurice Gamelin"
+  id = 4006
+	picture = "Portrait_France_Maurice_Gamelin.dds"
+	traits = {
+
+	}
+	skill = 2
+	attack_skill = 2
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Alphonse Georges"
+  id = 4007
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Alphonse_Joseph_Georges.dds"
+	traits = {
+		career_officer
+		old_guard
+		trait_cautious
+		organizer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 4
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Paul Le Gentilhomme"
+  id = 4008
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Paul_Legentilhomme.tga"
+	traits = {
+		trait_reckless
+		infantry_officer
+		commando
+		skirmisher
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Jean Touzet du Vigier"
+  id = 4009
+	picture = "Portrait_NFA_Jean_Touzet_du_Vigier.tga"
+	traits = {
+		career_officer
+		armor_officer
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Louis Franchet D'Espèrey"
+  id = 4010
+	picture = "Portrait_NFA_Louis_Franchet_Esperey.tga"
+	traits = {
+		old_guard
+		brilliant_strategist
+		infantry_leader
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Henri Lebocq"
+  id = 4011
+	picture = "Portrait_NFA_Henri_Lebocq.tga"
+	traits = {
+		old_guard
+		career_officer
+		infantry_leader
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
 }
 
 create_navy_leader = {
@@ -378,6 +512,61 @@ create_navy_leader = {
 	defense_skill = 6
 	maneuvering_skill = 4
 	coordination_skill = 6
+}
+
+create_navy_leader = {
+	name = "Jean Bart"
+		picture = "Portrait_Jean_Bart.dds"
+	traits = { legend_of_the_sea supreme_honour }
+	skill = 5
+	attack_skill = 6
+	defense_skill = 4
+	maneuvering_skill = 5
+	coordination_skill = 4
+}
+
+create_navy_leader = {
+	name = "François Darlan"
+		picture = "Portrait_France_Francois_Darlan.dds"
+	traits = { superior_tactician }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 4
+	maneuvering_skill = 5
+	coordination_skill = 5
+}
+
+create_navy_leader = {
+	name = "Jean-Marie Charles Abrial"
+		picture = "Portrait_France_Jean-Marie_Charles_Abrial.dds"
+	traits = { superior_tactician }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 4
+	maneuvering_skill = 4
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "Jean-Pierre Esteva"
+		picture = "Portrait_France_Jean-Pierre_Esteva.dds"
+	traits = { seawolf }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "René-Émile Godfroy"
+		picture = "Portrait_France_Rene-Emile_Godfroy.dds"
+	traits = { old_guard_navy spotter }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
 }
 
 ### VARIANTS ###
@@ -551,38 +740,6 @@ if = {
 		}
 		obsolete = yes
 	}
-	create_equipment_variant = {
-		name = "Le Fantasque Class"				
-		type = ship_hull_light_1
-		name_group = FRA_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_3
-			fixed_ship_torpedo_slot = ship_torpedo_2
-			mid_1_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = ship_depth_charge_1
-		}
-	}
-	create_equipment_variant = {
-		name = "Mogador Class"				
-		type = ship_hull_light_2
-		name_group = FRA_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_2
-			fixed_ship_torpedo_slot = ship_torpedo_2
-			mid_1_custom_slot = ship_light_battery_2
-			rear_1_custom_slot = ship_depth_charge_1
-		}
-	}
 	# Light Cruisers #
 	create_equipment_variant = {
 		name = "Duguay-Trouin Class"			# represents Duguay-Trouin, Pluton, Jeanne d'Arc classes
@@ -620,7 +777,7 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "La Galissonnière Class"			
-		type = ship_hull_cruiser_1
+		type = ship_hull_cruiser_2
 		name_group = FRA_CL_HISTORICAL
 		parent_version = 0
 		modules = {
@@ -628,11 +785,13 @@ if = {
 			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			mid_1_custom_slot = ship_anti_air_1
-			mid_2_custom_slot = ship_light_medium_battery_2
-			rear_1_custom_slot = ship_airplane_launcher_1
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			front_1_custom_slot = ship_light_medium_battery_2
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_airplane_launcher_1
+			rear_1_custom_slot = ship_light_medium_battery_2
 		}
 	}
 	# Heavy Cruisers #
@@ -656,19 +815,21 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "Algérie Class"				
-		type = ship_hull_cruiser_1
+		type = ship_hull_cruiser_2
 		name_group = FRA_CA_HISTORICAL
 		parent_version = 0
 		modules = {
-			fixed_ship_battery_slot = ship_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_battery_slot = Algerie_battery_equipment
+			fixed_ship_anti_air_slot = 37_semi_battery_equipment
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			mid_1_custom_slot = ship_medium_battery_1
-			mid_2_custom_slot = ship_anti_air_1
-			rear_1_custom_slot = ship_airplane_launcher_1
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_secondaries_slot = six_Jean_secondary_battery_equipment
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			front_1_custom_slot = ship_anti_air_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_airplane_launcher_1
+			rear_1_custom_slot = Algerie_battery_equipment
 		}
 	}
 	# Battleships #
@@ -718,39 +879,38 @@ if = {
 		name_group = FRA_BC_HISTORICAL
 		parent_version = 0
 		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_battery_slot = Dunkerque_class_battery_equipment
+			fixed_ship_anti_air_slot = 37_semi_battery_equipment
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = heavy_ship_engine_2
-			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_secondaries_slot = Dunkerque_quadruple_secondary_equipment
 			fixed_ship_armor_slot = ship_armor_bc_2
-			front_1_custom_slot = ship_heavy_battery_1
-			mid_1_custom_slot = ship_secondaries_1
-			mid_2_custom_slot = ship_anti_air_1
-			rear_1_custom_slot = ship_airplane_launcher_1
+			front_1_custom_slot = Dunkerque_class_battery_equipment
+			mid_1_custom_slot = ship_airplane_launcher_1
+			mid_2_custom_slot = Dunkerque_double_secondary_equipment
+			rear_1_custom_slot = ship_anti_air_1
 		}
 	}
-	# Battleships #
-		create_equipment_variant = {
-			name = "Richelieu Class"
-			type = ship_hull_heavy_2
-			name_group = FRA_BB_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_battery_slot = ship_heavy_battery_2
-				fixed_ship_anti_air_slot = ship_anti_air_1
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = heavy_ship_engine_2
-				fixed_ship_secondaries_slot = ship_secondaries_2
-				fixed_ship_armor_slot = ship_armor_bb_2
-				front_1_custom_slot = ship_heavy_battery_2
-				mid_1_custom_slot = ship_secondaries_2
-				mid_2_custom_slot = ship_anti_air_1
-				rear_1_custom_slot = ship_airplane_launcher_1
-			}
+	create_equipment_variant = {
+		name = "Strasbourg"		
+		type = ship_hull_heavy_2
+		name_group = FRA_BC_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = Dunkerque_class_battery_equipment
+			fixed_ship_anti_air_slot = 37_semi_battery_equipment
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_2
+			fixed_ship_secondaries_slot = Dunkerque_quadruple_secondary_equipment
+			fixed_ship_armor_slot = Strasbourg_armor_equipment
+			front_1_custom_slot = Dunkerque_class_battery_equipment
+			mid_1_custom_slot = ship_airplane_launcher_1
+			mid_2_custom_slot = Dunkerque_double_secondary_equipment
+			rear_1_custom_slot = ship_anti_air_1
 		}
+	}
 	# Carriers #
 	create_equipment_variant = {
 		name = "Béarn Class"

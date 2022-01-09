@@ -30,7 +30,7 @@ technology_sharing_group = {
 	name = JAP_technological_exchange_shiro
 	desc = JAP_technological_exchange_shiro_desc
 	picture = GFX_technology_sharing_default
-	research_sharing_per_country_bonus = 0.05
+	research_sharing_per_country_bonus = 0.1
 
 	available = {
 		NOT = { has_war_with = JAP }
@@ -50,6 +50,7 @@ technology_sharing_group = {
 	categories = { naval_doctrine }
 	
 	available = {
+		NOT = { ENG = { has_war_with = JAP } }
 		OR = {
 			original_tag = ENG
 			original_tag = FRA
@@ -85,7 +86,7 @@ technology_sharing_group = {
 	name = ITA_technological_exchange_SOV
 	desc = ITA_technological_exchange_SOV_desc
 	picture = GFX_technology_sharing_default
-	research_sharing_per_country_bonus = 0.05
+	research_sharing_per_country_bonus = 0.1
 	
 	available = {
 		OR = {
@@ -101,12 +102,124 @@ technology_sharing_group = {
 	name = ITA_technological_exchange_ENG
 	desc = ITA_technological_exchange_ENG_desc
 	picture = GFX_technology_sharing_default
-	research_sharing_per_country_bonus = 0.05
+	research_sharing_per_country_bonus = 0.1
 	
 	available = {
 		OR = {
 			is_in_faction_with = ENG
 			has_war_together_with = ENG
+		}
+	}
+}
+
+technology_sharing_group = {
+
+	id = GER_stah_technological_exchange
+	name = GER_stah_technological_exchange
+	desc = GER_stah_technological_exchange_desc
+	picture = GFX_technology_sharing_default
+	research_sharing_per_country_bonus = 0.1
+	
+	available = {
+		NOT = { has_war_with = GER }
+		NOT = { is_justifying_wargoal_against = GER }
+		NOT = {
+			any_country = {
+				is_in_faction_with = ROOT
+				has_war_with = GER
+			}
+		}
+	}
+}
+
+technology_sharing_group = {
+
+	id = HUN_BAL_technological_exchange
+	name = HUN_BAL_technological_exchange
+	desc = HUN_BAL_technological_exchange_desc
+	picture = GFX_technology_sharing_default
+	research_sharing_per_country_bonus = 0.1
+	
+	available = {
+		NOT = { has_war_with = HUN }
+		NOT = { is_justifying_wargoal_against = HUN }
+		NOT = {
+			any_country = {
+				is_in_faction_with = ROOT
+				has_war_with = HUN
+			}
+		}
+	}
+}
+
+technology_sharing_group = {
+
+	id = RUS_JAP_technological_exchange
+	name = RUS_JAP_technological_exchange
+	desc = RUS_JAP_technological_exchange_desc
+	picture = GFX_technology_sharing_default
+	research_sharing_per_country_bonus = 0.2
+	
+	available = {
+		RUS = { is_subject_of = JAP }
+		OR = {
+			original_tag = RUS
+			original_tag = JAP
+		}
+	}
+}
+
+technology_sharing_group = {
+
+	id = HUN_Joint_Army_Staff_exchange
+	name = HUN_Joint_Army_Staff_exchange
+	desc = HUN_Joint_Army_Staff_exchange_desc
+	picture = GFX_technology_sharing_default
+	research_sharing_per_country_bonus = 0.2
+
+	categories = { land_doctrine }
+	
+	available = {
+		OR = {
+			original_tag = HUN
+			original_tag = GER
+		}
+	}
+}
+
+technology_sharing_group = {
+
+	id = HUN_Joint_air_command_exchange
+	name = HUN_Joint_air_command_exchange
+	desc = HUN_Joint_air_command_exchange_desc
+	picture = GFX_technology_sharing_default
+	research_sharing_per_country_bonus = 0.2
+
+	categories = { air_doctrine }
+	
+	available = {
+		OR = {
+			original_tag = HUN
+			original_tag = GER
+			original_tag = ITA
+		}
+	}
+}
+
+technology_sharing_group = {
+
+	id = HUN_United_Naval_Academy_exchange
+	name = HUN_United_Naval_Academy_exchange
+	desc = HUN_United_Naval_Academy_exchange_desc
+	picture = GFX_technology_sharing_default
+	research_sharing_per_country_bonus = 0.2
+
+	categories = { naval_doctrine naval_equipment }
+	
+	available = {
+		OR = {
+			original_tag = HUN
+			original_tag = ITA
 		}
 	}
 }

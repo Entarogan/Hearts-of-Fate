@@ -57,6 +57,7 @@ set_technology = {
     force_rotation = 1
     fighter_baiting = 1
     low_echelon_support = 1
+    armored_car1 = 1
         
 }
 if = {
@@ -247,7 +248,7 @@ create_country_leader = {
 create_corps_commander = {
 	name = "Ortlinde"
 	portrait_path = "gfx/leaders/SWE/Portrait_Ortlinde.dds"
-	traits = { commando brilliant_strategist adaptable winter_specialist }
+	traits = { trickster commando brilliant_strategist winter_specialist }
 	skill = 4
 
 	attack_skill = 4
@@ -259,50 +260,51 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Þrúðr"
 	portrait_path = "gfx/leaders/SWE/Portrait_Trudr.dds"
-	traits = { commando  hill_fighter brilliant_strategist adaptable winter_specialist}
+	traits = { trickster commando hill_fighter brilliant_strategist winter_specialist}
 	skill = 4
 
 	attack_skill = 4
 	defense_skill = 2
 	planning_skill = 4
-	logistics_skill = 4
+	logistics_skill = 3
 }
 
 create_corps_commander = {
 	name = "Hildr"
 	portrait_path = "gfx/leaders/SWE/Portrait_Hildr.dds"
-	traits = { commando  hill_fighter brilliant_strategist adaptable winter_specialist }
+	traits = { trickster commando hill_fighter brilliant_strategist winter_specialist }
 	skill = 4
 
 	attack_skill = 3
 	defense_skill = 4
 	planning_skill = 4
-	logistics_skill = 4
+	logistics_skill = 2
 }
 
 
 create_corps_commander = {
 	name = "Sigurd"
 	portrait_path = "gfx/leaders/SWE/Portrait_Sigurd.dds"
-	traits = { commando skirmisher infantry_expert adaptable winter_specialist organizer war_hero }
-	skill = 4
+	traits = { trickster commando skirmisher infantry_officer winter_specialist organizer war_hero }
+	skill = 5
 
 	attack_skill = 6
 	defense_skill = 4
 	planning_skill = 4
 	logistics_skill = 3
+	id = 2053
 }
 
 create_corps_commander = {
 	name = "Tryka"
 	portrait_path = "gfx/leaders/SWE/Portrait_Tyrka.dds"
-	traits = { reduced_land skirmisher combined_arms_expert adaptable winter_specialist organizer }
-	skill = 4
+	traits = { winter_specialist organizer }
+	skill = 3
 
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 6
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 4
 }
 
 
@@ -310,35 +312,36 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Riesbyfe Stridberg"
 	portrait_path = "gfx/leaders/SWE/Portrait_Riesbyfe_Stridberg.dds"
-	traits = {  adaptable winter_specialist inflexible_strategist trait_cautious }
+	traits = { winter_specialist inflexible_strategist trait_cautious }
 	skill = 4
-    id = 990
+
 	attack_skill = 2
 	defense_skill = 6
 	planning_skill = 2
-	logistics_skill = 5
+	logistics_skill = 4
 }
 
 create_field_marshal = {
 	name = "Scáthach-Skaði"
 	picture = "Portrait_purple.dds"
-	traits = { defensive_doctrine organisational_leader inspirational_leader politically_connected  logistics_wizard skilled_staffer  expert_improviser winter_specialist winter_expert adaptable }
+	traits = { trickster defensive_doctrine organisational_leader inspirational_leader politically_connected  logistics_wizard skilled_staffer  expert_improviser winter_specialist winter_expert adaptable }
 	skill = 5
-	attack_skill = 4
+	attack_skill = 3
 	defense_skill = 6
 	planning_skill = 4
-	logistics_skill = 8
+	logistics_skill = 4
 }
 
-create_field_marshal = {
+create_corps_commander = {
 	name = "Brynhildr"
 	picture = "Portrait_Brynhildr.dds"
-	traits = { offensive_doctrine inspirational_leader politically_connected cavalry_officer  brilliant_strategist skilled_staffer combined_arms_expert winter_specialist winter_expert }
+	traits = { trickster offensive_doctrine inspirational_leader politically_connected cavalry_officer  brilliant_strategist skilled_staffer combined_arms_expert winter_specialist winter_expert }
 	skill = 5
 	attack_skill = 5
 	defense_skill = 5
 	planning_skill = 4
-	logistics_skill = 4
+	logistics_skill = 3
+	id = 2052
 }
 
 create_field_marshal = {

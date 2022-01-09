@@ -38,6 +38,10 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
+				has_global_flag = jap_manchuria_occupied
+			}
+			modifier = {
+				factor = 0
 				tag = SHX
 			}
 			modifier = {
