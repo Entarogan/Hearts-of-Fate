@@ -2121,13 +2121,15 @@ country_event = {     #萨文科夫还是捷尔任斯基
 
 		#retire_country_leader = yes
 
-		set_country_flag = Savinkov_is_Savinkov
+		
 		SOV_boris_savinkov = {
 			set_portraits = {
 				civilian = {
 					large = "gfx/leaders/SOV/Portraits_Soviet_Savinkov_marshal.png"
 				}
 			}
+			set_character_name = SOV_Boris_Savinkov_Real
+
 		}
 		
 		hidden_effect = {
