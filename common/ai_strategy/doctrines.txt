@@ -1,6 +1,5 @@
 stop_making_horsies = {
 	enable = {
-		not = { original_tag = POL } 
 		num_of_factories > 20
 		date > 1938.1.1
 	}

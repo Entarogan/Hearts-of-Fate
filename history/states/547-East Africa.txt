@@ -3,13 +3,14 @@ state={
 	id=547
 	name="STATE_547" #Kenya
 	manpower = 3392000
+local_supplies=0.0
 	
 	state_category = rural
 
 	history={
 		owner = KEN
 		buildings = {
-			infrastructure = 3
+			infrastructure = 1
 			industrial_complex = 6
 			5210 = {
 				naval_base = 2

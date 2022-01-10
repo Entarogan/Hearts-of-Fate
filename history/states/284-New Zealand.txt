@@ -3,13 +3,14 @@ state={
 	id=284
 	name="STATE_284" # North Island
 	manpower = 899836
+local_supplies=0.0
 	
 	state_category = city
 	
 	history={
 		owner = AST
 		buildings = {
-			infrastructure = 6
+			infrastructure = 1
 			arms_factory = 3
 			industrial_complex = 4
 			air_base = 3

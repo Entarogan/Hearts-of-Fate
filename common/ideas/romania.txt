@@ -277,6 +277,7 @@ ideas = {
 
 			modifier = {
 				army_morale_factor = 0.1
+				training_time_army_factor = -0.15
 				conscription = 0.02
 			}
 		}
@@ -376,6 +377,29 @@ ideas = {
 			}
 		}
 
+		ROM_constitutional_guarantees_2 = {
+			name = ROM_constitutional_guarantees
+			picture = generic_constitutional_guarantees
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.025
+				industrial_capacity_factory = 0.05
+				production_factory_efficiency_gain_factor = 0.10
+				stability_factor = 0.05
+			}
+		}
+
+
 		ROM_preserve_greater_romania = {
 
 			removal_cost = -1
@@ -448,7 +472,7 @@ ideas = {
 			}
 			
 			modifier = {
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.025
 			}
 		}
 
@@ -485,6 +509,7 @@ ideas = {
 			
 			modifier = {
 				justify_war_goal_time = -0.25
+		    surrender_limit = 0.15
 			}
 		}
 
@@ -697,9 +722,28 @@ ideas = {
 
 	political_advisor = {
 
-		ROM_iuliu_maniu = {
+		ROM_Alexandru_Cantacuzino = {
 
-			picture = generic_democratic_reformer_western_european_2d
+			picture = Alexandru_Cantacuzino
+
+			allowed = {
+				original_tag = ROM
+			}
+			
+			available = {
+				OR = {
+					has_government = fascism
+					has_country_leader = { ruling_only = yes name = "Vlad III" }
+				}
+				NOT = { has_country_leader = { ruling_only = yes name = "Darnic Prestone Yggdmillennia" } }
+			}
+			
+			traits = { silent_workhorse }
+		}
+
+		ROM_horia_sima = {
+
+			picture = horia_sima
 
 			allowed = {
 				original_tag = ROM
@@ -709,39 +753,196 @@ ideas = {
 				if = {
 					limit = { has_dlc = "Man the Guns" }	
 					NOT = { has_autonomy_state = autonomy_supervised_state }
-          
 				}
-        has_completed_focus = ROM_tackle_radicals
+				OR = {
+					has_government = fascism
+					has_country_leader = { ruling_only = yes name = "Vlad III" }
+				}
+				NOT = { has_country_leader = { ruling_only = yes name = "Darnic Prestone Yggdmillennia" } }
+			}
+			
+			traits = { sima_iron_guard }
+			targeted_modifier = {
+				tag = HUN
+				attack_bonus_against = 0.05
+				breakthrough_bonus_against = 0.05
+			}
+		}
+
+		ROM_Corneliu_codreanu = {
+
+			picture = Corneliu_codreanu
+
+			allowed = {
+				original_tag = ROM
+			}
+			
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+				OR = {
+					has_government = fascism
+					has_country_leader = { ruling_only = yes name = "Vlad III" }
+				}
+				NOT = { has_country_leader = { ruling_only = yes name = "Darnic Prestone Yggdmillennia" } }
+				NOT = { has_country_flag = ROM_Codreanu_dead_flag }
+			}
+			
+			traits = { capitanul }
+		}
+
+		ROM_mitita_constantinescu = {
+
+			picture = ROM_mitita_constantinescu
+
+			allowed = {
+				original_tag = ROM
+			}
+			
+			available = {
+
+       			has_completed_focus = ROM_New_BNR_Palace
+			}
+			
+			traits = { financial_expert }
+		}
+		ROM_ion_gigurtu = {
+
+			picture = ROM_ion_gigurtu
+
+			allowed = {
+				original_tag = ROM
+			}
+			
+			available = {
+				has_completed_focus = ROM_Partidul_Natiunii
+			}
+			
+			traits = { ambitious_activator }
+		}
+		rom_celenike_political = {
+			name = rom_celenike
+			picture = rom_celenike
+
+			allowed = {
+				original_tag = ROM
+			}
+			
+			available = {
+
+				has_completed_focus = ROM_expand_Zugzwang
+
+			}
+			
+			traits = { prince_of_terror head_of_intelligence }
+		}
+
+		rom_patchouli_knowledge = {
+
+			picture = rom_patchouli_knowledge
+
+			allowed = {
+				original_tag = ROM
+			}
+			
+			available = {
+				AND = {
+					NOT = {
+						has_country_leader = {
+							name = "Patchouli Knowledge"
+							ruling_only = yes
+						}
+					}
+					
+				}
+				has_completed_focus = ROM_new_leader_group
+			}
+			
+			traits = { unmovable_library }
+		}
+		rom_nicolae_radescu = {
+
+			picture = rom_nicolae_radescu
+
+			allowed = {
+				original_tag = ROM
+			}
+			
+			available = {
+       			has_completed_focus = ROM_new_leader_group
+				has_government = neutrality
+				is_puppet = no
+			}
+			
+			traits = { stubborn_officer }
+			##战争支持度+10%，陆军训练时间-15%，与德国的befriend -200
+		}
+		rom_petru_groza = {
+
+			picture = rom_petru_groza
+
+			allowed = {
+				original_tag = ROM
+			}
+			
+			available = {
+				OR = {
+					has_government = communism
+					has_government = democratic
+				}
+				##皿煮或康米
+       			has_completed_focus = ROM_new_leader_group
+			}
+			
+			traits = { connected_citizen }
+		}
+		rom_gheorghe_tatarescu = {
+
+			picture = rom_gheorghe_tatarescu
+
+			allowed = {
+				original_tag = ROM
+			}
+			
+			available = {
+       			has_completed_focus = ROM_new_leader_group
+			}
+			
+			traits = { politial_broker }
+			#政治点数+10%，经济、贸易、人力法案切换成本-33%
+		}
+
+		ROM_iuliu_maniu = {
+
+			picture = ROM_iuliu_maniu
+
+			allowed = {
+				original_tag = ROM
+			}
+			
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+				has_completed_focus = ROM_Consolidate_judicial_independence
 			}
 			
 			traits = { democratic_reformer }
 		}
-    rom_zepia_eltnam_oberon = {
-        picture = rom_zepia_eltnam_oberon
-
-        allowed = {
-          original_tag = ROM
-        }
-        
-        available = {
-          if = {
-            limit = { has_dlc = "Man the Guns" }	
-            NOT = { has_autonomy_state = autonomy_supervised_state }
-            
-          }
-          has_completed_focus = ROM_night_of_wallachia
-          has_government = fascism
-        }
-        
-        traits = { tatari }
-    }
 
 		ROM_gheorghe_argeseanu = {
 
-			picture = generic_army_europe_4
+			picture = ROM_gheorghe_argeseanu
 
 			allowed = {
 				original_tag = ROM
+			}
+
+			available = {
+				has_completed_focus = ROM_reform_civil_service
 			}
 			
 			traits = { silent_workhorse }
@@ -751,12 +952,17 @@ ideas = {
 
 			picture = idea_nicolae_malaxa
 
+			available = {
+				has_completed_focus = ROM_malaxa
+			}
+
 			allowed = {
 				original_tag = ROM
 				has_dlc = "Death or Dishonor"
 			}
 			
 			traits = { captain_of_industry }
+			
 		}
 
 		ROM_armand_calinescu = {
@@ -769,50 +975,42 @@ ideas = {
 			
 			traits = { prince_of_terror }
 		}
-
-		ROM_petru_groza = {
-
-			picture = generic_political_advisor_europe_2
-
-			allowed = {
-				original_tag = ROM
-			}
-			
-			traits = { backroom_backstabber }
-			ai_will_do = {
-				factor = 0
-			}
-		}
-
-		ROM_mihail_sturdza = {
-
-			picture = generic_fascist_demagogue_western_european_2d
-
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Death or Dishonor"
-					}
-					has_completed_focus = ROM_cuvantul
-				}
-				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}
-			}			
-
-			allowed = {
-				original_tag = ROM
-			}
-			
-			traits = { fascist_demagogue }
-			ai_will_do = {
-				factor = 0
-			}
-		}
 	}
 
 	theorist = {
+		rom_patchouli_knowledge_theorist = {
+			name = rom_patchouli_knowledge
+			picture = rom_patchouli_knowledge
+
+			allowed = {
+				original_tag = ROM
+			}
+			
+			available = {
+				has_completed_focus = ROM_new_leader_group
+			}
+			research_bonus = {
+				rocketry = 0.15
+				cat_grand_battle_plan = 0.15
+			}	
+			traits = { grand_battle_plan_expert rocket_scientist }
+			##火箭科学家、
+			#原版决战计划理论家trait，火箭+15%研究速度，决战计划+15%研究速度
+		}
+		rom_donna_beneviento = {
+			
+			picture = rom_donna_beneviento
+
+			allowed = {
+				original_tag = ROM
+			}
+			available = {
+				has_completed_focus = ROM_expand_Homunculus_workshop
+			}
+
+			traits = { Quirky_nobleman }
+
+		}
 
 		ROM_gheorghe_potopeanu = {
 					
@@ -908,12 +1106,19 @@ ideas = {
 				original_tag = ROM
 			}
 			
+			available = {
+				NOT = { has_government = communism }
+				NOT = { has_completed_focus = ROM_prohibit_paramilitary_organization }
+				NOT = { has_completed_focus = ROM_Scarlet_Fog }
+				NOT = { has_completed_focus = ROM_Doll_Judgement }
+				NOT = { has_completed_focus = ROM_darnicism }
+			}
 
 			
-			traits = { army_chief_offensive_2 }
+			traits = { Red_dog }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 150
 			}
 		}
     
@@ -924,11 +1129,16 @@ ideas = {
 				original_tag = ROM
 			}
 			available = {
-          has_completed_focus = ROM_a_game_of_power
-      }
+				OR = {
+					NOT = { has_completed_focus = ROM_crack_factions }
+					has_completed_focus = ROM_swear_allegiance
+				}
+				NOT = { has_completed_focus = ROM_Iron_guard_revolution }
+				
+			}
 
 			
-			traits = { army_regrouping_3 }
+			traits = { rus_warfare_engineer }
 			
 			ai_will_do = {
 				factor = 5
@@ -980,9 +1190,9 @@ ideas = {
 				original_tag = ROM
 			}
 			
-      available = {
-          has_completed_focus = ROM_a_game_of_power
-      }
+			available = {
+				# has_completed_focus = ROM_a_game_of_power
+			}
 			
 			traits = { air_air_combat_training_3 }
 			
@@ -1043,7 +1253,7 @@ ideas = {
 			traits = { army_infantry_2 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 1000
 			}
 		}
     
@@ -1054,8 +1264,8 @@ ideas = {
         
         picture = rom_darnic
         available = {
-            NOT = { has_completed_focus = ROM_tackle_radicals }
-            NOT = { has_completed_focus = ROM_iron_guard }
+            NOT = { has_completed_focus = ROM_crack_factions }
+            NOT = { has_completed_focus = ROM_Iron_guard_revolution }
             NOT = { has_global_flag = Darnic_run }
         }
         traits = { army_logistics_3 }
@@ -1068,7 +1278,7 @@ ideas = {
     ROM_izayoi_sakuya = {
 			
       available = {
-        has_completed_focus = ROM_royal_guards_divisions
+        has_completed_focus = ROM_Lunar_Dial
       }
 					
 			allowed = {
@@ -1081,7 +1291,7 @@ ideas = {
 				infantry_weapons = 0.10
 			}
 			
-			traits = { army_commando_3 }
+			traits = { army_chief_maneuver_3 head_of_intelligence }
 		}
     
     rom_fiore = {
@@ -1091,7 +1301,11 @@ ideas = {
         
         picture = rom_fiore
         available = {
-            has_completed_focus = ROM_a_game_of_power 
+            OR = {
+				NOT = { has_completed_focus = ROM_crack_factions }
+				has_completed_focus = ROM_swear_allegiance
+			}
+			NOT = { has_completed_focus = ROM_Iron_guard_revolution }
         }
         traits = { army_chief_planning_3 }
         
@@ -1106,9 +1320,15 @@ ideas = {
         
         picture = rom_celenike
         available = {
-            has_completed_focus = ROM_a_game_of_power 
+            OR = {
+				NOT = { has_completed_focus = ROM_crack_factions }
+				has_completed_focus = ROM_swear_allegiance
+			}
+			NOT = { has_completed_focus = ROM_Iron_guard_revolution }
+			NOT = { has_idea = rom_celenike_political }
+			# has_completed_focus = ROM_expand_Zugzwang
         }
-        traits = { army_chief_morale_3 }
+        traits = { army_chief_morale_2 prince_of_terror }
         
         ai_will_do = {
           factor = 3
@@ -1169,6 +1389,26 @@ ideas = {
 	tank_manufacturer = { 
 		
 		designer = yes
+
+		ROM_malaxa_tank = { #
+			
+			picture = ROM_malaxa
+
+			allowed = {
+				original_TAG = ROM
+			}
+			available = {
+				has_completed_focus = ROM_malaxa
+			}
+						
+			research_bonus = {
+				armor = 0.15
+				industry = 0.10
+			}
+			
+			traits = { tank_manufacturer }
+
+		}
 		
 		pzinz_rom = {
 			
@@ -1251,7 +1491,7 @@ ideas = {
 			
 			allowed = {
 				original_tag = ROM
-				has_dlc = "Death or Dishonor"
+				# has_dlc = "Death or Dishonor"
 			}
 			
 			research_bonus = {
@@ -1262,12 +1502,79 @@ ideas = {
 			traits = { industrial_concern }
 		}
 
+		ROM_Miranda_Chemstry = { #
+			
+			picture = ROM_Miranda_Chemstry
+
+			allowed = {
+				original_TAG = ROM
+			}
+			available = {
+				has_completed_focus = ROM_Trifas_experimental_city
+			}
+						
+			research_bonus = {
+				synth_resources = 0.15
+			}
+			modifier = {
+				fuel_gain_factor = 0.15
+				fuel_gain_factor_from_states = 0.15
+				research_speed_factor = 0.025
+			}
+			traits = { refinery_concern }
+
+		}
+
+		ROM_CFR = { #
+			
+			picture = ROM_CFR
+
+			allowed = {
+				original_TAG = ROM
+			}
+			available = {
+				has_completed_focus = ROM_connect_railway
+			}
+			traits = { industrial_concern }
+			modifier = {
+				supply_consumption_factor = -0.1
+				production_speed_infrastructure_factor = 0.1
+			}
+
+		}
+
 				
 	}
 
 	naval_manufacturer = { 			
 		
 		designer = yes
+
+		ROM_PSNNM = { #Hawthorn Leslie and Company
+			
+			picture = ROM_PSNNM
+
+			allowed = {
+				original_TAG = ROM
+			}
+			available = {
+				has_completed_focus = ROM_danubian_transport_network
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+			##岸防海军trait，船坞建造+10%，基础设施建造+5%
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+				production_speed_dockyard_factor = 0.1
+
+
+			}
+
+		}
 		
 		constanta_shipyard = {
 			
@@ -1371,7 +1678,38 @@ ideas = {
 		
 		designer = yes
 		
-		
+		ROM_heisenberg_industry = { #Hawthorn Leslie and Company
+			
+			picture = ROM_heisenberg_industry
+
+			allowed = {
+				original_TAG = ROM
+			}
+			available = {
+				has_completed_focus = ROM_national_defense_industry
+			}
+						
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+
+			equipment_bonus = {
+				##摩托化和机械化-15%造价，
+				motorized_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+				mechanized_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+
 		ROM_vauxhall = {
 			
 			picture = vauxhall
@@ -1437,23 +1775,6 @@ ideas = {
 			modifier = {
 
 			}
-			
-		}
-
-		ROM_malaxa = {
-			
-			picture = generic_motorized_equipment_manufacturer_1
-
-
-			allowed = {
-				original_TAG = ROM
-			}
-			
-			research_bonus = {
-				motorized_equipment = 0.15
-			}
-			
-			traits = { motorized_equipment_manufacturer }
 			
 		}
 
@@ -1526,57 +1847,23 @@ ideas = {
 	aircraft_manufacturer = { 		
 			
 		designer = yes
-		
-		iar = {
-			
-			picture = generic_air_manufacturer_2
-
-			cost = 150
-
-			allowed = {
-				original_tag = ROM
-				NOT = {
-					has_dlc = "Death or Dishonor"
-				}
-			}
-			
-			research_bonus = {
-				air_equipment = 0.15
-			}
-			
-			traits = { light_aircraft_manufacturer }
-			
-			equipment_bonus = {
-				# produced the IAR-80 fighter/ground attack aircraft around 350 of them during 36-44
-			}
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 
 		ROM_iar = {
 			
-			picture = generic_air_manufacturer_2
+			picture = ROM_IAR
 
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Death or Dishonor"
-					}
-					has_completed_focus = ROM_invest_in_the_iar
-				}
+				has_completed_focus = ROM_invest_in_the_iar
 			}
 
 			cost = 50
 
 			allowed = {
 				original_tag = ROM
-				has_dlc = "Death or Dishonor"
 			}
 			
 			research_bonus = {
-				air_equipment = 0.05
+				air_equipment = 0.15
 			}			
 			
 			equipment_bonus = {

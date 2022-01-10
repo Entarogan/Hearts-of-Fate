@@ -209,9 +209,41 @@ ideas = {
 			removal_cost = -1
 			
 			equipment_bonus = {
-				fighter_equipment = {
-					build_cost_ic = -0.1 instant = yes
-				}
+        fighter_equipment = {
+
+          build_cost_ic = -0.15
+          
+          instant = yes
+        }
+
+        heavy_fighter_equipment = {
+
+          build_cost_ic = -0.15
+          
+          instant = yes
+        }
+
+        CAS_equipment = {
+
+          build_cost_ic = -0.1
+          
+          instant = yes
+        }
+
+        tac_bomber_equipment = {
+
+          build_cost_ic = -0.1
+          
+          instant = yes
+        }        
+
+        strat_bomber_equipment = {
+
+          build_cost_ic = -0.1
+          
+          instant = yes
+        }
+
 			}
 		}
 		
@@ -233,7 +265,7 @@ ideas = {
 			
 			equipment_bonus = {
 				infantry_equipment = {
-					build_cost_ic = -0.1 instant = yes
+					build_cost_ic = -0.15 instant = yes
 				}
 			}
 		}
@@ -254,10 +286,10 @@ ideas = {
 			
 			equipment_bonus = {
 				ship_hull_light = {
-					build_cost_ic = -0.1 instant = yes
+					build_cost_ic = -0.15 instant = yes
 				}
 				convoy = {
-					build_cost_ic = -0.1 instant = yes
+					build_cost_ic = -0.15 instant = yes
 				}
 			}
 		}
@@ -647,15 +679,27 @@ ideas = {
 			equipment_bonus = {
 				screen_ship = {
 					naval_speed = 0.1 naval_range = 0.25
+
+          instant = yes
+
 				}
 				carrier = {
 					naval_speed = 0.1 naval_range = 0.25
+
+          instant = yes
+
 				}
 				capital_ship = {
 					naval_speed = 0.1 naval_range = 0.25
+
+          instant = yes
+
 				}
 				submarine = {
 					naval_speed = 0.1 naval_range = 0.25
+
+          instant = yes
+
 				}
 			}
 
@@ -1722,7 +1766,7 @@ ideas = {
 						
 			equipment_bonus = {
 				ship_hull_cruiser = {
-					build_cost_ic = -0.1 instant = yes
+					build_cost_ic = -0.15 instant = yes
 				}
 			}
 		}
@@ -1760,18 +1804,31 @@ ideas = {
 					limit = { has_dlc = "Man the Guns" }	
 					NOT = { has_autonomy_state = autonomy_supervised_state }
 				}
+				has_intelligence_agency = yes
+				NOT = {
+					has_country_leader = {
+						name = "Olga Marie Animusphere"
+						ruling_only = yes
+					}
+				}
 				NOT = { has_completed_focus = uk_london_incident_focus }
 				NOT = { has_idea = reines_the_theorist }
+				NOT = { has_idea = ENG_holmes }
 			}
 			
 			allowed = {
 				original_tag = ENG
+				has_dlc = "La Resistance" 
 			}
 			picture = reines_theorists
 			traits = { Investigator }
 			
 			ai_will_do = {
-				factor = 3
+				factor = 1
+				modifier = {
+					factor = 10
+					has_war = yes
+				}
 			}
 		}
 		
@@ -1851,6 +1908,7 @@ ideas = {
 				original_tag = ENG
 			}
 			available = {
+				NOT = { has_idea = ENG_moriarty }
 				NOT = { has_completed_focus = uk_london_incident_focus }
 				NOT = { has_country_flag = lev_suicided }
 			}
@@ -1859,6 +1917,10 @@ ideas = {
 			picture = lev
 			ai_will_do = {
 				factor = 3
+				modifier = {
+					factor = 2
+					has_war = no
+				}
 			}
 		}
 
@@ -2333,6 +2395,12 @@ ideas = {
 			
 			available = {
 				NOT = {
+					has_country_leader = {
+						name = "Olga Marie Animusphere"
+						ruling_only = yes
+					}
+				}
+				NOT = {
 					has_completed_focus = uk_london_incident_focus
 				}
 			}
@@ -2373,6 +2441,6 @@ ideas = {
 				factor = 100
 			}
 		}
-		
+	}	
 }
 

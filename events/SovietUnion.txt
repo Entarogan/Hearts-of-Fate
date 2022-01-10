@@ -547,6 +547,7 @@ country_event = {
 	picture = GFX_report_event_china_politicians_captured
 	
 	trigger = {
+    always = no
 		date > 1936.11.1
 		tag = CHI
 		has_opinion_modifier = hostile_status
@@ -884,18 +885,15 @@ country_event = {
 
         kill_country_leader = yes
 
-create_country_leader = {
-	name = "Nikolai Yezhov"
-	desc = "POLITICS_NIKOLAI_YEZHOV_DESC"
-	picture = "Portrait_Soviet_Nikolai_Yezhov.TGA"
-	expire = "1953.3.1"
-	ideology = yezhovism
-	traits = {
-	 Blood_Dwarf
-     mysterious
-	}
-}
-
+		add_country_leader_role = {
+			character = "SOV_nikolay_yezhov"
+			country_leader = {
+				ideology = yezhovism
+				traits = { Blood_Dwarf mysterious}
+				expire = "1965.3.1.1"
+			}
+			promote_leader = yes 
+		}
 	}
 }
 
@@ -999,6 +997,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+    always = no
 		has_country_flag = SOV_soviet.48_trotsky
 		tag = SOV
 		NOT = {
@@ -1032,15 +1031,24 @@ country_event = {
 			remove_ideas = trotskyite_plot
 		}
 		kill_country_leader = yes
-		create_country_leader = {
-			name = "Leon Trotsky"
-			desc = "POLITICS_LEON_TROTSKY_DESC"
-			picture = "Portrait_Leon_Trotsky.dds"
-			expire = "1965.1.1"
-			ideology = leninism
-			traits = {
-				permanent_revolutionary
+		#create_country_leader = {
+		#	name = "Leon Trotsky"
+		#	desc = "POLITICS_LEON_TROTSKY_DESC"
+		#	picture = "Portrait_Leon_Trotsky.dds"
+		#	expire = "1965.1.1"
+		#	ideology = leninism
+		#	traits = {
+		#		permanent_revolutionary
+		#	}
+		#}
+		add_country_leader_role = {
+			character = "SOV_lev_trotsky"
+			country_leader = {
+				ideology = leninism
+				traits = { permanent_revolutionary }
+				expire = "1965.1.1"
 			}
+			promote_leader = yes 
 		}
 		remove_ideas = mikhail_kalinin
 		remove_ideas = ivan_konev
@@ -1075,14 +1083,23 @@ country_event = {
 					has_government = neutrality
 				}
 				kill_country_leader = yes
-				create_country_leader = {
-					name = "Ivan Konev"
-					desc = "POLITICS_IVAN_KONEV_DESC"
-					picture = "Portrait_Soviet_Ivan_Konev.dds"
-					expire = "1965.1.1"
-					ideology = oligarchism
-					traits = {
+	#			create_country_leader = {
+#					name = "Ivan Konev"
+	#				desc = "POLITICS_IVAN_KONEV_DESC"
+#					picture = "Portrait_Soviet_Ivan_Konev.dds"
+#					expire = "1965.1.1"
+#					ideology = oligarchism
+#					traits = {
+#					}
+#				}
+				add_country_leader_role = {
+					character = "SOV_ivan_konev"
+					country_leader = {
+						ideology = oligarchism
+						traits = { permanent_revolutionary }
+						expire = "1965.1.1"
 					}
+					promote_leader = yes 
 				}
 			}
 			news_event = { hours = 6 id = news.221 }
@@ -1228,12 +1245,10 @@ country_event = {
 	option = {
 		name = soviet.1000.a
 
-			 	SOV = {
-			 		annex_country = {
-					target = SIK
-					transfer_troops = yes } 
-					add_named_threat = { threat = 2 name = soviet.1000.t }
-				}
+    SOV = {
+      puppet = SIK
+      add_named_threat = { threat = 2 name = soviet.1000.t }
+    }
 
 	}
 	option = {
@@ -1801,6 +1816,7 @@ country_event = {
 	picture = GFX_report_event_soviet_purge_politicians
 
 	trigger = {
+    always = no
 		has_government = communism
 		tag = SOV
 		has_global_flag = SOV_fourth_international_fired
@@ -1860,14 +1876,23 @@ country_event = {
 					has_government = neutrality
 				}
 				kill_country_leader = yes
-				create_country_leader = {
-					name = "Andrey Vlasov"
-					desc = "POLITICS_ANDREY_VLASOV_DESC"
-					picture = "Portrait_Soviet_Andrey_Vlasov.dds"
-					expire = "1965.1.1"
-					ideology = moderatism
-					traits = {
+		#		create_country_leader = {
+		#			name = "Andrey Vlasov"
+			#		desc = "POLITICS_ANDREY_VLASOV_DESC"
+			#		picture = "Portrait_Soviet_Andrey_Vlasov.dds"
+		#			expire = "1965.1.1"
+		#			ideology = moderatism
+		#			traits = {
+		#			}
+		#		}
+				add_country_leader_role = {
+					character = "SOV_andrey_vlasov"
+					country_leader = {
+						ideology = moderatism
+						traits = {  }
+						expire = "1965.3.1.1"
 					}
+					promote_leader = yes 
 				}
 			}
 			news_event = { hours = 3 id = news.220 }
@@ -1885,6 +1910,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+    always = no
 		tag = SOV
 		has_country_flag = SOV_purged_1
 		NOT = { has_country_leader = { ruling_only = yes name = "Nikolai Yezhov" } }
@@ -1907,14 +1933,23 @@ country_event = {
 					has_government = neutrality
 				}
 				kill_country_leader = yes
-				create_country_leader = {
-					name = "Andrey Vlasov"
-					desc = "POLITICS_ANDREY_VLASOV_DESC"
-					picture = "Portrait_Soviet_Andrey_Vlasov.dds"
-					expire = "1965.1.1"
-					ideology = moderatism
-					traits = {
+		#		create_country_leader = {
+		#			name = "Andrey Vlasov"
+			#		desc = "POLITICS_ANDREY_VLASOV_DESC"
+			#		picture = "Portrait_Soviet_Andrey_Vlasov.dds"
+		#			expire = "1965.1.1"
+		#			ideology = moderatism
+		#			traits = {
+		#			}
+		#		}
+				add_country_leader_role = {
+					character = "SOV_andrey_vlasov"
+					country_leader = {
+						ideology = moderatism
+						traits = {  }
+						expire = "1965.3.1.1"
 					}
+					promote_leader = yes 
 				}
 			}
 			news_event = { hours = 3 id = news.220 }
@@ -1932,6 +1967,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+    always = no
 		tag = SOV
 		has_country_flag = SOV_purged_2
 		NOT = { has_country_leader = { ruling_only = yes name = "Nikolai Yezhov" } }
@@ -1954,14 +1990,23 @@ country_event = {
 					has_government = neutrality
 				}
 				kill_country_leader = yes
-				create_country_leader = {
-					name = "Andrey Vlasov"
-					desc = "POLITICS_ANDREY_VLASOV_DESC"
-					picture = "Portrait_Soviet_Andrey_Vlasov.dds"
-					expire = "1965.1.1"
-					ideology = moderatism
-					traits = {
+		#		create_country_leader = {
+		#			name = "Andrey Vlasov"
+			#		desc = "POLITICS_ANDREY_VLASOV_DESC"
+			#		picture = "Portrait_Soviet_Andrey_Vlasov.dds"
+		#			expire = "1965.1.1"
+		#			ideology = moderatism
+		#			traits = {
+		#			}
+		#		}
+				add_country_leader_role = {
+					character = "SOV_andrey_vlasov"
+					country_leader = {
+						ideology = moderatism
+						traits = {  }
+						expire = "1965.3.1.1"
 					}
+					promote_leader = yes 
 				}
 			}
 			news_event = { hours = 3 id = news.220 }
@@ -1979,6 +2024,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+    always = no
 		tag = SOV
 		has_country_flag = SOV_purged_3
 		NOT = { has_country_leader = { ruling_only = yes name = "Nikolai Yezhov" } }
@@ -2001,14 +2047,23 @@ country_event = {
 					has_government = neutrality
 				}
 				kill_country_leader = yes
-				create_country_leader = {
-					name = "Andrey Vlasov"
-					desc = "POLITICS_ANDREY_VLASOV_DESC"
-					picture = "Portrait_Soviet_Andrey_Vlasov.dds"
-					expire = "1965.1.1"
-					ideology = moderatism
-					traits = {
+		#		create_country_leader = {
+		#			name = "Andrey Vlasov"
+			#		desc = "POLITICS_ANDREY_VLASOV_DESC"
+			#		picture = "Portrait_Soviet_Andrey_Vlasov.dds"
+		#			expire = "1965.1.1"
+		#			ideology = moderatism
+		#			traits = {
+		#			}
+		#		}
+				add_country_leader_role = {
+					character = "SOV_andrey_vlasov"
+					country_leader = {
+						ideology = moderatism
+						traits = {  }
+						expire = "1965.3.1.1"
 					}
+					promote_leader = yes 
 				}
 			}
 			news_event = { hours = 3 id = news.220 }
@@ -2027,6 +2082,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+    always = no
 		tag = SOV
 		has_country_flag = SOV_purged_4
 	}

@@ -8,121 +8,57 @@ set_technology = {
 	tech_support = 1
 	tech_recon = 1
 	tech_mountaineers = 1
+	motorised_infantry = 1
 	gw_artillery = 1
 	gwtank = 1
 	basic_light_tank = 1
 	improved_light_tank = 1
 	interwar_antiair = 1
+    interwar_antitank = 1
 	early_fighter = 1
 	early_bomber = 1
 	CAS1 = 1
+	naval_bomber1 = 1
 	fuel_silos = 1
+    armored_car1 = 1
+
+	trench_warfare = 1
+
 }
 
 set_research_slots = 3
 
+set_cosmetic_tag = CZE_State
+
 set_politics = {
-	ruling_party = democratic
+	ruling_party = neutrality
 	last_election = "1935.5.19"
 	election_frequency = 60
 	elections_allowed = yes
 }
 
 set_popularities = {
-	democratic = 65
-	neutrality = 20
+	democratic = 10
+	neutrality = 80
 	fascism = 5
-	communism = 10
+	communism = 5
 }
 
-create_country_leader = {
-	name = "Edvard Beneš"
-	desc = "POLITICS_EDVARD_BENES_DESC"
-	picture = "Portrait_Czech_Edvard_Benes.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		#
-	}
+add_ideas = {
+	limited_conscription
+	war_economy
 }
 
-create_country_leader = {
-	name = "Samopal Škorpion"
-	desc = "POLITICS_JAROSLAV_KREJCI_DESC"
-	picture = "Portrait_Samopal_Skorpion.dds"
-	expire = "1965.1.1"
-	ideology = nazism
-	traits = {
-		#
-	}
-}
+recruit_character = CZE_Zapadoslavia_Brno
+recruit_character = CZE_Samopal_Skorpion
 
-create_country_leader = {
-	name = "Samopal Škorpion"
-	desc = "POLITICS_JAROSLAV_KREJCI_DESC"
-	picture = "Portrait_Samopal_Skorpion.dds"
-	expire = "1965.1.1"
-	ideology = stratocracy
-	traits = {
-		#
-	}
-}
+recruit_character = CZE_vojtyech_luzha
 
+recruit_character = CZE_josef_shnejdarek
 
-create_country_leader = {
-	name = "Samopal Škorpion"
-	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
-	picture = "Portrait_Samopal_Skorpion.dds"
-	expire = "1965.1.1"
-	ideology = totalist
-	traits = {
-		#
-	}
-}
+recruit_character = CZE_richard_tesarzhik
 
-create_field_marshal = {
-	name = "Vojtěch Luža"
-	gfx = "GFX_Portrait_czechoslovakia_vojtech_luza"
-	traits = { fast_planner offensive_doctrine }
-	skill = 3
-    attack_skill = 4
-    defense_skill = 2
-    planning_skill = 3
-    logistics_skill = 1
-}
-
-create_field_marshal = {
-	name = "Josef Šnejdárek"
-	gfx = "GFX_Portrait_czechoslovakia_josef_snejdarek"
-	traits = { thorough_planner defensive_doctrine }
-	skill = 3
-    attack_skill = 3
-    defense_skill = 4
-    planning_skill = 2
-    logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Richard Tesařík"
-	gfx = "GFX_Portrait_czechoslovakia_richard_tesarik"
-	traits = { armor_officer }
-	skill = 2
-    attack_skill = 4
-    defense_skill = 1
-    planning_skill = 1
-    logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Sergej Vojcechovský"
-	gfx = "GFX_Portrait_czechoslovakia_sergej_vojcechovsky"
-	traits = { winter_specialist }
-	skill = 3
-    attack_skill = 4
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 1
-}
+recruit_character = CZE_sergej_vojcechovsky
 
 if = {
 	limit = {
@@ -130,7 +66,7 @@ if = {
 	}
 	add_ideas = {
 		CZE_skoda_works
-		CZE_divided_nation
+		# CZE_divided_nation
 }
 
 }

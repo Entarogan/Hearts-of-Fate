@@ -14,6 +14,10 @@ set_technology = {
 
 set_convoys = 100
 
+add_ideas = {
+MAL_Colonization
+}
+
 set_politics = {
 	ruling_party = democratic
 	last_election = "1936.1.1"
@@ -28,67 +32,8 @@ set_popularities = {
 	communism = 1
 }
 
-create_country_leader = {
-	name = "John Edward Golightly"
-	desc = "POLITICS_Golightly_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		
-	}
-}
-create_country_leader = {
-	name = "Sir Archibald Douglas Cochrane"
-	desc = "POLITICS_JOHN_EDWARDD_GOLIGHTLY_DESC" 
-	picture = "gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {  }
-		
-	}
-  
-create_country_leader = {
-	name = "Melantha"
-	desc = "" 
-	picture = "Portrait_Melantha.dds"
-	expire = "1965.1.1"
-	ideology = stratocracy
-	traits = { compassionate_gentleman }
-		
-	}  
-  
-create_country_leader = {
-	name = "Melantha"
-	desc = "" 
-	picture = "Portrait_Melantha.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {  compassionate_gentleman }
-		
-	}    
-
-create_country_leader = {
-	name = "Melantha"
-	picture = "Portrait_Melantha.dds"
-	expire = "1965.1.1"
-	ideology = rexism
-	traits = { compassionate_gentleman }
-		
-	}
-
-create_country_leader = {
-	name = "Aung San"
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_communism.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {  }
-		
-	}
-
-create_field_marshal  = {
-	name = "W.L.O. Twiss"
-	portrait_path = "gfx/leaders/Europe/Portrait_Britain_Generic_land_4.dds"
-	traits = {  }
-	skill = 2
-}
+recruit_character = BUR_John_Edward_Golightly
+recruit_character = BUR_Archibald_Douglas_Cochrane
+recruit_character = BUR_Melantha
+recruit_character = BUR_Aung_San
+recruit_character = BUR_WLO_Twiss

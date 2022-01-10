@@ -13,9 +13,11 @@ ideas = {
 		
 			modifier = {
 				consumer_goods_factor = 0.50
-				production_speed_industrial_complex_factor = -0.5
+				production_speed_industrial_complex_factor = 0.25
 				production_speed_arms_factory_factor = -0.5
 				production_speed_dockyard_factor = -0.5
+				production_factory_max_efficiency_factor = -0.25
+				production_factory_efficiency_gain_factor = -0.25
 				conversion_cost_civ_to_mil_factor = 0.5
 				conversion_cost_mil_to_civ_factor = 0.5
 				generate_wargoal_tension = 1.00
@@ -49,9 +51,11 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.4
-				production_speed_industrial_complex_factor = -0.4
+				production_speed_industrial_complex_factor = 0.2
 				production_speed_arms_factory_factor = -0.4
 				production_speed_dockyard_factor = -0.4
+				production_factory_max_efficiency_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.2
 				conversion_cost_civ_to_mil_factor= 0.4
 				conversion_cost_mil_to_civ_factor = 0.4
 				generate_wargoal_tension = 1.00
@@ -80,8 +84,11 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.35
-				production_speed_industrial_complex_factor = -0.3
+				production_speed_industrial_complex_factor = 0.15
 				production_speed_arms_factory_factor = -0.3
+				production_speed_dockyard_factor = -0.3
+				production_factory_max_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.15
 				conversion_cost_civ_to_mil_factor= 0.3
 				conversion_cost_mil_to_civ_factor = 0.3
 				max_fuel_factor = -0.25
@@ -129,8 +136,9 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.3
-				production_speed_industrial_complex_factor = -0.1
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = -0.1
+				production_speed_dockyard_factor = -0.1
 				fuel_gain_factor = -0.25
 			}
 			
@@ -164,11 +172,18 @@ ideas = {
 
 				if = {
 					limit = {
+						original_tag = GER
+					}
+					NOT = { has_idea = GER_Versailles_Young_idea }
+				}
+
+				if = {
+					limit = {
 						original_tag = HUN
 						has_dlc = "Death or Dishonor"
 					}
 					OR = {
-						has_completed_focus = HUN_secret_rearmament
+						#has_completed_focus = HUN_secret_rearmament
 						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
 				}
@@ -188,8 +203,9 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.25
 				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 				conversion_cost_civ_to_mil_factor= -0.1
-				conversion_cost_mil_to_civ_factor = -0.1
+				conversion_cost_mil_to_civ_factor = 0.1
 				fuel_gain_factor = -0.1
 			}
 			
@@ -239,6 +255,7 @@ ideas = {
 					limit = {
 						original_tag = GER
 					}
+					NOT = { has_idea = GER_Versailles_Young_idea }
 					NOT = { has_idea = relaxed_Corrupt_industry }
 				}
 
@@ -264,9 +281,13 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.2
+				production_speed_industrial_complex_factor = -0.20
 				production_speed_arms_factory_factor = 0.2
+				production_speed_dockyard_factor = 0.2
+				production_factory_max_efficiency_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
 				conversion_cost_civ_to_mil_factor= -0.2
-				conversion_cost_mil_to_civ_factor = -0.2
+				conversion_cost_mil_to_civ_factor = 0.2
 			}
 			
 			cancel_if_invalid = no
@@ -308,6 +329,7 @@ ideas = {
 					limit = {
 						original_tag = GER
 					}
+					NOT = { has_idea = GER_Versailles_Young_idea }
 					NOT = { has_idea = relaxed_Corrupt_industry }
 					NOT = { has_idea = relaxed_industry }
 				}
@@ -339,7 +361,7 @@ ideas = {
 				}
 			}
 			ai_will_do = {
-   				factor = 1
+   				factor = 25
 
 				modifier = {
 					factor = 25
@@ -384,11 +406,17 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.10
-				conscription = -0.03
+				consumer_goods_factor = 0.15
+		    conscription_factor = -0.2
+				production_speed_industrial_complex_factor = -0.30
 				production_speed_arms_factory_factor = 0.3
+				production_speed_dockyard_factor = 0.3
+				production_factory_max_efficiency_factor = 0.20
+				production_factory_efficiency_gain_factor = 0.10
+		    line_change_production_efficiency_factor = 0.10
+        production_factory_start_efficiency_factor = 0.10
 				conversion_cost_civ_to_mil_factor= -0.3
-				conversion_cost_mil_to_civ_factor = -0.3
+				conversion_cost_mil_to_civ_factor = 0.3
 			}
 			
 			cancel_if_invalid = no
@@ -407,8 +435,7 @@ ideas = {
 						original_tag = GER
 					}
 					NOT = { has_idea = GER_autarky_idea }
-					NOT = { has_idea = GER_autarky_DAF_idea }
-					NOT = { has_idea = GER_autarky_Antimonopoly_idea }
+					NOT = { has_idea = GER_grosraumwirtschaft }
 				}
 
 			}
@@ -474,8 +501,6 @@ ideas = {
 						original_tag = GER
 					}
 					NOT = { has_idea = GER_autarky_idea }
-					NOT = { has_idea = GER_autarky_DAF_idea }
-					NOT = { has_idea = GER_autarky_Antimonopoly_idea }
 				}
 
 			}
@@ -553,6 +578,13 @@ ideas = {
 					}
 					NOT = { has_idea = CHI_nine_power_treaty }
 				}
+
+				if = {
+					limit = {
+						original_tag = GER
+					}
+					NOT = { has_idea = GER_grosraumwirtschaft }
+				}
                 
                 if = {
 					limit = {
@@ -616,8 +648,7 @@ ideas = {
 						original_tag = GER
 					}
 					NOT = { has_idea = GER_autarky_idea }
-					NOT = { has_idea = GER_autarky_DAF_idea }
-					NOT = { has_idea = GER_autarky_Antimonopoly_idea }
+					NOT = { has_idea = GER_grosraumwirtschaft }
 				}
 				OR = {
 					NOT = {	tag = SOV }
@@ -656,6 +687,12 @@ ideas = {
 
 			ai_will_do = {
    				factor = 1
+
+   				modifier = {
+					factor = 0
+					
+					is_major = yes
+				}
 
    				modifier = {
 					factor = 0

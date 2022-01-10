@@ -14493,7 +14493,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -14545,7 +14545,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -14597,7 +14597,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -14649,7 +14649,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -14701,7 +14701,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -14753,7 +14753,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -14805,7 +14805,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -14857,7 +14857,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -14909,7 +14909,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -14961,7 +14961,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -15013,7 +15013,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -15065,7 +15065,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -15117,7 +15117,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -15169,7 +15169,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -15221,7 +15221,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -15273,7 +15273,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -15325,7 +15325,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -15377,7 +15377,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -15429,7 +15429,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -15482,7 +15482,7 @@ SPA_preparing_the_carlist_insurrection = {
 		}
 
 		ai_will_do = {
-
+			factor = 0
 		}
 	}
 
@@ -15550,10 +15550,6 @@ SPR_foreign_arms_purchases = {
 					modifier = {
 						factor = 0
 						has_war_with = FRA
-					}
-					modifier = {
-						factor = 0
-						FRA = { NOT = { has_country_flag = FRA_arms_purchases_allowed } }
 					}
 					add_equipment_to_stockpile = {
 					    type = infantry_equipment
@@ -15705,10 +15701,6 @@ SPR_foreign_arms_purchases = {
 						factor = 0
 						has_war_with = FRA
 					}
-					modifier = {
-						factor = 0
-						FRA = { NOT = { has_country_flag = FRA_non_military_aid_allowed } }
-					}
 					add_equipment_to_stockpile = {
 					    type = support_equipment
 					    amount = 200
@@ -15859,10 +15851,7 @@ SPR_foreign_arms_purchases = {
 						factor = 0
 						has_war_with = FRA
 					}
-					modifier = {
-						factor = 0
-						FRA = { NOT = { has_country_flag = FRA_arms_purchases_allowed } }
-					}
+					
 					add_equipment_to_stockpile = {
 					    type = artillery_equipment
 					    amount = 200
@@ -16013,10 +16002,7 @@ SPR_foreign_arms_purchases = {
 						factor = 0
 						has_war_with = FRA
 					}
-					modifier = {
-						factor = 0
-						FRA = { NOT = { has_country_flag = FRA_arms_purchases_allowed } }
-					}
+					
 					add_equipment_to_stockpile = {
 					    type = fighter_equipment
 					    amount = 25
@@ -16166,10 +16152,6 @@ SPR_foreign_arms_purchases = {
 					modifier = {
 						factor = 0
 						has_war_with = FRA
-					}
-					modifier = {
-						factor = 0
-						FRA = { NOT = { has_country_flag = FRA_non_military_aid_allowed } }
 					}
 					add_equipment_to_stockpile = {
 					    type = motorized_equipment
@@ -16321,10 +16303,7 @@ SPR_foreign_arms_purchases = {
 						factor = 0
 						has_war_with = FRA
 					}
-					modifier = {
-						factor = 0
-						FRA = { NOT = { has_country_flag = FRA_arms_purchases_allowed } }
-					}
+					
 					add_equipment_to_stockpile = {
 					    type = light_tank_equipment
 					    amount = 50
@@ -17604,10 +17583,6 @@ SPR_anti_fascist_unity = {
 		cost = 100
 
 		fire_only_once = no
-
-		modifier = {
-			
-		}
 
 		visible = {
 			tag = SPR

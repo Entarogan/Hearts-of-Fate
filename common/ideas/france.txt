@@ -196,7 +196,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				send_volunteer_size = 3
+				send_volunteer_size = 5
 			}
 		}
 		FRA_egalite_liberte_solidarite = {
@@ -213,10 +213,12 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_dockyard = 0.1
-				industrial_capacity_factory = 0.1
-				army_core_attack_factor = 0.1
-				army_core_defence_factor = 0.1
+				stability_weekly = 0.001
+				war_support_weekly = 0.001
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
 			}
 		}
 		FRA_revolutionary_zeal = {
@@ -233,8 +235,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_attack_factor = 0.1
-				army_core_defence_factor = 0.25
+				weekly_manpower = 500
+				consumer_goods_factor = -0.05
 			}
 		}
 		FRA_dirigisme = {
@@ -251,8 +253,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				economy_cost_factor = -0.5
-				conversion_cost_civ_to_mil_factor = -0.5
+				industrial_capacity_factory = 0.05
 			}
 		}
 		FRA_expanded_citizenship = {
@@ -412,6 +413,160 @@ ideas = {
 				fascism_drift = -0.1
 			}
 		}
+		FRA_new_glory = {
+			picture = generic_artillery_regiments
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				anti_tank = {
+					hard_attack = 0.2 instant = yes
+				}
+				artillery_equipment = {
+					soft_attack = 0.1 instant = yes
+				}
+			}
+			modifier = {
+			    war_support_factor = 0.2
+				army_morale_factor = 0.1
+			}
+		}
+		FRA_the_sixth_Napoleonic_war_I = {
+			picture = Napoleon
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			 terrain_penalty_reduction = 0.1 
+			}
+		}
+		FRA_the_sixth_Napoleonic_war_II = {
+			picture = Napoleon
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			 invasion_preparation = -0.1
+			 convoy_escort_efficiency = 0.1
+			}
+		}
+		FRA_the_sixth_Napoleonic_war_III = {
+			picture = Napoleon
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			 invasion_preparation = -0.1
+			 convoy_escort_efficiency = 0.1
+			 terrain_penalty_reduction = 0.1
+			}
+		}
+		FRA_the_sixth_Napoleonic_war_IIII = {
+			picture = Napoleon
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			 invasion_preparation = -0.1
+			 convoy_escort_efficiency = 0.1
+			 terrain_penalty_reduction = 0.1
+			 army_attack_factor = 0.1
+			}
+		}
+		FRA_the_sixth_Napoleonic_war_IIIII = {
+			picture = Napoleon
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			 terrain_penalty_reduction = 0.1
+			 army_attack_factor = 0.1
+			}
+		}
+		FRA_the_sixth_Napoleonic_war_IIIIII = {
+			picture = Napoleon
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			 invasion_preparation = -0.1
+			 convoy_escort_efficiency = 0.1
+			 army_attack_factor = 0.1
+			}
+		}
+		FRA_For_the_motherland = {
+			picture = active_industry
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			     industrial_capacity_factory = 0.25
+			}
+		}
 		FRA_la_deluge = {
 			
 			allowed = {
@@ -428,6 +583,9 @@ ideas = {
 			modifier = {
 				conscription = 0.03
 				conscription_factor = 0.25
+				no_supply_grace = 120
+				experience_loss_factor = -0.15
+				out_of_supply_factor = -0.1
 				training_time_army_factor = -0.2
 			}
 		}
@@ -1444,9 +1602,11 @@ ideas = {
 
 			allowed = {
 				original_tag = FRA
+				has_dlc = "La Resistance" 
 			}
 			
 			available = {
+				has_intelligence_agency = yes
 				NOT = { has_government = fascism }
 			}
 			
@@ -1466,7 +1626,7 @@ ideas = {
 			
 			available = {
         has_completed_focus = FRA_economic_devolution
-				# NOT = { has_government = fascism }
+				NOT = { has_government = fascism }
 				NOT = { has_government = communism }
 			}
 			
@@ -1487,8 +1647,8 @@ ideas = {
 			available = {
 				has_government = democratic
 				has_completed_focus = FRA_Charottes_misson
-        NOT = { has_government = communism }
-        NOT = { has_government = fascism }
+				NOT = { has_government = communism }
+				NOT = { has_government = fascism }
 			}
 			
 			traits = { assassin_moderate }
@@ -1562,6 +1722,10 @@ ideas = {
 			allowed = {
 				original_tag = FRA
 			}
+
+			visible = {
+				has_global_flag = GER_Heydrich_in_france_flag
+			}
 			
 			available = {
 				has_global_flag = GER_Heydrich_in_france_flag
@@ -1579,6 +1743,10 @@ ideas = {
 
 			allowed = {
 				original_tag = FRA
+			}
+
+			visible = {
+				has_global_flag = GER_Kaltenbrunner_in_france_flag
 			}
 			
 			available = {
@@ -1598,6 +1766,10 @@ ideas = {
 			allowed = {
 				original_tag = FRA
 			}
+
+			visible = {
+				has_global_flag = FRA_Recruiting_collaborators_flag
+			}
 			
 			available = {
 				has_global_flag = FRA_Recruiting_collaborators_flag
@@ -1610,11 +1782,15 @@ ideas = {
 			}
 		}
 
-		FRA_jacques_doriot = {
+		FRA_jacques_doriot_adv = {
 			picture = jacques_doriot
 
 			allowed = {
 				original_tag = FRA
+			}
+
+			visible = {
+				has_global_flag = FRA_Recruiting_collaborators_flag
 			}
 			
 			available = {
@@ -1634,11 +1810,17 @@ ideas = {
 			allowed = {
 				original_tag = FRA
 			}
+
+			visible = {
+				has_completed_focus = FRA_faster
+			}
 			
 			available = {
 				has_completed_focus = FRA_faster
 			}
-			
+	
+			cost = 75
+	
 			traits = { fast_speed }
 
 			ai_will_do = {
@@ -1652,10 +1834,16 @@ ideas = {
 			allowed = {
 				original_tag = FRA
 			}
+
+			visible = {
+				has_completed_focus = FRA_revenge
+			}
 			
 			available = {
 				has_completed_focus = FRA_revenge
 			}
+
+			cost = 75
 			
 			traits = { war_revenge }
 
@@ -1670,12 +1858,18 @@ ideas = {
 			allowed = {
 				original_tag = FRA
 			}
+
+			visible = {
+				has_completed_focus = FRA_Hedonic
+			}
 			
 			available = {
 				has_completed_focus = FRA_Hedonic
 			}
 			
 			traits = { Pleasure }
+
+			cost = 75
 
 			ai_will_do = {
 				factor = 5
@@ -1687,6 +1881,10 @@ ideas = {
 
 			allowed = {
 				original_tag = FRA
+			}
+
+			visible = {
+				has_government = communism
 			}
 			
 			available = {
@@ -1706,6 +1904,10 @@ ideas = {
 			allowed = {
 				original_tag = FRA
 			}
+
+			visible = {
+				has_government = communism
+			}
 			
 			available = {
 				has_government = communism
@@ -1724,6 +1926,10 @@ ideas = {
 			allowed = {
 				original_tag = FRA
 			}
+
+			visible = {
+				has_government = communism
+			}
 			
 			available = {
 				has_government = communism
@@ -1741,44 +1947,6 @@ ideas = {
 	# MILITARY
 	army_chief = {
 		
-		
-		maurice_gamelin = {
-			
-			
-			allowed = {
-				original_tag = FRA
-			}
-			available = {
-				has_completed_focus = FRA_aggressive_focus
-			}
-
-			cost = 50
-			
-			traits = { army_chief_offensive_2 }
-			
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		
-		maxime_weygand = {
-			
-			
-			allowed = {
-				original_tag = FRA
-			}
-			available = {
-				has_completed_focus = FRA_defensive_focus
-			}
-
-			cost = 50
-			
-			traits = { army_chief_defensive_2 }
-			
-			ai_will_do = {
-				factor = 0
-			}
-		}
 
 		
 		
@@ -1852,38 +2020,6 @@ ideas = {
 		}	
 	}
 	air_chief = {
-			
-		joseph_vuillemin = {
-			
-			
-			allowed = {
-				original_tag = FRA
-			}
-			
-
-			
-			traits = { air_chief_ground_support_1 }
-			
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		
-		robert_odic = {
-			
-			
-			allowed = {
-				original_tag = FRA
-			}
-			
-
-			
-			traits = { air_chief_all_weather_1 }
-			
-			ai_will_do = {
-				factor = 0
-			}
-		}
 		
 		philippe_fequant = {
 			
@@ -1946,8 +2082,6 @@ ideas = {
 		}	
 		
 		jeanne_ocean = {
-			
-			
 			allowed = {
 				original_tag = FRA
 			}
@@ -1955,7 +2089,7 @@ ideas = {
 			available = { 
 				NOT = { has_government = fascism }
 				NOT = { has_idea = FRA_Jeanne_Darc }
-        NOT = { has_country_flag = jeanne_oppose }
+				NOT = { has_country_flag = jeanne_oppose }
 			}
 			
 			traits = { navy_chief_decisive_battle_3 }
@@ -1978,6 +2112,10 @@ ideas = {
 
 			allowed = {
 				original_tag = FRA
+			}
+
+			visible = {
+				has_completed_focus = FRA_Introduce_German_capital
 			}
 			
 			available = {
@@ -2051,8 +2189,12 @@ ideas = {
 				NOT = { has_war_with = GER }
 			}
 
+			visible = {
+				has_completed_focus = FRA_Introduce_German_capital
+			}
+
 			allowed = {
-				original_tag = GER
+				original_tag = FRA
 			}
 			
 			research_bonus = {
@@ -2130,6 +2272,10 @@ ideas = {
 			available = {
 				has_completed_focus = FRA_Introduce_German_capital
 				NOT = { has_war_with = GER }
+			}
+
+			visible = {
+				has_completed_focus = FRA_Introduce_German_capital
 			}
 
 			allowed = {
@@ -2249,6 +2395,10 @@ ideas = {
 				NOT = { has_war_with = GER }
 			}
 
+			visible = {
+				has_completed_focus = FRA_Introduce_German_capital
+			}
+
 			allowed = {
 				original_tag = FRA
 			}
@@ -2285,31 +2435,6 @@ ideas = {
 	
 	
 	theorist = {
-		charles_de_gaulle = {
-						
-			allowed = {
-				original_tag = FRA
-			}
-			
-			cost = 250
-						
-			research_bonus = {
-				cat_grand_battle_plan = 0.15
-			}
-			
-			traits = { grand_battle_plan_expert }
-
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-
-					GER = { is_ai = yes }
-					date < 1939.1.1
-				}
-			}
-
-		}
 		
 		henri_giraud = {
 						
@@ -2348,26 +2473,6 @@ ideas = {
 			}
 			
 			traits = { grand_fleet_proponent }
-
-			ai_will_do = {
-				factor = 0
-			}
-
-		}
-		
-		jean_decoux = {
-			
-			
-			allowed = {
-				original_tag = FRA
-			}
-			
-			
-			research_bonus = {
-				naval_doctrine = 0.10
-			}
-			
-			traits = { naval_theorist }
 
 			ai_will_do = {
 				factor = 0

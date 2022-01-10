@@ -2,6 +2,7 @@ state= {
 	id=334
 	name="STATE_334"
 	manpower = 2168600
+local_supplies=0.0
 	resources={
 		rubber=75 # was: 138
 		oil=5 # was: 10
@@ -11,14 +12,14 @@ state= {
 
 	history= {
 		add_claim_by = HOL
-		owner = INS
+		owner = JAP
 		add_core_of = INS
 		victory_points = {
 			10237 1 
 		}
 
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			10237 = {
 				naval_base = 3
 			}

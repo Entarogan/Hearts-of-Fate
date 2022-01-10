@@ -31,6 +31,10 @@ set_convoys = 80
 
 set_research_slots = 4
 
+add_ideas = {
+
+}
+
 set_politics = {
 	ruling_party = democratic
 	last_election = "1935.5.19"
@@ -78,14 +82,5 @@ create_country_leader = {
 }
 
 
-create_country_leader = {
-	name = "Nzambi"
-	desc = "POLITICS_NZAMBI_DESC"
-	picture = "Portrait_Nzambi.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		#
-	}
-}
+recruit_character = COG_Nzambi
 

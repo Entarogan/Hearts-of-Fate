@@ -121,5 +121,45 @@ areas = {
           187
         }
    }
+
+   Apennin_hof = {
+        strategic_regions = {
+          21
+          23
+        }
+   }
+
+   Dahe_Line_of_Defense = {
+        strategic_regions = {
+          132
+          131
+          130
+        }
+   }
+
+   Southern_Resource_Area = {
+        strategic_regions = {
+          142
+          188
+          159
+          187
+          158
+          167
+        }
+   }
+
+   GER_west_line_hof = {
+        strategic_regions = {
+          5
+          19
+        }
+   }
+
+   Manchuria_hof = {
+        strategic_regions = {
+          155
+        }
+   }
+
 	
 }

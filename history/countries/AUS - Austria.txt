@@ -30,117 +30,62 @@ set_popularities = {
 
 set_stability = 0.50
 
-create_country_leader = {
-	name = "Steyr Mannlicher"
-	desc = "POLITICS_STEYR_DESC"
-	picture = "Portrait_Steyr_Mannlicher.dds"
-	expire = "1965.1.1"
-	ideology = authoritarian_democracy
-	traits = {
-		#
-	}
+add_ideas = {
+  	Powerful_influence_idea 
 }
 
-create_country_leader = {
-	name = "Steyr Mannlicher"
-	desc = "POLITICS_STEYR_DESC"
-	picture = "Portrait_Steyr_Mannlicher.dds"
-	expire = "1965.1.1"
-	ideology = socialism
-	traits = {
-		#
+recruit_character = AUS_Steyr_Mannlicher
+add_country_leader_role = {
+	character = AUS_Steyr_Mannlicher
+	country_leader = {
+		expire="1965.1.1.1"
+		ideology = socialism
+		traits = {
+			Wachter_des_Vaterlandes
+		}
 	}
+	promote_leader = yes
 }
 
-create_country_leader = {
-	name = "Prince Eugen"
-	desc = "POLITICS_EUGEN_DESC"
-	picture = "Portrait_Prince_Eugen.dds"
-	expire = "1965.1.1"
-	ideology = nazism
-	traits = {
-		#
+recruit_character = AUS_Prince_Eugen
+add_country_leader_role = {
+	character = AUS_Prince_Eugen
+	country_leader = {
+		expire="1965.1.1.1"
+		ideology = totalist
+		traits = {
+			Eugen_of_Savoy
+		}
 	}
+	promote_leader = yes
 }
 
-create_country_leader = {
-	name = "Prince Eugen"
-	desc = "POLITICS_EUGEN_DESC"
-	picture = "Portrait_Prince_Eugen.dds"
-	expire = "1965.1.1"
-	ideology = totalist
-	traits = {
-		#
-	}
-}
+recruit_character = AUS_karl_eglseer
 
-create_corps_commander = {
-	name = "Steyr Mannlicher"
-	picture = "Portrait_Steyr_Mannlicher.dds"
-	traits = {
-		trait_mountaineer
-		trickster
-    infantry_expert
-	}
-	skill = 3
-	attack_skill = 5
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 5
-}
+recruit_character = AUS_Erhard_Raus
 
-create_corps_commander = {
-	name = "Karl Eglseer"
-	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Karl_Eglseer.tga"
-	traits = {
-		trait_mountaineer
-		trickster
-	}
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-	id = 1936
-}
+recruit_character = AUS_lothar_rendulic
 
-create_corps_commander = {
-	name = "Erhard Raus"
-	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Erhard_Raus.tga"
-	traits = {
-		armor_officer
-		trickster
-	}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
-	id = 1937
-}
+recruit_character = AUS_Adolf_Hitler
 
-create_corps_commander = {
-	name = "Lothar Rendulic"
-	portrait_path = "gfx/leaders/AUS/Portrait_Austria_Lothar_Rendulic.tga"
-	traits = {
-		trait_mountaineer
-		commando
-	}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 4
-	id = 1938
-}
+#这四个是原版领导人
+#recruit_character = AUS_kurt_schuschnigg
+#recruit_character = AUS_karl_renner
+#recruit_character = AUS_arthur_seyss-inquart
+#recruit_character = AUS_alfred_klahr
 
-create_navy_leader = {
-	name = "Prince Eugen"
-	picture = "Portrait_Prince_Eugen.dds"
-	traits = { superior_tactician ironside blockade_runner bold spotter naval_lineage blue_water_expert }
-	skill = 6
-	attack_skill = 5
-	defense_skill = 4
-	maneuvering_skill = 5
-	coordination_skill = 4
-}
+recruit_character = AUS_odilo_globocnik
+recruit_character = AUS_alexander_lohr
+recruit_character = AUS_paul_von_hegedus
+recruit_character = AUS_julius_yllam
+recruit_character = AUS_otto_meixner_von_zweienstamm
+recruit_character = AUS_wilhelm_zehner
+recruit_character = AUS_josef_teufl
+recruit_character = AUS_otto_schobel
+recruit_character = AUS_viktor_seebauer
+recruit_character = AUS_ernst_kaltenbrunner
+recruit_character = AUS_eduard_freiherr
+recruit_character = AUS_franz_bohme
+recruit_character = AUS_eugen_beyer
+recruit_character = AUS_julius_raab
+recruit_character = AUS_leopold_figl

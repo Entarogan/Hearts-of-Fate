@@ -73,13 +73,7 @@ set_popularities = {
 	communism = 5
 }
 
-create_country_leader = {
-	name = "Marie Muller"
-	desc = "POLITICS_JOSEPH_BECH_DESC"
-	picture = "portrait_marie_muller.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		#
-	}
-}
+recruit_character = LUX_marie_muller
+recruit_character = LUX_joseph_frison
+recruit_character = LUX_léon_jottrand
+recruit_character = LUX_jeanlouis_lebeau

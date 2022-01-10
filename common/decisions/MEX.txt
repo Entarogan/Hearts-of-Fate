@@ -235,7 +235,6 @@ MEX_category_military_issues = {
 
 		fire_only_once = no
 
-		is_good = no
 
 		remove_effect = {
 			set_global_flag = flag_second_mexican_civil_war
@@ -355,7 +354,6 @@ MEX_category_military_issues = {
 
 		fire_only_once = no
 
-		is_good = no
 
 		remove_effect = {
 			set_global_flag = flag_second_mexican_civil_war
@@ -1537,7 +1535,7 @@ MEX_category_hispanic_solidarity = {
 				has_completed_focus = MEX_focus_hispanic_alliance
 				has_completed_focus = MEX_focus_bolivarian_alliance
 				has_completed_focus = MEX_focus_latin_america_alliance
-				has_completed_focus = JAP_liberation_theology
+				has_idea = JAP_liberation_theology_idea
 			}
 		}
 		

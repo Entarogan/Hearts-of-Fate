@@ -129,71 +129,27 @@ set_popularities = {
 	communism = 60
 }
 
-add_ideas = {
-}
-
-create_country_leader = {
-	name = "Jubstacheit von Einzbern"
-	desc = ""
-	picture = "Portrait_Jubstacheit_von_Einzbern.dds"
-	expire = "1965.1.1"
-	ideology = absolute_monarchy
-	traits = {
+recruit_character = BAY_Jubstacheit_von_Einzbern
+recruit_character = BAY_Irisviel_von_Einzbern
+add_country_leader_role = {
+	character = BAY_Jubstacheit_von_Einzbern
+	country_leader = {
+		expire="1965.1.1.1"
+		ideology = religious_fascism
 	}
+	promote_leader = yes
 }
-
-create_country_leader = {
-	name = "Irisviel von Einzbern"
-	desc = ""
-	picture = "Portrait_Irisviel_von_Einzbern.dds"
-	expire = "1965.1.1"
-	ideology = socialism
-	traits = {
+add_country_leader_role = {
+	character = BAY_Irisviel_von_Einzbern
+	country_leader = {
+		expire="1965.1.1.1"
+		ideology = totalist
 	}
+	promote_leader = yes
 }
 
-create_country_leader = {
-	name = "Jubstacheit von Einzbern"
-	desc = ""
-	picture = "Portrait_Jubstacheit_von_Einzbern.dds"
-	expire = "1965.1.1"
-	ideology = religious_fascism
-	traits = {
-	}
-}
+recruit_character = BAY_Ernestine_Wrede
 
-create_country_leader = {
-	name = "Illyasviel von Einzbern"
-	desc = ""
-	picture = "Portrait_Illyasviel_von_Einzbern_political.dds"
-	expire = "1965.1.1"
-	ideology = totalist
-	traits = {
-	}
-}
-
-create_corps_commander = {
-	name = "Ernestine Wrede"
-	picture = "Portrait_Ernestine_Wrede.dds"
-	traits = { commando inflexible_strategist adaptable infantry_expert }
-	skill = 4
-
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_field_marshal = {
-	name = "Irisviel von Einzbern"
-	picture = "Portrait_Irisviel_von_Einzbern.dds"
-	traits = {  thorough_planner offensive_doctrine politically_connected skilled_staffer winter_specialist winter_expert }
-	skill = 5
-	attack_skill = 4
-	defense_skill = 5
-	planning_skill = 6
-	logistics_skill = 4
-}
 
 
 

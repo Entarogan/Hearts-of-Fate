@@ -38,9 +38,9 @@ focus_tree = {
 #
 #		}
 #
-#		cancel_if_invalid = yes
-#		continue_if_invalid = no
-#		available_if_capitulated = no
+#		
+#		
+#		
 #
 #		complete_tooltip = {
 #
@@ -72,9 +72,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -109,9 +109,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -147,9 +147,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -183,9 +183,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -218,9 +218,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -255,9 +255,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -294,9 +294,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -323,7 +323,6 @@ focus_tree = {
 		}
 
 		available = {
-			amount_research_slots < 5
 			NOT = {
 				has_idea = CHI_hyper_inflation_5
 			}
@@ -333,9 +332,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -369,9 +368,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -404,9 +403,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_war_support = 0.1
@@ -435,9 +434,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 
 		completion_reward = {
@@ -477,9 +476,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_ideas = CHI_inter_party_coordination_council
@@ -509,9 +508,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_stability = 0.1
@@ -541,9 +540,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_stability = 0.1
@@ -572,9 +571,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			remove_ideas = CHI_ineffective_bureaucracy
@@ -603,9 +602,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_ideas = CHI_executive_yuan
@@ -635,9 +634,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			swap_ideas = {
@@ -671,9 +670,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_stability = 0.1
@@ -693,7 +692,6 @@ focus_tree = {
 		id = CHI_foreign_threats
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = CHI_nationalism }
-		mutually_exclusive = { focus = CHI_prioritize_the_interior }
 		x = -1
 		y = 1
 		relative_position_id = CHI_nationalism
@@ -712,12 +710,13 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
-			add_war_support = 0.1
+			add_war_support = 0.15
+
 		}
 	}
 
@@ -725,7 +724,6 @@ focus_tree = {
 		id = CHI_prioritize_the_interior
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = CHI_nationalism }
-		mutually_exclusive = { focus = CHI_foreign_threats }
 		x = 1
 		y = 1
 		relative_position_id = CHI_nationalism
@@ -734,26 +732,27 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				AND = {
-					MAN = {	exists = no }
-					PRC = { exists = no }
-				}
-				factor = 0
-			}
 		}
 
 		available = {
-
+			or = {
+				threat > 0.35
+				date > 1938.3.1
+				BEY = { has_war = yes }
+			}
 		}
 
 		bypass = {
-
+			or = {
+        has_global_flag = jap_manchuria_occupied
+				is_in_faction_with = BEY
+				BEY = { exists = no }
+			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -761,12 +760,23 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = 0.05
+
+      if = {
+        limit = { 
+          NOT = { is_in_faction_with = BEY }
+        }
+        declare_war_on = {
+          target = BEY
+          type = annex_everything
+        }
+      }
+
 		}
 	}
 
 	focus = {
-		id = CHI_united_front
-		icon = GFX_focus_chi_united_front
+		id = CHI_anti_communism
+		icon = GFX_goal_generic_war_with_comintern
 		prerequisite = { focus = CHI_foreign_threats }
 		x = 0
 		y = 1
@@ -779,248 +789,80 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
-			is_in_faction = no
+      always = no
 		}
 
 		bypass = {
-			is_in_faction_with = PRC
+
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
 		}
 
 		completion_reward = {
-			CHI = {
-				set_rule = { can_create_factions = yes }
-				create_faction = chinese_united_front
-			}
-			PRC = {
-				country_event = generic.5
-			}
+
+        add_opinion_modifier = { target = SOV modifier = hostile_status }
+
+        add_ideas = CHI_anti_communism_idea
+
 		}
 	}
 
 	focus = {
 		id = CHI_pick_a_fight_with_japan
 		icon = GFX_focus_AST_war_japan
-		prerequisite = { focus = CHI_united_front focus = CHI_anti_communism }
+		prerequisite = { focus = CHI_anti_communism focus = CHI_subjugate_the_warlords }
 		x = 1
 		y = 1
-		relative_position_id = CHI_united_front
+		relative_position_id = CHI_anti_communism
 
 		cost = 5
 
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				JAP = {
-					has_government = democratic
-				}
-				factor = 0
-			}
 		}
 
 		available = {
-			NOT = { is_in_faction_with = JAP }
+			NOT = { controls_state = 716 }
 		}
 
 		bypass = {
-			OR = {
-				has_war_with = JAP
-				has_war_with = MAN
-			}
+      or = {
+        has_global_flag = jap_manchuria_occupied
+        controls_state = 716
+        has_war_with = JAP
+      }
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
 		}
 
 		completion_reward = {
-			if = {
-				limit = {
-					MAN = {
-						OR = {
-							is_in_faction_with = JAP
-							is_puppet_of = JAP
-						}
-					}
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = MAN
-				}
-				else = {
-					create_wargoal = {
-						type = annex_everything
-						target = JAP
-					}	
-					create_wargoal = {
-						type = annex_everything
-						target = MAN
+
+		716 = {
+			controller = {
+				CHI = {
+					declare_war_on = {
+						type = take_state_focus
+						target = PREV
+						generator = { 716 328 }
 					}
 				}
 			}
+		}
+
 			hidden_effect = {
 				news_event = { id = wtt_news.35 days = 1}
-			}
-		}
-	}
-
-	focus = {
-		id = CHI_anti_communism
-		icon = GFX_goal_generic_war_with_comintern
-		prerequisite = { focus = CHI_prioritize_the_interior }
-		x = 0
-		y = 1
-		relative_position_id = CHI_prioritize_the_interior
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			NOT = { has_government = communism }
-			any_country = {
-				OR = {
-					tag = YUN
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = XSM
-					tag = TIB
-					tag = PRC
-				}
-				has_government = communism
-			}
-		}
-
-		bypass = {
-			OR = {
-				is_in_faction_with = PRC
-				NOT = { 
-					any_country = {
-						OR = {
-							tag = YUN
-							tag = SIK
-							tag = GXC
-							tag = SHX
-							tag = XSM
-							tag = TIB
-							tag = PRC
-						}
-						has_government = communism
-					}
-				}
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			if = {		
-				limit = {
-					SIK = {
-						has_government = communism
-					}
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = SIK
-				}
-			}
-			if = {		
-				limit = {
-					TIB = {
-						has_government = communism
-					}
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = TIB
-				}
-			}
-			if = {
-				limit = {
-					PRC = {
-						has_government = communism
-					}
-				}
-				ROOT = {
-					create_wargoal = {
-						type = annex_everything
-						target = PRC
-					}
-				}
-			}
-			if = {
-				limit = {
-					YUN = {
-						has_government = communism
-					}
-				}
-				ROOT = {
-					create_wargoal = {
-						type = annex_everything
-						target = YUN
-					}
-				}
-			}
-			if = {
-				limit = {
-					SHX = {
-						has_government = communism
-					}
-				}
-				ROOT = {
-					create_wargoal = {
-						type = annex_everything
-						target = SHX
-					}
-				}
-			}
-			if = {
-				limit = {
-					GXC = {
-						has_government = communism
-					}
-				}
-				ROOT = {
-					create_wargoal = {
-						type = annex_everything
-						target = GXC
-					}
-				}
-			}
-			if = {
-				limit = {
-					XSM = {
-						has_government = communism
-					}
-				}
-				ROOT = {
-					create_wargoal = {
-						type = annex_everything
-						target = XSM
-					}
-				}
 			}
 		}
 	}
@@ -1029,8 +871,8 @@ focus_tree = {
 		id = CHI_subjugate_the_warlords
 		icon = GFX_goal_generic_political_pressure
 		prerequisite = { focus = CHI_prioritize_the_interior }
-		x = 1
-		y = 2
+		x = 0
+		y = 1
 		relative_position_id = CHI_prioritize_the_interior
 
 		cost = 5
@@ -1079,11 +921,18 @@ focus_tree = {
 					has_war_with = ROOT
 				}
 			}
+			GDC = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					has_war_with = ROOT
+				}
+			}
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1098,6 +947,7 @@ focus_tree = {
 						tag = SHX
 						tag = XSM
 						tag = SIK
+						tag = GDC
 					}
 				}
 				country_event = { id = wtt_china.1 }
@@ -1124,17 +974,49 @@ focus_tree = {
 			NOT = {
 				has_idea = CHI_army_corruption_1
 			}		
+			has_war = yes
 		}
 
 		bypass = {
 			has_offensive_war_with = JAP
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
+
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 3000
+				producer = CHI
+			}
+
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 300
+				producer = GER
+			}
+
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+				amount = 100
+				producer = GER
+			}
+
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = 100
+				producer = GER
+			}
+
+      add_equipment_to_stockpile = {
+        type = fighter_equipment
+        amount = 50
+        producer = GER
+      }
+
 			add_ideas = CHI_war_of_resistance
 			if = {
 				limit = {
@@ -1180,9 +1062,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			unlock_decision_category_tooltip = CHI_industrial_evacuations			
@@ -1215,11 +1097,42 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
+
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 3000
+				producer = CHI
+			}
+
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 300
+				producer = GER
+			}
+
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+				amount = 100
+				producer = GER
+			}
+
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = 100
+				producer = GER
+			}
+
+      add_equipment_to_stockpile = {
+        type = fighter_equipment
+        amount = 50
+        producer = GER
+      }
+
 			if = {
 				limit = {
 					has_idea = CHI_war_of_resistance
@@ -1257,9 +1170,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			unlock_decision_tooltip = CHI_scorched_earth_tactics
@@ -1292,12 +1205,43 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
-			add_ideas = CHI_war_of_anti_imperialism
+
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 5000
+				producer = CHI
+			}
+
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 500
+				producer = GER
+			}
+
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+				amount = 150
+				producer = GER
+			}
+
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = 150
+				producer = GER
+			}
+
+      add_equipment_to_stockpile = {
+        type = fighter_equipment
+        amount = 100
+        producer = GER
+      }
+
+      add_timed_idea = { idea = CHI_war_of_anti_imperialism days = 365 }
 		}
 	}
 
@@ -1327,11 +1271,12 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
+
 			add_ideas = CHI_forced_conscription
 			if = {
 				limit = {
@@ -1377,9 +1322,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			custom_effect_tooltip = CHI_50_cheaper_force_attack
@@ -1407,9 +1352,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_ideas = CHI_military_affairs_commission
@@ -1442,9 +1387,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1559,9 +1504,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 
@@ -1713,12 +1658,25 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
-			unlock_decision_category_tooltip = CHI_army_reform
+
+				add_political_power = 150
+
+			army_experience = 15
+
+					add_ideas = CHI_General_staff_of_China
+
+			add_tech_bonus = {
+				name = CHI_army_reform
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+
 		}
 	}
 
@@ -1744,9 +1702,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_stability = 0.1
@@ -1777,9 +1735,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			unlock_decision_tooltip = CHI_60_divisions_plan
@@ -1808,9 +1766,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			every_army_leader = {
@@ -1841,9 +1799,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1880,9 +1838,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_research_slot = 1
@@ -1905,16 +1863,15 @@ focus_tree = {
 
 		available = {
 			num_of_factories > 74
-			amount_research_slots < 5
 		}
 
 		bypass = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {			
 			add_research_slot = 1
@@ -1936,18 +1893,40 @@ focus_tree = {
 		}
 
 		available = {
-			has_full_control_of_state = 607
-			has_full_control_of_state = 602
-			has_full_control_of_state = 605
+
+				OR = {
+					CHI = { owns_state = 607 }
+					any_other_country = {
+						is_in_faction_with = CHI
+						owns_state = 607
+					}
+				}
+
+				OR = {
+					CHI = { owns_state = 602 }
+					any_other_country = {
+						is_in_faction_with = CHI
+						owns_state = 602
+					}
+				}
+
+				OR = {
+					CHI = { owns_state = 605 }
+					any_other_country = {
+						is_in_faction_with = CHI
+						owns_state = 605
+					}
+				}
+
 		}
 
 		bypass = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			607 = {
@@ -1999,9 +1978,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			CHI_hyper_inflation_level_up = yes
@@ -2035,9 +2014,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			CHI_hyper_inflation_level_up = yes
@@ -2076,9 +2055,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		complete_tooltip = {
 			CHI_hyper_inflation_level_up = yes
@@ -2139,9 +2118,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 
 		completion_reward = {
@@ -2172,9 +2151,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			CHI_hyper_inflation_level_down = yes
@@ -2203,9 +2182,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			add_ideas = CHI_grain_tax
@@ -2234,9 +2213,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			CHI_hyper_inflation_level_down = yes
@@ -2265,9 +2244,9 @@ focus_tree = {
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+		
+		
+		
 
 		completion_reward = {
 			unlock_decision_tooltip = CHI_forced_loans

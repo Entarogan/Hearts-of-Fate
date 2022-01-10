@@ -34,8 +34,13 @@ set_stability = 0.50
 set_war_support = 0.50
 
 add_ideas = {
-
+GER_military_occupation_idea
+GER_resistance_idea_1
+GER_resistance_idea_SOV
+GER_Industrial_plunder_idea
 }
+
+add_timed_idea = { idea = GER_War_reparations_idea days = 365 }
 
 set_politics = {	
 	ruling_party = fascism
@@ -52,15 +57,15 @@ set_popularities = {
 	communism = 5
 }
 
-				create_country_leader = {
-					name = "Andrey Vlasov"
-					desc = "POLITICS_ANDREY_VLASOV_DESC"
-					picture = "Portrait_Soviet_Andrey_Vlasov.dds"
-					expire = "1965.1.1"
-					ideology = valkist
-					traits = {
-					}
-				}
+create_country_leader = {
+  name = "Yegor Lebedev"
+  desc = "POLITICS_ANDREY_VLASOV_DESC"
+  picture = "Portrait_Yegor.dds"
+  expire = "1965.1.1"
+  ideology = fascism_ideology
+  traits = {
+  }
+}
 
 
 

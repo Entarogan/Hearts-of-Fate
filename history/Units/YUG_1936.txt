@@ -62,83 +62,9 @@ division_template = {
 	}
 }
 
-
 units = {
 	######## LAND UNITS ########
 	###### Vojska Kraljevine Jugoslavije ######
-	division = {
-#		name = "Gardijska Pesadijska Div."  			# Peadijska if we get font support
-		division_name = {    # New syntax for compatibility with name lists
-			is_name_ordered = yes
-			name_order = 4
-		}
-		location = 11586
-		division_template = "Pesadijska Divizija"
-		start_experience_factor = 0.3
-	}
-	division = {
-		#name = "1. 'Cerska' Pesadijska Div."  			# Peadijska if we get font support
-		division_name = {    # New syntax for compatibility with name lists
-			is_name_ordered = yes
-			name_order = 1
-		}
-		location = 11586
-		division_template = "Pesadijska Divizija"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division = {
-		name = "1. Bataljon Bornih Kola"
-		location = 11586
-		division_template = "Tenkovski Bataljon"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1
-		force_equipment_variants = { gw_tank_equipment = { owner = "YUG" creator = "FRA" } }
-
-	}
-
-	### Obalnim Armija ###
-
-
-	### 5. Armija ###
-	division = {
-		#name = "8. 'Krajinska' Pesadijska Div."  			# Peadijska if we get font support
-		division_name = {    # New syntax for compatibility with name lists
-			is_name_ordered = yes
-			name_order = 8
-		}
-		location = 907
-		division_template = "Pesadijska Divizija"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division = {
-		#name = "9. 'Timocka' Pesadijska Div."  				# Peadijska if we get font support
-		division_name = {    # New syntax for compatibility with name lists
-			is_name_ordered = yes
-			name_order = 9
-		}
-		location = 11868
-		division_template = "Pesadijska Divizija"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-	division = {
-		#name = "2. Konjička Divizija"
-		division_name = {    # New syntax for compatibility with name lists
-			is_name_ordered = yes
-			name_order = 2
-		}
-		location = 11887
-		division_template = "Konjička Divizija"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
-
 	### 6. Armija ###
 	division = {
 		#name = "3. 'Dunavska' Pesadijska Div."  			# Peadijska if we get font support
@@ -146,7 +72,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 3
 		}
-		location = 3614
+		location = 937
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
@@ -154,7 +80,7 @@ units = {
 	}
 
 	#### 1. Grupa Vojska ####
-	### 4. Armija ###
+
 	division = {
 		#name = "27. 'Savaska' Pesadijska Div."  			# Peadijska if we get font support
 		division_name = {    # New syntax for compatibility with name lists
@@ -168,6 +94,46 @@ units = {
 
 	}
 
+	### 4. Armija ###
+	division = {
+		#name = "27. 'Savaska' Pesadijska Div."  			# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 27
+		}
+		location = 6913
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+	
+	division = {
+		#name = "28. 'Savaska' Pesadijska Div."  			# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 27
+		}
+		location = 6647
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+	
+	division = {
+		#name = "29. 'Savaska' Pesadijska Div."  			# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 27
+		}
+		location = 11577
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.6
+
+	}
+
 	### 7. Armija ###
 	division = {
 		#name = "Triglavski Odred"
@@ -175,7 +141,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 1
 		}
-		location = 3631
+		location = 3956
 		division_template = "Gorska Pesadija"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
@@ -187,7 +153,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 2
 		}
-		location = 9596
+		location = 3984
 		division_template = "Gorska Pesadija"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
@@ -199,7 +165,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 1
 		}
-		location = 9627
+		location = 11583
 		division_template = "Konjička Divizija"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
@@ -214,10 +180,10 @@ units = {
 			is_name_ordered = yes
 			name_order = 7
 		}
-		location = 6643
+		location = 11899
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.7
 
 	}
 	division = {
@@ -226,10 +192,10 @@ units = {
 			is_name_ordered = yes
 			name_order = 3
 		}
-		location = 614
+		location = 6634
 		division_template = "Konjička Divizija"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.7
 
 	}
 
@@ -246,18 +212,6 @@ units = {
 		start_equipment_factor = 0.3
 
 	}
-	division = {
-		#name = "17. 'Vrbaska' Pesadijska Div."  			# Peadijska if we get font support
-		division_name = {    # New syntax for compatibility with name lists
-			is_name_ordered = yes
-			name_order = 17
-		}
-		location = 3623
-		division_template = "Pesadijska Divizija"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
-
-	}
 
 	#### 3. Grupa Vojska ####
 	### 3. Armija ###
@@ -267,7 +221,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 13
 		}
-		location = 833
+		location = 6913
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
@@ -305,10 +259,10 @@ units = {
 			is_name_ordered = yes
 			name_order = 5
 		}
-		location = 3833
+		location = 982
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.5
 
 	}
 	division = {
@@ -317,10 +271,10 @@ units = {
 			is_name_ordered = yes
 			name_order = 20
 		}
-		location = 11856
+		location = 11899
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.7
 
 	}
 	division = {
@@ -329,29 +283,98 @@ units = {
 			is_name_ordered = yes
 			name_order = 22
 		}
-		location = 3882
+		location = 606
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.1
-		start_equipment_factor = 0.3
+		start_equipment_factor = 0.5
 
 	}
+	
+	division = {
+		#name = "13. 'Tita' Pesadijska Div."  			# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 11741
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "14 'Bregalnicka' Pesadijska Div."  		# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 20
+		}
+		location = 11741
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		#name = "15. 'Ranković' Pesadijska Div."  			# Peadijska if we get font support
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 22
+		}
+		location = 6647
+		division_template = "Pesadijska Divizija"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9
+
+	}
+	
+	
+	division = {
+		name = "1. Bataljon Edvard Kardelj"
+		location = 11899
+		division_template = "Tenkovski Bataljon"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		force_equipment_variants = { gw_tank_equipment = { owner = "YUG" creator = "SOV" } }
+
+	}
+	
+	division = {
+		name = "2. Bataljon Edvard Kardelj"
+		location = 6913
+		division_template = "Tenkovski Bataljon"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		force_equipment_variants = { gw_tank_equipment = { owner = "YUG" creator = "SOV" } }
+
+	}
+	
+	division = {
+		name = "3. Bataljon Edvard Kardelj"
+		location = 11741
+		division_template = "Tenkovski Bataljon"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		force_equipment_variants = { gw_tank_equipment = { owner = "YUG" creator = "SOV" } }
+
+	}
+	
 }  # Neboja if we get font support
 
 
 ###### Vazduhoplovstvo Vojske Kraljevine Jugoslavije (VVKJ) ######
 air_wings = {
-	107 = {
+	105 = {
 		# 1. Vazduhoplovna Brigada -- Dewotine D.1/9/27 fighters
 		fighter_equipment_0 = {
 			owner = "YUG" 
-			amount = 48
+			amount = 80
 		}
 	}
 	104 = {
 		# 2. Vazduhoplovna Brigada  -- Hawker Fury and Ikarus IK-2 fighters
 		fighter_equipment_0 = {
 			owner = "YUG" 
-			amount = 48
+			amount = 80
 		}
 	}
 }

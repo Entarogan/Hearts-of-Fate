@@ -42,6 +42,7 @@ ideas = {
 				army_org_Factor = 0.10
 				stability_factor = 0.15
 				neutrality_drift = 0.15
+        surrender_limit = 0.15
 			}
 		}
 	

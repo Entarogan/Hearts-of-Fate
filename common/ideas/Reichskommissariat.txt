@@ -6,17 +6,24 @@ ideas = {
 			picture = generic_army_europe_4
 
 			allowed = {
-			or = {
-				original_tag = RHI
-				original_tag = RKP
-				original_tag = RKU
-				original_tag = RKR
-				original_tag = RKH
-				original_tag = RKC
-				original_tag = RKF
-				original_tag = RKI
-				original_tag = RKE
-			}
+        or = {
+          original_tag = RHI
+          original_tag = RKP
+          original_tag = RKU
+          original_tag = RKR
+          original_tag = RKH
+          original_tag = RKC
+          original_tag = RKF
+          original_tag = RKI
+          original_tag = RKE
+          original_tag = RKO
+          original_tag = RKM
+          original_tag = RKA
+          original_tag = RUL
+          original_tag = RTK
+          original_tag = RIB
+          original_tag = RKN
+        }
 			}
 			
 			available = {
@@ -35,17 +42,24 @@ ideas = {
 			picture = generic_political_advisor_europe_1
 
 			allowed = {
-			or = {
-				original_tag = RHI
-				original_tag = RKP
-				original_tag = RKU
-				original_tag = RKR
-				original_tag = RKH
-				original_tag = RKC
-				original_tag = RKF
-				original_tag = RKI
-				original_tag = RKE
-			}
+        or = {
+          original_tag = RHI
+          original_tag = RKP
+          original_tag = RKU
+          original_tag = RKR
+          original_tag = RKH
+          original_tag = RKC
+          original_tag = RKF
+          original_tag = RKI
+          original_tag = RKE
+          original_tag = RKO
+          original_tag = RKM
+          original_tag = RKA
+          original_tag = RUL
+          original_tag = RTK
+          original_tag = RIB
+          original_tag = RKN
+        }
 			}
 
 			available = {
@@ -64,17 +78,24 @@ ideas = {
 			picture = generic_army_europe_2
 
 			allowed = {
-			or = {
-				original_tag = RHI
-				original_tag = RKP
-				original_tag = RKU
-				original_tag = RKR
-				original_tag = RKH
-				original_tag = RKC
-				original_tag = RKF
-				original_tag = RKI
-				original_tag = RKE
-			}
+        or = {
+          original_tag = RHI
+          original_tag = RKP
+          original_tag = RKU
+          original_tag = RKR
+          original_tag = RKH
+          original_tag = RKC
+          original_tag = RKF
+          original_tag = RKI
+          original_tag = RKE
+          original_tag = RKO
+          original_tag = RKM
+          original_tag = RKA
+          original_tag = RUL
+          original_tag = RTK
+          original_tag = RIB
+          original_tag = RKN
+        }
 			}
 
 			available = {
@@ -96,17 +117,24 @@ ideas = {
 			picture = generic_army_europe_3
 			
 			allowed = {
-			or = {
-				original_tag = RHI
-				original_tag = RKP
-				original_tag = RKU
-				original_tag = RKR
-				original_tag = RKH
-				original_tag = RKC
-				original_tag = RKF
-				original_tag = RKI
-				original_tag = RKE
-			}
+        or = {
+          original_tag = RHI
+          original_tag = RKP
+          original_tag = RKU
+          original_tag = RKR
+          original_tag = RKH
+          original_tag = RKC
+          original_tag = RKF
+          original_tag = RKI
+          original_tag = RKE
+          original_tag = RKO
+          original_tag = RKM
+          original_tag = RKA
+          original_tag = RUL
+          original_tag = RTK
+          original_tag = RIB
+          original_tag = RKN
+        }
 			}
 			
 			available = {
@@ -128,17 +156,24 @@ ideas = {
 			picture = generic_air_europe_3
 
 			allowed = {
-			or = {
-				original_tag = RHI
-				original_tag = RKP
-				original_tag = RKU
-				original_tag = RKR
-				original_tag = RKH
-				original_tag = RKC
-				original_tag = RKF
-				original_tag = RKI
-				original_tag = RKE
-			}
+        or = {
+          original_tag = RHI
+          original_tag = RKP
+          original_tag = RKU
+          original_tag = RKR
+          original_tag = RKH
+          original_tag = RKC
+          original_tag = RKF
+          original_tag = RKI
+          original_tag = RKE
+          original_tag = RKO
+          original_tag = RKM
+          original_tag = RKA
+          original_tag = RUL
+          original_tag = RTK
+          original_tag = RIB
+          original_tag = RKN
+        }
 			}
 
 			available = {
@@ -159,17 +194,24 @@ ideas = {
 			picture = generic_navy_europe_2
 
 			allowed = {
-			or = {
-				original_tag = RHI
-				original_tag = RKP
-				original_tag = RKU
-				original_tag = RKR
-				original_tag = RKH
-				original_tag = RKC
-				original_tag = RKF
-				original_tag = RKI
-				original_tag = RKE
-			}
+        or = {
+          original_tag = RHI
+          original_tag = RKP
+          original_tag = RKU
+          original_tag = RKR
+          original_tag = RKH
+          original_tag = RKC
+          original_tag = RKF
+          original_tag = RKI
+          original_tag = RKE
+          original_tag = RKO
+          original_tag = RKM
+          original_tag = RKA
+          original_tag = RUL
+          original_tag = RTK
+          original_tag = RIB
+          original_tag = RKN
+        }
 			}
 
 			available = {
@@ -192,17 +234,24 @@ ideas = {
 			picture = generic_army_europe_4
 			
 			allowed = {
-			or = {
-				original_tag = RHI
-				original_tag = RKP
-				original_tag = RKU
-				original_tag = RKR
-				original_tag = RKH
-				original_tag = RKC
-				original_tag = RKF
-				original_tag = RKI
-				original_tag = RKE
-			}
+        or = {
+          original_tag = RHI
+          original_tag = RKP
+          original_tag = RKU
+          original_tag = RKR
+          original_tag = RKH
+          original_tag = RKC
+          original_tag = RKF
+          original_tag = RKI
+          original_tag = RKE
+          original_tag = RKO
+          original_tag = RKM
+          original_tag = RKA
+          original_tag = RUL
+          original_tag = RTK
+          original_tag = RIB
+          original_tag = RKN
+        }
 			}
 
 			available = {
@@ -221,17 +270,24 @@ ideas = {
 			picture = generic_army_europe_2
 			
 			allowed = {
-			or = {
-				original_tag = RHI
-				original_tag = RKP
-				original_tag = RKU
-				original_tag = RKR
-				original_tag = RKH
-				original_tag = RKC
-				original_tag = RKF
-				original_tag = RKI
-				original_tag = RKE
-			}
+        or = {
+          original_tag = RHI
+          original_tag = RKP
+          original_tag = RKU
+          original_tag = RKR
+          original_tag = RKH
+          original_tag = RKC
+          original_tag = RKF
+          original_tag = RKI
+          original_tag = RKE
+          original_tag = RKO
+          original_tag = RKM
+          original_tag = RKA
+          original_tag = RUL
+          original_tag = RTK
+          original_tag = RIB
+          original_tag = RKN
+        }
 			}
 
 			available = {
@@ -250,17 +306,24 @@ ideas = {
 			picture = generic_army_europe_5
 			
 			allowed = {
-			or = {
-				original_tag = RHI
-				original_tag = RKP
-				original_tag = RKU
-				original_tag = RKR
-				original_tag = RKH
-				original_tag = RKC
-				original_tag = RKF
-				original_tag = RKI
-				original_tag = RKE
-			}
+        or = {
+          original_tag = RHI
+          original_tag = RKP
+          original_tag = RKU
+          original_tag = RKR
+          original_tag = RKH
+          original_tag = RKC
+          original_tag = RKF
+          original_tag = RKI
+          original_tag = RKE
+          original_tag = RKO
+          original_tag = RKM
+          original_tag = RKA
+          original_tag = RUL
+          original_tag = RTK
+          original_tag = RIB
+          original_tag = RKN
+        }
 			}
 
 			available = {

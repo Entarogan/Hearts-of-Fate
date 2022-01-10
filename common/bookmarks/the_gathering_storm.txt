@@ -22,37 +22,24 @@ bookmarks = {
 			}
 		}
     
-    "GER"={
+		"GER"={
       
 			history = "GER_GATHERING_STORM_DESC"
 			ideology = fascism
 			available = { has_dlc = "Waking the Tiger" }
 			ideas = {
 				sour_loser
-				general_staff
-				GER_mefo_bills_1
+				relaxed_Corrupt_industry
+				GER_Intricate_intelligence_agency
 			}
 			focuses = {
-				GER_Das_Rheingold
-				GER_Jugend_support
-				GER_RHI_Anschluss
+				GER_Armaments_payment_promissory_note
+				GER_RAD
+				GER_Full_control
 			}
 		}
     
-		"SWE"={
-			history = "SWE_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				en_svensk_tiger
-				swe_finance_tension
-				swe_Svenska_kyrkan
-			}
-			focuses = {
-				swe_Kalmarunionen
-				swe_myth_of_twenties_centry
-				swe_minecraft
-			}
-		}
+		
 		"ENG"={
 			history = "ENG_GATHERING_STORM_DESC"
 			ideology = neutrality
@@ -88,18 +75,105 @@ bookmarks = {
 			history = "JAP_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-				state_shintoism
-				JAP_zaibatsus
-				JAP_militarism
+				jap_tamamo_empress
+				idea_jap_army_goverment_conflict
+				idea_jap_corrupt_democracy
 			}	
 			focuses = {
-				JAP_overlooking_the_scenery
-				JAP_rebuild_asian_myth_system
-				JAP_Moon_cell_prototype
+				JAP_greater_east_asian_co_prosperity_sphere
+        JAP_Kappa
+        JAP_japanese_national_socialism
 			}			
 		}
 		
+		"ROM"={
+			history = "ROM_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				ROM_iron_guard_beginning
+				ROM_boyars_idea
+				Yggdmillennia_idea
+			}
+			focuses = {
+				ROM_the_unification
+				ROM_kingdom_of_legion
+				ROM_Partidul_Natiunii
+			}
+		}
+		
+		"HUN"={
+			history = "HUN_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				HUN_disjointed_government_idea
+				HUN_Ethnic_resistance_idea
+				HUN_GER_economic_control_idea
+			}
+			focuses = {
+				HUN_hungarians_are_united
+				HUN_Action_Chakhtis
+				HUN_Revolutionary_Court
+			}
+		}
+		
+		
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		
+		"SOV"={
+			minor = yes
+			history = "SOV_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				trotskyite_plot
+				SOV_Legacy_of_the_Great_Famine
+				SOV_red_army_idea
+			}
+			focuses = {
+				SOV_expend_NKVD
+				SOV_For_the_world_revolution
+				SOV_Democratic_alliance
+			}	
+		}
+		"RUS"={
+			minor = yes
+			history = "RUS_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				RUS_rebirth_of_the_tsar_0
+				RUS_entente_observe_committee
+				rus_japanese_advisory_group
+			}
+			focuses = {
+				rus_redeem_glory_of_past
+				rus_pravoslavie_samoderzhavie_narodnost
+				rus_PSR_comes_back
+			}
+		}
+		
+		"SWE"={
+			minor = yes
+			history = "SWE_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				en_svensk_tiger
+				swe_finance_tension
+				swe_Svenska_kyrkan
+			}
+			focuses = {
+				swe_Kalmarunionen
+				swe_myth_of_twenties_centry
+				swe_minecraft
+			}
+		}
+
+		
+    
+		
 		"IRQ"={
+			minor = yes
 			history = "IRQ_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
@@ -111,27 +185,6 @@ bookmarks = {
 				ire_tablet_of_destiny
 				ira_hanging_garden_of_babylon
         ira_wake_tiamat
-			}
-		}
-
-		
-
-		"---"={
-			history = "OTHER_GATHERING_STORM_DESC"
-		}
-    "ROM"={
-      minor = yes
-			history = "ROM_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				rom_magyor_problem
-				ROM_iron_guard_beginning
-        ROM_boyars_idea
-			}
-			focuses = {
-				ROM_Yggdmillennia_monopolization
-				ROM_iron_guard
-        ROM_force_abdication
 			}
 		}
 
@@ -151,21 +204,7 @@ bookmarks = {
 				MEX_focus_sunset_invasion
 			}
 		}
-    "HUN"={
-			history = "HUN_GATHERING_STORM_DESC"
-			ideology = neutrality
-      minor = yes
-			ideas = {
-				HUN_treaty_of_triannon
-        HUN_1936_economy_decline_idea
-        disarmed_nation
-			}
-			focuses = {
-				HUN_microphone_diplomacy
-				HUN_public_trial
-				HUN_hungary_war_machine
-			}
-		}
+    
     
 		"POL"={
 			minor = yes
@@ -181,20 +220,23 @@ bookmarks = {
 				POL_Glory_of_Kazimierz
 			}
 		}
-		"SOV"={
-			minor = yes
-			history = "SOV_GATHERING_STORM_DESC"
-			ideology = communism
+    
+    "FIC"={
+      minor = yes
+			history = "FIC_GATHERING_STORM_DESC"
+			ideology = neutrality
 			ideas = {
-				trotskyite_plot
-				home_of_revolution
+        FIC_Difficulty_in_conscription
+				FIC_salt_opium_alcohol_idea
+				FIC_Agricultural_colonies_idea
 			}
 			focuses = {
-				SOV_great_purge
-				SOV_claims_on_baltic
-				SOV_war_with_uk
-			}	
+				FIC_Shipping_rubber
+				FIC_Pull_out_the_poppy
+				FIC_Croix_de_Feu
+			}
 		}
+    
 		"CAN"={
 			minor = yes
 			history = "CAN_GATHERING_STORM_DESC"
@@ -292,7 +334,6 @@ bookmarks = {
 				CHI_nine_power_treaty
 			}
 			focuses = {
-				CHI_united_front
 				CHI_army_reform
 				CHI_invite_the_flying_tigers
 			}
@@ -312,22 +353,7 @@ bookmarks = {
 				PRC_anti_japanese_expedition
 			}
 		}
-		"MAN"={
-			minor = yes
-			history = "MAN_GATHERING_STORM_DESC"
-			ideology = fascism
-			ideas = {
-				MAN_banditry
-				MAN_kwantung_veto
-				MAN_low_legitimacy_5
-			}
-			focuses = {
-				MAN_obedience
-				MAN_independence_war
-				MAN_claim_the_mandate_of_heaven
-			}
-		}
-		
+    
 		"GXC"={
 			minor = yes
 			history = "WARLORDS_GATHERING_STORM_DESC"

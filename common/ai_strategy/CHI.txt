@@ -121,13 +121,25 @@ CHI_unit_production = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = infantry
-		value = 35
+		value = 0
 	}
 	
 	ai_strategy = {
 		type = equipment_production_factor
 		id = artillery
-		value = 25
+		value = 30
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = anti_tank
+		value = 10
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = anti_air
+		value = 10
 	}
 	
 	ai_strategy = {
@@ -247,11 +259,16 @@ war_with_man = {
 	}
 }
 
+
 war_with_jap = {
 	enable = {
 		tag = CHI
 		has_completed_focus = CHI_pick_a_fight_with_japan
 		country_exists = JAP
+	    or = {
+		country_exists = MAN
+        JAP = { controls_state = 716 }
+	    }
         NOT = { is_in_faction_with = JAP }
 	}
 	abort = {
@@ -268,10 +285,11 @@ war_with_jap = {
 war_with_fra = {
 	enable = {
 		tag = CHI
+    always = no
 		CHI = { controls_state = 328 }
 		country_exists = FRA
-        FRA = { controls_state = 728 }
-        NOT = { is_in_faction_with = FRA }
+    FRA = { controls_state = 728 }
+    NOT = { is_in_faction_with = FRA }
 	}
 	abort = {
         CHI = { controls_state = 728 }
@@ -287,10 +305,11 @@ war_with_fra = {
 war_with_eng = {
 	enable = {
 		tag = CHI
+    always = no
 		CHI = { controls_state = 328 }
 		country_exists = ENG
-        ENG = { controls_state = 326 }
-        NOT = { is_in_faction_with = ENG }
+    ENG = { controls_state = 326 }
+    NOT = { is_in_faction_with = ENG }
 	}
 	abort = {
         CHI = { controls_state = 326 }
@@ -306,6 +325,7 @@ war_with_eng = {
 war_with_por = {
 	enable = {
 		tag = CHI
+    always = no
 		CHI = { controls_state = 328 }
 		country_exists = POR
         POR = { controls_state = 729 }
@@ -322,16 +342,41 @@ war_with_por = {
 	}
 }
 
-war_with_dalian = {
+CHI_NOT_chicken_head = {
 	enable = {
 		tag = CHI
-		CHI = { controls_state = 328 }
-		country_exists = JAP
-        JAP = { controls_state = 745 }
-        NOT = { is_in_faction_with = JAP }
+		is_in_faction_with = BEY 
+    has_war_with = JAP
+    JAP = { is_ai = no }
 	}
 	abort = {
-        CHI = { controls_state = 745 }
+		NOT = { has_war_with = JAP }
+	}
+
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "BEY"
+		value = 100
+	}
+	
+}
+
+war_with_jap_player = {
+	enable = {
+		tag = CHI
+		has_completed_focus = CHI_pick_a_fight_with_japan
+		country_exists = JAP
+    or = {
+      country_exists = KOR
+      JAP = { controls_state = 527 }
+    }
+    NOT = { is_in_faction_with = JAP }
+    JAP = { is_ai = no }
+	}
+	abort = {
+		NOT = { country_exists = JAP }
 	}
 	
 	ai_strategy = {
@@ -339,22 +384,81 @@ war_with_dalian = {
 		id = "JAP"
 		value = 5000
 	}
-}
 
-war_with_bangzi = {
-	enable = {
-		tag = CHI
-		CHI = { controls_state = 328 }
-		country_exists = KOR
-        NOT = { is_in_faction_with = KOR }
-	}
-	abort = {
-        NOT = { country_exists = KOR }
-	}
-	
 	ai_strategy = {
 		type = antagonize
 		id = "KOR"
 		value = 5000
 	}
+
+}
+
+CHI_Dying_japan = {
+	allowed = {
+		original_tag = CHI
+	}
+
+  enable = {
+		original_tag = CHI
+		or = {
+			JAP = { has_idea = JAP_intervene_in_china_1 }
+			JAP = { has_idea = JAP_nichi_go }
+			JAP = { has_idea = JAP_ichi_go }
+		}
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		area = asia
+		ratio = 0
+		ordertype = front
+		priority = 999
+		execution_type = careful
+		execute_order = no
+		manual_attack = no
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = "JAP"
+		value = -999
+	}
+
+}
+
+BEY_Dying_japan = {
+	allowed = {
+		original_tag = BEY
+	}
+
+  enable = {
+		original_tag = BEY
+		or = {
+			JAP = { has_idea = JAP_intervene_in_china_1 }
+			JAP = { has_idea = JAP_nichi_go }
+			JAP = { has_idea = JAP_ichi_go }
+		}
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		area = asia
+		ratio = 0
+		ordertype = front
+		priority = 999
+		execution_type = careful
+		execute_order = no
+		manual_attack = no
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = "JAP"
+		value = -999
+	}
+
 }

@@ -35,22 +35,7 @@ set_technology = {
 
 set_research_slots = 4
 
-add_offsite_building = {
-  type = industrial_complex
-  level = 12
-}
-add_offsite_building = {
-  type = arms_factory
-  level = 6
-}
-add_offsite_building = {
-  type = dockyard
-  level = 8
-}
-add_offsite_building = {
-  type = synthetic_refinery
-  level = 5
-}
+
 puppet = INS
 
 set_cosmetic_tag = AST_UNION
@@ -107,7 +92,8 @@ if = {
 		has_dlc = "Together for Victory"
 	}
 	add_ideas = AST_great_depression_1
-
+	add_ideas = Ast_Migrate_country
+	add_ideas = AST_White_Australia_Policy
 	add_to_tech_sharing_group = commonwealth_research
 }
 
@@ -227,84 +213,11 @@ set_popularities = {
   neutrality = 8
 }
 
-create_country_leader = {
-	name = "John Curtin"
-	desc = "POLITICS_JOHN_CURTIN_DESC"
-	picture = "Portrait_Australia_John_Curtin.dds"
-	expire = "1965.1.1"
-	ideology = socialism
-	traits = {
-		#
-	}
-}
+recruit_character = AST_john_curtin
 
-create_country_leader = {
-	name = "Koharu F Riedenflaus"
-	desc = "POLITICS_KOHARU_DESC"
-	picture = "Portrait_Koharu_F_Riedenflaus.dds"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-		#
-	}
-}
+recruit_character = AST_richard_dixon
 
-create_country_leader = {
-	name = "George V"
-	desc = "POLITICS_GEORGE_V_DESC"
-	picture = "Portrait_George_V.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		grand_fleet_proponent  navy_capital_ship_3  navy_chief_reform_3  popular_figurehead
-	}
-}
-
-create_country_leader = {
-	name = "George V"
-	desc = "POLITICS_GEORGE_V_DESC"
-	picture = "Portrait_George_V.dds"
-	expire = "1965.1.1"
-	ideology = authoritarian_democracy
-	traits = {
-		grand_fleet_proponent  navy_capital_ship_3  navy_chief_reform_3  popular_figurehead
-	}
-}
-
-create_country_leader = {
-	name = "Edward VIII"
-	desc = "POLITICS_ERIC_CAMPBELL_DESC"
-	picture = "Portrait_Edward_VIII.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		grand_fleet_proponent  navy_capital_ship_3
-	}
-}
-
-create_country_leader = {
-	name = "Richard Dixon"
-	desc = "POLITICS_RICHARD_DIXON_DESC"
-	picture = "GFX_AST_richard_dixon"
-	expire = "1965.1.1"
-	ideology = stalinism
-	traits = {
-		#
-	}
-}
-
-
-
-create_country_leader = {
-	name = "Rod Hull"
-	desc = ""
-	picture = "Portrait_Australia_Rod_Hull.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
+recruit_character = AST_rod_hull
 
 set_convoys = 100
 
@@ -324,146 +237,36 @@ set_convoys = 100
 	set_convoys = 100
 }
 
-create_corps_commander = {
-	name = "Leslie Morshead"
-	gfx = "GFX_AST_leslie_morshead"
-	traits = { }
-	skill = 4
-    attack_skill = 4
-    defense_skill = 2
-    planning_skill = 5
-    logistics_skill = 2
+recruit_character = AST_leslie_morshead
+
+recruit_character = AST_Koharu_F_Riedenflaus
+
+recruit_character = AST_thomas_blamey
+recruit_character = AST_henry_wynter
+recruit_character = AST_alan_vasey
+recruit_character = AST_horace_robertson
+recruit_character = AST_john_northcott
+recruit_character = AST_harold_farncomb
+recruit_character = AST_victor_crutchley
+
+recruit_character = AST_George_V
+add_country_leader_role = {
+	character = AST_George_V
+	country_leader = {
+		expire="1965.1.1.1"
+		ideology = authoritarian_democracy
+		traits = {
+			grand_fleet_proponent  navy_capital_ship_3  navy_chief_reform_3  popular_figurehead
+		}
+	}
+	promote_leader = yes
 }
 
-create_corps_commander = {
-	name = "Koharu F Riedenflaus"
-	picture = "Portrait_Koharu_F_Riedenflaus.dds"
-	traits = { armor_officer}
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Thomas Blamey"
-	gfx = "GFX_AST_thomas_blamey"
-	traits = { }
-	skill = 4
-    attack_skill = 4
-    defense_skill = 3
-    planning_skill = 3
-    logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Henry Wynter"
-	gfx = "GFX_AST_henry_wynter"
-	traits = { }
-	skill = 4
-    attack_skill = 3
-    defense_skill = 4
-    planning_skill = 3
-    logistics_skill = 3
-}
-create_corps_commander = {
-	name = "Alan Vasey"
-	gfx = "GFX_AST_alan_vasey"
-	traits = { hill_fighter }
-	skill = 3
-    attack_skill = 2
-    defense_skill = 4
-    planning_skill = 3
-    logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Horace Robertson"
-	gfx = "GFX_AST_horace_robertson"
-	traits = { desert_fox }
-	skill = 3
-    attack_skill = 3
-    defense_skill = 1
-    planning_skill = 3
-    logistics_skill = 3
-}
-create_corps_commander = {
-	name = "John Northcott"
-	gfx = "GFX_AST_john_northcott"
-	traits = { armor_officer}
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-create_navy_leader = {
-	name = "Harold Farncomb"
-	gfx = "GFX_AST_harold_farncomb"
-	traits = { aviation_enthusiast naval_lineage }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	maneuvering_skill = 3
-	coordination_skill = 4
-}
-
-create_navy_leader = {
-	name = "Victor Crutchley"
-	gfx = "GFX_AST_victor_crutchley"
-	traits = { bold }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 2
-}
+recruit_character = AST_George_VI
+recruit_character = AST_Edward_VIII
+recruit_character = AST_Arc_Royal
 
 
-create_navy_leader = {
-	name = "George V"
-  id = 199
-	picture = "Portrait_George_V.dds"
-	traits = { bold big_guns_expert ground_pounder crisis_magician ironside superior_tactician battleship_adherent  naval_lineage }
-	skill = 5
-	attack_skill = 5
-	defense_skill = 4
-	maneuvering_skill = 4
-	coordination_skill = 4
-}
-
-create_navy_leader = {
-	name = "Edward VIII"
-  id = 198
-	picture = "Portrait_Edward_VIII.dds"
-	traits = { bold ground_pounder  ironside superior_tactician battleship_adherent naval_lineage }
-	skill = 5
-	attack_skill = 4
-	defense_skill = 4
-	maneuvering_skill = 4
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "George VI"
-	picture = "Portrait_George_VI.dds"
-	traits = { crisis_magician ground_pounder  ironside superior_tactician battleship_adherent naval_lineage }
-	skill = 5
-	attack_skill = 3
-	defense_skill = 4
-	maneuvering_skill = 4
-	coordination_skill = 5
-}
-
-create_navy_leader = {
-	name = "Arc Royal"
-	picture = "Portrait_Arc_Royal.dds"
-	traits = { flight_deck_manager fighter_director dive_bomber torpedo_bomber ironside superior_tactician aviation_enthusiast }
-	skill = 5
-	attack_skill = 3
-	defense_skill = 4
-	maneuvering_skill = 3
-	coordination_skill = 3
-}
 
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }

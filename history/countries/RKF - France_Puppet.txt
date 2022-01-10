@@ -45,8 +45,14 @@ set_stability = 0.50
 set_war_support = 0.50
 
 add_ideas = {
-
+GER_military_occupation_idea
+GER_resistance_idea_1
+GER_resistance_idea_FRA
+GER_Industrial_plunder_idea
+GER_FRA_TST_idea
 }
+
+add_timed_idea = { idea = GER_War_reparations_idea days = 365 }
 
 set_politics = {	
 	ruling_party = fascism
@@ -68,7 +74,7 @@ set_popularities = {
 create_country_leader = {
 	name = "Jacques Doriot"
 	desc = "POLITICS_JACQUES_DORIOT_DESC"
-	picture = "portrait_valkist_france_Jacques_Doriot.tga"
+	picture = "portrait_valkist_france_Jacques_Doriot.dds"
 	expire = "1965.1.1"
 	ideology = valkist
 	traits = {

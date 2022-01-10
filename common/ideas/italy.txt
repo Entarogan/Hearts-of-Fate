@@ -85,11 +85,9 @@ ideas = {
 			removal_cost = -1
 
 			research_bonus = {
-				land_doctrine = 0.05
-			}
-			research_bonus = {
-				air_doctrine = 0.05
-			}				
+				land_doctrine = 0.10
+				air_doctrine = 0.10
+			}			
 		}
 	}
 		
@@ -486,7 +484,7 @@ ideas = {
 			}
 				
 			ai_will_do = {
-				factor = 0.5
+				factor = 0
 			}
 		}
 					
@@ -510,6 +508,13 @@ ideas = {
 				
 			ai_will_do = {
 				factor = 1
+				modifier = {
+					factor = 0
+					or = {
+						has_government = neutrality
+						has_government = fascism
+					}
+				}
 			}
 		}
 					
@@ -533,6 +538,13 @@ ideas = {
 				
 			ai_will_do = {
 				factor = 1
+				modifier = {
+					factor = 0
+					or = {
+						has_government = neutrality
+						has_government = fascism
+					}
+				}
 			}
 		}
 					
@@ -556,6 +568,13 @@ ideas = {
 				
 			ai_will_do = {
 				factor = 1
+				modifier = {
+					factor = 0
+					or = {
+						has_government = neutrality
+						has_government = fascism
+					}
+				}
 			}
 		}
 					
@@ -578,9 +597,25 @@ ideas = {
 			}
 				
 			ai_will_do = {
-				factor = 0.3
+				factor = 0
 			}
 		}
+
+		italy_mario_roatta = {
+		
+			available = {
+				has_intelligence_agency = yes
+			}
+			
+			allowed = {
+				original_tag = ITA
+				has_dlc = "La Resistance" 
+			}
+			
+			traits = { head_of_intelligence }
+
+		}
+
 	}
 		
 	# MILITARY
@@ -590,7 +625,6 @@ ideas = {
 		
 		
 		saint_george = {
-			
 			
 			allowed = {
 				original_tag = ITA
@@ -739,7 +773,9 @@ ideas = {
 				original_tag = ITA
 			}
 			
-
+			available = {
+				NOT = {	has_government = communism }
+			}
 			
 			traits = { air_chief_all_weather_2 }
 			
@@ -829,9 +865,20 @@ ideas = {
 			
 			available = {
 				NOT = { has_government = communism }
+				NOT = { has_idea = alfredo_guzzoni }	
 			}
 			
-			traits = { army_infantry_3 }
+			traits = { caesar }
+
+      targeted_modifier = {
+        tag = FRA
+        attack_bonus_against = 0.05
+      }
+      targeted_modifier = {
+        tag = FRA
+        defense_bonus_against = 0.05
+      }
+
 			picture = caesar
 			ai_will_do = {
 				factor = 1
@@ -845,7 +892,9 @@ ideas = {
 				original_tag = ITA
 			}
 			
-
+			available = {
+				NOT = { has_idea = julius_caesar }	
+			}
 			
 			traits = { army_infantry_1 }
 			
@@ -909,7 +958,9 @@ ideas = {
 				original_tag = ITA
 			}
 			
-
+			available = {
+				NOT = {	has_government = communism }
+			}
 			
 			traits = { navy_anti_submarine_1 }
 			
@@ -1130,7 +1181,11 @@ ideas = {
 			}
 			
 			cost = 250
-			
+		
+			available = {
+				NOT = {	has_government = communism }
+			}
+    
 			research_bonus = {
 				cat_mobile_warfare = 0.15
 			}
@@ -1145,6 +1200,10 @@ ideas = {
 			}
 			
 			cost = 250
+
+			available = {
+				NOT = {	has_government = communism }
+			}
 						
 			research_bonus = {
 				cat_grand_battle_plan = 0.15

@@ -169,46 +169,5 @@ set_popularities = {
 set_convoys = 150
 set_stability = 0.75
 
-create_country_leader = {
-	name = "Ruka Oshida"
-	desc = ""
-	picture = "Portrait_Ruka_Oshida.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Dahut"
-	desc = "Portrait_Dahut"
-	picture = "Portrait_Dahut.dds"
-	expire = "1965.1.1"
-	ideology = nazism
-	traits = {
-        adventurous_daredevil
-	}
-}
-
-create_country_leader = {
-	name = "Ruka Oshida"
-	desc = ""
-	picture = "Portrait_Ruka_Oshida.dds"
-	expire = "1965.1.1"
-	ideology = democratic_socialist
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Ruka Oshida"
-	desc = ""
-	picture = "Portrait_Ruka_Oshida.dds"
-	expire = "1965.1.1"
-	ideology = stratocracy
-	traits = {
-		#
-	}
-}
+recruit_character = BTY_Ruka_Oshida
+recruit_character = BTY_Dahut

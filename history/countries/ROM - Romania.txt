@@ -11,12 +11,13 @@ if = {
 
 set_research_slots = 3
 set_stability = 0.6
-set_war_support = 0.6
+set_war_support = 0.7
 
 # Starting tech
 set_technology = {
 	tech_support = 1		
 	tech_engineers = 1
+	tech_recon = 1
 	tech_mountaineers = 1
 	motorised_infantry = 1
 	gwtank = 1
@@ -32,9 +33,9 @@ set_technology = {
   
   CAS1 = 1
 	fuel_silos = 1
-  electronic_mechanical_engineering = 1
-  radio = 1
-  radio_detection = 1
+
+	trench_warfare = 1
+
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -67,10 +68,18 @@ if = {
 # add_ideas = neutrality_idea
 
 add_ideas = {
-    rom_magyor_problem
+    # rom_magyor_problem
     ROM_iron_guard_beginning
     ROM_boyars_idea
     Yggdmillennia_idea
+		limited_conscription
+		war_economy
+
+		ROM_Corneliu_codreanu
+		ROM_horia_sima
+		ROM_armand_calinescu
+		# ROM_Alexandru_Cantacuzino
+
 }
 
 
@@ -102,124 +111,39 @@ set_popularities = {
 	neutrality = 60
 }
 
-create_country_leader = {
-	name = "Vlad III"
-	desc = "POLITICS_VLAD_DESC"
-	picture = "gfx/leaders/ROM/Portrait_Vlad_III_Neutrality.dds"
-	expire = "1965.1.1"
-	ideology = absolute_monarchy
-	traits = {
-		
-	}
-  id = 550
-}
+set_cosmetic_tag = ROM_kingdom
 
-create_country_leader = {
-	name = "Constantin Ion Parhon"
-	desc = "POLITICS_CONSTANTIN_PARHON_DESC"
-	picture = "Portrait_Romania_Constantin_Parhon.dds"
-	expire = "1965.1.1"
-	ideology = leninism
-	traits = {
-		#
-	}
-}
+recruit_character = ROM_petre_dumitrescu
+recruit_character = ROM_ioan_mihail_racovita
+recruit_character = ROM_constantin_sanatescu
+recruit_character = ROM_ion_antonescu
+recruit_character = ROM_horia_macellariu
+recruit_character = ROM_gheorghe_avramescu
+recruit_character = ROM_vlad_iii
+recruit_character = ROM_yuri
+recruit_character = ROM_darnic_prestone_yggdmillennia
+recruit_character = ROM_corneliu_zelea_codreanu
+recruit_character = ROM_ion_mota
+recruit_character = ROM_vasile_marin
+recruit_character = ROM_constantin_constantinescuclaps
+recruit_character = ROM_nicolae_macici
+recruit_character = ROM_constantin_pantazi
+recruit_character = ROM_nicolae_ciuperca
+recruit_character = ROM_ion_glogojanu
+recruit_character = ROM_leonard_mociulschi
+recruit_character = ROM_dumitru_popescu
+recruit_character = ROM_corneliu_dragalina
+recruit_character = ROM_florea_tenescu
+recruit_character = ROM_fiore_forvedge_yggdmillennia
+recruit_character = ROM_celenike_icecolle_yggdmillennia
+recruit_character = ROM_gordes_musik_yggdmillennia
+recruit_character = ROM_caules_forvedge_yggdmillennia
+recruit_character = ROM_roche_frain_yggdmillennia
 
-create_country_leader = {
-	name = "Darnic Prestone Yggdmillennia"
-	desc = "POLITICS_DARNIC_DESC"
-	picture = "gfx/leaders/ROM/Portrait_Darnic_Prestone_Yggdmillennia.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		Realpolitik
-	}
-}
+ROM_create_yugg_leaders = yes
 
-create_country_leader = {
-	name = "Corneliu Zelea Codreanu"
-	desc = ""
-	picture = "Portrait_Romania_Corneliu_Zelea_Codreanu.tga"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-  
-	traits = {
-		#
-	}
-}
 
-create_field_marshal = {
-	name = "Vlad III"
-	picture = "Portrait_Vlad_III_Neutrality.dds"
-	traits = { offensive_doctrine aggressive_assaulter offensive_doctrine harsh_leader war_hero infantry_leader inspirational_leader }
-	skill = 4
-	attack_skill = 5
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 3
-  id = 882
-}
-
-create_field_marshal = {
-	name = "Petre Dumitrescu"
-	gfx = GFX_Portrait_romania_petre_dumitrescu
-	traits = { offensive_doctrine logistics_wizard }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 3
-  id = 884
-}
-
-create_field_marshal = {
-	name = "Ion Antonescu"
-	picture = "Portrait_Romania_Ion_Antonescu.dds"
-	traits = { offensive_doctrine }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 3
-  id = 883
-}
-
-create_corps_commander = {
-	name = "Ioan Mihail Racovita"
-	gfx = GFX_Portrait_romania_ioan_mihail_racovita
-	traits = { hill_fighter }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-  id = 885
-}
-
-create_corps_commander = {
-	name = "Gheorghe Avramescu"
-	gfx = GFX_Portrait_romania_gheorghe_avramescu
-	traits = { }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-  id = 886
-}
-
-create_navy_leader = {
-	name = "Horia Macellariu"
-	gfx = "GFX_Portrait_romania_horia_macellariu"
-	traits = { gentlemanly spotter }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 1
-  id = 887
-}
-
+ROM_create_yggd_leaders = yes
 
 ### VARIANTS ###
 # 1936 Start #

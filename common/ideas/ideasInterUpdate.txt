@@ -1,5 +1,75 @@
 ideas = {
     country = {
+
+			Powerful_influence_idea = {
+
+				available = {
+					is_subject = no 
+				}
+
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = yes
+				}
+
+				removal_cost = -1
+
+				picture = FRA_la_deluge
+
+				modifier = {
+					stability_factor = 0.05
+					war_support_factor = 0.05
+				}
+				rule = {
+					can_join_factions = no
+				}
+			}
+
+      Ast_Migrate_country = {
+        allowed = {
+          original_tag = AST
+          always = no
+        }
+
+        allowed_civil_war = {
+          always = yes
+        }
+        
+        removal_cost = -1
+
+        picture = generic_manpower_bonus
+
+        modifier = {
+          MONTHLY_POPULATION = 0.15
+				  weekly_manpower = 500
+          research_speed_factor = 0.05
+        }
+      
+      }
+
+      AST_White_Australia_Policy = {
+        allowed = {
+          original_tag = AST
+          always = no
+        }
+
+        allowed_civil_war = {
+          always = yes
+        }
+        
+        removal_cost = -1
+
+        picture = AST_White_Australia
+
+        modifier = {
+          stability_factor = 0.05
+          non_core_manpower = -0.75
+        }
+      
+      }
       
       uk_separatism = {
         allowed = {
@@ -18,7 +88,6 @@ ideas = {
         modifier = {
           conscription_factor = -0.05
           stability_factor = -0.05
-          industrial_capacity_factory = -0.05
         }
       
       }
@@ -40,7 +109,7 @@ ideas = {
         modifier = {
           conscription_factor = -0.10
           stability_factor = -0.10
-          industrial_capacity_factory = -0.10
+				  production_factory_max_efficiency_factor = 0.10
         }
       }
       
@@ -89,7 +158,8 @@ ideas = {
 
         modifier = {
           production_speed_industrial_complex_factor = 0.10
-          consumer_goods_factor = 0.03
+          global_building_slots_factor = 0.1
+          consumer_goods_factor = 0.02
         }
         
         research_bonus = {
@@ -112,7 +182,8 @@ ideas = {
         picture = CBI_idea
 
         modifier = {
-          production_speed_industrial_complex_factor = 0.05
+          production_speed_buildings_factor = 0.10
+          global_building_slots_factor = 0.05
           consumer_goods_factor = -0.03
         }
       }
@@ -153,7 +224,7 @@ ideas = {
         }
         
         available = {
-          NOT = { has_war = yes }
+          has_war = yes
         }
         
         removal_cost = -1
@@ -162,12 +233,14 @@ ideas = {
 
         equipment_bonus = {
           convoy = {
-              build_cost_ic = 0.15 instant = yes
-              reliability = 0.20
-              lg_attack = 2
-              max_strength = 1.5
-              max_organisation = 2
-              anti_air_attack = 3
+            build_cost_ic = 0.15
+            reliability = 0.20
+            lg_attack = 2
+            max_strength = 1.5
+            max_organisation = 2
+            anti_air_attack = 3
+
+            instant = yes
           }
         }
       }
@@ -250,6 +323,8 @@ ideas = {
         picture = HUN_treaty_of_triannon
 
         modifier = {
+          political_power_gain = 0.15
+          stability_factor = 0.10
           stability_weekly = 0.001
           fascism_drift = -0.03
           communism_drift = -0.03
@@ -295,15 +370,6 @@ ideas = {
           JAP = { 
             NOT = { has_completed_focus = JAP_strike_south_doctrine }
             NOT = { has_completed_focus = JAP_pan_asianism }        
-            NOT = { has_completed_focus = JAP_the_unthinkable_option }        
-            NOT = { has_completed_focus = JAP_unite_the_sinoshpere }
-          }
-          OR = {
-            NOT = { 
-              ENG = { has_completed_focus = uk_reines_china }
-              ENG = { has_completed_focus = uk_china_focus }               
-            }
-            NOT = { JAP = { has_war_with = CHI } }
           }
         }
 
@@ -338,13 +404,18 @@ ideas = {
         equipment_bonus = {
 
           motorized_equipment = {
-            build_cost_ic = 0.05 instant = yes
-            hardness = 0.4
-            maximum_speed = 0.1
-            reliability = 0.15
+            build_cost_ic = -0.15 
+
+            instant = yes
           }
-         
+     
+					mechanized_equipment = {
+						build_cost_ic = -0.10 
+            
+            instant = yes
+					}     
           
         }
     }
-}
+  }
+} 

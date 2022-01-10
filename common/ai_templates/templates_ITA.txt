@@ -36,7 +36,7 @@ armored_ITA = {
 			}
 		}
 		
-		target_width = 27
+		target_width = 20
 		width_weight = 1.0
 		column_swap_factor = 0.5
 
@@ -53,23 +53,19 @@ armored_ITA = {
 				engineer = 1
 				recon = 1
 				artillery = 1
-                anti_tank = 1
-                anti_air = 1
+        anti_tank = 1
+        anti_air = 1
 			}
 			
 			regiments = {
 				light_armor = 5
 				motorized = 5
-				mot_artillery_brigade = 2
-				mot_anti_tank_brigade = 1
 			}
 		}
 		
 		allowed_types = {
 			light_armor
 			motorized
-            mot_artillery_brigade
-            mot_anti_tank_brigade
 			engineer
 			recon
 			artillery
@@ -149,17 +145,17 @@ armored_ITA = {
 			
 			support = {
 				engineer = 1
-				recon = 1
+				armored_car_recon = 1
 				artillery = 1
-                anti_tank = 1
-                anti_air = 1
+        anti_tank = 1
+        anti_air = 1
 			}
 			
 			regiments = {
 				medium_armor = 5
 				motorized = 5
-				mot_artillery_brigade = 2
-				mot_anti_tank_brigade = 1
+        medium_sp_artillery_brigade = 1
+        medium_tank_destroyer_brigade = 2
 			}
 		}
 
@@ -167,10 +163,10 @@ armored_ITA = {
 			medium_armor
 			motorized
 
-			mot_artillery_brigade
-            mot_anti_tank_brigade
+      medium_sp_artillery_brigade
+      medium_tank_destroyer_brigade
 			engineer
-			recon
+			armored_car_recon
 
 			anti_tank
             anti_air
@@ -242,7 +238,7 @@ armored_ITA = {
 			
 			support = {
 				engineer = 1
-				recon = 1
+				armored_car_recon = 1
 				artillery = 1
                 anti_tank = 1
                 anti_air = 1
@@ -251,8 +247,8 @@ armored_ITA = {
 			regiments = {
 				modern_armor = 5
 				motorized = 5
-				mot_artillery_brigade = 2
-				mot_anti_tank_brigade = 1
+				modern_sp_artillery_brigade = 1
+				modern_tank_destroyer_brigade = 2
 			}
 		}
 		
@@ -260,11 +256,10 @@ armored_ITA = {
 		allowed_types = {
 			modern_armor
 			motorized
-
-			mot_artillery_brigade
-            mot_anti_tank_brigade
+      modern_tank_destroyer_brigade
+      modern_sp_artillery_brigade
 			engineer
-			recon
+			armored_car_recon
 
 			anti_tank
             anti_air

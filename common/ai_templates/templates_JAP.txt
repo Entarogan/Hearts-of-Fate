@@ -86,12 +86,7 @@ armor_JAP = {
 	medium_armor_default_JAP = {
 	
 		upgrade_prio = {
-			factor = 2
-
-			modifier = {
-				factor = 10
-			}
-			
+			factor = 2		
 			modifier = {
 				factor = 30
 			    date > 1939.1.1	
@@ -152,7 +147,7 @@ armor_JAP = {
 			
 			support = {
 				engineer = 1
-				recon = 1
+				armored_car_recon = 1
 				artillery = 1
 				signal_company = 1
 				logistics_company = 1
@@ -172,7 +167,7 @@ armor_JAP = {
 			medium_sp_artillery_brigade
 			medium_sp_anti_air_brigade
 			engineer
-			recon
+			armored_car_recon
 			signal_company
 			logistics_company
 			artillery
@@ -243,7 +238,7 @@ armor_JAP = {
 			
 			support = {
 				engineer = 1
-				recon = 1
+				armored_car_recon = 1
 				signal_company = 1
 				logistics_company = 1
 				artillery = 1
@@ -264,7 +259,7 @@ armor_JAP = {
 			modern_sp_artillery_brigade
             modern_sp_anti_air_brigade
 			engineer
-			recon
+			armored_car_recon
 			signal_company
 			logistics_company
 
@@ -344,7 +339,7 @@ mechanized_JAP = {
 			match_value = 3000.0
 			
 			support = {
-				recon = 1
+				armored_car_recon = 1
 				engineer = 1
                 artillery = 1
 				signal_company = 1
@@ -364,7 +359,7 @@ mechanized_JAP = {
 		allowed_types = {
 			mechanized
 			engineer
-            recon
+            armored_car_recon
             signal_company
 		    logistics_company
             artillery
@@ -431,7 +426,7 @@ mechanized_JAP = {
 			match_value = 3000.0
 			
 			support = {
-				recon = 1
+				armored_car_recon = 1
 				engineer = 1
                 artillery = 1
 				signal_company = 1
@@ -451,7 +446,7 @@ mechanized_JAP = {
 		allowed_types = {
 			mechanized
 			engineer
-            recon
+            armored_car_recon
             signal_company
 		    logistics_company
             artillery

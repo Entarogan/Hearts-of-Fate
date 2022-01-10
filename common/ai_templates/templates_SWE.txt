@@ -30,11 +30,6 @@ armored_SWE = {
 	
 		upgrade_prio = {
 			factor = 2
-
-			modifier = {
-				factor = 10
-			}
-			
 			modifier = {
 				factor = 30
 			    date > 1939.1.1	
@@ -95,7 +90,7 @@ armored_SWE = {
 			
 			support = {
 				engineer = 1
-				recon = 1
+				armored_car_recon = 1
 				artillery = 1
 				anti_air = 1
 				field_hospital = 1
@@ -115,7 +110,7 @@ armored_SWE = {
 			medium_sp_artillery_brigade
 			medium_sp_anti_air_brigade
 			engineer
-			recon
+			armored_car_recon
 			anti_air
 			field_hospital
 			artillery
@@ -185,7 +180,7 @@ armored_SWE = {
 			
 			support = {
 				engineer = 1
-				recon = 1
+				armored_car_recon = 1
 				anti_air = 1
 				field_hospital = 1
 				artillery = 1
@@ -206,7 +201,7 @@ armored_SWE = {
 			modern_sp_artillery_brigade
             modern_sp_anti_air_brigade
 			engineer
-			recon
+			armored_car_recon
 			anti_air
 			field_hospital
 
@@ -297,7 +292,7 @@ infantry_SWE = {
 			
 			support = {
 				engineer = 1
-				recon = 1
+				armored_car_recon = 1
 				field_hospital = 1
 				anti_air = 1
 				artillery = 1
@@ -314,7 +309,7 @@ infantry_SWE = {
 		allowed_types = {
 			infantry		
 			engineer
-			recon
+			armored_car_recon
 			field_hospital
 			artillery
 			artillery_brigade

@@ -8,19 +8,19 @@ ideas = {
 				is_subject = yes		
 			}
 
-			picture = general_staff
+			picture = ast_classify_aliens
 			
 			allowed_civil_war = {
-				has_government = neutrality
+				always = yes
 			}
 
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.25
 				war_support_factor = -0.25
-				conscription_factor = -0.75
+				conscription_factor = -0.50
 			}
+
 		}
 	
 		}

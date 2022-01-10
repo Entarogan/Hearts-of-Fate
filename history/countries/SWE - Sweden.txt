@@ -57,6 +57,7 @@ set_technology = {
     force_rotation = 1
     fighter_baiting = 1
     low_echelon_support = 1
+    armored_car1 = 1
         
 }
 if = {
@@ -196,172 +197,26 @@ set_politics = {
 set_convoys = 400
 set_stability = 0.7
 
-
-create_country_leader = {
-	name = "Ophelia Phamrsolone"
-	desc = "POLITICS_OPHELIA_DESC"
-	picture = "Portrait_Ophelia_Phamrsolone.dds"
-	expire = "1965.1.1"
-	ideology = 	nazism
-	traits = {
-		Ich_will_es_niemals_glanzen_sehen
-        Nordic_Bloodline
-	}
-}
-
-
-create_country_leader = {
-	name = "Riesbyfe Stridberg"
-	desc = "POLITICS_RIESBYFE_DESC"
-	picture = "Portrait_Riesbyfe_Stridberg.dds"
-	expire = "1965.1.1"
-	ideology = socialism
-	traits = {
-		unpopular_catholic
-        defender
-	}
-}
-
-create_country_leader = {
-	name = "Sven Linderot"
-	desc = "POLITICS_SVEN_LINDEROT_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Scáthach-Skaði"
-	desc = "POLITICS_SKADI_DESC"
-	picture = "Portrait_purple.dds"
-	expire = "1965.1.1"
-	ideology = theocracy
-	traits = {
-		genunine_wisdom
-	}
-}
-
-create_corps_commander = {
-	name = "Ortlinde"
-	portrait_path = "gfx/leaders/SWE/Portrait_Ortlinde.dds"
-	traits = { commando brilliant_strategist adaptable winter_specialist }
-	skill = 4
-
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Þrúðr"
-	portrait_path = "gfx/leaders/SWE/Portrait_Trudr.dds"
-	traits = { commando  hill_fighter brilliant_strategist adaptable winter_specialist}
-	skill = 4
-
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 4
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Hildr"
-	portrait_path = "gfx/leaders/SWE/Portrait_Hildr.dds"
-	traits = { commando  hill_fighter brilliant_strategist adaptable winter_specialist }
-	skill = 4
-
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 4
-}
-
-
-create_corps_commander = {
-	name = "Sigurd"
-	portrait_path = "gfx/leaders/SWE/Portrait_Sigurd.dds"
-	traits = { commando skirmisher infantry_expert adaptable winter_specialist organizer war_hero }
-	skill = 4
-
-	attack_skill = 6
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Tryka"
-	portrait_path = "gfx/leaders/SWE/Portrait_Tyrka.dds"
-	traits = { reduced_land skirmisher combined_arms_expert adaptable winter_specialist organizer }
-	skill = 4
-
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 6
-}
-
-
-
-create_corps_commander = {
-	name = "Riesbyfe Stridberg"
-	portrait_path = "gfx/leaders/SWE/Portrait_Riesbyfe_Stridberg.dds"
-	traits = {  adaptable winter_specialist inflexible_strategist trait_cautious }
-	skill = 4
-    id = 990
-	attack_skill = 2
-	defense_skill = 6
-	planning_skill = 2
-	logistics_skill = 5
-}
-
-create_field_marshal = {
-	name = "Scáthach-Skaði"
-	picture = "Portrait_purple.dds"
-	traits = { defensive_doctrine organisational_leader inspirational_leader politically_connected  logistics_wizard skilled_staffer  expert_improviser winter_specialist winter_expert adaptable }
-	skill = 5
-	attack_skill = 4
-	defense_skill = 6
-	planning_skill = 4
-	logistics_skill = 8
-}
-
-create_field_marshal = {
-	name = "Brynhildr"
-	picture = "Portrait_Brynhildr.dds"
-	traits = { offensive_doctrine inspirational_leader politically_connected cavalry_officer  brilliant_strategist skilled_staffer combined_arms_expert winter_specialist winter_expert }
-	skill = 5
-	attack_skill = 5
-	defense_skill = 5
-	planning_skill = 4
-	logistics_skill = 4
-}
-
-create_field_marshal = {
-    name = "Beowulf"
-    picture = "Portrait_Beowulf.dds"
-    traits = { offensive_doctrine inspirational_leader politically_connected harsh_leader winter_specialist adaptable war_hero }
-    skill = 5
-    attack_skill = 4
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 3
-}
-
-create_navy_leader = {
-	name = "Claes Lindström"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
-	traits = { battleship_adherent blockade_runner }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	maneuvering_skill = 3
-	coordination_skill = 3
-}
+recruit_character = SWE_sven_linderot
+recruit_character = SWE_ortlinde
+recruit_character = SWE_hildr
+recruit_character = SWE_sigurd
+recruit_character = SWE_beowulf
+recruit_character = SWE_ophelia_phamrsolone
+recruit_character = SWE_riesbyfe_stridberg
+recruit_character = SWE_scáthachskaði
+recruit_character = SWE_Þrúðr
+recruit_character = SWE_tryka
+recruit_character = SWE_brynhildr
+recruit_character = SWE_claes_lindström
+recruit_character = SWE_rovio
+recruit_character = SWE_eric
+recruit_character = SWE_gelda
+recruit_character = SWE_paradox
+recruit_character = SWE_andersen
+recruit_character = SWE_charles_de_champs
+recruit_character = SWE_sitonai
+recruit_character = SWE_beowulf
 
 
 ### VARIANTS ###

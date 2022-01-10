@@ -26,7 +26,7 @@ country_event = {
   		}
   		declare_war_on = {
   			type = annex_everything
-  			target = PRC
+  			target = BEY
   		}
   		declare_war_on = {
   			type = annex_everything
@@ -76,43 +76,52 @@ country_event = {
 		}
 		if = {
 			limit = {
-				608 = {
+				609 = {
 					is_controlled_by = FROM
 				}
 			}
 			JAP = {
-				transfer_state = 608
+				transfer_state = 609
 			}
 		}
 		if = {
 			limit = {
-				597 = {
+				611 = {
 					is_controlled_by = FROM
 				}
 			}
 			JAP = {
-				transfer_state = 597
+				transfer_state = 611
 			}
 		}
 		if = {
 			limit = {
-				614 = {
+				612 = {
 					is_controlled_by = FROM
 				}
 			}
 			JAP = {
-				transfer_state = 614
+				transfer_state = 612
 			}
 		}
 		if = {
 			limit = {
-				743 = {
+				610 = {
 					is_controlled_by = FROM
 				}
 			}
-			JAP = {
-				transfer_state = 743
-			}
+      if = {
+        limit = { MAN = { is_subject_of = JAP } }
+        MAN = {
+          transfer_state = 610
+        }
+        else = {
+          JAP = {
+            transfer_state = 610
+          }
+        }
+      }
+			
 		}
 		add_state_claim = 613
 		if = {

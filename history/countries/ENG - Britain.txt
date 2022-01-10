@@ -57,6 +57,8 @@ set_technology = {
 	radio_detection = 1
 	fuel_silos = 1
 	fuel_refining = 1
+
+    armored_car1 = 1
 }
 if = {
 	limit = {
@@ -114,9 +116,10 @@ add_ideas = {
     ENG_britain_ireland_trade_war
     FRA_Versailles_Young_idea
     uk_separatism
+    Powerful_influence_idea 
 }
 
-set_convoys = 1000
+set_convoys = 1500
 
 # DIPLOMACY
 if = {
@@ -162,6 +165,11 @@ if = {
 		autonomous_state = autonomy_dominion
 		freedom_level = 0.2
 	}
+	set_autonomy = {
+		target = MLT
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.5
+	}
 	else = {
 		puppet = MAL
     puppet = KEN
@@ -185,8 +193,6 @@ set_popularities = {
 	democratic = 40
 }
 set_politics = {
-
-	
 	ruling_party = neutrality
 	last_election = "1935.11.14"
 	election_frequency = 120
@@ -199,11 +205,15 @@ add_to_faction = ENG
 #add_to_faction = FRA
 add_to_faction = CAN
 add_to_faction = AST
+### Rhodes
+add_to_faction = MLT
+###
 add_to_faction = SAF
 add_to_faction = KEN
 add_to_faction = BUR
 
 give_military_access = RAJ
+give_guarantee = ISR
 add_to_faction = RAJ		# Must be after puppet
 add_to_faction = MAL
 
@@ -211,87 +221,16 @@ add_to_faction = MAL
 
 # Order matters - here Chamberlain becomes starting leader
 
-create_country_leader = {
-	name = "Arturia Pendragon"
-	desc = "POLITICS_ARTURIA_PENDRAGON_DESC"
-	picture = "gfx//leaders//ENG//Portrait_Arturia_Pendragon.dds"
-	expire = "1965.1.1"
-	ideology = authoritarian_democracy
-	traits = {
-		knight_king motorized_expert
-	}
-	id = 900
-}
-
-create_country_leader = {
-	name = "Reines El Melloi Archisorte"
-	desc = "POLITICS_REINES_DESC"
-	picture = "gfx//leaders//ENG//Portrait_Reines_El_Melloi_Archisorte.dds.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Lord El Melloi II"
-	desc = "POLITICS_WAVER_DESC"
-	picture = "gfx//leaders//ENG//Portrait_Waver.dds"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-		
-	}
-}
+recruit_character = ENG_ARTURIA_PENDRAGON
+recruit_character = ENG_Barthomeloi_Lorelei
+recruit_character = ENG_Reines_El_Melloi_Archisorte
+recruit_character = ENG_Waver
+recruit_character = ENG_Olga_Marie_Animusphere
 
 
-create_country_leader = {
-	name = "Olga Marie Animusphere"
-	desc = "POLITICS_ANIMUSPHERE_DESC"
-	picture = "gfx//leaders//ENG//Portrait_Olga_Marie_Animusphere.dds"
-	expire = "1940.1.1"
-	ideology = conservatism
-	traits = {
-		
-	}
-}
+recruit_character = ENG_oswald_mosley
 
-
-create_country_leader = {
-	name = "Barthomeloi Lorelei"
-	desc = "POLITICS_LOERLEI_DESC"
-	picture = "gfx//leaders//ENG//Portrait_Barthomeloi_Lorelei.dds"
-	expire = "1940.1.1"
-	ideology = conservatism
-	traits = {
-		queen_of_clock_tower
-	}
-}
-
-create_country_leader = {
-	name = "Oswald Mosley"
-	desc = "POLITICS_OSWALD_MOSLEY_DESC"
-	picture = "Portrait_Britain_Oswald_Mosley.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		champion_of_peace_1
-		economic_reformer
-	}
-}
-
-create_country_leader = {
-	name = "Harry Pollitt"
-	desc = "POLITICS_HARRY_POLLITT_DESC"
-	picture = "portrait_eng_harry_pollitt.dds"
-	expire = "1965.1.1"
-	ideology = leninism
-	traits = {
-		staunch_stalinist
-	}
-}
-
+recruit_character = ENG_harry_pollitt
 #create_country_leader = {
 #	name = "Rajani Palme Dutt"
 #	desc = "POLITICS_PALME_DUTT_DESC"
@@ -302,333 +241,35 @@ create_country_leader = {
 #		
 #	}
 #}
-
-create_field_marshal = {
-	name = "Arturia Pendragon"
-    id = 801
-	picture = "Portrait_Arturia_Pendragon.dds"
-	traits = { inspirational_leader organisational_leader politically_connected war_hero adaptable infantry_expert combined_arms_expert fortress_buster  expert_delegator expert_improviser }
-	skill = 6
-	attack_skill = 6
-	defense_skill = 5
-	planning_skill = 5
-	logistics_skill = 3
-}
-
-create_field_marshal = {
-	name = "Gawain"
-	id = 803
-	picture = "Portrait_gawain.dds"
-	traits = { organisational_leader defensive_doctrine adaptable infantry_leader fortress_buster }
-	skill = 5
-	attack_skill = 5
-	defense_skill = 5
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_field_marshal = {
-	name = "Lancelot"
-	id = 809
-	picture = "Portrait_lancelot.dds"
-	traits = { organisational_leader offensive_doctrine adaptable infantry_expert scavenger }
-	skill = 5
-	attack_skill = 5
-	defense_skill = 5
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-create_field_marshal = {
-	name = "Agravain"
-	id = 806
-	picture = "Portrait_agravain.dds"
-	traits = { organisational_leader trait_cautious harsh_leader thorough_planner expert_delegator trickster ambusher brilliant_strategist}
-	skill = 5
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 7
-	logistics_skill = 3
-}
+recruit_character = ENG_Gawain
+recruit_character = ENG_Lancelot
+recruit_character = ENG_Agravain
+recruit_character = ENG_Tristan
+recruit_character = ENG_mash
+recruit_character = ENG_Mordred
+recruit_character = ENG_Nightingale
+recruit_character = ENG_Boudica
+recruit_character = ENG_robin_hood
+recruit_character = ENG_Jekyll
+recruit_character = ENG_Gareth
+recruit_character = ENG_Gray
+recruit_character = ENG_Edward_Teach
+recruit_character = ENG_twin
+recruit_character = ENG_Frankenstein
+recruit_character = ENG_Bartholomew_Roberts
+recruit_character = ENG_Fransic_Drake
+recruit_character = ENG_Inorai_Valualeta_Atroholm
+recruit_character = ENG_lev
+recruit_character = ENG_Reines_El_Melloi_Archisorte
 
 
-create_corps_commander = {
-	name = "Tristan"
-	id = 809
-	picture = "Portrait_tristan.dds"
-	traits = { inflexible_strategist bearer_of_artillery trait_cautious  }
-	skill = 5
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 5
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Mash Kyrielight"
-	id = 808
-	picture = "Portrait_mash.dds"
-	traits = { inflexible_strategist infantry_officer trait_cautious organizer }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 7
-	planning_skill = 2
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Mordred" 
-	id = 804
-	picture = "Portrait_mordred.dds"
-	traits = { armor_officer trait_reckless politically_connected panzer_leader urban_assault_specialist panzer_expert}
-	skill = 4
-	attack_skill = 5
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Bedivere"
-	picture = "Portrait_bedivere.dds"
-	traits = { infantry_officer trait_cautious war_hero organizer }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Reines El Melloi Archisorte"
-	id = 805
-	picture = "Portrait_Reines_El_Melloi_Archisorte.dds"
-	traits = { organizer urban_assault_specialist aggressive_assaulter politically_connected}
-	skill = 5
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-
-create_corps_commander = {
-	name = "Florence Nightingale"
-	picture = "Portrait_Nightingale.dds"
-	traits = { infantry_officer trait_reckless  harsh_leader aggressive_assaulter}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 5
-}
-
-create_corps_commander = {
-	name = "Boudica"
-	picture = "Portrait_Boudica.dds"
-	traits = { inspirational_leader war_hero ranger  camouflage_expert infantry_leader}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Robin Hood"
-	picture = "Portrait_robin_hood.dds"
-	traits = { trickster jungle_rat ranger swamp_fox  commando camouflage_expert ambusher}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Henry Jekyll"
-	picture = "Portrait_Jekyll.dds"
-	traits = {  trait_cautious  organizer }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 3
-}
-
-
-create_corps_commander = {
-	name = "Jack the Ripper"
-	picture = "Portrait_jack.dds"
-	traits = { trickster urban_assault_specialist commando camouflage_expert ambusher}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 1
-	planning_skill = 4
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Gareth"
-	picture = "Portrait_Gareth.dds"
-	traits = { infantry_leader  adaptable organizer war_hero  inflexible_strategist }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Gray"
-	id = 807
-	picture = "Portrait_Gray.dds"
-	traits = { politically_connected adaptable commando organizer}
-	skill = 3
-	attack_skill = 4
-	defense_skill = 2
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_navy_leader = {
-	name = "Francis Drake"
-	picture = "Portrait_drake.dds"
-	traits = { superior_tactician ironside blockade_runner bold spotter naval_lineage blue_water_expert }
-	skill = 6
-	attack_skill = 6
-	defense_skill = 4
-	maneuvering_skill = 4
-	coordination_skill = 5
-}
-
-create_navy_leader = {
-	name = "Edward Teach"
-	picture = "Portrait_edward.dds"
-	traits = { superior_tactician old_guard_navy spotter  blue_water_expert}
-	skill = 5
-	attack_skill = 4
-	defense_skill = 3
-	maneuvering_skill = 5
-	coordination_skill = 5
-}
-
-create_navy_leader = {
-	name = "Anne Bonny & Mary Read"
-	picture = "Portrait_twin.dds"
-	traits = { superior_tactician spotter}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 3
-	maneuvering_skill = 4
-	coordination_skill = 6
-}
-
-create_navy_leader = {
-	name = "Frankenstein"
-	picture = "Portrait_Frankenstein.dds"
-	traits = { ironside blockade_runner  bold green_water_expert }
-	skill = 4
-	attack_skill = 4
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 2
-}
-
-create_navy_leader = {
-	name = "Bartholomew Roberts"
-		picture = "Portrait_Bartholomew_Roberts.dds"
-	traits = { blockade_runner superior_tactician navy_career_officer bold gunnery_expert  gentlemanly}
-	skill = 5
-	attack_skill = 5
-	defense_skill = 4
-	maneuvering_skill = 3
-	coordination_skill = 4
-}
-
-create_navy_leader = {
-	name = "Bruce Fraser"
-	id = 986
-		picture = "Portrait_Britain_Bruce_Fraser.dds"
-	traits = { aviation_enthusiast naval_lineage blockade_runner }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 4
-	coordination_skill = 4
-}
-
-create_navy_leader = {
-	name = "John Tovey" # Aristocrat
-	id = 987
-		picture = "Portrait_Britain_John_Tovey.dds"
-	traits = { gentlemanly naval_lineage superior_tactician }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	maneuvering_skill = 2
-	coordination_skill = 5
-}
-
-create_navy_leader = {
-	name = "Bernard Rawlings" # Aristocrat
-	id = 988
-		picture = "Portrait_Britain_Bernard_Rawlings.dds"
-	traits = { gentlemanly }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 2
-}
-
-create_navy_leader = {
-	name = "John Cunningham"
-	id = 989
-		picture = "Portrait_Britain_John_Cunningham.dds"
-	traits = { navy_career_officer green_water_expert }
-	skill = 4
-	attack_skill = 2
-	defense_skill = 4
-	maneuvering_skill = 4
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "Charles Forbes"
-	id = 990
-		picture = "Portrait_Britain_Charles_Forbes.dds"
-	traits = { gunnery_expert fly_swatter }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 2
-	coordination_skill = 3
-}
-
-create_navy_leader = {
-	name = "Algernon Willis"
-	id = 991
-		picture = "Portrait_Britain_Algernon_Willis.dds"
-	traits = { battleship_adherent spotter }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 2
-	maneuvering_skill = 3
-	coordination_skill = 2
-}
-
-create_navy_leader = {
-	name = "Arthur Power"
-	id = 992
-		picture = "Portrait_Britain_Arthur_Power.dds"
-	traits = { gunnery_expert }
-	skill = 2
-	attack_skill = 3
-	defense_skill = 1
-	maneuvering_skill = 1
-	coordination_skill = 2
-}
+recruit_character = ENG_bruce_fraser
+recruit_character = ENG_john_tovey
+recruit_character = ENG_bernard_rawlings
+recruit_character = ENG_john_cunningham
+recruit_character = ENG_charles_forbes
+recruit_character = ENG_algernon_willis
+recruit_character = ENG_arthur_power
 
 ### Ship Variants ###
 

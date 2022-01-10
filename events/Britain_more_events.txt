@@ -157,9 +157,13 @@ country_event = {     # Britain: Atlas keep away from us
 		ai_chance = {
 			factor = 15
 		}
-		add_ideas = {
-			uk_atlas_refuse_to_cooperate
+
+		add_timed_idea = {
+			idea = uk_atlas_refuse_to_cooperate
+			days = 730
 		}
+
+
 	}
 }
 
@@ -539,15 +543,28 @@ country_event = {     # Ireland: Britain appease Ireland
 		ai_chance = {
 			factor = 85
 		}
-		swap_ideas = {
-            remove_idea = IRE_britain_ireland_trade_war
-            add_idea = IRE_appeased
-        }
-        add_ideas = {  ire_constitutional_monarchy }
-        ENG = {  remove_ideas = {  ENG_britain_ireland_trade_war  } }
-        hidden_effect = {
-            news_event = { id = more_news.30  days = 1 }
-        }
+
+    if = {
+      limit = {
+        has_idea = IRE_britain_ireland_trade_war
+      }
+      add_ideas = {  ire_constitutional_monarchy }
+    }	
+
+    if = {
+      limit = {
+        has_idea = IRE_britain_ireland_trade_war
+      }
+      swap_ideas = {
+          remove_idea = IRE_britain_ireland_trade_war
+          add_idea = IRE_appeased
+      }
+    }	
+
+    ENG = {  remove_ideas = {  ENG_britain_ireland_trade_war  } }
+    hidden_effect = {
+        news_event = { id = more_news.30  days = 1 }
+    }
 	}
     # No way
     option = {
@@ -725,12 +742,14 @@ country_event = {     # British Blocked the North Sea
   option = {
 		name = more_britain.14.c
     trigger = {
-        ENG = { is_faction_leader = yes }
-        original_tag = SWE
-        OR = {
-            NOT = { ENG = { has_government = fascism } }
-            NOT = { SWE = { has_government = democratic } }
-        }
+      ENG = { is_faction_leader = yes }
+      original_tag = SWE
+      is_in_faction = no
+      NOT = { has_war_with = ENG }
+      OR = {
+        NOT = { ENG = { has_government = fascism } }
+        NOT = { SWE = { has_government = democratic } }
+      }
     }
 		ai_chance = {
 			factor = 5
@@ -743,7 +762,6 @@ country_event = {     # British Blocked the North Sea
           has_government = democratic
       }        
 		}
-		add_ideas = { uk_blockade }
     ENG = { country_event = { id = more_britain.16 hours = 3 } }
 	}
 }
@@ -803,7 +821,6 @@ country_event = {     # Sweden shows Loyalty
 			factor = 85
 		}
 		add_to_faction = SWE
-    SWE = { remove_ideas = { uk_blockade  } }
     SWE = { country_event = { id = more_britain.17 hours = 2 } }
 	}
   
@@ -858,6 +875,7 @@ country_event = {     # Britain refuses us to join the faction
 	# We have no choice
 	option = {
 		name = more_britain.18.a
+    add_ideas = { uk_blockade }
 		ai_chance = {
 			factor = 85
 		}
@@ -1229,42 +1247,19 @@ country_event = {     # The continental balance of power policy
 	desc = more_britain.23.d
 	picture = GFX_report_event_generic_clock_tower
 
-	trigger = {
-		tag = ENG
-        ENG = { NOT = { has_government = fascism } }
-        ENG = { is_subject = no }
-		ENG = { has_war = no }
-        ENG = { NOT = { is_in_faction_with = FRA } }
-        ENG = { NOT = { is_in_faction_with = GER } }
-        country_exists = FRA
-        country_exists = GER
-        FRA = { is_subject = no }
-        GER = { is_subject = no }
-        GER = { has_war_with = FRA }
-	    }
-
-  fire_only_once = yes
-  mean_time_to_happen = {
-		days = 30
-	}
+	is_triggered_only = yes
 
 
 	# They can all die  
 	option = {
 		name = more_britain.23.a
 		ai_chance = {
-			factor = 5
+			base = 5
 		}
 
-				declare_war_on = {
-					target = GER
-					type = annex_everything
-				}
+    set_country_flag = ENG_Fucking_balanced_flag
 
-				declare_war_on = {
-					target = FRA
-					type = annex_everything
-				}
+    unlock_decision_tooltip = ENG_Fucking_balanced_dec
 
 	}
 
@@ -1272,7 +1267,38 @@ country_event = {     # The continental balance of power policy
   option = {
 		name = more_britain.23.b
 		ai_chance = {
-			factor = 40
+			base = 40
+			modifier = {
+				factor = 2
+				GER = {
+					has_idea = ger_cooperate_with_japan
+				}
+			}
+			modifier = {
+				factor = 2
+				GER = {
+					or = {
+						has_idea = GER_rom_non_aggression_idea
+						is_in_faction_with = ITA
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				GER = {
+					has_added_tension_amount > 30
+				}
+			}
+			modifier = {
+				factor = 1.5
+				GER = {
+					has_added_tension_amount > 15
+				}
+			}
+			modifier = {
+				factor = 1.5
+				GER = { is_ai = no }
+			}
 			modifier = {
 				factor = 2
 				ENG = { has_government = democratic }
@@ -1283,28 +1309,36 @@ country_event = {     # The continental balance of power policy
 			}
 			modifier = {
 				factor = 0
-	            FRA = { has_completed_focus = FRA_claim_spain }
+	      FRA = { has_completed_focus = FRA_the_path_of_avenger }
 			}
 			modifier = {
 				factor = 0.5
-	            FRA = { has_completed_focus = FRA_dominant_middle_east }
+	      FRA = { has_completed_focus = FRA_unified_Franco_Iberia }
 			}
 			modifier = {
 				factor = 0.5
-	            FRA = { has_completed_focus = FRA_Claim_Napoli }
+	      FRA = { has_completed_focus = FRA_claim_spain }
+			}
+			modifier = {
+				factor = 0.5
+	      FRA = { has_completed_focus = FRA_dominant_middle_east }
+			}
+			modifier = {
+				factor = 0.5
+	      FRA = { has_completed_focus = FRA_Claim_Napoli }
 			}
 			modifier = {
 				factor = 1.5
-	            FRA = { surrender_progress > 0.10 }
+	      FRA = { surrender_progress > 0.10 }
 			}
 			modifier = {
 				factor = 2
 				GER = { 
 					strength_ratio = {
-							tag = FRA
-							ratio > 0.66
-						}
-                      }
+            tag = FRA
+            ratio > 0.66
+          }
+        }
 			}
 			modifier = {
 				factor = 2
@@ -1320,18 +1354,43 @@ country_event = {     # The continental balance of power policy
   option = {
 		name = more_britain.23.c
 		ai_chance = {
-			factor = 40
+			base = 40
+			modifier = {
+				factor = 2
+				FRA = {
+					or = {
+						has_idea = FRA_ITA_non_agression
+						is_in_faction_with = ITA
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FRA = {
+					has_added_tension_amount > 30
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FRA = {
+					has_added_tension_amount > 15
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FRA = { is_ai = no }
+			}
 			modifier = {
 				factor = 2
 				ENG = { has_government = democratic }
 			}
 			modifier = {
 				factor = 0.5
-	            GER = { has_completed_focus = GER_around_maginot }
+	      GER = { has_war_with = BEL }
 			}
 			modifier = {
 				factor = 1.5
-	            GER = { surrender_progress > 0.10 }
+	      GER = { surrender_progress > 0.10 }
 			}
 			modifier = {
 				factor = 2
@@ -1356,7 +1415,7 @@ country_event = {     # The continental balance of power policy
   option = {
 		name = more_britain.23.e
 		ai_chance = {
-			factor = 15
+			base = 15
 			modifier = {
 				factor = 2
 				ENG = { has_government = neutrality }
@@ -1434,16 +1493,20 @@ country_event = {
 		ai_chance = {
 			factor = 50
 			modifier = {
-				factor = 1.5
-	            FRA = { surrender_progress > 0.20 }
+				factor = 2
+				GER = { is_ai = no }
 			}
 			modifier = {
 				factor = 1.5
-	            FRA = { surrender_progress > 0.30 }
+	      FRA = { surrender_progress > 0.20 }
 			}
 			modifier = {
 				factor = 1.5
-	            FRA = { surrender_progress > 0.40 }
+	      FRA = { surrender_progress > 0.30 }
+			}
+			modifier = {
+				factor = 1.5
+	      FRA = { surrender_progress > 0.40 }
 			}
 			modifier = {
 				factor = 0.5
@@ -1451,10 +1514,10 @@ country_event = {
 			}
 		}
 
-				declare_war_on = {
-					target = GER
-					type = annex_everything
-				}
+    set_country_flag = ENG_Help_France_attack_Germany_flag
+
+    unlock_decision_tooltip = ENG_Help_France_attack_Germany_dec
+
     hidden_effect = {
         news_event = { id = eng_news.1  hours = 4 }
     }  
@@ -1523,16 +1586,20 @@ country_event = {
 		ai_chance = {
 			factor = 50
 			modifier = {
-				factor = 1.5
-	            GER = { surrender_progress > 0.20 }
+				factor = 2
+				FRA = { is_ai = no }
 			}
 			modifier = {
 				factor = 1.5
-	            GER = { surrender_progress > 0.30 }
+	      GER = { surrender_progress > 0.20 }
 			}
 			modifier = {
 				factor = 1.5
-	            GER = { surrender_progress > 0.40 }
+	      GER = { surrender_progress > 0.30 }
+			}
+			modifier = {
+				factor = 1.5
+	      GER = { surrender_progress > 0.40 }
 			}
 			modifier = {
 				factor = 0.5
@@ -1540,12 +1607,411 @@ country_event = {
 			}
 		}
 
-				declare_war_on = {
-					target = FRA
-					type = annex_everything
-				}
+    set_country_flag = ENG_Help_Germany_attack_France_flag
+
+    unlock_decision_tooltip = ENG_Help_Germany_attack_France_dec
+
     hidden_effect = {
         news_event = { id = eng_news.2  hours = 4 }
     }  
-	} 
-}
+	}
+}	
+	
+country_event = {     
+	id = more_britain.27
+	title = more_britain.27.t
+	desc = more_britain.27.d
+	picture = GFX_noEngland
+
+	trigger = {
+      always = no
+        tag = ENG
+    has_civil_war = no
+    date > 1936.1.25
+	}	
+  
+  fire_only_once = yes
+  
+  mean_time_to_happen = {
+		days = 1
+	}
+  
+	option = {
+		ai_chance = {
+			factor = 50
+         }
+
+    name = more_britain.27.a
+    add_ideas = uk_separatism
+    set_equipment_fraction = 0.9
+   
+    }
+   }
+   
+ country_event = {     
+	id = more_britain.28
+	title = more_britain.28.t
+	desc = more_britain.28.d
+	picture = GFX_noEngland
+
+	trigger = {
+    always = no
+    tag = ENG
+    has_civil_war = no
+    surrender_progress > 0.15
+    is_ai = yes
+    any_enemy_country = {
+      is_ai = no
+    }
+	}	
+	
+  hidden = yes
+  fire_only_once = yes
+  
+	option = {
+		ai_chance = {
+			factor = 50
+         }
+
+    name = more_britain.28.a
+
+			if = {
+				limit = {
+					not = { has_tech = basic_medium_tank  }
+				}
+				set_technology = {
+					basic_medium_tank = 1
+				}
+			}
+
+     add_manpower = -50000
+	 
+				division_template = {
+				name = "Knight of Empire" 	
+				regiments = {
+						medium_armor = { x = 0 y = 0 }
+						medium_armor = { x = 0 y = 1 }
+						medium_armor = { x = 0 y = 2 }
+
+						
+						medium_armor = { x = 1 y = 0 }
+						medium_armor = { x = 1 y = 1 }
+
+			
+	    			   	motorized = { x = 2 y = 0 }
+					    motorized = { x = 2 y = 1 }
+					    motorized = { x = 2 y = 2 }
+
+						
+	                    motorized = { x = 3 y = 0 }
+					    motorized = { x = 3 y = 1 }
+					
+					}
+					support = {
+						  mot_recon = { x = 0 y = 0 }
+                          engineer = { x = 0 y = 1 }
+                          artillery = { x = 0 y = 2 }
+                          anti_air = { x = 0 y = 3 }
+                          logistics_company = { x = 0 y = 4 }
+					}
+			}
+			126 = {
+				
+				
+				create_unit = {
+					division = "name = \"Knight of Empire\" division_template = \"Knight of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Knight of Empire\" division_template = \"Knight of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Knight of Empire\" division_template = \"Knight of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Knight of Empire\" division_template = \"Knight of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Knight of Empire\" division_template = \"Knight of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Knight of Empire\" division_template = \"Knight of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+
+				create_unit = {
+					division = "name = \"Knight of Empire\" division_template = \"Knight of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Knight of Empire\" division_template = \"Knight of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Knight of Empire\" division_template = \"Knight of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Knight of Empire\" division_template = \"Knight of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Knight of Empire\" division_template = \"Knight of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Knight of Empire\" division_template = \"Knight of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+					
+				}
+    }
+   }
+   
+   country_event = {     
+	id = more_britain.29
+	title = more_britain.29.t
+	desc = more_britain.29.d
+	picture = GFX_noEngland
+
+	trigger = {
+    always = no
+	  date > 1939.1.15
+    tag = ENG
+    has_civil_war = no
+    surrender_progress > 0.05
+    is_ai = yes
+    any_enemy_country = {
+      is_ai = no
+    }
+	}	
+	
+  hidden = yes
+  fire_only_once = yes
+  
+	option = {
+		ai_chance = {
+			factor = 50
+         }
+
+    name = more_britain.29.a
+
+	            set_technology = { improved_medium_tank = 1 }
+				set_technology = { improved_heavy_tank = 1 }
+	   
+    }
+   }
+   
+     country_event = {     
+	id = more_britain.30
+	title = more_britain.30.t
+	desc = more_britain.30.d
+	picture = GFX_noEngland
+
+	trigger = {
+    always = no
+	  date > 1939.2.15
+    tag = ENG
+    has_civil_war = no
+    surrender_progress > 0.05
+    is_ai = yes
+    any_enemy_country = {
+      is_ai = no
+    }
+	}	
+	
+  hidden = yes
+  fire_only_once = yes
+  
+	option = {
+		ai_chance = {
+			factor = 50
+         }
+
+    name = more_britain.30.a
+	 
+	            set_technology = { improved_infantry_weapons_2 = 1 }
+				set_technology = { improved_infantry_weapons = 1}
+				set_technology = { advanced_infantry_weapons_2 = 1 }
+				set_technology = { advanced_infantry_weapons = 1}
+				set_technology = { infantry_at2 = 1}
+				set_technology = { infantry_at = 1}
+	            
+			   
+    }
+   }
+   
+    country_event = {     
+	id = more_britain.31
+	title = more_britain.31.t
+	desc = more_britain.31.d
+	picture = GFX_noEngland
+
+	trigger = {
+    always = no
+    tag = ENG
+    has_civil_war = no
+    surrender_progress > 0.10
+    is_ai = yes
+    any_enemy_country = {
+      is_ai = no
+    }
+}	
+	
+  hidden = yes
+  fire_only_once = yes
+  
+	option = {
+		ai_chance = {
+			factor = 50
+         }
+
+    name = more_britain.31.a
+	if = {
+				limit = {
+				is_ai = yes
+				}
+				
+
+division_template = {
+				name = "Marines of Empire" 	
+				regiments = {
+						marine = { x = 0 y = 0 }
+						marine = { x = 0 y = 1 }
+
+						
+						marine = { x = 1 y = 0 }
+						marine = { x = 1 y = 1 }
+
+                        
+			
+	    			   	marine = { x = 2 y = 0 }
+					    marine = { x = 2 y = 1 }
+
+						
+	                    heavy_armor = { x = 3 y = 0 }
+					    heavy_armor = { x = 3 y = 1 }
+
+						
+                        heavy_armor = { x = 4 y = 0 }
+					    heavy_armor = { x = 4 y = 1 }
+						
+					}
+					support = {
+						  mot_recon = { x = 0 y = 0 }
+                          engineer = { x = 0 y = 1 }
+                          artillery = { x = 0 y = 2 }
+                          anti_air = { x = 0 y = 3 }
+                          logistics_company = { x = 0 y = 4 }
+					}
+			}
+			126 = {
+				
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}        
+				
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				create_unit = {
+					division = "name = \"Marines of Empire\" division_template = \"Marines of Empire\" start_experience_factor = 1"  
+					owner = ENG
+				}
+				}
+					
+				}				
+    }
+   }
+ 
+  

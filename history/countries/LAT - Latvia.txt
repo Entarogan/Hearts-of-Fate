@@ -115,59 +115,10 @@ set_popularities = {
 1939.1.1 = {
 	#
 }
-
-create_country_leader = {
-	name = "Raivis Galante"
-	desc = "POLITICS_KARLIS_ULMANIS_DESC"
-	picture = "Portrait_Raivis_Galante.dds"
-	expire = "1965.1.1"
-	ideology = authoritarian_democracy
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Gustavs Celmiņš"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Raivis Galante"
-	desc = ""
-	picture = "Portrait_Raivis_Galante.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Vilis Lacis"
-	desc = ""
-	picture = "GFX_portrait_lat_vilis_lacis"
-	expire = "1965.1.1"
-	ideology = marxism
-	traits = {
-		#
-	}
-}
-
-create_corps_commander = {
-	name = "Berkis Krisjanis"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-	traits = { ranger }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 1
-}
+recruit_character = LAT_vilis_lacis
+recruit_character = LAT_raivis_galante
+recruit_character = LAT_gustavs_celmiņš
+recruit_character = LAT_berkis_krisjanis
 
 ### VARIANTS ###
 # 1936 Start #

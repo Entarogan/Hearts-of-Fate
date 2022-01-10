@@ -133,28 +133,11 @@ set_popularities = {
 	}
 }
 
-create_country_leader = {
-	name = "Theresa Apocalypse"
-	desc = "POLITICS_KONSTANTIN_PATS_DESC"
-	picture = "Portrait_Theresa_Apocalypse.dds"
-	expire = "1965.1.1"
-	ideology = theocracy
-	traits = {
-		#
-	}
-}
 
+recruit_character = EST_theresa_apocalypse
+recruit_character = EST_paavo_vaga
+recruit_character = EST_konstantin_veske
 
-create_country_leader = {
-	name = "Theresa Apocalypse"
-	desc = "POLITICS_KONSTANTIN_PATS_DESC"
-	picture = "Portrait_Theresa_Apocalypse.dds"
-	expire = "1965.1.1"
-	ideology = socialism
-	traits = {
-		#
-	}
-}
 
 ### VARIANTS ###
 # 1939 Start #

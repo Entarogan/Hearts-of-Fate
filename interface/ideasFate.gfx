@@ -4,6 +4,38 @@ spriteTypes = {
 		name = "GFX_idea_round_table"
 		texturefile = "gfx/interface/ideas/idea_round_table.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_a_Paris"
+		texturefile = "gfx/interface/ideas/Paris.dds"
+	}
+		spriteType = {
+		name = "GFX_idea_Rome"
+		texturefile = "gfx/interface/ideas/Rome.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_a_Berlin"
+		texturefile = "gfx/interface/ideas/Berlin.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Moscow"
+		texturefile = "gfx/interface/ideas/Kremlin.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Stockholm"
+		texturefile = "gfx/interface/ideas/Stockholm.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_a_Tokyo"
+		texturefile = "gfx/interface/ideas/Tokyo.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Camelot"
+		texturefile = "gfx/interface/ideas/Camelot.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Washington"
+		texturefile = "gfx/interface/ideas/Washington.dds"
+	}
     spriteType = {
 		name = "GFX_idea_king_arthur"
 		texturefile = "gfx/interface/ideas/idea_king_arthur.dds"

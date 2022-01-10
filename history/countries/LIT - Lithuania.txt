@@ -90,46 +90,9 @@ set_popularities = {
 	}
 }
 
-create_country_leader = {
-	name = "Margaret Nearl"
-	desc = "POLITICS_ANTANAS_SMETONA_DESC"
-	picture = "Portrait_Margaret_Nearl.dds"
-	expire = "1965.1.1"
-	ideology = authoritarian_democracy
-	traits = {
-		#
-	}
-}
+recruit_character = LIT_margaret_nearl
 
-create_country_leader = {
-	name = "Margaret Nearl"
-	desc = "POLITICS_ANTANAS_SNIECKUS_DESC"
-	picture = "Portrait_Margaret_Nearl.dds"
-	expire = "1965.1.1"
-	ideology = syndicalist
-	traits = {
-		#
-	}
-}
 
-create_country_leader = {
-	name = "Margaret Nearl"
-	desc = ""
-	picture = "Portrait_Margaret_Nearl.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
 
-create_country_leader = {
-	name = "Margaret Nearl"
-	desc = ""
-	picture = "Portrait_Margaret_Nearl.dds"
-	expire = "1965.1.1"
-	ideology = socialism
-	traits = {
-		#
-	}
-}
+
+

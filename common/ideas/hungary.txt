@@ -93,7 +93,7 @@ ideas = {
 					has_government = democratic
 					AND = {
 						has_government = neutrality
-						NOT = { has_completed_focus = HUN_responsible_government }
+						#NOT = { has_completed_focus = HUN_responsible_government }
 					}
 				}
 			}
@@ -115,7 +115,7 @@ ideas = {
 					has_government = fascism
 					AND = {
 						has_government = neutrality
-						NOT = { has_completed_focus = HUN_renounce_the_treaty_of_trianon }
+						#NOT = { has_completed_focus = HUN_renounce_the_treaty_of_trianon }
 					}
 				}
 			}
@@ -202,7 +202,6 @@ ideas = {
 			picture = FRA_scw_intervention_republicans_focus
 
 			modifier = {
-				political_power_factor = -0.25
 				consumer_goods_factor = -0.05
 			}
 		}
@@ -232,7 +231,7 @@ ideas = {
 			picture = generic_communist_army
 
 			modifier = {
-				conscription = 0.05
+				conscription = 0.025
 			}
 		}
 
@@ -341,6 +340,11 @@ ideas = {
 			}
 			
 			traits = { compassionate_gentleman }
+
+			ai_will_do = {
+				factor = 0
+			}
+
 		}
 
 		HUN_lajos_remenyi_schneller = {
@@ -361,6 +365,10 @@ ideas = {
 			allowed = {
 				original_tag = HUN
 			}
+
+			available = {
+        NOT = { has_completed_focus = HUN_Enterprise_nationalization }
+			}
 			
 			traits = { war_industrialist }
 
@@ -380,7 +388,7 @@ ideas = {
 					limit = { has_dlc = "Man the Guns" }	
 					NOT = { has_autonomy_state = autonomy_supervised_state }
 				}
-        NOT = { has_completed_focus = HUN_military_government }
+        has_government = neutrality
 			}
 			
 			traits = { staunch_monarchist }
@@ -395,6 +403,11 @@ ideas = {
 			}
 			
 			traits = { smooth_talking_charmer }
+
+			ai_will_do = {
+				factor = 0
+			}
+
 		}
 
 		HUN_zoltan_tildy = {
@@ -404,13 +417,45 @@ ideas = {
 			allowed = {
 				original_tag = HUN
 			}
+
+			available = {
+        NOT = { has_government = communism }
+			}
 			
 			traits = { silent_workhorse }
+
+			ai_will_do = {
+				factor = 5
+			}
+
+		}
+
+		HUN_Bela_Imredy = {
+
+			picture = Bela_Imredy
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			available = {
+        or = {
+          has_completed_focus = HUN_Hungarian_labor_front
+          has_completed_focus = HUN_announce_the_gyor_program
+        }
+			}			
+
+			traits = { financial_expert }
+
+			ai_will_do = {
+				factor = 3
+			}
+
 		}
 
 		HUN_laszlo_rajk = {
 
-			picture = generic_communist_revolutionary_western_european_2d
+			picture = HUN_Laszlo_Rajk
 			
 			allowed = {
 				original_tag = HUN
@@ -421,18 +466,22 @@ ideas = {
 					limit = { has_dlc = "Man the Guns" }	
 					NOT = { has_autonomy_state = autonomy_supervised_state }
 				}
-        is_subject = no
-        has_completed_focus = HUN_military_government
-        has_completed_focus = HUN_council_of_peoples_commissars
+        has_government = communism
+        has_country_flag = HUN_Native_triumph_flag
+        has_completed_focus = HUN_Ministry_of_National_Security
 			}
 			
-			traits = { communist_revolutionary }
+			traits = { Head_of_the_Ministry_of_National_Security }
+
+			ai_will_do = {
+				factor = 2
+			}
+
 		}
 
+		HUN_Matyas_Rakosi = {
 
-		HUN_gyula_gombos_de_jakfa = {
-
-			picture = generic_fascist_demagogue_western_european_2d
+			picture = Matyas_Rakosi
 			
 			allowed = {
 				original_tag = HUN
@@ -443,13 +492,167 @@ ideas = {
 					limit = { has_dlc = "Man the Guns" }	
 					NOT = { has_autonomy_state = autonomy_supervised_state }
 				}
-        is_subject = no
-        has_completed_focus = HUN_military_government
-        has_completed_focus = HUN_iron_fist
+        has_government = communism
+        has_country_flag = HUN_International_triumph_flag
+        has_completed_focus = HUN_Ministry_of_National_Security
 			}
 			
-			traits = { fascist_demagogue }
+			traits = { Head_of_the_Ministry_of_National_Security }
+
+			ai_will_do = {
+				factor = 2
+			}
+
 		}
+
+		HUN_Bela_Kun = {
+
+			picture = HUN_Bela_Kun
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+        has_government = communism
+        has_completed_focus = HUN_International_triumph
+			}
+			
+			traits = { revolutionary_author }
+
+			ai_will_do = {
+				factor = 5
+			}
+
+		}
+
+		HUN_Gyorgy_Lukacs = {
+
+			picture = HUN_Gyorgy_Lukacs
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+        has_government = communism
+			}
+			
+			traits = { marxist_philosopher }
+
+			ai_will_do = {
+				factor = 5
+			}
+
+		}
+
+		HUN_Janos_Kadar = {
+
+			picture = Janos_Kadar
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+        has_government = communism
+        has_completed_focus = HUN_Goulash_with_potatoes
+			}
+			
+			traits = { ambitious_union_boss }
+
+			ai_will_do = {
+				factor = 3
+			}
+
+		}
+
+		HUN_Ferenc_Szalasi = {
+
+			picture = HUN_Ferenc_Szalasi
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+        has_government = fascism
+        has_completed_focus = HUN_Awaken_Hungarian
+			}
+			
+			traits = { Head_of_arrow_cross }
+
+			ai_will_do = {
+				factor = 2
+			}
+
+		}
+
+		HUN_Dome_Sztojay = {
+
+			picture = HUN_Dome_Sztojay
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			available = {
+        has_government = fascism
+        has_completed_focus = HUN_White_horror
+			}
+			
+			traits = { head_of_intelligence }
+
+			ai_will_do = {
+				factor = 2
+			}
+
+		}
+
+		HUN_Sepp_Janko = {
+
+			picture = SER_Sepp_Janko
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			available = {
+        has_government = fascism
+        is_in_faction_with = GER
+        has_completed_focus = HUN_Banat_TST
+			}
+			
+			traits = { German_leader }
+
+      targeted_modifier = { 
+        tag = GER
+        trade_opinion_factor = 0.25
+        extra_trade_to_target_factor = 0.25
+      }
+
+			ai_will_do = {
+				factor = 2
+			}
+
+		}
+
 	}
 
 
@@ -491,6 +694,26 @@ ideas = {
 				factor = 1
 			}
 		}
+
+		HUN_Attila_army_chief = {
+			
+			picture = Attila
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+      available = {
+        NOT = { has_country_flag = HUN_Ban_the_far_right_wing_completely_flag }
+      }
+			
+			traits = { HUN_Attila_T }
+			
+			ai_will_do = {
+				factor = 50
+			}
+		}
+
 	}
 
 	air_chief = {
@@ -567,19 +790,43 @@ ideas = {
 				factor = 1
 			}
 		}
+
+		HUN_Horthy_Miklos = {
+			
+			picture = HUN_Horthy_Miklos
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			available = {
+				NOT = {
+					has_country_flag = HUN_Horty_Arrested_flag
+					has_country_flag = HUN_Horty_died_flag
+				}
+			}
+			
+			traits = { HUN_Horthy_Miklos_T }
+			
+			ai_will_do = {
+				factor = 4
+			}
+		}
+
 	}
 
 	high_command = {
 
 		hun_mecha_eli_mk2 = {
+
+			ledger = army
 			
 			picture = hun_mecha_eli_mk2
 
 			allowed = {
 				original_tag = HUN
+			  has_country_flag = HUN_Made_the_machine_Elizabeth_flag
 			}
-			
-
 			
 			traits = { army_armored_epic }
 			
@@ -589,11 +836,14 @@ ideas = {
 		}
     
     hun_mecha_eli = {
+
+			ledger = army
 			
 			picture = hun_mecha_eli
 
 			allowed = {
 				original_tag = HUN
+			  has_country_flag = HUN_Made_the_machine_Elizabeth_flag
 			}
 			
 
@@ -606,6 +856,8 @@ ideas = {
 		}
     
     hun_bathory = {
+
+			ledger = army
 			
 			picture = hun_bathory
 
@@ -614,19 +866,37 @@ ideas = {
 			}
 			
       available = {
-          NOT = { has_completed_focus = HUN_public_trial }
+        NOT = { has_country_flag = HUN_Bartoli_Arrested_flag }
+        NOT = { has_country_flag = HUN_Bartoli_died_flag }
       }
 			
-			traits = { army_chief_organizational_3 }
+			traits = { HUN_bathory_T }
 			
 			ai_will_do = {
-				factor = 100
+				factor = 50
 			}
 		}
     
+		HUN_gusztav_jany = {
+			ledger = army
+			
+			picture = generic_army_europe_3
+
+			allowed = {
+				original_tag = HUN
+			}
+			
+			traits = { army_armored_2 }
+			
+			ai_will_do = {
+				factor = 15
+			}
+		}
 
     HUN_dezso_laszlo = {
-			
+		
+			ledger = army
+    
 			picture = generic_army_europe_2			
 			allowed = {
 				original_tag = HUN
@@ -643,7 +913,9 @@ ideas = {
     
     
 		HUN_jeno_ratz = {
-			
+	
+			ledger = air
+  
 			picture = generic_air_europe_3
 
 			allowed = {
@@ -657,13 +929,47 @@ ideas = {
 			}
 		}
 
+		HUN_henrik_werth = {
+			ledger = army
 
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = HUN
+			}
+			
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = {
+				factor = 15
+			}
+		}
+
+		HUN_vilmos_nagy = {
+			ledger = army
+			allowed = {
+				original_tag = HUN
+			}
+			
+			available = {
+        NOT = { has_country_flag = HUN_Lakatos_Arrested_flag }
+        NOT = { has_country_flag = HUN_Bartoli_died_flag }
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1000
+			}
+		}
 
 	}
 	
 	theorist = {
 		HUN_shvoy_kalman = {
-		
+
+			ledger = army		
+    
 			picture = generic_army_europe_2
 
 			allowed = {
@@ -676,8 +982,9 @@ ideas = {
 			
 			traits = { military_theorist }
 		}
-		
+
 		HUN_gyorgy_jendrassik = {
+			ledger = air
 
 			picture = generic_air_europe_2
 			
@@ -690,6 +997,27 @@ ideas = {
 			}
 			
 			traits = { air_warfare_theorist }
+		}
+
+		HUN_vattay_theory = {
+			ledger = army
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_mobile_warfare = 0.15
+			}
+			
+			traits = { mobile_warfare_expert }
+
+			ai_will_do = {
+				factor = 15
+			}
+
 		}
 
 	}	
@@ -718,6 +1046,90 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
+		}
+
+		HUN_repulo_mernoki_intezet = {
+		
+			available = {
+				has_completed_focus = HUN_Air_Force_Development_Direction
+			}
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { CAS_manufacturer }
+			
+		}
+
+		HUN_dunai_repulogepgyar = {
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+		}
+
+	}
+
+	tank_manufacturer = { 
+		
+		designer = yes
+		
+		HUN_wm_tank = {
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { heavy_tank_manufacturer }
+
+		}
+		
+		HUN_mavag_tank = {
+
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { medium_tank_manufacturer }
+			
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+		HUN_haditechnikai_intezet = {
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { fast_tank_manufacturer }
+
 		}
 	}
 
@@ -749,27 +1161,75 @@ ideas = {
 			
 			traits = { naval_manufacturer }
 		}
-	}
 
-	industrial_concern = {
-	
-		HUN_mavag = {
+		HUN_dgt_obuda = {
 			
-			picture = generic_industrial_concern_1
+			available = {
+				if = {
+					limit = { has_dlc = "Death or Dishonor" }
+					has_completed_focus = HUN_naval_warfare
+				}
+			}
 
 			allowed = {
 				original_tag = HUN
 			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
 			
-			cost = 150
-			removal_cost = 10
+			traits = { coastal_defence_naval_manufacturer }
+		}
+
+	}
+
+	industrial_concern = {
+
+		HUN_mavag_industry = {
+
+			allowed = {
+				original_tag = HUN
+			}
 			
 			research_bonus = {
 				industry = 0.15
 			}
 			
 			traits = { industrial_concern }
+
+			ai_will_do = {
+				factor = 2
+			}
 		}
+
+		HUN_haesz = {
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			research_bonus = {
+				electronics = 0.15
+			}
+			
+			traits = { electronics_concern }
+		}
+
+		HUN_maort = {
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			research_bonus = {
+				industry = 0.05
+				synth_resources = 0.15
+			}
+			
+			traits = { refinery_concern }
+		}
+
 	}
 
 	materiel_manufacturer = {
@@ -793,5 +1253,32 @@ ideas = {
 			
 			traits = { infantry_equipment_manufacturer }
 		}
+
+		HUN_dimavag = {
+			
+			allowed = {
+				original_tag = HUN
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer }
+		}
+
+		HUN_raba = {
+
+			allowed = {
+				original_tag = HUN
+			}
+		
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+		}
+
 	}
 }

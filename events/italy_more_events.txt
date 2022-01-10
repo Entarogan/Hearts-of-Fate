@@ -29,7 +29,7 @@ country_event = {     # Italy: Rename Constantinople
 	option = {
 		name = more_italy.1.a
 		ai_chance = {
-			factor = 111
+			base = 111
 		}
 		set_province_name = { id = 9833 name = Constantinople }
 		add_political_power = -100
@@ -39,71 +39,23 @@ country_event = {     # Italy: Rename Constantinople
 	option = {
 		name = more_italy.1.b
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 		add_stability = -0.05
 	}
 }
 
-country_event = {     # Italy: Second Troyian War
-	id = more_italy.2
-	title = more_italy.2.t
-	desc = more_italy.2.d
-	picture = GFX_report_event_generic_sign_treaty1
-
-	trigger = {
-		original_tag = GRE
-		has_war = no
-		is_in_faction = no
-		is_subject = no
-		date > 1939.1.1
-		341 = {
-				CONTROLLER = {
-					tag = TUR
-				}
-			}
-	}
-	
-	mean_time_to_happen = {
-		days = 30 
-	}
-	
-	fire_only_once = yes
-	# Great
-	option = {
-		name = more_italy.2.a
-		ai_chance = {
-			factor = 111
-		}
-		declare_war_on = {
-			target = TUR
-			type = annex_everything
-		}
-		hidden_effect = {
-			news_event = {  id = more_news.27 }
-		}
-	}
-	
-	# No
-	option = {
-		name = more_italy.2.b
-		ai_chance = {
-			factor = 0
-		}
-		add_stability = -0.05
-	}
-}
 
 country_event = {
 	id = more_italy.3
 	title = more_italy.3.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.3.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.3.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 
 		add_political_power = -25
@@ -122,13 +74,13 @@ country_event = {
 country_event = {
 	id = more_italy.4
 	title = more_italy.4.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.4.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.4.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 
 		add_political_power = -5
@@ -147,13 +99,13 @@ country_event = {
 country_event = {
 	id = more_italy.5
 	title = more_italy.5.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.5.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.5.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 
 		add_political_power = -15
@@ -172,13 +124,20 @@ country_event = {
 country_event = {
 	id = more_italy.6
 	title = more_italy.6.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.6.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.6.a
 		ai_chance = {
-			factor = 25
+			base = 25
+			modifier = {
+				factor = 0
+        has_game_rule = {
+          rule = ITA_ai_behavior
+          option = MARCH_INTO_ROME_DANNUNZIO
+        }
+			}
 		}
 
 		add_political_power = 25
@@ -200,7 +159,14 @@ country_event = {
 	option = {
 		name = more_italy.6.b
 		ai_chance = {
-			factor = 75
+			base = 75
+			modifier = {
+				factor = 0
+        has_game_rule = {
+          rule = ITA_ai_behavior
+          option = SPARTACUS
+        }
+			}
 		}
 
 		add_political_power = -50
@@ -226,13 +192,41 @@ country_event = {
 country_event = {
 	id = more_italy.7
 	title = more_italy.7.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.7.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.7.a
 		ai_chance = {
-			factor = 30
+			base = 30
+			modifier = {
+				factor = 0
+        has_game_rule = {
+          rule = ITA_ai_behavior
+          option = SPARTACUS
+        }
+			}
+			modifier = {
+				factor = 0
+        has_game_rule = {
+          rule = ITA_ai_behavior
+          option = RESTORE_THE_REPUBLIC
+        }
+			}
+			modifier = {
+				factor = 0
+        has_game_rule = {
+          rule = ITA_ai_behavior
+          option = MARCH_INTO_ROME_BALBO
+        }
+			}
+			modifier = {
+				factor = 0
+        has_game_rule = {
+          rule = ITA_ai_behavior
+          option = MARCH_INTO_ROME_DANNUNZIO
+        }
+			}
 		}
 
 		hidden_effect = {
@@ -247,7 +241,35 @@ country_event = {
 	option = {
 		name = more_italy.7.b
 		ai_chance = {
-			factor = 30
+			base = 30
+			modifier = {
+				factor = 0
+        has_game_rule = {
+          rule = ITA_ai_behavior
+          option = SPARTACUS
+        }
+			}
+			modifier = {
+				factor = 0
+        has_game_rule = {
+          rule = ITA_ai_behavior
+          option = COMPROMISE_WITH_THE_SENATE
+        }
+			}
+			modifier = {
+				factor = 0
+        has_game_rule = {
+          rule = ITA_ai_behavior
+          option = MARCH_INTO_ROME_BALBO
+        }
+			}
+			modifier = {
+				factor = 0
+        has_game_rule = {
+          rule = ITA_ai_behavior
+          option = MARCH_INTO_ROME_DANNUNZIO
+        }
+			}
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
@@ -267,7 +289,21 @@ country_event = {
 	option = {
 		name = more_italy.7.c
 		ai_chance = {
-			factor = 40
+			base = 40
+			modifier = {
+				factor = 0
+        has_game_rule = {
+          rule = ITA_ai_behavior
+          option = COMPROMISE_WITH_THE_SENATE
+        }
+			}
+			modifier = {
+				factor = 0
+        has_game_rule = {
+          rule = ITA_ai_behavior
+          option = RESTORE_THE_REPUBLIC
+        }
+			}
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
@@ -288,13 +324,13 @@ country_event = {
 country_event = {
 	id = more_italy.8
 	title = more_italy.8.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.8.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.8.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 
 		add_political_power = -100
@@ -313,13 +349,13 @@ country_event = {
 country_event = {
 	id = more_italy.9
 	title = more_italy.9.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.9.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.9.a
 		ai_chance = {
-			factor = 99
+			base = 99
 		}
 
         remove_ideas = ita_Colonial_war
@@ -335,10 +371,7 @@ country_event = {
 					has_id = 3000
 				}
 				
-				add_skill_level = 1
-				
-				add_attack = 1
-				add_planning = 1
+				add_unit_leader_trait = trickster	
 				
 			}
 
@@ -351,11 +384,10 @@ country_event = {
 
 	}
 
-	is_triggered_only = yes
 	option = {
 		name = more_italy.9.b
 		ai_chance = {
-			factor = 1
+			base = 1
 		}
 
         remove_ideas = ita_Colonial_war
@@ -378,13 +410,13 @@ country_event = {
 country_event = {
 	id = more_italy.10
 	title = more_italy.10.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.10.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.10.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 
 		add_political_power = 25
@@ -400,13 +432,13 @@ country_event = {
 country_event = {
 	id = more_italy.11
 	title = more_italy.11.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.11.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.11.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 
 		add_political_power = 25
@@ -425,13 +457,13 @@ country_event = {
 country_event = {
 	id = more_italy.12
 	title = more_italy.12.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.12.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.12.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 
 		add_political_power = -25
@@ -450,13 +482,13 @@ country_event = {
 country_event = {
 	id = more_italy.13
 	title = more_italy.13.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.13.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.13.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 
 
@@ -469,13 +501,7 @@ country_event = {
 			random_army_leader = {
 				limit = { 
 					has_id = 843
-				}
-				
-				add_skill_level = 1
-				
-				add_attack = 1
-				add_planning = 1
-                logistics_skill	= 1			
+				}			
 
 				add_unit_leader_trait = commando
 
@@ -504,13 +530,13 @@ country_event = {
 country_event = {
 	id = more_italy.14
 	title = more_italy.14.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.14.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.14.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 
 		add_political_power = 25
@@ -527,15 +553,22 @@ country_event = {
 country_event = {
 	id = more_italy.15
 	title = more_italy.15.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.15.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.15.a
-		ai_chance = {
-			factor = 50
-		}
 
+		ai_chance = {
+			base = 75
+			modifier = {
+				factor = 0
+        has_game_rule = {
+          rule = ITA_ai_behavior
+          option = MARCH_INTO_ROME_BALBO
+        }
+			}
+		}
 
 		hidden_effect = {
         country_event = {
@@ -548,10 +581,24 @@ country_event = {
 
 	option = {
 		name = more_italy.15.b
-		ai_chance = {
-			factor = 50
-		}
 
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 0
+        has_game_rule = {
+          rule = ITA_ai_behavior
+          option = SPARTACUS
+        }
+			}
+			modifier = {
+				factor = 0
+        has_game_rule = {
+          rule = ITA_ai_behavior
+          option = MARCH_INTO_ROME_DANNUNZIO
+        }
+			}
+		}
 
 		hidden_effect = {
         country_event = {
@@ -567,13 +614,13 @@ country_event = {
 country_event = {
 	id = more_italy.16
 	title = more_italy.16.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.16.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.16.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 
 
@@ -591,13 +638,13 @@ country_event = {
 country_event = {
 	id = more_italy.17
 	title = more_italy.17.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.17.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.17.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 
 
@@ -615,13 +662,13 @@ country_event = {
 country_event = {
 	id = more_italy.18
 	title = more_italy.18.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.18.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.18.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 
 
@@ -633,7 +680,7 @@ country_event = {
 						}
 		                hidden_effect = {
                         country_event = {
-	                           id = more_italy.19
+	                           id = more_italy.21
 	                           days = 7
                         }
 		                }
@@ -645,7 +692,7 @@ country_event = {
 						}
 		                hidden_effect = {
                         country_event = {
-	                           id = more_italy.21
+	                           id = more_italy.19
 	                           days = 7
                         }
 		                }
@@ -659,13 +706,13 @@ country_event = {
 country_event = {
 	id = more_italy.19
 	title = more_italy.19.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.19.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.19.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 
         remove_ideas = ita_Colonial_war
@@ -685,13 +732,13 @@ country_event = {
 country_event = {
 	id = more_italy.20
 	title = more_italy.20.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.20.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.20.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 
         remove_ideas = ita_Colonial_war
@@ -707,9 +754,7 @@ country_event = {
 					has_id = 3001
 				}
 				
-				add_skill_level = 1
-				
-				add_attack = 2
+				add_attack = 1
 				
 			}
 
@@ -724,13 +769,13 @@ country_event = {
 country_event = {
 	id = more_italy.21
 	title = more_italy.21.t
-	picture = GFX_event_test
+	picture = GFX_report_event_generic_nero
 	desc = more_italy.21.desc
 	is_triggered_only = yes
 	option = {
 		name = more_italy.21.a
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 
         remove_ideas = ita_Colonial_war
@@ -746,9 +791,7 @@ country_event = {
 					has_id = 3000
 				}
 				
-				add_skill_level = 1
-				
-				add_attack = 1
+				add_unit_leader_trait = trickster	
 				
 			}
 

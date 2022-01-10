@@ -111,7 +111,8 @@ FRA_Royal_Guards_categorie = {
 			}
 		}
 
-		cost = 50
+    fire_only_once = yes
+		cost = 150
 
 		ai_will_do = {
 			factor = 100
@@ -122,6 +123,9 @@ FRA_Royal_Guards_categorie = {
 			FRA = {
 				has_completed_focus = FRA_Royal_Guards
 			}
+            NOT = { has_country_flag = Republic_Settled }
+            NOT = { has_government = fascism }
+            NOT = { has_government = communism }
 		}
 		
 		days_remove = 180
@@ -140,15 +144,13 @@ FRA_Royal_Guards_categorie = {
 					motorized = { x = 1 y = 1 }
 					motorized = { x = 1 y = 2 }
 					motorized = { x = 2 y = 0 }
-					motorized = { x = 2 y = 1 }
-					motorized = { x = 2 y = 2 }
 					
 					mot_artillery_brigade = { x = 0 y = 3 }
 					mot_artillery_brigade = { x = 1 y = 3 }
 					mot_artillery_brigade = { x = 2 y = 3 }
 					
 					heavy_armor = { x = 3 y = 0 }
-					heavy_sp_artillery_brigade  = { x = 3 y = 1 }
+					heavy_armor  = { x = 3 y = 1 }
 				}
 				support = {
 					recon = { x = 0 y = 0 }
@@ -161,15 +163,23 @@ FRA_Royal_Guards_categorie = {
 			random_owned_controlled_state = {
 				prioritize = { 16 }
 				create_unit = {
-					division = "name = \"1.French Royal Guards \" division_template = \"French Royal Guards\" start_experience_factor = 10 " 
+					division = "name = \"1.French Royal Guards \" division_template = \"French Royal Guards\" start_experience_factor = 1 " 
 					owner = FRA
 				}
 				create_unit = {
-					division = "name = \"2.French Royal Guards \" division_template = \"French Royal Guards\" start_experience_factor = 10 " 
+					division = "name = \"2.French Royal Guards \" division_template = \"French Royal Guards\" start_experience_factor = 1 " 
 					owner = FRA
 				}
 				create_unit = {
-					division = "name = \"3.French Royal Guards \" division_template = \"French Royal Guards\" start_experience_factor = 10 " 
+					division = "name = \"3.French Royal Guards \" division_template = \"French Royal Guards\" start_experience_factor = 1 " 
+					owner = FRA
+				}
+				create_unit = {
+					division = "name = \"4.French Royal Guards \" division_template = \"French Royal Guards\" start_experience_factor = 1 " 
+					owner = FRA
+				}
+				create_unit = {
+					division = "name = \"5.French Royal Guards \" division_template = \"French Royal Guards\" start_experience_factor = 1 " 
 					owner = FRA
 				}
 			}
@@ -187,6 +197,7 @@ FRA_Invite_Western_world_Investment_categorie = {
 		visible = {
 			has_completed_focus = FRA_Invite_Western_world_Investment
 			has_war = no
+      NOT = { has_government = communism }
 		}
 		target_trigger = {
 			FROM = {
@@ -197,7 +208,7 @@ FRA_Invite_Western_world_Investment_categorie = {
 			}
 		}
     fire_only_once = yes
-		cost = 25
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -217,6 +228,7 @@ FRA_Invite_Western_world_Investment_categorie = {
 		visible = {
 			has_completed_focus = FRA_Invite_Western_world_Investment
 			has_war = no
+      NOT = { has_government = communism }
 		}
 		target_trigger = {
 			FROM = {
@@ -227,7 +239,7 @@ FRA_Invite_Western_world_Investment_categorie = {
 			}
 		}
     fire_only_once = yes
-		cost = 25
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -247,6 +259,7 @@ FRA_Invite_Western_world_Investment_categorie = {
 		visible = {
 			has_completed_focus = FRA_Invite_Western_world_Investment
 			has_war = no
+      NOT = { has_government = communism }
 		}
 		target_trigger = {
 			FROM = {
@@ -260,7 +273,7 @@ FRA_Invite_Western_world_Investment_categorie = {
 			}
 		}
     fire_only_once = yes
-		cost = 25
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -280,6 +293,7 @@ FRA_Invite_Western_world_Investment_categorie = {
 		visible = {
 			has_completed_focus = FRA_Invite_Western_world_Investment
 			has_war = no
+      NOT = { has_government = communism }
 		}
 		target_trigger = {
 			FROM = {
@@ -293,7 +307,7 @@ FRA_Invite_Western_world_Investment_categorie = {
 			}
 		}
     fire_only_once = yes
-		cost = 25
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -313,6 +327,7 @@ FRA_Invite_Western_world_Investment_categorie = {
 		visible = {
 			has_completed_focus = FRA_Invite_Western_world_Investment
 			has_war = no
+      NOT = { has_government = communism }
 		}
 		target_trigger = {
 			FROM = {
@@ -323,7 +338,7 @@ FRA_Invite_Western_world_Investment_categorie = {
 			}
 		}
     fire_only_once = yes
-		cost = 25
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -349,10 +364,12 @@ FRA_Shield_of_France_categorie = {
 			FRA = { has_completed_focus = FRA_Shield_of_France }
 		}
 
+    fire_only_once = yes
+
 		days_remove = 180
 
 		modifier = {
-			civilian_factory_use = 8
+			civilian_factory_use = 10
 		}
 
 		ai_will_do = {
@@ -375,6 +392,7 @@ FRA_Shield_of_France_categorie = {
 ##########################
 #通用性装备
 ##########################
+
 FRA_BSEB_categorie = {
 		
 	FRA_Aircraft_ejection_decision = { #飞机弹射装置（改进）
@@ -385,7 +403,7 @@ FRA_BSEB_categorie = {
 			original_tag = FRA
 		}
 
-		cost = 50
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -403,7 +421,7 @@ FRA_BSEB_categorie = {
 		days_remove = 30
 		
 		modifier = {
-			civilian_factory_use = 1
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
@@ -421,7 +439,7 @@ FRA_BSEB_categorie = {
 			original_tag = FRA
 		}
 
-		cost = 50
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -439,7 +457,7 @@ FRA_BSEB_categorie = {
 		days_remove = 30
 		
 		modifier = {
-			civilian_factory_use = 1
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
@@ -457,7 +475,7 @@ FRA_BSEB_categorie = {
 			original_tag = FRA
 		}
 
-		cost = 50
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -475,7 +493,7 @@ FRA_BSEB_categorie = {
 		days_remove = 30
 		
 		modifier = {
-			civilian_factory_use = 1
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
@@ -493,7 +511,7 @@ FRA_BSEB_categorie = {
 			original_tag = FRA
 		}
 
-		cost = 50
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -509,10 +527,10 @@ FRA_BSEB_categorie = {
 			}
 		}
 		
-		days_remove = 30
+		days_remove = 60
 		
 		modifier = {
-			civilian_factory_use = 1
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
@@ -522,7 +540,81 @@ FRA_BSEB_categorie = {
 		}
 	}
 	
-	FRA_radar_I_decision = { #雷达I（厘米波）
+	FRA_Fantasme_depth_boom_decision = { #深弹
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				NOT = {
+					has_tech = improved_depth_charges
+				}
+			}
+		}
+		
+		days_remove = 60
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				improved_depth_charges = 1
+			}
+		}
+	}
+	
+	FRA_Mogador_depth_boom_decision = { #刺猬弹
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_tech = improved_depth_charges
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Mogador_Enable
+				NOT = {
+					has_tech = advanced_depth_charges
+				}
+			}
+		}
+		
+		days_remove = 90
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				advanced_depth_charges = 1
+			}
+		}
+	}
+	
+	FRA_radar_I_decision = { #雷达I（分米波）
 
 		icon = generic_ignite_civil_war
 
@@ -531,7 +623,7 @@ FRA_BSEB_categorie = {
 			FRA = { has_tech = radio }
 		}
 
-		cost = 50
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -539,7 +631,6 @@ FRA_BSEB_categorie = {
 
 		visible = {
 			original_tag = FRA
-			date > 1937.1.1
 			FRA = {
 				NOT = {
 					has_tech = decimetric_radar
@@ -547,10 +638,10 @@ FRA_BSEB_categorie = {
 			}
 		}
 		
-		days_remove = 90
+		days_remove = 50
 		
 		modifier = {
-			civilian_factory_use = 2
+			research_speed_factor = -0.20
 		}
 
 		remove_effect = {
@@ -561,7 +652,7 @@ FRA_BSEB_categorie = {
 		}
 	}
 	
-	FRA_radar_II_decision = { #雷达II（改进厘米波）
+	FRA_radar_II_decision = { #雷达II（改进分米波）
 
 		icon = generic_ignite_civil_war
 
@@ -569,7 +660,7 @@ FRA_BSEB_categorie = {
 			original_tag = FRA
 		}
 
-		cost = 50
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -577,8 +668,15 @@ FRA_BSEB_categorie = {
 
 		visible = {
 			original_tag = FRA
-			date > 1938.12.1
 			FRA = {
+				or = {
+					has_country_flag = FRA_PN-196_Enable
+					has_country_flag = FRA_Jean_Bart_Enable
+					has_country_flag = FRA_Joffre_Enable
+					has_country_flag = FRA_Saint_Louis_Enable
+					has_country_flag = FRA_De_Grasse_Enable
+					has_country_flag = FRA_Fantasme_Enable
+				}
 				has_tech = decimetric_radar
 				NOT = {
 					has_tech = improved_decimetric_radar
@@ -589,12 +687,178 @@ FRA_BSEB_categorie = {
 		days_remove = 50
 		
 		modifier = {
-			civilian_factory_use = 1
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
 			set_technology = {
 				improved_decimetric_radar = 1
+			}
+		}
+	}
+	
+	FRA_radar_III_decision = { #雷达III（厘米波）
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				or = {
+					has_country_flag = FRA_Clemenceau_Gascogne_Enable
+					has_country_flag = FRA_Constitution_Enable
+					has_country_flag = FRA_Saint_Louis_Enable
+					has_country_flag = FRA_Bayard_Enable
+					has_country_flag = FRA_Fantasme_Enable
+				}
+				has_tech = improved_decimetric_radar
+				NOT = {
+					has_tech = centimetric_radar
+				}
+			}
+		}
+		
+		days_remove = 50
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				centimetric_radar = 1
+			}
+		}
+	}
+	
+	FRA_radar_IV_decision = { #雷达IV（改进厘米波）
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_tech = centimetric_radar
+				NOT = {
+					has_tech = improved_centimetric_radar
+				}
+			}
+		}
+		
+		days_remove = 100
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				improved_centimetric_radar = 1
+			}
+		}
+	}
+	
+	FRA_radar_V_decision = { #雷达V（先进厘米波）
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				or = {
+					has_country_flag = FRA_Alsace_Enable
+					has_country_flag = FRA_Saintess_Enable
+					has_country_flag = FRA_Foch_Enable
+					has_country_flag = FRA_Mogador_Enable
+				}
+				has_tech = improved_centimetric_radar
+				NOT = {
+					has_tech = advanced_centimetric_radar
+				}
+			}
+		}
+		
+		days_remove = 50
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				advanced_centimetric_radar = 1
+			}
+		}
+	}
+	
+	FRA_radar_VI_decision = { #雷达VI（微米波）
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				or = {
+					has_country_flag = FRA_republique_enable
+					has_country_flag = FRA_Henry_IV_Enable
+					has_country_flag = FRA_Bourgogne_Enable
+				}
+				has_tech = advanced_centimetric_radar
+				NOT = {
+					has_tech = ship_radar_1944
+				}
+			}
+		}
+		
+		days_remove = 50
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				ship_radar_1944 = 1
 			}
 		}
 	}
@@ -608,7 +872,7 @@ FRA_BSEB_categorie = {
 			FRA = { has_tech = mechanical_computing }
 		}
 
-		cost = 50
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -623,29 +887,30 @@ FRA_BSEB_categorie = {
 			}
 		}
 		
-		days_remove = 50
+		days_remove = 100
 		
 		modifier = {
-			civilian_factory_use = 1
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
 			set_technology = {
 				basic_fire_control_system = 1
+				mechanical_computing = 1
 			}
 		}
 	}
 	
-	FRA_fire_control_II_decision = { #火控II（改进）
+	FRA_fire_control_II_decision = { #火控II（改良）
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
-			FRA = { has_tech = computing_machine }
+			date > 1937.1.1
 		}
 
-		cost = 50
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -661,15 +926,55 @@ FRA_BSEB_categorie = {
 			}
 		}
 		
-		days_remove = 50
+		days_remove = 100
 		
 		modifier = {
-			civilian_factory_use = 1
+			research_speed_factor = -0.20
 		}
 
 		remove_effect = {
 			set_technology = {
 				improved_fire_control_system = 1
+				computing_machine = 1
+			}
+		}
+	}
+	
+	FRA_fire_control_III_decision = { #火控III（先进）
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			date > 1938.7.1
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_tech = improved_fire_control_system
+				NOT = {
+					has_tech = advanced_fire_control_system
+				}
+			}
+		}
+		
+		days_remove = 100
+		
+		modifier = {
+			research_speed_factor = -0.20
+		}
+
+		remove_effect = {
+			set_technology = {
+				advanced_fire_control_system = 1
+				improved_computing_machine = 1
 			}
 		}
 	}
@@ -680,7 +985,7 @@ FRA_BSEB_categorie = {
 ############################
 
 
-	FRA_4x450mm_torpedo_decision = { #4x450mm鱼雷
+	FRA_air_torpedo_decision = { #压缩空气鱼雷II
 
 		icon = generic_ignite_civil_war
 
@@ -688,7 +993,7 @@ FRA_BSEB_categorie = {
 			original_tag = FRA
 		}
 
-		cost = 50
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -706,7 +1011,7 @@ FRA_BSEB_categorie = {
 		days_remove = 50
 		
 		modifier = {
-			civilian_factory_use = 1
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
@@ -716,15 +1021,16 @@ FRA_BSEB_categorie = {
 		}
 	}
 	
-	FRA_3x533mm_torpedo_decision = { #3x533mm鱼雷
+	FRA_wet_heater_torpedo_decision = { #3x550mm鱼雷III
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
+			has_tech = improved_ship_torpedo_launcher
 		}
 
-		cost = 50
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -732,11 +1038,12 @@ FRA_BSEB_categorie = {
 
 		visible = {
 			original_tag = FRA
-			has_tech = improved_ship_torpedo_launcher
+			
 			FRA = {
 				or = {
-					has_country_flag = FRA_C5A3_torpedo
-					has_country_flag = FRA_Fantasme_torpedo
+					has_country_flag = FRA_Saint_Louis_Enable
+					has_country_flag = FRA_De_Grasse_Enable
+					has_country_flag = FRA_Fantasme_Enable
 				}
 				NOT = {
 					has_tech = advanced_ship_torpedo_launcher
@@ -747,12 +1054,54 @@ FRA_BSEB_categorie = {
 		days_remove = 60
 		
 		modifier = {
-			civilian_factory_use = 1
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
 			set_technology = {
 				advanced_ship_torpedo_launcher = 1
+			}
+		}
+	}
+	
+	FRA_oxygen_torpedo_decision = { #550mm氧气鱼雷
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_tech = improved_ship_torpedo_launcher
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			
+			FRA = {
+				or = {
+					has_country_flag = FRA_Henry_IV_Enable
+					has_country_flag = FRA_Mogador_Enable
+				}
+				NOT = {
+					has_tech = modern_ship_torpedo_launcher
+				}
+			}
+		}
+		
+		days_remove = 90
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				modern_ship_torpedo_launcher = 1
 			}
 		}
 	}
@@ -763,7 +1112,7 @@ FRA_BSEB_categorie = {
 ############################
 
 
-	FRA_Second_artillery_152mm_decision = { #副炮152mm
+	FRA_152_Richelieu_battery_decision = { #副炮3x152/55 Mle 1930
 
 		icon = generic_ignite_civil_war
 
@@ -771,7 +1120,7 @@ FRA_BSEB_categorie = {
 			original_tag = FRA
 		}
 
-		cost = 50
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -781,29 +1130,28 @@ FRA_BSEB_categorie = {
 			original_tag = FRA
 			FRA = {
 				or = {
-					has_country_flag = FRA_PN-196_Second_artillery_152mm_Enable
-					has_country_flag = FRA_C5A3_Secondary_artillery
+					has_country_flag = FRA_PN-196_Enable
 				}
 				NOT = {
-					has_tech = improved_secondary_battery
+					has_tech = 152_Richelieu_battery
 				}
 			}
 		}
 		
-		days_remove = 40
+		days_remove = 60
 		
 		modifier = {
-			civilian_factory_use = 1
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
 			set_technology = {
-				improved_secondary_battery = 1
+				152_Richelieu_battery = 1
 			}
 		}
 	}
 	
-	FRA_dual-purpose_gun_decision = { #高平两用炮100mm
+	FRA_152_Alsace_battery_decision = { #副炮3x152/55 Mle 1935 DP
 
 		icon = generic_ignite_civil_war
 
@@ -811,7 +1159,7 @@ FRA_BSEB_categorie = {
 			original_tag = FRA
 		}
 
-		cost = 100
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -819,31 +1167,197 @@ FRA_BSEB_categorie = {
 
 		visible = {
 			original_tag = FRA
-			has_tech = improved_secondary_battery
 			FRA = {
-				or = { 
-					has_country_flag = FRA_PN-196_dual-purpose_gun_Enable
-					has_country_flag = FRA_Fantasme_main_gun_antiair
-					has_country_flag = FRA_Jean_D'arc_antiair
+				or = {
+					has_country_flag = FRA_Clemenceau_Gascogne_Enable
+					has_country_flag = FRA_Alsace_Enable
+					has_country_flag = FRA_Saintess_Enable
 				}
 				NOT = {
-					has_tech = dp_secondary_battery
+					has_tech = 152_Alsace_battery
 				}
 			}
 		}
 		
-		days_remove = 80
+		days_remove = 60
 		
 		modifier = {
-			civilian_factory_use = 1
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
 			set_technology = {
-				dp_secondary_battery = 1
+				152_Alsace_battery = 1
 			}
 		}
 	}
+	
+	FRA_3x152_55_1942_battery_decision = { #副炮3x152/55 Mle 1942 Auto
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				or = {
+					has_country_flag = FRA_Bourgogne_Enable
+					has_country_flag = FRA_republique_Enable
+				}
+				NOT = {
+					has_tech = 3x152_55_1942_battery
+				}
+			}
+		}
+		
+		days_remove = 90
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				3x152_55_1942_battery = 1
+			}
+		}
+	}
+	
+	FRA_127_republique_battery_decision = { #副炮2x127/54 Mle 1942
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				or = {
+					has_country_flag = FRA_Bourgogne_Enable
+					has_country_flag = FRA_republique_Enable
+					has_country_flag = FRA_Henry_IV_Enable
+				}
+				NOT = {
+					has_tech = 127_republique_battery
+				}
+			}
+		}
+		
+		days_remove = 60
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				127_republique_battery = 1
+			}
+		}
+	}
+	
+	FRA_100_Gascogne_battery_decision = { #副炮2x100/45 Mle 1933
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				or = {
+					has_country_flag = FRA_Joffre_Enable
+					has_country_flag = FRA_De_Grasse_Enable
+					has_country_flag = FRA_Clemenceau_Gascogne_Enable
+					has_country_flag = FRA_Saint_Louis_Enable
+					has_country_flag = FRA_Bayard_Enable
+				}
+				NOT = {
+					has_tech = 100_Gascogne_battery
+				}
+			}
+		}
+		
+		days_remove = 60
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				100_Gascogne_battery = 1
+			}
+		}
+	}
+	
+	FRA_100_Alsace_battery_decision = { #副炮2x100/55 Mle 1940
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				or = {
+					has_country_flag = FRA_Foch_Enable
+					has_country_flag = FRA_Alsace_Enable
+					has_country_flag = FRA_Saintess_Enable
+				}
+				NOT = {
+					has_tech = 100_Alsace_battery
+				}
+			}
+		}
+		
+		days_remove = 60
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				100_Alsace_battery = 1
+			}
+		}
+	}
+	
+
 
 
 ############################
@@ -851,7 +1365,7 @@ FRA_BSEB_categorie = {
 ############################
 
 
-	FRA_2x37mm_Antiair_gun_decision = { #防空炮2x37mm
+	FRA_antiair1_decision = { #防空炮升级1
 
 		icon = generic_ignite_civil_war
 
@@ -859,7 +1373,7 @@ FRA_BSEB_categorie = {
 			original_tag = FRA
 		}
 
-		cost = 60
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -868,21 +1382,16 @@ FRA_BSEB_categorie = {
 		visible = {
 			original_tag = FRA
 			FRA = {
-				or = {
-					has_country_flag = FRA_PN-196_Antiair_gun_Enable
-					has_country_flag = FRA_C5A3_Secondary_artillery
-					has_country_flag = FRA_Fantasme_programme_Enable
-				}
 				NOT = {
 					has_tech = antiair1
 				}
 			}
 		}
 		
-		days_remove = 70
+		days_remove = 60
 		
 		modifier = {
-			civilian_factory_use = 1
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
@@ -892,15 +1401,16 @@ FRA_BSEB_categorie = {
 		}
 	}
 	
-	FRA_4x37mm_Antiaircraft_gun_decision = { #防空炮4x37mm
+	FRA_37_auto_battery_decision = { #防空炮37mm/70 Mle 1935
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
+			has_tech = antiair1
 		}
 
-		cost = 60
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -909,87 +1419,36 @@ FRA_BSEB_categorie = {
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_tech = antiair1
-				or = { 
-					has_country_flag = FRA_Jean_Bart_Antiaircraft_gun_Enable
-					has_country_flag = FRA_Jean_D'arc_antiair
-					has_country_flag = FRA_Fantasme_programme_Enable
-				}
 				NOT = {
-					has_tech = antiair2
+					has_tech = 37_auto_battery
 				}
 			}
 		}
 		
-		days_remove = 70
+		days_remove = 90
 		
 		modifier = {
-			civilian_factory_use = 1
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
 			set_technology = {
 				antiair2 = 1
+				37_auto_battery = 1
 			}
 		}
 	}
 	
-	FRA_4x40mm_Antiaircraft_gun_decision = { #防空炮4x40mm
+	FRA_57_antiair_battery_decision = { #防空炮57mm/60 Mle 1943
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
+			has_tech = 37_auto_battery
 		}
 
-		cost = 60
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		visible = {
-			original_tag = FRA
-			FRA = {
-				has_tech = antiair2
-				or = { 
-					has_country_flag = FRA_Jean_D'arc_antiair
-					has_country_flag = FRA_Alsace_antiair
-				}
-				NOT = {
-					has_tech = antiair3
-				}
-			}
-		}
-		
-		days_remove = 70
-		
-		modifier = {
-			civilian_factory_use = 1
-		}
-
-		remove_effect = {
-			set_technology = {
-				antiair3 = 1
-			}
-		}
-	}
-}
-
-############################
-#舰船
-############################
-FRA_PN-196_programme_categorie = { #PN-196方案列
-	
-	FRA_PN-196_hull_decision = { #PN-196船体
-
-		icon = generic_ignite_civil_war
-
-		available = {
-			original_tag = FRA
-		}
-
-		cost = 150
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -999,19 +1458,106 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 			original_tag = FRA
 			FRA = {
 				or = {
-					has_country_flag = FRA_Richelieu_Enable
-					has_country_flag = FRA_Orleans_Enable
+					has_country_flag = FRA_republique_Enable
+					has_country_flag = FRA_Bourgogne_Enable
+					has_country_flag = FRA_Henry_IV_Enable
 				}
+				NOT = {
+					has_tech = 57_antiair_battery
+				}
+			}
+		}
+		
+		days_remove = 90
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				57_antiair_battery = 1
+			}
+		}
+	}
+	
+	FRA_20_Oerlikon_battery_decision = { #防空炮20mm Oerlikon
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				or = {
+					has_country_flag = FRA_Jean_Bart_Enable
+					has_country_flag = FRA_Joffre_Enable
+					has_country_flag = FRA_Saint_Louis_Enable
+					has_country_flag = FRA_De_Grasse_Enable
+					has_country_flag = FRA_Fantasme_Enable
+				}
+				NOT = {
+					has_tech = 20_Oerlikon_battery
+				}
+			}
+		}
+		
+		days_remove = 60
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				20_Oerlikon_battery = 1
+			}
+		}
+	}
+}
+
+############################
+#舰船
+############################
+FRA_BB_categorie = { #战列舰方案列
+	
+	FRA_PN-196_hull_decision = { #PN-196船体
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Richelieu_Enable
 				NOT = {
 					has_tech = improved_ship_hull_heavy
 				}
 			}
 		}
 		
-		days_remove = 180
+		days_remove = 120
 		
 		modifier = {
-			civilian_factory_use = 5
+			research_speed_factor = -0.20
 		}
 
 		remove_effect = {
@@ -1021,7 +1567,7 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 		}
 	}
 	
-	FRA_PN-196_Triple_turret_Main_Gun_decision = { #PN-196三联装炮
+	FRA_PN-196_armor_decision = { #PN-196装甲
 
 		icon = generic_ignite_civil_war
 
@@ -1029,7 +1575,7 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 			original_tag = FRA
 		}
 
-		cost = 80
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -1038,9 +1584,46 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_Triple_turret_of_main_gun_Enable
+				has_country_flag = FRA_Richelieu_Enable
 				NOT = {
-					has_tech = improved_heavy_battery
+					has_tech = improved_heavy_armor_scheme
+				}
+			}
+		}
+		
+		days_remove = 90
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				improved_heavy_armor_scheme = 1
+			}
+		}
+	}
+	
+	FRA_Richelieu_class_battery_decision = { #380mm/45 Mle 1930
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_PN-196_Enable
+				NOT = {
+					has_tech = Richelieu_class_battery
 				}
 			}
 		}
@@ -1048,18 +1631,17 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 		days_remove = 120
 		
 		modifier = {
-			civilian_factory_use = 2
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
 			set_technology = {
-				basic_heavy_battery = 1
-				improved_heavy_battery = 1
+				Richelieu_class_battery = 1
 			}
 		}
 	}
 	
-	FRA_PN-196_Quadruple_turret_Main_Gun_decision = { #PN-196四联装炮
+	FRA_Richelieu_Capped_ap_bullet_decision = { #PN-196被帽穿甲弹
 
 		icon = generic_ignite_civil_war
 
@@ -1067,46 +1649,7 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 			original_tag = FRA
 		}
 
-		cost = 100
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		visible = {
-			original_tag = FRA
-			FRA = {
-				has_country_flag = FRA_Quadruple_turret_of_main_gun_Enable
-				NOT = {
-					has_tech = improved_heavy_battery
-				}
-			}
-		}
-		
-		days_remove = 150
-		
-		modifier = {
-			civilian_factory_use = 3
-		}
-
-		remove_effect = {
-			set_technology = {
-				basic_heavy_battery = 1
-				improved_heavy_battery = 1
-			}
-			add_ideas = FRA_Quadruple_turret_Main_Gun_idea
-		}
-	}
-	
-	FRA_PN-196_Capped_armour-piercing_bullet_decision = { #PN-196被帽穿甲弹
-
-		icon = generic_ignite_civil_war
-
-		available = {
-			original_tag = FRA
-		}
-
-		cost = 50
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -1122,10 +1665,10 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 			}
 		}
 		
-		days_remove = 50
+		days_remove = 60
 		
 		modifier = {
-			civilian_factory_use = 1
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
@@ -1142,12 +1685,13 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 		available = {
 			original_tag = FRA
 			has_tech = improved_ship_hull_heavy
-			has_tech = improved_heavy_battery
-			has_tech = improved_secondary_battery
-			has_tech = antiair1
+			has_tech = Richelieu_class_battery
+			has_tech = 152_Richelieu_battery
+			has_tech = 37_semi_battery
 			has_tech = improved_fire_control_system
 			has_tech = decimetric_radar
 			has_tech = improved_airplane_launcher
+			has_tech = improved_heavy_armor_scheme
 		}
 
 		cost = 0
@@ -1159,9 +1703,7 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_PN-196_complete
-				has_country_flag = FRA_Richelieu_Enable
-				has_country_flag = FRA_Quadruple_turret_of_main_gun_Enable
+				has_country_flag = FRA_PN-196_Enable
 				NOT = { has_country_flag = FRA_Richelieu_I_complete }
 			}
 		}
@@ -1172,18 +1714,18 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 				type = ship_hull_heavy_3
 				parent_version = 0
 				modules = {
-					fixed_ship_battery_slot = ship_heavy_battery_3
-					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_battery_slot = Richelieu_class_battery_equipment
+					fixed_ship_anti_air_slot = 37_semi_battery_equipment
 					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
 					fixed_ship_radar_slot = ship_radar_1
 					fixed_ship_engine_slot = heavy_ship_engine_3
-					fixed_ship_secondaries_slot = ship_secondaries_2
-					fixed_ship_armor_slot = ship_armor_bb_2
-					front_1_custom_slot = ship_heavy_battery_3
-					mid_1_custom_slot = ship_airplane_launcher_2
-					mid_2_custom_slot = ship_secondaries_2
-					mid_3_custom_slot = ship_secondaries_2
-					rear_1_custom_slot = ship_anti_air_2
+					fixed_ship_secondaries_slot = three_152_Richelieu_battery_equipment
+					fixed_ship_armor_slot = ship_armor_bb_3
+					front_1_custom_slot = Richelieu_class_battery_equipment
+					mid_1_custom_slot = ship_anti_air_1
+					mid_2_custom_slot = two_152_Richelieu_battery_equipment
+					mid_3_custom_slot = empty
+					rear_1_custom_slot = ship_airplane_launcher_2
 				}
 			}
 			hidden_effect = { 
@@ -1192,19 +1734,18 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 		}
 	}
 	
-	FRA_Richelieu_II_complete_decision = { #黎塞留三联装主炮方案
+	FRA_Richelieu_construction_decision = { #黎塞留造舰决议
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
-			has_tech = improved_ship_hull_heavy
-			has_tech = improved_heavy_battery
-			has_tech = improved_secondary_battery
-			has_tech = antiair1
-			has_tech = improved_fire_control_system
-			has_tech = decimetric_radar
-			has_tech = improved_airplane_launcher
+			has_country_flag = FRA_Richelieu_I_complete
+			or = {
+				num_of_available_naval_factories > 20
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_battleship_is_being_built_flag }
 		}
 
 		cost = 0
@@ -1216,31 +1757,203 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_PN-196_complete
-				has_country_flag = FRA_Richelieu_Enable
-				has_country_flag = FRA_Triple_turret_of_main_gun_Enable
-				NOT = { has_country_flag = FRA_Richelieu_II_complete }
+				has_country_flag = FRA_PN-196_Enable
+				NOT = { 
+					has_country_flag = FRA_Richelieu_launched
+				}
+			}
+		}
+		
+		days_remove = 360
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.40
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = A_battleship_is_being_built_flag
+				days = 360
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+			14 = {
+				custom_effect_tooltip = FRA_Richelieu_tt
+			}
+			hidden_effect = { 
+				load_oob = "FRA_Richelieu"
+				set_country_flag = FRA_Richelieu_launched
+				news_event = { id = fn_news.1 }
+			}
+		}
+	}
+	
+	FRA_Jean_Bart_I_complete_decision = { #让巴尔（四联装主炮）方案
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_tech = improved_ship_hull_heavy
+			has_tech = Richelieu_class_battery
+			has_tech = 152_Richelieu_battery
+			has_tech = Jean_light_secondary_battery
+			has_tech = 37_auto_battery
+			has_tech = 20_Oerlikon_battery
+			has_tech = improved_fire_control_system
+			has_tech = improved_decimetric_radar
+			has_tech = improved_airplane_launcher
+			has_tech = improved_heavy_armor_scheme
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Jean_Bart_Enable
+				NOT = { has_country_flag = FRA_Jean_Bart_complete }
 			}
 		}
 
 		complete_effect = {
 			create_equipment_variant = {
-				name = "Richelieu Class"
+				name = "Jean Bart"
 				type = ship_hull_heavy_3
 				parent_version = 0
 				modules = {
-					fixed_ship_battery_slot = ship_heavy_battery_3
-					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_battery_slot = Richelieu_class_battery_equipment
+					fixed_ship_anti_air_slot = six_37_auto_battery_equipment
 					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
-					fixed_ship_radar_slot = ship_radar_1
+					fixed_ship_radar_slot = ship_radar_2
 					fixed_ship_engine_slot = heavy_ship_engine_3
-					fixed_ship_secondaries_slot = ship_secondaries_2
-					fixed_ship_armor_slot = ship_armor_bb_2
-					front_1_custom_slot = ship_heavy_battery_3
-					mid_1_custom_slot = ship_airplane_launcher_2
-					mid_2_custom_slot = ship_anti_air_2
-					mid_3_custom_slot = ship_secondaries_2
-					rear_1_custom_slot = ship_heavy_battery_3
+					fixed_ship_secondaries_slot = three_152_Richelieu_battery_equipment
+					fixed_ship_armor_slot = ship_armor_bb_3
+					front_1_custom_slot = Richelieu_class_battery_equipment
+					mid_1_custom_slot = 40x20_Oerlikon_battery_equipment
+					mid_2_custom_slot = Jean_light_secondary_battery_equipment
+					mid_3_custom_slot = Jean_light_secondary_battery_equipment
+					rear_1_custom_slot = ship_airplane_launcher_2
+				}
+			}
+			hidden_effect = { 
+				country_event = { id = fn.17 }
+			}
+		}
+	}
+	
+	FRA_Jean_Bart_construction_decision = { #让巴尔造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Jean_Bart_complete
+			or = {
+				num_of_available_naval_factories > 20
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_battleship_is_being_built_flag }
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_PN-196_Enable
+				NOT = { 
+					has_country_flag = FRA_Jean_Bart_launched
+				}
+			}
+		}
+		
+		days_remove = 360
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.40
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = A_battleship_is_being_built_flag
+				days = 360
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+			14 = {
+				custom_effect_tooltip = FRA_Jean_Bart_tt
+			}
+			hidden_effect = { 
+				load_oob = "FRA_Jean_Bart" 
+				set_country_flag = FRA_Jean_Bart_launched
+				news_event = { id = fn_news.5 }
+			}
+		}
+	}
+	
+	FRA_Clemenceau_complete_decision = { #克里蒙梭方案
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_tech = improved_ship_hull_heavy
+			has_tech = Richelieu_class_battery
+			has_tech = 152_Richelieu_battery
+			has_tech = 100_Gascogne_battery
+			has_tech = 37_auto_battery
+			has_tech = 20_Oerlikon_battery
+			has_tech = advanced_fire_control_system
+			has_tech = centimetric_radar
+			has_tech = improved_airplane_launcher
+			has_tech = improved_heavy_armor_scheme
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Clemenceau_Gascogne_Enable
+				NOT = { has_country_flag = FRA_Clemenceau_complete }
+			}
+		}
+
+		complete_effect = {
+			create_equipment_variant = {
+				name = "Clemenceau"
+				type = ship_hull_heavy_3
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = Richelieu_class_battery_equipment
+					fixed_ship_anti_air_slot = six_37_auto_battery_equipment
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+					fixed_ship_radar_slot = ship_radar_3
+					fixed_ship_engine_slot = heavy_ship_engine_3
+					fixed_ship_secondaries_slot = four_152_Richelieu_battery_equipment
+					fixed_ship_armor_slot = ship_armor_bb_3
+					front_1_custom_slot = Richelieu_class_battery_equipment
+					mid_1_custom_slot = 40x20_Oerlikon_battery_equipment
+					mid_2_custom_slot = three_100_Gascogne_battery_equipment
+					mid_3_custom_slot = three_100_Gascogne_battery_equipment
+					rear_1_custom_slot = ship_airplane_launcher_2
 				}
 			}
 			hidden_effect = { 
@@ -1249,19 +1962,22 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 		}
 	}
 	
-	FRA_Orleans_I_complete_decision = { #奥尔良四联装主炮方案
+	FRA_Gascogne_complete_decision = { #加斯科涅方案
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
 			has_tech = improved_ship_hull_heavy
-			has_tech = improved_heavy_battery
-			has_tech = improved_secondary_battery
-			has_tech = antiair1
-			has_tech = improved_fire_control_system
-			has_tech = decimetric_radar
+			has_tech = Richelieu_class_battery
+			has_tech = 152_Alsace_battery
+			has_tech = 100_Gascogne_battery
+			has_tech = 37_auto_battery
+			has_tech = 20_Oerlikon_battery
+			has_tech = advanced_fire_control_system
+			has_tech = centimetric_radar
 			has_tech = improved_airplane_launcher
+			has_tech = improved_heavy_armor_scheme
 		}
 
 		cost = 0
@@ -1273,31 +1989,29 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_PN-196_complete
-				has_country_flag = FRA_Orleans_Enable
-				has_country_flag = FRA_Quadruple_turret_of_main_gun_Enable
-				NOT = { has_country_flag = FRA_Orleans_I_complete }
+				has_country_flag = FRA_Clemenceau_Gascogne_Enable
+				NOT = { has_country_flag = FRA_Gascogne_complete }
 			}
 		}
 
 		complete_effect = {
 			create_equipment_variant = {
-				name = "Orleans Class"
+				name = "Gascogne"
 				type = ship_hull_heavy_3
 				parent_version = 0
 				modules = {
-					fixed_ship_battery_slot = ship_heavy_battery_3
-					fixed_ship_anti_air_slot = ship_anti_air_2
-					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
-					fixed_ship_radar_slot = ship_radar_1
+					fixed_ship_battery_slot = Richelieu_class_battery_equipment
+					fixed_ship_anti_air_slot = eight_37_auto_battery_equipment
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+					fixed_ship_radar_slot = ship_radar_3
 					fixed_ship_engine_slot = heavy_ship_engine_3
-					fixed_ship_secondaries_slot = ship_secondaries_2
-					fixed_ship_armor_slot = ship_armor_bc_2
-					front_1_custom_slot = ship_heavy_battery_3
+					fixed_ship_secondaries_slot = three_152_Alsace_battery_equipment
+					fixed_ship_armor_slot = ship_armor_bb_3
+					front_1_custom_slot = 40x20_Oerlikon_battery_equipment
 					mid_1_custom_slot = ship_airplane_launcher_2
-					mid_2_custom_slot = ship_secondaries_2
-					mid_3_custom_slot = ship_secondaries_2
-					rear_1_custom_slot = ship_anti_air_2
+					mid_2_custom_slot = four_100_Gascogne_battery_equipment
+					mid_3_custom_slot = four_100_Gascogne_battery_equipment
+					rear_1_custom_slot = Richelieu_class_battery_equipment
 				}
 			}
 			hidden_effect = { 
@@ -1306,20 +2020,18 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 		}
 	}
 	
-	
-	FRA_Orleans_II_complete_decision = { #奥尔良三联装主炮方案
+	FRA_Clemenceau_construction_decision = { #克里蒙梭造舰决议
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
-			has_tech = improved_ship_hull_heavy
-			has_tech = improved_heavy_battery
-			has_tech = improved_secondary_battery
-			has_tech = antiair1
-			has_tech = improved_fire_control_system
-			has_tech = decimetric_radar
-			has_tech = improved_airplane_launcher
+			has_country_flag = FRA_Clemenceau_complete
+			or = {
+				num_of_available_naval_factories > 20
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_battleship_is_being_built_flag }
 		}
 
 		cost = 0
@@ -1331,52 +2043,51 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_PN-196_complete
-				has_country_flag = FRA_Orleans_Enable
-				has_country_flag = FRA_Triple_turret_of_main_gun_Enable
-				NOT = { has_country_flag = FRA_Orleans_II_complete }
-			}
-		}
-
-		complete_effect = {
-			create_equipment_variant = {
-				name = "Orleans Class"
-				type = ship_hull_heavy_3
-				parent_version = 0
-				modules = {
-					fixed_ship_battery_slot = ship_heavy_battery_3
-					fixed_ship_anti_air_slot = ship_anti_air_2
-					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
-					fixed_ship_radar_slot = ship_radar_1
-					fixed_ship_engine_slot = heavy_ship_engine_3
-					fixed_ship_secondaries_slot = ship_secondaries_2
-					fixed_ship_armor_slot = ship_armor_bc_2
-					front_1_custom_slot = ship_heavy_battery_3
-					mid_1_custom_slot = ship_airplane_launcher_2
-					mid_2_custom_slot = ship_anti_air_2
-					mid_3_custom_slot = ship_secondaries_2
-					rear_1_custom_slot = ship_heavy_battery_3
+				has_country_flag = FRA_Clemenceau_Gascogne_Enable
+				NOT = { 
+					has_country_flag = FRA_Clemenceau_launched
 				}
 			}
+		}
+		
+		days_remove = 360
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.40
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = A_battleship_is_being_built_flag
+				days = 360
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+			14 = {
+				custom_effect_tooltip = FRA_Clemenceau_tt
+			}
 			hidden_effect = { 
-				country_event = { id = fn.12 }
+				load_oob = "FRA_Clemenceau" 
+				set_country_flag = FRA_Clemenceau_launched
+				news_event = { id = fn_news.7 }
 			}
 		}
 	}
 	
-	FRA_Jean_Bart_I_complete_decision = { #让巴尔（四联装主炮）
+	FRA_Gascogne_construction_decision = { #加斯科涅造舰决议
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
-			has_tech = improved_ship_hull_heavy
-			has_tech = improved_heavy_battery
-			has_tech = dp_secondary_battery
-			has_tech = antiair2
-			has_tech = improved_fire_control_system
-			has_tech = improved_decimetric_radar
-			has_tech = improved_airplane_launcher
+			has_country_flag = FRA_Gascogne_complete
+			or = {
+				num_of_available_naval_factories > 20
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_battleship_is_being_built_flag }
 		}
 
 		cost = 0
@@ -1388,92 +2099,35 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_Jean_Bart_Enable
-				has_country_flag = FRA_Quadruple_turret_of_main_gun_Enable
-				has_country_flag = FRA_Jean_Bart_complete
-				NOT = { has_country_flag = FRA_Jean_Bart }
-			}
-		}
-
-		complete_effect = {
-			create_equipment_variant = {
-				name = "Jean Bart"
-				type = ship_hull_heavy_3
-				parent_version = 0
-				modules = {
-					fixed_ship_battery_slot = ship_heavy_battery_3
-					fixed_ship_anti_air_slot = ship_anti_air_3
-					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
-					fixed_ship_radar_slot = ship_radar_2
-					fixed_ship_engine_slot = heavy_ship_engine_3
-					fixed_ship_secondaries_slot = dp_ship_secondaries
-					fixed_ship_armor_slot = ship_armor_bb_2
-					front_1_custom_slot = ship_heavy_battery_3
-					mid_1_custom_slot = ship_airplane_launcher_2
-					mid_2_custom_slot = dp_ship_secondaries
-					mid_3_custom_slot = dp_ship_secondaries
-					rear_1_custom_slot = ship_anti_air_3
+				has_country_flag = FRA_Clemenceau_Gascogne_Enable
+				NOT = { 
+					has_country_flag = FRA_Gascogne_launched
 				}
 			}
-			hidden_effect = { 
-				country_event = { id = fn.18 }
-			}
 		}
-	}
-	
-	FRA_Jean_Bart_II_complete_decision = { #让巴尔（三联装主炮）
-
-		icon = generic_ignite_civil_war
-
-		available = {
-			original_tag = FRA
-			has_tech = improved_ship_hull_heavy
-			has_tech = improved_heavy_battery
-			has_tech = dp_secondary_battery
-			has_tech = antiair2
-			has_tech = improved_fire_control_system
-			has_tech = improved_decimetric_radar
-			has_tech = improved_airplane_launcher
+		
+		days_remove = 360
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.40
 		}
-
-		cost = 0
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		visible = {
-			original_tag = FRA
-			FRA = {
-				has_country_flag = FRA_Jean_Bart_Enable
-				has_country_flag = FRA_Triple_turret_of_main_gun_Enable
-				has_country_flag = FRA_Jean_Bart_complete
-				NOT = { has_country_flag = FRA_Jean_Bart }
-			}
-		}
-
+		
 		complete_effect = {
-			create_equipment_variant = {
-				name = "Jean Bart"
-				type = ship_hull_heavy_3
-				parent_version = 0
-				modules = {
-					fixed_ship_battery_slot = ship_heavy_battery_3
-					fixed_ship_anti_air_slot = ship_anti_air_3
-					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
-					fixed_ship_radar_slot = ship_radar_2
-					fixed_ship_engine_slot = heavy_ship_engine_3
-					fixed_ship_secondaries_slot = dp_ship_secondaries
-					fixed_ship_armor_slot = ship_armor_bb_2
-					front_1_custom_slot = ship_heavy_battery_3
-					mid_1_custom_slot = ship_anti_air_3
-					mid_2_custom_slot = dp_ship_secondaries
-					mid_3_custom_slot = ship_airplane_launcher_2
-					rear_1_custom_slot = ship_heavy_battery_3
-				}
+			set_country_flag = {
+				flag = A_battleship_is_being_built_flag
+				days = 360
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+			14 = {
+				custom_effect_tooltip = FRA_Gascogne_tt
 			}
 			hidden_effect = { 
-				country_event = { id = fn.18 }
+				load_oob = "FRA_Gascogne" 
+				set_country_flag = FRA_Gascogne_launched
+				news_event = { id = fn_news.8 }
 			}
 		}
 	}
@@ -1486,7 +2140,7 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 			original_tag = FRA
 		}
 
-		cost = 100
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -1497,44 +2151,7 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 			FRA = {
 				has_country_flag = FRA_Alsace_Enable
 				NOT = {
-					has_tech = advanced_ship_hull_heavy
-				}
-			}
-		}
-		
-		days_remove = 150
-		
-		modifier = {
-			civilian_factory_use = 4
-		}
-
-		remove_effect = {
-			set_technology = {
-				advanced_ship_hull_heavy = 1
-			}
-		}
-	}
-	
-	FRA_Alsace_armor_decision = { #阿尔萨斯船体装甲
-
-		icon = generic_ignite_civil_war
-
-		available = {
-			original_tag = FRA
-		}
-
-		cost = 80
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		visible = {
-			original_tag = FRA
-			FRA = {
-				has_country_flag = FRA_Alsace_armor
-				NOT = {
-					has_tech = improved_heavy_armor_scheme
+					has_tech = Alsace_hull
 				}
 			}
 		}
@@ -1542,17 +2159,18 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 		days_remove = 120
 		
 		modifier = {
-			civilian_factory_use = 2
+			research_speed_factor = -0.20
 		}
 
 		remove_effect = {
 			set_technology = {
-				improved_heavy_armor_scheme = 1
+				Alsace_hull = 1
+				belt_350mm_deck_170mm_armor = 1
 			}
 		}
 	}
 	
-	FRA_Alsace_main_gun_decision = { #阿尔萨斯主炮
+	FRA_4x380_50_battery_decision = { #380mm/50 Mle 1940
 
 		icon = generic_ignite_civil_war
 
@@ -1560,7 +2178,7 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 			original_tag = FRA
 		}
 
-		cost = 100
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -1569,39 +2187,463 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_Alsace_main_gun
+				has_country_flag = FRA_Alsace_Enable
 				NOT = {
-					has_tech = advanced_heavy_battery
+					has_tech = 4x380_50_battery
 				}
 			}
 		}
 		
-		days_remove = 150
+		days_remove = 120
 		
 		modifier = {
-			civilian_factory_use = 3
+			research_speed_factor = -0.20
 		}
 
 		remove_effect = {
 			set_technology = {
-				advanced_heavy_battery = 1
+				4x380_50_battery = 1
 			}
 		}
 	}
 	
-	FRA_Alsace_I_complete_decision = { #阿尔萨斯（四联装主炮）
+	FRA_Alsace_I_complete_decision = { #阿尔萨斯（四联装主炮）方案
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
-			has_tech = advanced_ship_hull_heavy
-			has_tech = improved_heavy_armor_scheme
-			has_tech = advanced_heavy_battery
-			has_tech = dp_secondary_battery
-			has_tech = antiair3
+			has_tech = Alsace_hull
+			has_tech = 4x380_50_battery
+			has_tech = 152_Alsace_battery
+			has_tech = 100_Alsace_battery
+			has_tech = 37_auto_battery
+			has_tech = 20_Oerlikon_battery
 			has_tech = advanced_fire_control_system
-			has_tech = centimetric_radar
+			has_tech = advanced_centimetric_radar
+			has_tech = improved_airplane_launcher
+			has_tech = belt_350mm_deck_170mm_armor
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Alsace_Enable
+				NOT = { has_country_flag = FRA_Alsace_complete }
+			}
+		}
+
+		complete_effect = {
+			create_equipment_variant = {
+				name = "Alsace Class"
+				type = ship_hull_heavy_5
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = 4x380_50_battery_equipment
+					fixed_ship_anti_air_slot = six_37_auto_battery_equipment
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+					fixed_ship_radar_slot = ship_radar_4
+					fixed_ship_engine_slot = heavy_ship_engine_4
+					fixed_ship_secondaries_slot = three_152_Alsace_battery_equipment
+					fixed_ship_armor_slot = belt_350mm_deck_170mm_armor_equipment
+					front_1_custom_slot = 4x380_50_battery_equipment
+					front_2_custom_slot = six_37_auto_battery_equipment
+					mid_1_custom_slot = ship_airplane_launcher_2
+					mid_2_custom_slot = six_100_Alsace_battery_equipment
+					mid_3_custom_slot = six_100_Alsace_battery_equipment
+					rear_1_custom_slot = 4x380_50_battery_equipment
+					rear_2_custom_slot = 60x20_Oerlikon_battery_equipment
+				}
+			}
+			hidden_effect = { 
+				country_event = { id = fn.24 }
+				set_country_flag = FRA_Bourgogne_Enable
+			}
+		}
+	}
+	
+	FRA_Alsace_construction_decision = { #阿尔萨斯造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Alsace_complete
+			has_country_flag = FRA_Gascogne_launched
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_battleship_is_being_built_flag }
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Alsace_Enable
+				NOT = { 
+					has_country_flag = FRA_Alsace_launched
+				}
+			}
+		}
+		
+		days_remove = 400
+
+		modifier = {
+			industrial_capacity_dockyard = -0.40
+		}
+		
+		complete_effect = {
+			set_country_flag = FRA_Alsace_production
+			set_country_flag = {
+				flag = A_battleship_is_being_built_flag
+				days = 400
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+			14 = {
+				custom_effect_tooltip = FRA_Alsace_tt
+			}
+			hidden_effect = { 
+				load_oob = "FRA_Alsace" 
+				set_country_flag = FRA_Alsace_launched
+				news_event = { id = fn_news.10 }
+			}
+		}
+	}
+	
+	FRA_Normandie_construction_decision = { #诺曼底造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Alsace_complete
+			has_country_flag = FRA_Alsace_production
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_battleship_is_being_built_flag }
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Alsace_Enable
+				NOT = { 
+					has_country_flag = FRA_Normandie_launched
+				}
+			}
+		}
+		
+		days_remove = 400
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.40
+		}
+		
+		complete_effect = {
+			set_country_flag = FRA_Normandie_production
+			set_country_flag = {
+				flag = A_battleship_is_being_built_flag
+				days = 400
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+			14 = {
+				custom_effect_tooltip = FRA_Normandie_tt
+			}
+			hidden_effect = { 
+				load_oob = "FRA_Normandie" 
+				set_country_flag = FRA_Normandie_launched
+			}
+		}
+	}
+	
+	FRA_Flandre_construction_decision = { #佛兰德造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Alsace_complete
+			has_country_flag = FRA_Normandie_production
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_battleship_is_being_built_flag }
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Alsace_Enable
+				NOT = { 
+					has_country_flag = FRA_Flandre_launched
+				}
+			}
+		}
+		
+		days_remove = 400
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.40
+		}
+		
+		complete_effect = {
+			set_country_flag = FRA_Flandre_production
+			set_country_flag = {
+				flag = A_battleship_is_being_built_flag
+				days = 400
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+			14 = {
+				custom_effect_tooltip = FRA_Flandre_tt
+			}
+			hidden_effect = { 
+				load_oob = "FRA_Flandre" 
+				set_country_flag = FRA_Flandre_launched
+			}
+		}
+	}
+	
+	FRA_Bourgogne_complete_decision = { #勃艮第方案
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_tech = Alsace_hull
+			has_tech = 4x380_50_battery
+			has_tech = 3x152_55_1942_battery
+			has_tech = 127_republique_battery
+			has_tech = 57_antiair_battery
+			has_tech = 20_Oerlikon_battery
+			has_tech = advanced_fire_control_system
+			has_tech = ship_radar_1944
+			has_tech = belt_350mm_deck_170mm_armor
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Alsace_complete
+				NOT = { has_country_flag = FRA_Bourgogne_complete }
+			}
+		}
+
+		complete_effect = {
+			create_equipment_variant = {
+				name = "Bourgogne"
+				type = ship_hull_heavy_5
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = 4x380_50_battery_equipment
+					fixed_ship_anti_air_slot = six_57_antiair_battery_equipment
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+					fixed_ship_radar_slot = ship_radar_1944_equipment
+					fixed_ship_engine_slot = heavy_ship_engine_4
+					fixed_ship_secondaries_slot = 3x152_55_1942_battery_equipment
+					fixed_ship_armor_slot = belt_350mm_deck_170mm_armor_equipment
+					front_1_custom_slot = 4x380_50_battery_equipment
+					front_2_custom_slot = six_57_antiair_battery_equipment
+					mid_1_custom_slot = 40x20_Oerlikon_battery_equipment
+					mid_2_custom_slot = four_127_republique_battery_equipment
+					mid_3_custom_slot = four_127_republique_battery_equipment
+					rear_1_custom_slot = 4x380_50_battery_equipment
+					rear_2_custom_slot = 24x20_Oerlikon_battery_equipment
+				}
+			}
+			hidden_effect = { 
+				set_country_flag = FRA_Bourgogne_complete
+			}
+		}
+	}
+	
+	FRA_Bourgogne_construction_decision = { #勃艮第造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Bourgogne_complete
+			has_country_flag = FRA_Flandre_production
+			has_country_flag = FRA_Alsace_launched
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_battleship_is_being_built_flag }
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Alsace_Enable
+				NOT = { 
+					has_country_flag = FRA_Bourgogne_launched
+				}
+			}
+		}
+		
+		days_remove = 400
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.40
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = A_battleship_is_being_built_flag
+				days = 400
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+			14 = {
+				custom_effect_tooltip = FRA_Bourgogne_tt
+			}
+			hidden_effect = { 
+				load_oob = "FRA_Bourgogne" 
+				set_country_flag = FRA_Bourgogne_launched
+			}
+		}
+	}
+	
+	FRA_Saintess_hull_decision = { #圣女级船体
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Saintess_Enable
+				NOT = {
+					has_tech = large_cruiser
+				}
+			}
+		}
+		
+		days_remove = 120
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				large_cruiser = 1
+			}
+		}
+	}
+	
+	FRA_4x305_50_1940_battery_decision = { #305mm/50 Mle 1940
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Saintess_Enable
+				NOT = {
+					has_tech = 4x305_50_1940_battery
+				}
+			}
+		}
+		
+		days_remove = 120
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				4x305_50_1940_battery = 1
+			}
+		}
+	}
+
+	FRA_Saintess_complete_decision = { #圣女级（四联装主炮）方案
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_tech = large_cruiser
+			has_tech = 4x305_50_1940_battery
+			has_tech = 152_Alsace_battery
+			has_tech = 100_Alsace_battery
+			has_tech = 37_auto_battery
+			has_tech = 20_Oerlikon_battery
+			has_tech = advanced_fire_control_system
+			has_tech = advanced_centimetric_radar
 			has_tech = improved_airplane_launcher
 		}
 
@@ -1614,52 +2656,51 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_Quadruple_turret_of_main_gun_Enable
-				has_country_flag = FRA_Alsace_programme_complete
-				NOT = { has_country_flag = FRA_Alsace }
+				has_country_flag = FRA_Saintess_enable
+				NOT = { has_country_flag = FRA_Saintess_complete }
 			}
 		}
 
 		complete_effect = {
 			create_equipment_variant = {
-				name = "Alsace Class"
-				type = ship_hull_heavy_4
+				name = "Saintess Class"
+				type = large_cruiser_equipments
 				parent_version = 0
 				modules = {
-					fixed_ship_battery_slot = ship_heavy_battery_3
-					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_battery_slot = 4x305_50_1940_battery_equipment
+					fixed_ship_anti_air_slot = four_37_auto_battery_equipment
 					fixed_ship_fire_control_system_slot = ship_fire_control_system_3
-					fixed_ship_radar_slot = ship_radar_3
-					fixed_ship_engine_slot = heavy_ship_engine_4
-					fixed_ship_secondaries_slot = dp_ship_secondaries
-					fixed_ship_armor_slot = ship_armor_bb_3
-					front_1_custom_slot = ship_heavy_battery_3
-					mid_1_custom_slot = ship_heavy_battery_3
-					mid_2_custom_slot = dp_ship_secondaries
-					mid_3_custom_slot = dp_ship_secondaries
-					rear_1_custom_slot = ship_anti_air_3
+					fixed_ship_radar_slot = ship_radar_4
+					fixed_ship_engine_slot = 170000hp_engine_equipment
+					fixed_ship_secondaries_slot = four_152_Alsace_battery_equipment
+					fixed_ship_armor_slot = Saintess_armor_equipment
+					front_1_custom_slot = 4x305_50_1940_battery_equipment
+					front_2_custom_slot = four_37_auto_battery_equipment
+					mid_1_custom_slot = ship_airplane_launcher_2
+					mid_2_custom_slot = four_100_Alsace_battery_equipment
+					mid_3_custom_slot = four_100_Alsace_battery_equipment
+					rear_1_custom_slot = 4x305_50_1940_battery_equipment
+					rear_2_custom_slot = 40x20_Oerlikon_battery_equipment
 				}
 			}
 			hidden_effect = { 
-				country_event = { id = fn.25 }
+				country_event = { id = fn.115 }
 			}
 		}
 	}
 	
-	FRA_Alsace_II_complete_decision = { #阿尔萨斯（三联装主炮）
+	FRA_Jean_Darc_construction_decision = { #贞德造舰决议
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
-			has_tech = advanced_ship_hull_heavy
-			has_tech = improved_heavy_armor_scheme
-			has_tech = advanced_heavy_battery
-			has_tech = dp_secondary_battery
-			has_tech = antiair3
-			has_tech = advanced_fire_control_system
-			has_tech = centimetric_radar
-			has_tech = improved_airplane_launcher
+			has_country_flag = FRA_Saintess_complete
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_battleship_is_being_built_flag }
 		}
 
 		cost = 0
@@ -1671,41 +2712,102 @@ FRA_PN-196_programme_categorie = { #PN-196方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_Triple_turret_of_main_gun_Enable
-				has_country_flag = FRA_Alsace_programme_complete
-				NOT = { has_country_flag = FRA_Alsace }
-			}
-		}
-
-		complete_effect = {
-			create_equipment_variant = {
-				name = "Alsace Class"
-				type = ship_hull_heavy_4
-				parent_version = 0
-				modules = {
-					fixed_ship_battery_slot = ship_heavy_battery_4
-					fixed_ship_anti_air_slot = ship_anti_air_3
-					fixed_ship_fire_control_system_slot = ship_fire_control_system_3
-					fixed_ship_radar_slot = ship_radar_3
-					fixed_ship_engine_slot = heavy_ship_engine_4
-					fixed_ship_secondaries_slot = dp_ship_secondaries
-					fixed_ship_armor_slot = ship_armor_bb_3
-					front_1_custom_slot = ship_heavy_battery_4
-					mid_1_custom_slot = ship_heavy_battery_4
-					mid_2_custom_slot = dp_ship_secondaries
-					mid_3_custom_slot = dp_ship_secondaries
-					rear_1_custom_slot = ship_anti_air_3
+				has_country_flag = FRA_Saintess_Enable
+				NOT = { 
+					has_country_flag = FRA_Jean_Darc_launched
 				}
 			}
-			hidden_effect = { 
-				country_event = { id = fn.25 }
+		}
+		
+		days_remove = 340
+
+		modifier = {
+			industrial_capacity_dockyard = -0.40
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = FRA_Jean_Darc_production
 			}
+			set_country_flag = {
+				flag = A_battleship_is_being_built_flag
+				days = 340
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Jean_Darc_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Jean_Darc" 
+					set_country_flag = FRA_Jean_Darc_launched
+					news_event = { id = fn_news.14 }
+				}
+		}
+	}
+	
+	FRA_Pauline_construction_decision = { #波丽娜造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Saintess_complete
+			has_country_flag = FRA_Jean_Darc_production
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_battleship_is_being_built_flag }
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Saintess_Enable
+				NOT = { 
+					has_country_flag = FRA_Pauline_launched
+				}
+			}
+		}
+		
+		days_remove = 340
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.40
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = A_battleship_is_being_built_flag
+				days = 340
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Pauline_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Pauline" 
+					set_country_flag = FRA_Pauline_launched
+					news_event = { id = fn_news.18 }
+				}
 		}
 	}
 }
 
 ##################################
-FRA_Joffre_programme_categorie = { #航母方案列
+FRA_CV_categorie = { #航母方案列
 	
 	FRA_Joffre_hull_decision = { #Joffre船体
 
@@ -1713,9 +2815,12 @@ FRA_Joffre_programme_categorie = { #航母方案列
 
 		available = {
 			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Joffre_hull
+			}
 		}
 
-		cost = 150
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -1724,34 +2829,956 @@ FRA_Joffre_programme_categorie = { #航母方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_Joffre_hull
+				has_country_flag = FRA_Joffre_Enable
 				NOT = {
-					has_tech = basic_ship_hull_carrier
+					has_tech = improved_ship_hull_carrier
 				}
 			}
 		}
 		
-		days_remove = 180
+		days_remove = 120
 		
 		modifier = {
-			civilian_factory_use = 5
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
 			set_technology = {
-				basic_ship_hull_carrier = 1
+				improved_ship_hull_carrier = 1
 			}
 		}
 	}
 	
-	FRA_Joffre_complete_decision = { #霞飞号
+	FRA_Joffre_complete_decision = { #霞飞方案
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
-			has_tech = basic_ship_hull_carrier
-			has_tech = antiair1
+			has_tech = improved_ship_hull_carrier
+			has_tech = 37_auto_battery
+			has_tech = 100_Gascogne_battery
+			has_tech = improved_decimetric_radar
+			has_tech = basic_cruiser_armor_scheme
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Joffre_Enable
+				NOT = { has_country_flag = FRA_Joffre_programme_complete }
+			}
+		}
+
+		complete_effect = {
+			create_equipment_variant = {
+				name = "Joffre Class"
+				type = ship_hull_carrier_2
+				parent_version = 0
+				modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = four_37_auto_battery_equipment
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = carrier_ship_engine_2
+					fixed_ship_secondaries_slot = four_100_Gascogne_battery_equipment
+					fixed_ship_armor_slot = ship_armor_cruiser_2
+					front_1_custom_slot = ship_deck_space
+					mid_1_custom_slot = ship_deck_space
+				}
+			}
+			hidden_effect = { 
+				country_event = { id = fn.29 }
+			}
+		}
+	}
+	
+	FRA_Joffre_construction_decision = { #霞飞造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Joffre_programme_complete
+			or = {
+				num_of_available_naval_factories > 20
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_Carrier_is_being_built_flag }
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Joffre_Enable
+				NOT = { 
+					has_country_flag = FRA_Joffre_launched
+				}
+			}
+		}
+		
+		days_remove = 270
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.30
+		}
+		
+		complete_effect = {
+			set_country_flag = FRA_Joffre_production
+			set_country_flag = {
+				flag = A_Carrier_is_being_built_flag
+				days = 270
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+			14 = {
+				custom_effect_tooltip = FRA_Joffre_tt
+			}
+			hidden_effect = { 
+				load_oob = "FRA_Joffre" 
+				set_country_flag = FRA_Joffre_launched
+				news_event = { id = fn_news.19 }
+			}
+		}
+	}
+	
+	FRA_Painleve_construction_decision = { #潘勒韦造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Joffre_programme_complete
+			has_country_flag = FRA_Joffre_launched
+			or = {
+				num_of_available_naval_factories > 20
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_Carrier_is_being_built_flag }
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Joffre_Enable
+				NOT = { 
+					has_country_flag = FRA_Painleve_launched
+				}
+			}
+		}
+		
+		days_remove = 270
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.30
+		}
+		
+		complete_effect = {
+			set_country_flag = FRA_Painleve_production
+			set_country_flag = {
+				flag = A_Carrier_is_being_built_flag
+				days = 270
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+			14 = {
+				custom_effect_tooltip = FRA_Painleve_tt
+			}
+			hidden_effect = { 
+				load_oob = "FRA_Painleve" 
+				set_country_flag = FRA_Painleve_launched
+			}
+		}
+	}
+	
+	FRA_Petain_construction_decision = { #贝当造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Joffre_programme_complete
+			has_country_flag = FRA_Painleve_launched
+			or = {
+				num_of_available_naval_factories > 20
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_Carrier_is_being_built_flag }
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Joffre_Enable
+				NOT = { 
+					has_country_flag = FRA_Petain_launched
+				}
+			}
+		}
+		
+		days_remove = 270
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.30
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = A_Carrier_is_being_built_flag
+				days = 270
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+			14 = {
+				custom_effect_tooltip = FRA_Petain_tt
+			}
+			hidden_effect = { 
+				load_oob = "FRA_Petain" 
+				set_country_flag = FRA_Petain_launched
+			}
+		}
+	}
+	
+	FRA_Foch_hull_decision = { #福煦船体
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Foch_hull
+			}
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Foch_Enable
+				NOT = {
+					has_tech = advanced_ship_hull_carrier
+				}
+			}
+		}
+		
+		days_remove = 120
+		
+		modifier = {
+			research_speed_factor = -0.20
+		}
+
+		remove_effect = {
+			set_technology = {
+				advanced_ship_hull_carrier = 1
+				improved_cruiser_armor_scheme = 1
+			}
+		}
+	}
+	
+	FRA_Foch_complete_decision = { #福煦方案
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_tech = advanced_ship_hull_carrier
+			has_tech = 37_auto_battery
+			has_tech = 100_Alsace_battery
+			has_tech = advanced_centimetric_radar
+			has_tech = improved_cruiser_armor_scheme
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Foch_Enable
+				NOT = { has_country_flag = FRA_Foch_programme_complete }
+			}
+		}
+
+		complete_effect = {
+			create_equipment_variant = {
+				name = "Foch Class"
+				type = ship_hull_carrier_3
+				parent_version = 0
+				modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = eight_37_auto_battery_equipment
+					fixed_ship_radar_slot = ship_radar_4
+					fixed_ship_engine_slot = carrier_ship_engine_3
+					fixed_ship_secondaries_slot = eight_100_Alsace_battery_equipment
+					fixed_ship_armor_slot = ship_armor_cruiser_3
+					front_1_custom_slot = ship_armor_carrier_deck
+					mid_1_custom_slot = ship_deck_space
+					mid_2_custom_slot = ship_deck_space
+				}
+			}
+			hidden_effect = { 
+				country_event = { id = fn.33 }
+			}
+		}
+	}
+	
+	FRA_Foch_construction_decision = { #福煦造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Foch_programme_complete
+			has_country_flag = FRA_Petain_launched
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_Carrier_is_being_built_flag }
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Foch_Enable
+				NOT = { 
+					has_country_flag = FRA_Foch_launched
+				}
+			}
+		}
+		
+		days_remove = 300
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.30
+		}
+		
+		complete_effect = {
+			set_country_flag = FRA_Foch_production
+			set_country_flag = {
+				flag = A_Carrier_is_being_built_flag
+				days = 300
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+			14 = {
+				custom_effect_tooltip = FRA_Foch_tt
+			}
+			hidden_effect = { 
+				load_oob = "FRA_Foch" 
+				set_country_flag = FRA_Foch_launched
+				news_event = { id = fn_news.20 }
+			}
+		}
+	}
+	
+	FRA_Sully_construction_decision = { #絮利造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Foch_programme_complete
+			has_country_flag = FRA_Foch_production
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_Carrier_is_being_built_flag }
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Foch_Enable
+				NOT = { 
+					has_country_flag = FRA_Sully_launched
+				}
+			}
+		}
+		
+		days_remove = 300
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.30
+		}
+		
+		complete_effect = {
+			set_country_flag = FRA_Sully_production
+			set_country_flag = {
+				flag = A_Carrier_is_being_built_flag
+				days = 300
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+			14 = {
+				custom_effect_tooltip = FRA_Sully_tt
+			}
+			hidden_effect = { 
+				load_oob = "FRA_Sully" 
+				set_country_flag = FRA_Sully_launched
+			}
+		}
+	}
+	
+	FRA_Suffren_construction_decision = { #絮弗伦造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Foch_programme_complete
+			has_country_flag = FRA_Sully_production
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_Carrier_is_being_built_flag }
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Foch_Enable
+				NOT = { 
+					has_country_flag = FRA_Suffren_launched
+				}
+			}
+		}
+		
+		days_remove = 300
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.30
+		}
+		
+		complete_effect = {
+			set_country_flag = FRA_Suffren_production
+			set_country_flag = {
+				flag = A_Carrier_is_being_built_flag
+				days = 300
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+			14 = {
+				custom_effect_tooltip = FRA_Suffren_tt
+			}
+			hidden_effect = { 
+				load_oob = "FRA_Suffren" 
+				set_country_flag = FRA_Suffren_launched
+			}
+		}
+	}
+	
+	FRA_Turenne_construction_decision = { #杜伦尼造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Foch_programme_complete
+			has_country_flag = FRA_Suffren_production
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_Carrier_is_being_built_flag }
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Foch_Enable
+				NOT = { 
+					has_country_flag = FRA_Turenne_launched
+				}
+			}
+		}
+		
+		days_remove = 300
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.30
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = A_Carrier_is_being_built_flag
+				days = 300
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+			14 = {
+				custom_effect_tooltip = FRA_Turenne_tt
+			}
+			hidden_effect = { 
+				load_oob = "FRA_Turenne" 
+				set_country_flag = FRA_Turenne_launched
+			}
+		}
+	}
+	
+	FRA_Constitution_complete_decision = { #宪法级方案
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_tech = early_ship_hull_carrier
+			has_tech = improved_ship_hull_cruiser
+			has_tech = 37_auto_battery
+			has_tech = centimetric_radar
+			has_tech = 20_Oerlikon_battery
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Constitution_Enable
+				NOT = { has_country_flag = FRA_Constitution_programme_complete }
+			}
+		}
+
+		complete_effect = {
+			create_equipment_variant = {
+				name = "Constitution Class"
+				type = ship_hull_carrier_conversion_ca
+				parent_version = 0
+				modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = eight_37_auto_battery_equipment
+					fixed_ship_radar_slot = ship_radar_3
+					fixed_ship_engine_slot = cruiser_ship_engine_3
+					fixed_ship_anti_air_slot = 24x20_Oerlikon_battery_equipment
+				}
+			}
+			hidden_effect = { 
+				country_event = { id = fn.37 }
+			}
+		}
+	}
+	
+	FRA_Constitution_construction_part_I_decision = { #宪法级首批造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Constitution_programme_complete
+			or = {
+				num_of_available_naval_factories > 25
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_Carrier_is_being_built_flag }
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Constitution_Enable
+				NOT = { 
+					has_country_flag = FRA_Constitution_part_I_launched
+				}
+			}
+		}
+		
+		days_remove = 270
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.40
+		}
+		
+		complete_effect = {
+			set_country_flag = FRA_Constitution_part_I_production
+			set_country_flag = {
+				flag = A_Carrier_is_being_built_flag
+				days = 270
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+			14 = {
+				custom_effect_tooltip = FRA_Constitution_part_I_tt
+			}
+			hidden_effect = { 
+				load_oob = "FRA_Constitution_part_I" 
+				set_country_flag = FRA_Constitution_part_I_launched
+			}
+		}
+	}
+	
+	FRA_Constitution_construction_part_II_decision = { #宪法级第二批造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Constitution_programme_complete
+			has_country_flag = FRA_Constitution_part_I_production
+			or = {
+				num_of_available_naval_factories > 25
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_Carrier_is_being_built_flag }	
+	  }
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Constitution_Enable
+				NOT = { 
+					has_country_flag = FRA_Constitution_part_II_launched
+				}
+			}
+		}
+		
+		days_remove = 270
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.40
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = A_Carrier_is_being_built_flag
+				days = 270
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+			14 = {
+				custom_effect_tooltip = FRA_Constitution_part_II_tt
+			}
+			hidden_effect = { 
+				load_oob = "FRA_Constitution_part_II" 
+				set_country_flag = FRA_Constitution_part_II_launched
+			}
+		}
+	}
+}
+
+############################################
+FRA_CL_categorie = { #轻巡洋舰方案列
+
+	FRA_Bayard_hull_decision = { #贝亚德船体
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Bayard_Enable
+				or = {
+					NOT = {
+						has_tech = improved_ship_hull_cruiser
+					}
+					NOT = {
+						has_tech = 120000hp_engine
+					}
+				}
+			}
+		}
+		
+		days_remove = 90
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				improved_ship_hull_cruiser = 1
+				120000hp_engine = 1
+			}
+		}
+	}
+	
+	FRA_Bayard_armor_decision = { #贝亚德船体装甲
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Bayard_Enable
+				NOT = {
+					has_tech = belt_130mm_deck_57mm_armor
+				}
+			}
+		}
+		
+		days_remove = 60
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				belt_130mm_deck_57mm_armor = 1
+			}
+		}
+	}
+	
+	FRA_3x152_55_1935_SP_battery_decision = { #152mm/55 Mle 1935 SP
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Bayard_Enable
+				NOT = {
+					has_tech = 3x152_55_1935_SP_battery
+				}
+			}
+		}
+		
+		days_remove = 90
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				3x152_55_1935_SP_battery = 1
+			}
+		}
+	}
+	
+	FRA_Bayard_complete_decision = { #贝亚德设计图
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_tech = improved_ship_hull_cruiser
+			has_tech = 120000hp_engine
+			has_tech = belt_130mm_deck_57mm_armor
+			has_tech = 3x152_55_1935_SP_battery
+			has_tech = 100_Alsace_battery
+			has_tech = 37_auto_battery
+			has_tech = 20_Oerlikon_battery
+			has_tech = advanced_fire_control_system
+			has_tech = centimetric_radar
+			has_tech = improved_airplane_launcher
+			has_tech = advanced_ship_torpedo_launcher
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Bayard_Enable
+				NOT = { has_country_flag = FRA_Bayard_complete }
+			}
+		}
+
+		complete_effect = {
+			create_equipment_variant = {
+				name = "Bayard Class"
+				type = ship_hull_cruiser_3
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = 3x152_55_1935_SP_battery_equipment
+					fixed_ship_anti_air_slot = four_37_auto_battery_equipment
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+					fixed_ship_radar_slot = ship_radar_3
+					fixed_ship_engine_slot = cruiser_ship_engine_4
+					fixed_ship_secondaries_slot = four_100_Alsace_battery_equipment
+					fixed_ship_armor_slot = belt_130mm_deck_57mm_armor_equipment
+					front_1_custom_slot = 24x20_Oerlikon_battery_equipment
+					mid_1_custom_slot = ship_torpedo_3
+					mid_2_custom_slot = four_37_auto_battery_equipment
+					rear_1_custom_slot = 3x152_55_1935_SP_battery_equipment
+					rear_2_custom_slot = ship_airplane_launcher_2
+				}
+			}
+			hidden_effect = { 
+				country_event = { id = fn.54 }
+			}
+		}
+	}
+	
+	FRA_2x130_45_1935_battery_decision = { #130mm/45 Mle 1935
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_De_Grasse_Enable
+				NOT = {
+					has_tech = 2x130_45_1935_battery
+				}
+			}
+		}
+		
+		days_remove = 90
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				2x130_45_1935_battery = 1
+			}
+		}
+	}
+	
+	FRA_De_Grasse_complete_decision = { #德·格拉斯设计图
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_tech = basic_ship_hull_cruiser
+			has_tech = basic_cruiser_armor_scheme
+			has_tech = improved_ship_torpedo_launcher
+			has_tech = 2x130_45_1935_battery
+			has_tech = 100_Gascogne_battery
+			has_tech = 37_auto_battery
+			has_tech = 20_Oerlikon_battery
+			has_tech = improved_fire_control_system
 			has_tech = improved_decimetric_radar
 		}
 
@@ -1764,37 +3791,450 @@ FRA_Joffre_programme_categorie = { #航母方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_Joffre_programme_complete
-				NOT = { has_country_flag = FRA_Joffre }
+				has_country_flag = FRA_De_Grasse_Enable
+				NOT = { has_country_flag = FRA_De_Grasse_complete }
 			}
 		}
 
 		complete_effect = {
 			create_equipment_variant = {
-				name = "Joffre Class"
-				type = ship_hull_carrier_1
+				name = "De Grasse Class"
+				type = ship_hull_cruiser_2
 				parent_version = 0
 				modules = {
-					fixed_ship_deck_slot_1 = ship_deck_space
-					fixed_ship_deck_slot_2 = ship_deck_space
-					fixed_ship_anti_air_slot = ship_anti_air_2
-					fixed_ship_radar_slot = ship_radar_1
-					fixed_ship_engine_slot = carrier_ship_engine_2
-					fixed_ship_secondaries_slot = ship_secondaries_1
-					front_1_custom_slot = ship_deck_space
+					fixed_ship_battery_slot = 2x130_45_1935_battery_equipment
+					fixed_ship_anti_air_slot = six_37_auto_battery_equipment
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = cruiser_ship_engine_2
+					fixed_ship_secondaries_slot = three_100_Gascogne_battery_equipment
+					fixed_ship_armor_slot = ship_armor_cruiser_2
+					front_1_custom_slot = 24x20_Oerlikon_battery_equipment
+					mid_1_custom_slot = ship_torpedo_2
+					mid_2_custom_slot = three_100_Gascogne_battery_equipment
+					rear_1_custom_slot = 2x130_45_1935_battery_equipment
 				}
 			}
 			hidden_effect = { 
-				country_event = { id = fn.29 }
+				country_event = { id = fn.50 }
 			}
+		}
+	}
+
+	FRA_De_Grasse_construction_decision = { #德·格拉斯造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_De_Grasse_complete
+			or = {
+				num_of_available_naval_factories > 20
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_batch_of_light_hulls_are_being_built_flag }	
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_De_Grasse_Enable
+				NOT = { 
+					has_country_flag = FRA_De_Grasse_launched
+				}
+			}
+		}
+		
+		days_remove = 240
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.50
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = A_batch_of_light_hulls_are_being_built_flag
+				days = 240
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_De_Grasse_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_De_Grasse" 
+					set_country_flag = FRA_De_Grasse_launched
+				}
+		}
+	}
+	
+	FRA_Bayard_part_I_construction_decision = { #贝亚德造舰决议——第一批
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Bayard_complete
+			or = {
+				num_of_available_naval_factories > 25
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_batch_of_light_hulls_are_being_built_flag }	
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Bayard_Enable
+				NOT = { 
+					has_country_flag = FRA_Bayard_part_I_launched
+				}
+			}
+		}
+		
+		days_remove = 300
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.30
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = FRA_Bayard_part_I_production
+			}
+			set_country_flag = {
+				flag = A_batch_of_light_hulls_are_being_built_flag
+				days = 300
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Bayard_part_I_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Bayard_part_I" 
+					set_country_flag = FRA_Bayard_part_I_launched
+				}
+		}
+	}
+	
+	FRA_Bayard_part_II_construction_decision = { #贝亚德造舰决议——第二批
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Bayard_complete
+			has_country_flag = FRA_Bayard_part_I_production
+			or = {
+				num_of_available_naval_factories > 25
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_batch_of_light_hulls_are_being_built_flag }	
+	  }
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Bayard_Enable
+				NOT = { 
+					has_country_flag = FRA_Bayard_part_II_launched
+				}
+			}
+		}
+		
+		days_remove = 300
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.30
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = FRA_Bayard_part_II_production
+			}
+			set_country_flag = {
+				flag = A_batch_of_light_hulls_are_being_built_flag
+				days = 300
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Bayard_part_II_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Bayard_part_II" 
+					set_country_flag = FRA_Bayard_part_II_launched
+				}
+		}
+	}
+	
+	FRA_Bayard_part_III_construction_decision = { #贝亚德造舰决议——第三批
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Bayard_complete
+			has_country_flag = FRA_Bayard_part_II_production
+			has_country_flag = FRA_Bayard_part_I_launched
+			or = {
+				num_of_available_naval_factories > 25
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_batch_of_light_hulls_are_being_built_flag }	
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Bayard_Enable
+				NOT = { 
+					has_country_flag = FRA_Bayard_part_III_launched
+				}
+			}
+		}
+		
+		days_remove = 300
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.30
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = FRA_Bayard_part_III_production
+			}
+			set_country_flag = {
+				flag = A_batch_of_light_hulls_are_being_built_flag
+				days = 300
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Bayard_part_III_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Bayard_part_III" 
+					set_country_flag = FRA_Bayard_part_III_launched
+				}
+		}
+	}
+	
+	FRA_Bayard_part_IV_construction_decision = { #贝亚德造舰决议——第四批
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Bayard_complete
+			has_country_flag = FRA_Bayard_part_III_production
+			has_country_flag = FRA_Bayard_part_II_production
+			or = {
+				num_of_available_naval_factories > 25
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_batch_of_light_hulls_are_being_built_flag }	
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Bayard_Enable
+				NOT = { 
+					has_country_flag = FRA_Bayard_part_IV_launched
+				}
+			}
+		}
+		
+		days_remove = 300
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.30
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = FRA_Bayard_part_IV_production
+			}
+			set_country_flag = {
+				flag = A_batch_of_light_hulls_are_being_built_flag
+				days = 300
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Bayard_part_IV_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Bayard_part_IV" 
+					set_country_flag = FRA_Bayard_part_IV_launched
+				}
+		}
+	}
+	
+	FRA_Bayard_part_V_construction_decision = { #贝亚德造舰决议——第五批
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Bayard_complete
+			has_country_flag = FRA_Bayard_part_IV_production
+			has_country_flag = FRA_Bayard_part_III_launched
+			or = {
+				num_of_available_naval_factories > 25
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_batch_of_light_hulls_are_being_built_flag }	
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Bayard_Enable
+				NOT = { 
+					has_country_flag = FRA_Bayard_part_V_launched
+				}
+			}
+		}
+		
+		days_remove = 300
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.30
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = FRA_Bayard_part_V_production
+			}
+			set_country_flag = {
+				flag = A_batch_of_light_hulls_are_being_built_flag
+				days = 300
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Bayard_part_V_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Bayard_part_V" 
+					set_country_flag = FRA_Bayard_part_V_launched
+				}
+		}
+	}
+	
+	FRA_Bayard_part_VI_construction_decision = { #贝亚德造舰决议——第六批
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Bayard_complete
+			has_country_flag = FRA_Bayard_part_V_production
+			has_country_flag = FRA_Bayard_part_IV_launched
+			or = {
+				num_of_available_naval_factories > 25
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_batch_of_light_hulls_are_being_built_flag }	
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Bayard_Enable
+				NOT = { 
+					has_country_flag = FRA_Bayard_part_VI_launched
+				}
+			}
+		}
+		
+		days_remove = 300
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.30
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = A_batch_of_light_hulls_are_being_built_flag
+				days = 300
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Bayard_part_VI_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Bayard_part_VI" 
+					set_country_flag = FRA_Bayard_part_VI_launched
+				}
 		}
 	}
 }
 
 ############################################
-FRA_C5A3_programme_categorie = { #巡洋舰方案列
+FRA_CA_categorie = { #重巡洋舰方案列
 
-	FRA_C5A3_hull_decision = { #C5A3船体
+	FRA_Saint_Louis_hull_decision = { #圣路易斯船体
 
 		icon = generic_ignite_civil_war
 
@@ -1802,7 +4242,7 @@ FRA_C5A3_programme_categorie = { #巡洋舰方案列
 			original_tag = FRA
 		}
 
-		cost = 150
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -1811,31 +4251,33 @@ FRA_C5A3_programme_categorie = { #巡洋舰方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
+					has_country_flag = FRA_Saint_Louis_Enable
 				or = {
-					has_country_flag = FRA_C5A3_H_programme_Enable
-					has_country_flag = FRA_C5A3_L_programme_Enable
-				}
-				NOT = {
-					has_tech = improved_ship_hull_cruiser
+					NOT = {
+						has_tech = improved_ship_hull_cruiser
+					}
+					NOT = {
+						has_tech = 120000hp_engine
+					}
 				}
 			}
 		}
 		
-		days_remove = 180
+		days_remove = 90
 		
 		modifier = {
-			civilian_factory_use = 5
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
 			set_technology = {
-				basic_ship_hull_cruiser = 1
 				improved_ship_hull_cruiser = 1
+				120000hp_engine = 1
 			}
 		}
 	}
 	
-	FRA_C5A3_armor_decision = { #C5A3船体装甲
+	FRA_Saint_Louis_armor_decision = { #圣路易斯船体装甲
 
 		icon = generic_ignite_civil_war
 
@@ -1843,7 +4285,7 @@ FRA_C5A3_programme_categorie = { #巡洋舰方案列
 			original_tag = FRA
 		}
 
-		cost = 80
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -1852,27 +4294,27 @@ FRA_C5A3_programme_categorie = { #巡洋舰方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_C5A3_Hull_armor
+				has_country_flag = FRA_Saint_Louis_Hull_armor
 				NOT = {
-					has_tech = basic_cruiser_armor_scheme
+					has_tech = advanced_cruiser_armor_scheme
 				}
 			}
 		}
 		
-		days_remove = 150
+		days_remove = 60
 		
 		modifier = {
-			civilian_factory_use = 2
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
 			set_technology = {
-				basic_cruiser_armor_scheme = 1
+				advanced_cruiser_armor_scheme = 1
 			}
 		}
 	}
 	
-	FRA_C5A3_Main_gun_decision = { #C5A3主炮
+	FRA_Saint_Louis_battery_decision = { #203mm/55 Mle 1934
 
 		icon = generic_ignite_civil_war
 
@@ -1880,7 +4322,7 @@ FRA_C5A3_programme_categorie = { #巡洋舰方案列
 			original_tag = FRA
 		}
 
-		cost = 100
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -1889,22 +4331,22 @@ FRA_C5A3_programme_categorie = { #巡洋舰方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_C5A3_Main_gun
+				has_country_flag = FRA_Saint_Louis_Enable
 				NOT = {
-					has_tech = improved_medium_battery
+					has_tech = Saint_Louis_battery
 				}
 			}
 		}
 		
-		days_remove = 150
+		days_remove = 120
 		
 		modifier = {
-			civilian_factory_use = 2
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
 			set_technology = {
-				improved_medium_battery = 1
+				Saint_Louis_battery = 1
 			}
 		}
 	}
@@ -1917,7 +4359,7 @@ FRA_C5A3_programme_categorie = { #巡洋舰方案列
 			original_tag = FRA
 		}
 
-		cost = 50
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -1926,17 +4368,17 @@ FRA_C5A3_programme_categorie = { #巡洋舰方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_C5A3_Main_gun
+				has_country_flag = FRA_Saint_Louis_Enable
 				NOT = {
 					has_tech = basic_medium_shell
 				}
 			}
 		}
 		
-		days_remove = 80
+		days_remove = 60
 		
 		modifier = {
-			civilian_factory_use = 1
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
@@ -1946,79 +4388,23 @@ FRA_C5A3_programme_categorie = { #巡洋舰方案列
 		}
 	}
 	
-	FRA_Charles_Martel_I_complete_decision = { #查理·马特号（炮巡）
+	FRA_Saint_Louis_complete_decision = { #圣路易斯设计图
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
 			has_tech = improved_ship_hull_cruiser
-			has_tech = basic_cruiser_armor_scheme
-			has_tech = improved_medium_battery
-			has_tech = improved_secondary_battery
-			has_tech = antiair1
-			has_tech = improved_fire_control_system
-			has_tech = decimetric_radar
+			has_tech = 120000hp_engine
+			has_tech = advanced_cruiser_armor_scheme
+			has_tech = Saint_Louis_battery
+			has_tech = 100_Gascogne_battery
+			has_tech = 37_auto_battery
+			has_tech = 20_Oerlikon_battery
+			has_tech = advanced_fire_control_system
+			has_tech = centimetric_radar
 			has_tech = improved_airplane_launcher
-		}
-
-		cost = 0
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		visible = {
-			original_tag = FRA
-			FRA = {
-				has_country_flag = FRA_C5A3_H_programme_Enable
-				has_country_flag = FRA_C5A3_Secondary_artillery
-				has_country_flag = FRA_C5A3_programme_complete
-				NOT = { has_country_flag = FRA_Charles_Martel }
-			}
-		}
-
-		complete_effect = {
-			create_equipment_variant = {
-				name = "Charles Martel Class"
-				type = ship_hull_cruiser_3
-				parent_version = 0
-				modules = {
-					fixed_ship_battery_slot = ship_medium_battery_3
-					fixed_ship_anti_air_slot = ship_anti_air_2
-					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
-					fixed_ship_radar_slot = ship_radar_1
-					fixed_ship_engine_slot = cruiser_ship_engine_3
-					fixed_ship_secondaries_slot = ship_secondaries_2
-					fixed_ship_armor_slot = ship_armor_cruiser_2
-					front_1_custom_slot = ship_medium_battery_3
-					mid_1_custom_slot = ship_secondaries_2
-					mid_2_custom_slot = ship_secondaries_2
-					rear_1_custom_slot = ship_medium_battery_3
-					rear_2_custom_slot = ship_airplane_launcher_2
-				}
-			}
-			hidden_effect = { 
-				country_event = { id = fn.46 }
-			}
-		}
-	}
-	
-	FRA_Charles_Martel_II_complete_decision = { #查理·马特号（雷巡）
-
-		icon = generic_ignite_civil_war
-
-		available = {
-			original_tag = FRA
-			has_tech = improved_ship_hull_cruiser
-			has_tech = basic_cruiser_armor_scheme
-			has_tech = improved_medium_battery
-			has_tech = improved_secondary_battery
 			has_tech = advanced_ship_torpedo_launcher
-			has_tech = antiair1
-			has_tech = improved_fire_control_system
-			has_tech = decimetric_radar
-			has_tech = improved_airplane_launcher
 		}
 
 		cost = 0
@@ -2030,53 +4416,43 @@ FRA_C5A3_programme_categorie = { #巡洋舰方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_C5A3_H_programme_Enable
-				has_country_flag = FRA_C5A3_torpedo
-				has_country_flag = FRA_C5A3_programme_complete
-				NOT = { has_country_flag = FRA_Charles_Martel }
+				has_country_flag = FRA_Saint_Louis_Enable
+				NOT = { has_country_flag = FRA_Saint_Louis_complete }
 			}
 		}
 
 		complete_effect = {
 			create_equipment_variant = {
-				name = "Charles Martel Class"
+				name = "Saint Louis Class"
 				type = ship_hull_cruiser_3
 				parent_version = 0
 				modules = {
-					fixed_ship_battery_slot = ship_medium_battery_3
-					fixed_ship_anti_air_slot = ship_anti_air_2
-					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
-					fixed_ship_radar_slot = ship_radar_1
-					fixed_ship_engine_slot = cruiser_ship_engine_3
-					fixed_ship_secondaries_slot = ship_secondaries_2
-					fixed_ship_armor_slot = ship_armor_cruiser_2
-					front_1_custom_slot = ship_medium_battery_3
+					fixed_ship_battery_slot = Saint_Louis_battery_equipment
+					fixed_ship_anti_air_slot = six_37_auto_battery_equipment
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+					fixed_ship_radar_slot = ship_radar_3
+					fixed_ship_engine_slot = cruiser_ship_engine_4
+					fixed_ship_secondaries_slot = seven_100_Alsace_battery_equipment
+					fixed_ship_armor_slot = ship_armor_cruiser_4
+					front_1_custom_slot = Saint_Louis_battery_equipment
 					mid_1_custom_slot = ship_torpedo_3
-					mid_2_custom_slot = ship_secondaries_2
-					rear_1_custom_slot = ship_medium_battery_3
+					mid_2_custom_slot = 24x20_Oerlikon_battery_equipment
+					rear_1_custom_slot = Saint_Louis_battery_equipment
 					rear_2_custom_slot = ship_airplane_launcher_2
 				}
 			}
 			hidden_effect = { 
-				country_event = { id = fn.46 }
+				country_event = { id = fn.45 }
 			}
 		}
 	}
 	
-	FRA_Bayard_I_complete_decision = { #贝亚德号（炮巡）
+	FRA_Henry_IV_hull_decision = { #亨利四世船体
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
-			has_tech = improved_ship_hull_cruiser
-			has_tech = basic_cruiser_armor_scheme
-			has_tech = improved_medium_battery
-			has_tech = improved_secondary_battery
-			has_tech = antiair1
-			has_tech = improved_fire_control_system
-			has_tech = decimetric_radar
-			has_tech = improved_airplane_launcher
 		}
 
 		cost = 0
@@ -2088,149 +4464,32 @@ FRA_C5A3_programme_categorie = { #巡洋舰方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_C5A3_L_programme_Enable
-				has_country_flag = FRA_C5A3_Secondary_artillery
-				has_country_flag = FRA_C5A3_programme_complete
-				NOT = { has_country_flag = FRA_bayard }
-			}
-		}
-
-		complete_effect = {
-			create_equipment_variant = {
-				name = "Bayard Class"
-				type = ship_hull_cruiser_3
-				parent_version = 0
-				modules = {
-					fixed_ship_battery_slot = ship_light_medium_battery_3
-					fixed_ship_anti_air_slot = ship_anti_air_2
-					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
-					fixed_ship_radar_slot = ship_radar_1
-					fixed_ship_engine_slot = cruiser_ship_engine_3
-					fixed_ship_secondaries_slot = ship_secondaries_2
-					fixed_ship_armor_slot = ship_armor_cruiser_2
-					front_1_custom_slot = ship_light_medium_battery_3
-					mid_1_custom_slot = ship_anti_air_2
-					mid_2_custom_slot = ship_secondaries_2
-					rear_1_custom_slot = ship_light_medium_battery_3
-					rear_2_custom_slot = ship_airplane_launcher_2
-				}
-			}
-			hidden_effect = { 
-				country_event = { id = fn.47 }
-			}
-		}
-	}
-	
-	FRA_Bayard_II_complete_decision = { #贝亚德号（雷巡）
-
-		icon = generic_ignite_civil_war
-
-		available = {
-			original_tag = FRA
-			has_tech = improved_ship_hull_cruiser
-			has_tech = basic_cruiser_armor_scheme
-			has_tech = improved_medium_battery
-			has_tech = improved_secondary_battery
-			has_tech = advanced_ship_torpedo_launcher
-			has_tech = antiair1
-			has_tech = improved_fire_control_system
-			has_tech = decimetric_radar
-			has_tech = improved_airplane_launcher
-		}
-
-		cost = 0
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		visible = {
-			original_tag = FRA
-			FRA = {
-				has_country_flag = FRA_C5A3_L_programme_Enable
-				has_country_flag = FRA_C5A3_torpedo
-				has_country_flag = FRA_C5A3_programme_complete
-				NOT = { has_country_flag = FRA_bayard }
-			}
-		}
-
-		complete_effect = {
-			create_equipment_variant = {
-				name = "Bayard Class"
-				type = ship_hull_cruiser_3
-				parent_version = 0
-				modules = {
-					fixed_ship_battery_slot = ship_light_medium_battery_3
-					fixed_ship_anti_air_slot = ship_anti_air_2
-					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
-					fixed_ship_radar_slot = ship_radar_1
-					fixed_ship_engine_slot = cruiser_ship_engine_3
-					fixed_ship_secondaries_slot = ship_secondaries_2
-					fixed_ship_armor_slot = ship_armor_cruiser_2
-					front_1_custom_slot = ship_light_medium_battery_3
-					mid_1_custom_slot = ship_torpedo_3
-					mid_2_custom_slot = ship_anti_air_2
-					rear_1_custom_slot = ship_light_medium_battery_3
-					rear_2_custom_slot = ship_airplane_launcher_2
-				}
-			}
-			hidden_effect = { 
-				country_event = { id = fn.47 }
-			}
-		}
-	}
-	
-	FRA_C5A3_hull_decision = { #贞德船体装甲
-
-		icon = generic_ignite_civil_war
-
-		available = {
-			original_tag = FRA
-		}
-
-		cost = 80
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		visible = {
-			original_tag = FRA
-			FRA = {
-				has_country_flag = FRA_Jean_D'arc_Enable
+				has_country_flag = FRA_Henry_IV_Enable
 				NOT = {
-					has_tech = improved_cruiser_armor_scheme
+					has_tech = Henry_IV_hull
 				}
 			}
 		}
 		
-		days_remove = 100
+		days_remove = 120
 		
 		modifier = {
-			civilian_factory_use = 2
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
 			set_technology = {
-				improved_cruiser_armor_scheme = 1
+				Henry_IV_hull = 1
 			}
 		}
 	}
 	
-	FRA_Jean_D_arc_complete_decision = { #贞德号
+	FRA_Henry_IV_armor_decision = { #亨利四世船体装甲
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
-			has_tech = improved_ship_hull_cruiser
-			has_tech = improved_cruiser_armor_scheme
-			has_tech = improved_medium_battery
-			has_tech = dp_secondary_battery
-			has_tech = antiair3
-			has_tech = advanced_fire_control_system
-			has_tech = centimetric_radar
-			has_tech = improved_airplane_launcher
 		}
 
 		cost = 0
@@ -2242,34 +4501,528 @@ FRA_C5A3_programme_categorie = { #巡洋舰方案列
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_Jean_D'arc_programme_complete
-				NOT = { has_country_flag = FRA_Jean_D'arc }
+				has_country_flag = FRA_Henry_IV_Enable
+				NOT = {
+					has_tech = belt_170mm_deck_90mm_armor
+				}
+			}
+		}
+		
+		days_remove = 60
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				belt_170mm_deck_90mm_armor = 1
+			}
+		}
+	}
+	
+	FRA_3x240_55_1942_battery_decision = { #亨利四世主炮
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Henry_IV_Enable
+				NOT = {
+					has_tech = 3x240_55_1942_battery
+				}
+			}
+		}
+		
+		days_remove = 120
+		
+		modifier = {
+			research_speed_factor = -0.20
+		}
+
+		remove_effect = {
+			set_technology = {
+				3x240_55_1942_battery = 1
+			}
+		}
+	}
+	
+	FRA_Henry_IV_complete_decision = { #亨利四世设计图
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_tech = Henry_IV_hull
+			has_tech = belt_170mm_deck_90mm_armor
+			has_tech = 3x240_55_1942_battery
+			has_tech = 127_republique_battery
+			has_tech = 57_antiair_battery
+			has_tech = 20_Oerlikon_battery
+			has_tech = advanced_fire_control_system
+			has_tech = ship_radar_1944
+			has_tech = modern_ship_torpedo_launcher
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Henry_IV_Enable
+				NOT = { has_country_flag = FRA_Henry_IV_complete }
 			}
 		}
 
 		complete_effect = {
 			create_equipment_variant = {
-				name = "Jeanne D'arc Class"
-				type = ship_hull_cruiser_3
+				name = "Henry IV Class"
+				type = ship_hull_cruiser_5
 				parent_version = 0
 				modules = {
-					fixed_ship_battery_slot = ship_light_medium_battery_3
-					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_battery_slot = 3x240_55_1942_battery_equipment
+					fixed_ship_anti_air_slot = four_57_antiair_battery_equipment
 					fixed_ship_fire_control_system_slot = ship_fire_control_system_3
-					fixed_ship_radar_slot = ship_radar_3
-					fixed_ship_engine_slot = cruiser_ship_engine_3
-					fixed_ship_secondaries_slot = dp_ship_secondaries
-					fixed_ship_armor_slot = ship_armor_cruiser_3
-					front_1_custom_slot = ship_light_medium_battery_3
-					mid_1_custom_slot = ship_anti_air_3
-					mid_2_custom_slot = dp_ship_secondaries
-					rear_1_custom_slot = ship_light_medium_battery_3
-					rear_2_custom_slot = ship_airplane_launcher_2
+					fixed_ship_radar_slot = ship_radar_1944_equipment
+					fixed_ship_engine_slot = 140000hp_engine_equipment
+					fixed_ship_secondaries_slot = three_127_republique_battery_equipment
+					fixed_ship_armor_slot = belt_170mm_deck_90mm_armor_equipment
+					front_1_custom_slot = 3x240_55_1942_battery_equipment
+					mid_1_custom_slot = four_57_antiair_battery_equipment
+					mid_2_custom_slot = three_127_republique_battery_equipment
+					mid_3_custom_slot = ship_torpedo_4
+					rear_1_custom_slot = 24x20_Oerlikon_battery_equipment
+					rear_2_custom_slot = 3x240_55_1942_battery_equipment
 				}
 			}
 			hidden_effect = { 
-				country_event = { id = fn.51 }
+				country_event = { id = fn.46 }
 			}
+		}
+	}
+	
+	FRA_Saint_Louis_part_I_construction_decision = { #圣路易斯造舰决议——第一批
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Saint_Louis_complete
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_cruiser_hulls_are_being_built_flag }	
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Saint_Louis_Enable
+				NOT = { 
+					has_country_flag = FRA_Saint_Louis_part_I_launched
+				}
+			}
+		}
+		
+		days_remove = 300
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.40
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = FRA_Saint_Louis_part_I_production
+			}
+			set_country_flag = {
+				flag = A_cruiser_hulls_are_being_built_flag
+				days = 300
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				23 = {
+					custom_effect_tooltip = FRA_Saint_Louis_part_I_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Saint_Louis_part_I" 
+					set_country_flag = FRA_Saint_Louis_part_I_launched
+					news_event = { id = fn_news.21 }
+				}
+		}
+	}
+	
+	FRA_Saint_Louis_part_II_construction_decision = { #圣路易斯造舰决议——第二批
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Saint_Louis_complete
+			has_country_flag = FRA_Saint_Louis_part_I_production
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_cruiser_hulls_are_being_built_flag }	
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Saint_Louis_Enable
+				NOT = { 
+					has_country_flag = FRA_Saint_Louis_part_II_launched
+				}
+			}
+		}
+		
+		days_remove = 300
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.40
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = FRA_Saint_Louis_part_II_production
+			}
+			set_country_flag = {
+				flag = A_cruiser_hulls_are_being_built_flag
+				days = 300
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Saint_Louis_part_II_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Saint_Louis_part_II" 
+					set_country_flag = FRA_Saint_Louis_part_II_launched
+				}
+		}
+	}
+	
+	FRA_Saint_Louis_part_III_construction_decision = { #圣路易斯造舰决议——第三批
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Saint_Louis_complete
+			has_country_flag = FRA_Saint_Louis_part_I_launched
+			has_country_flag = FRA_Saint_Louis_part_II_production
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_cruiser_hulls_are_being_built_flag }	
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Saint_Louis_Enable
+				NOT = { 
+					has_country_flag = FRA_Saint_Louis_part_III_launched
+				}
+			}
+		}
+		
+		days_remove = 300
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.40
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = FRA_Saint_Louis_part_III_production
+			}
+			set_country_flag = {
+				flag = A_cruiser_hulls_are_being_built_flag
+				days = 300
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Saint_Louis_part_III_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Saint_Louis_part_III" 
+					set_country_flag = FRA_Saint_Louis_part_III_launched
+				}
+		}
+	}
+	
+	FRA_Saint_Louis_part_IV_construction_decision = { #圣路易斯造舰决议——第四批
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Saint_Louis_complete
+			has_country_flag = FRA_Saint_Louis_part_II_launched
+			has_country_flag = FRA_Saint_Louis_part_III_production
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_cruiser_hulls_are_being_built_flag }	
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Saint_Louis_Enable
+				NOT = { 
+					has_country_flag = FRA_Saint_Louis_part_IV_launched
+				}
+			}
+		}
+		
+		days_remove = 300
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.60
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = A_cruiser_hulls_are_being_built_flag
+				days = 300
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Saint_Louis_part_IV_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Saint_Louis_part_IV" 
+					set_country_flag = FRA_Saint_Louis_part_IV_launched
+				}
+		}
+	}
+	
+	FRA_Henry_IV_construction_decision = { #亨利四世造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Henry_IV_complete
+			has_country_flag = FRA_Saint_Louis_part_IV_launched
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_cruiser_hulls_are_being_built_flag }	
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Henry_IV_Enable
+				NOT = { 
+					has_country_flag = FRA_Henry_IV_launched
+				}
+			}
+		}
+		
+		days_remove = 330
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.20
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = FRA_Henry_IV_production
+			}
+			set_country_flag = {
+				flag = A_cruiser_hulls_are_being_built_flag
+				days = 330
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Henry_IV_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Henry_IV" 
+					set_country_flag = FRA_Henry_IV_launched
+					news_event = { id = fn_news.22 }
+				}
+		}
+	}
+	
+	FRA_Charlemagne_construction_decision = { #查理曼大帝造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Henry_IV_complete
+			has_country_flag = FRA_Henry_IV_production
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_cruiser_hulls_are_being_built_flag }	
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Henry_IV_Enable
+				NOT = { 
+					has_country_flag = FRA_Charlemagne_launched
+				}
+			}
+		}
+		
+		days_remove = 330
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.20
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = FRA_Charlemagne_production
+			}
+			set_country_flag = {
+				flag = A_cruiser_hulls_are_being_built_flag
+				days = 330
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Charlemagne_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Charlemagne" 
+					set_country_flag = FRA_Charlemagne_launched
+				}
+		}
+	}
+	
+	FRA_Napoleon_construction_decision = { #拿破仑造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Henry_IV_complete
+			has_country_flag = FRA_Charlemagne_production
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_cruiser_hulls_are_being_built_flag }	
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Henry_IV_Enable
+				NOT = { 
+					has_country_flag = FRA_Napoleon_launched
+				}
+			}
+		}
+		
+		days_remove = 330
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.20
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = A_cruiser_hulls_are_being_built_flag
+				days = 330
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Napoleon_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Napoleon" 
+					set_country_flag = FRA_Napoleon_launched
+				}
 		}
 	}
 }
@@ -2278,22 +5031,100 @@ FRA_C5A3_programme_categorie = { #巡洋舰方案列
 #共和国
 
 FRA_Glory_of_French_categorie = {
+
+	FRA_republique_hull_decision = { #船体
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_republique_Enable
+				NOT = {
+					has_tech = belt_410mm_deck_170mm_armor
+				}
+			}
+		}
+		
+		days_remove = 90
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				ship_hull_super_heavy = 1
+				belt_410mm_deck_170mm_armor = 1
+			}
+		}
+	}
 	
-	FRA_republique_complete_decision = { #共和国
+	FRA_4x431_50_battery_decision = { #431mm/50 Mle 1942
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_republique_Enable
+				NOT = {
+					has_tech = 4x431_50_battery
+				}
+			}
+		}
+		
+		days_remove = 120
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				4x431_50_battery = 1
+			}
+		}
+	}
+
+	FRA_republique_complete_decision = { #共和国（四联装主炮）方案
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
 			has_tech = ship_hull_super_heavy
-			has_tech = dp_secondary_battery
-			has_tech = antiair5
+			has_tech = 4x431_50_battery
+			has_tech = 3x152_55_1942_battery
+			has_tech = 127_republique_battery
+			has_tech = 57_antiair_battery
+			has_tech = 20_Oerlikon_battery
 			has_tech = advanced_fire_control_system
-			has_tech = advanced_centimetric_radar
-			has_tech = improved_airplane_launcher
+			has_tech = ship_radar_1944
+			has_tech = belt_410mm_deck_170mm_armor
 		}
 
-		cost = 300
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -2303,89 +5134,54 @@ FRA_Glory_of_French_categorie = {
 			original_tag = FRA
 			FRA = {
 				has_country_flag = FRA_republique_enable
-				NOT = { 
-					or = {
-						has_country_flag = FRA_Queen_Marie 
-						has_country_flag = FRA_Dark_Saintess
-					}
-				}
+				NOT = { has_country_flag = FRA_republique_complete }
 			}
 		}
-		
-		days_remove = 300
-		
-		modifier = {
-			civilian_factory_use = 12
-		}
-		
+
 		complete_effect = {
 			create_equipment_variant = {
 				name = "Republique Class"
 				type = ship_hull_super_heavy_1
 				parent_version = 0
 				modules = {
-					fixed_ship_battery_slot = ship_super_heavy_battery_1
-					fixed_ship_anti_air_slot = ship_anti_air_4
+					fixed_ship_battery_slot = 4x431_50_battery_equipment
+					fixed_ship_anti_air_slot = four_57_antiair_battery_equipment
 					fixed_ship_fire_control_system_slot = ship_fire_control_system_3
-					fixed_ship_radar_slot = ship_radar_4
+					fixed_ship_radar_slot = ship_radar_1944_equipment
 					fixed_ship_engine_slot = heavy_ship_engine_4
-					fixed_ship_secondaries_slot = dp_ship_secondaries
-					fixed_ship_armor_slot = ship_armor_shbb
-					front_1_custom_slot = ship_anti_air_4
-					front_2_custom_slot = ship_anti_air_4
-					mid_1_custom_slot = dp_ship_secondaries
-					mid_2_custom_slot = dp_ship_secondaries
-					mid_3_custom_slot = dp_ship_secondaries
-					rear_1_custom_slot = ship_super_heavy_battery_1
-					rear_2_custom_slot = ship_airplane_launcher_2
+					fixed_ship_secondaries_slot = 3x152_55_1942_battery_equipment
+					fixed_ship_armor_slot = belt_410mm_deck_170mm_armor_equipment
+					front_1_custom_slot = four_57_antiair_battery_equipment
+					front_2_custom_slot = 40x20_Oerlikon_battery_equipment
+					mid_1_custom_slot = four_127_republique_battery_equipment
+					mid_2_custom_slot = four_127_republique_battery_equipment
+					mid_3_custom_slot = four_57_antiair_battery_equipment
+					rear_1_custom_slot = 4x431_50_battery_equipment
+					rear_2_custom_slot = 24x20_Oerlikon_battery_equipment
 				}
 			}
-		}
-		
-		remove_effect = {
-			
-			if = {
-				limit = {
-					NOT = { has_government = fascism }
-				}
-				14 = {
-					custom_effect_tooltip = FRA_Queen_Marie_tt_FMS
-				}
-				hidden_effect = { 
-					load_oob = "FRA_Queen_Marie" 
-					country_event = { id = fn.101 }
-				}
-			}
-			if = {
-				limit = {
-					has_government = fascism
-				}
-				21 = {
-					custom_effect_tooltip = FRA_Dark_Saintess_tt_fascism
-				}
-				hidden_effect = { 
-					load_oob = "FRA_Dark_Saintess" 
-					country_event = { id = fn.102 }
-				}
+			hidden_effect = { 
+				country_event = { id = fn.110 }
 			}
 		}
 	}
 	
-	FRA_Francia_complete_decision = { #法兰西
+	FRA_republique_construction_decision = { #共和国造舰决议
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
-			has_tech = ship_hull_super_heavy
-			has_tech = dp_secondary_battery
-			has_tech = antiair5
-			has_tech = advanced_fire_control_system
-			has_tech = advanced_centimetric_radar
-			has_tech = improved_airplane_launcher
+			has_country_flag = FRA_republique_complete
+			has_country_flag = FRA_Alsace_launched
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_battleship_is_being_built_flag }
 		}
 
-		cost = 300
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -2394,78 +5190,103 @@ FRA_Glory_of_French_categorie = {
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_Francia_enable
+				has_country_flag = FRA_republique_Enable
 				NOT = { 
-					or = {
-						has_country_flag = FRA_Queen_Marie 
-						has_country_flag = FRA_Dark_Saintess
-					}
+					has_country_flag = FRA_republique_launched
 				}
 			}
 		}
 		
-		days_remove = 300
+		days_remove = 420
 		
 		modifier = {
-			civilian_factory_use = 12
+			industrial_capacity_dockyard = -0.50
 		}
 		
 		complete_effect = {
-			create_equipment_variant = {
-				name = "Francia Class"
-				type = ship_hull_super_heavy_1
-				parent_version = 0
-				modules = {
-					fixed_ship_battery_slot = ship_super_heavy_battery_1
-					fixed_ship_anti_air_slot = ship_anti_air_4
-					fixed_ship_fire_control_system_slot = ship_fire_control_system_3
-					fixed_ship_radar_slot = ship_radar_4
-					fixed_ship_engine_slot = heavy_ship_engine_4
-					fixed_ship_secondaries_slot = dp_ship_secondaries
-					fixed_ship_armor_slot = ship_armor_shbb
-					front_1_custom_slot = ship_super_heavy_battery_1
-					front_2_custom_slot = ship_anti_air_4
-					mid_1_custom_slot = dp_ship_secondaries
-					mid_2_custom_slot = dp_ship_secondaries
-					mid_3_custom_slot = ship_anti_air_4
-					rear_1_custom_slot = ship_super_heavy_battery_1
-					rear_2_custom_slot = ship_airplane_launcher_2
-				}
+			hidden_effect = {
+				set_country_flag = FRA_republique_production
+			}
+			set_country_flag = {
+				flag = A_battleship_is_being_built_flag
+				days = 420
+				value = 1
 			}
 		}
 		
 		remove_effect = {
-			if = {
-				limit = {
-					NOT = { has_government = fascism }
-				}
 				14 = {
-					custom_effect_tooltip = FRA_Queen_Marie_tt_FMS
+					custom_effect_tooltip = FRA_republique_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_republique" 
+					set_country_flag = FRA_republique_launched
+					news_event = { id = fn_news.12 }
+				}
+		}
+	}
+	
+	FRA_Queen_Marie_construction_decision = { #玛丽王后造舰决议
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_republique_complete
+			has_country_flag = FRA_republique_production
+			or = {
+				num_of_available_naval_factories > 30
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_battleship_is_being_built_flag }
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_republique_Enable
+				NOT = { 
+					has_country_flag = FRA_Queen_Marie_launched
+				}
+			}
+		}
+		
+		days_remove = 420
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.50
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = A_battleship_is_being_built_flag
+				days = 420
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Queen_Marie_tt
 				}
 				hidden_effect = { 
 					load_oob = "FRA_Queen_Marie" 
-					country_event = { id = fn.101 }
+					set_country_flag = FRA_Queen_Marie_launched
+					news_event = { id = fn_news.13 }
 				}
-			}
-			if = {
-				limit = {
-					has_government = fascism
-				}
-				21 = {
-					custom_effect_tooltip = FRA_Dark_Saintess_tt_fascism
-				}
-				hidden_effect = { 
-					load_oob = "FRA_Dark_Saintess" 
-					country_event = { id = fn.102 }
-				}
-			}
 		}
 	}
 }
 
 ###############################
-#空想
-FRA_Fantasme_programme_categorie = {
+#驱逐方案列
+FRA_DD_categorie = {
 
 	FRA_Fantasme_programme_decision = { #空想方案船体
 
@@ -2475,7 +5296,7 @@ FRA_Fantasme_programme_categorie = {
 			original_tag = FRA
 		}
 
-		cost = 100
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -2484,113 +5305,32 @@ FRA_Fantasme_programme_categorie = {
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_Fantasme_hull
+				has_country_flag = FRA_Fantasme_Enable
 				NOT = {
-					has_tech = improved_ship_hull_light
+					has_tech = advanced_ship_hull_light
 				}
 			}
 		}
 		
-		days_remove = 120
+		days_remove = 90
 		
 		modifier = {
-			civilian_factory_use = 3
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
 			set_technology = {
-				improved_ship_hull_light = 1
+				advanced_ship_hull_light = 1
 			}
 		}
 	}
 	
-	FRA_Fantasme_main_gun_decision = { #空想方案轻型主炮
+	FRA_Fantasque_battery_decision = { #138.6mm/50 Mle 1929
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
-		}
-
-		cost = 50
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		visible = {
-			original_tag = FRA
-			FRA = {
-				has_country_flag = FRA_Fantasme_main_gun_light
-				NOT = {
-					has_tech = improved_light_battery
-				}
-			}
-		}
-		
-		days_remove = 100
-		
-		modifier = {
-			civilian_factory_use = 1
-		}
-
-		remove_effect = {
-			set_technology = {
-				improved_light_battery = 1
-			}
-		}
-	}
-	
-	FRA_Fantasme_depth_boom_decision = { #空想方案深水炸弹
-
-		icon = generic_ignite_civil_war
-
-		available = {
-			original_tag = FRA
-		}
-
-		cost = 50
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		visible = {
-			original_tag = FRA
-			FRA = {
-				has_country_flag = FRA_Fantasme_anti_submarine
-				NOT = {
-					has_tech = advanced_depth_charges
-				}
-			}
-		}
-		
-		days_remove = 100
-		
-		modifier = {
-			civilian_factory_use = 2
-		}
-
-		remove_effect = {
-			set_technology = {
-				improved_depth_charges = 1
-				advanced_depth_charges = 1
-			}
-		}
-	}
-	
-	FRA_Fantasme_I_complete_decision = { #空想方案完成（防空）
-
-		icon = generic_ignite_civil_war
-
-		available = {
-			original_tag = FRA
-			has_tech = improved_ship_hull_light
-			has_tech = dp_secondary_battery
-			has_tech = antiair2
-			has_tech = improved_fire_control_system
-			has_tech = improved_sonar
-			has_tech = advanced_ship_torpedo_launcher
 		}
 
 		cost = 0
@@ -2602,49 +5342,40 @@ FRA_Fantasme_programme_categorie = {
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_Fantasme_programme_antiair
-				has_country_flag = FRA_Fantasme_programme_complete
-				NOT = { 
-					has_country_flag = FRA_Fantasme_I
+				has_country_flag = FRA_Fantasme_Enable
+				NOT = {
+					has_tech = Fantasque_battery
 				}
 			}
 		}
 		
-		complete_effect = {
-			create_equipment_variant = {
-				name = "Fantasme Class"
-				type = ship_hull_light_3
-				parent_version = 0
-				modules = {
-					fixed_ship_battery_slot = dp_light_battery
-					fixed_ship_anti_air_slot = ship_anti_air_3
-					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
-					fixed_ship_radar_slot = ship_sonar_2
-					fixed_ship_torpedo_slot = ship_torpedo_3
-					fixed_ship_engine_slot = light_ship_engine_3
-					front_1_custom_slot = ship_depth_charge_3
-					mid_1_custom_slot = ship_torpedo_3
-					rear_1_custom_slot = dp_light_battery
-				}
-			}
-			hidden_effect = { 
-					country_event = { id = fn.66 }
+		days_remove = 90
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				Fantasque_battery = 1
 			}
 		}
 	}
 	
-	FRA_Fantasme_II_complete_decision = { #空想方案完成（雷击）
+	FRA_Fantasme_complete_decision = { #空想方案设计图
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
-			has_tech = improved_ship_hull_light
-			has_tech = improved_light_battery
-			has_tech = antiair2
-			has_tech = ship_radar_2
+			has_tech = advanced_ship_hull_light
+			has_tech = Fantasque_battery
+			has_tech = 37_auto_battery
+			has_tech = centimetric_radar
 			has_tech = improved_sonar
 			has_tech = advanced_ship_torpedo_launcher
+			has_tech = 20_Oerlikon_battery
+			has_tech = improved_depth_charges
 		}
 
 		cost = 0
@@ -2656,48 +5387,43 @@ FRA_Fantasme_programme_categorie = {
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_Fantasme_programme_torpedo
-				has_country_flag = FRA_Fantasme_programme_complete
+				has_country_flag = FRA_Fantasme_Enable
 				NOT = { 
-					has_country_flag = FRA_Fantasme_II
+					has_country_flag = FRA_Fantasme_complete
 				}
 			}
 		}
 		
 		complete_effect = {
 			create_equipment_variant = {
-				name = "Fantasme Class"
-				type = ship_hull_light_3
+				name = "Le Fantasque Class"
+				type = ship_hull_light_4
 				parent_version = 0
 				modules = {
-					fixed_ship_battery_slot = ship_light_battery_3
-					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_battery_slot = three_Fantasque_battery_equipment
+					fixed_ship_anti_air_slot = two_37_auto_battery_equipment
 					fixed_ship_fire_control_system_slot = ship_sonar_2
-					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_radar_slot = ship_radar_3
 					fixed_ship_torpedo_slot = ship_torpedo_3
-					fixed_ship_engine_slot = light_ship_engine_3
-					front_1_custom_slot = ship_depth_charge_3
+					fixed_ship_engine_slot = light_ship_engine_4
+					front_1_custom_slot = ship_depth_charge_2
 					mid_1_custom_slot = ship_torpedo_3
-					rear_1_custom_slot = ship_torpedo_3
+					mid_2_custom_slot = 10x20_Oerlikon_battery_equipment
+					rear_1_custom_slot = two_Fantasque_battery_equipment
 				}
 			}
 			hidden_effect = { 
-					country_event = { id = fn.67 }
+					country_event = { id = fn.65 }
 			}
 		}
 	}
 	
-	FRA_Fantasme_III_complete_decision = { #空想方案完成（反潜）
+	FRA_Mogador_programme_decision = { #莫加多尔船体
 
 		icon = generic_ignite_civil_war
 
 		available = {
 			original_tag = FRA
-			has_tech = improved_ship_hull_light
-			has_tech = improved_light_battery
-			has_tech = antiair2
-			has_tech = improved_sonar
-			has_tech = advanced_ship_torpedo_launcher
 		}
 
 		cost = 0
@@ -2709,34 +5435,526 @@ FRA_Fantasme_programme_categorie = {
 		visible = {
 			original_tag = FRA
 			FRA = {
-				has_country_flag = FRA_Fantasme_programme_anti_submarine
-				has_country_flag = FRA_Fantasme_programme_complete
+				has_country_flag = FRA_Mogador_Enable
+				NOT = {
+					has_tech = large_destroyer
+				}
+			}
+		}
+		
+		days_remove = 90
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				large_destroyer = 1
+			}
+		}
+	}
+	
+	FRA_Mogador_battery_decision = { #138.6/50 Mle 1934
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Mogador_Enable
+				NOT = {
+					has_tech = Mogador_battery
+				}
+			}
+		}
+		
+		days_remove = 90
+		
+		modifier = {
+			research_speed_factor = -0.10
+		}
+
+		remove_effect = {
+			set_technology = {
+				Mogador_battery = 1
+			}
+		}
+	}
+	
+	FRA_Mogador_complete_decision = { #莫加多尔设计图
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_tech = large_destroyer
+			has_tech = Mogador_battery
+			has_tech = 37_auto_battery
+			has_tech = advanced_centimetric_radar
+			has_tech = improved_sonar
+			has_tech = modern_ship_torpedo_launcher
+			has_tech = 20_Oerlikon_battery
+			has_tech = advanced_depth_charges
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Mogador_Enable
 				NOT = { 
-					has_country_flag = FRA_Fantasme_III
+					has_country_flag = FRA_Mogador_complete
 				}
 			}
 		}
 		
 		complete_effect = {
 			create_equipment_variant = {
-				name = "Fantasme Class"
-				type = ship_hull_light_3
+				name = "Mogador Class"
+				type = large_destroyer_equipments
 				parent_version = 0
 				modules = {
-					fixed_ship_battery_slot = ship_light_battery_3
-					fixed_ship_anti_air_slot = ship_anti_air_3
+					fixed_ship_battery_slot = Mogador_battery_equipment
+					fixed_ship_anti_air_slot = two_37_auto_battery_equipment
 					fixed_ship_fire_control_system_slot = ship_sonar_2
-					fixed_ship_radar_slot = ship_sonar_2
-					fixed_ship_torpedo_slot = ship_torpedo_3
-					fixed_ship_engine_slot = light_ship_engine_3
+					fixed_ship_radar_slot = ship_radar_4
+					fixed_ship_torpedo_slot = ship_torpedo_4
+					fixed_ship_engine_slot = light_ship_engine_4
 					front_1_custom_slot = ship_depth_charge_3
-					mid_1_custom_slot = ship_torpedo_3
-					rear_1_custom_slot = ship_depth_charge_3
+					mid_1_custom_slot = ship_torpedo_4
+					mid_2_custom_slot = 10x20_Oerlikon_battery_equipment
+					rear_1_custom_slot = Mogador_battery_equipment
+					rear_2_custom_slot = ship_depth_charge_2
 				}
 			}
 			hidden_effect = { 
-					country_event = { id = fn.68 }
+					country_event = { id = fn.69 }
 			}
+		}
+	}
+	
+	FRA_Fantasme_part_I_construction_decision = { #空想造舰决议——第一批
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Fantasme_complete
+			or = {
+				num_of_available_naval_factories > 25
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_batch_of_destroyers_is_being_built_flag }
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Fantasme_Enable
+				NOT = { 
+					has_country_flag = FRA_Fantasme_part_I_launched
+				}
+			}
+		}
+		
+		days_remove = 180
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.50
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = FRA_Fantasme_part_I_production
+			}
+			set_country_flag = {
+				flag = A_batch_of_destroyers_is_being_built_flag
+				days = 180
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Fantasme_part_I_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Fantasme_part_I" 
+					set_country_flag = FRA_Fantasme_part_I_launched
+				}
+		}
+	}
+	
+	FRA_Fantasme_part_II_construction_decision = { #空想造舰决议——第二批
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Fantasme_complete
+			has_country_flag = FRA_Fantasme_part_I_production
+			or = {
+				num_of_available_naval_factories > 25
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_batch_of_destroyers_is_being_built_flag }
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Fantasme_Enable
+				NOT = { 
+					has_country_flag = FRA_Fantasme_part_II_launched
+				}
+			}
+		}
+		
+		days_remove = 180
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.50
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = FRA_Fantasme_part_II_production
+			}
+			set_country_flag = {
+				flag = A_batch_of_destroyers_is_being_built_flag
+				days = 180
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Fantasme_part_II_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Fantasme_part_II" 
+					set_country_flag = FRA_Fantasme_part_II_launched
+				}
+		}
+	}
+	
+	FRA_Fantasme_part_III_construction_decision = { #空想造舰决议——第三批
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Fantasme_complete
+			has_country_flag = FRA_Fantasme_part_II_production
+			has_country_flag = FRA_Fantasme_part_I_launched
+			or = {
+				num_of_available_naval_factories > 25
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_batch_of_destroyers_is_being_built_flag }
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Fantasme_Enable
+				NOT = { 
+					has_country_flag = FRA_Fantasme_part_III_launched
+				}
+			}
+		}
+		
+		days_remove = 180
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.50
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = FRA_Fantasme_part_III_production
+			}
+			set_country_flag = {
+				flag = A_batch_of_destroyers_is_being_built_flag
+				days = 180
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Fantasme_part_III_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Fantasme_part_III" 
+					set_country_flag = FRA_Fantasme_part_III_launched
+				}
+		}
+	}
+	
+	FRA_Fantasme_part_IV_construction_decision = { #空想造舰决议——第四批
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Fantasme_complete
+			has_country_flag = FRA_Fantasme_part_III_production
+			has_country_flag = FRA_Fantasme_part_II_launched
+			or = {
+				num_of_available_naval_factories > 25
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_batch_of_destroyers_is_being_built_flag }
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Fantasme_Enable
+				NOT = { 
+					has_country_flag = FRA_Fantasme_part_IV_launched
+				}
+			}
+		}
+		
+		days_remove = 180
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.50
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = A_batch_of_destroyers_is_being_built_flag
+				days = 180
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Fantasme_part_IV_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Fantasme_part_IV" 
+					set_country_flag = FRA_Fantasme_part_IV_launched
+				}
+		}
+	}
+	
+	FRA_Mogador_part_I_construction_decision = { #莫加多尔造舰决议——第一批
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Mogador_complete
+			has_country_flag = FRA_Fantasme_part_IV_launched
+			or = {
+				num_of_available_naval_factories > 25
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_batch_of_destroyers_is_being_built_flag }
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Mogador_Enable
+				NOT = { 
+					has_country_flag = FRA_Mogador_part_I_launched
+				}
+			}
+		}
+		
+		days_remove = 200
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.50
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = FRA_Mogador_part_I_production
+			}
+			set_country_flag = {
+				flag = A_batch_of_destroyers_is_being_built_flag
+				days = 200
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Mogador_part_I_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Mogador_part_I" 
+					set_country_flag = FRA_Mogador_part_I_launched
+				}
+		}
+	}
+	
+	FRA_Mogador_part_II_construction_decision = { #莫加多尔造舰决议——第二批
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Mogador_complete
+			has_country_flag = FRA_Mogador_part_I_production
+			or = {
+				num_of_available_naval_factories > 25
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_batch_of_destroyers_is_being_built_flag }
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Mogador_Enable
+				NOT = { 
+					has_country_flag = FRA_Mogador_part_II_launched
+				}
+			}
+		}
+		
+		days_remove = 200
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.50
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = FRA_Mogador_part_II_production
+			}
+			set_country_flag = {
+				flag = A_batch_of_destroyers_is_being_built_flag
+				days = 200
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Mogador_part_II_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Mogador_part_II" 
+					set_country_flag = FRA_Mogador_part_II_launched
+				}
+		}
+	}
+	
+	FRA_Mogador_part_III_construction_decision = { #莫加多尔造舰决议——第三批
+
+		icon = generic_ignite_civil_war
+
+		available = {
+			original_tag = FRA
+			has_country_flag = FRA_Mogador_complete
+			has_country_flag = FRA_Mogador_part_II_production
+			has_country_flag = FRA_Mogador_part_I_launched
+			or = {
+				num_of_available_naval_factories > 25
+				is_ai = yes
+			}
+      NOT = { has_country_flag = A_batch_of_destroyers_is_being_built_flag }
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			original_tag = FRA
+			FRA = {
+				has_country_flag = FRA_Mogador_Enable
+				NOT = { 
+					has_country_flag = FRA_Mogador_part_III_launched
+				}
+			}
+		}
+		
+		days_remove = 200
+		
+		modifier = {
+			industrial_capacity_dockyard = -0.50
+		}
+		
+		complete_effect = {
+			set_country_flag = {
+				flag = A_batch_of_destroyers_is_being_built_flag
+				days = 200
+				value = 1
+			}
+		}
+		
+		remove_effect = {
+				14 = {
+					custom_effect_tooltip = FRA_Mogador_part_III_tt
+				}
+				hidden_effect = { 
+					load_oob = "FRA_Mogador_part_III" 
+					set_country_flag = FRA_Mogador_part_III_launched
+				}
 		}
 	}
 }
@@ -2753,7 +5971,7 @@ FRA_Aurore_programme_categorie = {
 			original_tag = FRA
 		}
 
-		cost = 50
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -2772,7 +5990,7 @@ FRA_Aurore_programme_categorie = {
 		days_remove = 100
 		
 		modifier = {
-			civilian_factory_use = 2
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
@@ -2790,7 +6008,7 @@ FRA_Aurore_programme_categorie = {
 			original_tag = FRA
 		}
 
-		cost = 50
+		cost = 0
 
 		ai_will_do = {
 			factor = 100
@@ -2809,7 +6027,7 @@ FRA_Aurore_programme_categorie = {
 		days_remove = 80
 		
 		modifier = {
-			civilian_factory_use = 1
+			research_speed_factor = -0.10
 		}
 
 		remove_effect = {
@@ -2860,6 +6078,233 @@ FRA_Aurore_programme_categorie = {
 			}
 			hidden_effect = { 
 					country_event = { id = fn.83 }
+			}
+		}
+	}
+}
+
+FRA_weapons_purchases_category = {
+	FRA_order_weapons_in_USA = {
+	icon = generic_prepare_civil_war
+		available = {
+			
+		}
+		visible = {
+			USA_can_sell_weapons_trigger = yes
+		}
+		days_remove = 60
+		cost = 50
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				has_equipment = {
+					infantry_equipment < 1
+				}
+				factor = 50
+			}
+			modifier = {
+				has_manpower < 10000 
+				factor = 0 #need to up conscription laws
+			}
+		}
+		complete_effect = {
+			USA = {
+				add_offsite_building = { type = industrial_complex level = 2 }
+			}
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2500
+			}
+			USA = {
+				add_offsite_building = { type = industrial_complex level = -2 }
+			}
+		}
+	}
+	FRA_order_artillery_in_USA = {
+		icon = ger_military_buildup
+		available = {
+			
+		}
+		visible = {
+			USA_can_sell_weapons_trigger = yes
+		}
+		days_remove = 60
+		cost = 75
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_equipment = {
+					artillery_equipment < 1
+				}
+				factor = 50
+			}
+			modifier = {
+				has_manpower < 10000 
+				factor = 0 #need to up conscription laws
+			}
+		}
+		complete_effect = {
+			USA = {
+				add_offsite_building = { type = industrial_complex level = 3 }
+			}
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 75
+			}
+			USA = {
+				add_offsite_building = { type = industrial_complex level = -3 }
+			}
+		}
+	}
+	FRA_order_tanks_in_USA = {
+		icon = generic_air
+		available = {
+			
+		}
+		visible = {
+			USA_can_sell_weapons_trigger = yes
+		}
+		days_remove = 60
+		cost = 100
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_equipment = {
+					light_tank_equipment < 1
+				}
+				factor = 5
+			}
+			modifier = {
+				has_manpower < 10000 
+				factor = 0 #need to up conscription laws
+			}
+		}
+		modifier = {
+		}
+		complete_effect = {
+			USA = {
+				add_offsite_building = { type = industrial_complex level = 5 }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					USA = { 
+						has_tech = basic_light_tank 
+						NOT = { 
+							OR = {
+								has_tech = basic_medium_tank 
+								has_tech = improved_medium_tank #needed because basic can be bypassed
+							}
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_equipment
+					amount = 50
+				}
+			}
+			else_if = {
+				limit = {
+					USA = {
+						OR = {
+							has_tech = basic_medium_tank 
+							has_tech = improved_medium_tank #needed because basic can be bypassed
+						}
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = medium_tank_equipment
+					amount = 50
+				}
+			}
+			USA = {
+				add_offsite_building = { type = industrial_complex level = -5 }
+			}
+		}
+	}
+	FRA_order_fighters_in_USA = {
+		icon = generic_air
+		available = {
+			
+		}
+		visible = {
+			USA_can_sell_weapons_trigger = yes
+		}
+		days_remove = 60
+		cost = 100
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_equipment = {
+					fighter_equipment < 1
+				}
+				factor = 5
+			}
+			modifier = {
+				has_manpower < 10000 
+				factor = 0 #need to up conscription laws
+			}
+		}
+		modifier = {
+		}
+		complete_effect = {
+			USA = {
+				add_offsite_building = { type = industrial_complex level = 5 }
+			}
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment
+				amount = 50
+			}
+			USA = {
+				add_offsite_building = { type = industrial_complex level = -5 }
+			}
+		}
+	}
+	FRA_order_bombers_in_USA = {
+		icon = generic_air
+		available = {
+			
+		}
+		visible = {
+			USA_can_sell_weapons_trigger = yes
+		}
+		days_remove = 60
+		cost = 100
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_equipment = {
+					tac_bomber_equipment < 1
+				}
+				factor = 5
+			}
+			modifier = {
+				has_manpower < 10000 
+				factor = 0 #need to up conscription laws
+			}
+		}
+		modifier = {
+			
+		}
+		complete_effect = {
+			USA = {
+				add_offsite_building = { type = industrial_complex level = 5 }
+			}
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment
+				amount = 25
+			}
+			USA = {
+				add_offsite_building = { type = industrial_complex level = -5 }
 			}
 		}
 	}

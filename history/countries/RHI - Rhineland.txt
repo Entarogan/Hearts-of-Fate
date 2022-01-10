@@ -53,44 +53,6 @@ RHI_Valkist
 RHI_Military_occupation
 }
 
-create_country_leader = {
-	name = "Astolfo"
-	desc = "POLITICS_KONRAD_ADENAUER_DESC"
-	picture = "Portrait_Astolfo.dds"
-	expire = "1965.1.1"
-	ideology = stratocracy
-	traits = {
-	}
-}
 
-
-create_country_leader = {
-	name = "Lady Saria"
-	desc = "POLITICS_KONRAD_ADENAUER_DESC"
-	picture = "Portrait_Lady_Saria.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Lady Saria"
-	desc = "POLITICS_KONRAD_ADENAUER_DESC"
-	picture = "Portrait_Lady_Saria.dds"
-	expire = "1965.1.1"
-	ideology = democratic_socialist
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Lady Saria"
-	desc = "POLITICS_KONRAD_ADENAUER_DESC"
-	picture = "Portrait_Lady_Saria.dds"
-	expire = "1965.1.1"
-	ideology = liberalism
-	traits = {
-	}
-}
-
+recruit_character = RHI_astolfo
+recruit_character = RHI_lady_saria

@@ -88,7 +88,7 @@ armored_FRA = {
 			
 			support = {
 				engineer = 1
-				recon = 1
+				armored_car_recon = 1
 				artillery = 1
                 signal_company = 1
 				maintenance_company = 1
@@ -109,7 +109,7 @@ armored_FRA = {
 			mechanized
 
 			engineer
-			recon
+			armored_car_recon
 			signal_company
 			maintenance_company
 
@@ -181,7 +181,7 @@ armored_FRA = {
 			
 			support = {
 				engineer = 1
-				recon = 1
+				armored_car_recon = 1
 				artillery = 1
                 signal_company = 1
 				maintenance_company = 1
@@ -203,7 +203,7 @@ armored_FRA = {
             modern_sp_artillery_brigade
 			mechanized
 			engineer
-			recon
+			armored_car_recon
 			signal_company
 			maintenance_company
 			artillery
@@ -290,7 +290,7 @@ leichte_FRA = {
 			
 			support = {
 				engineer = 1
-				recon = 1
+				armored_car_recon = 1
 				artillery = 1
 			}
 			
@@ -304,7 +304,7 @@ leichte_FRA = {
 			light_armor
 			motorized
 			engineer
-			recon
+			armored_car_recon
 			artillery
 		}
 		
@@ -560,7 +560,7 @@ infantry_FRA = {
 			
 			support = {
 				engineer = 1
-				recon = 1
+				armored_car_recon = 1
 				artillery = 1
 				anti_tank = 1
                 anti_air = 1
@@ -568,9 +568,8 @@ infantry_FRA = {
 			
 			regiments = {
                 heavy_armor = 1
-				infantry = 6
-				artillery_brigade = 4
-                anti_tank_brigade = 1
+				infantry = 8
+				artillery_brigade = 3
 			}
 		}
 		
@@ -578,12 +577,11 @@ infantry_FRA = {
             heavy_armor
 			infantry		
 			engineer
-			recon
+			armored_car_recon
 			anti_tank
 			artillery
 	 		anti_air
-			artillery_brigade
-            anti_tank_brigade
+			artillery_brigade            
 		}
 	}
 }
@@ -637,7 +635,7 @@ artillery_FRA = {
 			
 			support = {
 				engineer = 1
-				recon = 1
+				armored_car_recon = 1
 				maintenance_company = 1
 				signal_company = 1
                 artillery = 1
@@ -653,7 +651,7 @@ artillery_FRA = {
 		allowed_types = {
 			infantry		
 			engineer
-			recon
+			armored_car_recon
             motorized
             maintenance_company
 			signal_company

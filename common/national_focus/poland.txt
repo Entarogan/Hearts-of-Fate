@@ -178,7 +178,7 @@ focus_tree = {
 	focus = {
 		id = POL_Eastern_Poland_Plan
 		icon = GFX_goal_generic_construction2
-		cost = 8.00
+		cost = 5.00
 		x = 40
 		y = 5
 			available = {
@@ -225,42 +225,42 @@ focus_tree = {
 				}
 			completion_reward = {
 					91 = {
-              add_extra_state_shared_building_slots = 2
+              add_extra_state_shared_building_slots = 1
 							add_building_construction = {
 									type = infrastructure
-									level = 3
+									level = 1
 									instant_build = yes
 								}
 						}
 					93 = {
-              add_extra_state_shared_building_slots = 2
+              add_extra_state_shared_building_slots = 1
 							add_building_construction = {
 									type = infrastructure
-									level = 3
+									level = 1
 									instant_build = yes
 								}
 						}
 					94 = {
-              add_extra_state_shared_building_slots = 2
+              add_extra_state_shared_building_slots = 1
 							add_building_construction = {
 									type = infrastructure
-									level = 3
+									level = 1
 									instant_build = yes
 								}
 						}
 					95 = {
-              add_extra_state_shared_building_slots = 2
+              add_extra_state_shared_building_slots = 1
 							add_building_construction = {
 									type = infrastructure
-									level = 3
+									level = 1
 									instant_build = yes
 								}
 						}
 					96 = {
-              add_extra_state_shared_building_slots = 2
+              add_extra_state_shared_building_slots = 1
 							add_building_construction = {
 									type = infrastructure
-									level = 3
+									level = 1
 									instant_build = yes
 								}
 						}
@@ -371,10 +371,10 @@ focus_tree = {
 		relative_position_id = POL_Eastern_Poland_Plan
     completion_reward = {
       11 = {
-        add_extra_state_shared_building_slots = 3
+        add_extra_state_shared_building_slots = 2
         add_building_construction = {
           type = industrial_complex
-          level = 2
+          level = 1
           instant_build = yes
         }
         add_building_construction = {
@@ -384,7 +384,7 @@ focus_tree = {
         }
       }
       189 = {
-        add_extra_state_shared_building_slots = 3
+        add_extra_state_shared_building_slots = 2
         add_building_construction = {
           type = industrial_complex
           level = 1
@@ -392,7 +392,7 @@ focus_tree = {
         }
         add_building_construction = {
           type = arms_factory
-          level = 2
+          level = 1
           instant_build = yes
         }
       }
@@ -581,6 +581,9 @@ focus_tree = {
 					is_in_faction_with = GER
 				}
 			completion_reward = {
+
+        set_major = yes
+
 					GER = {
 							country_event = poland.27
 						}
@@ -588,8 +591,12 @@ focus_tree = {
 			ai_will_do = {
 					factor = 5
 					modifier = {
+							factor = 10
+							date > 1938.1.1
+						}
+					modifier = {
 							factor = 0
-							date < 1938.6.1
+							date < 1938.3.1
 						}
 					modifier = {
 							factor = 2
@@ -1030,7 +1037,12 @@ focus_tree = {
 				}
 			available_if_capitulated = yes
 			completion_reward = {
-					add_ideas = deterrence
+					add_tech_bonus = {
+							name = POL_the_defence_of_poland
+							bonus = 1.5
+							uses = 1
+							category = land_doctrine
+						}
 				}
 
 	}
@@ -1857,6 +1869,15 @@ focus_tree = {
 					NOT = {
 							has_idea = POL_authoritarianism_focus
 						}
+          OR = {
+            NOT = { has_government = neutrality }
+            NOT = {
+							FRA = {
+									has_government = communism
+								}
+						}
+          }
+          
 					NOT = {
 							FRA = {
 									has_government = fascism
@@ -1883,6 +1904,9 @@ focus_tree = {
 					is_in_faction_with = FRA
 				}
 			completion_reward = {
+
+            set_major = yes
+
 					if = {
 							limit = {
 									ENG = {
@@ -1910,12 +1934,16 @@ focus_tree = {
 			ai_will_do = {
 					factor = 10
 					modifier = {
+							factor = 10
+							date > 1938.1.1
+						}
+					modifier = {
 							factor = 0
 						    FRA = { surrender_progress > 0.30 }
 						}
 					modifier = {
 							factor = 0
-							date < 1938.6.1
+							date < 1938.3.1
 						}
 				}
 			cancel_if_invalid = no
@@ -2077,8 +2105,12 @@ focus_tree = {
 			ai_will_do = {
 					factor = 10
 					modifier = {
+							factor = 10
+							date > 1938.1.1
+						}
+					modifier = {
 							factor = 0
-							date < 1938.6.1
+							date < 1938.3.1
 						}
 					modifier = {
 							factor = 0
@@ -2113,6 +2145,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = POL_Our_own_sphere_of_influence
 			available = {
+					or = {
+						threat > 0.30
+						date > 1938.1.1
+					}
 					is_subject = no
 					is_faction_leader = yes
 					OR = {
@@ -2226,6 +2262,10 @@ focus_tree = {
 				}
 			ai_will_do = {
 					factor = 10
+					modifier = {
+							factor = 10
+							date > 1938.1.1
+						}
 				}
 			cancel_if_invalid = no
 			continue_if_invalid = yes
@@ -2245,6 +2285,10 @@ focus_tree = {
 			will_lead_to_war_with = CZE
 			available = {
 					is_subject = no
+					or = {
+						threat > 0.40
+						date > 1938.6.1
+					}
 					any_neighbor_country = {
 							NOT = {
 									has_war_with = POL
@@ -2278,8 +2322,12 @@ focus_tree = {
 			ai_will_do = {
 					factor = 10
 					modifier = {
+							factor = 10
+							date > 1938.1.1
+						}
+					modifier = {
 							factor = 0
-							date < 1939.1.1
+							date < 1938.9.1
 						}
 					modifier = {
 							factor = 0
@@ -2313,6 +2361,7 @@ focus_tree = {
 					ROM = {
 							exists = yes
 							is_puppet = no
+              is_in_faction = no
 							NOT = {
 									has_war_with = POL
 								}
@@ -2321,7 +2370,7 @@ focus_tree = {
 			bypass = {
 					or = {
 							ROM = {
-									has_completed_focus = ROM_the_new_order
+									has_country_leader = { name = "Darnic Prestone Yggdmillennia" ruling_only = yes }
 								}
 							ROM = {
 									is_in_faction_with = POL
@@ -2332,6 +2381,9 @@ focus_tree = {
 							ROM = {
 									is_puppet = yes
 								}
+              ROM = {
+                is_in_faction = yes
+              }
 							ROM = {
 									has_war_with = POL
 								}
@@ -2344,6 +2396,10 @@ focus_tree = {
 				}
 			ai_will_do = {
 					factor = 10
+					modifier = {
+							factor = 10
+							date > 1938.1.1
+						}
 				}
 			cancel_if_invalid = no
 			continue_if_invalid = yes
@@ -2368,8 +2424,18 @@ focus_tree = {
 		relative_position_id = POL_Chexin_or_war
 			will_lead_to_war_with = GER
 			available = {
-					is_subject = no
-				}
+        or = {
+          threat > 0.50
+          date > 1939.1.1
+          GER = {
+            has_war = yes
+            any_enemy_country = {
+              is_major = yes
+            }
+          }
+        }
+        is_subject = no
+      }
 			bypass = {
 					or = {
 							GER = {
@@ -2392,8 +2458,15 @@ focus_tree = {
 			ai_will_do = {
 					factor = 10
 					modifier = {
+						factor = 0
+						country_exists = FRA
+						NOT = { GER = { has_war_with = FRA } }
+						FRA = { has_capitulated = no }
+						FRA = { is_subject = no }
+					}
+					modifier = {
 							factor = 0
-							date < 1939.9.1
+							date < 1938.9.1
 						}
 					modifier = {
 							factor = 0
@@ -2429,8 +2502,9 @@ focus_tree = {
 		relative_position_id = POL_Chexin_or_war
 			will_lead_to_war_with = SOV
 			available = {
-					is_subject = no
-				}
+        date > 1940.1.1
+        is_subject = no
+      }
 			bypass = {
 					or = {
 							SOV = {
@@ -2602,18 +2676,18 @@ focus_tree = {
 		relative_position_id = POL_Eastern_Poland_Plan
     completion_reward = {
       93 = {
-        add_extra_state_shared_building_slots = 2
+        add_extra_state_shared_building_slots = 1
         add_building_construction = {
           type = industrial_complex
-          level = 2
+          level = 1
           instant_build = yes
         }
       }
       94 = {
-        add_extra_state_shared_building_slots = 2
+        add_extra_state_shared_building_slots = 1
         add_building_construction = {
           type = industrial_complex
-          level = 2
+          level = 1
           instant_build = yes
         }
       }
@@ -2685,28 +2759,16 @@ focus_tree = {
 		relative_position_id = POL_Glory_of_Kazimierz
     completion_reward = {
       add_ideas = { POL_unarmoured_alliance }
-      if = {
-        limit = { is_ai = yes }
-        set_technology = {
-            tech_special_forces = 1
-            advanced_special_forces = 1
-            improved_special_forces = 1
-            tech_mountaineers2 = 1
-          }
-        
+
+      add_tech_bonus = {
+        name = POL_unarmoured_alliance
+        bonus = 1.0
+        uses = 2
+        category = mountaineers_tech
+        category = marine_tech
+        category = para_tech
       }
-      if = {
-        limit = { is_ai = no }
-        add_tech_bonus = {
-          name = POL_unarmoured_alliance
-          bonus = 1.5
-          ahead_reduction = 2.5
-          uses = 3
-          category = mountaineers_tech
-          category = marine_tech
-          category = para_tech
-        }
-      }
+
     }
 
 	}
@@ -2725,25 +2787,12 @@ focus_tree = {
 				}
     completion_reward = {
       add_ideas = { POL_AT_group }
-      if = {
-        limit = { is_ai = yes }
-        set_technology = {
-            interwar_antitank = 1
-            antitank1 = 1
-            antitank2 = 1
-            antitank3 = 1
-          }
-        
-      }
-      if = {
-        limit = { is_ai = no }
-        add_tech_bonus = {
-          name = POL_AT_group
-          bonus = 1.5
-          ahead_reduction = 1.5
-          uses = 3
-          category = cat_anti_tank
-        }
+
+      add_tech_bonus = {
+        name = POL_AT_group
+        bonus = 1.0
+        uses = 2
+        category = cat_anti_tank
       }
     }
 
@@ -2768,26 +2817,26 @@ focus_tree = {
 				}
     completion_reward = {
       91 = {
-        add_extra_state_shared_building_slots = 2
+        add_extra_state_shared_building_slots = 1
         add_building_construction = {
             type = arms_factory
-            level = 2
+            level = 1
             instant_build = yes
           }
       }
       93 = {
-        add_extra_state_shared_building_slots = 2
+        add_extra_state_shared_building_slots = 1
         add_building_construction = {
             type = arms_factory
-            level = 2
+            level = 1
             instant_build = yes
           }
       }
       96 = {
-        add_extra_state_shared_building_slots = 2
+        add_extra_state_shared_building_slots = 1
         add_building_construction = {
             type = arms_factory
-            level = 2
+            level = 1
             instant_build = yes
           }
       }
@@ -2810,15 +2859,15 @@ focus_tree = {
 		relative_position_id = POL_strengthen_Lithuania
     completion_reward = {
       189 = {
-        add_extra_state_shared_building_slots = 6
+        add_extra_state_shared_building_slots = 3
         add_building_construction = {
             type = dockyard
-            level = 6
+            level = 3
             instant_build = yes
           }
         add_building_construction = {
             type = naval_base
-            level = 5
+            level = 3
             instant_build = yes
           }  
       }
@@ -2837,36 +2886,24 @@ focus_tree = {
 		y = 1
 		relative_position_id = POL_Eastern_Poland_Industry
     completion_reward = {
-      if = {
-        limit = { is_ai = yes }
-        add_tech_bonus = {
-          name = POL_Poland_synthetic_resource
-          bonus = 5
-          ahead_reduction = 3
-          uses = 3
-          category = synth_resources
-        }
-      }
+
       if = {
         limit = { 93 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } } }
         93 = {
-          add_extra_state_shared_building_slots = 3
+          add_extra_state_shared_building_slots = 2
           add_building_construction = {
               type = synthetic_refinery
-              level = 3
+              level = 2
               instant_build = yes
             } 
         }
       }
-      if = {
-        limit = { is_ai = no }
-        add_tech_bonus = {
-          name = POL_Poland_synthetic_resource
-          bonus = 1.5
-          ahead_reduction = 1.5
-          uses = 3
-          category = synth_resources
-        }
+
+      add_tech_bonus = {
+        name = POL_Poland_synthetic_resource
+        bonus = 1.0
+        uses = 2
+        category = synth_resources
       }
       
     }

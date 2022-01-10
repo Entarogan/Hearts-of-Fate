@@ -60,52 +60,16 @@ if = {
 	}
 }
 
-set_popularities = {	democratic = 15	neutrality = 20	communism = 60	fascism = 5
+set_popularities = {
+	democratic = 15
+	neutrality = 20
+	communism = 60
+	fascism = 5
 }
 
-create_country_leader = {
-    name = "Sirin"
-    desc = ""
-    picture = "Portrait_Sirin.dds"
-    expire = "1965.1.1"
-    ideology = stratocracy
-    traits = {
-        #
-    }
-}
+recruit_character = BLR_Sirin
+recruit_character = BLR_Cecilia_Schariac
 
-create_country_leader = {
-    name = "Sirin"
-    desc = ""
-    picture = "Portrait_Sirin.dds"
-    expire = "1965.1.1"
-    ideology = nazism
-    traits = {
-        #
-    }
-}
-
-create_country_leader = {
-    name = "Sirin"
-    desc = ""
-    picture = "Portrait_Sirin.dds"
-    expire = "1965.1.1"
-    ideology = totalist
-    traits = {
-        #
-    }
-}
-
-create_country_leader = {
-    name = "Cecilia Schariac"
-    desc = ""
-    picture = "Portrait_Cecilia_Schariac.dds"
-    expire = "1965.1.1"
-    ideology = liberalism
-    traits = {
-        #
-    }
-}
 
 
 

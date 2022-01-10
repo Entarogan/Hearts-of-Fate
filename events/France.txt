@@ -642,16 +642,16 @@ country_event = {
 	option = {
 		name = france.39.a
 		remove_ideas = FRA_dragon_witch_activity_idea
-		create_corps_commander = {
-			name = "Jeanne D'Arc (Alter)"
-			picture = "Portrait_Jeanne_Darc_Alter.dds"
-			traits = {  trait_reckless harsh_leader cavalry_leader aggressive_assaulter }
-			skill = 5
-			attack_skill = 7
-			defense_skill = 2
-			planning_skill = 1
-			logistics_skill = 2
-			}
+    create_corps_commander = {
+      name = "Jeanne D'Arc (Alter)"
+      picture = "Portrait_Jeanne_Darc_Alter.dds"
+      traits = { trait_reckless harsh_leader career_officer brilliant_strategist }
+      skill = 4
+      attack_skill = 7
+      defense_skill = 1
+      planning_skill = 3
+      logistics_skill = 2
+    }
 		add_stability = -0.10
 		create_country_leader = {
 			name = "Pierre Cauchon"
@@ -1670,12 +1670,6 @@ country_event = { #英法联合装甲研制
 			ahead_reduction = 1
 			category = cat_medium_armor
 		}
-		add_tech_bonus = {
-			name = armor_bonus
-			bonus = 0.5
-			uses = 1
-			category = armor
-		}
 	}
 	
 	option = {
@@ -1713,7 +1707,7 @@ country_event = { #法国得到回复英国同意联合研制
 		}
 		add_tech_bonus = {
 			name = armor_bonus
-			bonus = 1.0
+			bonus = 0.5
 			uses = 1
 			category = armor
 		}
@@ -2209,7 +2203,7 @@ country_event = { #PN-196方案——启动
 	id = fn.1
 	title = fn.1.t
 	desc = fn.1.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_Richelieu_Program_ignition
 	
 	is_triggered_only = yes
 	
@@ -2218,7 +2212,7 @@ country_event = { #PN-196方案——启动
 		custom_effect_tooltip = FRA_PN-196_programme_Enable_tt
 		hidden_effect = { 
 			set_country_flag = FRA_PN-196_Enable
-			country_event = { id = fn.2 days = 30 }
+			country_event = { id = fn.2 }
 		}
 	}
 }
@@ -2227,7 +2221,7 @@ country_event = { #PN-196方案——选择船体
 	id = fn.2
 	title = fn.2.t
 	desc = fn.2.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_Richelieu_hull
 	
 	is_triggered_only = yes
 	
@@ -2238,18 +2232,7 @@ country_event = { #PN-196方案——选择船体
 		name = fn.2.a #高速战列舰（黎塞留级，330mm倾斜装甲）
 		hidden_effect = { 
 			set_country_flag = FRA_Richelieu_Enable
-			country_event = { id = fn.3 days = 30 }
-		}
-	}
-	
-	option = {
-		ai_chance = {
-			base = 0
-		}
-		name = fn.2.b #战列巡洋舰（奥尔良级，305mm倾斜装甲）
-		hidden_effect = { 
-			set_country_flag = FRA_Orleans_Enable
-			country_event = { id = fn.3 days = 30 }
+			country_event = { id = fn.3 }
 		}
 	}
 }
@@ -2258,29 +2241,18 @@ country_event = { #PN-196方案——主炮
 	id = fn.3
 	title = fn.3.t
 	desc = fn.3.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_380mm_1935
 	
 	is_triggered_only = yes
 	
 	option = {
 		ai_chance = {
-			base = 0
-		}
-		name = fn.3.a #三联装炮塔（3座，前二后一）
-		hidden_effect = { 
-			set_country_flag = FRA_Triple_turret_of_main_gun_Enable
-			country_event = { id = fn.4 days = 30 }
-		}
-	}
-	
-	option = {
-		ai_chance = {
 			base = 100
 		}
-		name = fn.3.b #四联装炮塔（2座，前二）
+		name = fn.3.a #四联装炮塔（2座，前二）
 		hidden_effect = { 
 			set_country_flag = FRA_Quadruple_turret_of_main_gun_Enable
-			country_event = { id = fn.4 days = 30 }
+			country_event = { id = fn.4 }
 		}
 	}
 }
@@ -2289,7 +2261,7 @@ country_event = { #PN-196方案——主炮炮弹
 	id = fn.4
 	title = fn.4.t
 	desc = fn.4.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_380mm_shell
 	
 	is_triggered_only = yes
 	
@@ -2297,7 +2269,7 @@ country_event = { #PN-196方案——主炮炮弹
 		name = fn.4.a #被帽穿甲弹
 		hidden_effect = { 
 			set_country_flag = FRA_Capped_armour-piercing_bullet_Enable
-			country_event = { id = fn.5 days = 30 }
+			country_event = { id = fn.5 }
 		}
 	}
 }
@@ -2306,7 +2278,7 @@ country_event = { #PN-196方案——副炮
 	id = fn.5
 	title = fn.5.t
 	desc = fn.5.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_152mm_1930
 	
 	is_triggered_only = yes
 	
@@ -2314,7 +2286,7 @@ country_event = { #PN-196方案——副炮
 		name = fn.5.a #152mm副炮
 		hidden_effect = { 
 			set_country_flag = FRA_PN-196_Second_artillery_152mm_Enable
-			country_event = { id = fn.6 days = 30 }
+			country_event = { id = fn.6 }
 		}
 	}
 }
@@ -2323,7 +2295,7 @@ country_event = { #PN-196方案——高炮
 	id = fn.6
 	title = fn.6.t
 	desc = fn.6.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_37mm_1935_1
 	
 	is_triggered_only = yes
 	
@@ -2331,7 +2303,7 @@ country_event = { #PN-196方案——高炮
 		name = fn.6.a #37mm高炮
 		hidden_effect = { 
 			set_country_flag = FRA_PN-196_Antiair_gun_Enable
-			country_event = { id = fn.7 days = 30 }
+			country_event = { id = fn.7 }
 		}
 	}
 }
@@ -2340,7 +2312,7 @@ country_event = { #PN-196方案——火控、雷达与飞机弹射装置
 	id = fn.7
 	title = fn.7.t
 	desc = fn.7.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_other_equipment
 	
 	is_triggered_only = yes
 	
@@ -2348,32 +2320,15 @@ country_event = { #PN-196方案——火控、雷达与飞机弹射装置
 		name = fn.7.a 
 		hidden_effect = { 
 			set_country_flag = FRA_PN-196_Auxiliary_quipment_Enable
-			country_event = { id = fn.8 days = 7 }
 		}
 	}
 }
 
-country_event = { #PN-196方案——完成
-	id = fn.8
-	title = fn.8.t
-	desc = fn.8.d
-	picture = GFX_report_event_generic_next_version
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = fn.8.a 
-		hidden_effect = { 
-			set_country_flag = FRA_PN-196_complete
-		}
-	}
-}
-
-country_event = { #PN-196方案——黎塞留级战列舰（四联装）
+country_event = { #PN-196方案——黎塞留级战列舰（四联装）设计图
 	id = fn.9
 	title = fn.9.t
 	desc = fn.9.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_Richelieu_blueprint
 	
 	is_triggered_only = yes
 	
@@ -2385,90 +2340,39 @@ country_event = { #PN-196方案——黎塞留级战列舰（四联装）
 	}
 }
 
-country_event = { #PN-196方案——黎塞留级战列舰（三联装）
-	id = fn.10
-	title = fn.10.t
-	desc = fn.10.d
-	picture = GFX_report_event_generic_next_version
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = fn.10.a 
-		hidden_effect = { 
-			set_country_flag = FRA_Richelieu_II_complete
-		}
-	}
-}
-
-country_event = { #PN-196方案——奥尔良级战列巡洋舰（四联装）
-	id = fn.11
-	title = fn.11.t
-	desc = fn.11.d
-	picture = GFX_report_event_generic_next_version
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = fn.11.a 
-		hidden_effect = { 
-			set_country_flag = FRA_Orleans_I_complete
-		}
-	}
-}
-
-country_event = { #PN-196方案——奥尔良级战列巡洋舰（三联装）
-	id = fn.12
-	title = fn.12.t
-	desc = fn.12.d
-	picture = GFX_report_event_generic_next_version
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = fn.12.a 
-		hidden_effect = { 
-			set_country_flag = FRA_Orleans_II_complete
-		}
-	}
-}
-
-country_event = { #让巴尔号战列舰
+country_event = { #PN-196方案2号舰
 	id = fn.13
 	title = fn.13.t
 	desc = fn.13.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_Jean_Bart_Program_ignition
 	
 	fire_only_once = yes
 	
 	trigger = {
 		tag = FRA
 		FRA = {
-			or = {
-				has_country_flag = FRA_Richelieu_I_complete
-				has_country_flag = FRA_Richelieu_II_complete
-			}	
+			has_country_flag = FRA_Richelieu_I_complete
 		}
 	}
 	
 	mean_time_to_happen = {
-		days = 100
+		days = 80
 	}
 	
 	option = {
 		name = fn.13.a 
 		hidden_effect = { 
 			set_country_flag = FRA_Jean_Bart_Enable
-			country_event = { id = fn.15 days = 30 }
+			country_event = { id = fn.15 }
 		}
 	}
 }
 
-country_event = { #100mm高平两用炮
+country_event = { #100mm/45 Model 1930高平两用炮
 	id = fn.15
 	title = fn.15.t
 	desc = fn.15.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_100mm_1930
 	
 	is_triggered_only = yes
 	
@@ -2476,16 +2380,17 @@ country_event = { #100mm高平两用炮
 		name = fn.15.a 
 		hidden_effect = { 
 			set_country_flag = FRA_PN-196_dual-purpose_gun_Enable
-			country_event = { id = fn.16 days = 30 }
+			set_country_flag = FRA_100mm_45_Model_1930
+			country_event = { id = fn.16 }
 		}
 	}
 }
 
-country_event = { #4x37mm高炮
+country_event = { #37mm/70 Model 1935防空炮
 	id = fn.16
 	title = fn.16.t
 	desc = fn.16.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_37mm_1935_2
 	
 	is_triggered_only = yes
 	
@@ -2493,57 +2398,129 @@ country_event = { #4x37mm高炮
 		name = fn.16.a 
 		hidden_effect = { 
 			set_country_flag = FRA_Jean_Bart_Antiaircraft_gun_Enable
+			set_country_flag = FRA_37mm_70_Model_1935
+		}
+	}
+}
+
+country_event = { #让巴尔号设计图
+	id = fn.17
+	title = fn.17.t
+	desc = fn.17.d
+	picture = GFX_Jean_Bart_blueprint
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fn.17.a 
+		hidden_effect = { 
 			set_country_flag = FRA_Jean_Bart_complete
 		}
 	}
 }
 
-country_event = { #让巴尔号
+country_event = { #海军竞赛
 	id = fn.18
 	title = fn.18.t
 	desc = fn.18.d
-	picture = GFX_report_event_generic_next_version
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = fn.18.a 
-		hidden_effect = { 
-			set_country_flag = FRA_Jean_Bart
-		}
-	}
-}
-
-country_event = { #阿尔萨斯级战列舰
-	id = fn.20
-	title = fn.20.t
-	desc = fn.20.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_Clemenceau_Gascogne_Program_ignition
 	
 	fire_only_once = yes
 	
 	trigger = {
 		tag = FRA
 		FRA = {
-			or = {
-				has_country_flag = FRA_Richelieu_I_complete
-				has_country_flag = FRA_Richelieu_II_complete
-				has_country_flag = FRA_Orleans_I_complete
-				has_country_flag = FRA_Orleans_II_complete
-			}	
+			has_country_flag = FRA_Jean_Bart_complete
 		}
-		date > 1942.6.1
 	}
 	
 	mean_time_to_happen = {
-		days = 100
+		days = 80
+	}
+	
+	option = {
+		name = fn.18.a 
+		hidden_effect = { 
+			set_country_flag = FRA_Clemenceau_Gascogne_Enable
+			country_event = { id = fn.19 }
+		}
+	}
+}
+
+country_event = { #装备升级
+	id = fn.19
+	title = fn.19.t
+	desc = fn.19.d
+	picture = GFX_100mm_1933
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fn.19.a 
+		hidden_effect = { 
+			set_country_flag = FRA_PN-196_dual-purpose_gun_Enable
+			set_country_flag = FRA_100mm_45_Model_1930
+		}
+	}
+}
+
+country_event = { #克里蒙梭号设计图
+	id = fn.10
+	title = fn.10.t
+	desc = fn.10.d
+	picture = GFX_Clemenceau_blueprint
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fn.10.a 
+		hidden_effect = { 
+			set_country_flag = FRA_Clemenceau_complete
+		}
+	}
+}
+
+country_event = { #加斯科涅号设计图
+	id = fn.11
+	title = fn.11.t
+	desc = fn.11.d
+	picture = GFX_Gascogne_blueprint
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fn.11.a 
+		hidden_effect = { 
+			set_country_flag = FRA_Gascogne_complete
+		}
+	}
+}
+
+country_event = { #条约破灭
+	id = fn.20
+	title = fn.20.t
+	desc = fn.20.d
+	picture = GFX_alsace_Program_ignition
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		FRA = {
+			has_country_flag = FRA_Richelieu_I_complete
+		}
+		date > 1939.1.1
+	}
+	
+	mean_time_to_happen = {
+		days = 80
 	}
 	
 	option = {
 		name = fn.20.a 
 		hidden_effect = { 
 			set_country_flag = FRA_Alsace_Enable
-			country_event = { id = fn.21 days = 30 }
+			country_event = { id = fn.21 }
 		}
 	}
 }
@@ -2552,7 +2529,7 @@ country_event = { #Alsace船体装甲
 	id = fn.21
 	title = fn.21.t
 	desc = fn.21.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_Alsace_armor
 	
 	is_triggered_only = yes
 	
@@ -2560,7 +2537,7 @@ country_event = { #Alsace船体装甲
 		name = fn.21.a 
 		hidden_effect = { 
 			set_country_flag = FRA_Alsace_armor
-			country_event = { id = fn.22 days = 30 }
+			country_event = { id = fn.22 }
 		}
 	}
 }
@@ -2569,7 +2546,7 @@ country_event = { #Alsace主炮
 	id = fn.22
 	title = fn.22.t
 	desc = fn.22.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_Alsace_main_gun
 	
 	is_triggered_only = yes
 	
@@ -2577,7 +2554,7 @@ country_event = { #Alsace主炮
 		name = fn.22.a 
 		hidden_effect = { 
 			set_country_flag = FRA_Alsace_main_gun
-			country_event = { id = fn.23 days = 30 }
+			country_event = { id = fn.23 }
 		}
 	}
 }
@@ -2586,7 +2563,7 @@ country_event = { #Alsace防空炮
 	id = fn.23
 	title = fn.23.t
 	desc = fn.23.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_100mm_1940
 	
 	is_triggered_only = yes
 	
@@ -2594,48 +2571,31 @@ country_event = { #Alsace防空炮
 		name = fn.23.a 
 		hidden_effect = { 
 			set_country_flag = FRA_Alsace_antiair
-			country_event = { id = fn.24 days = 30 }
 		}
 	}
 }
 
-country_event = { #Alsace方案完成
+country_event = { #Alsace方案
 	id = fn.24
 	title = fn.24.t
 	desc = fn.24.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_Alsace_blueprint
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = fn.24.a 
 		hidden_effect = { 
-			set_country_flag = FRA_Alsace_programme_complete
+			set_country_flag = FRA_Alsace_complete
 		}
 	}
 }
 
-country_event = { #阿尔萨斯号
-	id = fn.25
-	title = fn.25.t
-	desc = fn.25.d
-	picture = GFX_report_event_generic_next_version
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = fn.25.a 
-		hidden_effect = { 
-			set_country_flag = FRA_Alsace
-		}
-	}
-}
-
-country_event = { #共和国级（四联装）
+country_event = { #后备计划
 	id = fn.100
 	title = fn.100.t
 	desc = fn.100.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_Republique_Program_ignition
 	
 	is_triggered_only = yes
 	
@@ -2643,54 +2603,227 @@ country_event = { #共和国级（四联装）
 		name = fn.100.a 
 		hidden_effect = { 
 			set_country_flag = FRA_republique_enable
+			country_event = { id = fn.103 }
 		}
 	}
 }
 
-country_event = { #法兰西级（三联装）
+country_event = { #共和国级主炮
 	id = fn.103
 	title = fn.103.t
 	desc = fn.103.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_431mm_1940
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = fn.103.a 
 		hidden_effect = { 
-			set_country_flag = FRA_Francia_enable
+			set_country_flag = FRA_republique_main_gun
+			country_event = { id = fn.104 }
 		}
 	}
 }
 
-country_event = { #玛丽王后号
-	id = fn.101
-	title = fn.101.t
-	desc = fn.101.d
-	picture = GFX_report_event_generic_next_version
+country_event = { #共和国级装甲防护
+	id = fn.104
+	title = fn.104.t
+	desc = fn.104.d
+	picture = GFX_Repulique_armor
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = fn.101.a 
+		name = fn.104.a 
 		hidden_effect = { 
-			set_country_flag = FRA_Queen_Marie
+			set_country_flag = FRA_republique_armor
+			country_event = { id = fn.105 }
 		}
 	}
 }
 
-country_event = { #黑圣女号
-	id = fn.102
-	title = fn.102.t
-	desc = fn.102.d
-	picture = GFX_report_event_generic_next_version
+country_event = { #共和国级——副炮
+	id = fn.105
+	title = fn.105.t
+	desc = fn.105.d
+	picture = GFX_152mm_1950
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = fn.102.a 
+		name = fn.105.a
 		hidden_effect = { 
-			set_country_flag = FRA_Dark_Saintess
+			set_country_flag = FRA_republique_Second_artillery_152mm_Enable
+			country_event = { id = fn.106 }
+		}
+	}
+}
+
+country_event = { #共和国级——高平炮
+	id = fn.106
+	title = fn.106.t
+	desc = fn.106.d
+	picture = GFX_127mm_54_1942
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fn.106.a
+		hidden_effect = { 
+			set_country_flag = FRA_republique_DP_artillery_127mm_Enable
+			country_event = { id = fn.107 }
+		}
+	}
+}
+
+country_event = { #共和国级——防空炮
+	id = fn.108
+	title = fn.108.t
+	desc = fn.108.d
+	picture = GFX_57mm_1951
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fn.108.a #57mm高炮
+		hidden_effect = { 
+			set_country_flag = FRA_republique_Antiair_gun_Enable
+			country_event = { id = fn.109 }
+		}
+	}
+}
+
+country_event = { #共和国级——火控、雷达
+	id = fn.109
+	title = fn.109.t
+	desc = fn.109.d
+	picture = GFX_Republique_fire_control
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fn.109.a 
+		hidden_effect = { 
+			set_country_flag = FRA_republique_Auxiliary_quipment_Enable
+		}
+	}
+}
+
+country_event = { #共和国级方案
+	id = fn.110
+	title = fn.110.t
+	desc = fn.110.d
+	picture = GFX_republique_blueprint
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fn.110.a 
+		hidden_effect = { 
+			set_country_flag = FRA_republique_complete
+		}
+	}
+}
+
+########################################
+#大巡事件链
+
+country_event = { #大型巡洋舰——启动
+	id = fn.111
+	title = fn.111.t
+	desc = fn.111.d
+	picture = GFX_Saintess_Program_ignition
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		FRA = {
+				has_country_flag = FRA_Alsace_Enable
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 40
+	}
+	
+	option = {
+		name = fn.111.a 
+		hidden_effect = { 
+			set_country_flag = FRA_Saintess_Enable
+			country_event = { id = fn.112 }
+		}
+	}
+}
+
+country_event = { #大型巡洋舰——主炮
+	id = fn.112
+	title = fn.112.t
+	desc = fn.112.d
+	picture = GFX_305mm_1940
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = fn.112.a 
+		hidden_effect = { 
+			set_country_flag = FRA_Saintess_main_gun_Enable
+			country_event = { id = fn.113 }
+		}
+	}
+}
+
+country_event = { #大型巡洋舰——船体防护
+	id = fn.113
+	title = fn.113.t
+	desc = fn.113.d
+	picture = GFX_Saintess_armor
+	
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = fn.113.a
+		hidden_effect = { 
+			set_country_flag = FRA_Saintess_armor
+			country_event = { id = fn.114 }
+		}
+	}
+}
+
+country_event = { #大型巡洋舰——副武器
+	id = fn.114
+	title = fn.114.t
+	desc = fn.114.d
+	picture = GFX_152mm_1935_DP
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fn.114.a 
+		hidden_effect = { 
+			set_country_flag = FRA_Saintess_Second_artillery_Enable
+		}
+	}
+}
+
+country_event = { #圣女级设计图
+	id = fn.115
+	title = fn.115.t
+	desc = fn.115.d
+	picture = GFX_Saintess_blueprint
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fn.115.a 
+		hidden_effect = { 
+			set_country_flag = FRA_Saintess_complete
 		}
 	}
 }
@@ -2698,11 +2831,11 @@ country_event = { #黑圣女号
 ########################################
 #航母事件链
 
-country_event = { #Joffre方案——启动
+country_event = { #30年代航母发展计划
 	id = fn.26
 	title = fn.26.t
 	desc = fn.26.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_joffre_program_ignition
 	
 	is_triggered_only = yes
 	
@@ -2711,7 +2844,7 @@ country_event = { #Joffre方案——启动
 		custom_effect_tooltip = FRA_Joffre_programme_Enable_tt
 		hidden_effect = { 
 			set_country_flag = FRA_Joffre_Enable
-			country_event = { id = fn.27 days = 30 }
+			country_event = { id = fn.27 }
 		}
 	}
 }
@@ -2720,7 +2853,7 @@ country_event = { #Joffre方案——船体
 	id = fn.27
 	title = fn.27.t
 	desc = fn.27.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_joffre_hull
 	
 	is_triggered_only = yes
 	
@@ -2728,39 +2861,196 @@ country_event = { #Joffre方案——船体
 		name = fn.27.a
 		hidden_effect = { 
 			set_country_flag = FRA_Joffre_hull
-			country_event = { id = fn.28 days = 30 }
+			country_event = { id = fn.28 }
 		}
 	}
 }
 
-country_event = { #Joffre方案——完成
+country_event = { #Joffre方案——武器系统
 	id = fn.28
 	title = fn.28.t
 	desc = fn.28.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_100mm_1933
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = fn.28.a
 		hidden_effect = { 
-			set_country_flag = FRA_Joffre_programme_complete
+			set_country_flag = FRA_Joffre_Antiair
 		}
 	}
 }
 
-country_event = { #霞飞号航母
+country_event = { #Joffre方案——完成
 	id = fn.29
 	title = fn.29.t
 	desc = fn.29.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_joffre_blueprint
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = fn.29.a
 		hidden_effect = { 
-			set_country_flag = FRA_Joffre
+			set_country_flag = FRA_Joffre_programme_complete
+		}
+	}
+}
+
+country_event = { #重型航母扩建计划
+	id = fn.30
+	title = fn.30.t
+	desc = fn.30.d
+	picture = GFX_foch_program_ignition
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		FRA = {
+			has_country_flag = FRA_Joffre_launched
+		}
+		date > 1939.6.1
+	}
+	
+	mean_time_to_happen = {
+		days = 90
+	}
+	
+	option = {
+		name = fn.30.a 
+		hidden_effect = { 
+			set_country_flag = FRA_Foch_Enable
+			country_event = { id = fn.31 }
+		}
+	}
+}
+
+country_event = { #福煦方案——装甲防护
+	id = fn.31
+	title = fn.31.t
+	desc = fn.31.d
+	picture = GFX_foch_hull
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fn.31.a
+		hidden_effect = { 
+			set_country_flag = FRA_Foch_hull
+			country_event = { id = fn.32 }
+		}
+	}
+}
+
+country_event = { #福煦方案——武器系统
+	id = fn.32
+	title = fn.32.t
+	desc = fn.32.d
+	picture = GFX_100mm_1940
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fn.32.a
+		hidden_effect = { 
+			set_country_flag = FRA_Foch_Antiair
+		}
+	}
+}
+
+country_event = { #福煦方案——完成
+	id = fn.33
+	title = fn.33.t
+	desc = fn.33.d
+	picture = GFX_foch_blueprint
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fn.33.a
+		hidden_effect = { 
+			set_country_flag = FRA_Foch_programme_complete
+		}
+	}
+}
+
+country_event = { #航母紧急扩建计划
+	id = fn.34
+	title = fn.34.t
+	desc = fn.34.d
+	picture = GFX_constitution_program_ignition
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		FRA = {
+			has_country_flag = FRA_Bayard_Enable
+			has_country_flag = FRA_Joffre_Enable
+		}
+		date > 1938.9.1
+	}
+	
+	mean_time_to_happen = {
+		days = 80
+	}
+	
+	option = {
+		name = fn.34.a 
+		hidden_effect = { 
+			set_country_flag = FRA_Constitution_Enable
+			country_event = { id = fn.35 }
+		}
+	}
+}
+
+country_event = { #宪法方案——船体改装
+	id = fn.35
+	title = fn.35.t
+	desc = fn.35.d
+	picture = GFX_constitution_hull
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fn.35.a
+		hidden_effect = { 
+			set_country_flag = FRA_Constitution_hull
+			country_event = { id = fn.36 }
+		}
+	}
+}
+
+country_event = { #宪法方案——武器系统
+	id = fn.36
+	title = fn.36.t
+	desc = fn.36.d
+	picture = GFX_37mm_1935_2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fn.36.a
+		hidden_effect = { 
+			set_country_flag = FRA_Constitution_Antiair
+		}
+	}
+}
+
+country_event = { #宪法方案——完成
+	id = fn.37
+	title = fn.37.t
+	desc = fn.37.d
+	picture = GFX_constitution_blueprint
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fn.37.a
+		hidden_effect = { 
+			set_country_flag = FRA_Constitution_programme_complete
 		}
 	}
 }
@@ -2768,233 +3058,308 @@ country_event = { #霞飞号航母
 #######################################
 #巡洋舰事件链
 
-country_event = { #C5A3方案——启动
+country_event = { #方案怪物
 	id = fn.40
 	title = fn.40.t
 	desc = fn.40.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_Saint_Louis_program_ignition
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = fn.40.a
-		custom_effect_tooltip = FRA_C5A3_programme_Enable_tt
+		custom_effect_tooltip = FRA_Saint_Louis_Enable_tt
 		hidden_effect = {
-			set_country_flag = FRA_C5A3_programme_Enable
-			country_event = { id = fn.41 days = 30 }
+			set_country_flag = FRA_Saint_Louis_Enable
+			country_event = { id = fn.42 }
 		}
 	}
 }
 
-country_event = { #C5A3方案——船体选择
-	id = fn.41
-	title = fn.41.t
-	desc = fn.41.d
-	picture = GFX_report_event_generic_next_version
-	
-	is_triggered_only = yes
-	
-	option = { #轻巡洋舰
-		name = fn.41.a
-		hidden_effect = { 
-			set_country_flag = FRA_C5A3_L_programme_Enable
-			country_event = { id = fn.42 days = 30 }
-		}
-	}
-	
-	option = { #重巡洋舰
-		name = fn.41.b
-		hidden_effect = { 
-			set_country_flag = FRA_C5A3_H_programme_Enable
-			country_event = { id = fn.42 days = 30 }
-		}
-	}
-}
-
-country_event = { #C5A3方案——船体装甲
+country_event = { #圣路易斯船体装甲
 	id = fn.42
 	title = fn.42.t
 	desc = fn.42.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_Saint_Louis_hull
 	
 	is_triggered_only = yes
 	
 	option = { 
 		name = fn.42.a
 		hidden_effect = { 
-			set_country_flag = FRA_C5A3_Hull_armor
-			country_event = { id = fn.43 days = 30 }
+			set_country_flag = FRA_Saint_Louis_Hull_armor
+			country_event = { id = fn.43 }
 		}
 	}
 }
 
-country_event = { #C5A3方案——主炮及炮弹
+country_event = { #圣路易斯武装及性能
 	id = fn.43
 	title = fn.43.t
 	desc = fn.43.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_203mm_1934
 	
 	is_triggered_only = yes
 	
 	option = { 
 		name = fn.43.a
 		hidden_effect = { 
-			set_country_flag = FRA_C5A3_Main_gun
-			country_event = { id = fn.44 days = 30 }
+			set_country_flag = FRA_Saint_Louis_Main_gun
 		}
 	}
 }
 
-country_event = { #C5A3方案——副武器
-	id = fn.44
-	title = fn.44.t
-	desc = fn.44.d
-	picture = GFX_report_event_generic_next_version
-	
-	is_triggered_only = yes
-	
-	option = { #副炮
-		name = fn.44.a
-		hidden_effect = { 
-			set_country_flag = FRA_C5A3_Secondary_artillery
-			country_event = { id = fn.45 days = 30 }
-		}
-	}
-	
-	option = { #鱼雷
-		name = fn.44.b
-		hidden_effect = { 
-			set_country_flag = FRA_C5A3_torpedo
-			country_event = { id = fn.45 days = 30 }
-		}
-	}
-}
-
-country_event = { #C5A3方案——完成
+country_event = { #圣路易斯方案完成
 	id = fn.45
 	title = fn.45.t
 	desc = fn.45.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_Saint_Louis_blueprint
 	
 	is_triggered_only = yes
 	
 	option = { 
 		name = fn.45.a
 		hidden_effect = { 
-			set_country_flag = FRA_C5A3_programme_complete
+			set_country_flag = FRA_Saint_Louis_complete
 		}
 	}
 }
 
-country_event = { #查理·马特
-	id = fn.46
-	title = fn.46.t
-	desc = fn.46.d
-	picture = GFX_report_event_generic_next_version
-	
-	is_triggered_only = yes
-	
-	option = { 
-		name = fn.46.a
-		hidden_effect = { 
-			set_country_flag = FRA_Charles_Martel
-		}
-	}
-}
-
-country_event = { #贝亚德
-	id = fn.47
-	title = fn.47.t
-	desc = fn.47.d
-	picture = GFX_report_event_generic_next_version
-	
-	is_triggered_only = yes
-	
-	option = { 
-		name = fn.47.a
-		hidden_effect = { 
-			set_country_flag = FRA_bayard
-		}
-	}
-}
-
-country_event = { #贞德级轻巡洋舰
+country_event = { #海军大演习
 	id = fn.48
 	title = fn.48.t
 	desc = fn.48.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_De_Grasse_program_ignition
 	
-	fire_only_once = yes
-	
-	trigger = {
-		tag = FRA
-		FRA = {
-			or = {
-				has_country_flag = FRA_Charles_Martel
-				has_country_flag = FRA_bayard
-			}	
-		}
-		date > 1941.11.12
-	}
-	
-	mean_time_to_happen = {
-		days = 120
-	}
+	is_triggered_only = yes
 	
 	option = {
-		name = fn.48.a 
-		hidden_effect = { 
-			set_country_flag = FRA_Jean_D'arc_Enable
-			country_event = { id = fn.49 days = 30 }
+		name = fn.48.a
+		custom_effect_tooltip = FRA_De_Grasse_Enable_tt
+		hidden_effect = {
+			set_country_flag = FRA_De_Grasse_Enable
+			country_event = { id = fn.44 }
 		}
 	}
 }
 
-country_event = { #贞德方案防空
+country_event = { #格拉斯级船体设计
+	id = fn.44
+	title = fn.44.t
+	desc = fn.44.d
+	picture = GFX_De_Grasse_hull
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fn.44.a
+		hidden_effect = {
+			country_event = { id = fn.49 }
+		}
+	}
+}
+
+country_event = { #格拉斯级方案防空
 	id = fn.49
 	title = fn.49.t
 	desc = fn.49.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_130mm_1935
 	
 	is_triggered_only = yes
 	
 	option = { 
 		name = fn.49.a
 		hidden_effect = { 
-			set_country_flag = FRA_Jean_D'arc_antiair
-			country_event = { id = fn.50 days = 72 }
+			set_country_flag = FRA_De_Grasse_antiair
 		}
 	}
 }
 
-country_event = { #贞德方案完成
+country_event = { #格拉斯级方案完成
 	id = fn.50
 	title = fn.50.t
 	desc = fn.50.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_De_Grasse_blueprint
 	
 	is_triggered_only = yes
 	
 	option = { 
 		name = fn.50.a
 		hidden_effect = { 
-			set_country_flag = FRA_Jean_D'arc_programme_complete
+			set_country_flag = FRA_De_Grasse_complete
 		}
 	}
 }
 
-country_event = { #贞德号
+country_event = { #轻巡洋舰
 	id = fn.51
 	title = fn.51.t
 	desc = fn.51.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_Bayard_program_ignition
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		FRA = {
+			has_country_flag = FRA_De_Grasse_Enable
+		}
+		date > 1938.1.1
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	option = {
+		name = fn.51.a 
+		hidden_effect = { 
+			set_country_flag = FRA_Bayard_Enable
+			country_event = { id = fn.52 }
+		}
+	}
+}
+
+country_event = { #贝亚得武器系统
+	id = fn.52
+	title = fn.52.t
+	desc = fn.52.d
+	picture = GFX_152mm_1935_SP
 	
 	is_triggered_only = yes
 	
 	option = { 
-		name = fn.51.a
+		name = fn.52.a
 		hidden_effect = { 
-			set_country_flag = FRA_Jean_D'arc
+			set_country_flag = FRA_Bayard_weapons
+			country_event = { id = fn.53 }
+		}
+	}
+}
+
+country_event = { #贝亚得船体防护
+	id = fn.53
+	title = fn.53.t
+	desc = fn.53.d
+	picture = GFX_Bayard_hull
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fn.53.a
+		hidden_effect = { 
+			set_country_flag = FRA_Bayard_armor
+		}
+	}
+}
+
+country_event = { #贝亚得级方案完成
+	id = fn.54
+	title = fn.54.t
+	desc = fn.54.d
+	picture = GFX_Bayard_blueprint
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fn.54.a
+		hidden_effect = { 
+			set_country_flag = FRA_Bayard_complete
+		}
+	}
+}
+
+country_event = { #C6方案
+	id = fn.55
+	title = fn.55.t
+	desc = fn.55.d
+	picture = GFX_Henry_IV_program_ignition
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		FRA = {
+			has_country_flag = FRA_Saint_Louis_part_I_launched
+		}
+		date > 1942.3.1
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	option = {
+		name = fn.55.a 
+		hidden_effect = { 
+			set_country_flag = FRA_Henry_IV_Enable
+			country_event = { id = fn.56 }
+		}
+	}
+}
+
+country_event = { #亨利四世主炮
+	id = fn.56
+	title = fn.56.t
+	desc = fn.56.d
+	picture = GFX_240mm_1942
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fn.56.a
+		hidden_effect = { 
+			set_country_flag = FRA_Henry_IV_Main_gun
+			country_event = { id = fn.57 }
+		}
+	}
+}
+
+country_event = { #亨利四世船体装甲
+	id = fn.57
+	title = fn.57.t
+	desc = fn.57.d
+	picture = GFX_Henry_IV_hull
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fn.57.a
+		hidden_effect = { 
+			set_country_flag = FRA_Henry_IV_Hull_armor
+			country_event = { id = fn.58 }
+		}
+	}
+}
+
+country_event = { #亨利四世副武器
+	id = fn.58
+	title = fn.58.t
+	desc = fn.58.d
+	picture = GFX_57mm_1951
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fn.58.a
+		hidden_effect = { 
+			set_country_flag = FRA_Henry_IV_Secondary_artillery
+		}
+	}
+}
+
+country_event = { #亨利四世方案完成
+	id = fn.46
+	title = fn.46.t
+	desc = fn.46.d
+	picture = GFX_Henry_IV_blueprint
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fn.46.a
+		hidden_effect = { 
+			set_country_flag = FRA_Henry_IV_complete
 		}
 	}
 }
@@ -3002,67 +3367,20 @@ country_event = { #贞德号
 #######################################
 #驱逐舰事件链
 
-country_event = { #Fantasme方案——启动
+country_event = { #旧敌人
 	id = fn.60
 	title = fn.60.t
 	desc = fn.60.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_Le_Fantasque_program_ignition
 	
 	is_triggered_only = yes
 	
-	option = { #防空
+	option = { #
 		name = fn.60.a
-		custom_effect_tooltip = FRA_Fantasme_programme_Enable_tt
+		custom_effect_tooltip = FRA_Fantasme_Enable_tt
 		hidden_effect = {
-			set_country_flag = FRA_Fantasme_programme_Enable
-			set_country_flag = FRA_Fantasme_programme_antiair
-			country_event = { id = fn.61 days = 30 }
-		}
-	}
-	option = { #雷击
-		name = fn.60.b
-		custom_effect_tooltip = FRA_Fantasme_programme_Enable_tt
-		hidden_effect = {
-			set_country_flag = FRA_Fantasme_programme_Enable
-			set_country_flag = FRA_Fantasme_programme_torpedo
-			country_event = { id = fn.61 days = 30 }
-		}
-	}
-	option = { #反潜
-		name = fn.60.c
-		custom_effect_tooltip = FRA_Fantasme_programme_Enable_tt
-		hidden_effect = {
-			set_country_flag = FRA_Fantasme_programme_Enable
-			set_country_flag = FRA_Fantasme_programme_anti_submarine
-			country_event = { id = fn.61 days = 30 }
-		}
-	}
-}
-
-country_event = { #Fantasme方案——船体
-	id = fn.61
-	title = fn.61.t
-	desc = fn.61.d
-	picture = GFX_report_event_generic_next_version
-	
-	is_triggered_only = yes
-	
-	option = { 
-		name = fn.61.a
-		hidden_effect = { 
-			set_country_flag = FRA_Fantasme_hull
-			if = {
-				limit = {
-					NOT = { has_country_flag = FRA_Fantasme_programme_antiair }
-				}
-				country_event = { id = fn.63 days = 30 }
-			}
-			if = {
-				limit = {
-					has_country_flag = FRA_Fantasme_programme_antiair
-				}
-				country_event = { id = fn.62 days = 30 }
-			}
+			set_country_flag = FRA_Fantasme_Enable
+			country_event = { id = fn.62 }
 		}
 	}
 }
@@ -3071,7 +3389,7 @@ country_event = { #Fantasme方案——主炮（防空）
 	id = fn.62
 	title = fn.62.t
 	desc = fn.62.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_139mm_1929
 	
 	is_triggered_only = yes
 	
@@ -3079,24 +3397,7 @@ country_event = { #Fantasme方案——主炮（防空）
 		name = fn.62.a
 		hidden_effect = { 
 			set_country_flag = FRA_Fantasme_main_gun_antiair
-			country_event = { id = fn.64 days = 30 }
-		}
-	}
-}
-
-country_event = { #Fantasme方案——主炮（雷击与反潜）
-	id = fn.63
-	title = fn.63.t
-	desc = fn.63.d
-	picture = GFX_report_event_generic_next_version
-	
-	is_triggered_only = yes
-	
-	option = { 
-		name = fn.63.a
-		hidden_effect = { 
-			set_country_flag = FRA_Fantasme_main_gun_light
-			country_event = { id = fn.64 days = 30 }
+			country_event = { id = fn.64 }
 		}
 	}
 }
@@ -3105,7 +3406,7 @@ country_event = { #Fantasme方案——鱼雷与反潜
 	id = fn.64
 	title = fn.64.t
 	desc = fn.64.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_550mm_36DT
 	
 	is_triggered_only = yes
 	
@@ -3114,7 +3415,6 @@ country_event = { #Fantasme方案——鱼雷与反潜
 		hidden_effect = { 
 			set_country_flag = FRA_Fantasme_torpedo
 			set_country_flag = FRA_Fantasme_anti_submarine
-			country_event = { id = fn.65 days = 30 }
 		}
 	}
 }
@@ -3123,62 +3423,108 @@ country_event = { #Fantasme方案——完成
 	id = fn.65
 	title = fn.65.t
 	desc = fn.65.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_Le_Fantasque_blueprint
 	
 	is_triggered_only = yes
 	
 	option = { 
 		name = fn.65.a
 		hidden_effect = { 
-			set_country_flag = FRA_Fantasme_programme_complete
+			set_country_flag = FRA_Fantasme_complete
 		}
 	}
 }
 
-country_event = { #空想级（防空）
+country_event = { #新的希望
 	id = fn.66
 	title = fn.66.t
 	desc = fn.66.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_Mogador_program_ignition
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		FRA = {
+			has_country_flag = FRA_Fantasme_complete
+		}
+		date > 1938.1.1
+	}
+	
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	option = {
+		name = fn.66.a 
+		hidden_effect = { 
+			set_country_flag = FRA_Mogador_Enable
+			country_event = { id = fn.61 }
+		}
+	}
+}
+
+country_event = { #莫加多尔武装及性能
+	id = fn.61
+	title = fn.61.t
+	desc = fn.61.d
+	picture = GFX_139mm_1934
 	
 	is_triggered_only = yes
 	
 	option = { 
-		name = fn.66.a
+		name = fn.61.a
 		hidden_effect = { 
-			set_country_flag = FRA_Fantasme_I
+			country_event = { id = fn.67 }
 		}
 	}
 }
 
-country_event = { #空想级（雷击）
+country_event = { #莫加多尔反潜
 	id = fn.67
 	title = fn.67.t
 	desc = fn.67.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_projectile_hedgehog
 	
 	is_triggered_only = yes
 	
 	option = { 
 		name = fn.67.a
 		hidden_effect = { 
-			set_country_flag = FRA_Fantasme_II
+			set_country_flag = FRA_Mogador_anti_submarine
+			country_event = { id = fn.68 }
 		}
 	}
 }
 
-country_event = { #空想级（反潜）
+country_event = { #莫加多尔鱼雷
 	id = fn.68
 	title = fn.68.t
 	desc = fn.68.d
-	picture = GFX_report_event_generic_next_version
+	picture = GFX_550mm_40DT
 	
 	is_triggered_only = yes
 	
 	option = { 
 		name = fn.68.a
 		hidden_effect = { 
-			set_country_flag = FRA_Fantasme_III
+			set_country_flag = FRA_Mogador_torpedo
+		}
+	}
+}
+
+country_event = { #莫加多尔方案——完成
+	id = fn.69
+	title = fn.69.t
+	desc = fn.69.d
+	picture = GFX_Mogador_blueprint
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fn.69.a
+		hidden_effect = { 
+			set_country_flag = FRA_Mogador_complete
 		}
 	}
 }
@@ -3250,6 +3596,317 @@ country_event = { #欧若拉
 		name = fn.83.a
 		hidden_effect = {
 			set_country_flag = FRA_Aurore
+		}
+	}
+}
+
+#######################################
+#殖民地购船事件链
+
+country_event = { #法属印度支那政府来信（战列舰）
+	id = fn.120
+	title = fn.120.t
+	desc = fn.120.d
+	picture = GFX_report_event_generic_next_version
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fn.120.a #新锐战列舰
+		ai_chance = {
+			factor = 90
+		}
+		hidden_effect = {
+			country_event = { id = fn.123 days = 32 }
+			FIC = {
+				country_event = { id = ficn.4 days = 6 }
+			}
+		}
+	}
+	option = { #改装战列舰
+		name = fn.120.b
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			country_event = { id = fn.124 days = 17 }
+			FIC = {
+				country_event = { id = ficn.6 days = 6 }
+			}
+		}
+	}
+	option = { #护航舰只
+		name = fn.120.c
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			FIC = {
+				country_event = { id = ficn.7 days = 6 }
+			}
+		}
+	}
+	option = { #不管
+		name = fn.120.d
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			FIC = {
+				country_event = { id = ficn.8 days = 4 }
+			}
+		}
+	}
+}
+
+country_event = { #法属印度支那政府来信（轻航）
+	id = fn.121
+	title = fn.121.t
+	desc = fn.121.d
+	picture = GFX_report_event_generic_next_version
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = fn.121.a #轻航
+		ai_chance = {
+			factor = 90
+		}
+		hidden_effect = {
+			FIC = {
+				country_event = { id = ficn.5 days = 6 }
+			}
+		}
+	}
+	option = { #改装战列舰
+		name = fn.121.b
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			country_event = { id = fn.124 days = 17 }
+			FIC = {
+				country_event = { id = ficn.6 days = 6 }
+			}
+		}
+	}
+	option = { #护航舰只
+		name = fn.121.c
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			FIC = {
+				country_event = { id = ficn.7 days = 6 }
+			}
+		}
+	}
+	option = { #不管
+		name = fn.121.d
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			FIC = {
+				country_event = { id = ficn.8 days = 4 }
+			}
+		}
+	}
+}
+
+country_event = { #法属印度支那政府来信（无新锐）
+	id = fn.122
+	title = fn.122.t
+	desc = fn.122.d
+	picture = GFX_report_event_generic_next_version
+	
+	is_triggered_only = yes
+	
+	option = { #改装战列舰
+		name = fn.122.a
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			country_event = { id = fn.124 days = 17 }
+			FIC = {
+				country_event = { id = ficn.6 days = 6 }
+			}
+		}
+	}
+	option = { #护航舰只
+		name = fn.122.b
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			FIC = {
+				country_event = { id = ficn.7 days = 6 }
+			}
+		}
+	}
+	option = { #不管
+		name = fn.122.c
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			FIC = {
+				country_event = { id = ficn.8 days = 4 }
+			}
+		}
+	}
+}
+
+country_event = { #新锐战列舰（本土事件）
+	id = fn.123
+	title = fn.123.t
+	desc = fn.123.d
+	picture = GFX_report_event_generic_next_version
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name =fn.123.a
+	}
+}
+
+country_event = { #改装战列舰（本土事件）
+	id = fn.124
+	title = fn.124.t
+	desc = fn.124.d
+	picture = GFX_report_event_generic_next_version
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name =fn.124.a
+	}
+}
+
+###DLC###
+country_event = {
+    id = france.32
+    hidden = yes
+ 
+    fire_only_once = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+    	if = {
+    		limit = {
+    			NOT = { has_dlc = "La Resistance" }
+    		}
+    		random_other_country = {
+				limit = {
+					original_tag = SPR
+					has_government = fascism
+				}
+				FRA = {
+					add_ai_strategy = {
+						type = befriend
+						id = PREV
+						value = 200
+					}
+				}
+			}
+    	}
+    	if = {
+    		limit = {
+    			has_dlc = "La Resistance"
+    		}
+			FRA = {
+					add_ai_strategy = {
+						type = befriend
+					id = "SPA"
+						value = 200
+					}
+			}
+    	}
+    }
+
+    option = {
+        name = france.32.a
+     }
+}
+country_event = {
+	id = france.10
+	title = france.10.t
+	desc = france.10.d
+	picture = GFX_report_event_german_parade_paris
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = achievement_france_surrender
+	}
+
+	option = { # Become Free French
+		name = france.10.b
+		ai_chance = {
+			factor = 85
+		}
+		set_global_flag = fall_of_france
+		save_global_event_target_as = free_france
+		custom_effect_tooltip = france.10.b_tt
+	}
+	option = { # Ask for British Union
+		name = france.10.c
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		ENG = {
+			country_event = france.11
+			effect_tooltip = {
+				annex_country = { target = FRA transfer_troops = yes }
+			}
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # decide to fight on
+		name = france.10.e
+		ai_chance = {
+			factor = 15
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		trigger = { has_war_support > 0.7 }
+		add_stability = -0.05
+	}
+}
+country_event = {
+	id = france.11
+	title = france.11.t
+	desc = france.11.d
+	picture = GFX_report_event_degaulle_churchill
+	
+	is_triggered_only = yes
+	
+	option = { # Refuse Union
+		name = france.11.a
+		ai_chance = {
+			factor = 10
+		}
+		FRA = {
+			country_event = { hours = 6 id = france.13 }
+		}
+	}
+	option = { # Agree to Union
+		name = france.11.b
+		ai_chance = {
+			factor = 90
+		}
+		FRA = {
+			country_event = { hours = 6 id = france.12 }
 		}
 	}
 }
