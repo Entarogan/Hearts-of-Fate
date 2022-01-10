@@ -34,34 +34,6 @@ characters={
 			expire="1953.3.1.1"
 			id=-1
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = nikita_khrushchyov
-			available = {
-				NOT = { has_country_flag = arrest_khrushchev }
-				UKR_nikita_khrushchev = {
-					is_country_leader = no
-				}
-				SOV_lev_trotsky = {
-					is_country_leader = no
-				}				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}
-			}
-			allowed = {
-				original_tag = SOV
-			}
-			traits = { Cunning_politician }
-			do_effect = {
-				NOT = {
-					has_government = communism
-				}
-			}			
-			ai_will_do = {
-				factor = 2
-			}
-		}
 	}
 	UKR_yevhen_konovalets={
 		name="Yevhen Konovalets"
