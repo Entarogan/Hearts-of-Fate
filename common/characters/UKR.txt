@@ -223,7 +223,7 @@ characters={
 		name = "Leonid Brezhnev"
 		portraits={
 			civilian = {
-				large = "gfx/leaders/SOV/Portrait_Leonid_Brezhnev.dds"
+				large = "gfx/leaders/UKR/Portrait_Leonid_Brezhnev.dds"
 			}
 		}
 	}
